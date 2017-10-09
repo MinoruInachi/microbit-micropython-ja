@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2016, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-09 10:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: ../../compass.rst:2
+msgid "Compass"
+msgstr "コンパス"
+
+#: ../../compass.rst:6
+msgid ""
+"This module lets you access the built-in electronic compass. Before "
+"using, the compass should be calibrated, otherwise the readings may be "
+"wrong."
+msgstr ""
+"このモジュールを使うと内蔵の電子コンパスにアクセスできます。使用する前にコンパスを"
+"キャリブレーションする必要があります。キャリブレーションを行わないと、検知を誤る"
+"可能性があります。"
+
+#: ../../compass.rst:11
+msgid ""
+"Calibrating the compass will cause your program to pause until "
+"calibration is complete. Calibration consists of a little game to draw a "
+"circle on the LED display by rotating the device."
+msgstr ""
+"コンパスをキャリブレーションすると、キャリブレーションが完了するまでプログラムが"
+"一時停止します。キャリブレーションは、デバイスを回転させてLEDディスプレイに円を描く"
+"小さなゲームとなっています。"
+
+#: ../../compass.rst:17
+msgid "Functions"
+msgstr "関数"
+
+#: ../../compass.rst:21
+msgid ""
+"Starts the calibration process. An instructive message will be scrolled "
+"to the user after which they will need to rotate the device in order to "
+"draw a circle on the LED display."
+msgstr ""
+"キャリブレーション処理を開始します。指示メッセージがユーザにスクロールで示された後、"
+"LEDディスプレイ上に円を描くようデバイスを回転させます。"
+
+#: ../../compass.rst:27
+msgid ""
+"Returns ``True`` if the compass has been successfully calibrated, and "
+"returns ``False`` otherwise."
+msgstr ""
+"キャリブレーションが成功したかどうかにより ``True`` または ``False`` を返します。"
+
+#: ../../compass.rst:33
+msgid "Undoes the calibration, making the compass uncalibrated again."
+msgstr "キャリブレーションを取り消し、コンパスをキャリブレーションされていない状態にします。"
+
+#: ../../compass.rst:38 ../../compass.rst:45 ../../compass.rst:52
+msgid ""
+"Gives the reading of the magnetic force on the ``x`` axis, as a positive "
+"or negative integer, depending on the direction of the force."
+msgstr ""
+"``x`` 軸の磁力を得ます。磁力の方向に応じて正または負の整数値になります。"
+
+#: ../../compass.rst:59
+msgid ""
+"Gives the compass heading, calculated from the above readings, as an "
+"integer in the range from 0 to 360, representing the angle in degrees, "
+"clockwise, with north as 0. If the compass has not been calibrated, then "
+"this will call ``calibrate``."
+msgstr ""
+"３軸の磁力から計算された方位を返します。値は時計回りの角度を示す 0 から 360 "
+"までの整数で、0 は北となります。コンパスをキャリブレーションしていなかった場合には "
+"``calibrate`` を呼び出します。"
+
+#: ../../compass.rst:67
+msgid ""
+"Returns an integer indication of the magnitude of the magnetic field "
+"around the device."
+msgstr ""
+"デバイスのまわりの磁場の強さを示す整数値を返します。"
+
+#: ../../compass.rst:72
+msgid "Example"
+msgstr "サンプルコード"
+
+msgid ""
+"\"\"\"\n"
+"    compass.py\n"
+"    ~~~~~~~~~~\n"
+"\n"
+"    Creates a compass.\n"
+"\n"
+"    The user will need to calibrate the compass first. The compass uses "
+"the\n"
+"    built-in clock images to display the position of the needle.\n"
+"\n"
+"\"\"\"\n"
+"from microbit import *\n"
+"\n"
+"\n"
+"# Start calibrating\n"
+"compass.calibrate()\n"
+"\n"
+"# Try to keep the needle pointed in (roughly) the correct direction\n"
+"while True:\n"
+"    sleep(100)\n"
+"    needle = ((15 - compass.heading()) // 30) % 12\n"
+"    display.show(Image.ALL_CLOCKS[needle])"
+msgstr ""
+"\"\"\"\n"
+"    compass.py\n"
+"    ~~~~~~~~~~\n"
+"\n"
+"    方位磁石の作成。\n"
+"\n"
+"    まず最初にコンパスをキャリブレーションする必要があります。\n"
+"    コンパスは内蔵の時計イメージを使って針の位置を表示します。\n"
+"\n"
+"\"\"\"\n"
+"from microbit import *\n"
+"\n"
+"\n"
+"# キャリブレーション開始\n"
+"compass.calibrate()\n"
+"\n"
+"# 針が（大まかに）正しい方向を向くようにします\n"
+"while True:\n"
+"    sleep(100)\n"
+"    needle = ((15 - compass.heading()) // 30) % 12\n"
+"    display.show(Image.ALL_CLOCKS[needle])"
+

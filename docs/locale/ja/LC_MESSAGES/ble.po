@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2016, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-09 10:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: ../../ble.rst:2
+msgid "Bluetooth"
+msgstr ""
+
+#: ../../ble.rst:4
+msgid ""
+"While the BBC micro:bit has hardware capable of allowing the device to "
+"work as a Bluetooth Low Energy (BLE) device, it only has 16k of RAM. The "
+"BLE stack alone takes up 12k RAM which means there's not enough room to "
+"run MicroPython."
+msgstr ""
+"BBC micro:bit は Bluetooth Low Energy (BLE)デバイスとして動作できる"
+"ハードウェアを備えていますが、RAM は 16 KBしかありません。"
+"BLE スタックだけで 12k のRAMが必要になります。つまり、MicroPython "
+"を実行するのに十分なスペースがありません。"
+
+#: ../../ble.rst:8
+msgid ""
+"Future versions of the device may come with 32k RAM which would be "
+"sufficient. However, until such time it's highly unlikely MicroPython "
+"will support BLE."
+msgstr ""
+"デバイスの将来のバージョンでは十分な 32k の RAM を備えるかもしれません。"
+"しかし、そのような時まで、MicroPython が BLE をサポートすることはまずありません。"
+
+#: ../../ble.rst:12
+msgid ""
+"MicroPython uses the radio hardware with the ``radio`` module. This "
+"allows users to create simple yet effective wireless networks of "
+"micro:bit devices."
+msgstr ""
+"MicroPython は、無線ハードウェアの利用に ``radio`` モジュールを提供しています。"
+"このモジュールを使えば、micro:bit デバイスで単純で効果的な無線ネットワークを"
+"作れます。"
+
+#: ../../ble.rst:16
+msgid ""
+"Furthermore, the protocol used in the ``radio`` module is a lot simpler "
+"than BLE, making it far easier to use in an educational context."
+msgstr ""
+"さらに、この ``radio`` モジュールで使用されているプロトコルは、"
+"BLE よりもはるかに単純であり、教育で使うのも容易です。"
+

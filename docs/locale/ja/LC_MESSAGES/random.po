@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2016, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-09 10:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: ../../random.rst:2
+msgid "Random Number Generation"
+msgstr "乱数生成"
+
+#: ../../random.rst:6
+msgid ""
+"This module is based upon the ``random`` module in the Python standard "
+"library. It contains functions for generating random behaviour."
+msgstr ""
+"このモジュールは Python 標準ライブラリの ``random`` モジュールをベースにしています。"
+"このモジュールはランダムな振舞いを生成する関数を持っています。"
+
+#: ../../random.rst:9
+msgid "To access this module you need to::"
+msgstr "このモジュールにアクセスするには、以下を行う必要があります::"
+
+#: ../../random.rst:11
+msgid "import random"
+msgstr ""
+
+#: ../../random.rst:13
+msgid "We assume you have done this for the examples below."
+msgstr "以降の例では、これが行われていることを前提としています。"
+
+#: ../../random.rst:16
+msgid "Functions"
+msgstr "関数"
+
+#: ../../random.rst:20
+msgid "Returns an integer with ``n`` random bits."
+msgstr "``n`` 乱数ビット数を持つ整数を返します。"
+
+#: ../../random.rst:24
+msgid ""
+"Because the underlying generator function returns at most 30 bits, ``n`` "
+"may only be a value between 1-30 (inclusive)."
+msgstr ""
+"基本となるジェネレータ関数は最大で 30 ビットを返すため、 ``n`` は 1〜30 の値"
+"のみにできます。"
+
+#: ../../random.rst:29
+msgid ""
+"Initialize the random number generator with a known integer ``n``. This "
+"will give you reproducibly deterministic randomness from a given starting"
+" state (``n``)."
+msgstr ""
+"乱数ジェネレータを指定の整数 ``n`` で初期化します。これは、与えられた開始状態(``n``)"
+"から再現性のある決定論的なランダム性を与えます。"
+
+#: ../../random.rst:36
+msgid ""
+"Return a random integer ``N`` such that ``a <= N <= b``. Alias for "
+"``randrange(a, b+1)``."
+msgstr ""
+"``a <= N <= b`` となるような整数の乱数 ``N`` を返します。これは "
+"``randrange(a, b+1)`` と同等です。"
+
+#: ../../random.rst:42
+msgid ""
+"Return a randomly selected integer between zero and up to (but not "
+"including) ``stop``."
+msgstr ""
+"0 から ``stop`` 未満までの間で無作為に選択された整数を返します。"
+
+#: ../../random.rst:47
+msgid "Return a randomly selected integer from ``range(start, stop)``."
+msgstr "``range(start, stop)`` から無作為に選択された整数を返します。"
+
+#: ../../random.rst:51
+msgid "Return a randomly selected element from ``range(start, stop, step)``."
+msgstr "``range(start, stop, step)`` から無作為に選択された要素を返します。"
+
+#: ../../random.rst:56
+msgid ""
+"Return a random element from the non-empty sequence ``seq``. If ``seq`` "
+"is empty, raises ``IndexError``."
+msgstr ""
+"空でないシーケンス ``seq`` からランダムな要素を返します。``seq`` が空の場合は、 "
+"``IndexError`` が発生します。"
+
+#: ../../random.rst:62
+msgid "Return the next random floating point number in the range [0.0, 1.0)"
+msgstr "range(0.0, 1.0) から無作為に選択された浮動小数点数を返します。"
+
+#: ../../random.rst:67
+msgid ""
+"Return a random floating point number ``N`` such that ``a <= N <= b`` for"
+" ``a <= b`` and ``b <= N <= a`` for ``b < a``."
+msgstr ""
+"``a <= b`` の場合に ``a <= N <= b`` 、 ``b < a`` の場合に ``b <= N <= a`` "
+"となるような浮動小数点数の乱数 ``N`` を返します。"
+

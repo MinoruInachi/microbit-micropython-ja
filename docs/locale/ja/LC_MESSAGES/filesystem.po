@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2016, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-09 10:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: ../../filesystem.rst:2
+msgid "Local Persistent File System"
+msgstr "ローカル永続ファイルシステム"
+
+#: ../../filesystem.rst:4
+msgid ""
+"It is useful to store data in a persistent manner so that it remains "
+"intact between restarts of the device. On traditional computers this is "
+"often achieved by a file system consisting of named files that hold raw "
+"data, and named directories that contain files. Python supports the "
+"various operations needed to work with such file systems."
+msgstr ""
+"データの永続的な保存は、デバイスの再起動の間に変更されないようにしておくと便利です。"
+"従来のコンピュータでは、生データを保持する名前付きファイルとファイルを含む名前付き"
+"ディレクトリで構成されるファイルシステムによって実現されているものが多いです。"
+"Python は、そのようなファイルシステムで作業するために必要なさまざまな操作を"
+"サポートしています。"
+
+#: ../../filesystem.rst:10
+msgid ""
+"However, since the micro:bit is a limited device in terms of both "
+"hardware and storage capacity MicroPython provides a small subset of the "
+"functions needed to persist data on the device. Because of memory "
+"constraints **there is approximately 30k of storage available** on the "
+"file system."
+msgstr ""
+"ただし、micro:bit はハードウェアとストレージの両方の容量で制限されたデバイス"
+"なので、MicroPython はデバイス上のデータを保持するために必要な機能の小さな"
+"サブセットを提供します。メモリの制約のため、ファイルシステムの *記憶域は約 30 KB* "
+"となっています"
+
+#: ../../filesystem.rst:17
+msgid "Re-flashing the device will DESTROY YOUR DATA."
+msgstr "デバイスを再フラッシュするとデータが破棄されます。"
+
+#: ../../filesystem.rst:19
+msgid ""
+"Since the file system is stored in the micro:bit's flash memory and "
+"flashing the device rewrites all the available flash memory then all your"
+" data will be lost if you flash your device."
+msgstr ""
+"ファイルシステムは micro:bit のフラッシュメモリに保存されているため、デバイスを"
+"フラッシュするとフラッシュメモリがすべて書き換えられるため、すべてのデータが"
+"失われます。"
+
+#: ../../filesystem.rst:23
+msgid ""
+"However, if you switch your device off the data will remain intact until "
+"you either delete it (see below) or re-flash the device."
+msgstr ""
+"ただし、デバイスの電源を切っただけではデータはそのまま残り続けます。"
+"データが消えるのは、ファイルを削除するか(後述)、デバイスを再フラッシュした場合です。"
+
+#: ../../filesystem.rst:26
+msgid ""
+"MicroPython on the micro:bit provides a flat file system; i.e. there is "
+"no notion of a directory hierarchy, the file system is just a list of "
+"named files. Reading and writing a file is achieved via the standard "
+"Python ``open`` function and the resulting file-like object (representing"
+" the file) of types ``TextIO`` or ``BytesIO``. Operations for working "
+"with files on the file system (for example, listing or deleting files) "
+"are contained within the :py:mod:`os` module."
+msgstr ""
+"micro:bit の MicroPython は、フラットファイルシステムを提供します。すなわち、"
+"ディレクトリ階層の概念がなく、ファイルシステムは名前付きファイルのリストにすぎません。"
+"ファイルの読み書きは、標準 Python と同様の open タイプの関数と、この関数が返す "
+"``TextIO`` または ``BytesIO`` 型のファイル形式オブジェクト(ファイルを表す)によって"
+"実現されます。ファイルシステム上のファイルを操作する操作(ファイルの一覧表示や削除など)は "
+":py:mod:`os` モジュール内にあります。"
+
+#: ../../filesystem.rst:34
+msgid ""
+"If a file ends in the ``.py`` file extension then it can be imported. For"
+" example, a file named ``hello.py`` can be imported like this: ``import "
+"hello``."
+msgstr ""
+"ファイル拡張子 ``.py`` のついたファイルがある場合は、それをインポートできます。"
+"たとえば、ファイル名 ``hello.py`` は ``import hello`` でインポートできます。"
+
+#: ../../filesystem.rst:37
+msgid "An example session in the MicroPython REPL may look something like this::"
+msgstr "MicroPython の REPL から操作してみた例は、次のようになります。"
+
+#: ../../filesystem.rst:39
+msgid ""
+">>> with open('hello.py', 'w') as hello:\n"
+"...    hello.write(\"print('Hello')\")\n"
+"...\n"
+">>> import hello\n"
+"Hello\n"
+">>> with open('hello.py') as hello:\n"
+"...   print(hello.read())\n"
+"...\n"
+"print('Hello')\n"
+">>> import os\n"
+">>> os.listdir()\n"
+"['hello.py']\n"
+">>> os.remove('hello.py')\n"
+">>> os.listdir()\n"
+"[]"
+msgstr ""
+
+#: ../../filesystem.rst:57
+msgid ""
+"Returns a file object representing the file named in the argument "
+"``filename``. The mode defaults to ``'r'`` which means open for reading "
+"in text mode. The other common mode is ``'w'`` for writing (overwriting "
+"the content of the file if it already exists). Two other modes are "
+"available to be used in conjunction with the ones describes above: "
+"``'t'`` means text mode (for reading and writing strings) and ``'b'`` "
+"means binary mode (for reading and writing bytes). If these are not "
+"specified then ``'t'`` (text mode) is assumed. When in text mode the file"
+" object will be an instance of ``TextIO``. When in binary mode the file "
+"object will be an instance of ``BytesIO``. For example, use ``'rb'`` to "
+"read binary data from a file."
+msgstr ""
+"引数 ``filename`` に指定されたファイルを表すファイルオブジェクトを返します。"
+"モードのデフォルトは 'r' で、テキストモードでの読み込みを意味します。もう１つの"
+"共通モードは 'w' で、書き込み用です(すでに存在する場合はファイルの内容を上書きします)。"
+"上で説明したものと組み合わせて使用​​できる他の２つのモードは、 ``'t'`` のテキストモード"
+"(文字列の読み書き用)と ``'b'`` のバイナリモード(バイトの読み書き用)を意味します。"
+"これらが指定されていない場合は ``'t'``  (テキストモード)とみなされます。"
+"テキストモードでは、ファイルオブジェクトは ``TextIO`` のインスタンスになります。"
+"バイナリモードでは、ファイルオブジェクトは ``BytesIO`` のインスタンスになります。"
+"たとえば、 ``'rb'`` はバイナリデータをファイルから読み込むために使用します。"
+
+#: ../../filesystem.rst:74
+msgid ""
+"Instances of these classes represent files in the micro:bit's flat file "
+"system. The TextIO class is used to represent text files. The BytesIO "
+"class is used to represent binary files. They work in exactly the same "
+"except that TextIO works with strings and BytesIO works with bytes."
+msgstr ""
+"これらのクラスのインスタンスは、micro:bit のフラットファイルシステム内のファイルを"
+"表します。TextIO クラスは、テキストファイルを表すために使われます。BytesIO クラスは、"
+"バイナリファイルを表すために使われます。TextIO は文字列を扱い、BytesIO はバイト列を"
+"扱う点を除いて、まったく同じように動作します。"
+
+#: ../../filesystem.rst:79
+msgid ""
+"You do not directly instantiate these classes. Rather, an appropriately "
+"configured instance of the class is returned by the ``open`` function "
+"described above."
+msgstr ""
+"これらのクラスを直接インスタンス化するわけではありません。むしろ、適切に構成された"
+"クラスのインスタンスは、上記の ``open`` 関数によって返されます。"
+
+#: ../../filesystem.rst:85
+msgid ""
+"Flush and close the file. This method has no effect if the file is "
+"already closed. Once the file is closed, any operation on the file (e.g. "
+"reading or writing) will raise an exception."
+msgstr ""
+"ファイルをフラッシュして閉じます。このメソッドは、ファイルがすでにクローズしている"
+"場合は効果がありません。ファイルがクローズしていると、そのファイルに対する操作"
+"(たとえば、読み込みまたは書き込み)によって例外が発生します。"
+
+#: ../../filesystem.rst:91
+msgid ""
+"Returns the name of the file the object represents. This will be the same"
+" as the ``filename`` argument passed into the call to the ``open`` "
+"function that instantiated the object."
+msgstr ""
+"オブジェクトが表すファイルの名前を返します。これは 、オブジェクトをインスタンス化する "
+"``open`` 関数を呼び出す際に渡す ``filename`` 引数と同じになります。"
+
+#: ../../filesystem.rst:97
+msgid ""
+"Read and return at most ``size`` characters as a single string or "
+"``size`` bytes from the file. As a convenience, if ``size`` is "
+"unspecified or -1, all the data contained in the file is returned. Fewer "
+"than ``size`` characters or bytes may be returned if there are less than "
+"``size`` characters or bytes remaining to be read from the file."
+msgstr ""
+"ファイルから最大 ``size`` 文字の単一文字列または ``size`` バイトを読み込んで"
+"返します。便宜上、 ``size`` が与えられないか -1 の場合はファイルに含まれるすべての"
+"データが返されます。ファイルから読み込む残りが ``size`` 未満である場合、 "
+"``size`` より小さな文字列またはバイト列が返されます。"
+
+#: ../../filesystem.rst:104
+msgid ""
+"If 0 characters or bytes are returned, and ``size`` was not 0, this "
+"indicates end of file."
+msgstr ""
+"長さが 0 の文字列またはバイト列が返され場合、 ``size`` 指定が 0 でなければ"
+"ファイルの終わりを示します。"
+
+#: ../../filesystem.rst:107
+msgid ""
+"A ``MemoryError`` exception will occur if ``size`` is larger than the "
+"available RAM."
+msgstr ""
+"``size`` が使用可能な RAM より大きい場合には MemoryError 例外が発生します。"
+
+#: ../../filesystem.rst:112
+msgid ""
+"Read characters or bytes into the buffer ``buf``. If ``n`` is supplied, "
+"read ``n`` number of bytes or characters into the buffer ``buf``."
+msgstr ""
+"バッファ ``buf`` に文字列またはバイト列を読み込みます。``n`` が指定された場合は、"
+"バッファ ``buf`` に指定のバイト数または文字数を読み込みます。"
+
+#: ../../filesystem.rst:117
+msgid ""
+"Read and return one line from the file. If ``size`` is specified, at most"
+" ``size`` characters will be read."
+msgstr ""
+"ファイルから１行を読み込んで返します。``size`` を指定すると、最大 ``size`` 文字が"
+"読み込まれます。"
+
+#: ../../filesystem.rst:120
+msgid ""
+"The line terminator is always ``'\\n'`` for strings or ``b'\\n'`` for "
+"bytes."
+msgstr ""
+"行終端は常に文字列では ``'\\n'`` 、バイト列では ``b'\\n'`` です。"
+
+#: ../../filesystem.rst:125
+msgid ""
+"Return ``True`` if the file supports writing. If ``False``, ``write()`` "
+"will raise ``OSError``."
+msgstr ""
+"書き込みをサポートしていれば ``True`` を返しますこれが ``False`` の場合に "
+"``write()`` を行うと ``OSError`` が発生します。"
+
+#: ../../filesystem.rst:130
+msgid ""
+"Write the string or bytes ``buf`` to the file and return the number of "
+"characters or bytes written."
+msgstr ""
+"バッファ ``buf`` の文字列またはバイト列をファイルに書き込み、書き込んだ文字数または"
+"バイト数を返します。"
+

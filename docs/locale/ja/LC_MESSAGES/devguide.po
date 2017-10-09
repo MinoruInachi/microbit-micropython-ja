@@ -1,0 +1,481 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2016, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-09 10:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: ../../devguide/contributing.rst:2
+msgid "Contributing"
+msgstr "貢献"
+
+#: ../../devguide/contributing.rst:4
+msgid "Hey! Many thanks for wanting to improve MicroPython on the micro:bit."
+msgstr "やあ！　micro:bit の MicroPython を改善したいと思ってくれてありがとう。"
+
+#: ../../devguide/contributing.rst:6
+msgid ""
+"Contributions are welcome without prejudice from *anyone* irrespective of"
+" age, gender, religion, race or sexuality. Good quality code and "
+"engagement with respect, humour and intelligence wins every time."
+msgstr ""
+"貢献は、年齢、性別、宗教、人種、性別にかかわらず、*誰の* 迷惑にならずに大歓迎です。"
+"尊敬、ユーモア、インテリジェンスのある良質なコードと関与はいつも勝利をもたらします。"
+
+#: ../../devguide/contributing.rst:10
+msgid ""
+"If you're from a background which isn't well-represented in most geeky "
+"groups, get involved - *we want to help you make a difference*."
+msgstr ""
+"かなりギークなグループで、うまく表せないものがあるなら参加してください - "
+"あなたの作り出した違いを手助けしたいと思います* 。"
+
+#: ../../devguide/contributing.rst:11
+msgid ""
+"If you're from a background which *is* well-represented in most geeky "
+"groups, get involved - *we want your help making a difference*."
+msgstr ""
+"かなりギークなグループで、うまく表せ *られる* ものがあるなら参加してください - "
+"*あなたの作り出した違いを手助けしたいと思います* 。"
+
+#: ../../devguide/contributing.rst:12
+msgid ""
+"If you're worried about not being technical enough, get involved - *your "
+"fresh perspective will be invaluable*."
+msgstr ""
+"技術的に十分ではないと心配している場合は、参加してください - "
+"*新しい視点は非常に貴重です* 。"
+
+#: ../../devguide/contributing.rst:13
+msgid "If you think you're an imposter, get involved."
+msgstr "自分が詐欺師だと思ったら、参加してください。"
+
+#: ../../devguide/contributing.rst:14
+msgid "If your day job isn't code, get involved."
+msgstr "日常の業務がコードでなければ、参加してください。"
+
+#: ../../devguide/contributing.rst:15
+msgid "This isn't a group of experts, just people. Get involved!"
+msgstr "これはエキスパートのグループではなく、ただの人々です。参加してください！"
+
+#: ../../devguide/contributing.rst:16
+msgid "This is a new community, so, get involved."
+msgstr "これは新しいコミュニティなので、参加してください。"
+
+#: ../../devguide/contributing.rst:18
+msgid ""
+"We expect contributors to follow the Python Software Foundation's Code of"
+" Conduct: https://www.python.org/psf/codeofconduct/"
+msgstr ""
+"貢献者は、Python Software Foundation の行動規範に従うことを期待しています: "
+"https://www.python.org/psf/codeofconduct/"
+
+#: ../../devguide/contributing.rst:21
+msgid ""
+"Feedback may be given for contributions and, where necessary, changes "
+"will be politely requested and discussed with the originating author. "
+"Respectful yet robust argument is most welcome."
+msgstr ""
+"貢献者にはフィードバックがあります。必要に応じて変更が丁寧に要求され、"
+"元の著者と議論されます。尊重しながらも堅実な議論は大歓迎です。"
+
+#: ../../devguide/contributing.rst:26
+msgid "Checklist"
+msgstr "チェックリスト"
+
+#: ../../devguide/contributing.rst:28
+msgid "Your code should be commented in *plain English* (British spelling)."
+msgstr "あなたのコードは *普通の英語* (英国のスペル)でコメントする必要があります。"
+
+#: ../../devguide/contributing.rst:29
+msgid ""
+"If your contribution is for a major block of work and you've not done so "
+"already, add yourself to the AUTHORS file following the convention found "
+"therein."
+msgstr ""
+"あなたの貢献が主要な作業ブロックのためのものであれば、そこにある慣習にしたがって、"
+"あなた自身を著者(AUTHORS)ファイルに追加しておいてください。"
+
+#: ../../devguide/contributing.rst:32
+msgid ""
+"If in doubt, ask a question. The only stupid question is the one that's "
+"never asked."
+msgstr ""
+"疑義がある場合は、質問をしてください。唯一の愚かな質問は、決して聞かれない質問です。"
+
+#: ../../devguide/contributing.rst:33
+msgid "Have fun!"
+msgstr "楽しんで！"
+
+#: ../../devguide/devfaq.rst:5
+msgid "Developer FAQ"
+msgstr "開発者 FAQ"
+
+#: ../../devguide/devfaq.rst:9
+msgid ""
+"This project is under active development. Please help other developers by"
+" adding tips, how-tos, and Q&A to this document. Thanks!"
+msgstr ""
+"このプロジェクトでは活発に開発中です。このドキュメントにヒント、ハウツー、Q&Aを"
+"追加して、他の開発者を助けてください。ありがとう！"
+
+#: ../../devguide/devfaq.rst:13
+msgid "Where do I get a copy of the DAL? A: Ask Nicholas Tollervey for details."
+msgstr ""
+"どこで DAL (Device Abstraction Layer)のコピーを入手できますか？　A：詳細については、"
+"Nicholas Tollervey にお尋ねください。"
+
+#: ../../devguide/flashfirmware.rst:5
+msgid "Flashing Firmware"
+msgstr "ファームウェアの転送"
+
+#: ../../devguide/flashfirmware.rst:8
+msgid "Building firmware"
+msgstr "ファームウェアのビルド"
+
+#: ../../devguide/flashfirmware.rst:9
+msgid "Use yotta to build."
+msgstr "ビルドには yotta を使ってください。"
+
+#: ../../devguide/flashfirmware.rst:11
+msgid "Use target bbc-microbit-classic-gcc-nosd::"
+msgstr "ターゲットは bbc-microbit-classic-gcc-nosd になります::"
+
+#: ../../devguide/flashfirmware.rst:13
+msgid "yt target bbc-microbit-classic-gcc-nosd"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:15
+msgid "Run yotta update to fetch remote assets::"
+msgstr "yotta update を実行してリモートアセットを取得してください。"
+
+#: ../../devguide/flashfirmware.rst:17
+msgid "yt up"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:19
+msgid "Start the build with either yotta::"
+msgstr "以下のどちらかでビルドを開始してください。yotta を使う場合::"
+
+#: ../../devguide/flashfirmware.rst:21
+msgid "yt build"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:23
+msgid "...or use the Makefile::"
+msgstr "... Makefile を使う場合::"
+
+#: ../../devguide/flashfirmware.rst:25
+msgid "make all"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:27
+msgid ""
+"The result is a microbit-micropython hex file (i.e. ``microbit-"
+"micropython.hex``) found in the build/bbc-microbit-classic-gcc-"
+"nosd/source from the root of the repository."
+msgstr ""
+"ビルドの結果、リポジトリのルートの build/bbc-microbit-classic-gcc-nosd/source "
+"に microbit-micropython の hex ファイル(すなわち ``microbit-micropython.hex`` "
+"ができます。"
+
+#: ../../devguide/flashfirmware.rst:31
+msgid ""
+"The Makefile does some extra preprocessing of the source, which is needed"
+" only if you add new interned strings to ``qstrdefsport.h``. The Makefile"
+" also puts the resulting firmware at build/firmware.hex, and includes "
+"some convenience targets."
+msgstr ""
+"Makefile はソースに対して追加の前処理を行います。これは ``qstrdefsport.h`` "
+"に新しい登録済み文字列を追加する場合にのみ必要です。また、Makefile はビルド結果の"
+"ファームウェア を build/firmware.hex に置き、いくつかの便利なターゲットを含みます。"
+
+#: ../../devguide/flashfirmware.rst:37
+msgid "Preparing firmware and a Python program"
+msgstr "ファームウェア と Python プログラムの準備"
+
+#: ../../devguide/flashfirmware.rst:39
+msgid "tools/makecombined"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:41
+msgid "hexlify"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:46
+msgid "Flashing to the micro:bit"
+msgstr "micro:bit への転送"
+
+#: ../../devguide/flashfirmware.rst:51
+msgid "**Installation Scenarios**"
+msgstr "**インストールシナリオ**"
+
+#: ../../devguide/flashfirmware.rst:53 ../../devguide/installation.rst:31
+#: ../../devguide/repl.rst:40
+msgid ":ref:`Windows <microbit-windows>`"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:54 ../../devguide/installation.rst:32
+#: ../../devguide/repl.rst:41
+msgid ":ref:`OS X <microbit-osx>`"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:55 ../../devguide/installation.rst:33
+#: ../../devguide/repl.rst:42
+msgid ":ref:`Linux <microbit-linux>`"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:56 ../../devguide/installation.rst:34
+#: ../../devguide/repl.rst:43
+msgid ":ref:`Debian and Ubuntu <microbit-debian-ubuntu>`"
+msgstr ":ref:`Debian と Ubuntu <microbit-debian-ubuntu>`"
+
+#: ../../devguide/flashfirmware.rst:57 ../../devguide/installation.rst:35
+#: ../../devguide/repl.rst:44
+msgid ":ref:`Red Hat Fedora/CentOS <microbit-redhat>`"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:58 ../../devguide/installation.rst:36
+#: ../../devguide/repl.rst:45
+msgid ":ref:`Raspberry Pi <microbit-rpi>`"
+msgstr ""
+
+#: ../../devguide/installation.rst:5
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../devguide/installation.rst:7
+msgid ""
+"This section will help you set up the tools and programs needed for "
+"developing programs and firmware to flash to the BBC micro:bit using "
+"MicroPython."
+msgstr ""
+"本章では、BBC micro:bit で MicroPython を使うためのプログラムやファームウェアを"
+"開発する技術者向けに、必要となるツールとプログラムのセットアップ方法をお知らせします。"
+
+#: ../../devguide/installation.rst:11
+msgid "Dependencies"
+msgstr "依存関係"
+
+#: ../../devguide/installation.rst:15
+msgid "Development Environment"
+msgstr "開発環境"
+
+#: ../../devguide/installation.rst:17
+msgid "You will need:"
+msgstr "以下が必要となります:"
+
+#: ../../devguide/installation.rst:19
+msgid "git"
+msgstr ""
+
+#: ../../devguide/installation.rst:20
+msgid "yotta"
+msgstr ""
+
+#: ../../devguide/installation.rst:22
+msgid ""
+"Depending on your operating system, the installation instructions vary. "
+"Use the installation scenario that best suits your system."
+msgstr ""
+"利用しているオペレーティングシステムによってインストール手順が異なります。"
+"システムに最適なインストールシナリオにしたがってください。"
+
+#: ../../devguide/installation.rst:25
+msgid ""
+"Yotta will require an ARM mbed account.  It will walk you through signing"
+" up if you are not registered."
+msgstr ""
+"yotta には ARM mbed アカウントが必要です。あなたが登録されていない場合は"
+"サインアップしてください"
+
+#: ../../devguide/installation.rst:29
+msgid "Installation Scenarios"
+msgstr "インストールシナリオ"
+
+#: ../../devguide/installation.rst:42
+msgid "Windows"
+msgstr ""
+
+#: ../../devguide/installation.rst:44
+msgid ""
+"When installing `Yotta <http://yottadocs.mbed.com/>`_, make sure you have"
+" these components ticked to install."
+msgstr ""
+"`Yotta <http://yottadocs.mbed.com/>`_, をインストールするときは以下の"
+"コンポーネントをチェックしてインストールするようにしてください。"
+
+#: ../../devguide/installation.rst:47
+msgid "python"
+msgstr ""
+
+#: ../../devguide/installation.rst:48
+msgid "gcc"
+msgstr ""
+
+#: ../../devguide/installation.rst:49
+msgid "cMake"
+msgstr ""
+
+#: ../../devguide/installation.rst:50
+msgid "ninja"
+msgstr ""
+
+#: ../../devguide/installation.rst:51
+msgid "Yotta"
+msgstr ""
+
+#: ../../devguide/installation.rst:52
+msgid "git-scm"
+msgstr ""
+
+#: ../../devguide/installation.rst:53
+msgid "mbed serial driver"
+msgstr "mbed シリアルドライバ"
+
+#: ../../devguide/installation.rst:60
+msgid "OS X"
+msgstr ""
+
+#: ../../devguide/installation.rst:66
+msgid "Linux"
+msgstr ""
+
+#: ../../devguide/installation.rst:68
+msgid ""
+"These steps will cover the basic flavors of Linux and working with the "
+"micro:bit and MicroPython. See also the specific sections for Raspberry "
+"Pi, Debian/Ubuntu, and Red Hat Fedora/Centos."
+msgstr ""
+"これらの手順は、Linux および micro:bit と MicroPython での作業の基本をカバーします。"
+"Raspberry Pi、Debian / Ubuntu、Red Hat Fedora / Centos の各セクションも参照して"
+"ください。"
+
+#: ../../devguide/installation.rst:76
+msgid "Debian and Ubuntu"
+msgstr "Debian と Ubuntu"
+
+#: ../../devguide/installation.rst:80
+msgid ""
+"sudo add-apt-repository -y ppa:team-gcc-arm-embedded\n"
+"sudo add-apt-repository -y ppa:pmiller-opensource/ppa\n"
+"sudo apt-get update\n"
+"sudo apt-get install cmake ninja-build gcc-arm-none-eabi srecord libssl-"
+"dev\n"
+"pip3 install yotta"
+msgstr ""
+
+#: ../../devguide/installation.rst:90
+msgid "Red Hat Fedora/CentOS"
+msgstr ""
+
+#: ../../devguide/installation.rst:96
+msgid "Raspberry Pi"
+msgstr ""
+
+#: ../../devguide/installation.rst:103
+msgid "Next steps"
+msgstr "次のステップ"
+
+#: ../../devguide/installation.rst:105
+msgid ""
+"Congratulations. You have installed your development environment and are "
+"ready to begin :ref:`flashing firmware <flashfirmware>`  to the "
+"micro:bit."
+msgstr ""
+"おめでとうございます。開発環境をインストールし、micro:bit に "
+":ref:`ファームウェアの転送 <flashfirmware>` をする準備ができました。"
+
+#: ../../devguide/repl.rst:5
+msgid "Accessing the REPL"
+msgstr "REPL へのアクセス"
+
+#: ../../devguide/repl.rst:7
+msgid "Accessing the REPL on the micro:bit requires:"
+msgstr "micro:bit の REPL にアクセスするには次のものが必要です:"
+
+#: ../../devguide/repl.rst:9
+msgid "Using a serial communication program"
+msgstr "シリアル通信プログラムの用意"
+
+#: ../../devguide/repl.rst:10
+msgid "Determining the communication port identifier for the micro:bit"
+msgstr "micro:bit の通信ポート識別子の判別"
+
+#: ../../devguide/repl.rst:11
+msgid "Establishing communication with the correct settings for your computer"
+msgstr "コンピュータとの正しい設定での通信確立"
+
+#: ../../devguide/repl.rst:13
+msgid ""
+"If you are a Windows user you'll need to install the correct drivers. The"
+" instructions for which are found here:"
+msgstr ""
+"Windows ユーザーの方は、正しいドライバをインストールする必要があります。その手順は"
+"ここにあります:"
+
+#: ../../devguide/repl.rst:16
+msgid "https://developer.mbed.org/handbook/Windows-serial-configuration"
+msgstr ""
+
+#: ../../devguide/repl.rst:19
+msgid "Serial communication"
+msgstr "シリアル通信"
+
+#: ../../devguide/repl.rst:21
+msgid ""
+"To access the REPL, you need to select a program to use for serial "
+"communication. Some common options are `picocom` and `screen`. You will "
+"need to install program and understand the basics of connecting to a "
+"device."
+msgstr ""
+"REPL にアクセスするには、シリアル通信に使うプログラムを選択する必要があります。"
+"一般的な選択肢としては `picocom` と `screen` があります。プログラムをインストールし、"
+"デバイスに接続するための基本を理解する必要があります。"
+
+#: ../../devguide/repl.rst:26
+msgid "Determining port"
+msgstr "ポートの判別"
+
+#: ../../devguide/repl.rst:28
+msgid ""
+"The micro:bit will have a port identifier (tty, usb) that can be used by "
+"the computer for communicating. Before connecting to the micro:bit, we "
+"must determine the port identifier."
+msgstr ""
+"micro:bit にはコンピュータとの通信に使うポート識別子（tty, usb）を持ちます。"
+"micro:bit に接続する前に、ポート識別子を判別する必要があります。"
+
+#: ../../devguide/repl.rst:32
+msgid "Establishing communication with the micro:bit"
+msgstr "micro:bit との通信確立"
+
+#: ../../devguide/repl.rst:34
+msgid ""
+"Depending on your operating system, environment, and serial communication"
+" program, the settings and commands will vary a bit. Here are some common"
+" settings for different systems (please suggest additions that might help"
+" others)"
+msgstr ""
+"オペレーティングシステム、環境、シリアル通信プログラムによって、設定やコマンドが"
+"多少異なる場合があります。異なるシステムに共通する設定をいくつか紹介します"
+"（他の人に役立つかもしれない追加を提案してください）"
+
+#: ../../devguide/repl.rst:38
+msgid "**Settings**"
+msgstr "**設定**"
+
+

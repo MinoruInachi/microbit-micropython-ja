@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2016, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-09 10:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: ../../os.rst:2
+msgid "The ``os``  Module"
+msgstr "``os``  モジュール"
+
+#: ../../os.rst:6
+msgid ""
+"MicroPython contains an ``os`` module based upon the ``os`` module in the"
+" Python standard library. It's used for accessing what would "
+"traditionally be termed as operating system dependent functionality. "
+"Since there is no operating system in MicroPython the module provides "
+"functions relating to the management of the simple on-device persistent "
+"file system and information about the current system."
+msgstr ""
+"MicroPython は Python 標準ライブラリの ``os`` モジュールをベースにした ``os`` "
+"モジュールを持っています。これは、伝統的にオペレーティングシステムに依存した機能に"
+"アクセスするために使われます。MicroPython にはオペレーティングシステムがないため、"
+"このモジュールはデバイス上の簡易な永続オンデバイスファイルシステムの管理や現在の"
+"システムの情報に関連した機能を提供します。"
+
+#: ../../os.rst:13
+msgid "To access this module you need to::"
+msgstr "このモジュールにアクセスするには、以下を行う必要があります::"
+
+#: ../../os.rst:15
+msgid "import os"
+msgstr ""
+
+#: ../../os.rst:17
+msgid "We assume you have done this for the examples below."
+msgstr "以降の例では、これが行われていることを前提としています。"
+
+#: ../../os.rst:20
+msgid "Functions"
+msgstr "関数"
+
+#: ../../os.rst:24
+msgid ""
+"Returns a list of the names of all the files contained within the local "
+"persistent on-device file system."
+msgstr ""
+"ローカル永続オンデバイスファイルシステムにあるファイルすべての名前のリストを返します。"
+
+#: ../../os.rst:29
+msgid ""
+"Removes (deletes) the file named in the argument ``filename``. If the "
+"file does not exist an ``OSError`` exception will occur."
+msgstr ""
+"引数 ``filename`` で指定した名前のファイルを削除します。ファイルが存在しない"
+"場合は ``OSError`` 例外が起きます。"
+
+#: ../../os.rst:34
+msgid ""
+"Returns the size, in bytes, of the file named in the argument "
+"``filename``. If the file does not exist an ``OSError`` exception will "
+"occur."
+msgstr ""
+"引数 ``filename`` で指定した名前のファイルのサイスをバイト数で返します。"
+"ファイルが存在しない場合は ``OSError`` 例外が起きます。"
+
+#: ../../os.rst:39
+msgid ""
+"Returns information identifying the current operating system. The return "
+"value is an object with five attributes:"
+msgstr ""
+"現在のオペレーティングシステムを識別する情報を返します。戻り値は次の５属性を持つ"
+"オブジェクトです。"
+
+#: ../../os.rst:42
+msgid "``sysname`` - operating system name"
+msgstr "``sysname`` - オペレーティングシステム名"
+
+#: ../../os.rst:43
+msgid "``nodename`` - name of machine on network (implementation-defined)"
+msgstr "``nodename`` - ネットワークのマシン名 (実装定義)"
+
+#: ../../os.rst:44
+msgid "``release`` - operating system release"
+msgstr "``release`` - オペレーティングシステムのリリース"
+
+#: ../../os.rst:45
+msgid "``version`` - operating system version"
+msgstr "``version`` - オペレーティングシステムのバージョン"
+
+#: ../../os.rst:46
+msgid "``machine`` - hardware identifier"
+msgstr "``machine`` - ハードウェア識別子"
+
+#: ../../os.rst:51
+msgid ""
+"There is no underlying operating system in MicroPython. As a result the "
+"information returned by the ``uname`` function is mostly useful for "
+"versioning details."
+msgstr ""
+"MicroPython にはオペレーティングシステムがありません。``uname`` "
+"関数が返す結果は、バージョンの詳細を知るためのものとして使います。"
+

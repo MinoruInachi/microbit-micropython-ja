@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2016, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-09 10:10+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: ../../audio.rst:2
+msgid "Audio"
+msgstr ""
+
+#: ../../audio.rst:6
+msgid ""
+"This module allows you play sounds from a speaker attached to the "
+"Microbit. In order to use the audio module you will need to provide a "
+"sound source."
+msgstr ""
+
+#: ../../audio.rst:9
+msgid ""
+"A sound source is an iterable (sequence, like list or tuple, or a "
+"generator) of frames, each of 32 samples. The ``audio`` modules plays "
+"samples at the rate of 7812.5 samples per second, which means that it can"
+" reproduce frequencies up to 3.9kHz."
+msgstr ""
+
+#: ../../audio.rst:15
+msgid "Functions"
+msgstr ""
+
+#: ../../audio.rst:19
+msgid "Play the source to completion."
+msgstr ""
+
+#: ../../audio.rst:21
+msgid ""
+"``source`` is an iterable, each element of which must be an "
+"``AudioFrame``."
+msgstr ""
+
+#: ../../audio.rst:23
+msgid ""
+"If ``wait`` is ``True``, this function will block until the source is "
+"exhausted."
+msgstr ""
+
+#: ../../audio.rst:25
+msgid "``pins`` specifies which pins the speaker is connected to."
+msgstr ""
+
+#: ../../audio.rst:28
+msgid "Classes"
+msgstr ""
+
+#: ../../audio.rst:33
+msgid ""
+"An ``AudioFrame`` object is a list of 32 samples each of which is a "
+"signed byte (whole number between -128 and 127)."
+msgstr ""
+
+#: ../../audio.rst:36
+msgid "It takes just over 4 ms to play a single frame."
+msgstr ""
+
+#: ../../audio.rst:39
+msgid "Using audio"
+msgstr ""
+
+#: ../../audio.rst:41
+msgid ""
+"You will need a sound source, as input to the ``play`` function. You can "
+"generate your own, like in ``examples/waveforms.py`` or you can use the "
+"sound sources provided by modules like ``synth``."
+msgstr ""
+
+#: ../../audio.rst:46
+msgid "Technical Details"
+msgstr ""
+
+#: ../../audio.rst:49
+msgid ""
+"You don't need to understand this section to use the ``audio`` module. It"
+" is just here in case you wanted to know how it works."
+msgstr ""
+
+#: ../../audio.rst:52
+msgid ""
+"The ``audio`` module consumes samples at 7812.5 kHz, and uses linear "
+"interpolation to output a PWM signal at 32.5 kHz, which gives tolerable "
+"sound quality."
+msgstr ""
+
+#: ../../audio.rst:55
+msgid ""
+"The function ``play`` fully copies all data from each ``AudioFrame`` "
+"before it calls ``next()`` for the next frame, so a sound source can use "
+"the same ``AudioFrame`` repeatedly."
+msgstr ""
+
+#: ../../audio.rst:59
+msgid ""
+"The ``audio`` module has an internal 64 sample buffer from which it reads"
+" samples. When reading reaches the start or the mid-point of the buffer, "
+"it triggers a callback to fetch the next ``AudioFrame`` which is then "
+"copied into the buffer. This means that a sound source has under 4ms to "
+"compute the next ``AudioFrame``, and for reliable operation needs to take"
+" less 2ms (which is 32000 cycles, so should be plenty)."
+msgstr ""
+
+#: ../../audio.rst:67
+msgid "Example"
+msgstr ""
+
+msgid ""
+"from microbit import display, sleep, button_a\n"
+"import audio\n"
+"import math\n"
+"\n"
+"def repeated_frame(frame, count):\n"
+"    for i in range(count):\n"
+"        yield frame\n"
+"\n"
+"# Press button A to skip to next wave.\n"
+"def show_wave(name, frame, duration=1500):\n"
+"    display.scroll(name + \" wave\", wait=False,delay=100)\n"
+"    audio.play(repeated_frame(frame, duration),wait=False)\n"
+"    for i in range(75):\n"
+"        sleep(100)\n"
+"        if button_a.is_pressed():\n"
+"            display.clear()\n"
+"            audio.stop()\n"
+"            break\n"
+"\n"
+"frame = audio.AudioFrame()\n"
+"\n"
+"for i in range(len(frame)):\n"
+"    frame[i] = int(math.sin(math.pi*i/16)*124+128.5)\n"
+"show_wave(\"Sine\", frame)\n"
+"\n"
+"triangle = audio.AudioFrame()\n"
+"\n"
+"QUARTER = len(triangle)//4\n"
+"for i in range(QUARTER):\n"
+"    triangle[i] = i*15\n"
+"    triangle[i+QUARTER] = 248-i*15\n"
+"    triangle[i+QUARTER*2] = 128-i*15\n"
+"    triangle[i+QUARTER*3] = i*15+8\n"
+"show_wave(\"Triangle\", triangle)\n"
+"\n"
+"square = audio.AudioFrame()\n"
+"\n"
+"HALF = len(square)//2\n"
+"for i in range(HALF):\n"
+"    square[i] = 8\n"
+"    square[i+HALF] = 248\n"
+"show_wave(\"Square\", square)\n"
+"sleep(1000)\n"
+"\n"
+"for i in range(len(frame)):\n"
+"    frame[i] = 252-i*8\n"
+"show_wave(\"Sawtooth\", frame)\n"
+"\n"
+"del frame\n"
+"\n"
+"#Generate a waveform that goes from triangle to square wave, reasonably "
+"smoothly.\n"
+"frames = [ None ] * 32\n"
+"for i in range(32):\n"
+"    frames[i] = frame = audio.AudioFrame()\n"
+"    for j in range(len(triangle)):\n"
+"        frame[j] = (triangle[j]*(32-i) + square[j]*i)>>5\n"
+"\n"
+"def repeated_frames(frames, count):\n"
+"    for frame in frames:\n"
+"        for i in range(count):\n"
+"            yield frame\n"
+"\n"
+"\n"
+"display.scroll(\"Ascending wave\", wait=False)\n"
+"audio.play(repeated_frames(frames, 60))"
+msgstr ""
+
