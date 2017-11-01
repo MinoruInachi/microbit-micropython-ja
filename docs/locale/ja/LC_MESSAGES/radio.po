@@ -72,7 +72,7 @@ msgid "The rate of throughput can be one of three pre-determined settings."
 msgstr "スループットのレートは、３つの事前設定のいずれかになります。"
 
 #: ../../radio.rst:17
-msgid "Send and receieve bytes to work with arbitrary data."
+msgid "Send and receive bytes to work with arbitrary data."
 msgstr "任意のデータを使用するためにバイト列を送受信します。"
 
 #: ../../radio.rst:18
