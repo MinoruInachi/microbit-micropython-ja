@@ -396,13 +396,14 @@ msgstr ""
 
 #: ../../pin.rst:175
 msgid ""
-"This test is done by measuring the capacitance of the pin together with "
-"whatever is connected to it. Human body has quite a large capacitance, so"
-" touching the pin gives a dramatic change in reading, which can be "
-"detected."
+"This test is done by measuring how much resistance there is between the"
+"pin and ground.  A low resistance gives a reading of ``True``.  To get"
+"a reliable reading using a finger you may need to touch the ground pin"
+"with another part of your body, for example your other hand."
 msgstr ""
-"このテストは、端子の容量をそれに接続されているものと一緒に測定することによって行われます。"
-"人体は非常に大きな容量を持っているので、端子に触れると読み取りが劇的に変化し、これを検出できます。"
+"このテストは、端子と接地(GND)の間にどれだけの抵抗があるかを測定することによって"
+"行われます。抵抗が少ないと ``True`` の判定を返します。指での検出を確実にするには、"
+"体の別の部分、たとえばもう片方の手で GND 端子に触れる必要があるかもしれません。"
 
 #: ../../pin.rst:180
 msgid ""

@@ -239,11 +239,11 @@ msgstr ""
 
 #: ../../music.rst:110
 msgid ""
-"If ``len`` is negative the pitch is played continuously until either the "
+"If ``duration`` is negative the pitch is played continuously until either the "
 "blocking call is interrupted or, in the case of a background call, a new "
 "frequency is set or ``stop`` is called (see below)."
 msgstr ""
-"``len`` が負の場合、ブロックが解除されるか、バックグラウンドで新しい周波数が設定"
+"``duration`` が負の場合、ブロックが解除されるか、バックグラウンドで新しい周波数が設定"
 "されるか、 ``stop`` (後述)が呼び出されるまで、ピッチが連続して再生されます。"
 
 #: ../../music.rst:116
