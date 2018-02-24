@@ -396,9 +396,9 @@ msgstr ""
 
 #: ../../pin.rst:175
 msgid ""
-"This test is done by measuring how much resistance there is between the"
-"pin and ground.  A low resistance gives a reading of ``True``.  To get"
-"a reliable reading using a finger you may need to touch the ground pin"
+"This test is done by measuring how much resistance there is between the "
+"pin and ground.  A low resistance gives a reading of ``True``.  To get "
+"a reliable reading using a finger you may need to touch the ground pin "
 "with another part of your body, for example your other hand."
 msgstr ""
 "このテストは、端子と接地(GND)の間にどれだけの抵抗があるかを測定することによって"
