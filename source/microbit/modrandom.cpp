@@ -25,8 +25,10 @@
  * THE SOFTWARE.
  */
 
-#define rand30() (MicroBit_random(0x40000000))
-#define randbelow(n) (MicroBit_random(n))
+#include "MicroBitDevice.h"
+
+#define rand30() (microbit_random(0x40000000))
+#define randbelow(n) (microbit_random(n))
 
 extern "C" {
 
@@ -36,15 +38,10 @@ extern "C" {
 
 #include "py/runtime.h"
 
-extern int MicroBit_random(int max);
-extern void MicroBit_seedRandom(void);
-extern void MicroBit_setSeed(uint32_t seed);
-
-
 STATIC mp_obj_t mod_random_getrandbits(mp_obj_t num_in) {
     int n = mp_obj_get_int(num_in);
     if (n > 30 || n == 0) {
-        nlr_raise(mp_obj_new_exception(&mp_type_ValueError));
+        mp_raise_ValueError(NULL);
     }
     uint32_t mask = ~0;
     // Beware of C undefined behavior when shifting by >= than bit size
@@ -55,10 +52,10 @@ STATIC MP_DEFINE_CONST_FUN_OBJ_1(mod_random_getrandbits_obj, mod_random_getrandb
 
 STATIC mp_obj_t mod_random_seed(size_t n_args, const mp_obj_t *args) {
     if (n_args == 0 || args[0] == mp_const_none) {
-        MicroBit_seedRandom();
+        microbit_seed_random();
     } else {
         mp_uint_t seed = mp_obj_get_int_truncated(args[0]);
-        MicroBit_setSeed(seed);
+        microbit_seed_random(seed);
     }
     return mp_const_none;
 }
@@ -71,7 +68,7 @@ STATIC mp_obj_t mod_random_randrange(size_t n_args, const mp_obj_t *args) {
         if (start > 0) {
             return mp_obj_new_int(randbelow(start));
         } else {
-            nlr_raise(mp_obj_new_exception(&mp_type_ValueError));
+            mp_raise_ValueError(NULL);
         }
     } else {
         mp_int_t stop = mp_obj_get_int(args[1]);
@@ -80,7 +77,7 @@ STATIC mp_obj_t mod_random_randrange(size_t n_args, const mp_obj_t *args) {
             if (start < stop) {
                 return mp_obj_new_int(start + randbelow(stop - start));
             } else {
-                nlr_raise(mp_obj_new_exception(&mp_type_ValueError));
+                mp_raise_ValueError(NULL);
             }
         } else {
             // range(start, stop, step)
@@ -91,12 +88,12 @@ STATIC mp_obj_t mod_random_randrange(size_t n_args, const mp_obj_t *args) {
             } else if (step < 0) {
                 n = (stop - start + step + 1) / step;
             } else {
-                nlr_raise(mp_obj_new_exception(&mp_type_ValueError));
+                mp_raise_ValueError(NULL);
             }
             if (n > 0) {
                 return mp_obj_new_int(start + step * randbelow(n));
             } else {
-                nlr_raise(mp_obj_new_exception(&mp_type_ValueError));
+                mp_raise_ValueError(NULL);
             }
         }
     }
@@ -109,7 +106,7 @@ STATIC mp_obj_t mod_random_randint(mp_obj_t a_in, mp_obj_t b_in) {
     if (a <= b) {
         return mp_obj_new_int(a + randbelow(b - a + 1));
     } else {
-        nlr_raise(mp_obj_new_exception(&mp_type_ValueError));
+        mp_raise_ValueError(NULL);
     }
 }
 STATIC MP_DEFINE_CONST_FUN_OBJ_2(mod_random_randint_obj, mod_random_randint);
@@ -119,7 +116,7 @@ STATIC mp_obj_t mod_random_choice(mp_obj_t seq) {
     if (len > 0) {
         return mp_obj_subscr(seq, mp_obj_new_int(randbelow(len)), MP_OBJ_SENTINEL);
     } else {
-        nlr_raise(mp_obj_new_exception(&mp_type_IndexError));
+        mp_raise_msg(&mp_type_IndexError, NULL);
     }
 }
 STATIC MP_DEFINE_CONST_FUN_OBJ_1(mod_random_choice_obj, mod_random_choice);
@@ -180,7 +177,6 @@ STATIC MP_DEFINE_CONST_DICT(mp_module_random_globals, mp_module_random_globals_t
 
 const mp_obj_module_t random_module = {
     .base = { &mp_type_module },
-    .name = MP_QSTR_random,
     .globals = (mp_obj_dict_t*)&mp_module_random_globals,
 };
 

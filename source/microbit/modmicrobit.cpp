@@ -1,5 +1,5 @@
 /*
- * This file is part of the Micro Python project, http://micropython.org/
+ * This file is part of the MicroPython project, http://micropython.org/
  *
  * The MIT License (MIT)
  *
@@ -24,21 +24,18 @@
  * THE SOFTWARE.
  */
 
-#include "mbed.h"
+#include "MicroBitDevice.h"
+#include "MicroBitSystemTimer.h"
 
 extern "C" {
 
 #include "py/nlr.h"
 #include "py/obj.h"
 #include "py/mphal.h"
-#include "modmicrobit.h"
-#include "microbitdisplay.h"
-#include "microbitimage.h"
-
-extern uint32_t ticks;
+#include "microbit/modmicrobit.h"
 
 STATIC mp_obj_t microbit_reset_(void) {
-    NVIC_SystemReset();
+    microbit_reset();
     return mp_const_none;
 }
 MP_DEFINE_CONST_FUN_OBJ_0(microbit_reset_obj, microbit_reset_);
@@ -58,51 +55,29 @@ STATIC mp_obj_t microbit_sleep(mp_obj_t ms_in) {
 MP_DEFINE_CONST_FUN_OBJ_1(microbit_sleep_obj, microbit_sleep);
 
 STATIC mp_obj_t microbit_running_time(void) {
-    return MP_OBJ_NEW_SMALL_INT(ticks);
+    return MP_OBJ_NEW_SMALL_INT(system_timer_current_time());
 }
 MP_DEFINE_CONST_FUN_OBJ_0(microbit_running_time_obj, microbit_running_time);
 
-static const monochrome_5by5_t panic = SMALL_IMAGE(
-    1,1,0,1,1,
-    1,1,0,1,1,
-    0,0,0,0,0,
-    0,1,1,1,0,
-    1,0,0,0,1
-);
-
 STATIC mp_obj_t microbit_panic(mp_uint_t n_args, const mp_obj_t *args) {
-    while(true) {
-        microbit_display_show(&microbit_display_obj, (microbit_image_obj_t*)&panic);
-        mp_hal_delay_ms(1000);
-        char num[4];
-        int code;
-        if (n_args) {
-            code = mp_obj_get_int(args[0]);
-        } else {
-            code = 0;
-        }
-        num[2] = code%10 + '0';
-        code /= 10;
-        num[1] = code%10 + '0';
-        code /= 10;
-        num[0] = code%10 + '0';
-        for (int i = 0; i < 3; i++) {
-            microbit_display_show(&microbit_display_obj, microbit_image_for_char(num[i]));
-            mp_hal_delay_ms(1000);
-        }
+    if (n_args == 0) {
+        // TODO the docs don't mention this, so maybe remove it?
+        microbit_panic(999);
+    } else {
+        microbit_panic(mp_obj_get_int(args[0]));
     }
     return mp_const_none;
 }
 MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(microbit_panic_obj, 0, 1, microbit_panic);
 
 STATIC mp_obj_t microbit_temperature(void) {
-    int temp;
     NRF_TEMP->TASKS_START = 1;
-    while (NRF_TEMP->EVENTS_DATARDY == 0);
+    while (NRF_TEMP->EVENTS_DATARDY == 0) {
+    }
     NRF_TEMP->EVENTS_DATARDY = 0;
-    temp = NRF_TEMP->TEMP;
+    int32_t temp = NRF_TEMP->TEMP / 4;
     NRF_TEMP->TASKS_STOP = 1;
-    return mp_obj_new_float(temp/4.0);
+    return mp_obj_new_int(temp);
 }
 MP_DEFINE_CONST_FUN_OBJ_0(microbit_temperature_obj, microbit_temperature);
 
@@ -125,7 +100,7 @@ STATIC const mp_map_elem_t microbit_module_globals_table[] = {
     { MP_OBJ_NEW_QSTR(MP_QSTR_running_time), (mp_obj_t)&microbit_running_time_obj },
     { MP_OBJ_NEW_QSTR(MP_QSTR_panic), (mp_obj_t)&microbit_panic_obj },
     { MP_OBJ_NEW_QSTR(MP_QSTR_temperature), (mp_obj_t)&microbit_temperature_obj },
-    
+
     { MP_OBJ_NEW_QSTR(MP_QSTR_pin0), (mp_obj_t)&microbit_p0_obj },
     { MP_OBJ_NEW_QSTR(MP_QSTR_pin1), (mp_obj_t)&microbit_p1_obj },
     { MP_OBJ_NEW_QSTR(MP_QSTR_pin2), (mp_obj_t)&microbit_p2_obj },
@@ -151,7 +126,6 @@ STATIC MP_DEFINE_CONST_DICT(microbit_module_globals, microbit_module_globals_tab
 
 const mp_obj_module_t microbit_module = {
     .base = { &mp_type_module },
-    .name = MP_QSTR_microbit,
     .globals = (mp_obj_dict_t*)&microbit_module_globals,
 };
 

@@ -1,5 +1,5 @@
 /*
- * This file is part of the Micro Python project, http://micropython.org/
+ * This file is part of the MicroPython project, http://micropython.org/
  *
  * The MIT License (MIT)
  *
@@ -26,11 +26,9 @@
 
 extern "C" {
 
-#include "py/runtime.h"
-#include "microbitobj.h"
-#include "microbitpin.h"
-#include "modmicrobit.h"
 #include "nrf_gpio.h"
+#include "py/runtime.h"
+#include "microbit/modmicrobit.h"
 
 typedef struct _microbit_button_obj_t {
     mp_obj_base_t base;
@@ -43,16 +41,12 @@ static mp_uint_t pressed[2];
 static int8_t sigmas[8] = { 5, 5, 5, 5, 5, 5, 5, 5 };
 static bool debounced_high[8] = { true, true, true, true, true, true, true, true };
 
-bool microbit_button_is_pressed(const microbit_button_obj_t *self) {
-    /* Button is pressed if pin is low */
-    return !debounced_high[self->pin->number&7];
-}
-
-static mp_obj_t microbit_button_is_pressed_func(mp_obj_t self_in) {
+mp_obj_t microbit_button_is_pressed(mp_obj_t self_in) {
     microbit_button_obj_t *self = (microbit_button_obj_t*)self_in;
-    return mp_obj_new_bool(microbit_button_is_pressed(self));
+    /* Button is pressed if pin is low */
+    return mp_obj_new_bool(!debounced_high[self->pin->number&7]);
 }
-MP_DEFINE_CONST_FUN_OBJ_1(microbit_button_is_pressed_obj, microbit_button_is_pressed_func);
+MP_DEFINE_CONST_FUN_OBJ_1(microbit_button_is_pressed_obj, microbit_button_is_pressed);
 
 
 mp_obj_t microbit_button_get_presses(mp_obj_t self_in) {
@@ -71,9 +65,6 @@ mp_obj_t microbit_button_was_pressed(mp_obj_t self_in) {
     return result;
 }
 MP_DEFINE_CONST_FUN_OBJ_1(microbit_button_was_pressed_obj, microbit_button_was_pressed);
-
-void microbit_button_init(void) {
-}
 
 STATIC const mp_map_elem_t microbit_button_locals_dict_table[] = {
     { MP_OBJ_NEW_QSTR(MP_QSTR_is_pressed), (mp_obj_t)&microbit_button_is_pressed_obj },
@@ -96,8 +87,8 @@ STATIC const mp_obj_type_t microbit_button_type = {
     .getiter = NULL,
     .iternext = NULL,
     .buffer_p = {NULL},
-    .stream_p = NULL,
-    .bases_tuple = NULL,
+    .protocol = NULL,
+    .parent = NULL,
     .locals_dict = (mp_obj_dict_t*)&microbit_button_locals_dict,
 };
 
