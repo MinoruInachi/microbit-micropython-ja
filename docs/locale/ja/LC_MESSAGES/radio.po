@@ -7,11 +7,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 0.0.1\n"
+"Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-09 10:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Minoru Inachi <minoru.inachi@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -42,10 +42,11 @@ msgstr "ブロードキャストメッセージは設定可能な長さ(最大25
 msgid ""
 "Messages received are read from a queue of configurable size (the larger "
 "the queue the more RAM is used). If the queue is full, new messages are "
-"ignored."
+"ignored. Reading a message removes it from the queue."
 msgstr ""
 "受信したメッセージは、設定可能なサイズのキューから読み込まれます(キューが大きいほど、RAM "
 "が多く使用されます)。キューが満杯の場合、新しいメッセージは無視されます。"
+"読み込んだメッセージは、キューから取り除かれます。”
 
 #: ../../radio.rst:13
 msgid ""
@@ -77,12 +78,22 @@ msgstr "任意のデータを使用するためにバイト列を送受信しま
 
 #: ../../radio.rst:18
 msgid ""
+"Use `receive_full` to obtain full details about an incoming message: the "
+"data, receiving signal strength, and a microsecond timestamp when the "
+"message arrived."
+msgstr ""
+"入ってくるメッセージについて詳細を得るには `receive_full` を使います: "
+"得られる情報には、データ、受信信号強度、メッセージを受信したタイムスタンプ(ミリ秒単位)"
+"があります。"
+
+#: ../../radio.rst:19
+msgid ""
 "As a convenience for children, it's easy to send and receive messages as "
 "strings."
 msgstr ""
 "子供たちの便宜のために、メッセージを文字列として送受信するのは簡単です。"
 
-#: ../../radio.rst:19
+#: ../../radio.rst:20
 msgid ""
 "The default configuration is both sensible and compatible with other "
 "platforms that target the BBC micro:bit."
@@ -90,39 +101,39 @@ msgstr ""
 "デフォルトの設定は、BBC micro:bit をターゲットとする他のプラットフォームと"
 "合理的で互換性があります。"
 
-#: ../../radio.rst:21
+#: ../../radio.rst:23
 msgid "To access this module you need to::"
 msgstr "このモジュールにアクセスするには、以下を行う必要があります::"
 
-#: ../../radio.rst:23
+#: ../../radio.rst:24
 msgid "import radio"
 msgstr ""
 
-#: ../../radio.rst:25
+#: ../../radio.rst:26
 msgid "We assume you have done this for the examples below."
 msgstr "以降の例では、これが行われていることを前提としています。"
 
-#: ../../radio.rst:28
+#: ../../radio.rst:29
 msgid "Constants"
 msgstr "定数"
 
-#: ../../radio.rst:32
+#: ../../radio.rst:33
 msgid "Constant used to indicate a throughput of 256 Kbit a second."
 msgstr "256 Kbit/秒のスループットを示すために使われる定数です。"
 
-#: ../../radio.rst:36
+#: ../../radio.rst:37
 msgid "Constant used to indicate a throughput of 1 MBit a second."
 msgstr "1 MBit/秒のスループットを示すために使われる定数です。"
 
-#: ../../radio.rst:40
+#: ../../radio.rst:41
 msgid "Constant used to indicate a throughput of 2 MBit a second."
 msgstr "2 MBit/秒のスループットを示すために使われる定数です。"
 
-#: ../../radio.rst:44
+#: ../../radio.rst:45
 msgid "Functions"
 msgstr "関数"
 
-#: ../../radio.rst:48
+#: ../../radio.rst:49
 msgid ""
 "Turns the radio on. This needs to be explicitly called since the radio "
 "draws power and takes up memory that you may otherwise need."
@@ -130,11 +141,11 @@ msgstr ""
 "無線通信をオンにします。無線通信は電力を消費し、他で必要となるかもしれない"
 "メモリも占有するため、明示的に呼び出す必要があります。"
 
-#: ../../radio.rst:53
+#: ../../radio.rst:55
 msgid "Turns off the radio, thus saving power and memory."
 msgstr "無線通信をオフにして、電力とメモリを節約します。"
 
-#: ../../radio.rst:57
+#: ../../radio.rst:58
 msgid ""
 "Configures various keyword based settings relating to the radio. The "
 "available settings and their sensible default values are listed below."
@@ -142,7 +153,7 @@ msgstr ""
 "無線通信に関連するさまざまなキーワードベースの設定を構成します。利用可能な設定と"
 "その適切なデフォルト値を以下に示します。"
 
-#: ../../radio.rst:60
+#: ../../radio.rst:61
 msgid ""
 "The ``length`` (default=32) defines the maximum length, in bytes, of a "
 "message sent via the radio. It can be up to 251 bytes long (254 - 3 bytes"
@@ -152,7 +163,7 @@ msgstr ""
 "最大長を設定します。最大で 251 バイト(254 から S0、長さ、S1 プリアンブルを引いた値)に"
 "できます。"
 
-#: ../../radio.rst:64
+#: ../../radio.rst:65
 msgid ""
 "The ``queue`` (default=3) specifies the number of messages that can be "
 "stored on the incoming message queue. If there are no spaces left on the "
@@ -161,7 +172,7 @@ msgstr ""
 "``queue`` (デフォルト=3)は、受信メッセージキューに格納できるメッセージの数を"
 "指定します。着信メッセージのキューに空きがない場合、着信メッセージは捨てられます。"
 
-#: ../../radio.rst:68
+#: ../../radio.rst:69
 msgid ""
 "The ``channel`` (default=7) can be an integer value from 0 to 100 "
 "(inclusive) that defines an arbitrary \"channel\" to which the radio is "
@@ -174,7 +185,7 @@ msgstr ""
 "送信され、このチャネル経由で受信したメッセージだけが受信メッセージキューに入れられます。"
 "各ステップは 1MHz 幅で、2400MHz を基準にしています。"
 
-#: ../../radio.rst:74
+#: ../../radio.rst:75
 msgid ""
 "The ``power`` (default=6) is an integer value from 0 to 7 (inclusive) to "
 "indicate the strength of signal used when broadcasting a message. The "
@@ -187,7 +198,7 @@ msgstr ""
 "デバイスが消費する電力が大きくなります。指定の番号は次のリストの dBm (デシベルミリワット)"
 "値の位置に変換されます: -30, -20, -16, -12, -8, -4, 0, 4 。"
 
-#: ../../radio.rst:80
+#: ../../radio.rst:81
 msgid ""
 "The ``address`` (default=0x75626974) is an arbitrary name, expressed as a"
 " 32-bit address, that's used to filter incoming packets at the hardware "
@@ -201,7 +212,7 @@ msgstr ""
 " micro:bit 関連のプラットフォームで使われるデフォルトは、ここで使用されるデフォルト"
 "設定です。"
 
-#: ../../radio.rst:85
+#: ../../radio.rst:86
 msgid ""
 "The ``group`` (default=0) is an 8-bit value (0-255) used with the "
 "``address`` when filtering messages. Conceptually, \"address\" is like a "
@@ -212,7 +223,7 @@ msgstr ""
 "フィルタしたメッセージで使います。概念的に \"address\" は自宅/事務所の住所のような"
 "ものであり、 \"group\" はその住所のメッセージを受け取る人のようなものです。"
 
-#: ../../radio.rst:90
+#: ../../radio.rst:91
 msgid ""
 "The ``data_rate`` (default=radio.RATE_1MBIT) indicates the speed at which"
 " data throughput takes place. Can be one of the following contants "
@@ -223,29 +234,29 @@ msgstr ""
 "示しています。``radio`` モジュールに定義されている以下の定数のいずれかになります: "
 "``RATE_250KBIT``, ``RATE_1MBIT``, ``RATE_2MBIT`` 。"
 
-#: ../../radio.rst:95
+#: ../../radio.rst:96
 msgid "If ``config`` is not called then the defaults described above are assumed."
 msgstr "``config`` を呼び出さない場合は、上記のデフォルトが仮定されます。"
 
-#: ../../radio.rst:99
+#: ../../radio.rst:100
 msgid ""
 "Reset the settings to their default values (as listed in the "
 "documentation for the ``config`` function above)."
 msgstr ""
 "設定を既定値にリセットします(上記の ``config`` 関数のドキュメントに記載されています)。"
 
-#: ../../radio.rst:104
+#: ../../radio.rst:105
 msgid ""
 "None of the following send or receive methods will work until the radio "
 "is turned on."
 msgstr ""
 "無線通信がオンになるまで、以下の送受信のメソッドは機能しません。"
 
-#: ../../radio.rst:109
+#: ../../radio.rst:110
 msgid "Sends a message containing bytes."
 msgstr "バイト列を含むメッセージを送信します。"
 
-#: ../../radio.rst:113
+#: ../../radio.rst:114
 msgid ""
 "Receive the next incoming message on the message queue. Returns ``None`` "
 "if there are no pending messages. Messages are returned as bytes."
@@ -253,7 +264,7 @@ msgstr ""
 "メッセージキューで次の着信メッセージを受信します。保留中のメッセージがない場合は ``None`` "
 "を返します。メッセージはバイト列として返されます。"
 
-#: ../../radio.rst:118
+#: ../../radio.rst:119
 msgid ""
 "Receive the next incoming message on the message queue. Copies the "
 "message into ``buffer``, trimming the end of the message if necessary. "
@@ -266,7 +277,7 @@ msgstr ""
 "場合は ``None`` を返し、そうでない場合はメッセージの長さを返します(バッファの"
 "長さ以上の場合もあります)。"
 
-#: ../../radio.rst:125
+#: ../../radio.rst:126
 msgid ""
 "Sends a message string. This is the equivalent of "
 "``send_bytes(bytes(message, 'utf8'))`` but with ``b'\\x01\\x00\\x01'`` "
@@ -277,14 +288,14 @@ msgstr ""
 "と同等ですが、``b'\\x01\\x00\\x01'`` を前に付加します(micro:bit "
 "をターゲットとする他のプラットフォームと互換性を持たせるためです)。"
 
-#: ../../radio.rst:132
+#: ../../radio.rst:133
 msgid ""
 "Works in exactly the same way as ``receive_bytes`` but returns whatever "
 "was sent."
 msgstr ""
 "``receive_bytes`` と同じように動作しますが、送信されてきたものはすべて返します。"
 
-#: ../../radio.rst:135
+#: ../../radio.rst:136
 msgid ""
 "Currently, it's equivalent to ``str(receive_bytes(), 'utf8')`` but with a"
 " check that the the first three bytes are ``b'\\x01\\x00\\x01'`` (to make"
@@ -296,11 +307,62 @@ msgstr ""
 "をターゲットとする可能性のある他のプラットフォームと互換性を持たせるため)。文字列に"
 "変換する前に、先頭に付加された３バイトを削除します。"
 
-#: ../../radio.rst:140
+#: ../../radio.rst:141
 msgid "A ``ValueError`` exception is raised if conversion to string fails."
 msgstr "文字列への変換が失敗した場合は、 ``ValueError`` 例外が発生します。"
 
-#: ../../radio.rst:143
+#: ../../radio.rst:145
+msgid ""
+"Returns a tuple containing three values representing the next incoming "
+"message on the message queue. If there are no pending messages then "
+"``None`` is returned."
+msgstr ""
+"キューにある次のメッセージを表す３つの値のタプルを返します。"
+"キューに保留しているメッセージがない場合には ``None`` を返します。"
+
+#: ../../radio.rst:149
+msgid "The three values in the tuple represent:"
+msgstr "タプルで返す３つの値は次のものです:"
+
+#: ../../radio.rst:151
+msgid "the next incoming message on the message queue as bytes."
+msgstr "キューにある次のメッセージのバイト列。"
+
+#: ../../radio.rst:152
+msgid ""
+"the RSSI (signal strength): a value between 0 (strongest) and -255 "
+"(weakest) as measured in dBm."
+msgstr ""
+"RSSI (信号強度): dBm で測った信号の強さ。0 が最も強く、-255 が最も弱い。"
+
+#: ../../radio.rst:153
+msgid ""
+"a microsecond timestamp: the value returned by ``time.ticks_us()`` when "
+"the message was received."
+msgstr ""
+"マイクロ秒単位のタイムスタンプ: メッセージを受信したときの ``time.ticks_us()`` "
+"が返す値。"
+
+#: ../../radio.rst:155
+msgid "For example::"
+msgstr "たとえば、次のように使います::"
+
+#: ../../radio.rst:157
+msgid ""
+"details = radio.receive_full()\n"
+"if details:\n"
+"    msg, rssi, timestamp = details"
+msgstr ""
+
+#: ../../radio.rst:161
+msgid ""
+"This function is useful for providing information needed for "
+"triangulation and/or triliteration with other micro:bit devices."
+msgstr ""
+"この関数は、他の micro:bit デバイスとの三角測量(Triangulation)や"
+"三辺測量(Triliteration)を行うために必要な情報を提供するのに便利です。"
+
+#: ../../radio.rst:166
 msgid "Examples"
 msgstr "サンプルコード"
 
