@@ -81,13 +81,21 @@ msgstr ""
 
 #: ../../i2c.rst:37
 msgid ""
+"Scan the bus for devices.  Returns a list of 7-bit addresses "
+"corresponding to those devices that responded to the scan."
+msgstr ""
+"デバイスのバスをスキャンします。スキャンに応答したデバイスに該当する"
+"7ビットアドレスのリストを返します。"
+
+#: ../../i2c.rst:43
+msgid ""
 "Read ``n`` bytes from the device with 7-bit address ``addr``. If "
 "``repeat`` is ``True``, no stop bit will be sent."
 msgstr ""
 "7 ビットアドレス ``addr`` のデバイスから ``n`` バイトを読み込みます、"
 "``repeat`` が ``True`` にすると、ストップビットが送られません。"
 
-#: ../../i2c.rst:43
+#: ../../i2c.rst:49
 msgid ""
 "Write bytes from ``buf`` to the device with 7-bit address ``addr``. If "
 "``repeat`` is ``True``, no stop bit will be sent."
@@ -95,11 +103,11 @@ msgstr ""
 "7 ビットアドレス ``addr`` のデバイスに ``buf`` のバイト列を書き込みます、 "
 "``repeat`` が ``True`` にすると、ストップビットが送られません。"
 
-#: ../../i2c.rst:48
+#: ../../i2c.rst:53
 msgid "Connecting"
 msgstr "結線"
 
-#: ../../i2c.rst:50
+#: ../../i2c.rst:56
 msgid ""
 "You should connect the device's ``SCL`` pin to micro:bit pin 19, and the "
 "device's ``SDA`` pin to micro:bit pin 20. You also must connect the "
@@ -111,7 +119,7 @@ msgstr ""
 "に結線する必要があります。デバイスよっては外部電源または micro:bit "
 "から電力を供給する必要があります。"
 
-#: ../../i2c.rst:55
+#: ../../i2c.rst:61
 msgid ""
 "There are internal pull-up resistors on the I²C lines of the board, but "
 "with particularly long wires or large number of devices you may need to "

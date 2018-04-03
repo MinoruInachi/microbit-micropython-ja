@@ -77,21 +77,19 @@ msgstr ""
 msgid ""
 "Gives the compass heading, calculated from the above readings, as an "
 "integer in the range from 0 to 360, representing the angle in degrees, "
-"clockwise, with north as 0. If the compass has not been calibrated, then "
-"this will call ``calibrate``."
+"clockwise, with north as 0."
 msgstr ""
 "３軸の磁力から計算された方位を返します。値は時計回りの角度を示す 0 から 360 "
-"までの整数で、0 は北となります。コンパスを調整していなかった場合には "
-"``calibrate`` を呼び出します。"
+"までの整数で、0 は北となります。"
 
-#: ../../compass.rst:67
+#: ../../compass.rst:66
 msgid ""
 "Returns an integer indication of the magnitude of the magnetic field "
 "around the device."
 msgstr ""
 "デバイスのまわりの磁場の強さを示す整数値を返します。"
 
-#: ../../compass.rst:72
+#: ../../compass.rst:70
 msgid "Example"
 msgstr "サンプルコード"
 
