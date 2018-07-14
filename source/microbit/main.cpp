@@ -8,9 +8,11 @@
 // Global instances of the DAL components that we use
 MicroBitDisplay ubit_display;
 MicroPythonI2C ubit_i2c(I2C_SDA0, I2C_SCL0);
-MicroBitAccelerometer ubit_accelerometer(ubit_i2c);
-MicroBitCompass ubit_compass(ubit_i2c, ubit_accelerometer);
-MicroBitCompassCalibrator ubit_compass_calibrator(ubit_compass, ubit_accelerometer, ubit_display);
+
+// Global pointers to instances of DAL components that are created dynamically
+MicroBitAccelerometer *ubit_accelerometer;
+MicroBitCompass *ubit_compass;
+MicroBitCompassCalibrator *ubit_compass_calibrator;
 
 extern "C" {
 
@@ -27,8 +29,8 @@ extern "C" {
 void microbit_ticker(void) {
     // Update compass if it is calibrating, but not if it is still
     // updating as compass.idleTick() is not reentrant.
-    if (ubit_compass.isCalibrating() && !compass_updating) {
-        ubit_compass.idleTick();
+    if (ubit_compass->isCalibrating() && !compass_updating) {
+        ubit_compass->idleTick();
     }
 
     compass_up_to_date = false;
@@ -126,15 +128,14 @@ typedef struct _appended_script_t {
 #define APPENDED_SCRIPT ((const appended_script_t*)microbit_mp_appended_script())
 
 int main(void) {
+    // Create dynamically-allocated DAL components
+    ubit_accelerometer = &MicroBitAccelerometer::autoDetect(ubit_i2c);
+    ubit_compass = &MicroBitCompass::autoDetect(ubit_i2c);
+    ubit_compass_calibrator = new MicroBitCompassCalibrator(*ubit_compass, *ubit_accelerometer, ubit_display);
+
     for (;;) {
         extern uint32_t __StackTop;
-#if __NEWLIB__ > 2 || (__NEWLIB__ == 2 && (__NEWLIB_MINOR__ > 4 || (__NEWLIB_MINOR == 4 && __NEWLIB_PATCHLEVEL > 0)))
-        // newlib >2.4.0 uses more RAM for locale data.
-#warning "Detected newlib >2.4.0 so reducing heap by 300 bytes. See https://github.com/bbcmicrobit/micropython/issues/363 for details."
-        static uint32_t mp_heap[9940 / sizeof(uint32_t)];
-#else
         static uint32_t mp_heap[10240 / sizeof(uint32_t)];
-#endif
 
         // Initialise memory regions: stack and MicroPython heap
         mp_stack_set_top(&__StackTop);
@@ -166,11 +167,11 @@ int main(void) {
         // mode.  If we are in "raw REPL" mode then this will be skipped.
         if (pyexec_mode_kind == PYEXEC_MODE_FRIENDLY_REPL) {
             file_descriptor_obj *main_module;
-            if (APPENDED_SCRIPT->header[0] == 'M' && APPENDED_SCRIPT->header[1] == 'P') {
+            if ((main_module = microbit_file_open("main.py", 7, false, false))) {
+                do_file(main_module);
+            } else if (APPENDED_SCRIPT->header[0] == 'M' && APPENDED_SCRIPT->header[1] == 'P') {
                 // run appended script
                 do_strn(APPENDED_SCRIPT->str, APPENDED_SCRIPT->len);
-            } else if ((main_module = microbit_file_open("main.py", 7, false, false))) {
-                do_file(main_module);
             } else {
                 // from microbit import *
                 mp_import_all(mp_import_name(MP_QSTR_microbit, mp_const_empty_tuple, MP_OBJ_NEW_SMALL_INT(0)));
