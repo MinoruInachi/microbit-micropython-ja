@@ -90,7 +90,7 @@ msgid ""
 "If ``clear`` is ``True``, the display will be cleared after the iterable "
 "has finished."
 msgstr ""
-"``clear`` が ``True`` である場合、表示が終了後にディスプレィをクリアします。"
+"``clear`` が ``True`` である場合、表示が終了後にディスプレイをクリアします。"
 
 #: ../../display.rst:48
 msgid ""
@@ -158,7 +158,7 @@ msgid ""
 "falling on the display.  Returns an integer between 0 and 255 representing "
 "the light level, with larger meaning more light."
 msgstr ""
-"ディスプレィの LED を逆バイアスモードで利用して、ディスプレィのまわりの光量を検出します。"
+"ディスプレィの LED を逆バイアスモードで利用して、ディスプレイのまわりの光量を検出します。"
 "戻り値は明度を表す 0 から 255 までの整数値で、値が大きいほど強い明度を意味します。"
 
 #: ../../display.rst:94
