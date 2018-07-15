@@ -30,11 +30,11 @@ msgstr ""
 "このモジュールは、ボードの前面にある 5×5 LED ディスプレイを制御します。イメージ、"
 "アニメーション、テキストの表示に利用できます。"
 
-#: ../../display.rst:10
+#: ../../display.rst:9
 msgid ".. image:: scroll-hello.gif"
 msgstr ""
 
-#: ../../display.rst:12
+#: ../../display.rst:11
 msgid "Functions"
 msgstr "関数"
 
@@ -64,12 +64,16 @@ msgstr "イメージ ``image`` を表示します。"
 
 #: ../../display.rst:37
 msgid ""
-"Display images or letters from the ``iterable`` in sequence, with "
-"``delay`` milliseconds between them."
+"If ``value`` is a string, float or integer, display letters/digits in "
+"sequence. Otherwise, if ``value`` is an iterable sequence of images, "
+"display these images in sequence. Each letter, digit or image is shown "
+"with ``delay`` milliseconds between them."
 msgstr ""
-"``iterable`` からイメージや文字を順番に ``delay`` 間隔で表示します。"
+"``value`` が文字列、浮動小数点数、整数であれば、文字/数字を順番に表示します。"
+"``value`` がイメージの並びであれば、そのイメージの並びを順番に表示します。"
+"それぞれの文字、数字、イメージは ``delay`` ミリ秒間隔で表示されます。"
 
-#: ../../display.rst:40 ../../display.rst:61
+#: ../../display.rst:41 ../../display.rst:61
 msgid ""
 "If ``wait`` is ``True``, this function will block until the animation is "
 "finished, otherwise the animation will happen in the background."
@@ -77,18 +81,18 @@ msgstr ""
 "``wait`` が ``True`` である場合、アニメーションが終了するまで関数がブロックし、 "
 "``False`` の場合にはバックグラウンドで実行されます。"
 
-#: ../../display.rst:43 ../../display.rst:64
+#: ../../display.rst:44 ../../display.rst:64
 msgid "If ``loop`` is ``True``, the animation will repeat forever."
 msgstr "``loop`` が ``True`` である場合、アニメーションが永遠に繰り返します。"
 
-#: ../../display.rst:45
+#: ../../display.rst:46
 msgid ""
 "If ``clear`` is ``True``, the display will be cleared after the iterable "
 "has finished."
 msgstr ""
 "``clear`` が ``True`` である場合、表示が終了後にディスプレィをクリアします。"
 
-#: ../../display.rst:47
+#: ../../display.rst:48
 msgid ""
 "Note that the ``wait``, ``loop`` and ``clear`` arguments must be "
 "specified using their keyword."
@@ -96,7 +100,7 @@ msgstr ""
 "``wait``, ``loop``, ``clear`` 引数は、キーワードを用いて指定する必要が"
 "あることに注意してください。"
 
-#: ../../display.rst:52
+#: ../../display.rst:53
 msgid ""
 "If using a generator as the ``iterable``, then take care not to allocate "
 "any memory in the generator as allocating memory in an interrupt is "
@@ -105,15 +109,17 @@ msgstr ""
 "``iterable`` でジェネレータを使う場合、ジェネレータでメモリをアロケートしないよう"
 "注意してください。割り込みでメモリをアロケートすると ``MemoryError`` が起きます。"
 
-#: ../../display.rst:58
+#: ../../display.rst:59
 msgid ""
-"Similar to ``show``, but scrolls the ``string`` horizontally instead. The"
-" ``delay`` parameter controls how fast the text is scrolling."
+"Scrolls ``value`` horizontally on the display. If ``value`` is an integer "
+"or float it is first converted to a string using ``str()``. The ``delay`` "
+"parameter controls how fast the text is scrolling."
 msgstr ""
-"``show`` と同様ですが、 ``string`` を水平方向にスクロールします。``delay`` "
-"パラメータはテキストのスクロール速度を制御します。"
+"ディスプレィ上に ``value`` を水平方向にスクロールさせます。``value`` が整数か"
+"浮動小数点数であれば、表示の前に ``str()`` を使って文字列に変換します。"
+"``delay`` パラメータはテキストのスクロール速度を制御します。"
 
-#: ../../display.rst:66
+#: ../../display.rst:68
 msgid ""
 "If ``monospace`` is ``True``, the characters will all take up 5 pixel-"
 "columns in width, otherwise there will be exactly 1 blank pixel-column "
@@ -122,7 +128,7 @@ msgstr ""
 "``monospace`` が ``True`` である場合、文字は 5 ピクセル幅になります。 "
 "``False`` の場合はスクロールでの文字間が 1 ピクセルのブランクになります。"
 
-#: ../../display.rst:70
+#: ../../display.rst:72
 msgid ""
 "Note that the ``wait``, ``loop`` and ``monospace`` arguments must be "
 "specified using their keyword."
@@ -130,11 +136,11 @@ msgstr ""
 "``wait``, ``loop``, ``monospace`` 引数は、キーワードを用いて指定する必要が"
 "あることに注意してください。"
 
-#: ../../display.rst:75
+#: ../../display.rst:77
 msgid "Use on() to turn on the display."
 msgstr "ディスプレイを有効にします。"
 
-#: ../../display.rst:79
+#: ../../display.rst:81
 msgid ""
 "Use off() to turn off the display (thus allowing you to re-use the GPIO "
 "pins associated with the display for other purposes)."
@@ -142,22 +148,31 @@ msgstr ""
 "ディスプレイを無効にするのは off() を使います(ディスプレイに関連づけられた GPIO "
 "端子を他の目的に再利用できるようにします)。"
 
-#: ../../display.rst:84
+#: ../../display.rst:86
 msgid "Returns ``True`` if the display is on, otherwise returns ``False``."
 msgstr "ディスプレイが有効であれば ``True`` 、無効であれば ``False`` を返します。"
 
-#: ../../display.rst:87
+#: ../../display.rst:90
+msgid ""
+"Use the display's LEDs in reverse-bias mode to sense the amount of light "
+"falling on the display.  Returns an integer between 0 and 255 representing "
+"the light level, with larger meaning more light."
+msgstr ""
+"ディスプレィの LED を逆バイアスモードで利用して、ディスプレィのまわりの光量を検出します。"
+"戻り値は明度を表す 0 から 255 までの整数値で、値が大きいほど強い明度を意味します。"
+
+#: ../../display.rst:94
 msgid "Example"
 msgstr "サンプルコード"
 
-#: ../../display.rst:89
+#: ../../display.rst:97
 msgid ""
 "To continuously scroll a string across the display, and do it in the "
 "background, you can use::"
 msgstr ""
 "ディスプレイに文字列を連続してスクロール表示することをバックグラウンドで実行します::"
 
-#: ../../display.rst:92
+#: ../../display.rst:100
 msgid ""
 "import microbit\n"
 "\n"
