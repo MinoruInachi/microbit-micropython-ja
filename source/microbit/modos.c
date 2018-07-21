@@ -31,14 +31,12 @@
 #include "genhdr/mpversion.h"
 #include "genhdr/microbitversion.h"
 
-#define RELEASE "1.0.0-beta.1"
-
-#define VERSION \
-    "micro:bit " RELEASE "+" MICROBIT_GIT_HASH " on " MICROBIT_BUILD_DATE \
+#define MICROBIT_VERSION \
+    "micro:bit v" MICROBIT_RELEASE "+" MICROBIT_GIT_HASH " on " MICROBIT_BUILD_DATE \
     "; MicroPython " MICROPY_GIT_TAG " on " MICROPY_BUILD_DATE
 
-const char microbit_release_string[] = RELEASE;
-const char microbit_version_string[] = VERSION;
+const char microbit_release_string[] = MICROBIT_RELEASE;
+const char microbit_version_string[] = MICROBIT_VERSION;
 
 STATIC const qstr os_uname_info_fields[] = {
     MP_QSTR_sysname, MP_QSTR_nodename,
@@ -48,7 +46,7 @@ STATIC const MP_DEFINE_STR_OBJ(os_uname_info_sysname_obj, MICROPY_PY_SYS_PLATFOR
 STATIC const MP_DEFINE_STR_OBJ(os_uname_info_nodename_obj, MICROPY_PY_SYS_PLATFORM);
 STATIC const MP_DEFINE_STR_OBJ(os_uname_info_release_obj, microbit_release_string);
 STATIC const MP_DEFINE_STR_OBJ(os_uname_info_version_obj, microbit_version_string);
-STATIC const MP_DEFINE_STR_OBJ(os_uname_info_machine_obj, MICROPY_HW_BOARD_NAME " with " MICROPY_HW_MCU_NAME);
+STATIC const MP_DEFINE_STR_OBJ(os_uname_info_machine_obj, MICROBIT_BOARD_NAME " with " MICROPY_HW_MCU_NAME);
 
 STATIC MP_DEFINE_ATTRTUPLE(
     os_uname_info_obj,
