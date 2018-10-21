@@ -10,9 +10,8 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-10-20 22:30+0900\n"
+"Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -252,6 +251,206 @@ msgstr ""
 #: ../../devguide/repl.rst:45
 msgid ":ref:`Raspberry Pi <microbit-rpi>`"
 msgstr ""
+
+#: ../../devguide/hexformat.rst:5
+msgid "Firmware Hex File"
+msgstr "ファームウェア Hex ファイル"
+
+#: ../../devguide/hexformat.rst:7
+msgid ""
+"When MicroPython is built, the compiler produces an `Intel Hex "
+"<https://en.wikipedia.org/wiki/Intel_HEX>`_ file containing the "
+"MicroPython firmware. Additional data can then be added to this file to "
+"contain information about the MicroPython version, or the Python code to "
+"execute on start-up."
+msgstr ""
+"MicroPythonをビルドすると、コンパイラは MicroPython ファームウェアを含む "
+"`Intel Hex <https://en.wikipedia.org/wiki/Intel_HEX>`_ ファイルを"
+"生成します。このファイルにデータを追加して、MicroPython バージョン情報、"
+"または起動時に実行する Python コードを含められます。"
+
+#: ../../devguide/hexformat.rst:13
+msgid "The general memory layout used is:"
+msgstr "一般的なメモリレイアウトは次のとおりです:"
+
+#: ../../devguide/hexformat.rst:15
+msgid "``0x00000000``: Start of MicroPython firmware - up to 248 KBs"
+msgstr "``0x00000000``: MicroPython ファームウェアの先頭 - 最大 248 KB"
+
+#: ../../devguide/hexformat.rst:16
+msgid "``0x0003e000``: Start of appended script (optional) - up to 8 Kbs"
+msgstr "``0x0003e000``: 追加スクリプトの先頭(オプション) - 最大 8 KB"
+
+#: ../../devguide/hexformat.rst:17
+msgid ""
+"``0x100010c0``: UICR customer[16] register, start of MicroPython "
+"information - 28 bytes"
+msgstr ""
+"``0x100010c0``: UICR カスタマー[16]レジスター, MicroPython 情報の先頭 - 28バイト"
+
+#: ../../devguide/hexformat.rst:20
+msgid ""
+"If you append any data or modify the Intel Hex file, please ensure the "
+"addresses of the data stored progress in incremental order. If there is "
+"an address jump backwards DAPLink will fail to flash the file."
+msgstr ""
+"Intel Hex ファイルにデータを追加したり変更したりする場合は、データのアドレスが増分順に"
+"格納されていることを確認してください。後方にアドレスジャンプがある場合、DAPLink は"
+"ファイルをフラッシュできません。"
+
+#: ../../devguide/hexformat.rst:25
+msgid "Appended script format"
+msgstr "追加スクリプトの形式"
+
+#: ../../devguide/hexformat.rst:27
+msgid ""
+"MicroPython checks the first 2 bytes at address ``0x0003e000`` for a "
+"magic string to indicate if there is an appended script. If the magic "
+"string is found, it will automatically execute the Python code stored "
+"there, unless there is a main.py file stored in the MicroPython "
+"filesystem."
+msgstr ""
+"MicroPython はアドレス ``0x0003e000`` の先頭2バイトをチェックします。"
+"これは、追加スクリプトがあるかを示すマジック文字列です。"
+"マジック文字列が見つかった場合、MicroPython ファイルシステム に main.py "
+"ファイルが格納されていない限り、追加されている Python コードが自動的に"
+"実行されます。"
+
+#: ../../devguide/hexformat.rst:32
+msgid "``0x0003e000``: 2 bytes \"MP\""
+msgstr "``0x0003e000``: 2 バイト \"MP\""
+
+#: ../../devguide/hexformat.rst:33
+msgid ""
+"``0x0003e002``: 2 bytes, little endian integer for the length (in bytes) "
+"of the appended script (not counting this 4 byte header)"
+msgstr ""
+"``0x0003e002``: 2バイト、追加されたスクリプトの長さ(バイト単位)のリトルエンディアン"
+"整数(この長さにヘッダ4バイト分は含まない)"
+
+#: ../../devguide/hexformat.rst:34
+msgid ""
+"``0x0003e004``: Script stored as bytes, for MicroPython to decode using "
+"utf-8."
+msgstr ""
+"``0x0003e004``: バイト列として格納したスクリプト。MicroPython で使う際には utf-8 "
+"でデコードする。"
+
+#: ../../devguide/hexformat.rst:37
+msgid "UICR format"
+msgstr "UICR フォーマット"
+
+#: ../../devguide/hexformat.rst:39
+msgid ""
+"The User Information Configuration Registers (UICR) is a region of Non-"
+"Volatile Memory available to store user-specific settings. The first 128 "
+"Bytes are reserved, but we can use the other 128 Bytes to store any "
+"arbitrary data."
+msgstr ""
+"ユーザー情報構成レジスター (UICR: User Information Configuration Registers)は、"
+"不揮発性メモリーの領域で、ユーザー固有の設定を保管できます。最初の128バイトは予約されて"
+"いますが、残りの128バイトを使用して任意のデータを格納できます。"
+
+#: ../../devguide/hexformat.rst:44
+msgid ""
+"MicroPython stores the following information, in little endian, starting "
+"from the UICR customer[16] register:"
+msgstr ""
+"MicroPython は、UICR カスタマー[16]レジスターから開始して、リトルエンディアンで"
+"次の情報を格納します。"
+
+#: ../../devguide/hexformat.rst:47
+msgid "``0x100010c0``: 4-byte integer with magic value ``0x17eeb07c``"
+msgstr "``0x100010c0``: 4バイト整数のマジック値 ``0x17eeb07c``"
+
+#: ../../devguide/hexformat.rst:48
+msgid "``0x100010c4``: 4-byte integer with value ``0xffffffff``"
+msgstr "``0x100010c4``: 4バイト整数値 ``0xffffffff``"
+
+#: ../../devguide/hexformat.rst:49
+msgid ""
+"``0x100010c8``: 4-byte integer with value ``0x0000000a`` (log base 2 of "
+"the flash page size, being 1024 bytes)"
+msgstr ""
+"``0x100010c8``: 4バイト整数値 ``0x0000000a`` "
+"(フラッシュページサイズ 1024 の２進対数)"
+
+#: ../../devguide/hexformat.rst:50
+msgid ""
+"``0x100010ca``: 2-byte integer with value ``0x0000`` (start page of the "
+"firmware)"
+msgstr ""
+"``0x100010ca``: 2バイト整数値 ``0x0000`` "
+"(ファームウェアの開始ページ)"
+
+#: ../../devguide/hexformat.rst:51
+msgid ""
+"``0x100010cc``: 2-byte integer storing number of pages used by the "
+"firmware"
+msgstr ""
+"``0x100010cc``: ファームウェアのページ数の2バイト整数値"
+
+#: ../../devguide/hexformat.rst:52
+msgid "``0x100010d0``: 4-byte integer with value ``0xffffffff``"
+msgstr "``0x100010d0``: 4バイト整数値 ``0xffffffff``"
+
+#: ../../devguide/hexformat.rst:53
+msgid ""
+"``0x100010d4``: 4-byte integer with the address in the firmware of the "
+"version string"
+msgstr ""
+"``0x100010d4``: ファームウェア内のバージョン文字列のあるアドレスを示す"
+"4バイト整数値"
+
+#: ../../devguide/hexformat.rst:54
+msgid "``0x100010d8``: 4-byte integer with value ``0x00000000``"
+msgstr "``0x100010d8``: 4バイト整数値 ``0x00000000``"
+
+#: ../../devguide/hexformat.rst:57
+msgid "Steps to create the firmware.hex file"
+msgstr "firmware.hex ファイルを作成する手順"
+
+#: ../../devguide/hexformat.rst:59
+msgid ""
+"The yotta tool is used to build MicroPython, but before that takes place "
+"additional files have to be generated by the Makefile in preparation for "
+"the build, and additional data is added to the hex file after."
+msgstr ""
+"MicroPython をビルドするには yotta ツールを使いますが、その前にビルドの準備として "
+"Makefile で追加のファイルを生成しなければなりません。追加のデータは後で hex ファイル"
+"に追加されます。"
+
+#: ../../devguide/hexformat.rst:63
+msgid "Running the ``make all`` command executes the following steps:"
+msgstr "``make all`` コマンドを実行すると、以下の順序で処理されます:"
+
+#: ../../devguide/hexformat.rst:65
+msgid ""
+"The ``tools/makeversionhdr.py`` script creates the ``microbitversion.h`` "
+"file with macros containing build information"
+msgstr ""
+"``tools/makeversionhdr.py`` スクリプトが ``microbitversion.h`` ファイルを作成します。"
+"このファイルはビルド情報をもったマクロを定義しています。"
+
+#: ../../devguide/hexformat.rst:66
+msgid "Yotta builds the source and creates a bare hex file with just the firmware"
+msgstr "yotta がソースをビルドし、ファームウェアだけの生の hex ファイルを作成します"
+
+#: ../../devguide/hexformat.rst:67
+msgid "The ``tools/adduicr.py`` script adds the UICR to the bare hex"
+msgstr "``tools/adduicr.py`` スクリプトが生の hex ファイルに UICR を追加します"
+
+#: ../../devguide/hexformat.rst:68
+msgid "The final hex file is placed in ``build/firmware.hex``"
+msgstr "完成した hex ファイルを ``build/firmware.hex`` に置きます"
+
+#: ../../devguide/hexformat.rst:69
+msgid ""
+"The user can optionally append a script using "
+"``tools/makecombinedhex.py`` (or other tools)"
+msgstr ""
+"ユーザは、オプションで ``tools/makecombinedhex.py`` (または他のツール)を使って"
+"スクリプトを追加できます"
 
 #: ../../devguide/installation.rst:5
 msgid "Installation"
