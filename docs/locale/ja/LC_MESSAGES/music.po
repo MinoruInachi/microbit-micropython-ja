@@ -237,7 +237,13 @@ msgstr ""
 "指定されたミリ秒間の整数周波数でピッチを再生します。たとえば、周波数を 440 に設定し、"
 "長さを 1000 に設定すると、標準のコンサート A が1秒間聞こえます。"
 
-#: ../../music.rst:110
+#: ../../music.rst:108
+msgid ""
+"Note that you can only play one pitch on one pin at any one time."
+msgstr ""
+"一度に一つの端子で一つのピッチしか再生できないことに注意してください。"
+
+#: ../../music.rst:112
 msgid ""
 "If ``duration`` is negative the pitch is played continuously until either the "
 "blocking call is interrupted or, in the case of a background call, a new "
@@ -246,35 +252,40 @@ msgstr ""
 "``duration`` が負の場合、ブロックが解除されるか、バックグラウンドで新しい周波数が設定"
 "されるか、 ``stop`` (後述)が呼び出されるまで、ピッチが連続して再生されます。"
 
-#: ../../music.rst:116
-msgid "Stops all music playback on a given pin."
-msgstr "指定された端子のすべての音楽再生を停止します。"
+#: ../../music.rst:118
+msgid ""
+"Stops all music playback on a given pin, eg. ``music.stop(pin1)``. "
+"If no pin is given, eg. ``music.stop()`` pin0 is assumed."
+msgstr ""
+"指定された端子のすべての音楽再生を停止します。たとえば ``music.stop(pin1)``"
+"のように使います。``music.stop()`` のように端子を指定しない場合は pin0 が"
+"指定されたものとします。"
 
-#: ../../music.rst:120
+#: ../../music.rst:123
 msgid "Resets the state of the following attributes in the following way:"
 msgstr "次のように属性の状態をリセットします:"
 
-#: ../../music.rst:122
+#: ../../music.rst:125
 msgid "``ticks = 4``"
 msgstr ""
 
-#: ../../music.rst:123
+#: ../../music.rst:126
 msgid "``bpm = 120``"
 msgstr ""
 
-#: ../../music.rst:124
+#: ../../music.rst:127
 msgid "``duration = 4``"
 msgstr ""
 
-#: ../../music.rst:125
+#: ../../music.rst:128
 msgid "``octave = 4``"
 msgstr ""
 
-#: ../../music.rst:128
+#: ../../music.rst:131
 msgid "Built in Melodies"
 msgstr "内蔵メロディ"
 
-#: ../../music.rst:130
+#: ../../music.rst:133
 msgid ""
 "For the purposes of education and entertainment, the module contains "
 "several example tunes that are expressed as Python lists. They can be "
@@ -283,13 +294,13 @@ msgstr ""
 "教育と娯楽の目的のために、このモジュールには、Python のリストとして表現される"
 "いくつかの楽曲が含まれています。これらは次のように使用できます::"
 
-#: ../../music.rst:133
+#: ../../music.rst:136
 msgid ""
 ">>> import music\n"
 ">>> music.play(music.NYAN)"
 msgstr ""
 
-#: ../../music.rst:136
+#: ../../music.rst:139
 msgid ""
 "All the tunes are either out of copyright, composed by Nicholas "
 "H.Tollervey and released to the public domain or have an unknown composer"
@@ -299,15 +310,15 @@ msgstr ""
 "によって構成され、パブリックドメインに公開されているか、未知の作曲家による公平(教育的)"
 "使用規定の対象です。"
 
-#: ../../music.rst:140
+#: ../../music.rst:143
 msgid "They are:"
 msgstr "内蔵されている曲は以下のとおりです:"
 
-#: ../../music.rst:142
+#: ../../music.rst:145
 msgid "``DADADADUM`` - the opening to Beethoven's 5th Symphony in C minor."
 msgstr "``DADADADUM`` - ベートーヴェンの第5番交響曲第5番のオープニング曲。"
 
-#: ../../music.rst:143
+#: ../../music.rst:146
 msgid ""
 "``ENTERTAINER`` - the opening fragment of Scott Joplin's Ragtime classic "
 "\"The Entertainer\"."
@@ -315,7 +326,7 @@ msgstr ""
 "``ENTERTAINER`` - スコット・ジョプリンのラグタイム・クラシック ``\"The Entertainer\"`` "
 "のオープニング部分。"
 
-#: ../../music.rst:144
+#: ../../music.rst:147
 msgid ""
 "``PRELUDE`` - the opening of the first Prelude in C Major of J.S.Bach's "
 "48 Preludes and Fugues."
@@ -323,14 +334,14 @@ msgstr ""
 "``PRELUDE`` - J.S.バッハの 48 のプレリュードとフーガの C メジャーの第1回"
 "プレリュードのオープニング。"
 
-#: ../../music.rst:145
+#: ../../music.rst:148
 msgid ""
 "``ODE`` - the \"Ode to Joy\" theme from Beethoven's 9th Symphony in D "
 "minor."
 msgstr ""
 "``ODE`` - ベートーヴェンの第9回シンフォニー・ミー・マイナーのテーマ ``\"Ode to Joy\"`` "
 
-#: ../../music.rst:146
+#: ../../music.rst:149
 msgid ""
 "``NYAN`` - the Nyan Cat theme (http://www.nyan.cat/). The composer is "
 "unknown. This is fair use for educational porpoises (as they say in New "
@@ -339,22 +350,22 @@ msgstr ""
 "``NYAN`` - Nyan Cat テーマ (http://www.nyan.cat/)。作曲家は不明です。これは educational "
 "porpoises にとって(彼らがニューヨークで言っているように)公正な利用です。"
 
-#: ../../music.rst:147
+#: ../../music.rst:150
 msgid ""
 "``RINGTONE`` - something that sounds like a mobile phone ringtone. To be "
 "used to indicate an incoming message."
 msgstr ""
 "``RINGTONE`` - 携帯電話の着信音のようなもの。着信メッセージを示すために使います。"
 
-#: ../../music.rst:148
+#: ../../music.rst:151
 msgid "``FUNK`` - a funky bass line for secret agents and criminal masterminds."
 msgstr "``FUNK`` - シークレット・エージェントと犯罪の黒幕のためのファンキーなベースライン。"
 
-#: ../../music.rst:149
+#: ../../music.rst:152
 msgid "``BLUES`` - a boogie-woogie 12-bar blues walking bass."
 msgstr "``BLUES`` - ブギー・ウーギーの 12 小節のブルース・ウォーキング・ベース。"
 
-#: ../../music.rst:150
+#: ../../music.rst:153
 msgid ""
 "``BIRTHDAY`` - \"Happy Birthday to You...\" for copyright status see: "
 "http://www.bbc.co.uk/news/world-us-canada-34332853"
@@ -362,22 +373,22 @@ msgstr ""
 "``BIRTHDAY`` - \"Happy Birthday to You ..\\.\" の著作権表示については "
 "http://www.bbc.co.uk/news/world-us-canada-34332853 を参照してください。"
 
-#: ../../music.rst:151
+#: ../../music.rst:154
 msgid "``WEDDING`` - the bridal chorus from Wagner's opera \"Lohengrin\"."
 msgstr "``WEDDING`` - ワグナーのオペラ「Lohengrin」のブライダルコーラス。"
 
-#: ../../music.rst:152
+#: ../../music.rst:155
 msgid ""
 "``FUNERAL`` - the \"funeral march\" otherwise known as Frédéric Chopin's "
 "Piano Sonata No. 2 in B♭ minor, Op. 35."
 msgstr ""
 "``FUNERAL`` - フレデリック・ショパンのピアノソナタ第2番「B♭マイナー」の別名「葬儀の行進」35。"
 
-#: ../../music.rst:153
+#: ../../music.rst:156
 msgid "``PUNCHLINE`` - a fun fragment that signifies a joke has been made."
 msgstr "``PUNCHLINE`` - ジョークが行われたことを意味する楽しい部分。"
 
-#: ../../music.rst:154
+#: ../../music.rst:157
 msgid ""
 "``PYTHON`` - John Philip Sousa's march \"Liberty Bell\" aka, the theme "
 "for \"Monty Python's Flying Circus\" (after which the Python programming "
@@ -386,39 +397,39 @@ msgstr ""
 "``PYTHON`` - John Philip Sousa さんの行進「Liberty Bell」、別名「Monty Python's "
 "Flying Circus」(その後、Python プログラミング言語の名前となる)。"
 
-#: ../../music.rst:155
+#: ../../music.rst:158
 msgid "``BADDY`` - silent movie era entrance of a baddy."
 msgstr "``BADDY`` - 無声映画時代の悪役の登場。"
 
-#: ../../music.rst:156
+#: ../../music.rst:159
 msgid "``CHASE`` - silent movie era chase scene."
 msgstr "``CHASE`` - 無声映画時代のチェイスシーン。"
 
-#: ../../music.rst:157
+#: ../../music.rst:160
 msgid "``BA_DING`` - a short signal to indicate something has happened."
 msgstr "``BA_DING`` - 何かが起こったことを示す短い信号。"
 
-#: ../../music.rst:158
+#: ../../music.rst:161
 msgid "``WAWAWAWAA`` - a very sad trombone."
 msgstr "``WAWAWAWAA`` - 非常に悲しいトロンボーン。"
 
-#: ../../music.rst:159
+#: ../../music.rst:162
 msgid "``JUMP_UP`` - for use in a game, indicating upward movement."
 msgstr "``JUMP_UP`` - ゲームでの使用で、上方向の動きを示します。"
 
-#: ../../music.rst:160
+#: ../../music.rst:163
 msgid "``JUMP_DOWN`` - for use in a game, indicating downward movement."
 msgstr "``JUMP_DOWN`` - ゲームでの使用で、下向きの動きを示します。"
 
-#: ../../music.rst:161
+#: ../../music.rst:164
 msgid "``POWER_UP`` - a fanfare to indicate an achievement unlocked."
 msgstr "``POWER_UP`` - パワーが解放されたことを示すファンファーレ。"
 
-#: ../../music.rst:162
+#: ../../music.rst:165
 msgid "``POWER_DOWN`` - a sad fanfare to indicate an achievement lost."
 msgstr "``POWER_DOWN`` - パワーが失われたことを示すための悲しい運命。"
 
-#: ../../music.rst:165
+#: ../../music.rst:168
 msgid "Example"
 msgstr "サンプルコード"
 

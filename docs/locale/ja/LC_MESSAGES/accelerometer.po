@@ -102,11 +102,21 @@ msgstr ""
 "ジェスチャーの履歴をタプルで返します。タプルは古い順に並び、最新のものが最後の要素に"
 "なります。この呼出しを行うとジェスチャーの履歴はクリアされます。"
 
-#: ../../accelerometer.rst:63
+#: ../../accelerometer.rst:64
+msgid ""
+"Gestures are not updated in the background so there needs to be constant "
+"calls to some accelerometer method to do the gesture detection. Usually "
+"gestures can be detected using a loop with a small :func:`microbit.sleep` delay."
+msgstr ""
+"ジェスチャーはバックグラウンドでは更新されないため、ジェスチャー検出を行うには、"
+"何らかの加速度センサーのメソッドを常に呼び出す必要があります。通常、ジェスチャーは "
+":func:`microbit.sleep` による小さな遅延のあるループを使って検出できます。"
+
+#: ../../accelerometer.rst:68
 msgid "Examples"
 msgstr "サンプルコード"
 
-#: ../../accelerometer.rst:65
+#: ../../accelerometer.rst:70
 msgid ""
 "A fortune telling magic 8-ball. Ask a question then shake the device for "
 "an answer."

@@ -142,17 +142,43 @@ msgid ""
 "Read characters.  If ``nbytes`` is specified then read at most that many "
 "bytes."
 msgstr ""
-"文字を読込みます。``nbytes`` が指定されていれば、そのバイト数まで読み込みます。"
+"文字を読み込みます。``nbytes`` が指定されていれば、そのバイト数まで読み込みます。"
 
 #: ../../uart.rst:68
+msgid ""
+"The timeout for all UART reads depends on the baudrate and is otherwise "
+"not changeable via Python. The timeout, in milliseconds, is given by: "
+"``microbit_uart_timeout_char = 13000 / baudrate + 1``"
+msgstr ""
+"すべての UART 読込みのタイムアウトはボーレートに依存していて、Pythonからは変更できません。"
+"タイムアウト値は次の式でミリ秒単位で決まります: "
+"``microbit_uart_timeout_char = 13000 / baudrate + 1``"
+
+#: ../../uart.rst:74
+msgid ""
+"The internal UART RX buffer is 64 bytes, so make sure data is read "
+"before the buffer is full or some of the data might be lost."
+msgstr ""
+"内部 UART RX バッファは 64 バイトなので、バッファがいっぱいになる前にデータを"
+"読み込んでください。さもないとデータが失われることになります。"
+
+#: ../../uart.rst:79
+msgid ""
+"Sending ``0x03`` will KeyboardInterrupt your program. You can enable or "
+"disable this using :func:`micropython.kbd_intr()`."
+msgstr ""
+"``0x03`` を送るとプログラムを KeyboardInterrupt (キーボード割り込み)します。"
+"これを有効化/無効化するためには :func:`micropython.kbd_intr()` を使います。"
+
+#: ../../uart.rst:84
 msgid "Read as much data as possible."
 msgstr "できるだけ多くのデータを読み込みます。"
 
-#: ../../uart.rst:70
+#: ../../uart.rst:86
 msgid "Return value: a bytes object or ``None`` on timeout."
 msgstr "戻り値: バイト列のオブジェクト。タイムアウト時は ``None`` 。"
 
-#: ../../uart.rst:74
+#: ../../uart.rst:90
 msgid ""
 "Read bytes into the ``buf``.  If ``nbytes`` is specified then read at "
 "most that many bytes.  Otherwise, read at most ``len(buf)`` bytes."
@@ -161,29 +187,29 @@ msgstr ""
 "そのバイト数まで読み込みます。さもなければ ``len(buf)`` のバイト数"
 "まで読み込みます。"
 
-#: ../../uart.rst:77
+#: ../../uart.rst:93
 msgid ""
 "Return value: number of bytes read and stored into ``buf`` or ``None`` on"
 " timeout."
 msgstr ""
 "戻り値: 読み込んで ``buf`` に格納したバイト数。タイムアウト時は ``None`` 。"
 
-#: ../../uart.rst:82
+#: ../../uart.rst:98
 msgid "Read a line, ending in a newline character."
 msgstr "1行、すなわち改行文字まで読み込みます。"
 
-#: ../../uart.rst:84
+#: ../../uart.rst:100
 msgid ""
 "Return value: the line read or ``None`` on timeout. The newline character"
 " is included in the returned bytes."
 msgstr ""
 "戻り値: 読み込んだ行。タイムアウト時は ``None`` 。返すバイト列に改行文字は含まれます。"
 
-#: ../../uart.rst:89
+#: ../../uart.rst:105
 msgid "Write the buffer of bytes to the bus."
 msgstr "バイト列の ``buffer`` をバスに書き出します。"
 
-#: ../../uart.rst:91
+#: ../../uart.rst:107
 msgid "Return value: number of bytes written or ``None`` on timeout."
 msgstr "戻り値: 書き出したバイト数。タイムアウト時は ``None`` 。"
 

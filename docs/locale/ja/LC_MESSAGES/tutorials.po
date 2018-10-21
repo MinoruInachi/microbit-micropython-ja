@@ -2910,23 +2910,24 @@ msgstr ""
 msgid ""
 "Explore, experiment and be fearless trying things out ~ for these are the"
 " attributes of a virtuoso coder. To encourage you we have hidden a number"
-" of Easter eggs in MicroPython and the code editors (both TouchDevelop "
-"and Mu). They're fun rewards for looking \"under the hood\" and \"poking "
-"with a stick\"."
+" of `Easter eggs <https://en.wikipedia.org/wiki/Easter_egg_(media)>`_ in "
+"MicroPython and the Python code editors. They're fun rewards for looking "
+"\"under the hood\" and "\poking with a stick\"."
 msgstr ""
 "探検、実験、そして恐れずに試してみてください〜これは巨匠コーダーの特性です。あなたを"
-"はげますために、MicroPython とコードエディタ(TouchDevelop と Mu の両方)にいくつかの"
-"イースターエッグを隠しました。これらは \"looking under the hood\" や "
-"\"poking with a stick\" (訳注: 念入りに調べること)への楽しい報酬です。"
+"はげますために、MicroPython とコードエディタにいくつかの"
+"`イースターエッグ <https://ja.wikipedia.org/wiki/%E3%82%A4%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%BB%E3%82%A8%E3%83%83%E3%82%B0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)>`_ "
+"を隠しました。これらは \"looking under the hood\" や "\"poking with a stick\""
+" (訳注: 念入りに調べること)への楽しい報酬です。"
 
-#: ../../tutorials/next.rst:29
+#: ../../tutorials/next.rst:30
 msgid ""
 "Such skill in Python is valuable: it's one of the world's most popular "
 "professional programming languages."
 msgstr ""
 "Python のスキルは貴重です。これは世界で最も人気のある専門プログラミング言語の1つです。"
 
-#: ../../tutorials/next.rst:32
+#: ../../tutorials/next.rst:33
 msgid ""
 "Amaze us with your code! Make things that delight us! Most of all, have "
 "fun!"
@@ -2934,7 +2935,7 @@ msgstr ""
 "あなたのコードで私たちを驚かせてください！　私たちを喜ばせるものを作る！　何よりも、"
 "楽しんでください！"
 
-#: ../../tutorials/next.rst:34
+#: ../../tutorials/next.rst:35
 msgid "Happy hacking!"
 msgstr "ハッピーハッキング！"
 
@@ -3342,7 +3343,7 @@ msgstr ""
 
 #: ../../tutorials/radio.rst:145
 msgid ""
-"The import stuff happens in the event loop. First, it checks if button A "
+"The important stuff happens in the event loop. First, it checks if button A "
 "was pressed and, if it was, uses the radio to send the message \"flash\"."
 " Then it reads any messages from the message queue with "
 "``radio.receive()``. If there is a message it sleeps a short, random "
@@ -3357,7 +3358,7 @@ msgid ""
 "True`` block, it loops back to the beginning of the event loop and "
 "repeats this process forever."
 msgstr ""
-"イベントループ内に今までの知識が導入されています。最初に、ボタン A が押されたか"
+"重要なことはイベントループ内で起きています。最初に、ボタン A が押されたか"
 "どうかをチェックし、そうであれば、radio を使用してメッセージ \"flash\" を送信します。"
 "次に、 ``radio.receive()`` でメッセージキューからメッセージを読み込みます。"
 "メッセージがある場合は、(ディスプレイをより面白くするために)短くランダムな時間の休止と "

@@ -65,26 +65,29 @@ msgstr ""
 msgid "Undoes the calibration, making the compass uncalibrated again."
 msgstr "調整を取り消し、コンパスを調整されていない状態にします。"
 
-#: ../../compass.rst:38 ../../compass.rst:45 ../../compass.rst:52
+#: ../../compass.rst:38
 msgid ""
-"Gives the reading of the magnetic force on the ``x`` axis, as a positive "
-"or negative integer, depending on the direction of the force."
+"Gives the reading of the magnetic field strength on the ``x`` axis in "
+"nano tesla, as a positive or negative integer, depending on the direction"
+" of the field."
 msgstr ""
-"``x`` 軸の磁力を得ます。磁力の方向に応じて正または負の整数値になります。"
+"``x`` 軸の磁場強度をナノテスラで得ます。磁場の方向に応じて正または負の整数値になります。"
 
 #: ../../compass.rst:45
 msgid ""
-"Gives the reading of the magnetic force on the ``y`` axis, as a positive "
-"or negative integer, depending on the direction of the force."
+"Gives the reading of the magnetic field strength on the ``y`` axis in "
+"nano tesla, as a positive or negative integer, depending on the direction"
+" of the field."
 msgstr ""
-"``y`` 軸の磁力を得ます。磁力の方向に応じて正または負の整数値になります。"
+"``y`` 軸の磁場強度をナノテスラで得ます。磁場の方向に応じて正または負の整数値になります。"
 
 #: ../../compass.rst:52
 msgid ""
-"Gives the reading of the magnetic force on the ``z`` axis, as a positive "
-"or negative integer, depending on the direction of the force."
+"Gives the reading of the magnetic field strength on the ``z`` axis in "
+"nano tesla, as a positive or negative integer, depending on the direction"
+" of the field."
 msgstr ""
-"``z`` 軸の磁力を得ます。磁力の方向に応じて正または負の整数値になります。"
+"``z`` 軸の磁場強度をナノテスラで得ます。磁場の方向に応じて正または負の整数値になります。"
 
 #: ../../compass.rst:59
 msgid ""
@@ -98,9 +101,9 @@ msgstr ""
 #: ../../compass.rst:66
 msgid ""
 "Returns an integer indication of the magnitude of the magnetic field "
-"around the device."
+"around the device in nano tesla."
 msgstr ""
-"デバイスのまわりの磁場の強さを示す整数値を返します。"
+"デバイスのまわりの磁場の強さを示す整数値をナノテスラで返します。"
 
 #: ../../compass.rst:70
 msgid "Example"
