@@ -10,9 +10,8 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-10-29 22:45+0900\n"
+"Last-Translator: Minoru Inachi
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,11 +39,35 @@ msgstr ""
 msgid ".. image:: image-smile.png"
 msgstr ""
 
-#: ../../image.rst:15
+#: ../../image.rst:14
+msgid "There are four ways in which you can construct an image:"
+msgstr "イメージを作るには４つの方法があります:"
+
+#: ../../image.rst:16
+msgid "``Image()`` - Create a blank 5x5 image"
+msgstr "``Image()`` - 空の 5x5 イメージを作成"
+
+#: ../../image.rst:18
+msgid ""
+"``Image(string)`` - Create an image by parsing the string, a single "
+"character returns that glyph"
+msgstr ""
+"``Image(string)`` - １文字がそのグリフを表す文字列を解析してイメージを作成"
+"character returns that glyph"
+
+#: ../../image.rst:21
+msgid "``Image(width, height)`` - Create a blank image of given size"
+msgstr "``Image(width, height)`` - 与えたサイズの空のイメージを作成"
+
+#: ../../image.rst:23
+msgid "``Image(width, height, buffer)`` - Create an image from the given buffer"
+msgstr "``Image(width, height, buffer)`` - 与えたバッファからイメージを作成"
+
+#: ../../image.rst:27
 msgid "Classes"
 msgstr "クラス"
 
-#: ../../image.rst:21
+#: ../../image.rst:33
 msgid ""
 "If ``string`` is used, it has to consist of digits 0-9 arranged into "
 "lines, describing the image, for example::"
@@ -52,7 +75,7 @@ msgstr ""
 "``string`` を指定した場合、引数の文字列はイメージを記述した 0-9 の数字を複数行に"
 "配置したものになります。たとえば次のものは X を 5x5 のイメージを作成します::"
 
-#: ../../image.rst:24
+#: ../../image.rst:36
 msgid ""
 "image = Image(\"90009:\"\n"
 "              \"09090:\"\n"
@@ -61,7 +84,7 @@ msgid ""
 "              \"90009\")"
 msgstr ""
 
-#: ../../image.rst:30
+#: ../../image.rst:42
 msgid ""
 "will create a 5×5 image of an X. The end of a line is indicated by a "
 "colon. It's also possible to use a newline (\\n) to indicate the end of a"
@@ -70,7 +93,7 @@ msgstr ""
 "行の終わりはコロンで示します。行の終わりには次のように改行文字(\\n)を使うことも"
 "できます::"
 
-#: ../../image.rst:34
+#: ../../image.rst:46
 msgid ""
 "image = Image(\"90009\\n\"\n"
 "              \"09090\\n\"\n"
@@ -79,25 +102,45 @@ msgid ""
 "              \"90009\")"
 msgstr ""
 
-#: ../../image.rst:40
+#: ../../image.rst:52
 msgid ""
 "The other form creates an empty image with ``width`` columns and "
 "``height`` rows. Optionally ``buffer`` can be an array of "
-"``width``×``height`` integers in range 0-9 to initialize the image."
+"``width``×``height`` integers in range 0-9 to initialize the image::"
 msgstr ""
 "もう１つの指定方法では ``width`` 列と ``height`` 行の空イメージを作成します。"
 "オプションの ``buffer`` は、イメージを初期化するためのもので、0-9 の整数値を "
-"``width``×``height`` 個並べた配列を指定します。"
+"``width`` × ``height`` 個並べた配列を指定します::"
 
-#: ../../image.rst:47
+#: ../../image.rst:56
+msgid "Image(2, 2, b'\\x08\\x08\\x08\\x08')"
+msgstr ""
+
+#: ../../image.rst:58
+msgid "or::"
+msgstr "または"
+
+#: ../../image.rst:60
+msgid "Image(2, 2, bytearray([9,9,9,9]))"
+msgstr ""
+
+#: ../../image.rst:62
+msgid "Will create a 2 x 2 pixel image at full brightness."
+msgstr "は、2 x 2 のピクセルイメージを最大輝度で作成します。"
+
+#: ../../image.rst:66
+msgid "Keyword arguments cannot be passed to ``buffer``."
+msgstr "キーワード引数を ``buffer`` に渡すことはできません。"
+
+#: ../../image.rst:70
 msgid "Return the number of columns in the image."
 msgstr "イメージの列数を返します。"
 
-#: ../../image.rst:52
+#: ../../image.rst:75
 msgid "Return the numbers of rows in the image."
 msgstr "イメージの行数を返します。"
 
-#: ../../image.rst:57
+#: ../../image.rst:80
 msgid ""
 "Set the brightness of the pixel at column ``x`` and row ``y`` to the "
 "``value``, which has to be between 0 (dark) and 9 (bright)."
@@ -105,7 +148,7 @@ msgstr ""
 "``x`` 列 ``y`` 行のピクセルの明るさを ``value`` に設定します。明るさは 0 "
 "(暗い) から 9 (明るい)までの整数値で指定します。"
 
-#: ../../image.rst:60 ../../image.rst:108
+#: ../../image.rst:83 ../../image.rst:131
 msgid ""
 "This method will raise an exception when called on any of the built-in "
 "read-only images, like ``Image.HEART``."
@@ -113,30 +156,30 @@ msgstr ""
 "このメソッドは、 ``Image.HEART`` のような組込みの読取り専用イメージに対して"
 "呼び出すと例外を起こします。"
 
-#: ../../image.rst:66
+#: ../../image.rst:89
 msgid ""
 "Return the brightness of pixel at column ``x`` and row ``y`` as an "
 "integer between 0 and 9."
 msgstr ""
 "``x`` 列 ``y`` 行のピクセルの明るさを 0-9 の整数値で返します。"
 
-#: ../../image.rst:72
+#: ../../image.rst:95
 msgid "Return a new image created by shifting the picture left by ``n`` columns."
 msgstr "``n`` 列だけ左にシフトした新しいイメージを返します。"
 
-#: ../../image.rst:78
+#: ../../image.rst:101
 msgid "Same as ``image.shift_left(-n)``."
 msgstr "``image.shift_left(-n)`` と同じです。"
 
-#: ../../image.rst:82
+#: ../../image.rst:105
 msgid "Return a new image created by shifting the picture up by ``n`` rows."
 msgstr "``n`` 行だけ上にシフトした新しいイメージを返します。"
 
-#: ../../image.rst:87
+#: ../../image.rst:110
 msgid "Same as ``image.shift_up(-n)``."
 msgstr "``image.shift_up(-n)`` と同じです。"
 
-#: ../../image.rst:91
+#: ../../image.rst:114
 msgid ""
 "Return a new image by cropping the picture to a width of ``w`` and a "
 "height of ``h``, starting with the pixel at column ``x`` and row ``y``."
@@ -144,18 +187,18 @@ msgstr ""
 "``x`` 列 ``y`` 行のピクセルから始まって ``w`` 幅 ``h`` 高さ分をトリミング"
 "した新しいイメージを返します。"
 
-#: ../../image.rst:96
+#: ../../image.rst:119
 msgid "Return an exact copy of the image."
 msgstr "イメージ全体のコピーを返します。"
 
-#: ../../image.rst:100
+#: ../../image.rst:123
 msgid ""
 "Return a new image by inverting the brightness of the pixels in the "
 "source image."
 msgstr ""
 "元のイメージのピクセルの明るさを反転した新しいイメージ返します。"
 
-#: ../../image.rst:105
+#: ../../image.rst:128
 msgid ""
 "Set the brightness of all the pixels in the image to the ``value``, which"
 " has to be between 0 (dark) and 9 (bright)."
@@ -163,7 +206,7 @@ msgstr ""
 "イメージのピクセルの明るさを ``value`` に設定します。 ``value`` の値は 0 (暗い) "
 "から 9 (明るい)までの整数値です。"
 
-#: ../../image.rst:113
+#: ../../image.rst:136
 msgid ""
 "Copy the rectangle defined by ``x``, ``y``, ``w``, ``h`` from the image "
 "``src`` into this image at ``xdest``, ``ydest``. Areas in the source "
@@ -174,7 +217,7 @@ msgstr ""
 "このイメージの ``xdest``, ``ydest`` にコピーします。矩形領域ではあるが元の"
 "イメージの外側にあるピクセルは値が 0 であるとして扱います。"
 
-#: ../../image.rst:117
+#: ../../image.rst:140
 msgid ""
 "``shift_left()``, ``shift_right()``, ``shift_up()``, ``shift_down()`` and"
 " ``crop()`` can are all implemented by using ``blit()``. For example, "
@@ -184,7 +227,7 @@ msgstr ""
 "``crop()`` はすべて ``blit()`` を用いて実現しています。たとえば img.crop(x, y, w, h) "
 "は以下で実現しています。"
 
-#: ../../image.rst:121
+#: ../../image.rst:144
 msgid ""
 "def crop(self, x, y, w, h):\n"
 "    res = Image(w, h)\n"
@@ -192,11 +235,11 @@ msgid ""
 "    return res"
 msgstr ""
 
-#: ../../image.rst:128
+#: ../../image.rst:151
 msgid "Attributes"
 msgstr "属性"
 
-#: ../../image.rst:130
+#: ../../image.rst:153
 msgid ""
 "The ``Image`` class also has the following built-in instances of itself "
 "included as its attributes (the attribute names indicate what the image "
@@ -205,63 +248,63 @@ msgstr ""
 "``Image`` クラスには、属性として以下の組込みインスタンスを持っています(属性名は"
 "イメージが何であるかを示しています):"
 
-#: ../../image.rst:134
+#: ../../image.rst:157
 msgid "``Image.HEART``"
 msgstr ""
 
-#: ../../image.rst:135
+#: ../../image.rst:158
 msgid "``Image.HEART_SMALL``"
 msgstr ""
 
-#: ../../image.rst:136
+#: ../../image.rst:159
 msgid "``Image.HAPPY``"
 msgstr ""
 
-#: ../../image.rst:137
+#: ../../image.rst:160
 msgid "``Image.SMILE``"
 msgstr ""
 
-#: ../../image.rst:138
+#: ../../image.rst:161
 msgid "``Image.SAD``"
 msgstr ""
 
-#: ../../image.rst:139
+#: ../../image.rst:162
 msgid "``Image.CONFUSED``"
 msgstr ""
 
-#: ../../image.rst:140
+#: ../../image.rst:163
 msgid "``Image.ANGRY``"
 msgstr ""
 
-#: ../../image.rst:141
+#: ../../image.rst:164
 msgid "``Image.ASLEEP``"
 msgstr ""
 
-#: ../../image.rst:142
+#: ../../image.rst:165
 msgid "``Image.SURPRISED``"
 msgstr ""
 
-#: ../../image.rst:143
+#: ../../image.rst:166
 msgid "``Image.SILLY``"
 msgstr ""
 
-#: ../../image.rst:144
+#: ../../image.rst:167
 msgid "``Image.FABULOUS``"
 msgstr ""
 
-#: ../../image.rst:145
+#: ../../image.rst:168
 msgid "``Image.MEH``"
 msgstr ""
 
-#: ../../image.rst:146
+#: ../../image.rst:169
 msgid "``Image.YES``"
 msgstr ""
 
-#: ../../image.rst:147
+#: ../../image.rst:170
 msgid "``Image.NO``"
 msgstr ""
 
-#: ../../image.rst:148
+#: ../../image.rst:171
 msgid ""
 "``Image.CLOCK12``, ``Image.CLOCK11``, ``Image.CLOCK10``, "
 "``Image.CLOCK9``, ``Image.CLOCK8``, ``Image.CLOCK7``, ``Image.CLOCK6``, "
@@ -269,175 +312,175 @@ msgid ""
 "``Image.CLOCK1``"
 msgstr ""
 
-#: ../../image.rst:151
+#: ../../image.rst:174
 msgid ""
 "``Image.ARROW_N``, ``Image.ARROW_NE``, ``Image.ARROW_E``, "
 "``Image.ARROW_SE``, ``Image.ARROW_S``, ``Image.ARROW_SW``, "
 "``Image.ARROW_W``, ``Image.ARROW_NW``"
 msgstr ""
 
-#: ../../image.rst:154
+#: ../../image.rst:177
 msgid "``Image.TRIANGLE``"
 msgstr ""
 
-#: ../../image.rst:155
+#: ../../image.rst:178
 msgid "``Image.TRIANGLE_LEFT``"
 msgstr ""
 
-#: ../../image.rst:156
+#: ../../image.rst:179
 msgid "``Image.CHESSBOARD``"
 msgstr ""
 
-#: ../../image.rst:157
+#: ../../image.rst:180
 msgid "``Image.DIAMOND``"
 msgstr ""
 
-#: ../../image.rst:158
+#: ../../image.rst:181
 msgid "``Image.DIAMOND_SMALL``"
 msgstr ""
 
-#: ../../image.rst:159
+#: ../../image.rst:182
 msgid "``Image.SQUARE``"
 msgstr ""
 
-#: ../../image.rst:160
+#: ../../image.rst:183
 msgid "``Image.SQUARE_SMALL``"
 msgstr ""
 
-#: ../../image.rst:161
+#: ../../image.rst:184
 msgid "``Image.RABBIT``"
 msgstr ""
 
-#: ../../image.rst:162
+#: ../../image.rst:185
 msgid "``Image.COW``"
 msgstr ""
 
-#: ../../image.rst:163
+#: ../../image.rst:186
 msgid "``Image.MUSIC_CROTCHET``"
 msgstr ""
 
-#: ../../image.rst:164
+#: ../../image.rst:187
 msgid "``Image.MUSIC_QUAVER``"
 msgstr ""
 
-#: ../../image.rst:165
+#: ../../image.rst:188
 msgid "``Image.MUSIC_QUAVERS``"
 msgstr ""
 
-#: ../../image.rst:166
+#: ../../image.rst:189
 msgid "``Image.PITCHFORK``"
 msgstr ""
 
-#: ../../image.rst:167
+#: ../../image.rst:190
 msgid "``Image.XMAS``"
 msgstr ""
 
-#: ../../image.rst:168
+#: ../../image.rst:191
 msgid "``Image.PACMAN``"
 msgstr ""
 
-#: ../../image.rst:169
+#: ../../image.rst:192
 msgid "``Image.TARGET``"
 msgstr ""
 
-#: ../../image.rst:170
+#: ../../image.rst:193
 msgid "``Image.TSHIRT``"
 msgstr ""
 
-#: ../../image.rst:171
+#: ../../image.rst:194
 msgid "``Image.ROLLERSKATE``"
 msgstr ""
 
-#: ../../image.rst:172
+#: ../../image.rst:195
 msgid "``Image.DUCK``"
 msgstr ""
 
-#: ../../image.rst:173
+#: ../../image.rst:196
 msgid "``Image.HOUSE``"
 msgstr ""
 
-#: ../../image.rst:174
+#: ../../image.rst:197
 msgid "``Image.TORTOISE``"
 msgstr ""
 
-#: ../../image.rst:175
+#: ../../image.rst:198
 msgid "``Image.BUTTERFLY``"
 msgstr ""
 
-#: ../../image.rst:176
+#: ../../image.rst:199
 msgid "``Image.STICKFIGURE``"
 msgstr ""
 
-#: ../../image.rst:177
+#: ../../image.rst:200
 msgid "``Image.GHOST``"
 msgstr ""
 
-#: ../../image.rst:178
+#: ../../image.rst:201
 msgid "``Image.SWORD``"
 msgstr ""
 
-#: ../../image.rst:179
+#: ../../image.rst:202
 msgid "``Image.GIRAFFE``"
 msgstr ""
 
-#: ../../image.rst:180
+#: ../../image.rst:203
 msgid "``Image.SKULL``"
 msgstr ""
 
-#: ../../image.rst:181
+#: ../../image.rst:204
 msgid "``Image.UMBRELLA``"
 msgstr ""
 
-#: ../../image.rst:182
+#: ../../image.rst:205
 msgid "``Image.SNAKE``"
 msgstr ""
 
-#: ../../image.rst:184
+#: ../../image.rst:207
 msgid "Finally, related collections of images have been grouped together::"
 msgstr "関連するイメージのコレクションもあります。"
 
-#: ../../image.rst:186
+#: ../../image.rst:209
 msgid ""
 "* ``Image.ALL_CLOCKS``\n"
 "* ``Image.ALL_ARROWS``"
 msgstr ""
 
-#: ../../image.rst:191
+#: ../../image.rst:214
 msgid "Operations"
 msgstr "演算子"
 
-#: ../../image.rst:196
+#: ../../image.rst:219
 msgid "repr(image)"
 msgstr ""
 
-#: ../../image.rst:197
+#: ../../image.rst:220
 msgid "Get a compact string representation of the image."
 msgstr "イメージのコンパクトな文字列表現を得ます。"
 
-#: ../../image.rst:202
+#: ../../image.rst:225
 msgid "str(image)"
 msgstr ""
 
-#: ../../image.rst:203
+#: ../../image.rst:226
 msgid "Get a readable string representation of the image."
 msgstr "イメージの可読可能な文字列表現を得ます。"
 
-#: ../../image.rst:208
+#: ../../image.rst:231
 msgid "image1 + image2"
 msgstr ""
 
-#: ../../image.rst:209
+#: ../../image.rst:232
 msgid ""
 "Create a new image by adding the brightness values from the two images "
 "for each pixel."
 msgstr ""
 "２つのイメージの各ピクセルの明るさを足した新しいイメージを作成します。"
 
-#: ../../image.rst:215
+#: ../../image.rst:238
 msgid "image * n"
 msgstr ""
 
-#: ../../image.rst:216
+#: ../../image.rst:239
 msgid "Create a new image by multiplying the brightness of each pixel by ``n``."
 msgstr "各ピクセルの明るさを ``n`` 倍した新しい画像を作成します。"
 
