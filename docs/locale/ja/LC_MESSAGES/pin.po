@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: 2018-10-20 22:11+0900\n"
+"PO-Revision-Date: 2018-11-01 01:42+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -354,14 +354,7 @@ msgstr "端子がハイの場合は 1 を返し、ローの場合は 0 を返し
 msgid "Set the pin to high if ``value`` is 1, or to low, if it is 0."
 msgstr "``value`` が 1 の場合はハイに設定し、0 の場合はローに設定します。"
 
-#: ../../pin.rst:148
-msgid ""
-"Read the voltage applied to the pin, and return it as an integer between "
-"0 (meaning 0V) and 1023 (meaning 3.3V)."
-msgstr ""
-"端子の電圧を読み取り、0 (0V の意味）から 1023 (3.3V の意味)までの間の整数として返します。"
-
-#: ../../pin.rst:153
+#: ../../pin.rst:146
 #, python-format
 msgid ""
 "Output a PWM signal on the pin, with the duty cycle proportional to the "
@@ -372,28 +365,36 @@ msgstr ""
 "``value`` には 0 (時間幅周期 0%)から 1023 (時間幅周期 100%)までの整数または"
 "浮動小数点数を指定できます。"
 
-#: ../../pin.rst:159
+#: ../../pin.rst:152
 msgid ""
 "Set the period of the PWM signal being output to ``period`` in "
 "milliseconds. The minimum valid value is 1ms."
 msgstr ""
 "出力される PWM 信号の周期を ``period`` にミリ秒単位で設定します。有効な最小値は 1ms です。"
 
-#: ../../pin.rst:164
+#: ../../pin.rst:157
 msgid ""
 "Set the period of the PWM signal being output to ``period`` in "
 "microseconds. The minimum valid value is 256µs."
 msgstr ""
 "出力される PWM 信号の周期を ``period`` にマイクロ秒単位で設定します。有効な最小値は 256μs です。"
 
-#: ../../pin.rst:172
+#: ../../pin.rst:165
+msgid ""
+"Read the voltage applied to the pin, and return it as an integer between "
+"0 (meaning 0V) and 1023 (meaning 3.3V)."
+msgstr ""
+"端子の電圧を読み取り、0 (0V の意味）から 1023 (3.3V の意味)までの間の整数として"
+"返します。"
+
+#: ../../pin.rst:173
 msgid ""
 "Return ``True`` if the pin is being touched with a finger, otherwise "
 "return ``False``."
 msgstr ""
 "端子を指で触れている場合は ``True`` 、そうでない場合は ``False`` を返します。"
 
-#: ../../pin.rst:175
+#: ../../pin.rst:176
 msgid ""
 "This test is done by measuring how much resistance there is between the "
 "pin and ground.  A low resistance gives a reading of ``True``.  To get "
@@ -404,7 +405,7 @@ msgstr ""
 "行われます。抵抗が少ないと ``True`` の判定を返します。指での検出を確実にするには、"
 "体の別の部分、たとえばもう片方の手で GND 端子に触れる必要があるかもしれません。"
 
-#: ../../pin.rst:180
+#: ../../pin.rst:181
 msgid ""
 "The pull mode for a pin is automatically configured when the pin changes "
 "to an input mode. Input modes are when you call ``read_analog`` / "
@@ -419,17 +420,40 @@ msgstr ""
 "``NO_PULL``, ``PULL_DOWN``, ``PULL_UP`` です。 ``set_pull`` を呼び出すと、"
 "``read_digital`` モードにある端子を指定のプルモードに設定します。"
 
-#: ../../pin.rst:188
+#: ../../pin.rst:189
 msgid ""
-"Also note, the micro:bit has external weak (10M) pull-ups fitted on pins "
-"0, 1 and 2 only, in order for the touch sensing to work. There are also "
-"external (10k) pull-ups fitted on pins 5 and 11, in order for buttons A "
-"and B to work. See the edge connector data sheet here: "
-"http://tech.microbit.org/hardware/edgeconnector_ds/"
+"The micro:bit has external weak (10M) pull-ups fitted on pins 0, 1 and 2 "
+"only, in order for the touch sensing to work."
 msgstr ""
-"また、タッチセンスが機能するために、micro:bit は端子 0, 1, 2 にのみ外付けの弱い"
-"(10M)プルアップを装備しています。ボタンAとボタンBが機能するように、端子 5 と 11 "
-"にも外付け(10k)プルアップを装備しています。次のエッジコネクタのデータシートを参照"
-"してください: "
-"http://tech.microbit.org/hardware/edgeconnector_ds/"
+"タッチセンスが機能するために、micro:bit は端子 0, 1, 2 にのみ外付けの弱い"
+"(10M)プルアップを装備しています。"
 
+#: ../../pin.rst:192
+msgid ""
+"There are also external (10k) pull-ups fitted on pins 5 and 11, in order "
+"for buttons A and B to work."
+msgstr ""
+"ボタンAとボタンBが機能するように、端子 5 と 11 にも外付け(10k)プルアップを"
+"装備しています。"
+
+#: ../../pin.rst:195
+msgid ""
+"GPIO pins are also used for the display. 6 of these are routed to the "
+"edge connector at 3, 4, 6, 7, 9. and 10. If you want to use these pins "
+"for another purpose, you may need to turn the `display off <https"
+"://microbit-"
+"micropython.readthedocs.io/en/latest/display.html#microbit.display.off>`_."
+msgstr ""
+"GPIO 端子はディスプレイにも使われています。GPIO 端子のうちの６つはエッジコネクタ "
+"3, 4, 6, 7, 9, 10　に配線されています。別の目的でこれらの端子を使いたいときには"
+" `ディスプレイを無効 <https://microbit-micropython.readthedocs.io/ja/latest/display.html#microbit.display.off>`_ "
+"にする必要があります。"
+
+#: ../../pin.rst:200
+msgid ""
+"See the `edge connector data sheet "
+"<http://tech.microbit.org/hardware/edgeconnector_ds>`_."
+msgstr ""
+"`エッジコネクタのデータシート "
+"<http://tech.microbit.org/hardware/edgeconnector_ds>`_ "
+"を参照してください。"
