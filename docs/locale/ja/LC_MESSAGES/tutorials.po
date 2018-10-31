@@ -1133,7 +1133,7 @@ msgstr ""
 "これが新しいイメージを作成する方法です。"
 
 #: ../../tutorials/images.rst:113 ../../tutorials/io.rst:19
-#: ../../tutorials/storage.rst:110
+#: ../../tutorials/storage.rst:117
 msgid "Simple!"
 msgstr "簡単！"
 
@@ -4074,7 +4074,7 @@ msgstr ""
 "# 音階が順に低くなっていくよう歌わせます。\n"
 "speech.sing(song, speed=100)"
 
-#: ../../tutorials/storage.rst:249
+#: ../../tutorials/storage.rst:256
 msgid ""
 "The image of paper files is used under a Creative Commons License and is "
 "available here: https://www.flickr.com/photos/jenkim/2270085025"
@@ -4107,11 +4107,23 @@ msgstr ""
 "ことができます。メモリの制約のため、ファイルシステムで *利用可能な容量は約 30KB* "
 "となっています。"
 
-#: ../../tutorials/storage.rst:13
+#: ../../tutorials/storage.rst:15
+msgid ""
+"The micropython file system should not be confused with the micro:bit "
+"mass storage mode which presents the device as a USB drive. Mass storage "
+"mode is only intended for copying across a HEX file, so you won't see "
+"files you create using the file system appearing on the MICROBIT drive."
+msgstr ""
+"micro:bit を PC に繋いだときに USB ドライブとして現れるマスストレージモードと "
+"micropython ファイルシステムを混同しないでください。マスストレージモードは HEX "
+"ファイル全体をコピーするためのものなので、MICROBIT ドライブのファイルシステム上では"
+"ファイルを作れません。"
+
+#: ../../tutorials/storage.rst:20
 msgid "What is a file system?"
 msgstr "ファイルシステムとは何か？"
 
-#: ../../tutorials/storage.rst:15
+#: ../../tutorials/storage.rst:22
 msgid ""
 "It's a means of storing and organising data in a persistent manner - any "
 "data stored in a file system should survive restarts of the device. As "
@@ -4121,11 +4133,11 @@ msgstr ""
 "されたデータは、デバイスの再起動後も残っている必要があります。名前が示すように、"
 "ファイルシステムに格納されたデータはファイルに編成されます。"
 
-#: ../../tutorials/storage.rst:20
+#: ../../tutorials/storage.rst:27
 msgid ".. image:: tutorials/files.jpg"
 msgstr ""
 
-#: ../../tutorials/storage.rst:21
+#: ../../tutorials/storage.rst:28
 msgid ""
 "A computer file is a named digital resource that's stored on a file "
 "system. Such resources contain useful information as data. This is "
@@ -4146,7 +4158,7 @@ msgstr ""
 "たとえば ``.txt`` はテキストファイル、 ``.jpg`` は JPEG 画像、 ``.mp3`` は "
 "MP3 としてエンコードされたサウンドデータを示します。"
 
-#: ../../tutorials/storage.rst:30
+#: ../../tutorials/storage.rst:37
 msgid ""
 "Some file systems (such as the one found on your laptop or PC) allow you "
 "to organise your files into directories: named containers that group "
@@ -4161,7 +4173,7 @@ msgstr ""
 "ディレクトリがありません。すべてのファイルは同じ場所に保存されます(訳注: MicroPython "
 "がフラットファイルシステムであるという制限はあくまで BBC micro:bit での話です)。"
 
-#: ../../tutorials/storage.rst:36
+#: ../../tutorials/storage.rst:43
 msgid ""
 "The Python programming language contains easy to use and powerful ways in"
 " which to work with a computer's file system. MicroPython on the "
@@ -4174,7 +4186,7 @@ msgstr ""
 "便利なサブセットを実装して、デバイス上のファイルを簡単に読み書きできるようにしています。"
 "また、他のバージョンの Python との一貫性も提供します。"
 
-#: ../../tutorials/storage.rst:43
+#: ../../tutorials/storage.rst:50
 msgid ""
 "Flashing your micro:bit will DESTROY ALL YOUR DATA since it re-writes all"
 " the flash memory used by the device and the file system is stored in the"
@@ -4184,7 +4196,7 @@ msgstr ""
 "書き換えられます。ファイルシステムがフラッシュメモリに再設定されるため、すべてのデータが"
 "破棄されてしまいます。"
 
-#: ../../tutorials/storage.rst:47
+#: ../../tutorials/storage.rst:54
 msgid ""
 "However, if you switch off your device the data will remain intact until "
 "you either delete it or re-flash the device."
@@ -4192,11 +4204,11 @@ msgstr ""
 "ただし、デバイスの電源を切っただけではデータはそのまま残り続けます。データが消えるのは、"
 "ファイルを削除するか、デバイスを再フラッシュした場合です。"
 
-#: ../../tutorials/storage.rst:51
+#: ../../tutorials/storage.rst:58
 msgid "Open Sesame"
 msgstr "開けゴマ(Open Sesame)"
 
-#: ../../tutorials/storage.rst:53
+#: ../../tutorials/storage.rst:60
 msgid ""
 "Reading and writing a file on the file system is achieved by the ``open``"
 " function. Once a file is opened you can do stuff with it until you close"
@@ -4207,21 +4219,21 @@ msgstr ""
 "ファイルを開いたら、それを閉じるまでファイルの中身をいじれます(紙ファイルの使用方法に"
 "似ています)。ファイル作業の完了を MicroPython に知るには、ファイルを閉じることが不可欠です。"
 
-#: ../../tutorials/storage.rst:58
+#: ../../tutorials/storage.rst:65
 msgid ""
 "The best way to make sure of this is to use the ``with`` statement like "
 "this::"
 msgstr ""
 "これを行う最も良い方法は、次のように ``with`` 文を使うことです::"
 
-#: ../../tutorials/storage.rst:60
+#: ../../tutorials/storage.rst:67
 msgid ""
 "with open('story.txt') as my_file:\n"
 "    content = my_file.read()\n"
 "print(content)"
 msgstr ""
 
-#: ../../tutorials/storage.rst:64
+#: ../../tutorials/storage.rst:71
 msgid ""
 "The ``with`` statement uses the ``open`` function to open a file and "
 "assign it to an object. In the example above, the ``open`` function opens"
@@ -4240,7 +4252,7 @@ msgstr ""
 "``my_file`` オブジェクトは ``read()`` で内容を読み出され、読み出された内容は "
 "``content`` に代入されます。"
 
-#: ../../tutorials/storage.rst:72
+#: ../../tutorials/storage.rst:79
 msgid ""
 "Here's the important point, *the next line containing the* ``print`` "
 "*statement is not indented*. The code block associated with the ``with`` "
@@ -4257,7 +4269,7 @@ msgstr ""
 "処理と呼ばれ、 ``open`` 関数はファイルのためのコンテキストハンドラを"
 "作成します。"
 
-#: ../../tutorials/storage.rst:79
+#: ../../tutorials/storage.rst:86
 msgid ""
 "Put simply, the scope of your interaction with a file is defined by the "
 "code block associated with the ``with`` statement that opens the file."
@@ -4265,15 +4277,15 @@ msgstr ""
 "簡単に言えば、ファイルとのやりとりの範囲は、ファイルを開いた ``with`` 文に"
 "関連付けられたコードブロックによって定義されます。"
 
-#: ../../tutorials/storage.rst:82
+#: ../../tutorials/storage.rst:89
 msgid "Confused?"
 msgstr "混乱してますか？"
 
-#: ../../tutorials/storage.rst:84
+#: ../../tutorials/storage.rst:91
 msgid "Don't be. I'm simply saying your code should look like this::"
 msgstr "心配しないでください。コードは次のようになパターンになるというだけです::"
 
-#: ../../tutorials/storage.rst:86
+#: ../../tutorials/storage.rst:93
 msgid ""
 "with open('some_file') as some_object:\n"
 "    # Do stuff with some_object in this block of code\n"
@@ -4289,7 +4301,7 @@ msgstr ""
 "# ブロックを抜けると MicroPython が\n"
 "# 自動でファイルをクローズしてくれます"
 
-#: ../../tutorials/storage.rst:93
+#: ../../tutorials/storage.rst:100
 msgid ""
 "Just like a paper file, a digital file is opened for two reasons: to read"
 " its content (as demonstrated above) or to write something to the file. "
@@ -4301,13 +4313,13 @@ msgstr ""
 "デフォルトのモードはファイルを読むことです。ファイルに書き込む場合 ``open`` 関数"
 "には、次のように関数に指示する必要があります。"
 
-#: ../../tutorials/storage.rst:98
+#: ../../tutorials/storage.rst:105
 msgid ""
 "with open('hello.txt', 'w') as my_file:\n"
 "    my_file.write(\"Hello, World!\")"
 msgstr ""
 
-#: ../../tutorials/storage.rst:101
+#: ../../tutorials/storage.rst:108
 msgid ""
 "Notice the ``'w'`` argument is used to set the ``my_file`` object into "
 "write mode. You could also pass an ``'r'`` argument to set the file "
@@ -4317,7 +4329,7 @@ msgstr ""
 "使います。 ``'r'`` 引数でファイルオブジェクトを読み取りモードに設定することも"
 "できますが、これはデフォルトなので、省略することが多いです。"
 
-#: ../../tutorials/storage.rst:105
+#: ../../tutorials/storage.rst:112
 msgid ""
 "Writing data to the file is done with the (you guessed it) ``write`` "
 "method that takes the string you want to write to the file as an "
@@ -4329,7 +4341,7 @@ msgstr ""
 "\"hello.txt\" というファイルに \"Hello、World！\" というテキストを"
 "書き込んでいます。"
 
-#: ../../tutorials/storage.rst:114
+#: ../../tutorials/storage.rst:121
 msgid ""
 "When you open a file and write (perhaps several times while the file is "
 "in an open state) you will be writing OVER the content of the file if it "
@@ -4338,7 +4350,7 @@ msgstr ""
 "ファイルを開いて書き込むとき、ファイルがすでに存在する場合はファイルの内容を"
 "上書きします。"
 
-#: ../../tutorials/storage.rst:118
+#: ../../tutorials/storage.rst:125
 msgid ""
 "If you want to append data to a file you should first read it, store the "
 "content somewhere, close it, append your data to the content and then "
@@ -4348,7 +4360,7 @@ msgstr ""
 "ファイルを閉じ、読み込んだ内容にデータを追加して、再度ファイルを開いて、改訂した"
 "内容を書き直す必要があります。"
 
-#: ../../tutorials/storage.rst:122
+#: ../../tutorials/storage.rst:129
 msgid ""
 "While this is the case in MicroPython, \"normal\" Python can open files "
 "to write in \"append\" mode. That we can't do this on the micro:bit is a "
@@ -4358,11 +4370,11 @@ msgstr ""
 "モードで書き込むファイルを開くことができます。micro:bit でこれを行うことが"
 "できないのは、ファイルシステムの実装を簡略化したためです。"
 
-#: ../../tutorials/storage.rst:127
+#: ../../tutorials/storage.rst:134
 msgid "OS SOS"
 msgstr ""
 
-#: ../../tutorials/storage.rst:129
+#: ../../tutorials/storage.rst:136
 msgid ""
 "As well as reading and writing files, Python can manipulate them. You "
 "certainly need to know what files are on the file system and sometimes "
@@ -4372,7 +4384,7 @@ msgstr ""
 "ファイルシステム上に何のファイルがあるかを知る必要があるでしょうし、"
 "またそれらを削除が必要になることもあるでしょう。"
 
-#: ../../tutorials/storage.rst:133
+#: ../../tutorials/storage.rst:140
 msgid ""
 "On a regular computer, it is the role of the operating system (like "
 "Windows, OSX or Linux) to manage this on Python's behalf. Such "
@@ -4389,7 +4401,7 @@ msgstr ""
 "一貫性のあるものに保つことにしました。そのため、ラップトップや Raspberry Pi "
 "のようなデバイスで「通常の」Python を使う場合と同様の操作があります。"
 
-#: ../../tutorials/storage.rst:140
+#: ../../tutorials/storage.rst:147
 msgid ""
 "Essentially, you can do three operations related to the file system: list"
 " the files, remove a file and ask for the size of a file."
@@ -4397,7 +4409,7 @@ msgstr ""
 "基本的に、ファイルシステムに関連する３つの操作、つまりファイルの一覧表示、"
 "ファイルの削除、ファイルのサイズの確認を行うことができます。"
 
-#: ../../tutorials/storage.rst:143
+#: ../../tutorials/storage.rst:150
 msgid ""
 "To list the files on your file system use the ``listdir`` function. It "
 "returns a list of strings indicating the file names of the files on the "
@@ -4407,13 +4419,13 @@ msgstr ""
 "関数を使用します。これはファイルシステム上のファイルのファイル名を示す"
 "文字列のリストを返します::"
 
-#: ../../tutorials/storage.rst:147
+#: ../../tutorials/storage.rst:154
 msgid ""
 "import os\n"
 "my_files = os.listdir()"
 msgstr ""
 
-#: ../../tutorials/storage.rst:150
+#: ../../tutorials/storage.rst:157
 msgid ""
 "To delete a file use the ``remove`` function. It takes a string "
 "representing the file name of the file you want to delete as an argument,"
@@ -4422,13 +4434,13 @@ msgstr ""
 "ファイルを削除するには、 ``remove`` 関数を使用します。これは削除するファイルの"
 "ファイル名を表す文字列を引数として指定します::"
 
-#: ../../tutorials/storage.rst:153
+#: ../../tutorials/storage.rst:160
 msgid ""
 "import os\n"
 "os.remove('filename.txt')"
 msgstr ""
 
-#: ../../tutorials/storage.rst:156
+#: ../../tutorials/storage.rst:163
 msgid ""
 "Finally, sometimes it's useful to know how big a file is before reading "
 "from it. To achieve this use the ``size`` function. Like the ``remove`` "
@@ -4441,13 +4453,13 @@ msgstr ""
 "サイズを知りたいファイルのファイル名を表す文字列を指定します。この関数は"
 "ファイルが占めるバイト数を示す整数を返します::"
 
-#: ../../tutorials/storage.rst:162
+#: ../../tutorials/storage.rst:169
 msgid ""
 "import os\n"
 "file_size = os.size('a_big_file.txt')"
 msgstr ""
 
-#: ../../tutorials/storage.rst:165
+#: ../../tutorials/storage.rst:172
 msgid ""
 "It's all very well having a file system, but what if we want to put or "
 "get files on or off the device?"
@@ -4455,15 +4467,15 @@ msgstr ""
 "ファイルシステムを操作するのはよいのですが、デバイスにファイルを出し入れする"
 "場合はどうしたらよいでしょうか？"
 
-#: ../../tutorials/storage.rst:168
+#: ../../tutorials/storage.rst:175
 msgid "Just use the ``microfs`` utility!"
 msgstr "``microfs`` ユーティリティを使うだけです！"
 
-#: ../../tutorials/storage.rst:171
+#: ../../tutorials/storage.rst:178
 msgid "File Transfer"
 msgstr "ファイル転送"
 
-#: ../../tutorials/storage.rst:173
+#: ../../tutorials/storage.rst:180
 msgid ""
 "If you have Python installed on the computer you use to program your BBC "
 "micro:bit then you can use a special utility called ``microfs`` "
@@ -4477,20 +4489,20 @@ msgstr ""
 "詳しい手順は `microfs のドキュメンテーション <https://microfs.readthedocs.io>`_ "
 "を参照してください。"
 
-#: ../../tutorials/storage.rst:179
+#: ../../tutorials/storage.rst:186
 msgid ""
 "Nevertheless it's possible to do most of the things you need with just "
 "four simple commands::"
 msgstr ""
 "ここでは、ほとんどこれだけで用が足りるという４つの基本コマンドだけを説明します::"
 
-#: ../../tutorials/storage.rst:182
+#: ../../tutorials/storage.rst:189
 msgid ""
 "$ ufs ls\n"
 "story.txt"
 msgstr ""
 
-#: ../../tutorials/storage.rst:185
+#: ../../tutorials/storage.rst:192
 msgid ""
 "The ``ls`` sub-command lists the files on the file system (it's named "
 "after the common Unix command, ``ls``, that serves the same function)."
@@ -4498,11 +4510,11 @@ msgstr ""
 "``ls`` サブコマンドは、ファイルシステム上のファイルの一覧表示します(同じ機能を"
 "提供する一般的な Unix コマンド ``ls`` にちなんで名付けられています)。"
 
-#: ../../tutorials/storage.rst:190
+#: ../../tutorials/storage.rst:197
 msgid "$ ufs get story.txt"
 msgstr ""
 
-#: ../../tutorials/storage.rst:192
+#: ../../tutorials/storage.rst:199
 msgid ""
 "The ``get`` sub-command gets a file from the connected micro:bit and "
 "saves it into your current location on your computer (it's named after "
@@ -4513,11 +4525,11 @@ msgstr ""
 "現在の場所に保存します(同じ機能を提供する一般的なファイル転送プロトコル [FTP] の"
 "コマンド ``get`` にちなんで名付けられています)。"
 
-#: ../../tutorials/storage.rst:199
+#: ../../tutorials/storage.rst:206
 msgid "$ ufs rm story.txt"
 msgstr ""
 
-#: ../../tutorials/storage.rst:201
+#: ../../tutorials/storage.rst:208
 msgid ""
 "The ``rm`` sub-command removes the named file from the file system on the"
 " connected micro:bit (it's named after the common Unix command, ``rm``, "
@@ -4526,11 +4538,11 @@ msgstr ""
 "``rm`` サブコマンドは、接続した micro:bit から指定の名前のファイルを削除します"
 "(同じ機能を提供する一般的な Unix コマンド ``rm`` にちなんで名付けられています)。"
 
-#: ../../tutorials/storage.rst:207
+#: ../../tutorials/storage.rst:214
 msgid "$ ufs put story2.txt"
 msgstr ""
 
-#: ../../tutorials/storage.rst:209
+#: ../../tutorials/storage.rst:216
 msgid ""
 "Finally, the ``put`` sub-command puts a file from your computer onto the "
 "connected device (it's named after the ``put`` command that's part of FTP"
@@ -4540,11 +4552,11 @@ msgstr ""
 "置きます(同じ機能を提供する一般的なファイル転送プロトコル [FTP] のコマンド "
 "``put`` にちなんで名付けられています)。"
 
-#: ../../tutorials/storage.rst:214
+#: ../../tutorials/storage.rst:221
 msgid "Mainly main.py"
 msgstr "主役 main.py"
 
-#: ../../tutorials/storage.rst:216
+#: ../../tutorials/storage.rst:223
 msgid ""
 "The file system also has an interesting property: if you just flashed the"
 " MicroPython runtime onto the device then when it starts it's simply "
@@ -4557,7 +4569,7 @@ msgstr ""
 "``main.py`` という特別なファイルをファイルシステムにコピーして、デバイスを"
 "再起動すると、MicroPython はその ``main.py`` ファイルの内容を実行します。"
 
-#: ../../tutorials/storage.rst:222
+#: ../../tutorials/storage.rst:229
 msgid ""
 "Furthermore, if you copy other Python files onto the file system then you"
 " can ``import`` them as you would any other Python module. For example, "
@@ -4567,7 +4579,7 @@ msgstr ""
 "モジュールと同様にそれを ``import`` できます。たとえば次の単純なコードを含む"
 "ファイル ``hello.py`` があったとします。"
 
-#: ../../tutorials/storage.rst:226
+#: ../../tutorials/storage.rst:233
 msgid ""
 "def say_hello(name=\"World\"):\n"
 "    return \"Hello, {}!\".format(name)"
@@ -4577,7 +4589,7 @@ msgstr ""
 msgid "...you could import and use the ``say_hello`` function like this::"
 msgstr "これを次のようにインポートして ``say_hello`` 関数を使えます::"
 
-#: ../../tutorials/storage.rst:231
+#: ../../tutorials/storage.rst:238
 msgid ""
 "from microbit import display\n"
 "from hello import say_hello\n"
@@ -4585,7 +4597,7 @@ msgid ""
 "display.scroll(say_hello())"
 msgstr ""
 
-#: ../../tutorials/storage.rst:236
+#: ../../tutorials/storage.rst:243
 msgid ""
 "Of course, it results in the text \"Hello, World!\" scrolling across the "
 "display. The important point is that such an example is split between two"
@@ -4595,7 +4607,7 @@ msgstr ""
 "２つの Python モジュールに分割され、 ``import`` 文がコードを共有するために"
 "使われていることです。"
 
-#: ../../tutorials/storage.rst:241
+#: ../../tutorials/storage.rst:248
 msgid ""
 "If you have flashed a script onto the device in addition to the "
 "MicroPython runtime, then MicroPython will ignore ``main.py`` and run "
@@ -4604,7 +4616,7 @@ msgstr ""
 "MicroPython ランタイムに加えてデバイスにスクリプトを転送した場合、MicroPython "
 "は ``main.py`` 無視して、代わりに埋め込みスクリプトを実行します。"
 
-#: ../../tutorials/storage.rst:245
+#: ../../tutorials/storage.rst:252
 msgid ""
 "To flash just the MicroPython runtime, simply make sure the script you "
 "may have written in your editor has zero characters in it. Once flashed "
