@@ -10,9 +10,8 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-11-02 00:43+0900\n"
+"Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,12 +23,12 @@ msgstr ""
 
 #: ../../neopixel.rst:6
 msgid ""
-"The ``neopixel`` module lets you use Neopixel (WS2812) individually "
-"addressable RGB LED strips with the Microbit. Note to use the "
+"The ``neopixel`` module lets you use NeoPixel (WS2812) individually "
+"addressable RGB LED strips with the micro:bit. Note to use the "
 "``neopixel`` module, you need to import it separately with::"
 msgstr ""
 "``neopixel`` モジュールを使用すると、個別にアドレス可能な RGB LED ボード"
-"である Neopixel (WS2812) を micro:bit で使えます。この ``neopixel`` "
+"である NeoPixel (WS2812) を micro:bit で使えます。この ``neopixel`` "
 "モジュールを使う場合は、以下のモジュールをインポートする必要があります::"
 
 #: ../../neopixel.rst:10
@@ -38,14 +37,28 @@ msgstr ""
 
 #: ../../neopixel.rst:14
 msgid ""
-"From our tests, the Microbit Neopixel module can drive up to around 256 "
-"Neopixels. Anything above that and you may experience weird bugs and "
-"issues."
+"From our tests, the Microbit NeoPixel module can drive up to around 256 "
+"NeoPixels. Anything above that and you may experience weird bugs and "
+"issues. As the micro:bit can only supply 90mA to external devices, larger"
+" numbers of NeoPixels require an external power supply with common "
+"ground."
 msgstr ""
-"私たちのテストから、micro:bit の neopixel モジュールは約256 Neopixels "
+"私たちのテストから、micro:bit の neopixel モジュールは約256個の NeoPixel "
 "まで駆動できます。それ以上のものは、奇妙なバグや問題に遭遇するかもしれません。"
+"micro:bit は外部デバイスに 90mA しか供給できないため、より多くの数の "
+"NeoPixel を使うには共通グラウンドを備えた外部電源を必要とします。"
 
-#: ../../neopixel.rst:19
+#: ../../neopixel.rst:20
+msgid ""
+"NeoPixels are designed to work at 5V, but luckily they still function "
+"using the 3V supply of the BBC micro:bit. Please note that the micro:bit "
+"edge connector should not be connected to anything supplying 5V."
+msgstr ""
+"NeoPixel は 5V で動作するように設計されていますが、幸いにもBBCマイクロビットの "
+"3V 電源を使って動作します。micro:bit の エッジコネクタは 5V を供給するものに"
+"接続しないでください。"
+
+#: ../../neopixel.rst:25
 msgid ""
 "NeoPixels are fun strips of multi-coloured programmable LEDs. This module"
 " contains everything to plug them into a micro:bit and create funky "
@@ -55,11 +68,11 @@ msgstr ""
 "micro:bit にプラグインするためのすべてが含まれており、以下に示すデモなどのファンキーな"
 "ディスプレイ、アート、ゲームを作成できます。"
 
-#: ../../neopixel.rst:24
+#: ../../neopixel.rst:30
 msgid ".. image:: neopixel.gif"
 msgstr ""
 
-#: ../../neopixel.rst:25
+#: ../../neopixel.rst:31
 msgid ""
 "To connect a strip of neopixels you'll need to attach the micro:bit as "
 "shown below (assuming you want to drive the pixels from pin 0 - you can "
@@ -71,14 +84,14 @@ msgstr ""
 "できます)。ワニ口クリップのラベルは、NeoPixel ボードにもう一方の端を取り付ける場所を"
 "示しています。"
 
-#: ../../neopixel.rst:32
+#: ../../neopixel.rst:41
 msgid ""
 "Do not use the 3v connector on the Microbit to power any more than 8 "
 "Neopixels at a time."
 msgstr ""
 "micro:bit の 3V 端子から、一度に8つ以上の NeoPixel に給電しないでください。"
 
-#: ../../neopixel.rst:35
+#: ../../neopixel.rst:44
 msgid ""
 "If you wish to use more than 8 Neopixels, you must use a separate 3v-5v "
 "power supply for the Neopixel power pin."
@@ -86,15 +99,15 @@ msgstr ""
 "8つ以上の NeoPixel を使用する場合は、ネオピクセルの電源端子に別の 3v - 5v "
 "電源を使用する必要があります。"
 
-#: ../../neopixel.rst:39
+#: ../../neopixel.rst:48
 msgid ".. image:: neopixel-croc.png"
 msgstr ""
 
-#: ../../neopixel.rst:41
+#: ../../neopixel.rst:50
 msgid "Classes"
 msgstr "クラス"
 
-#: ../../neopixel.rst:46
+#: ../../neopixel.rst:55
 msgid ""
 "Initialise a new strip of ``n`` number of neopixel LEDs controlled via "
 "pin ``pin``. Each pixel is addressed by a position (starting from 0). "
@@ -106,23 +119,23 @@ msgstr ""
 "指定されます。ネオピクセルにはタプルとして0-255 の RGB (赤, 緑, 青) 値が与え"
 "られます。たとえば ``(255,255,255)`` は白です。"
 
-#: ../../neopixel.rst:53
+#: ../../neopixel.rst:62
 msgid "Clear all the pixels."
 msgstr "すべてのピクセルをクリアします。"
 
-#: ../../neopixel.rst:58
+#: ../../neopixel.rst:67
 msgid "Show the pixels. Must be called for any updates to become visible."
 msgstr "ピクセルを表示します。更新が表示するには、これを呼び出す必要があります"
 
-#: ../../neopixel.rst:61
+#: ../../neopixel.rst:70
 msgid "Operations"
 msgstr "演算子"
 
-#: ../../neopixel.rst:63
+#: ../../neopixel.rst:72
 msgid "Writing the colour doesn't update the display (use ``show()`` for that)."
 msgstr "色を書き込んでも表示は更新されません(表示するには ``show()`` を呼び出します)。"
 
-#: ../../neopixel.rst:70
+#: ../../neopixel.rst:79
 msgid ""
 "np[0] = (255, 0, 128)  # first element\n"
 "np[-1] = (0, 255, 0)  # last element\n"
@@ -132,19 +145,19 @@ msgstr ""
 "np[-1] = (0, 255, 0)  # 最後の素子\n"
 "np.show()  # 更新された値が表示されます"
 
-#: ../../neopixel.rst:71
+#: ../../neopixel.rst:80
 msgid "To read the colour of a specific pixel just reference it."
 msgstr "特定のピクセルの色を読み取るには、それを参照するだけです。"
 
-#: ../../neopixel.rst:76 ../../neopixel.rst:102
+#: ../../neopixel.rst:85 ../../neopixel.rst:111
 msgid "print(np[0])"
 msgstr ""
 
-#: ../../neopixel.rst:78
+#: ../../neopixel.rst:87
 msgid "Using Neopixels"
 msgstr "NeoPixel の使い方"
 
-#: ../../neopixel.rst:80
+#: ../../neopixel.rst:89
 msgid ""
 "Interact with Neopixels as if they were a list of tuples. Each tuple "
 "represents the RGB (red, green and blue) mix of colours for a specific "
@@ -154,20 +167,20 @@ msgstr ""
 "各タプルは、特定のピクセルの色の RGB (赤, 緑, 青) の組み合わせを表します。"
 "RGB値の範囲は 0 から 255 までです。"
 
-#: ../../neopixel.rst:84
+#: ../../neopixel.rst:93
 msgid ""
 "For example, initialise a strip of 8 neopixels on a strip connected to "
 "pin0 like this::"
 msgstr ""
 "たとえば、次のように pin0 に接続された 8 ピクセルの NeoPixel ボードを初期化します::"
 
-#: ../../neopixel.rst:87
+#: ../../neopixel.rst:96
 msgid ""
 "import neopixel\n"
 "np = neopixel.NeoPixel(pin0, 8)"
 msgstr ""
 
-#: ../../neopixel.rst:90
+#: ../../neopixel.rst:99
 msgid ""
 "Set pixels by indexing them (like with a Python list). For instance, to "
 "set the first pixel to full brightness red, you would use::"
@@ -175,19 +188,19 @@ msgstr ""
 "それらピクセルを（Python のリストのように）インデックス付けして設定します。"
 "たとえば、最初のピクセルを最大照度の赤に設定するには次のようにします::"
 
-#: ../../neopixel.rst:93
+#: ../../neopixel.rst:102
 msgid "np[0] = (255, 0, 0)"
 msgstr ""
 
-#: ../../neopixel.rst:95
+#: ../../neopixel.rst:104
 msgid "Or the final pixel to purple::"
 msgstr "最後のピクセルを紫色にするには次のようにします::"
 
-#: ../../neopixel.rst:97
+#: ../../neopixel.rst:106
 msgid "np[-1] = (255, 0, 255)"
 msgstr ""
 
-#: ../../neopixel.rst:99
+#: ../../neopixel.rst:108
 msgid ""
 "Get the current colour value of a pixel by indexing it. For example, to "
 "print the first pixel's RGB value use::"
@@ -195,25 +208,25 @@ msgstr ""
 "ピクセルの現在のカラー値を得るには、インデックス付けして参照します。たとえば、"
 "最初のピクセルの RGB 値を表示するには次のようにします。"
 
-#: ../../neopixel.rst:104
+#: ../../neopixel.rst:113
 msgid ""
 "Finally, to push the new colour data to your Neopixel strip, use the "
 ".show() function::"
 msgstr ""
 "最後に、新しい色データを NeoPixel ボードの表示に反映するには、.show（）関数を使います::"
 
-#: ../../neopixel.rst:107
+#: ../../neopixel.rst:116
 msgid "np.show()"
 msgstr ""
 
-#: ../../neopixel.rst:109
+#: ../../neopixel.rst:118
 msgid ""
 "If nothing is happening, it's probably because you've forgotten this "
 "final step..!"
 msgstr ""
 "何も起こらない場合、おそらくあなたはこの最終ステップを忘れてしまっているのです..！"
 
-#: ../../neopixel.rst:114
+#: ../../neopixel.rst:123
 msgid ""
 "If you're not seeing anything change on your Neopixel strip, make sure "
 "you have ``show()`` at least somewhere otherwise your updates won't be "
@@ -222,7 +235,7 @@ msgstr ""
 "NeoPixel ボードで何か変化が見られない場合、少なくともアップデートしたものが表示"
 "されていなければ、 ``show()`` を確認してください。"
 
-#: ../../neopixel.rst:119
+#: ../../neopixel.rst:128
 msgid "Example"
 msgstr "サンプルコード"
 
