@@ -171,14 +171,18 @@ msgstr ""
 "これを有効化/無効化するためには :func:`micropython.kbd_intr()` を使います。"
 
 #: ../../uart.rst:84
-msgid "Read as much data as possible."
-msgstr "できるだけ多くのデータを読み込みます。"
+msgid "Removed since version 1.0."
+msgstr "バージョン 1.0 から削除されました。"
 
 #: ../../uart.rst:86
-msgid "Return value: a bytes object or ``None`` on timeout."
-msgstr "戻り値: バイト列のオブジェクト。タイムアウト時は ``None`` 。"
+msgid ""
+"Instead, use :func:`uart.read()` with no arguments, which will read as "
+"much data as possible."
+msgstr ""
+"代わりに :func:`uart.read()`  を引数なしで使えば、できるだけ多くのデータを"
+"読み込みます。"
 
-#: ../../uart.rst:90
+#: ../../uart.rst:91
 msgid ""
 "Read bytes into the ``buf``.  If ``nbytes`` is specified then read at "
 "most that many bytes.  Otherwise, read at most ``len(buf)`` bytes."
@@ -187,25 +191,25 @@ msgstr ""
 "そのバイト数まで読み込みます。さもなければ ``len(buf)`` のバイト数"
 "まで読み込みます。"
 
-#: ../../uart.rst:93
+#: ../../uart.rst:94
 msgid ""
 "Return value: number of bytes read and stored into ``buf`` or ``None`` on"
 " timeout."
 msgstr ""
 "戻り値: 読み込んで ``buf`` に格納したバイト数。タイムアウト時は ``None`` 。"
 
-#: ../../uart.rst:98
+#: ../../uart.rst:99
 msgid "Read a line, ending in a newline character."
 msgstr "1行、すなわち改行文字まで読み込みます。"
 
-#: ../../uart.rst:100
+#: ../../uart.rst:101
 msgid ""
 "Return value: the line read or ``None`` on timeout. The newline character"
 " is included in the returned bytes."
 msgstr ""
 "戻り値: 読み込んだ行。タイムアウト時は ``None`` 。返すバイト列に改行文字は含まれます。"
 
-#: ../../uart.rst:105
+#: ../../uart.rst:106
 msgid "Write the buffer of bytes to the bus."
 msgstr "バイト列の ``buffer`` をバスに書き出します。"
 
