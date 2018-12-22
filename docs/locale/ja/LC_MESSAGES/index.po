@@ -51,8 +51,7 @@ msgid ""
 "the tutorials."
 msgstr "プログラミング初心者、先生、またはどこから始めてよいのかわからない場合には、チュートリアルから始めてください。"
 
-#: ../../index.rst:22
-#, fuzzy
+#: ../../index.rst:21
 msgid ".. image:: comic.png"
 msgstr ".. image:: comic-ja.png"
 
