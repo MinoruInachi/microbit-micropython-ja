@@ -53,7 +53,7 @@ msgstr "プログラミング初心者、先生、またはどこから始めて
 
 #: ../../index.rst:22
 #, fuzzy
-msgid ".. image:: comic-ja.png"
+msgid ".. image:: comic.png"
 msgstr ".. image:: comic-ja.png"
 
 #: ../../index.rst:23
