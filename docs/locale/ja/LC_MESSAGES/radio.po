@@ -366,6 +366,7 @@ msgstr ""
 msgid "Examples"
 msgstr "サンプルコード"
 
+#: ../../radio.rst:168
 msgid ""
 "# A micro:bit Firefly.\n"
 "# By Nicholas H.Tollervey. Released to the public domain.\n"

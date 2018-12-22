@@ -10,9 +10,8 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-12-16 19:24+0900\n"
+"Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,14 +22,13 @@ msgid "Speech"
 msgstr "音声"
 
 #: ../../speech.rst:6
-msgid "WARNING! THIS IS ALPHA CODE."
-msgstr "警告！ これはα版のコードです。"
+msgid ""
+"WARNING! This is still work in progress; we reserve the right to change "
+"this API as development continues."
+msgstr ""
+"警告！ これはまだ作業中です。開発を続ける過程で、この API を変更する可能性があります。"
 
 #: ../../speech.rst:8
-msgid "We reserve the right to change this API as development continues."
-msgstr "開発を続ける過程で、この API を変更する可能性があります。"
-
-#: ../../speech.rst:10
 msgid ""
 "The quality of the speech is not great, merely \"good enough\". Given the"
 " constraints of the device you may encounter memory errors and / or "
@@ -43,7 +41,7 @@ msgstr ""
 "であり、音声シンセサイザーのコードを常に改善しています。バグレポートやプルリクエスは"
 "大歓迎です。"
 
-#: ../../speech.rst:18
+#: ../../speech.rst:17
 msgid ""
 "This module makes microbit talk, sing and make other speech like sounds "
 "provided that you connect a speaker to your board as shown below:"
@@ -51,11 +49,11 @@ msgstr ""
 "このモジュールで micro:bit に話をさせ、歌わせ、その他の音声のようなサウンドを"
 "作るのにスピーカーを以下に示すようにボードに接続するという前提で説明します。"
 
-#: ../../speech.rst:22
+#: ../../speech.rst:21
 msgid ".. image:: speech.png"
 msgstr ""
 
-#: ../../speech.rst:25
+#: ../../speech.rst:24
 msgid ""
 "This work is based upon the amazing reverse engineering efforts of "
 "Sebastian Macke based upon an old text-to-speech (TTS) program called SAM"
@@ -75,18 +73,18 @@ msgstr ""
 "`ここ `here <http://www.apple-iigs.info/newdoc/sam.pdf>`_ にある元のユーザーズ"
 "マニュアルから取ってきています 。"
 
-#: ../../speech.rst:35
+#: ../../speech.rst:34
 msgid ""
 "The speech synthesiser can produce around 2.5 seconds worth of sound from"
 " up to 255 characters of textual input."
 msgstr ""
 "音声シンセサイザーは、最大255文字のテキスト入力から約2.5秒分の音量を生成できます。"
 
-#: ../../speech.rst:38
+#: ../../speech.rst:37
 msgid "To access this module you need to::"
 msgstr "このモジュールにアクセスするには、以下を行う必要があります::"
 
-#: ../../speech.rst:40
+#: ../../speech.rst:39
 msgid "import speech"
 msgstr ""
 
@@ -94,11 +92,11 @@ msgstr ""
 msgid "We assume you have done this for the examples below."
 msgstr "以降の例では、これが行われていることを前提としています。"
 
-#: ../../speech.rst:45
+#: ../../speech.rst:44
 msgid "Functions"
 msgstr "関数"
 
-#: ../../speech.rst:49
+#: ../../speech.rst:48
 msgid ""
 "Given English words in the string ``words``, return a string containing a"
 " best guess at the appropriate phonemes to pronounce. The output is "
@@ -111,7 +109,7 @@ msgstr ""
 "<https://github.com/s-macke/SAM/wiki/Text-to-phoneme-translation-table>`_ "
 "にしたがって生成されます。"
 
-#: ../../speech.rst:54
+#: ../../speech.rst:53
 msgid ""
 "This function should be used to generate a first approximation of "
 "phonemes that can be further hand-edited to improve accuracy, inflection "
@@ -120,7 +118,7 @@ msgstr ""
 "この関数は、音素の近似を最初に生成するために使うべきです。この結果を元に手で"
 "編集して、精度、屈曲、強調を改善することができます。"
 
-#: ../../speech.rst:60
+#: ../../speech.rst:59
 msgid ""
 "Pronounce the phonemes in the string ``phonemes``. See below for details "
 "of how to use phonemes to finely control the output of the speech "
@@ -131,7 +129,7 @@ msgstr ""
 "音素を使用する方法の詳細については後述します。オプションの pitch, speed, mouth, "
 "throat の設定を上書きして、声の音色（音質）を変更します。"
 
-#: ../../speech.rst:67
+#: ../../speech.rst:66
 msgid ""
 "Say the English words in the string ``words``. The result is semi-"
 "accurate for English. Override the optional pitch, speed, mouth and "
@@ -143,7 +141,7 @@ msgstr ""
 "（音質）を変更します。この関数は次の呼び出しを短くしたものです: "
 "``speech.pronounce(speech.translate(words))``"
 
-#: ../../speech.rst:74
+#: ../../speech.rst:73
 msgid ""
 "Sing the phonemes contained in the string ``phonemes``. Changing the "
 "pitch and duration of the note is described below. Override the optional "
@@ -154,11 +152,11 @@ msgstr ""
 "後述します。オプションの pitch、speed、mouth、throat の設定を上書きして、声の音色"
 "（音質）を変更します。"
 
-#: ../../speech.rst:80
+#: ../../speech.rst:79
 msgid "Punctuation"
 msgstr "句読点"
 
-#: ../../speech.rst:82
+#: ../../speech.rst:81
 msgid ""
 "Punctuation is used to alter the delivery of speech. The synthesiser "
 "understands four punctuation marks: hyphen, comma, full-stop and question"
@@ -167,29 +165,29 @@ msgstr ""
 "句読点は、音声の伝達を変更するのに使います。シンセサイザーは、ハイフン、カンマ、"
 "フルストップ、疑問符の4つの句読点を認識します。"
 
-#: ../../speech.rst:85
+#: ../../speech.rst:84
 msgid ""
 "The hyphen (``-``) marks clause boundaries by inserting a short pause in "
 "the speech."
 msgstr ""
 "ハイフン (``-``)は音声に短い休止を入れることによって、句を区切ります。"
 
-#: ../../speech.rst:88
+#: ../../speech.rst:87
 msgid ""
 "The comma (``,``) marks phrase boundaries and inserts a pause of "
 "approximately double that of the hyphen."
 msgstr ""
 "カンマ (``,``)はハイフンの約2倍のポーズを挿入することにより、フレーズを区切ります。"
 
-#: ../../speech.rst:91
+#: ../../speech.rst:90
 msgid "The full-stop (``.``) and question mark (``?``) end sentences."
 msgstr "終止符 (``.``) と疑問符 (``?``) の終了文。"
 
-#: ../../speech.rst:93
+#: ../../speech.rst:92
 msgid "The full-stop inserts a pause and causes the pitch to fall."
 msgstr "終止符はポーズを挿入し、ピッチを落とします。"
 
-#: ../../speech.rst:95
+#: ../../speech.rst:94
 msgid ""
 "The question mark also inserts a pause but causes the pitch to rise. This"
 " works well with yes/no questions such as, \"are we home yet?\" rather "
@@ -200,11 +198,11 @@ msgstr ""
 "のような yes/no で答えられる質問に適しています\"why are we going home?\" のような"
 "より複雑な質問では終止符を使ってください。"
 
-#: ../../speech.rst:101
+#: ../../speech.rst:100
 msgid "Timbre"
 msgstr "音色"
 
-#: ../../speech.rst:103
+#: ../../speech.rst:102
 msgid ""
 "The timbre of a sound is the quality of the sound. It's the difference "
 "between the voice of a DALEK and the voice of a human (for example). To "
@@ -215,7 +213,7 @@ msgstr ""
 "するには、``pitch``, ``speed``, ``mouth``, ``throat`` 引数の数値設定を変更"
 "します。"
 
-#: ../../speech.rst:108
+#: ../../speech.rst:107
 msgid ""
 "The pitch (how high or low the voice sounds) and speed (how quickly the "
 "speech is delivered) settings are rather obvious and generally fall into "
@@ -224,83 +222,83 @@ msgstr ""
 "pitch (音程の高低)と speed (音声の速さ)の設定はかなり明白で、一般的に次の"
 "カテゴリに分類されます。"
 
-#: ../../speech.rst:112
+#: ../../speech.rst:111
 msgid "Pitch:"
 msgstr "pitch:"
 
-#: ../../speech.rst:114 ../../speech.rst:127
+#: ../../speech.rst:113 ../../speech.rst:126
 msgid "0-20 impractical"
 msgstr "0-20 実用的でない"
 
-#: ../../speech.rst:115
+#: ../../speech.rst:114
 msgid "20-30 very high"
 msgstr "20-30 非常に高い"
 
-#: ../../speech.rst:116
+#: ../../speech.rst:115
 msgid "30-40 high"
 msgstr "30-40 高い"
 
-#: ../../speech.rst:117
+#: ../../speech.rst:116
 msgid "40-50 high normal"
 msgstr "40-50 高めのノーマル"
 
-#: ../../speech.rst:118
+#: ../../speech.rst:117
 msgid "50-70 normal"
 msgstr "50-70 ノーマル"
 
-#: ../../speech.rst:119
+#: ../../speech.rst:118
 msgid "70-80 low normal"
 msgstr "70-80 低めのノーマル"
 
-#: ../../speech.rst:120
+#: ../../speech.rst:119
 msgid "80-90 low"
 msgstr "80-90 低い"
 
-#: ../../speech.rst:121
+#: ../../speech.rst:120
 msgid "90-255 very low"
 msgstr "90-255 非常に低い"
 
-#: ../../speech.rst:123
+#: ../../speech.rst:122
 msgid "(The default is 64)"
 msgstr "(デフォルトは 64)"
 
-#: ../../speech.rst:125
+#: ../../speech.rst:124
 msgid "Speed:"
 msgstr "speed:"
 
-#: ../../speech.rst:128
+#: ../../speech.rst:127
 msgid "20-40 very fast"
 msgstr "20-40 非常に速い"
 
-#: ../../speech.rst:129
+#: ../../speech.rst:128
 msgid "40-60 fast"
 msgstr "40-60 速い"
 
-#: ../../speech.rst:130
+#: ../../speech.rst:129
 msgid "60-70 fast conversational"
 msgstr "60-70 早口な会話"
 
-#: ../../speech.rst:131
+#: ../../speech.rst:130
 msgid "70-75 normal conversational"
 msgstr "70-75 普通の会話"
 
-#: ../../speech.rst:132
+#: ../../speech.rst:131
 msgid "75-90 narrative"
 msgstr "75-90 説話"
 
-#: ../../speech.rst:133
+#: ../../speech.rst:132
 msgid "90-100 slow"
 msgstr "90-100 遅い"
 
-#: ../../speech.rst:134
+#: ../../speech.rst:133
 msgid "100-225 very slow"
 msgstr "100-225 非常に遅い"
 
-#: ../../speech.rst:136
+#: ../../speech.rst:135
 msgid "(The default is 72)"
 msgstr "(デフォルトは 72)"
 
-#: ../../speech.rst:138
+#: ../../speech.rst:137
 msgid ""
 "The mouth and throat values are a little harder to explain and the "
 "following descriptions are based upon our aural impressions of speech "
@@ -309,7 +307,7 @@ msgstr ""
 "mouth と throat の値は説明するのが少し難しく、以下の説明は、各設定の値が変更"
 "されたときに生成される音声の聴覚の印象に基づいています。"
 
-#: ../../speech.rst:142
+#: ../../speech.rst:141
 msgid ""
 "For mouth, the lower the number the more it sounds like the speaker is "
 "talking without moving their lips. In contrast, higher numbers (up to "
@@ -319,7 +317,7 @@ msgstr ""
 "mouth については、数字が低いほどスピーカーが唇を動かさずに話しているように聞こえます。"
 "対照的に、数字が高いほど（最大255）、声が誇張された口の動きで発声されるように聞こえます。"
 
-#: ../../speech.rst:146
+#: ../../speech.rst:145
 msgid ""
 "For throat, the lower the number the more relaxed the speaker sounds. In "
 "contrast, the higher the number, the more tense the tone of voice "
@@ -328,18 +326,18 @@ msgstr ""
 "throat については、数が少ないほどスピーカーの響きが緩和されます。"
 "対照的に、数字が高いほど、緊張感が増します。"
 
-#: ../../speech.rst:149
+#: ../../speech.rst:148
 msgid ""
 "The important thing is to experiment and adjust the settings until you "
 "get the effect you desire."
 msgstr ""
 "重要なことは、望む声の音を得る最良の方法は、実験を繰り返して調整することです。"
 
-#: ../../speech.rst:152
+#: ../../speech.rst:151
 msgid "To get you started here are some examples::"
 msgstr "とっかかりとして、いくつかの例を示しておきます::"
 
-#: ../../speech.rst:154
+#: ../../speech.rst:153
 msgid ""
 "speech.say(\"I am a little robot\",  speed=92, pitch=60, throat=190, "
 "mouth=190)\n"
@@ -353,11 +351,11 @@ msgid ""
 "throat=100, mouth=200)"
 msgstr ""
 
-#: ../../speech.rst:162
+#: ../../speech.rst:161
 msgid "Phonemes"
 msgstr "音素"
 
-#: ../../speech.rst:164
+#: ../../speech.rst:163
 msgid ""
 "The ``say`` function makes it easy to produce speech - but often it's not"
 " accurate. To make sure the speech synthesiser pronounces things "
@@ -371,7 +369,7 @@ msgstr ""
 "音素は知覚的に区別できる最小の単位で、異なる単語を区別するために使えます。"
 "基本的に、それは音声のビルディング・ブロック・サウンドです。"
 
-#: ../../speech.rst:170
+#: ../../speech.rst:169
 msgid ""
 "The ``pronounce`` function takes a string containing a simplified and "
 "readable version of the `International Phonetic Alphabet "
@@ -382,7 +380,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/International_Phonetic_Alphabet>`_ "
 "とオプションの注釈を含む文字列を使用して、屈曲と強調を示します。"
 
-#: ../../speech.rst:174
+#: ../../speech.rst:173
 msgid ""
 "The advantage of using phonemes is that you don't have to know how to "
 "spell! Rather, you only have to know how to say the word in order to "
@@ -391,11 +389,11 @@ msgstr ""
 "音素を使用する利点は、綴り方を知る必要がないことです。むしろ、それを音声学的に"
 "綴るためには、言葉の使い方を知る必要があります。"
 
-#: ../../speech.rst:178
+#: ../../speech.rst:177
 msgid "The table below lists the phonemes understood by the synthesiser."
 msgstr "以下の表は、シンセサイザが理解している音素の一覧です。"
 
-#: ../../speech.rst:182
+#: ../../speech.rst:181
 msgid ""
 "The table contains the phoneme as characters, and an example word. The "
 "example words have the sound of the phoneme (in parenthesis), but not "
@@ -404,14 +402,14 @@ msgstr ""
 "このテーブルには、音素と文字の例文が含まれています。例の単語は、音素の音を"
 "（かっこ内に）持ちますが、同じ文字である必要はありません。"
 
-#: ../../speech.rst:186
+#: ../../speech.rst:185
 msgid ""
 "Often overlooked: the symbol for the \"H\" sound is ``/H``. A glottal "
 "stop is a forced stoppage of sound."
 msgstr ""
 "見過ごされがちなこと: \"H\" の音のシンボルは ``/H`` です。声門停止は音の強制停止です"
 
-#: ../../speech.rst:191
+#: ../../speech.rst:190
 msgid ""
 "SIMPLE VOWELS                          VOICED CONSONANTS\n"
 "IY           f(ee)t                    R        (r)ed\n"
@@ -473,11 +471,11 @@ msgstr ""
 "UN           functi(on) (=AXN)         CH        spee(ch)\n"
 "Q            kitt-en (glottal stop)    /H        a(h)ead"
 
-#: ../../speech.rst:221
+#: ../../speech.rst:220
 msgid "The following non-standard symbols are also available to the user::"
 msgstr "次の非標準シンボルもユーザーが使用できます::"
 
-#: ../../speech.rst:223
+#: ../../speech.rst:222
 msgid ""
 "YX           diphthong ending (weaker version of Y)\n"
 "WX           diphthong ending (weaker version of W)\n"
@@ -487,14 +485,14 @@ msgid ""
 "DX           T as in pi(t)y (weaker version of T)"
 msgstr ""
 
-#: ../../speech.rst:230
+#: ../../speech.rst:229
 msgid ""
 "Here are some seldom used phoneme combinations (and suggested "
 "alternatives)::"
 msgstr ""
 "あまり使われない音素の組み合わせ（および提案された選択肢）は次のとおりです::"
 
-#: ../../speech.rst:232
+#: ../../speech.rst:231
 msgid ""
 "PHONEME        YOU PROBABLY WANT:     UNLESS IT SPLITS SYLLABLES LIKE:\n"
 "COMBINATION\n"
@@ -508,7 +506,7 @@ msgid ""
 "NK             NXK e.g. bank          Su(nk)ist"
 msgstr ""
 
-#: ../../speech.rst:243
+#: ../../speech.rst:242
 msgid ""
 "If you use anything other than the phonemes described above, a "
 "``ValueError`` exception will be raised. Pass in the phonemes as a string"
@@ -517,15 +515,15 @@ msgstr ""
 "上記の音素以外のものを使用すると ``ValueError`` 例外が発生します。"
 "音素を次のような文字列として渡します。"
 
-#: ../../speech.rst:246
+#: ../../speech.rst:245
 msgid "speech.pronounce(\"/HEHLOW\")  # \"Hello\""
 msgstr ""
 
-#: ../../speech.rst:248
+#: ../../speech.rst:247
 msgid "The phonemes are classified into two broad groups: vowels and consonants."
 msgstr "音素は母音と子音という2つの大きなグループに分類されます。"
 
-#: ../../speech.rst:250
+#: ../../speech.rst:249
 msgid ""
 "Vowels are further subdivided into simple vowels and diphthongs. Simple "
 "vowels don't change their sound as you say them whereas diphthongs start "
@@ -538,7 +536,7 @@ msgstr ""
 " \"oil\" という言葉を言うとき、\"oi\" の母音は \"oh\" 音で始まり、\"ee\" 音に"
 "変化します。"
 
-#: ../../speech.rst:255
+#: ../../speech.rst:254
 msgid ""
 "Consonants are also subdivided into two groups: voiced and unvoiced. "
 "Voiced consonants require the speaker to use their vocal chords to "
@@ -551,7 +549,7 @@ msgstr ""
 " \"L\", \"N\", \"Z\" のような子音が発音されます。無声音の子音は、\"P\", \"T\", \"SH\" "
 "などの急速な息によって生成されます。"
 
-#: ../../speech.rst:260
+#: ../../speech.rst:259
 msgid ""
 "Once you get used to it, the phoneme system is easy. To begin with some "
 "spellings may seem tricky (for example, \"adventure\" has a \"CH\" in it)"
@@ -563,7 +561,7 @@ msgstr ""
 "があります)が、ルールはあなたが言うことを書くことであり、スペルは書きません。"
 "問題のある単語を解決するには、実験が最善の方法です。"
 
-#: ../../speech.rst:265
+#: ../../speech.rst:264
 msgid ""
 "It's also important that speech sounds natural and understandable. To "
 "help with improving the quality of spoken output it's often good to use "
@@ -572,7 +570,7 @@ msgstr ""
 "音声は自然で分かりやすく理解できることも重要です。口頭による出力の質を向上させる"
 "ために、内蔵のストレスシステムを使用して屈曲または強調を追加することはよくあります。"
 
-#: ../../speech.rst:269
+#: ../../speech.rst:268
 msgid ""
 "There are eight stress markers indicated by the numbers ``1`` - ``8``. "
 "Simply insert the required number after the vowel to be stressed. For "
@@ -583,7 +581,7 @@ msgstr ""
 "母音の後に必要な番号を挿入するだけです。たとえば、\"/HEHLOW\" "
 "の表記が欠けているのは、 \"/HEH3LOW\" と書かれているとはるかに改善されています。"
 
-#: ../../speech.rst:274
+#: ../../speech.rst:273
 msgid ""
 "It's also possible to change the meaning of words through the way they "
 "are stressed. Consider the phrase \"Why should I walk to the store?\". It"
@@ -593,7 +591,7 @@ msgstr ""
 "\"Why should I walk to the store?\" というフレーズを考えてみてください。"
 "それはいくつかの異なる方法で発音することができます::"
 
-#: ../../speech.rst:278
+#: ../../speech.rst:277
 msgid ""
 "# You need a reason to do it.\n"
 "speech.pronounce(\"WAY2 SHUH7D AY WAO5K TUX DHAH STOH5R.\")\n"
@@ -607,14 +605,14 @@ msgid ""
 "speech.pronounce(\"WAY5 SHUHD AY WAO5K TUX DHAH STOH2OH7R.\")"
 msgstr ""
 
-#: ../../speech.rst:289
+#: ../../speech.rst:288
 msgid ""
 "Put simply, different stresses in the speech create a more expressive "
 "tone of voice."
 msgstr ""
 "簡単に言えば、言葉遣いのストレスによって、表現力豊かな声調が得られます。"
 
-#: ../../speech.rst:292
+#: ../../speech.rst:291
 msgid ""
 "They work by raising or lowering pitch and elongating the associated "
 "vowel sound depending on the number you give:"
@@ -622,39 +620,39 @@ msgstr ""
 "これらはあなたが与える数に応じて、ピッチを上げたり下げたり、関連する母音を"
 "伸ばしたりすることによって動作します:"
 
-#: ../../speech.rst:295
+#: ../../speech.rst:294
 msgid "very emotional stress"
 msgstr "非常に感情的なストレス"
 
-#: ../../speech.rst:296
+#: ../../speech.rst:295
 msgid "very emphatic stress"
 msgstr "非常に強調したストレス"
 
-#: ../../speech.rst:297
+#: ../../speech.rst:296
 msgid "rather strong stress"
 msgstr "かなり強いストレス"
 
-#: ../../speech.rst:298
+#: ../../speech.rst:297
 msgid "ordinary stress"
 msgstr "普通のストレス"
 
-#: ../../speech.rst:299
+#: ../../speech.rst:298
 msgid "tight stress"
 msgstr "タイトストレス"
 
-#: ../../speech.rst:300
+#: ../../speech.rst:299
 msgid "neutral (no pitch change) stress"
 msgstr "ニュートラル（ピッチ変化なし）ストレス"
 
-#: ../../speech.rst:301
+#: ../../speech.rst:300
 msgid "pitch-dropping stress"
 msgstr "ピッチ落ちストレス"
 
-#: ../../speech.rst:302
+#: ../../speech.rst:301
 msgid "extreme pitch-dropping stress"
 msgstr "極端なピッチ落ちのストレス"
 
-#: ../../speech.rst:304
+#: ../../speech.rst:303
 msgid ""
 "The smaller the number, the more extreme the emphasis will be. However, "
 "such stress markers will help pronounce difficult words correctly. For "
@@ -665,23 +663,23 @@ msgstr ""
 "言葉を正しく発音するのに役立ちます。たとえば、音節が十分に強調されていない場合は、"
 "中立のストレスマーカーを入れます。"
 
-#: ../../speech.rst:308
+#: ../../speech.rst:307
 msgid "It's also possible to elongate words with stress markers::"
 msgstr "ストレスマーカーを使って単語を伸ばすこともできます::"
 
-#: ../../speech.rst:310
+#: ../../speech.rst:309
 msgid "speech.pronounce(\"/HEH5EH4EH3EH2EH2EH3EH4EH5EHLP.”)"
 msgstr ""
 
-#: ../../speech.rst:313
+#: ../../speech.rst:312
 msgid "Singing"
 msgstr "歌唱"
 
-#: ../../speech.rst:315
+#: ../../speech.rst:314
 msgid "It's possible to make MicroPython sing phonemes."
 msgstr "MicroPython に音素を歌わせることは可能です。"
 
-#: ../../speech.rst:317
+#: ../../speech.rst:316
 msgid ""
 "This is done by annotating a pitch related number onto a phoneme. The "
 "lower the number, the higher the pitch. Numbers roughly translate into "
@@ -690,11 +688,11 @@ msgstr ""
 "これは音素にピッチ関連の番号を注釈することによって行います。数字が小さいほど、"
 "ピッチが高くなります。数字はおおよそ次の図に示すように音符に変換されます。"
 
-#: ../../speech.rst:322
+#: ../../speech.rst:321
 msgid ".. image:: speech-pitch.png"
 msgstr ""
 
-#: ../../speech.rst:323
+#: ../../speech.rst:322
 msgid ""
 "Annotations work by pre-pending a hash (``#``) sign and the pitch number "
 "in front of the phoneme. The pitch will remain the same until a new "
@@ -705,7 +703,7 @@ msgstr ""
 "有効となります。新しい注釈が与えられるまで、ピッチは同じままになります。たとえばを"
 "次のようにして MicroPython に音階を歌わせます。"
 
-#: ../../speech.rst:327
+#: ../../speech.rst:326
 msgid ""
 "solfa = [\n"
 "    \"#115DOWWWWWW\",   # Doh\n"
@@ -733,7 +731,7 @@ msgstr ""
 "song = ''.join(solfa)\n"
 "speech.sing(song, speed=100)"
 
-#: ../../speech.rst:340
+#: ../../speech.rst:339
 msgid ""
 "In order to sing a note for a certain duration extend the note by "
 "repeating vowel or voiced consonant phonemes (as demonstrated in the "
@@ -745,7 +743,7 @@ msgstr ""
 "二重母音に注意してください。これを伸ばすには、それらを構成部品に分解する必要が"
 "あります。たとえば、 \"OY\" は \"\"OHOHIYIYIY\" で伸ばすことができます。"
 
-#: ../../speech.rst:346
+#: ../../speech.rst:345
 msgid ""
 "Experimentation, listening carefully and adjusting is the only sure way "
 "to work out how many times to repeat a phoneme so the note lasts for the "
@@ -754,7 +752,7 @@ msgstr ""
 "試聴、慎重な聴取、調整は、音を望むだけ伸ばすよう何回音素を繰り返すかを決める"
 "唯一確実な方法です。"
 
-#: ../../speech.rst:351
+#: ../../speech.rst:350
 msgid "How Does it Work?"
 msgstr "どのような仕組みなのですか？"
 
@@ -762,7 +760,7 @@ msgstr "どのような仕組みなのですか？"
 msgid "The original manual explains it well:"
 msgstr "オリジナルのマニュアルはそれをうまく説明しています:"
 
-#: ../../speech.rst:355
+#: ../../speech.rst:354
 msgid ""
 "First, instead of recording the actual speech waveform, we only store the"
 " frequency spectrums. By doing this, we save memory and pick up other "
@@ -781,11 +779,11 @@ msgstr ""
 "第３に私たちはこのデータをすべて処理するためのルールを考案しました。"
 "驚いたことに、私たちのコンピュータはすぐに何かしゃべりはじめました。"
 
-#: ../../speech.rst:374
+#: ../../speech.rst:373
 msgid "S.A.M. owner's manual."
 msgstr "S.A.M. オーナマニュアル。"
 
-#: ../../speech.rst:366
+#: ../../speech.rst:365
 msgid ""
 "The output is piped through the functions provided by the ``audio`` "
 "module and, hey presto, we have a talking micro:bit."
@@ -793,7 +791,7 @@ msgstr ""
 "出力は ``audio`` モジュールによって提供される関数を介してパイプされます。"
 "あーら不思議、話す micro:bit のできあがりです。"
 
-#: ../../speech.rst:370
+#: ../../speech.rst:369
 msgid "Example"
 msgstr "サンプルコード"
 

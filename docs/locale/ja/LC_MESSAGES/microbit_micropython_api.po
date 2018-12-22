@@ -10,9 +10,8 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-12-16 18:19+0900\n"
+"Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,23 +22,10 @@ msgid "micro:bit Micropython API"
 msgstr ""
 
 #: ../../microbit_micropython_api.rst:5
-msgid ""
-"As we work towards a 1.0 release, this API is subject to frequent "
-"changes. This page reflects the current micro:bit API in a developer-"
-"friendly (but not necessarily kid-friendly) way. The tutorials associated"
-" with this documentation are a good place to start for non-developers "
-"looking for information."
-msgstr ""
-"1.0 リリースに向けて作業中のため、このAPIは頻繁に変更される可能性があります。"
-"このページは、現時点での micro:bit API を反映していて、開発者向けのものです"
-"(必ずしも子供に優しいわけではありません)。開発者以外の人が情報を探すのには、"
-"このドキュメンテーションに関連しているチュートリアルが適しています。"
-
-#: ../../microbit_micropython_api.rst:8
 msgid "The microbit module"
 msgstr "microbit モジュール"
 
-#: ../../microbit_micropython_api.rst:10
+#: ../../microbit_micropython_api.rst:7
 msgid ""
 "Everything directly related to interacting with the hardware lives in the"
 " `microbit` module.  For ease of use it's recommended you start all "
@@ -48,19 +34,19 @@ msgstr ""
 "ハードウェアと相互に直接関係するものはすべて `microbit` モジュールにあります。"
 "使いやすさを考慮して、すべてのスクリプトは次の方法で起動することをお勧めします::"
 
-#: ../../microbit_micropython_api.rst:12
+#: ../../microbit_micropython_api.rst:9
 msgid "from microbit import *"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:14
+#: ../../microbit_micropython_api.rst:11
 msgid "The following documentation assumes you have done this."
 msgstr "以下のドキュメントは、これを行ったことを前提としています。"
 
-#: ../../microbit_micropython_api.rst:16
+#: ../../microbit_micropython_api.rst:13
 msgid "There are a few functions available directly::"
-msgstr "いくつかの機能が直接利用可能です::"
+msgstr "いくつかの関数が直接利用できます::"
 
-#: ../../microbit_micropython_api.rst:18
+#: ../../microbit_micropython_api.rst:15
 msgid ""
 "# sleep for the given number of milliseconds.\n"
 "sleep(ms)\n"
@@ -86,7 +72,7 @@ msgstr ""
 "# micro:bit をリセットします。\n"
 "reset()"
 
-#: ../../microbit_micropython_api.rst:29
+#: ../../microbit_micropython_api.rst:26
 msgid ""
 "The rest of the functionality is provided by objects and classes in the "
 "microbit module, as described below."
@@ -94,14 +80,22 @@ msgstr ""
 "残りの機能は、後述するように microbit モジュール内のオブジェクトおよびクラスによって"
 "提供されます。"
 
-#: ../../microbit_micropython_api.rst:31
+#: ../../microbit_micropython_api.rst:28
 msgid ""
 "Note that the API exposes integers only (ie no floats are needed, but "
 "they may be accepted).  We thus use milliseconds for the standard time "
 "unit."
 msgstr ""
-"は数値として整数だけを利用しています(つまり、浮動小数点数は必要ないということですが、"
-"受け付けるものもあります)。したがって標準の時間単位にはミリ秒を使用します。"
+"ここで使った API は数値として整数だけを利用しています(つまり、浮動小数点数は必要"
+"ないということですが、受け付けるものもあります)。したがって標準の時間単位にはミリ秒"
+"を使用します。"
+
+#: ../../microbit_micropython_api.rst:31
+msgid ""
+"You can see a list of all available modules by writing ``help('modules')``"
+" in the REPL."
+msgstr ""
+"利用できるモジュールの一覧は REPL で  ``help('modules')`` とすることで参照できます。"
 
 #: ../../microbit_micropython_api.rst:34
 msgid "Buttons"
@@ -649,7 +643,7 @@ msgid ""
 "# return (read) n incoming characters.\n"
 "uart.read(n)\n"
 "# return (read) as much incoming data as possible.\n"
-"uart.readall()\n"
+"uart.read()\n"
 "# return (read) all the characters to a newline character is reached.\n"
 "uart.readline()\n"
 "# read bytes into the referenced buffer.\n"
@@ -665,7 +659,7 @@ msgstr ""
 "# 受信している文字を n だけ読んで返します。\n"
 "uart.read(n)\n"
 "# 受信している文字を可能なだけ(読んで)返します。\n"
-"uart.readall()\n"
+"uart.read()\n"
 "# 改行文字に達するまでのすべての文字を(読んで)返します。\n"
 "uart.readline()\n"
 "# 指定のバッファにバイト列を読み込みます。\n"

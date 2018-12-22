@@ -245,6 +245,7 @@ msgstr ""
 msgid "Example"
 msgstr "サンプルコード"
 
+#: ../../neopixel.rst:130
 msgid ""
 "\"\"\"\n"
 "    neopixel_random.py\n"

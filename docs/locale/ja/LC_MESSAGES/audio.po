@@ -9,18 +9,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-09 10:10+0900\n"
+"POT-Creation-Date: 2018-12-16 17:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../audio.rst:2
 msgid "Audio"
-msgstr ""
+msgstr "オーディオ"
 
 #: ../../audio.rst:6
 msgid ""
@@ -28,6 +28,8 @@ msgid ""
 "Microbit. In order to use the audio module you will need to provide a "
 "sound source."
 msgstr ""
+"このモジュールは Microbit に接続されているスピーカーからサウンドを再生できる"
+"ようにします。オーディオモジュールを使用するには、音源を用意する必要があります。"
 
 #: ../../audio.rst:9
 msgid ""
@@ -36,81 +38,106 @@ msgid ""
 "samples at the rate of 7812.5 samples per second, which means that it can"
 " reproduce frequencies up to 3.9kHz."
 msgstr ""
+"音源は、フレームのイテレーティブ(リスト、タプルなどのシーケンス、またはジェネレータ)であり、"
+"個々のフレームは３２個のサンプルを持ちます。この ``audio`` モジュールは、毎秒 7812.5 "
+"サンプルのレートでサンプルを再生します。つまり、最大 3.9 kHzの周波数を再生できます。"
 
 #: ../../audio.rst:15
 msgid "Functions"
-msgstr ""
+msgstr "関数"
 
 #: ../../audio.rst:19
 msgid "Play the source to completion."
-msgstr ""
+msgstr "音源を最後まで再生します。"
 
 #: ../../audio.rst:21
 msgid ""
 "``source`` is an iterable, each element of which must be an "
 "``AudioFrame``."
 msgstr ""
+"``source`` はイテレーティブで、その各項目は ``AudioFrame`` である"
+"必要があります。"
 
 #: ../../audio.rst:23
 msgid ""
 "If ``wait`` is ``True``, this function will block until the source is "
 "exhausted."
 msgstr ""
+"``wait`` が ``True`` の場合、音源の再生が終わるまでこの関数から戻りません。"
 
 #: ../../audio.rst:25
-msgid "``pins`` specifies which pins the speaker is connected to."
-msgstr ""
+msgid "``pin`` specifies which pin the speaker is connected to."
+msgstr "``pin`` にはスピーカを接続した端子を指定します。"
 
-#: ../../audio.rst:28
+#: ../../audio.rst:27
+msgid ""
+"``return_pin`` specifies a differential pin to connect to the speaker "
+"instead of ground."
+msgstr "``return_pin`` には、スピーカのもう一方をつなぐ先として GND の代わりに"
+"接続する端子を指定します。"
+
+#: ../../audio.rst:31
 msgid "Classes"
-msgstr ""
+msgstr "クラス"
 
-#: ../../audio.rst:33
+#: ../../audio.rst:36
 msgid ""
 "An ``AudioFrame`` object is a list of 32 samples each of which is a "
 "signed byte (whole number between -128 and 127)."
 msgstr ""
-
-#: ../../audio.rst:36
-msgid "It takes just over 4 ms to play a single frame."
-msgstr ""
+"``AudioFrame`` オブジェクトは、符号付きバイト(-128と127の間の整数)の３２個の"
+"サンプルのリストであり、各項目の値はf符号付きバイト(-128と127の間の整数)です。
 
 #: ../../audio.rst:39
-msgid "Using audio"
-msgstr ""
+msgid "It takes just over 4 ms to play a single frame."
+msgstr "１フレームを再生するのには４ミリ秒以上かかります。"
 
-#: ../../audio.rst:41
+#: ../../audio.rst:42
+msgid "Using audio"
+msgstr "オーディオの使い方"
+
+#: ../../audio.rst:44
 msgid ""
 "You will need a sound source, as input to the ``play`` function. You can "
 "generate your own, like in ``examples/waveforms.py`` or you can use the "
 "sound sources provided by modules like ``synth``."
 msgstr ""
-
-#: ../../audio.rst:46
-msgid "Technical Details"
-msgstr ""
+"``play`` 関数への入力として音源が必要になります。これは ``examples/waveforms.py`` "
+"のように自分で作ることもできますし、 ``synth`` のようなモジュールが提供している音源を"
+"使うこともできます。"
 
 #: ../../audio.rst:49
+msgid "Technical Details"
+msgstr "技術的な詳細"
+
+#: ../../audio.rst:52
 msgid ""
 "You don't need to understand this section to use the ``audio`` module. It"
 " is just here in case you wanted to know how it works."
 msgstr ""
+"``audio`` モジュールを使うのにこのセクションを理解する必要はありません。"
+"このモジュールがどのように機能するのか知りたい方のためにあります。"
 
-#: ../../audio.rst:52
+#: ../../audio.rst:55
 msgid ""
 "The ``audio`` module consumes samples at 7812.5 kHz, and uses linear "
 "interpolation to output a PWM signal at 32.5 kHz, which gives tolerable "
 "sound quality."
 msgstr ""
+"``audio`` モジュールは 7812.5 kHz のサンプルを消費し、線形補間を使用して 32.5 kHz "
+"の PWM 信号を出力します。これにより、許容できる音質が得られます。"
 
-#: ../../audio.rst:55
+#: ../../audio.rst:58
 msgid ""
 "The function ``play`` fully copies all data from each ``AudioFrame`` "
 "before it calls ``next()`` for the next frame, so a sound source can use "
 "the same ``AudioFrame`` repeatedly."
 msgstr ""
+"関数 ``play`` は、次のフレームを得るのに ``next()`` 呼び出す前に、　各 "
+"``AudioFrame`` からすべてのデータを完全にコピーするので、音源は同じ "
+"``AudioFrame`` を繰り返し使用できます。"
 
-#: ../../audio.rst:59
+#: ../../audio.rst:62
 msgid ""
 "The ``audio`` module has an internal 64 sample buffer from which it reads"
 " samples. When reading reaches the start or the mid-point of the buffer, "
@@ -119,10 +146,15 @@ msgid ""
 "compute the next ``AudioFrame``, and for reliable operation needs to take"
 " less 2ms (which is 32000 cycles, so should be plenty)."
 msgstr ""
+"``audio`` モジュールには６４個のサンプルバッファがあり、そこからサンプルを読み取ります。"
+"読み取りがバッファの開始点または中間点に達すると、次の ``AudioFrame`` を取り込むコール"
+"バックをトリガして、バッファにコピーします。これは、音源が次の  ``AudioFrame`` を処理"
+"するのに 4ms 以下かかり、信頼できる操作のために 2ms 以下を要する必要があることを"
+"意味します(32000 サイクルなので十分です)。
 
-#: ../../audio.rst:67
+#: ../../audio.rst:70
 msgid "Example"
-msgstr ""
+msgstr "サンプルコード"
 
 msgid ""
 "from microbit import display, sleep, button_a\n"
@@ -192,4 +224,70 @@ msgid ""
 "display.scroll(\"Ascending wave\", wait=False)\n"
 "audio.play(repeated_frames(frames, 60))"
 msgstr ""
+"from microbit import display, sleep, button_a\n"
+"import audio\n"
+"import math\n"
+"\n"
+"def repeated_frame(frame, count):\n"
+"    for i in range(count):\n"
+"        yield frame\n"
+"\n"
+"# 次の波形に行くには A ボタンを押します。\n"
+"def show_wave(name, frame, duration=1500):\n"
+"    display.scroll(name + \" wave\", wait=False,delay=100)\n"
+"    audio.play(repeated_frame(frame, duration),wait=False)\n"
+"    for i in range(75):\n"
+"        sleep(100)\n"
+"        if button_a.is_pressed():\n"
+"            display.clear()\n"
+"            audio.stop()\n"
+"            break\n"
+"\n"
+"frame = audio.AudioFrame()\n"
+"\n"
+"for i in range(len(frame)):\n"
+"    frame[i] = int(math.sin(math.pi*i/16)*124+128.5)\n"
+"show_wave(\"Sine\", frame)\n"
+"\n"
+"triangle = audio.AudioFrame()\n"
+"\n"
+"QUARTER = len(triangle)//4\n"
+"for i in range(QUARTER):\n"
+"    triangle[i] = i*15\n"
+"    triangle[i+QUARTER] = 248-i*15\n"
+"    triangle[i+QUARTER*2] = 128-i*15\n"
+"    triangle[i+QUARTER*3] = i*15+8\n"
+"show_wave(\"Triangle\", triangle)\n"
+"\n"
+"square = audio.AudioFrame()\n"
+"\n"
+"HALF = len(square)//2\n"
+"for i in range(HALF):\n"
+"    square[i] = 8\n"
+"    square[i+HALF] = 248\n"
+"show_wave(\"Square\", square)\n"
+"sleep(1000)\n"
+"\n"
+"for i in range(len(frame)):\n"
+"    frame[i] = 252-i*8\n"
+"show_wave(\"Sawtooth\", frame)\n"
+"\n"
+"del frame\n"
+"\n"
+"#三角波から方形波になる波形を、適度になめらかに生成。\n"
+"frames = [ None ] * 32\n"
+"for i in range(32):\n"
+"    frames[i] = frame = audio.AudioFrame()\n"
+"    for j in range(len(triangle)):\n"
+"        frame[j] = (triangle[j]*(32-i) + square[j]*i)>>5\n"
+"\n"
+"def repeated_frames(frames, count):\n"
+"    for frame in frames:\n"
+"        for i in range(count):\n"
+"            yield frame\n"
+"\n"
+"\n"
+"display.scroll(\"Ascending wave\", wait=False)\n"
+"audio.play(repeated_frames(frames, 60))"
+
 

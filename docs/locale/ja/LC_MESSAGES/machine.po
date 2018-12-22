@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2016, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-16 17:42+0900\n"
+"PO-Revision-Date: 2018-12-16 21:37+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../machine.rst:29
+msgid "Machine"
+msgstr ""
+
+#: ../../machine.rst:33
+msgid ""
+"The machine module contains specific functions related to the micro:bit "
+"hardware. Most functions in this module allow to achieve direct and "
+"unrestricted access to and control of hardware blocks on a system (like "
+"CPU, timers, buses, etc.). Used incorrectly, this can lead to "
+"malfunction, lockups, crashes of your board, and in extreme cases, "
+"hardware damage."
+msgstr ""
+"machine モジュールは micro:bit ハードウェアに関連する固有の関数を含んでいます。"
+"このモジュールのほとんどの機能はシステム上のハードウェアブロック(CPU、タイマー、"
+"バスなど)への直接的かつ無制限のアクセスと制御を実現します。誤って使用すると、誤動作、"
+"ロックアップ、ボードのクラッシュ、および極端な場合にはハードウェアの損傷を招く可能性が"
+"あります。"
+
+#: ../../machine.rst:41
+msgid "Functions"
+msgstr "関数"
+
+#: ../../machine.rst:45
+msgid ""
+"Returns a byte string with a unique identifier of a board. It will vary "
+"from one board instance to another."
+msgstr ""
+"ボードの一意な識別子を持つバイト列を返します。この値はボードの個体ごとに異なります。"
+
+#: ../../machine.rst:51
+msgid ""
+"Resets the device in a manner similar to pushing the external RESET "
+"button."
+msgstr ""
+"外部 RESET ボタンを押すのと同じようにデバイスをリセットします。"
+
+#: ../../machine.rst:56
+msgid "Returns CPU frequency in hertz."
+msgstr "CPU周波数をヘルツ単位で返します。"
+
+#: ../../machine.rst:61
+msgid ""
+"Disable interrupt requests. Returns the previous IRQ state which should "
+"be considered an opaque value. This return value should be passed to the "
+":func:`machine.enable_irq()` function to restore interrupts to their "
+"original state, before :func:`machine.disable_irq()` was called."
+msgstr ""
+"割り込み要求を無効にします。無効にする前の IRQ 状態を返しますが、これは不明瞭な値と"
+"みなす必要があります。この戻り値は :func:`machine.disable_irq()` を呼び出す前の"
+"元の状態に割り込みを復元するために :func:`machine.enable_irq()` 関数に渡す必要が"
+"あります。"
+
+#: ../../machine.rst:69
+msgid ""
+"Re-enable interrupt requests. The *state* parameter should be the value "
+"that was returned from the most recent call to the "
+":func:`machine.disable_irq()` function."
+msgstr ""
+"割り込み要求を再度有効にします。 *state* パラメータは :func:`machine.disable_irq()` "
+"関数の最も最近の呼び出しから返された値である必要があります。"
+
+#: ../../machine.rst:76
+msgid ""
+"Time a pulse on the given *pin*, and return the duration of the pulse in "
+"microseconds. The *pulse_level* argument should be 0 to time a low pulse "
+"or 1 to time a high pulse."
+msgstr ""
+"指定の *pin* にパルスの持続時間をマイクロ秒単位で返します。 *pulse_level* 引数には、"
+"低パルスの時間計測で 0、高パルスの時間計測で 1 を指定します。"
+
+#: ../../machine.rst:80
+msgid ""
+"If the current input value of the pin is different to *pulse_level*, the "
+"function first (*) waits until the pin input becomes equal to "
+"*pulse_level*, then (**) times the duration that the pin is equal to "
+"*pulse_level*. If the pin is already equal to *pulse_level* then timing "
+"starts straight away."
+msgstr ""
+"ピンの現在の入力値が *pulse_level* と異なる場合、関数は最初にピン入力が *pulse_level* "
+"に等しくなるまで待機し(*)、次にそのピンが pulse_level に等しい時間を測ります(**)。ピンが"
+"既に *pulse_level* に等しい場合、計測はすぐに開始されます。
+
+#: ../../machine.rst:86
+msgid ""
+"The function will return -2 if there was timeout waiting for condition "
+"marked (*) above, and -1 if there was timeout during the main "
+"measurement, marked (**) above. The timeout is the same for both cases "
+"and given by *timeout_us* (which is in microseconds)."
+msgstr ""
+"タイムアウトが発生した場合、上記の(*)の状態を待っていた場合は -2 を返し、上記の(**)の"
+"場合は -1 を返します。タイムアウト時間は両方のケースで同じで、 timeout_us (マイクロ秒"
+"単位)で指定します。"
+
+#: ../../machine.rst:93
+msgid "Reading Memory"
+msgstr "メモリの読取り"
+
+#: ../../machine.rst:95
+msgid ""
+"The ``machine`` module allows you to read from the device's memory, "
+"getting 1 byte (8 bits; ``mem8``), 2 byte (16 bits; ``mem16``), or 4 byte"
+" (32 bits; ``mem32``) words from physical addresses. For example: "
+"``mem8[0x00]`` reads 1 byte on physical address ``0x00``. This has a "
+"number of uses, for example if you'd like to read data from the nRF51 "
+"registers."
+msgstr ""
+"``machine`` モジュールでは、物理アドレスを指定してデバイスのメモリから、1バイト"
+"(8ビット; ``mem8``)、2バイト(16ビット; ``mem16``)、4バイト(32ビット; ``mem32``)"
+"のワードを取得できます。たとえば　``mem8[0x00]`` は、物理アドレス ``0x00`` の1バイト"
+"を読み取ります。これには nRF51 レジスタからデータを読み取るなど、さまざまな用途があります。"

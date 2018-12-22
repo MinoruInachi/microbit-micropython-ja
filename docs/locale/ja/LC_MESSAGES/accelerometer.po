@@ -150,6 +150,7 @@ msgid ""
 msgstr ""
 "マジック８ボール占いです。質問の後にデバイスを振ってください。"
 
+#: ../../accelerometer.rst:84
 msgid ""
 "# Magic 8 ball by Nicholas Tollervey. February 2016.\n"
 "#\n"
