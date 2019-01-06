@@ -824,3 +824,6 @@ msgstr ""
 "``picocom`` プログラムを使う場合、``picocom /dev/ttyACM0 -b 115200`` を入力します。"
 "``/dev/ttyACM0`` のところは先に調べたポートに置き換えてください。"
 
+#: ../../devguide/repl.rst:106
+msgid "To exit, press Ctrl-A then Ctrl-Q."
+msgstr "終了するには Ctrl-A の後に Ctrl-Q を入力します。"
