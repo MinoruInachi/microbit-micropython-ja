@@ -773,15 +773,28 @@ msgstr "左のメニューの「シリアル」を選び、'Open' をクリッ�
 msgid ""
 "Open Terminal and type ``screen /dev/cu.usbmodem1422 115200``, replacing "
 "``/dev/cu.usbmodem1422`` with the port you found earlier. This will open the "
-"micro:bit's serial output and show all messages received from the device. To "
-"exit, press Ctrl-A then Ctrl-D."
+"micro:bit's serial output and show all messages received from the device."
 msgstr ""
 "ターミナルを開いて　``screen /dev/cu.usbmodem1422 115200``　を入力します。"
 "``/dev/cu.usbmodem1422`` のところは先に調べたポートに置き換えてください。"
 "これは micro:bit のシリアル出力をオープンし、デバイスから受信したメッセージすべてを"
-"表示します。終了するには Ctrl-A の後に Ctrl-D を入力します。"
+"表示します。"
 
-#: ../../devguide/repl.rst:89
+#: ../../devguide/repl.rst:85
+msgid ""
+"To exit, press Ctrl-A then Ctrl-\\\\ and answer Yes to the question. There "
+"are many ways back to a command prompt including Ctrl-A then Ctrl-D, which "
+"will detach screen, but the serial port with still be locked, preventing "
+"other applications from accessing it. You can then restart screen by typing "
+"``screen -r``."
+msgstr ""
+"終了するには Ctrl-A の後に Ctrl-\\\\ を入力し、質問に Yes と答えます。"
+"コマンドプロンプトに戻る方法は他にもあり、Ctrl-A の後に Ctrl-D を入力しても戻れますが、"
+"これでは画面が切り離されるだけで、シリアルポートはロックされたままになり、"
+"他のアプリケーションがアクセスできなくなります。そのようなときは ``screen -r`` と入力"
+"することで screen を再起動できます。"
+
+#: ../../devguide/repl.rst:94
 msgid ""
 "Using the ``screen`` program, type ``screen /dev/ttyUSB0 115200``, replacing "
 "``/dev/ttyUSB0`` with the port you found earlier."
@@ -789,7 +802,21 @@ msgstr ""
 "``screen`` プログラムを使う場合、``screen /dev/ttyUSB0 115200`` を入力します。"
 "``/dev/ttyUSB0`` のところは先に調べたポートに置き換えてください。"
 
-#: ../../devguide/repl.rst:92
+#: ../../devguide/repl.rst:97
+msgid ""
+"To exit, press Ctrl-A then \\\\ and answer Yes to the question. There are many "
+"ways back to a command prompt including Ctrl-A then Ctrl-D, which will detach "
+"screen. All serial output from the micro:bit will still be received by "
+"``screen``, the serial port will be locked, preventing other applications from "
+"accessing it. You can restart screen by typing ``screen -r``."
+msgstr ""
+"終了するには Ctrl-A の後に Ctrl-\\\\ を入力し、質問に Yes と答えます。"
+"コマンドプロンプトに戻る方法は他にもあり、Ctrl-A の後に Ctrl-D を入力しても戻れますが、"
+"これでは画面が切り離されるだけで、シリアルポートはロックされたままになり、"
+"他のアプリケーションがアクセスできなくなります。そのようなときは ``screen -r`` と入力"
+"することで screen を再起動できます。"
+
+#: ../../devguide/repl.rst:103
 msgid ""
 "Using ``picocom``, type ``picocom /dev/ttyACM0 -b 115200``, again replacing "
 "``/dev/ttyACM0`` with the port you found earlier."
