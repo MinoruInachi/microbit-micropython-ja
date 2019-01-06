@@ -135,21 +135,21 @@ its own to that.
 
         Set the pin to high if ``value`` is 1, or to low, if it is 0.
 
-    .. py:method::set_pull(value)
+    .. py:method:: set_pull(value)
 
         Set the pull state to one of three possible values: ``pin.PULL_UP``,
         ``pin.PULL_DOWN`` or ``pin.NO_PULL`` (where ``pin`` is an instance of
         a pin). See below for discussion of default pull states.
 
 
-    .. py:method::get_pull()
+    .. py:method:: get_pull()
 
         Returns the pull configuration on a pin, which can be one of three 
         possible values: ``NO_PULL``, ``PULL_DOWN``, or ``PULL_UP``. These 
         are set using the ``set_pull()`` method or automatically configured 
         when a pin mode requires it.
 
-    .. py:method::get_mode()
+    .. py:method:: get_mode()
 
         Returns the pin mode. When a pin is used for a specific function, like 
         writing a digital value, or reading an analog value, the pin mode 
