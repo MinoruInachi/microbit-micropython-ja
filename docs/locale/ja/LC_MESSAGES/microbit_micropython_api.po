@@ -1,0 +1,775 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2020, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-04 20:28+0900\n"
+"PO-Revision-Date: 2020-12-29 10:27+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../microbit_micropython_api.rst:2
+msgid "micro:bit Micropython API"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:5
+msgid "The microbit module"
+msgstr "microbit モジュール"
+
+#: ../../microbit_micropython_api.rst:7
+msgid ""
+"Everything directly related to interacting with the hardware lives in the"
+" `microbit` module.  For ease of use it's recommended you start all "
+"scripts with::"
+msgstr ""
+"ハードウェアと相互に直接関係するものはすべて `microbit` モジュールにあります。"
+"使いやすさを考慮して、すべてのスクリプトは次の方法で起動することをお勧めします::"
+
+#: ../../microbit_micropython_api.rst:9
+msgid "from microbit import *"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:11
+msgid "The following documentation assumes you have done this."
+msgstr "以下のドキュメントは、これを行ったことを前提としています。"
+
+#: ../../microbit_micropython_api.rst:13
+msgid "There are a few functions available directly::"
+msgstr "いくつかの関数が直接利用できます::"
+
+#: ../../microbit_micropython_api.rst:15
+msgid ""
+"# sleep for the given number of milliseconds.\n"
+"sleep(ms)\n"
+"# returns the number of milliseconds since the micro:bit was last "
+"switched on.\n"
+"running_time()\n"
+"# makes the micro:bit enter panic mode (this usually happens when the DAL"
+" runs\n"
+"# out of memory, and causes a sad face to be drawn on the display). The "
+"error\n"
+"# code can be any arbitrary integer value.\n"
+"panic(error_code)\n"
+"# resets the micro:bit.\n"
+"reset()\n"
+"# sets the output volume (0-255) of the micro:bit speaker **V2** and\n"
+"# external speaker or headphones connected to the edge connector pins.\n"
+"set_volume(128)    # V2"
+msgstr ""
+"# 指定したミリ秒数だけ休止します。\n"
+"sleep(ms)\n"
+"# micro:bit の電源が入ってから経過したミリ秒数を返します。\n"
+"running_time()\n"
+"# micro:bit をパニックモードにします(これは通常、デバイス抽象レイヤーがメモリ不足になったときに\n"
+"# 起き、ディスプレイに悲しい顔が出ます)。エラーコードには任意の整数値を指定できます。\n"
+"panic(error_code)\n"
+"# micro:bit をリセットします。\n"
+"reset()\n
+"# micro:bit の組込みスピーカーやエッジコネクタ端子に繋いだ外部スピーカー/ヘッドフォンの\n"
+"# 出力ボリュームを設定します(0-255)。\n"
+"set_volume(128)    # V2"
+
+#: ../../microbit_micropython_api.rst:29
+msgid ""
+"The rest of the functionality is provided by objects and classes in the "
+"microbit module, as described below."
+msgstr ""
+"残りの機能は、後述するように microbit モジュール内のオブジェクトおよびクラスによって"
+"提供されます。"
+
+#: ../../microbit_micropython_api.rst:31
+msgid ""
+"Note that the API exposes integers only (ie no floats are needed, but "
+"they may be accepted).  We thus use milliseconds for the standard time "
+"unit."
+msgstr ""
+"ここで使った API は数値として整数だけを利用しています(つまり、浮動小数点数は必要"
+"ないということですが、受け付けるものもあります)。したがって標準の時間単位にはミリ秒"
+"を使用します。"
+
+#: ../../microbit_micropython_api.rst:34
+msgid ""
+"You can see a list of all available modules by writing ``help('modules')``"
+" in the REPL."
+msgstr ""
+"利用できるモジュールの一覧は REPL で  ``help('modules')`` とすることで参照できます。"
+
+#: ../../microbit_micropython_api.rst:37
+msgid "Buttons"
+msgstr "ボタン"
+
+#: ../../microbit_micropython_api.rst:39
+msgid "There are 2 buttons::"
+msgstr "２つのボタンがあります::"
+
+#: ../../microbit_micropython_api.rst:41
+msgid ""
+"button_a\n"
+"button_b"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:44
+msgid "These are both objects and have the following methods::"
+msgstr "これらはどちらもオブジェクトであり、次のメソッドがあります::"
+
+#: ../../microbit_micropython_api.rst:46
+msgid ""
+"# returns True or False to indicate if the button is pressed at the time "
+"of\n"
+"# the method call.\n"
+"button.is_pressed()\n"
+"# returns True or False to indicate if the button was pressed since the "
+"device\n"
+"# started or the last time this method was called.\n"
+"button.was_pressed()\n"
+"# returns the running total of button presses, and resets this counter to"
+" zero\n"
+"button.get_presses()"
+msgstr ""
+"# メソッドを呼んだときにボタンが押されているかにより True または False \n"
+"# を返します。\n"
+"button.is_pressed()\n"
+"# デバイスが始動まやは前回にこのメソッドが呼び出されてからボタンが\n"
+"# 押されたかにより True または False を返します。\n"
+"button.was_pressed()\n"
+"# ボタン押下の回数を返し、このカウンタをゼロにリセットします。\n"
+"button.get_presses()"
+
+#: ../../microbit_micropython_api.rst:56
+msgid "Display"
+msgstr "ディスプレイ"
+
+#: ../../microbit_micropython_api.rst:58
+msgid "The LED display is exposed via the `display` object::"
+msgstr "LED ディスプレイは `display` オブジェクトを介して利用します::"
+
+#: ../../microbit_micropython_api.rst:60
+msgid ""
+"# gets the brightness of the pixel (x,y). Brightness can be from 0 (the "
+"pixel\n"
+"# is off) to 9 (the pixel is at maximum brightness).\n"
+"display.get_pixel(x, y)\n"
+"# sets the brightness of the pixel (x,y) to val (between 0 [off] and 9 "
+"[max\n"
+"# brightness], inclusive).\n"
+"display.set_pixel(x, y, val)\n"
+"# clears the display.\n"
+"display.clear()\n"
+"# shows the image.\n"
+"display.show(image, delay=0, wait=True, loop=False, clear=False)\n"
+"# shows each image or letter in the iterable, with delay ms. in between "
+"each.\n"
+"display.show(iterable, delay=400, wait=True, loop=False, clear=False)\n"
+"# scrolls a string across the display (more exciting than display.show "
+"for\n"
+"# written messages).\n"
+"display.scroll(string, delay=400)"
+msgstr ""
+"# ピクセル (x, y)の照度を得ます。照度は 0 (ピクセルがオフ)から 9 (ピクセルが最大照度)\n"
+"# までの値をとります。\n"
+"display.get_pixel(x, y)\n"
+"# ピクセル (x, y)の照度に val (0 [オフ] から 9 [最大照度] の範囲)\n"
+"# を設定します。\n"
+"display.set_pixel(x, y, val)\n"
+"# ディスプレィをクリアします。\n"
+"display.clear()\n"
+"# イメージを表示します。\n"
+"display.show(image, delay=0, wait=True, loop=False, clear=False)\n"
+"# iterable のイメージまたは文字のそれぞれを delay ミリ秒間隔で表示する。\n"
+"display.show(iterable, delay=400, wait=True, loop=False, clear=False)\n"
+"# 文字列 string をディスプレイでスクロールします(メッセージを表示するなら display.show \n"
+"# よりも効果的)。\n"
+"display.scroll(string, delay=400)"
+
+#: ../../microbit_micropython_api.rst:77
+msgid "SoundEvent **V2**"
+msgstr "サウンドイベント **V2**"
+
+#: ../../microbit_micropython_api.rst:78
+msgid "Sound events describe changes in the sound heard by the microphone::"
+msgstr "サウンドイベントはマイクから入力された音の変化を表します::"
+
+#: ../../microbit_micropython_api.rst:80
+msgid ""
+"# Value to represent the transition of sound events, from `quiet` to "
+"`loud`\n"
+"# like clapping or shouting.\n"
+"SoundEvent.LOUD = SoundEvent('loud')\n"
+"# Value to represent the transition of sound events, from `loud` to "
+"`quiet`\n"
+"# like speaking or background music.\n"
+"SoundEvent.QUIET = SoundEvent('quiet')"
+msgstr ""
+"# 拍手や叫び声のように「静かな音」(`quiet`)から「大きな音」(`loud`)への変化を\n"
+"# 表す値です。\n"
+"SoundEvent.LOUD = SoundEvent('loud')\n"
+"# 発話やBGMのように「大きな音」(`loud`)から「静かな音」(`quiet`)への変化を\n"
+"# 表す値です。\n"
+"SoundEvent.QUIET = SoundEvent('quiet')"
+
+#: ../../microbit_micropython_api.rst:88
+msgid "Microphone **V2**"
+msgstr "マイク **V2**"
+
+#: ../../microbit_micropython_api.rst:90
+msgid "The Microphone is accessed via the `microphone` object::"
+msgstr "マイクには `microphone` オブジェクトでアクセスします::"
+
+#: ../../microbit_micropython_api.rst:92
+msgid ""
+"# Returns the name of the last recorded sound event.\n"
+"current_event()\n"
+"# A sound event,  such as `SoundEvent.LOUD` or `SoundEvent.QUIET`.\n"
+"# Returns`true` if sound was heard at least once since the last\n"
+"# call, otherwise `false`.\n"
+"was_event(event)\n"
+"# Returns a tuple of the event history. The most recent is listed last.\n"
+"# Also clears the sound event history before returning.\n"
+"get_events()\n"
+"# The threshold level in the range 0-255. For example,\n"
+"# `set_threshold(SoundEvent.LOUD, 250)` will only trigger if the\n"
+"# sound is very loud (>= 250).\n"
+"set_threshold(128)\n"
+"# Returns a representation of the sound pressure level in the range 0 to "
+"255.\n"
+"sound_level()"
+msgstr ""
+"# 記録されている最新のサウンドイベントの名前を返します。\n"
+"current_event()\n"
+"# サウンドイベントには `SoundEvent.LOUD` と `SoundEvent.QUIET` があります。\n"
+"# 直前の呼出しから少なくとも一度は指定のサウンドイベントが発生した場合は `true` 、\n"
+"# そうでない場合は `false` を返します。\n"
+"was_event(event)\n"
+"# イベント履歴のタプルを返します。最新のものが最後に表示されます。\n"
+"# また、戻る前にサウンドイベントの履歴をクリアします。\n"
+"get_events()\n"
+"# 0-255 の範囲の閾値レベル。
+"# たとえば `set_threshold(SoundEvent.LOUD, 250)` は音が非常に\n"
+"# 大きい場合にのみトリガされます(>= 250)。\n"
+"set_threshold(128)\n"
+"# 0-255の範囲で表される音圧レベルを返します。\n"
+"sound_level()"
+
+#: ../../microbit_micropython_api.rst:109
+msgid "Pins"
+msgstr "端子"
+
+#: ../../microbit_micropython_api.rst:111
+msgid ""
+"Provide digital and analog input and output functionality, for the pins "
+"in the connector, the **V2** logo and the **V2** speaker. Some pins are "
+"connected internally to the I/O that drives the LED matrix and the "
+"buttons."
+msgstr ""
+"コネクタの端子、 **V2** ロゴ、 **V2** スピーカーにデジタルおよびアナログの"
+"入出力機能を提供します。一部の端子は LED マトリクスとボタンを駆動する I/O "
+"に内部接続されています。"
+
+#: ../../microbit_micropython_api.rst:115
+msgid ""
+"Each pin is provided as an object directly in the ``microbit`` module.  "
+"This keeps the API relatively flat, making it very easy to use:"
+msgstr ""
+"各端子は ``microbit`` モジュールで直接オブジェクトとして提供されます。これにより API "
+"が比較的フラットに保たれ、利用が非常に簡単になります。"
+
+#: ../../microbit_micropython_api.rst:117
+msgid "pin0"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:118
+msgid "pin1"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:119
+msgid "..."
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:120
+msgid "pin15"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:121
+msgid "pin16"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:122
+msgid "*Warning: P17-P18 (inclusive) are unavailable.*"
+msgstr "*注意: P17-P18 は利用できません。*"
+
+#: ../../microbit_micropython_api.rst:123
+msgid "pin19"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:124
+msgid "pin20"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:125
+msgid "pin_logo **V2**"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:126
+msgid "pin_speaker **V2**"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:128
+msgid ""
+"Each of these pins are instances of the ``MicroBitPin`` class, which "
+"offers the following API::"
+msgstr ""
+"これらの端子はそれぞれ ``MicroBitPin`` クラスのインスタンスであり、次のAPIを"
+"提供します。"
+
+#: ../../microbit_micropython_api.rst:130
+msgid ""
+"# value can be 0, 1, False, True\n"
+"pin.write_digital(value)\n"
+"# returns either 1 or 0\n"
+"pin.read_digital()\n"
+"# value is between 0 and 1023\n"
+"pin.write_analog(value)\n"
+"# returns an integer between 0 and 1023\n"
+"pin.read_analog()\n"
+"# sets the period of the PWM output of the pin in milliseconds\n"
+"# (see https://en.wikipedia.org/wiki/Pulse-width_modulation)\n"
+"pin.set_analog_period(int)\n"
+"# sets the period of the PWM output of the pin in microseconds\n"
+"# (see https://en.wikipedia.org/wiki/Pulse-width_modulation)\n"
+"pin.set_analog_period_microseconds(int)\n"
+"# Only available for touch pins 0, 1, and 2. Returns boolean if the pin\n"
+"# is touched\n"
+"pin.is_touched()"
+msgstr ""
+"# 値 value を 0, 1, False, True のいずれかにできます。\n"
+"pin.write_digital(value)\n"
+"# 1 か 0 を返します。\n"
+"pin.read_digital()\n"
+"# value は 0 から 1023 の範囲の値です。\n"
+"pin.write_analog(value)\n"
+"# 0 から 1023 の範囲の整数値を返します。\n"
+"pin.read_analog()\n"
+"# 端子の PWM 出力周期をミリ秒単位で設定します。\n"
+"# (https://ja.wikipedia.org/wiki/パルス幅変調 を参照)\n"
+"pin.set_analog_period(int)\n"
+"# 端子の PWM 出力周期をマイクロ秒単位で設定します。\n"
+"# (https://ja.wikipedia.org/wiki/パルス幅変調 を参照)\n"
+"pin.set_analog_period_microseconds(int)\n"
+"# タッチ端子 0, 1, 2 のみ使えます。端子に触れているかをブール値で返します。\n"
+"pin.is_touched()"
+
+#: ../../microbit_micropython_api.rst:148
+msgid ""
+"Except in the case of the pins marked **V2**, which offers the following "
+"API::"
+msgstr ""
+"**V2** とマークしてあるピンは特殊で、以下の API を提供しています::"
+
+#: ../../microbit_micropython_api.rst:150
+msgid "pin_logo::"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:152
+msgid ""
+"# returns boolean for logo touch pin\n"
+"pin_logo.is_touched()"
+msgstr ""
+"# ロゴにタッチしたかを示す真偽値をかえします\n"
+"pin_logo.is_touched()"
+
+#: ../../microbit_micropython_api.rst:155
+msgid "pin_speaker:"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:157
+msgid "As above ``MicroBitPin`` class, but does not include ``pin.is_touched()``."
+msgstr "先述した ``MicroBitPin`` ですが、 ``pin.is_touched()`` はありません。"
+
+#: ../../microbit_micropython_api.rst:160
+msgid "Images"
+msgstr "イメージ"
+
+#: ../../microbit_micropython_api.rst:164
+msgid ""
+"You don't always need to create one of these yourself - you can access "
+"the image shown on the display directly with `display.image`. "
+"`display.image` is just an instance of `Image`, so you can use all of the"
+" same methods."
+msgstr ""
+"いつも自分でイメージを作成する必要はありません。 ``display.image`` "
+"を使用してディスプレイに表示されるイメージに直接アクセスできます。 "
+"``display.image`` は Image の単なるインスタンスなので、同じメソッドをすべて"
+"使用できます。"
+
+#: ../../microbit_micropython_api.rst:168
+msgid "Images API::"
+msgstr "イメージ API"
+
+#: ../../microbit_micropython_api.rst:170
+msgid ""
+"# creates an empty 5x5 image\n"
+"image = Image()\n"
+"# create an image from a string - each character in the string represents"
+" an\n"
+"# LED - 0 (or space) is off and 9 is maximum brightness. The colon \":\"\n"
+"# indicates the end of a line.\n"
+"image = Image('90009:09090:00900:09090:90009:')\n"
+"# create an empty image of given size\n"
+"image = Image(width, height)\n"
+"# initialises an Image with the specified width and height. The buffer\n"
+"# should be an array of length width * height\n"
+"image = Image(width, height, buffer)\n"
+"\n"
+"# methods\n"
+"# returns the image's width (most often 5)\n"
+"image.width()\n"
+"# returns the image's height (most often 5)\n"
+"image.height()\n"
+"# sets the pixel at the specified position (between 0 and 9). May fail "
+"for\n"
+"# constant images.\n"
+"image.set_pixel(x, y, value)\n"
+"# gets the pixel at the specified position (between 0 and 9)\n"
+"image.get_pixel(x, y)\n"
+"# returns a new image created by shifting the picture left 'n' times.\n"
+"image.shift_left(n)\n"
+"# returns a new image created by shifting the picture right 'n' times.\n"
+"image.shift_right(n)\n"
+"# returns a new image created by shifting the picture up 'n' times.\n"
+"image.shift_up(n)\n"
+"# returns a new image created by shifting the picture down 'n' times.\n"
+"image.shift_down(n)\n"
+"# get a compact string representation of the image\n"
+"repr(image)\n"
+"# get a more readable string representation of the image\n"
+"str(image)\n"
+"\n"
+"#operators\n"
+"# returns a new image created by superimposing the two images\n"
+"image + image\n"
+"# returns a new image created by multiplying the brightness of each pixel"
+" by n\n"
+"image * n"
+msgstr ""
+"# 空の 5x5 イメージを作成。\n"
+"image = Image()\n"
+"# 文字列からイメージを作成 - 文字列中の各文字は LED を表す - 0 (またはスペース)はオフ、\n"
+"# \"9 は最大照度。コロン \":\" は行の終端を示します。\n"
+"image = Image('90009:09090:00900:09090:90009:')\n"
+"# 与えたサイズの空のイメージを作成します。\n"
+"image = Image(width, height)\n"
+"# 指定の width と height でイメージを初期化します。buffer は長さが \n"
+"# width * height の配列です。\n"
+"image = Image(width, height, buffer)\n"
+"\n"
+"# メソッド\n"
+"# イメージの width (最大 5)を返します。\n"
+"image.width()\n"
+"# イメージの height (最大 5)を返します。\n"
+"image.height()\n"
+"# 指定の位置のピクセルを設定します(0 から 9 の範囲)。組込みのイメージでは\n"
+"# 失敗します。\n"
+"image.set_pixel(x, y, value)\n"
+"# 指定の位置のピクセルを得ます(0 から 9 の範囲)。\n"
+"image.get_pixel(x, y)\n"
+"# イメージを左に 'n' 回シフトした新しいイメージを返します。\n"
+"image.shift_left(n)\n"
+"# イメージを右に 'n' 回シフトした新しいイメージを返します。\n"
+"image.shift_right(n)\n"
+"# イメージを上に 'n' 回シフトした新しいイメージを返します。\n"
+"image.shift_up(n)\n"
+"# イメージを下に 'n' 回シフトした新しいイメージを返します。\n"
+"image.shift_down(n)\n"
+"# イメージのコンパクトな文字列表現を得ます。\n"
+"repr(image)\n"
+"# イメージのより可読性のある文字列表現を得ます。\n"
+"str(image)\n"
+"\n"
+"#演算子\n"
+"# ２つのイメージを重ね合わせた新しいイメージを返します。\n"
+"image + image\n"
+"# 各ピクセルの照度に n を掛けた新しいイメージを返します。\n"
+"image * n"
+
+#: ../../microbit_micropython_api.rst:211
+msgid "**Built-in images**"
+msgstr "組込みのイメージ"
+
+#: ../../microbit_micropython_api.rst:213
+msgid ""
+"``Image.HEART`` ``Image.HEART_SMALL`` ``Image.HAPPY`` ``Image.SMILE`` "
+"``Image.SAD`` ``Image.CONFUSED`` ``Image.ANGRY`` ``Image.ASLEEP`` "
+"``Image.SURPRISED`` ``Image.SILLY`` ``Image.FABULOUS`` ``Image.MEH`` "
+"``Image.YES`` ``Image.NO`` ``Image.TRIANGLE`` ``Image.TRIANGLE_LEFT`` "
+"``Image.CHESSBOARD`` ``Image.DIAMOND`` ``Image.DIAMOND_SMALL`` "
+"``Image.SQUARE`` ``Image.SQUARE_SMALL`` ``Image.RABBIT`` ``Image.COW`` "
+"``Image.MUSIC_CROTCHET`` ``Image.MUSIC_QUAVER`` ``Image.MUSIC_QUAVERS`` "
+"``Image.PITCHFORK`` ``Image.XMAS`` ``Image.PACMAN`` ``Image.TARGET`` "
+"``Image.TSHIRT`` ``Image.ROLLERSKATE`` ``Image.DUCK`` ``Image.HOUSE`` "
+"``Image.TORTOISE`` ``Image.BUTTERFLY`` ``Image.STICKFIGURE`` "
+"``Image.GHOST`` ``Image.SWORD`` ``Image.GIRAFFE`` ``Image.SKULL`` "
+"``Image.UMBRELLA`` ``Image.SNAKE``"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:257
+msgid "Clock:"
+msgstr "時計のイメージ"
+
+#: ../../microbit_micropython_api.rst:259
+msgid ""
+"``Image.CLOCK1`` ``Image.CLOCK2`` ``Image.CLOCK3`` ``Image.CLOCK4`` "
+"``Image.CLOCK5`` ``Image.CLOCK6`` ``Image.CLOCK7`` ``Image.CLOCK8`` "
+"``Image.CLOCK9`` ``Image.CLOCK10`` ``Image.CLOCK11`` ``Image.CLOCK12``"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:263
+msgid "Arrows:"
+msgstr "矢印のイメージ"
+
+#: ../../microbit_micropython_api.rst:265
+msgid ""
+"``Image.ARROW_N`` ``Image.ARROW_NE`` ``Image.ARROW_E`` ``Image.ARROW_SE``"
+" ``Image.ARROW_S`` ``Image.ARROW_SW`` ``Image.ARROW_W`` "
+"``Image.ARROW_NW``"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:268
+msgid ""
+"The following are Python lists of images, useful for automatically "
+"displaying an animation or manually iterating through them."
+msgstr ""
+"次のものは、アニメーションを自動的に表示したり、手動で反復処理したりするのに便利な"
+"イメージの Python リストです。"
+
+#: ../../microbit_micropython_api.rst:271
+msgid "``Image.ALL_CLOCKS`` ``Image.ALL_ARROWS``"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:275
+msgid "Accelerometer"
+msgstr "加速度センサー"
+
+#: ../../microbit_micropython_api.rst:277
+msgid "The accelerometer is accessed via the ``accelerometer`` object::"
+msgstr "加速度センサーは ``accelerometer`` オブジェクトを介して利用します::"
+
+#: ../../microbit_micropython_api.rst:279
+msgid ""
+"# read the X axis of the device. Measured in milli-g.\n"
+"accelerometer.get_x()\n"
+"# read the Y axis of the device. Measured in milli-g.\n"
+"accelerometer.get_y()\n"
+"# read the Z axis of the device. Measured in milli-g.\n"
+"accelerometer.get_z()\n"
+"# get tuple of all three X, Y and Z readings (listed in that order).\n"
+"accelerometer.get_values()\n"
+"# return the name of the current gesture.\n"
+"accelerometer.current_gesture()\n"
+"# return True or False to indicate if the named gesture is currently "
+"active.\n"
+"accelerometer.is_gesture(name)\n"
+"# return True or False to indicate if the named gesture was active since "
+"the\n"
+"# last call.\n"
+"accelerometer.was_gesture(name)\n"
+"# return a tuple of the gesture history. The most recent is listed last.\n"
+"accelerometer.get_gestures()"
+msgstr ""
+"# デバイスの X 軸を読みます。ミリg単位で計測します。\n"
+"accelerometer.get_x()\n"
+"# デバイスの Y 軸を読みます。ミリg単位で計測します。\n"
+"accelerometer.get_y()\n"
+"# デバイスの Z 軸を読みます。ミリg単位で計測します。\n"
+"accelerometer.get_z()\n"
+"# X, Y, Z の３軸すべてを(この順番の並びで)得ます。\n"
+"accelerometer.get_values()\n"
+"# 現在のジェスチャの名前を返します。\n"
+"accelerometer.current_gesture()\n"
+"# 指定の名前のジェスチャが現在行われているかにより True または False を返します。\n"
+"accelerometer.is_gesture(name)\n"
+"# 最後に呼び出されてから、指定の名前のジェスチャが行われたかにより True または False を\n"
+"# 返します。\n"
+"accelerometer.was_gesture(name)\n"
+"# ジェスチャの履歴のタプルを返します。直近のものが最後に並びます。\n"
+"accelerometer.get_gestures()"
+
+#: ../../microbit_micropython_api.rst:297
+msgid ""
+"The recognised gestures are: ``up``, ``down``, ``left``, ``right``, "
+"``face up``, ``face down``, ``freefall``, ``3g``, ``6g``, ``8g``, "
+"``shake``."
+msgstr ""
+"認識ジェスチャーは以下のとおりです: ``up``, ``down``, ``left``, ``right``, ``face up``, "
+"``face down``, ``freefall``, ``3g``, ``6g``, ``8g``, ``shake`` 。"
+
+#: ../../microbit_micropython_api.rst:301
+msgid "Compass"
+msgstr "コンパス"
+
+#: ../../microbit_micropython_api.rst:303
+msgid "The compass is accessed via the `compass` object::"
+msgstr "コンパスは `compass` コンパスオブジェクトを介して利用します::"
+
+#: ../../microbit_micropython_api.rst:305
+msgid ""
+"# calibrate the compass (this is needed to get accurate readings).\n"
+"compass.calibrate()\n"
+"# return a numeric indication of degrees offset from \"north\".\n"
+"compass.heading()\n"
+"# return an numeric indication of the strength of magnetic field around\n"
+"# the micro:bit.\n"
+"compass.get_field_strength()\n"
+"# returns True or False to indicate if the compass is calibrated.\n"
+"compass.is_calibrated()\n"
+"# resets the compass to a pre-calibration state.\n"
+"compass.clear_calibration()"
+msgstr ""
+"# コンパスを調整します(これは正確な計測のために必要です)。\n"
+"compass.calibrate()\n"
+"# \"北\" からの相対角度を示す数値を返します。\n"
+"compass.heading()\n"
+"# micro:bit の周りの磁場の強度を示す数値を返します。\n"
+"compass.get_field_strength()\n"
+"# コンパスが調整されているかにより True または False を返します。\n"
+"compass.is_calibrated()\n"
+"# コンパスの調整されていた状態をリセットします。\n"
+"compass.clear_calibration()"
+
+#: ../../microbit_micropython_api.rst:318
+msgid "I2C bus"
+msgstr "I2C バス"
+
+#: ../../microbit_micropython_api.rst:320
+msgid ""
+"There is an I2C bus on the micro:bit that is exposed via the `i2c` "
+"object.  It has the following methods::"
+msgstr ""
+"micro:bit には I2C バスがあり、 `i2c` オブジェクトを介して利用します。"
+"このオブジェクトには以下のメソッドがあります::"
+
+#: ../../microbit_micropython_api.rst:322
+msgid ""
+"# read n bytes from device with addr; repeat=True means a stop bit won't\n"
+"# be sent.\n"
+"i2c.read(addr, n, repeat=False)\n"
+"# write buf to device with addr; repeat=True means a stop bit won't be "
+"sent.\n"
+"i2c.write(addr, buf, repeat=False)"
+msgstr ""
+"# アドレス addr のデバイスから n バイト読み込みます。repeat=True はストップビットが\n"
+"# 送信されないことを意味します。\n"
+"i2c.read(addr, n, repeat=False)\n"
+"# アドレス addr のデバイスに buf を書き出します。repeat=True はストップビットが\n"
+"# 送信されないことを意味します。\n"
+"i2c.write(addr, buf, repeat=False)"
+
+#: ../../microbit_micropython_api.rst:329
+msgid "Sound **V2**"
+msgstr "サウンド **V2**"
+
+#: ../../microbit_micropython_api.rst:331
+msgid ""
+"A set of expressive sounds are available to the micro:bit **V2**. They "
+"can be accessed via the ``microbit`` module and played with the "
+":doc:`audio <audio>` module."
+msgstr ""
+"micro:bit **V2** には、表現力豊かなサウンドのセットが用意されています。"
+"microbitモジュールを介してアクセスし、 :doc:`audio <audio>` モジュール"
+"で再生できます。"
+
+#: ../../microbit_micropython_api.rst:334
+msgid "**Built-in sounds**"
+msgstr "組込みのサウンド"
+
+#: ../../microbit_micropython_api.rst:336
+msgid ""
+"``Sound.GIGGLE`` ``Sound.HAPPY`` ``Sound.HELLO`` ``Sound.MYSTERIOUS`` "
+"``Sound.SAD`` ``Sound.SLIDE`` ``Sound.SOARING`` ``Sound.SPRING`` "
+"``Sound.TWINKLE`` ``Sound.YAWN``"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:348
+msgid "Speaker **V2**"
+msgstr "スピーカー **V2**"
+
+#: ../../microbit_micropython_api.rst:350
+msgid ""
+"The speaker is enabled by default and can be accessed using the "
+"``speaker`` object. It can be turned off or on::"
+msgstr ""
+"スピーカーはデフォルトで有効になっていて、 ``speaker`` オブジェクトを使って"
+"アクセスできます。無効化や有効化することもできます::"
+
+#: ../../microbit_micropython_api.rst:353
+msgid ""
+"# disable the built-in speaker\n"
+"speaker.off()\n"
+"# enable the built-in speaker\n"
+"speaker.on()\n"
+"# returns True or False to indicate if the speaker is on or off\n"
+"speaker.is_on()"
+msgstr ""
+"# 組込みのスピーカーを無効化します\n"
+"speaker.off()\n"
+"# 組込みのスピーカーを有効化します\n"
+"speaker.on()\n"
+"# スピーカーは有効であるか無効であるかによって True または False を返すます\n"
+"speaker.is_on()"
+
+#: ../../microbit_micropython_api.rst:362
+msgid "UART"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:364
+msgid ""
+"Use ``uart`` to communicate with a serial device connected to the "
+"device's I/O pins::"
+msgstr ""
+"I/O 端子に接続されたシリアルデバイスとの通信には ``uart`` "
+"を使います::"
+
+#: ../../microbit_micropython_api.rst:366
+msgid ""
+"# set up communication (use pins 0 [TX] and 1 [RX]) with a baud rate of "
+"9600.\n"
+"uart.init()\n"
+"# return True or False to indicate if there are incoming characters "
+"waiting to\n"
+"# be read.\n"
+"uart.any()\n"
+"# return (read) n incoming characters.\n"
+"uart.read(n)\n"
+"# return (read) as much incoming data as possible.\n"
+"uart.read()\n"
+"# return (read) all the characters to a newline character is reached.\n"
+"uart.readline()\n"
+"# read bytes into the referenced buffer.\n"
+"uart.readinto(buffer)\n"
+"# write bytes from the buffer to the connected device.\n"
+"uart.write(buffer)"
+msgstr ""
+"# ボーレート 9600 で(端子 0 [TX] と 1 [RX] を使う)通信をセットアップします。\n"
+"uart.init()\n"
+"# 読込みを待っている文字を受信しているかにより True または False を\n"
+"# 返します。\n"
+"uart.any()\n"
+"# 受信している文字を n だけ読んで返します。\n"
+"uart.read(n)\n"
+"# 受信している文字を可能なだけ(読んで)返します。\n"
+"uart.read()\n"
+"# 改行文字に達するまでのすべての文字を(読んで)返します。\n"
+"uart.readline()\n"
+"# 指定のバッファにバイト列を読み込みます。\n"
+"uart.readinto(buffer)\n"
+"# 接続したデバイスにバッファのバイト列を書き出します。\n"
+"uart.write(buffer)"
+

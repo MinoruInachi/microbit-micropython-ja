@@ -1,0 +1,829 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2020, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-04 20:28+0900\n"
+"PO-Revision-Date: 2020-12-05 23:05+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../devguide/contributing.rst:2
+msgid "Contributing"
+msgstr "貢献"
+
+#: ../../devguide/contributing.rst:4
+msgid "Hey! Many thanks for wanting to improve MicroPython on the micro:bit."
+msgstr "やあ！　micro:bit の MicroPython を改善したいと思ってくれてありがとう。"
+
+#: ../../devguide/contributing.rst:6
+msgid ""
+"Contributions are welcome without prejudice from *anyone* irrespective of"
+" age, gender, religion, race or sexuality. Good quality code and "
+"engagement with respect, humour and intelligence wins every time."
+msgstr ""
+"貢献は、年齢、性別、宗教、人種、性別にかかわらず、*誰の* 迷惑にならずに大歓迎です。"
+"尊敬、ユーモア、インテリジェンスのある良質なコードと関与はいつも勝利をもたらします。"
+
+#: ../../devguide/contributing.rst:10
+msgid ""
+"If you're from a background which isn't well-represented in most geeky "
+"groups, get involved - *we want to help you make a difference*."
+msgstr ""
+"かなりギークなグループで、うまく表せないものがあるなら参加してください - "
+"あなたの作り出した違いを手助けしたいと思います* 。"
+
+#: ../../devguide/contributing.rst:11
+msgid ""
+"If you're from a background which *is* well-represented in most geeky "
+"groups, get involved - *we want your help making a difference*."
+msgstr ""
+"かなりギークなグループで、うまく表せ *られる* ものがあるなら参加してください - "
+"*あなたの作り出した違いを手助けしたいと思います* 。"
+
+#: ../../devguide/contributing.rst:12
+msgid ""
+"If you're worried about not being technical enough, get involved - *your "
+"fresh perspective will be invaluable*."
+msgstr ""
+"技術的に十分ではないと心配している場合は、参加してください - "
+"*新しい視点は非常に貴重です* 。"
+
+#: ../../devguide/contributing.rst:13
+msgid "If you think you're an imposter, get involved."
+msgstr "自分が詐欺師だと思ったら、参加してください。"
+
+#: ../../devguide/contributing.rst:14
+msgid "If your day job isn't code, get involved."
+msgstr "日常の業務がコードでなければ、参加してください。"
+
+#: ../../devguide/contributing.rst:15
+msgid "This isn't a group of experts, just people. Get involved!"
+msgstr "これはエキスパートのグループではなく、ただの人々です。参加してください！"
+
+#: ../../devguide/contributing.rst:16
+msgid "This is a new community, so, get involved."
+msgstr "これは新しいコミュニティなので、参加してください。"
+
+#: ../../devguide/contributing.rst:18
+msgid ""
+"We expect contributors to follow the Python Software Foundation's Code of"
+" Conduct: https://www.python.org/psf/codeofconduct/"
+msgstr ""
+"貢献者は、Python Software Foundation の行動規範に従うことを期待しています: "
+"https://www.python.org/psf/codeofconduct/"
+
+#: ../../devguide/contributing.rst:21
+msgid ""
+"Feedback may be given for contributions and, where necessary, changes "
+"will be politely requested and discussed with the originating author. "
+"Respectful yet robust argument is most welcome."
+msgstr ""
+"貢献者にはフィードバックがあります。必要に応じて変更が丁寧に要求され、"
+"元の著者と議論されます。尊重しながらも堅実な議論は大歓迎です。"
+
+#: ../../devguide/contributing.rst:26
+msgid "Checklist"
+msgstr "チェックリスト"
+
+#: ../../devguide/contributing.rst:28
+msgid "Your code should be commented in *plain English* (British spelling)."
+msgstr "あなたのコードは *普通の英語* (英国のスペル)でコメントする必要があります。"
+
+#: ../../devguide/contributing.rst:29
+msgid ""
+"If your contribution is for a major block of work and you've not done so "
+"already, add yourself to the AUTHORS file following the convention found "
+"therein."
+msgstr ""
+"あなたの貢献が主要な作業ブロックのためのものであれば、そこにある慣習にしたがって、"
+"あなた自身を著者(AUTHORS)ファイルに追加しておいてください。"
+
+#: ../../devguide/contributing.rst:32
+msgid ""
+"If in doubt, ask a question. The only stupid question is the one that's "
+"never asked."
+msgstr ""
+"疑義がある場合は、質問をしてください。唯一の愚かな質問は、決して聞かれない質問です。"
+
+#: ../../devguide/contributing.rst:33
+msgid "Have fun!"
+msgstr "楽しんで！"
+
+#: ../../devguide/devfaq.rst:5
+msgid "Developer FAQ"
+msgstr "開発者 FAQ"
+
+#: ../../devguide/devfaq.rst:9
+msgid ""
+"This project is under active development. Please help other developers by"
+" adding tips, how-tos, and Q&A to this document. Thanks!"
+msgstr ""
+"このプロジェクトでは活発に開発中です。このドキュメントにヒント、ハウツー、Q&Aを"
+"追加して、他の開発者を助けてください。ありがとう！"
+
+#: ../../devguide/devfaq.rst:13
+msgid "Where do I get a copy of the DAL? A: Ask Nicholas Tollervey for details."
+msgstr ""
+"どこで DAL (Device Abstraction Layer)のコピーを入手できますか？　A：詳細については、"
+"Nicholas Tollervey にお尋ねください。"
+
+#: ../../devguide/flashfirmware.rst:5
+msgid "Flashing Firmware"
+msgstr "ファームウェアの転送"
+
+#: ../../devguide/flashfirmware.rst:8
+msgid "Building firmware"
+msgstr "ファームウェアのビルド"
+
+#: ../../devguide/flashfirmware.rst:9
+msgid "Use yotta to build."
+msgstr "ビルドには yotta を使ってください。"
+
+#: ../../devguide/flashfirmware.rst:11
+msgid "Use target bbc-microbit-classic-gcc-nosd::"
+msgstr "ターゲットは bbc-microbit-classic-gcc-nosd になります::"
+
+#: ../../devguide/flashfirmware.rst:13
+msgid "yt target bbc-microbit-classic-gcc-nosd"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:15
+msgid "Run yotta update to fetch remote assets::"
+msgstr "yotta update を実行してリモートアセットを取得してください。"
+
+#: ../../devguide/flashfirmware.rst:17
+msgid "yt up"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:19
+msgid "Start the build with either yotta::"
+msgstr "以下のどちらかでビルドを開始してください。yotta を使う場合::"
+
+#: ../../devguide/flashfirmware.rst:21
+msgid "yt build"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:23
+msgid "...or use the Makefile::"
+msgstr "... Makefile を使う場合::"
+
+#: ../../devguide/flashfirmware.rst:25
+msgid "make all"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:27
+msgid ""
+"The result is a microbit-micropython hex file (i.e. ``microbit-"
+"micropython.hex``) found in the build/bbc-microbit-classic-gcc-"
+"nosd/source from the root of the repository."
+msgstr ""
+"ビルドの結果、リポジトリのルートの build/bbc-microbit-classic-gcc-nosd/source "
+"に microbit-micropython の hex ファイル(すなわち ``microbit-micropython.hex`` "
+"ができます。"
+
+#: ../../devguide/flashfirmware.rst:31
+msgid ""
+"The Makefile does some extra preprocessing of the source, which is needed"
+" only if you add new interned strings to ``qstrdefsport.h``. The Makefile"
+" also puts the resulting firmware at build/firmware.hex, and includes "
+"some convenience targets."
+msgstr ""
+"Makefile はソースに対して追加の前処理を行います。これは ``qstrdefsport.h`` "
+"に新しい登録済み文字列を追加する場合にのみ必要です。また、Makefile はビルド結果の"
+"ファームウェア を build/firmware.hex に置き、いくつかの便利なターゲットを含みます。"
+
+#: ../../devguide/flashfirmware.rst:37
+msgid "Preparing firmware and a Python program"
+msgstr "ファームウェア と Python プログラムの準備"
+
+#: ../../devguide/flashfirmware.rst:39
+msgid "tools/makecombined"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:41
+msgid "hexlify"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:46
+msgid "Flashing to the micro:bit"
+msgstr "micro:bit への転送"
+
+#: ../../devguide/flashfirmware.rst:51
+msgid "**Installation Scenarios**"
+msgstr "**インストールシナリオ**"
+
+#: ../../devguide/flashfirmware.rst:53 ../../devguide/installation.rst:31
+#: ../../devguide/repl.rst:40
+msgid ":ref:`Windows <microbit-windows>`"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:54 ../../devguide/installation.rst:32
+#: ../../devguide/repl.rst:41
+msgid ":ref:`OS X <microbit-osx>`"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:55 ../../devguide/installation.rst:33
+#: ../../devguide/repl.rst:42
+msgid ":ref:`Linux <microbit-linux>`"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:56 ../../devguide/installation.rst:34
+#: ../../devguide/repl.rst:43
+msgid ":ref:`Debian and Ubuntu <microbit-debian-ubuntu>`"
+msgstr ":ref:`Debian と Ubuntu <microbit-debian-ubuntu>`"
+
+#: ../../devguide/flashfirmware.rst:57 ../../devguide/installation.rst:35
+#: ../../devguide/repl.rst:44
+msgid ":ref:`Red Hat Fedora/CentOS <microbit-redhat>`"
+msgstr ""
+
+#: ../../devguide/flashfirmware.rst:58 ../../devguide/installation.rst:36
+#: ../../devguide/repl.rst:45
+msgid ":ref:`Raspberry Pi <microbit-rpi>`"
+msgstr ""
+
+#: ../../devguide/hexformat.rst:5
+msgid "Firmware Hex File"
+msgstr "ファームウェア Hex ファイル"
+
+#: ../../devguide/hexformat.rst:7
+msgid ""
+"When MicroPython is built, the compiler produces an `Intel Hex "
+"<https://en.wikipedia.org/wiki/Intel_HEX>`_ file containing the "
+"MicroPython firmware. Additional data can then be added to this file to "
+"contain information about the MicroPython version, or the Python code to "
+"execute on start-up."
+msgstr ""
+"MicroPythonをビルドすると、コンパイラは MicroPython ファームウェアを含む "
+"`Intel Hex <https://en.wikipedia.org/wiki/Intel_HEX>`_ ファイルを"
+"生成します。このファイルにデータを追加して、MicroPython バージョン情報、"
+"または起動時に実行する Python コードを含められます。"
+
+#: ../../devguide/hexformat.rst:13
+msgid "The general memory layout used is:"
+msgstr "一般的なメモリレイアウトは次のとおりです:"
+
+#: ../../devguide/hexformat.rst:15
+msgid "``0x00000000``: Start of MicroPython firmware - up to 248 KBs"
+msgstr "``0x00000000``: MicroPython ファームウェアの先頭 - 最大 248 KB"
+
+#: ../../devguide/hexformat.rst:16
+msgid "``0x0003e000``: Start of appended script (optional) - up to 8 Kbs"
+msgstr "``0x0003e000``: 追加スクリプトの先頭(オプション) - 最大 8 KB"
+
+#: ../../devguide/hexformat.rst:17
+msgid ""
+"``0x100010c0``: UICR customer[16] register, start of MicroPython "
+"information - 28 bytes"
+msgstr ""
+"``0x100010c0``: UICR カスタマー[16]レジスター, MicroPython 情報の先頭 - 28バイト"
+
+#: ../../devguide/hexformat.rst:20
+msgid ""
+"If you append any data or modify the Intel Hex file, please ensure the "
+"addresses of the data stored progress in incremental order. If there is "
+"an address jump backwards DAPLink will fail to flash the file."
+msgstr ""
+"Intel Hex ファイルにデータを追加したり変更したりする場合は、データのアドレスが増分順に"
+"格納されていることを確認してください。後方にアドレスジャンプがある場合、DAPLink は"
+"ファイルをフラッシュできません。"
+
+#: ../../devguide/hexformat.rst:25
+msgid "Appended script format"
+msgstr "追加スクリプトの形式"
+
+#: ../../devguide/hexformat.rst:27
+msgid ""
+"MicroPython checks the first 2 bytes at address ``0x0003e000`` for a "
+"magic string to indicate if there is an appended script. If the magic "
+"string is found, it will automatically execute the Python code stored "
+"there, unless there is a main.py file stored in the MicroPython "
+"filesystem."
+msgstr ""
+"MicroPython はアドレス ``0x0003e000`` の先頭2バイトをチェックします。"
+"これは、追加スクリプトがあるかを示すマジック文字列です。"
+"マジック文字列が見つかった場合、MicroPython ファイルシステム に main.py "
+"ファイルが格納されていない限り、追加されている Python コードが自動的に"
+"実行されます。"
+
+#: ../../devguide/hexformat.rst:32
+msgid "``0x0003e000``: 2 bytes \"MP\""
+msgstr "``0x0003e000``: 2 バイト \"MP\""
+
+#: ../../devguide/hexformat.rst:33
+msgid ""
+"``0x0003e002``: 2 bytes, little endian integer for the length (in bytes) "
+"of the appended script (not counting this 4 byte header)"
+msgstr ""
+"``0x0003e002``: 2バイト、追加されたスクリプトの長さ(バイト単位)のリトルエンディアン"
+"整数(この長さにヘッダ4バイト分は含まない)"
+
+#: ../../devguide/hexformat.rst:34
+msgid ""
+"``0x0003e004``: Script stored as bytes, for MicroPython to decode using "
+"utf-8."
+msgstr ""
+"``0x0003e004``: バイト列として格納したスクリプト。MicroPython で使う際には utf-8 "
+"でデコードする。"
+
+#: ../../devguide/hexformat.rst:37
+msgid "UICR format"
+msgstr "UICR フォーマット"
+
+#: ../../devguide/hexformat.rst:39
+msgid ""
+"The User Information Configuration Registers (UICR) is a region of Non-"
+"Volatile Memory available to store user-specific settings. The first 128 "
+"Bytes are reserved, but we can use the other 128 Bytes to store any "
+"arbitrary data."
+msgstr ""
+"ユーザー情報構成レジスター (UICR: User Information Configuration Registers)は、"
+"不揮発性メモリーの領域で、ユーザー固有の設定を保管できます。最初の128バイトは予約されて"
+"いますが、残りの128バイトを使用して任意のデータを格納できます。"
+
+#: ../../devguide/hexformat.rst:44
+msgid ""
+"MicroPython stores the following information, in little endian, starting "
+"from the UICR customer[16] register:"
+msgstr ""
+"MicroPython は、UICR カスタマー[16]レジスターから開始して、リトルエンディアンで"
+"次の情報を格納します。"
+
+#: ../../devguide/hexformat.rst:47
+msgid "``0x100010c0``: 4-byte integer with magic value ``0x17eeb07c``"
+msgstr "``0x100010c0``: 4バイト整数のマジック値 ``0x17eeb07c``"
+
+#: ../../devguide/hexformat.rst:48
+msgid "``0x100010c4``: 4-byte integer with value ``0xffffffff``"
+msgstr "``0x100010c4``: 4バイト整数値 ``0xffffffff``"
+
+#: ../../devguide/hexformat.rst:49
+msgid ""
+"``0x100010c8``: 4-byte integer with value ``0x0000000a`` (log base 2 of "
+"the flash page size, being 1024 bytes)"
+msgstr ""
+"``0x100010c8``: 4バイト整数値 ``0x0000000a`` "
+"(フラッシュページサイズ 1024 の２進対数)"
+
+#: ../../devguide/hexformat.rst:50
+msgid ""
+"``0x100010ca``: 2-byte integer with value ``0x0000`` (start page of the "
+"firmware)"
+msgstr ""
+"``0x100010ca``: 2バイト整数値 ``0x0000`` "
+"(ファームウェアの開始ページ)"
+
+#: ../../devguide/hexformat.rst:51
+msgid ""
+"``0x100010cc``: 2-byte integer storing number of pages used by the "
+"firmware"
+msgstr ""
+"``0x100010cc``: ファームウェアのページ数の2バイト整数値"
+
+#: ../../devguide/hexformat.rst:52
+msgid "``0x100010d0``: 4-byte integer with value ``0xffffffff``"
+msgstr "``0x100010d0``: 4バイト整数値 ``0xffffffff``"
+
+#: ../../devguide/hexformat.rst:53
+msgid ""
+"``0x100010d4``: 4-byte integer with the address in the firmware of the "
+"version string"
+msgstr ""
+"``0x100010d4``: ファームウェア内のバージョン文字列のあるアドレスを示す"
+"4バイト整数値"
+
+#: ../../devguide/hexformat.rst:54
+msgid "``0x100010d8``: 4-byte integer with value ``0x00000000``"
+msgstr "``0x100010d8``: 4バイト整数値 ``0x00000000``"
+
+#: ../../devguide/hexformat.rst:57
+msgid "Steps to create the firmware.hex file"
+msgstr "firmware.hex ファイルを作成する手順"
+
+#: ../../devguide/hexformat.rst:59
+msgid ""
+"The yotta tool is used to build MicroPython, but before that takes place "
+"additional files have to be generated by the Makefile in preparation for "
+"the build, and additional data is added to the hex file after."
+msgstr ""
+"MicroPython をビルドするには yotta ツールを使いますが、その前にビルドの準備として "
+"Makefile で追加のファイルを生成しなければなりません。追加のデータは後で hex ファイル"
+"に追加されます。"
+
+#: ../../devguide/hexformat.rst:63
+msgid "Running the ``make all`` command executes the following steps:"
+msgstr "``make all`` コマンドを実行すると、以下の順序で処理されます:"
+
+#: ../../devguide/hexformat.rst:65
+msgid ""
+"The ``tools/makeversionhdr.py`` script creates the ``microbitversion.h`` "
+"file with macros containing build information"
+msgstr ""
+"``tools/makeversionhdr.py`` スクリプトが ``microbitversion.h`` ファイルを作成します。"
+"このファイルはビルド情報をもったマクロを定義しています。"
+
+#: ../../devguide/hexformat.rst:66
+msgid "Yotta builds the source and creates a bare hex file with just the firmware"
+msgstr "yotta がソースをビルドし、ファームウェアだけの生の hex ファイルを作成します"
+
+#: ../../devguide/hexformat.rst:67
+msgid "The ``tools/adduicr.py`` script adds the UICR to the bare hex"
+msgstr "``tools/adduicr.py`` スクリプトが生の hex ファイルに UICR を追加します"
+
+#: ../../devguide/hexformat.rst:68
+msgid "The final hex file is placed in ``build/firmware.hex``"
+msgstr "完成した hex ファイルを ``build/firmware.hex`` に置きます"
+
+#: ../../devguide/hexformat.rst:69
+msgid ""
+"The user can optionally append a script using "
+"``tools/makecombinedhex.py`` (or other tools)"
+msgstr ""
+"ユーザは、オプションで ``tools/makecombinedhex.py`` (または他のツール)を使って"
+"スクリプトを追加できます"
+
+#: ../../devguide/installation.rst:5
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../devguide/installation.rst:7
+msgid ""
+"This section will help you set up the tools and programs needed for "
+"developing programs and firmware to flash to the BBC micro:bit using "
+"MicroPython."
+msgstr ""
+"本章では、BBC micro:bit で MicroPython を使うためのプログラムやファームウェアを"
+"開発する技術者向けに、必要となるツールとプログラムのセットアップ方法をお知らせします。"
+
+#: ../../devguide/installation.rst:11
+msgid "Dependencies"
+msgstr "依存関係"
+
+#: ../../devguide/installation.rst:15
+msgid "Development Environment"
+msgstr "開発環境"
+
+#: ../../devguide/installation.rst:17
+msgid "You will need:"
+msgstr "以下が必要となります:"
+
+#: ../../devguide/installation.rst:19
+msgid "git"
+msgstr ""
+
+#: ../../devguide/installation.rst:20
+msgid "yotta"
+msgstr ""
+
+#: ../../devguide/installation.rst:22
+msgid ""
+"Depending on your operating system, the installation instructions vary. "
+"Use the installation scenario that best suits your system."
+msgstr ""
+"利用しているオペレーティングシステムによってインストール手順が異なります。"
+"システムに最適なインストールシナリオにしたがってください。"
+
+#: ../../devguide/installation.rst:25
+msgid ""
+"Yotta will require an ARM mbed account.  It will walk you through signing"
+" up if you are not registered."
+msgstr ""
+"yotta には ARM mbed アカウントが必要です。あなたが登録されていない場合は"
+"サインアップしてください"
+
+#: ../../devguide/installation.rst:29
+msgid "Installation Scenarios"
+msgstr "インストールシナリオ"
+
+#: ../../devguide/installation.rst:42
+msgid "Windows"
+msgstr ""
+
+#: ../../devguide/installation.rst:44
+msgid ""
+"When installing `Yotta <http://yottadocs.mbed.com/>`_, make sure you have"
+" these components ticked to install."
+msgstr ""
+"`Yotta <http://yottadocs.mbed.com/>`_, をインストールするときは以下の"
+"コンポーネントをチェックしてインストールするようにしてください。"
+
+#: ../../devguide/installation.rst:47
+msgid "python"
+msgstr ""
+
+#: ../../devguide/installation.rst:48
+msgid "gcc"
+msgstr ""
+
+#: ../../devguide/installation.rst:49
+msgid "cMake"
+msgstr ""
+
+#: ../../devguide/installation.rst:50
+msgid "ninja"
+msgstr ""
+
+#: ../../devguide/installation.rst:51
+msgid "Yotta"
+msgstr ""
+
+#: ../../devguide/installation.rst:52
+msgid "git-scm"
+msgstr ""
+
+#: ../../devguide/installation.rst:53
+msgid "mbed serial driver"
+msgstr "mbed シリアルドライバ"
+
+#: ../../devguide/installation.rst:60
+msgid "OS X"
+msgstr ""
+
+#: ../../devguide/installation.rst:66
+msgid "Linux"
+msgstr ""
+
+#: ../../devguide/installation.rst:68
+msgid ""
+"These steps will cover the basic flavors of Linux and working with the "
+"micro:bit and MicroPython. See also the specific sections for Raspberry "
+"Pi, Debian/Ubuntu, and Red Hat Fedora/Centos."
+msgstr ""
+"これらの手順は、Linux および micro:bit と MicroPython での作業の基本をカバーします。"
+"Raspberry Pi、Debian / Ubuntu、Red Hat Fedora / Centos の各セクションも参照して"
+"ください。"
+
+#: ../../devguide/installation.rst:76
+msgid "Debian and Ubuntu"
+msgstr "Debian と Ubuntu"
+
+#: ../../devguide/installation.rst:80
+msgid ""
+"sudo add-apt-repository -y ppa:team-gcc-arm-embedded\n"
+"sudo add-apt-repository -y ppa:pmiller-opensource/ppa\n"
+"sudo apt-get update\n"
+"sudo apt-get install cmake ninja-build gcc-arm-none-eabi srecord libssl-"
+"dev\n"
+"pip3 install yotta"
+msgstr ""
+
+#: ../../devguide/installation.rst:90
+msgid "Red Hat Fedora/CentOS"
+msgstr ""
+
+#: ../../devguide/installation.rst:96
+msgid "Raspberry Pi"
+msgstr ""
+
+#: ../../devguide/installation.rst:103
+msgid "Next steps"
+msgstr "次のステップ"
+
+#: ../../devguide/installation.rst:105
+msgid ""
+"Congratulations. You have installed your development environment and are "
+"ready to begin :ref:`flashing firmware <flashfirmware>`  to the "
+"micro:bit."
+msgstr ""
+"おめでとうございます。開発環境をインストールし、micro:bit に "
+":ref:`ファームウェアの転送 <flashfirmware>` をする準備ができました。"
+
+#: ../../devguide/repl.rst:4
+msgid "Accessing the REPL"
+msgstr "REPL へのアクセス"
+
+#: ../../devguide/repl.rst:7
+msgid ""
+"REPL (Read-Evaluate-Print-Loop) allows the micro:bit to read and evaluate"
+" code in real-time as you write it."
+msgstr ""
+"REPL (Read-Evaluate-Print-Loop)は、プログラムコードを書いたそばからコードを"
+"読み込んで評価します。"
+
+#: ../../devguide/repl.rst:10
+msgid "Accessing the REPL on the micro:bit will require you to:"
+msgstr "micro:bit の REPL にアクセスするには次が必要です:"
+
+#: ../../devguide/repl.rst:12
+msgid "Determine the communication port identifier for the micro:bit"
+msgstr "micro:bit の通信ポート識別子の判別"
+
+#: ../../devguide/repl.rst:13
+msgid "Use a program to establish communication with the device"
+msgstr "デバイスと通信するプログラムの用意"
+
+#: ../../devguide/repl.rst:15
+msgid ""
+"For versions of Windows before 10 you might need to install the "
+"Mbed serial driver, the instructions for which are found here:"
+msgstr ""
+"Windows 10 より前のバージョンの Windows では、Mbed シリアルドライバを"
+"インストールする必要があります。その手順は以下にあります:"
+
+#: ../../devguide/repl.rst:18
+msgid "https://os.mbed.com/docs/latest/tutorials/windows-serial-driver.html"
+msgstr ""
+
+#: ../../devguide/repl.rst:21
+msgid "Using a serial communication program"
+msgstr "シリアル通信プログラムの用意"
+
+#: ../../devguide/repl.rst:24
+msgid ""
+"The `Mu Editor <https://codewith.mu/en/tutorials/1.0/repl>`_ has "
+"built-in support for REPL and even includes a real-time data "
+"plotter. Some other common options are `picocom` and `screen`. "
+"You will need to install a program and read the appropriate "
+"documentation to understand the basics of connecting to a device."
+msgstr ""
+"`Mu Editor <https://codewith.mu/en/tutorials/1.0/repl>`_ は "
+"REPL を組み込みでサポートしていますし、リアルタイムデータプロッターも"
+"用意しています。他によく使われている通信プログラムとしては "
+"`picocom` や `screen`　があります。いずれにしても、通信プログラムを"
+"インストールし、適切なドキュメントを読んでデバイスに接続するための基本を"
+"理解する必要があります。"
+
+#: ../../devguide/repl.rst:31
+msgid "Determining the port"
+msgstr "ポートの判別"
+
+#: ../../devguide/repl.rst:34
+msgid ""
+"The micro:bit will have a port identifier (tty, usb) that can be used by "
+"the computer for communicating. Before connecting to the micro:bit we "
+"must determine the port identifier."
+msgstr ""
+"micro:bit にはコンピュータとの通信に使うポート識別子（tty, usb）を持ちます。"
+"micro:bit に接続する前に、ポート識別子を判別する必要があります。"
+
+#: ../../devguide/repl.rst:38 ../../devguide/repl.rst:61
+msgid "**Windows**"
+msgstr ""
+
+#: ../../devguide/repl.rst:40
+msgid ""
+"When you have installed the aforementioned drivers the micro:bit will "
+"appear in device-manager as a COM port."
+msgstr ""
+"前述したドライバをインストールすると micro:bit がデバイスマネージャに COM "
+"ポートとして現れます。"
+
+#: ../../devguide/repl.rst:43 ../../devguide/repl.rst:79
+msgid "**Mac OS**"
+msgstr ""
+
+#: ../../devguide/repl.rst:45
+msgid ""
+"Open Terminal and type ``ls /dev/cu.*`` to see a list of connected "
+"serial devices; one of them will look like ``/dev/cu.usbmodem1422`` "
+"(the exact number will depend on your computer)."
+msgstr ""
+"ターミナルを開いて ``ls /dev/cu.*`` と入力し、接続されているシリアル"
+"デバイスのリストを確認します。リストの中に ``/dev/cu.usbmodem1422`` "
+"のようなものが見つかります(実際の番号はコンピュータに依存)。"
+
+#: ../../devguide/repl.rst:49 ../../devguide/repl.rst:87
+msgid "**Linux**"
+msgstr ""
+
+#: ../../devguide/repl.rst:51
+msgid ""
+"In terminal, type ``dmesg | tail`` which will show which ``/dev`` "
+"node the micro:bit was assigned (e.g. ``/dev/ttyUSB0``)."
+msgstr ""
+"ターミナルで ``dmesg | tail`` と入力し、micro:bit に割り当てられた "
+"``/dev`` ノードを確認します。"
+
+#: ../../devguide/repl.rst:55
+msgid "Communicating with the micro:bit"
+msgstr "micro:bit との通信"
+
+#: ../../devguide/repl.rst:58
+msgid ""
+"Once you have found the port identifier you can use a serial "
+"terminal program to communicate with the micro:bit."
+msgstr ""
+"ポート識別子を確認したら、シリアルターミナルプログラムを使って "
+"micro:bit と通信できます。"
+
+#: ../../devguide/repl.rst:63
+msgid "You may wish to use Tera Term, PuTTY, or another program."
+msgstr "Tera Term, PuTTY など使いたいものをどうぞ。"
+
+#: ../../devguide/repl.rst:65
+msgid "In Tera Term:"
+msgstr "Tera Term の場合:"
+
+#: ../../devguide/repl.rst:66
+msgid "Plug in the micro:bit and open Tera Term"
+msgstr "micro:bit を繋ぎ、Tera Term を開きます"
+
+#: ../../devguide/repl.rst:67
+msgid "Select Serial as the port
+msgstr "ポートでシリアルを選択します"
+
+#: ../../devguide/repl.rst:68
+msgid ""
+"Go to Setup -> Serial port. Ensure the Port is the correct COM port."
+msgstr ""
+"設定メニューからシリアルポートを選び、ポートを適切な COM ポートにします。"
+
+#: ../../devguide/repl.rst:69
+msgid ""
+"Choose a baud rate of ``115200``, data 8 bits, parity none, stop 1 bit."
+msgstr ""
+"ボーレートを ``1115200``、データを 8 ビット、パリティを none、ストップを "
+"1 bit にします。"
+
+#: ../../devguide/repl.rst:71
+msgid "In PuTTY:"
+msgstr "PuTTY の場合:"
+
+#: ../../devguide/repl.rst:72
+msgid "Plug in the micro:bit and open PuTTY"
+msgstr "micro:bit を繋ぎ、PuTTY を開きます"
+
+#: ../../devguide/repl.rst:73
+msgid "Switch the Connection Type to Serial"
+msgstr "接続タイプをシリアルに切り替えます"
+
+#: ../../devguide/repl.rst:74
+msgid "Ensure the Port is the correct COM port"
+msgstr "ポートを適切な COM ポートにします"
+
+#: ../../devguide/repl.rst:75
+msgid "Change the baud rate to ``115200``"
+msgstr "ボーレートを ``115200`` にします"
+
+#: ../../devguide/repl.rst:76
+msgid "Select 'Serial' on the menu on the left, then click 'Open'"
+msgstr "左のメニューの「シリアル」を選び、'Open' をクリックします"
+
+#: ../../devguide/repl.rst:81
+msgid ""
+"Open Terminal and type ``screen /dev/cu.usbmodem1422 115200``, replacing "
+"``/dev/cu.usbmodem1422`` with the port you found earlier. This will open the "
+"micro:bit's serial output and show all messages received from the device."
+msgstr ""
+"ターミナルを開いて　``screen /dev/cu.usbmodem1422 115200``　を入力します。"
+"``/dev/cu.usbmodem1422`` のところは先に調べたポートに置き換えてください。"
+"これは micro:bit のシリアル出力をオープンし、デバイスから受信したメッセージすべてを"
+"表示します。"
+
+#: ../../devguide/repl.rst:85
+msgid ""
+"To exit, press Ctrl-A then Ctrl-\\\\ and answer Yes to the question. There "
+"are many ways back to a command prompt including Ctrl-A then Ctrl-D, which "
+"will detach screen, but the serial port with still be locked, preventing "
+"other applications from accessing it. You can then restart screen by typing "
+"``screen -r``."
+msgstr ""
+"終了するには Ctrl-A の後に Ctrl-\\\\ を入力し、質問に Yes と答えます。"
+"コマンドプロンプトに戻る方法は他にもあり、Ctrl-A の後に Ctrl-D を入力しても戻れますが、"
+"これでは画面が切り離されるだけで、シリアルポートはロックされたままになり、"
+"他のアプリケーションがアクセスできなくなります。そのようなときは ``screen -r`` と入力"
+"することで screen を再起動できます。"
+
+#: ../../devguide/repl.rst:94
+msgid ""
+"Using the ``screen`` program, type ``screen /dev/ttyUSB0 115200``, replacing "
+"``/dev/ttyUSB0`` with the port you found earlier."
+msgstr ""
+"``screen`` プログラムを使う場合、``screen /dev/ttyUSB0 115200`` を入力します。"
+"``/dev/ttyUSB0`` のところは先に調べたポートに置き換えてください。"
+
+#: ../../devguide/repl.rst:97
+msgid ""
+"To exit, press Ctrl-A then \\\\ and answer Yes to the question. There are many "
+"ways back to a command prompt including Ctrl-A then Ctrl-D, which will detach "
+"screen. All serial output from the micro:bit will still be received by "
+"``screen``, the serial port will be locked, preventing other applications from "
+"accessing it. You can restart screen by typing ``screen -r``."
+msgstr ""
+"終了するには Ctrl-A の後に Ctrl-\\\\ を入力し、質問に Yes と答えます。"
+"コマンドプロンプトに戻る方法は他にもあり、Ctrl-A の後に Ctrl-D を入力しても戻れますが、"
+"これでは画面が切り離されるだけで、シリアルポートはロックされたままになり、"
+"他のアプリケーションがアクセスできなくなります。そのようなときは ``screen -r`` と入力"
+"することで screen を再起動できます。"
+
+#: ../../devguide/repl.rst:103
+msgid ""
+"Using ``picocom``, type ``picocom /dev/ttyACM0 -b 115200``, again replacing "
+"``/dev/ttyACM0`` with the port you found earlier."
+msgstr ""
+"``picocom`` プログラムを使う場合、``picocom /dev/ttyACM0 -b 115200`` を入力します。"
+"``/dev/ttyACM0`` のところは先に調べたポートに置き換えてください。"
+
+#: ../../devguide/repl.rst:106
+msgid "To exit, press Ctrl-A then Ctrl-Q."
+msgstr "終了するには Ctrl-A の後に Ctrl-Q を入力します。"

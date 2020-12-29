@@ -1,0 +1,862 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2020, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-04 20:28+0900\n"
+"PO-Revision-Date: 2020-12-05 23:24+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../speech.rst:2
+msgid "Speech"
+msgstr "音声"
+
+#: ../../speech.rst:6
+msgid ""
+"This module makes the micro:bit talk, sing and make other speech like "
+"sounds. By default sound output will be via the edge connector on pin 0 "
+"and the :doc:`built-in speaker <speaker>` **V2**. You can connect wired "
+"headphones or a speaker to pin 0 and GND on the edge connector to hear "
+"the sound:"
+msgstr ""
+"このモジュールを使えば micro:bit に話をさせ、歌わせ、その他の音声のようなサウンドを"
+"作れます。デフォルトでサウンドはエッジコネクタの端子 0 と "
+":doc:`組込みのスピーカー <speaker>` **V2** に出力します。"
+"端子 0 と GND に有線ヘッドフォンやスピーカーを繋いでサウンドを鳴らせます。"
+
+#: ../../speech.rst:12
+msgid ".. image:: speech.png"
+msgstr ""
+
+#: ../../speech.rst:15
+msgid ""
+"This work is based upon the amazing reverse engineering efforts of "
+"Sebastian Macke based upon an old text-to-speech (TTS) program called SAM"
+" (Software Automated Mouth) originally released in 1982 for the Commodore"
+" 64. The result is a small C library that we have adopted and adapted for"
+" the micro:bit. You can find out more from `his homepage "
+"<http://simulationcorner.net/index.php?page=sam>`_. Much of the "
+"information in this document was gleaned from the original user's manual "
+"which can be found `here <http://www.apple-iigs.info/newdoc/sam.pdf>`_."
+msgstr ""
+"この作業は、コモドール64のために1982年に最初にリリースされた SAM "
+"(Software Automated Mouth)と呼ばれる古い TTS (text-to-speech)プログラムに対して "
+"Sebastian Macke が行った驚くべきリバースエンジニアリングの努力に基づいています。"
+"結果として小さな C ライブラリが出きあがり、我々は micro:bit にそれを採用して適合"
+"させました。 `彼のホームページ <http://simulationcorner.net/index.php?page=sam>`_ "
+"からもっと知ることができます。このドキュメントの情報の多くは、 "
+"`ここ `here <http://www.apple-iigs.info/newdoc/sam.pdf>`_ にある元のユーザーズ"
+"マニュアルから取ってきています 。"
+
+#: ../../speech.rst:25
+msgid ""
+"The speech synthesiser can produce around 2.5 seconds worth of sound from"
+" up to 255 characters of textual input."
+msgstr ""
+"音声シンセサイザーは、最大255文字のテキスト入力から約2.5秒分の音量を生成できます。"
+
+#: ../../speech.rst:28
+msgid "To access this module you need to::"
+msgstr "このモジュールにアクセスするには、以下を行う必要があります::"
+
+#: ../../speech.rst:30
+msgid "import speech"
+msgstr ""
+
+#: ../../speech.rst:32
+msgid "We assume you have done this for the examples below."
+msgstr "以降の例では、これが行われていることを前提としています。"
+
+#: ../../speech.rst:35
+msgid "Functions"
+msgstr "関数"
+
+#: ../../speech.rst:39
+msgid ""
+"Given English words in the string ``words``, return a string containing a"
+" best guess at the appropriate phonemes to pronounce. The output is "
+"generated from this `text to phoneme translation table "
+"<https://github.com/s-macke/SAM/wiki/Text-to-phoneme-translation-"
+"table>`_."
+msgstr ""
+"文字列 ``words`` にある英単語の並びについて、発声するのに最適な音素を推測して、"
+"文字列として返します。出力は、 `このテキスト-音素変換テーブル "
+"<https://github.com/s-macke/SAM/wiki/Text-to-phoneme-translation-table>`_ "
+"にしたがって生成されます。"
+
+#: ../../speech.rst:44
+msgid ""
+"This function should be used to generate a first approximation of "
+"phonemes that can be further hand-edited to improve accuracy, inflection "
+"and emphasis."
+msgstr ""
+"この関数は、音素の近似を最初に生成するために使うべきです。この結果を元に手で"
+"編集して、精度、屈曲、強調を改善することができます。"
+
+#: ../../speech.rst:51
+msgid ""
+"Pronounce the phonemes in the string ``phonemes``. See below for details "
+"of how to use phonemes to finely control the output of the speech "
+"synthesiser. Override the optional pitch, speed, mouth and throat "
+"settings to change the timbre (quality) of the voice."
+msgstr ""
+"文字列 ``phonemes`` が表す音素を発声します。音声合成器の出力を細かく制御するために"
+"音素を使用する方法の詳細については後述します。オプションの pitch, speed, mouth, "
+"throat の設定を上書きして、声の音色（音質）を変更します。"
+
+#: ../../speech.rst:56
+msgid ""
+"For micro:bit **V2** an optional argument to specify the output pin can "
+"be used to override the default of ``pin0``. If we do not want any sound "
+"to play out of the pins can use ``pin=None``."
+msgstr ""
+"micro:bit **V2** では、デフォルトで ``pin0`` に出ている音を変更するためのオプションの"
+"引数 ``pin`` があります。音を鳴らしたくない場合は ``pin=None`` を指定します。"
+
+#: ../../speech.rst:63
+msgid ""
+"Say the English words in the string ``words``. The result is semi-"
+"accurate for English. Override the optional pitch, speed, mouth and "
+"throat settings to change the timbre (quality) of the voice. This is a "
+"short-hand equivalent of: ``speech.pronounce(speech.translate(words))``"
+msgstr ""
+"文字列 ``words`` にある英単語の並びを発声します。結果は実際の英語の半分程度の"
+"精度です。オプションの pitch、speed、mouth、throat の設定を上書きして、声の音色"
+"（音質）を変更します。この関数は次の呼び出しを短くしたものです: "
+"``speech.pronounce(speech.translate(words))``"
+
+#: ../../speech.rst:71
+msgid ""
+"Sing the phonemes contained in the string ``phonemes``. Changing the "
+"pitch and duration of the note is described below. Override the optional "
+"pitch, speed, mouth and throat settings to change the timbre (quality) of"
+" the voice."
+msgstr ""
+"文字列 ``phonemes`` が表す音素を歌います。音符のピッチと持続時間を変更する方法は"
+"後述します。オプションの pitch、speed、mouth、throat の設定を上書きして、声の音色"
+"（音質）を変更します。"
+
+#: ../../speech.rst:77
+msgid "Punctuation"
+msgstr "句読点"
+
+#: ../../speech.rst:79
+msgid ""
+"Punctuation is used to alter the delivery of speech. The synthesiser "
+"understands four punctuation marks: hyphen, comma, full-stop and question"
+" mark."
+msgstr ""
+"句読点は、音声の伝達を変更するのに使います。シンセサイザーは、ハイフン、カンマ、"
+"フルストップ、疑問符の4つの句読点を認識します。"
+
+#: ../../speech.rst:82
+msgid ""
+"The hyphen (``-``) marks clause boundaries by inserting a short pause in "
+"the speech."
+msgstr ""
+"ハイフン (``-``)は音声に短い休止を入れることによって、句を区切ります。"
+
+#: ../../speech.rst:85
+msgid ""
+"The comma (``,``) marks phrase boundaries and inserts a pause of "
+"approximately double that of the hyphen."
+msgstr ""
+"カンマ (``,``)はハイフンの約2倍のポーズを挿入することにより、フレーズを区切ります。"
+
+#: ../../speech.rst:88
+msgid "The full-stop (``.``) and question mark (``?``) end sentences."
+msgstr "終止符 (``.``) と疑問符 (``?``) の終了文。"
+
+#: ../../speech.rst:90
+msgid "The full-stop inserts a pause and causes the pitch to fall."
+msgstr "終止符はポーズを挿入し、ピッチを落とします。"
+
+#: ../../speech.rst:92
+msgid ""
+"The question mark also inserts a pause but causes the pitch to rise. This"
+" works well with yes/no questions such as, \"are we home yet?\" rather "
+"than more complex questions such as \"why are we going home?\". In the "
+"latter case, use a full-stop."
+msgstr ""
+"疑問符もポーズを挿入しますが、ピッチが上がります。これは \"are we home yet?\" "
+"のような yes/no で答えられる質問に適しています\"why are we going home?\" のような"
+"より複雑な質問では終止符を使ってください。"
+
+#: ../../speech.rst:98
+msgid "Timbre"
+msgstr "音色"
+
+#: ../../speech.rst:100
+msgid ""
+"The timbre of a sound is the quality of the sound. It's the difference "
+"between the voice of a DALEK and the voice of a human (for example). To "
+"control the timbre change the numeric settings of the ``pitch``, "
+"``speed``, ``mouth`` and ``throat`` arguments."
+msgstr ""
+"音色は音の質です。それは、(たとえば) DALEK の声と人間の声の違いです。音色を制御"
+"するには、``pitch``, ``speed``, ``mouth``, ``throat`` 引数の数値設定を変更"
+"します。"
+
+#: ../../speech.rst:105
+msgid ""
+"The pitch (how high or low the voice sounds) and speed (how quickly the "
+"speech is delivered) settings are rather obvious and generally fall into "
+"the following categories:"
+msgstr ""
+"pitch (音程の高低)と speed (音声の速さ)の設定はかなり明白で、一般的に次の"
+"カテゴリに分類されます。"
+
+#: ../../speech.rst:109
+msgid "Pitch:"
+msgstr "pitch:"
+
+#: ../../speech.rst:111 ../../speech.rst:124
+msgid "0-20 impractical"
+msgstr "0-20 実用的でない"
+
+#: ../../speech.rst:112
+msgid "20-30 very high"
+msgstr "20-30 非常に高い"
+
+#: ../../speech.rst:113
+msgid "30-40 high"
+msgstr "30-40 高い"
+
+#: ../../speech.rst:114
+msgid "40-50 high normal"
+msgstr "40-50 高めのノーマル"
+
+#: ../../speech.rst:115
+msgid "50-70 normal"
+msgstr "50-70 ノーマル"
+
+#: ../../speech.rst:116
+msgid "70-80 low normal"
+msgstr "70-80 低めのノーマル"
+
+#: ../../speech.rst:117
+msgid "80-90 low"
+msgstr "80-90 低い"
+
+#: ../../speech.rst:118
+msgid "90-255 very low"
+msgstr "90-255 非常に低い"
+
+#: ../../speech.rst:120
+msgid "(The default is 64)"
+msgstr "(デフォルトは 64)"
+
+#: ../../speech.rst:122
+msgid "Speed:"
+msgstr "speed:"
+
+#: ../../speech.rst:125
+msgid "20-40 very fast"
+msgstr "20-40 非常に速い"
+
+#: ../../speech.rst:126
+msgid "40-60 fast"
+msgstr "40-60 速い"
+
+#: ../../speech.rst:127
+msgid "60-70 fast conversational"
+msgstr "60-70 早口な会話"
+
+#: ../../speech.rst:128
+msgid "70-75 normal conversational"
+msgstr "70-75 普通の会話"
+
+#: ../../speech.rst:129
+msgid "75-90 narrative"
+msgstr "75-90 説話"
+
+#: ../../speech.rst:130
+msgid "90-100 slow"
+msgstr "90-100 遅い"
+
+#: ../../speech.rst:131
+msgid "100-225 very slow"
+msgstr "100-225 非常に遅い"
+
+#: ../../speech.rst:133
+msgid "(The default is 72)"
+msgstr "(デフォルトは 72)"
+
+#: ../../speech.rst:135
+msgid ""
+"The mouth and throat values are a little harder to explain and the "
+"following descriptions are based upon our aural impressions of speech "
+"produced as the value of each setting is changed."
+msgstr ""
+"mouth と throat の値は説明するのが少し難しく、以下の説明は、各設定の値が変更"
+"されたときに生成される音声の聴覚の印象に基づいています。"
+
+#: ../../speech.rst:139
+msgid ""
+"For mouth, the lower the number the more it sounds like the speaker is "
+"talking without moving their lips. In contrast, higher numbers (up to "
+"255) make it sound like the speech is enunciated with exagerated mouth "
+"movement."
+msgstr ""
+"mouth については、数字が低いほどスピーカーが唇を動かさずに話しているように聞こえます。"
+"対照的に、数字が高いほど（最大255）、声が誇張された口の動きで発声されるように聞こえます。"
+
+#: ../../speech.rst:143
+msgid ""
+"For throat, the lower the number the more relaxed the speaker sounds. In "
+"contrast, the higher the number, the more tense the tone of voice "
+"becomes."
+msgstr ""
+"throat については、数が少ないほどスピーカーの響きが緩和されます。"
+"対照的に、数字が高いほど、緊張感が増します。"
+
+#: ../../speech.rst:146
+msgid ""
+"The important thing is to experiment and adjust the settings until you "
+"get the effect you desire."
+msgstr ""
+"重要なことは、望む声の音を得る最良の方法は、実験を繰り返して調整することです。"
+
+#: ../../speech.rst:149
+msgid "To get you started here are some examples::"
+msgstr "とっかかりとして、いくつかの例を示しておきます::"
+
+#: ../../speech.rst:151
+msgid ""
+"speech.say(\"I am a little robot\",  speed=92, pitch=60, throat=190, "
+"mouth=190)\n"
+"speech.say(\"I am an elf\", speed=72, pitch=64, throat=110, mouth=160)\n"
+"speech.say(\"I am a news presenter\", speed=82, pitch=72, throat=110, "
+"mouth=105)\n"
+"speech.say(\"I am an old lady\", speed=82, pitch=32, throat=145, "
+"mouth=145)\n"
+"speech.say(\"I am E.T.\", speed=100, pitch=64, throat=150, mouth=200)\n"
+"speech.say(\"I am a DALEK - EXTERMINATE\", speed=120, pitch=100, "
+"throat=100, mouth=200)"
+msgstr ""
+
+#: ../../speech.rst:159
+msgid "Phonemes"
+msgstr "音素"
+
+#: ../../speech.rst:161
+msgid ""
+"The ``say`` function makes it easy to produce speech - but often it's not"
+" accurate. To make sure the speech synthesiser pronounces things "
+"*exactly* how you'd like, you need to use phonemes: the smallest "
+"perceptually distinct units of sound that can be used to distinguish "
+"different words. Essentially, they are the building-block sounds of "
+"speech."
+msgstr ""
+"``say`` 関数は音声を簡単に作成できます - しかし、正しくないことがよくあります。"
+"音声シンセサイザーにあなたの望むよう正しく発音させるためには、 音素を使う必要があります: "
+"音素は知覚的に区別できる最小の単位で、異なる単語を区別するために使えます。"
+"基本的に、それは音声のビルディング・ブロック・サウンドです。"
+
+#: ../../speech.rst:167
+msgid ""
+"The ``pronounce`` function takes a string containing a simplified and "
+"readable version of the `International Phonetic Alphabet "
+"<https://en.wikipedia.org/wiki/International_Phonetic_Alphabet>`_ and "
+"optional annotations to indicate inflection and emphasis."
+msgstr ""
+"``pronounce`` 関数は、簡略化された読みやすい形式の `国際音声アルファベット "
+"<https://en.wikipedia.org/wiki/International_Phonetic_Alphabet>`_ "
+"とオプションの注釈を含む文字列を使用して、屈曲と強調を示します。"
+
+#: ../../speech.rst:171
+msgid ""
+"The advantage of using phonemes is that you don't have to know how to "
+"spell! Rather, you only have to know how to say the word in order to "
+"spell it phonetically."
+msgstr ""
+"音素を使用する利点は、綴り方を知る必要がないことです。むしろ、それを音声学的に"
+"綴るためには、言葉の使い方を知る必要があります。"
+
+#: ../../speech.rst:175
+msgid "The table below lists the phonemes understood by the synthesiser."
+msgstr "以下の表は、シンセサイザが理解している音素の一覧です。"
+
+#: ../../speech.rst:179
+msgid ""
+"The table contains the phoneme as characters, and an example word. The "
+"example words have the sound of the phoneme (in parenthesis), but not "
+"necessarily the same letters."
+msgstr ""
+"このテーブルには、音素と文字の例文が含まれています。例の単語は、音素の音を"
+"（かっこ内に）持ちますが、同じ文字である必要はありません。"
+
+#: ../../speech.rst:183
+msgid ""
+"Often overlooked: the symbol for the \"H\" sound is ``/H``. A glottal "
+"stop is a forced stoppage of sound."
+msgstr ""
+"見過ごされがちなこと: \"H\" の音のシンボルは ``/H`` です。声門停止は音の強制停止です"
+
+#: ../../speech.rst:188
+msgid ""
+"SIMPLE VOWELS                          VOICED CONSONANTS\n"
+"IY           f(ee)t                    R        (r)ed\n"
+"IH           p(i)n                     L        a(ll)ow\n"
+"EH           b(e)g                     W        a(w)ay\n"
+"AE           S(a)m                     W        (wh)ale\n"
+"AA           p(o)t                     Y        (y)ou\n"
+"AH           b(u)dget                  M        Sa(m)\n"
+"AO           t(al)k                    N        ma(n)\n"
+"OH           c(o)ne                    NX       so(ng)\n"
+"UH           b(oo)k                    B        (b)ad\n"
+"UX           l(oo)t                    D        (d)og\n"
+"ER           b(ir)d                    G        a(g)ain\n"
+"AX           gall(o)n                  J        (j)u(dg)e\n"
+"IX           dig(i)t                   Z        (z)oo\n"
+"                                       ZH       plea(s)ure\n"
+"DIPHTHONGS                             V        se(v)en\n"
+"EY           m(a)de                    DH       (th)en\n"
+"AY           h(igh)\n"
+"OY           b(oy)\n"
+"AW           h(ow)                     UNVOICED CONSONANTS\n"
+"OW           sl(ow)                    S         (S)am\n"
+"UW           cr(ew)                    SH        fi(sh)\n"
+"                                       F         (f)ish\n"
+"                                       TH        (th)in\n"
+"SPECIAL PHONEMES                       P         (p)oke\n"
+"UL           sett(le) (=AXL)           T         (t)alk\n"
+"UM           astron(om)y (=AXM)        K         (c)ake\n"
+"UN           functi(on) (=AXN)         CH        spee(ch)\n"
+"Q            kitt-en (glottal stop)    /H        a(h)ead"
+msgstr ""
+"単純母音                                有声音\n"
+"IY           f(ee)t                    R        (r)ed\n"
+"IH           p(i)n                     L        a(ll)ow\n"
+"EH           b(e)g                     W        a(w)ay\n"
+"AE           S(a)m                     W        (wh)ale\n"
+"AA           p(o)t                     Y        (y)ou\n"
+"AH           b(u)dget                  M        Sa(m)\n"
+"AO           t(al)k                    N        ma(n)\n"
+"OH           c(o)ne                    NX       so(ng)\n"
+"UH           b(oo)k                    B        (b)ad\n"
+"UX           l(oo)t                    D        (d)og\n"
+"ER           b(ir)d                    G        a(g)ain\n"
+"AX           gall(o)n                  J        (j)u(dg)e\n"
+"IX           dig(i)t                   Z        (z)oo\n"
+"                                       ZH       plea(s)ure\n"
+"二重母音                                V        se(v)en\n"
+"EY           m(a)de                    DH       (th)en\n"
+"AY           h(igh)\n"
+"OY           b(oy)\n"
+"AW           h(ow)                     無声音\n"
+"OW           sl(ow)                    S         (S)am\n"
+"UW           cr(ew)                    SH        fi(sh)\n"
+"                                       F         (f)ish\n"
+"                                       TH        (th)in\n"
+"特殊な音素                              P         (p)oke\n"
+"UL           sett(le) (=AXL)           T         (t)alk\n"
+"UM           astron(om)y (=AXM)        K         (c)ake\n"
+"UN           functi(on) (=AXN)         CH        spee(ch)\n"
+"Q            kitt-en (glottal stop)    /H        a(h)ead"
+
+#: ../../speech.rst:218
+msgid "The following non-standard symbols are also available to the user::"
+msgstr "次の非標準シンボルもユーザーが使用できます::"
+
+#: ../../speech.rst:220
+msgid ""
+"YX           diphthong ending (weaker version of Y)\n"
+"WX           diphthong ending (weaker version of W)\n"
+"RX           R after a vowel (smooth version of R)\n"
+"LX           L after a vowel (smooth version of L)\n"
+"/X           H before a non-front vowel or consonant - as in (wh)o\n"
+"DX           T as in pi(t)y (weaker version of T)"
+msgstr ""
+
+#: ../../speech.rst:227
+msgid ""
+"Here are some seldom used phoneme combinations (and suggested "
+"alternatives)::"
+msgstr ""
+"あまり使われない音素の組み合わせ（および提案された選択肢）は次のとおりです::"
+
+#: ../../speech.rst:229
+msgid ""
+"PHONEME        YOU PROBABLY WANT:     UNLESS IT SPLITS SYLLABLES LIKE:\n"
+"COMBINATION\n"
+"GS             GZ e.g. ba(gs)         bu(gs)pray\n"
+"BS             BZ e.g. slo(bz)        o(bsc)ene\n"
+"DS             DZ e.g. su(ds)         Hu(ds)son\n"
+"PZ             PS e.g. sla(ps)        -----\n"
+"TZ             TS e.g. cur(ts)y       -----\n"
+"KZ             KS e.g. fi(x)          -----\n"
+"NG             NXG e.g. singing       i(ng)rate\n"
+"NK             NXK e.g. bank          Su(nk)ist"
+msgstr ""
+
+#: ../../speech.rst:240
+msgid ""
+"If you use anything other than the phonemes described above, a "
+"``ValueError`` exception will be raised. Pass in the phonemes as a string"
+" like this::"
+msgstr ""
+"上記の音素以外のものを使用すると ``ValueError`` 例外が発生します。"
+"音素を次のような文字列として渡します。"
+
+#: ../../speech.rst:243
+msgid "speech.pronounce(\"/HEHLOW\")  # \"Hello\""
+msgstr ""
+
+#: ../../speech.rst:245
+msgid "The phonemes are classified into two broad groups: vowels and consonants."
+msgstr "音素は母音と子音という2つの大きなグループに分類されます。"
+
+#: ../../speech.rst:247
+msgid ""
+"Vowels are further subdivided into simple vowels and diphthongs. Simple "
+"vowels don't change their sound as you say them whereas diphthongs start "
+"with one sound and end with another. For example, when you say the word "
+"\"oil\" the \"oi\" vowel starts with an \"oh\" sound but changes to an "
+"\"ee\" sound."
+msgstr ""
+"母音はさらに単純母音と二重母音に分けられます。単純母音は発音してみるとおり音が変わる"
+"ことはありません。二重母音は一つの音で始まり別の音で終わります。たとえば"
+" \"oil\" という言葉を言うとき、\"oi\" の母音は \"oh\" 音で始まり、\"ee\" 音に"
+"変化します。"
+
+#: ../../speech.rst:252
+msgid ""
+"Consonants are also subdivided into two groups: voiced and unvoiced. "
+"Voiced consonants require the speaker to use their vocal chords to "
+"produce the sound. For example, consonants like \"L\", \"N\" and \"Z\" "
+"are voiced. Unvoiced consonants are produced by rushing air, such as "
+"\"P\", \"T\" and \"SH\"."
+msgstr ""
+"子音もまた有声音と無声音の2つのグループに分けられます。有声音は、その音声を生成"
+"するために、その有声子音のコードを使用する必要があります。たとえば、"
+" \"L\", \"N\", \"Z\" のような子音が発音されます。無声音の子音は、\"P\", \"T\", \"SH\" "
+"などの急速な息によって生成されます。"
+
+#: ../../speech.rst:257
+msgid ""
+"Once you get used to it, the phoneme system is easy. To begin with some "
+"spellings may seem tricky (for example, \"adventure\" has a \"CH\" in it)"
+" but the rule is to write what you say, not what you spell. "
+"Experimentation is the best way to resolve problematic words."
+msgstr ""
+"一度このようなことに慣れると、音素システムは簡単です。まず、いくつかのスペルは"
+"難しいように見えるかもしれません(たとえば、 \"adventure\" には \"CH\" "
+"があります)が、ルールはあなたが言うことを書くことであり、スペルは書きません。"
+"問題のある単語を解決するには、実験が最善の方法です。"
+
+#: ../../speech.rst:262
+msgid ""
+"It's also important that speech sounds natural and understandable. To "
+"help with improving the quality of spoken output it's often good to use "
+"the built-in stress system to add inflection or emphasis."
+msgstr ""
+"音声は自然で分かりやすく理解できることも重要です。口頭による出力の質を向上させる"
+"ために、内蔵のストレスシステムを使用して屈曲または強調を追加することはよくあります。"
+
+#: ../../speech.rst:266
+msgid ""
+"There are eight stress markers indicated by the numbers ``1`` - ``8``. "
+"Simply insert the required number after the vowel to be stressed. For "
+"example, the lack of expression of \"/HEHLOW\" is much improved (and "
+"friendlier) when spelled out \"/HEH3LOW\"."
+msgstr ""
+"数字 ``1`` - ``8`` で示される8つのストレスマーカーがあります。ストレスを与える"
+"母音の後に必要な番号を挿入するだけです。たとえば、\"/HEHLOW\" "
+"の表記が欠けているのは、 \"/HEH3LOW\" と書かれているとはるかに改善されています。"
+
+#: ../../speech.rst:271
+msgid ""
+"It's also possible to change the meaning of words through the way they "
+"are stressed. Consider the phrase \"Why should I walk to the store?\". It"
+" could be pronounced in several different ways::"
+msgstr ""
+"また、ストレスを感じる方法で言葉の意味を変えることも可能です。"
+"\"Why should I walk to the store?\" というフレーズを考えてみてください。"
+"それはいくつかの異なる方法で発音することができます::"
+
+#: ../../speech.rst:275
+msgid ""
+"# You need a reason to do it.\n"
+"speech.pronounce(\"WAY2 SHUH7D AY WAO5K TUX DHAH STOH5R.\")\n"
+"# You are reluctant to go.\n"
+"speech.pronounce(\"WAY7 SHUH2D AY WAO7K TUX DHAH STOH5R.\")\n"
+"# You want someone else to do it.\n"
+"speech.pronounce(\"WAY5 SHUH7D AY2 WAO7K TUX DHAH STOHR.\")\n"
+"# You'd rather drive.\n"
+"speech.pronounce(\"WAY5 SHUHD AY7 WAO2K TUX7 DHAH STOHR.\")\n"
+"# You want to walk somewhere else.\n"
+"speech.pronounce(\"WAY5 SHUHD AY WAO5K TUX DHAH STOH2OH7R.\")"
+msgstr ""
+
+#: ../../speech.rst:286
+msgid ""
+"Put simply, different stresses in the speech create a more expressive "
+"tone of voice."
+msgstr ""
+"簡単に言えば、言葉遣いのストレスによって、表現力豊かな声調が得られます。"
+
+#: ../../speech.rst:289
+msgid ""
+"They work by raising or lowering pitch and elongating the associated "
+"vowel sound depending on the number you give:"
+msgstr ""
+"これらはあなたが与える数に応じて、ピッチを上げたり下げたり、関連する母音を"
+"伸ばしたりすることによって動作します:"
+
+#: ../../speech.rst:292
+msgid "very emotional stress"
+msgstr "非常に感情的なストレス"
+
+#: ../../speech.rst:293
+msgid "very emphatic stress"
+msgstr "非常に強調したストレス"
+
+#: ../../speech.rst:294
+msgid "rather strong stress"
+msgstr "かなり強いストレス"
+
+#: ../../speech.rst:295
+msgid "ordinary stress"
+msgstr "普通のストレス"
+
+#: ../../speech.rst:296
+msgid "tight stress"
+msgstr "タイトストレス"
+
+#: ../../speech.rst:297
+msgid "neutral (no pitch change) stress"
+msgstr "ニュートラル（ピッチ変化なし）ストレス"
+
+#: ../../speech.rst:298
+msgid "pitch-dropping stress"
+msgstr "ピッチ落ちストレス"
+
+#: ../../speech.rst:299
+msgid "extreme pitch-dropping stress"
+msgstr "極端なピッチ落ちのストレス"
+
+#: ../../speech.rst:301
+msgid ""
+"The smaller the number, the more extreme the emphasis will be. However, "
+"such stress markers will help pronounce difficult words correctly. For "
+"example, if a syllable is not enunciated sufficiently, put in a neutral "
+"stress marker."
+msgstr ""
+"数値が小さいほど、極端に強調されます。しかし、このようなストレスマーカーは難しい"
+"言葉を正しく発音するのに役立ちます。たとえば、音節が十分に強調されていない場合は、"
+"中立のストレスマーカーを入れます。"
+
+#: ../../speech.rst:305
+msgid "It's also possible to elongate words with stress markers::"
+msgstr "ストレスマーカーを使って単語を伸ばすこともできます::"
+
+#: ../../speech.rst:307
+msgid "speech.pronounce(\"/HEH5EH4EH3EH2EH2EH3EH4EH5EHLP.”)"
+msgstr ""
+
+#: ../../speech.rst:310
+msgid "Singing"
+msgstr "歌唱"
+
+#: ../../speech.rst:315
+msgid "It's possible to make MicroPython sing phonemes."
+msgstr "MicroPython に音素を歌わせることは可能です。"
+
+#: ../../speech.rst:314
+msgid ""
+"This is done by annotating a pitch related number onto a phoneme. The "
+"lower the number, the higher the pitch. Numbers roughly translate into "
+"musical notes as shown in the diagram below:"
+msgstr ""
+"これは音素にピッチ関連の番号を注釈することによって行います。数字が小さいほど、"
+"ピッチが高くなります。数字はおおよそ次の図に示すように音符に変換されます。"
+
+#: ../../speech.rst:319
+msgid ".. image:: speech-pitch.png"
+msgstr ""
+
+#: ../../speech.rst:320
+msgid ""
+"Annotations work by pre-pending a hash (``#``) sign and the pitch number "
+"in front of the phoneme. The pitch will remain the same until a new "
+"annotation is given. For example, make MicroPython sing a scale like "
+"this::"
+msgstr ""
+"注釈は、音素の前にハッシュ記号(``#``)とピッチ番号をあらかじめ付けておくことにより"
+"有効となります。新しい注釈が与えられるまで、ピッチは同じままになります。たとえばを"
+"次のようにして MicroPython に音階を歌わせます。"
+
+#: ../../speech.rst:324
+msgid ""
+"solfa = [\n"
+"    \"#115DOWWWWWW\",   # Doh\n"
+"    \"#103REYYYYYY\",   # Re\n"
+"    \"#94MIYYYYYY\",    # Mi\n"
+"    \"#88FAOAOAOAOR\",  # Fa\n"
+"    \"#78SOHWWWWW\",    # Soh\n"
+"    \"#70LAOAOAOAOR\",  # La\n"
+"    \"#62TIYYYYYY\",    # Ti\n"
+"    \"#58DOWWWWWW\",    # Doh\n"
+"]\n"
+"song = ''.join(solfa)\n"
+"speech.sing(song, speed=100)"
+msgstr ""
+"solfa = [\n"
+"    \"#115DOWWWWWW\",   # ド\n"
+"    \"#103REYYYYYY\",   # レ\n"
+"    \"#94MIYYYYYY\",    # ミ\n"
+"    \"#88FAOAOAOAOR\",  # ファ\n"
+"    \"#78SOHWWWWW\",    # ソ\n"
+"    \"#70LAOAOAOAOR\",  # ラ\n"
+"    \"#62TIYYYYYY\",    # シ\n"
+"    \"#58DOWWWWWW\",    # ド\n"
+"]\n"
+"song = ''.join(solfa)\n"
+"speech.sing(song, speed=100)"
+
+#: ../../speech.rst:337
+msgid ""
+"In order to sing a note for a certain duration extend the note by "
+"repeating vowel or voiced consonant phonemes (as demonstrated in the "
+"example above). Beware diphthongs - to extend them you need to break them"
+" into their component parts. For example, \"OY\" can be extended with "
+"\"OHOHIYIYIY\"."
+msgstr ""
+"特定の音符を歌わせるには、母音や母音の音韻を繰り返します(上記の例を参照)。"
+"二重母音に注意してください。これを伸ばすには、それらを構成部品に分解する必要が"
+"あります。たとえば、 \"OY\" は \"\"OHOHIYIYIY\" で伸ばすことができます。"
+
+#: ../../speech.rst:343
+msgid ""
+"Experimentation, listening carefully and adjusting is the only sure way "
+"to work out how many times to repeat a phoneme so the note lasts for the "
+"desired duration."
+msgstr ""
+"試聴、慎重な聴取、調整は、音を望むだけ伸ばすよう何回音素を繰り返すかを決める"
+"唯一確実な方法です。"
+
+#: ../../speech.rst:348
+msgid "How Does it Work?"
+msgstr "どのような仕組みなのですか？"
+
+#: ../../speech.rst:351
+msgid "The original manual explains it well:"
+msgstr "オリジナルのマニュアルはそれをうまく説明しています:"
+
+#: ../../speech.rst:352
+msgid ""
+"First, instead of recording the actual speech waveform, we only store the"
+" frequency spectrums. By doing this, we save memory and pick up other "
+"advantages. Second, we [...] store some data about timing. These are "
+"numbers pertaining to the duration of each phoneme under different "
+"circumstances, and also some data on transition times so we can know how "
+"to blend a phoneme into its neighbors. Third, we devise a system of rules"
+" to deal with all this data and, much to our amazement, our computer is "
+"babbling in no time."
+msgstr ""
+"まず、実際の音声波形を記録する代わりに、周波数スペクトルのみを保存します。"
+"こうすることで、メモリを節約し、他の利点も得られます。第２に、私たちは "
+"[...] タイミングに関するいくつかのデータを保存します。これらは、異なる状況下での"
+"各音素の継続時間に関連する数字があり、そしてまた遷移時間についてのいくつかの"
+"データがあるので我々は隣り合った音素のブレンド方法を知ることができます。"
+"第３に私たちはこのデータをすべて処理するためのルールを考案しました。"
+"驚いたことに、私たちのコンピュータはすぐに何かしゃべりはじめました。"
+
+#: ../../speech.rst:371
+msgid "S.A.M. owner's manual."
+msgstr "S.A.M. オーナマニュアル。"
+
+#: ../../speech.rst:363
+msgid ""
+"The output is piped through the functions provided by the ``audio`` "
+"module and, hey presto, we have a talking micro:bit."
+msgstr ""
+"出力は ``audio`` モジュールによって提供される関数を介してパイプされます。"
+"あーら不思議、話す micro:bit のできあがりです。"
+
+#: ../../speech.rst:367
+msgid "Example"
+msgstr "サンプルコード"
+
+msgid ""
+"import speech\n"
+"from microbit import sleep\n"
+"\n"
+"# The say method attempts to convert English into phonemes.\n"
+"speech.say(\"I can sing!\")\n"
+"sleep(1000)\n"
+"speech.say(\"Listen to me!\")\n"
+"sleep(1000)\n"
+"\n"
+"# Clearing the throat requires the use of phonemes. Changing\n"
+"# the pitch and speed also helps create the right effect.\n"
+"speech.pronounce(\"AEAE/HAEMM\", pitch=200, speed=100)  # Ahem\n"
+"sleep(1000)\n"
+"\n"
+"# Singing requires a phoneme with an annotated pitch for each syllable.\n"
+"solfa = [\n"
+"    \"#115DOWWWWWW\",   # Doh\n"
+"    \"#103REYYYYYY\",   # Re\n"
+"    \"#94MIYYYYYY\",    # Mi\n"
+"    \"#88FAOAOAOAOR\",  # Fa\n"
+"    \"#78SOHWWWWW\",    # Soh\n"
+"    \"#70LAOAOAOAOR\",  # La\n"
+"    \"#62TIYYYYYY\",    # Ti\n"
+"    \"#58DOWWWWWW\",    # Doh\n"
+"]\n"
+"\n"
+"# Sing the scale ascending in pitch.\n"
+"song = ''.join(solfa)\n"
+"speech.sing(song, speed=100)\n"
+"# Reverse the list of syllables.\n"
+"solfa.reverse()\n"
+"song = ''.join(solfa)\n"
+"# Sing the scale descending in pitch.\n"
+"speech.sing(song, speed=100)"
+msgstr ""
+"import speech\n"
+"from microbit import sleep\n"
+"\n"
+"# say メソッドは英語から音素への変換を試みます。\n"
+"speech.say(\"I can sing!\")\n"
+"sleep(1000)\n"
+"speech.say(\"Listen to me!\")\n"
+"sleep(1000)\n"
+"\n"
+"# throat をクリーンにするには音素を使う必要があります。\n"
+"# pitch と speed を変更することでも適切な効果が得られます。\n"
+"speech.pronounce(\"AEAE/HAEMM\", pitch=200, speed=100)  # えへん\n"
+"sleep(1000)\n"
+"\n"
+"# 歌わせるには各音節ごとに音階の音素が必要です。\n"
+"solfa = [\n"
+"    \"#115DOWWWWWW\",   # ド\n"
+"    \"#103REYYYYYY\",   # レ\n"
+"    \"#94MIYYYYYY\",    # ミ\n"
+"    \"#88FAOAOAOAOR\",  # ファ\n"
+"    \"#78SOHWWWWW\",    # ソ\n"
+"    \"#70LAOAOAOAOR\",  # ラ\n"
+"    \"#62TIYYYYYY\",    # シ\n"
+"    \"#58DOWWWWWW\",    # ド\n"
+"]\n"
+"\n"
+"# 音階が順に高くなっていくよう歌わせます。\n"
+"song = ''.join(solfa)\n"
+"speech.sing(song, speed=100)\n"
+"# 音節のリストの順番を逆にします。\n"
+"solfa.reverse()\n"
+"song = ''.join(solfa)\n"
+"# 音階が順に低くなっていくよう歌わせます。\n"
+"speech.sing(song, speed=100)"
+

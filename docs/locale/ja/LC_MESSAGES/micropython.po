@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2020, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-04 20:28+0900\n"
+"PO-Revision-Date: 2020-12-05 23:05+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../micropython.rst:29
+msgid "MicroPython"
+msgstr ""
+
+#: ../../micropython.rst:33
+msgid "Access and control MicroPython internals."
+msgstr "MicroPython 内部のアクセスと制御"
+
+#: ../../micropython.rst:36
+msgid "Functions"
+msgstr "関数"
+
+#: ../../micropython.rst:40
+msgid ""
+"Used to declare that the expression is a constant so that the compiler "
+"can optimise it. The use of this function should be as follows:"
+msgstr ""
+"コンパイルが最適化できるように、式が定数であることを宣言するために使います。"
+"この関数の使い方は次のとおりです::"
+
+#: ../../micropython.rst:43
+msgid ""
+"from micropython import const\n"
+"CONST_X = const(123)\n"
+"CONST_Y = const(2 * CONST_X + 1)"
+msgstr ""
+
+#: ../../micropython.rst:49
+msgid ""
+"Constants declared this way are still accessible as global variables from"
+" outside the module they are declared in. On the other hand, if a "
+"constant begins with an underscore then it is hidden, it is not available"
+" as a global variable, and does not take up any memory during execution."
+msgstr ""
+"このように宣言された定数でも、宣言されているモジュールの外部からグローバル変数として"
+"アクセス可能です。一方、定数名がアンダースコアで始まっていれば不可視となり、グローバル"
+"変数として利用でくなくなり、実行中のメモリを消費しません。
+
+#: ../../micropython.rst:57
+msgid ""
+"If level is given then this function sets the optimisation level for "
+"subsequent compilation of scripts, and returns None. Otherwise it returns"
+" the current optimisation level."
+msgstr ""
+"*level* を指定した場合、この関数はスクリプトの後続のコンパイルの最適化レベルを設定"
+"して、 None を返します。指定しない場合は、現在の最適化レベルを返します。"
+
+#: ../../micropython.rst:61
+msgid "The optimisation level controls the following compilation features:"
+msgstr "最適化レベルは、次のコンパイル特性を制御します。"
+
+#: ../../micropython.rst:63
+msgid ""
+"Assertions: at level 0 assertion statements are enabled and compiled into"
+" the bytecode; at levels 1 and higher assertions are not compiled."
+msgstr ""
+"アサーション: レベル 0 では、アサーションステートメントが有効になり、バイトコードに"
+"コンパイルされます。レベル 1 以上ではアサーションがコンパイルされません。"
+
+#: ../../micropython.rst:66
+msgid ""
+"Built-in ``__debug__`` variable: at level 0 this variable expands to "
+"True; at levels 1 and higher it expands to False."
+msgstr ""
+"ビルトイン ``__debug__`` 変数: レベル 0 でこの変数が True に展開されます。"
+"レベル 1 以上では False で展開されます。"
+
+#: ../../micropython.rst:69
+msgid ""
+"Source-code line numbers: at levels 0, 1 and 2 source-code line number "
+"are stored along with the bytecode so that exceptions can report the line"
+" number they occurred at; at levels 3 and higher line numbers are not "
+"stored."
+msgstr ""
+"ソースコード行番号: レベル 0, 1, 2 では、ソースコードの行番号がバイトコードとともに"
+"格納され、例外が発生した行番号を例外として報告することができます。レベル 3 以上では"
+"行番号が格納されません。"
+
+#: ../../micropython.rst:74
+msgid "The default optimisation level is usually level 0."
+msgstr "デフォルトの最適化レベルは通常レベル 0 です。"
+
+#: ../../micropython.rst:79
+msgid ""
+"Print information about currently used memory. If the verbose argument is"
+" given then extra information is printed."
+msgstr ""
+"現在使っているメモリに関する情報を表示します。 *verbose* を指定すると冗長モードとなり、"
+"詳しい情報を表示します。"
+
+#: ../../micropython.rst:85
+msgid ""
+"Print information about currently interned strings. If the verbose "
+"argument is given then extra information is printed."
+msgstr ""
+"現在のところのインターンド文字列(内部に蓄えられている文字列)に関する情報を表示します。 "
+"*verbose* を指定すると冗長モードとなり、詳しい情報を表示します。"
+
+#: ../../micropython.rst:88
+msgid ""
+"This includes the number of interned strings and the amount of RAM they "
+"use. In verbose mode it prints out the names of all RAM-interned strings."
+msgstr ""
+"これは現在のインターンド文字列の数とそれが使っている RAM のサイズは含みます。"
+"冗長モードでは RAM 上のインターンド文字列すべての名前を表示します。"
+
+#: ../../micropython.rst:94
+msgid ""
+"Return an integer representing the current amount of stack that is being "
+"used. The absolute value of this is not particularly useful, rather it "
+"should be used to compute differences in stack usage at different points."
+msgstr ""
+"現在使われているスタックのサイズを表す整数を返します。この値そのものは特に有用では"
+"なく、異なる時点でのスタック使用量の違いを計算するために使用されるべきです。"
+
+#: ../../micropython.rst:104
+msgid ""
+"Lock or unlock the heap. When locked no memory allocation can occur and a"
+" ``MemoryError`` will be raised if any heap allocation is attempted."
+msgstr ""
+"ヒープをロックまたはロック解除します。ロックされているとメモリ割り当ては発生せず、"
+"ヒープを割り当てようとした場合は `MemoryError` が発生します。"
+
+#: ../../micropython.rst:110
+msgid ""
+"Set the character that will raise a KeyboardInterrupt exception. By "
+"default this is set to 3 during script execution, corresponding to "
+"Ctrl-C. Passing -1 to this function will disable capture of Ctrl-C, and "
+"passing 3 will restore it."
+msgstr ""
+"KeyboardInterrupt 例外を発生させる文字を設定します。デフォルトでは、"
+"スクリプト実行中の Ctrl-C に該当する 3 が設定されています。"
+"この関数に -1 を渡すと Ctrl-C のキャプチャが無効になり、3 を渡すと元に戻ります。"
+
+#: ../../micropython.rst:115
+msgid ""
+"This function can be used to prevent the capturing of Ctrl-C on the "
+"incoming stream of characters that is usually used for the REPL, in case "
+"that stream is used for other purposes"
+msgstr ""
+"この関数は、通常は REPL で使っている文字の入力ストリームを他の目的で使う場合に、"
+"そのストリームで Ctrl-C がキャプチャーされるのを防ぐために使えます。"
+

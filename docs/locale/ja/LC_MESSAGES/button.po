@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2020, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-04 20:28+0900\n"
+"PO-Revision-Date: 2020-12-05 23:05+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"Language-Team: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../button.rst:2
+msgid "Buttons"
+msgstr "ボタン"
+
+#: ../../button.rst:6
+msgid "There are two buttons on the board, called ``button_a`` and ``button_b``."
+msgstr "ボードには２つのボタンがあります。 ``button_a`` と ``button_b`` です。"
+
+#: ../../button.rst:9
+msgid "Attributes"
+msgstr "属性"
+
+#: ../../button.rst:14
+msgid "A ``Button`` instance (see below) representing the left button."
+msgstr "左の A ボタンを表す ``Button`` インスタンスです。"
+
+#: ../../button.rst:19
+msgid "Represents the right button."
+msgstr "右の B ボタンを表す ``Button`` インスタンスです。"
+
+#: ../../button.rst:23
+msgid "Classes"
+msgstr "クラス"
+
+#: ../../button.rst:27
+msgid "Represents a button."
+msgstr "ボタンを表します。"
+
+#: ../../button.rst:30
+msgid ""
+"This class is not actually available to the user, it is only used by the "
+"two button instances, which are provided already initialized."
+msgstr ""
+"このクラスは実際には利用できません。既に用意されている２つのボタンインスタンスを"
+"とおして使えるだけです。"
+
+#: ../../button.rst:36
+msgid ""
+"Returns ``True`` if the specified button ``button`` is currently being "
+"held down, and ``False`` otherwise."
+msgstr ""
+"指定のボタンが押されていれば ``True`` を返し、押されていなければ ``False`` を返します。"
+
+#: ../../button.rst:41
+msgid ""
+"Returns ``True`` or ``False`` to indicate if the button was pressed "
+"(went from up to down) since the device started or the last time this "
+"method was called.  Calling this method will clear the press state so "
+"that the button must be pressed again before this method will return "
+"``True`` again."
+msgstr ""
+"デバイスが起動されてから、もしくは前回このメソッドが呼ばれてからボタンが(上から下へ)"
+"押されたかによって ``True`` または ``False`` を返します。このメソットを呼び出すと"
+"ボタンが押されたかの状態がクリアされるので、再度このメソッドが ``True`` を返すように"
+"するには、このメソッドを呼び出す前にボタンが押されなければなりません。"
+
+#: ../../button.rst:49
+msgid ""
+"Returns the running total of button presses, and resets this total to "
+"zero before returning."
+msgstr ""
+"ボタンを押した回数の合計を返し、返す前に回数をゼロにリセットします。"
+
+#: ../../button.rst:52
+msgid "Example"
+msgstr "サンプルコード"
+
+#: ../../button.rst:57
+msgid ""
+"import microbit\n"
+"\n"
+"while True:\n"
+"    if microbit.button_a.is_pressed() and microbit.button_b.is_pressed():"
+"\n"
+"        microbit.display.scroll(\"AB\")\n"
+"        break\n"
+"    elif microbit.button_a.is_pressed():\n"
+"        microbit.display.scroll(\"A\")\n"
+"    elif microbit.button_b.is_pressed():\n"
+"        microbit.display.scroll(\"B\")\n"
+"    microbit.sleep(100)"
+msgstr ""
+

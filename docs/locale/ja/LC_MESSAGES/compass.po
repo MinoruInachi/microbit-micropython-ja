@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2016, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-09 10:10+0900\n"
+"PO-Revision-Date: 2020-12-05 23:05+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../compass.rst:2
+msgid "Compass"
+msgstr "コンパス"
+
+#: ../../compass.rst:6
+msgid ""
+"This module lets you access the built-in electronic compass. Before "
+"using, the compass should be calibrated, otherwise the readings may be "
+"wrong."
+msgstr "このモジュールを使うと内蔵の電子コンパスにアクセスできます。使用する前にコンパスを調整する必要があります。調整しておかないと検知を誤る可能性があります。"
+
+#: ../../compass.rst:11
+msgid ""
+"Calibrating the compass will cause your program to pause until "
+"calibration is complete. Calibration consists of a little game to draw a "
+"circle on the LED display by rotating the device."
+msgstr "コンパスの調整を開始すると、調整が完了するまでプログラムが一時停止します。調整は、デバイスを回転させてLEDディスプレイに円を描く小さなゲームとなっています。"
+
+#: ../../compass.rst:17
+msgid "Functions"
+msgstr "関数"
+
+#: ../../compass.rst:21
+msgid ""
+"Starts the calibration process. An instructive message will be scrolled "
+"to the user after which they will need to rotate the device in order to "
+"draw a circle on the LED display."
+msgstr "調整処理を開始します。指示メッセージがユーザにスクロールで示された後、LEDディスプレイ上に円を描くようデバイスを回転させます。"
+
+#: ../../compass.rst:27
+msgid ""
+"Returns ``True`` if the compass has been successfully calibrated, and "
+"returns ``False`` otherwise."
+msgstr "調整が成功したかどうかにより ``True`` または ``False`` を返します。"
+
+#: ../../compass.rst:33
+msgid "Undoes the calibration, making the compass uncalibrated again."
+msgstr "調整を取り消し、コンパスを調整されていない状態にします。"
+
+#: ../../compass.rst:38
+msgid ""
+"Gives the reading of the magnetic field strength on the ``x`` axis in "
+"nano tesla, as a positive or negative integer, depending on the direction"
+" of the field."
+msgstr "``x`` 軸の磁場強度をナノテスラで得ます。磁場の方向に応じて正または負の整数値になります。"
+
+#: ../../compass.rst:45
+msgid ""
+"Gives the reading of the magnetic field strength on the ``y`` axis in "
+"nano tesla, as a positive or negative integer, depending on the direction"
+" of the field."
+msgstr "``y`` 軸の磁場強度をナノテスラで得ます。磁場の方向に応じて正または負の整数値になります。"
+
+#: ../../compass.rst:52
+msgid ""
+"Gives the reading of the magnetic field strength on the ``z`` axis in "
+"nano tesla, as a positive or negative integer, depending on the direction"
+" of the field."
+msgstr "``z`` 軸の磁場強度をナノテスラで得ます。磁場の方向に応じて正または負の整数値になります。"
+
+#: ../../compass.rst:59
+msgid ""
+"Gives the compass heading, calculated from the above readings, as an "
+"integer in the range from 0 to 360, representing the angle in degrees, "
+"clockwise, with north as 0."
+msgstr "３軸の磁力から計算された方位を返します。値は時計回りの角度を示す 0 から 360 までの整数で、0 は北となります。"
+
+#: ../../compass.rst:66
+msgid ""
+"Returns an integer indication of the magnitude of the magnetic field "
+"around the device in nano tesla."
+msgstr "デバイスのまわりの磁場の強さを示す整数値をナノテスラで返します。"
+
+#: ../../compass.rst:71
+msgid "Example"
+msgstr "サンプルコード"
+
+msgid ""
+"\"\"\"\n"
+"    compass.py\n"
+"    ~~~~~~~~~~\n"
+"\n"
+"    Creates a compass.\n"
+"\n"
+"    The user will need to "
+"calibrate the compass first. The compass"
+" uses the\n"
+"    built-in clock images to display the position of the needle.\n"
+"\n"
+"\"\"\"\n"
+"from microbit import *\n"
+"\n"
+"\n"
+"# Start calibrating\n"
+"compass.calibrate()\n"
+"\n"
+"# Try to keep the needle pointed in (roughly) the correct direction\n"
+"while True:\n"
+"    sleep(100)\n"
+"    needle = ((15 - compass.heading()) // 30) % 12\n"
+"    display.show(Image.ALL_CLOCKS[needle])"
+msgstr ""
+"\"\"\"\n"
+"    compass.py\n"
+"    ~~~~~~~~~~\n"
+"\n"
+"    方位磁石の作成。\n"
+"\n"
+"    まず最初にコンパスを調整する必要があります。\n"
+"    コンパスは内蔵の時計イメージを使って針の位置を表示します。\n"
+"\n"
+"\"\"\"\n"
+"from microbit import *\n"
+"\n"
+"\n"
+"# 調整の開始\n"
+"compass.calibrate()\n"
+"\n"
+"# 針が（大まかに）正しい方向を向くようにします\n"
+"while True:\n"
+"    sleep(100)\n"
+"    needle = ((15 - compass.heading()) // 30) % 12\n"
+"    display.show(Image.ALL_CLOCKS[needle])"

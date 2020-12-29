@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2020, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-04 20:28+0900\n"
+"PO-Revision-Date: 2020-12-05 23:05+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../uart.rst:2
+msgid "UART"
+msgstr ""
+
+#: ../../uart.rst:6
+msgid ""
+"The ``uart`` module lets you talk to a device connected to your board "
+"using a serial interface."
+msgstr ""
+"``uart`` モジュールを使用すると、シリアルインタフェースを使用してボードに接続"
+"されたデバイスと通信できます。"
+
+#: ../../uart.rst:11
+msgid "Functions"
+msgstr "関数"
+
+#: ../../uart.rst:15
+msgid ""
+"Initialize serial communication with the specified parameters on the "
+"specified ``tx`` and ``rx`` pins. Note that for correct communication, "
+"the parameters have to be the same on both communicating devices."
+msgstr ""
+"指定の ``tx`` と ``rx`` 端子と指定のパラメータでシリアル通信を初期化します。"
+"正しい通信のためには、両方の通信デバイスでパラメータが同じでなければならないことに"
+"注意してください。"
+
+#: ../../uart.rst:21
+msgid ""
+"Initializing the UART on external pins will cause the Python console on "
+"USB to become unaccessible, as it uses the same hardware. To bring the "
+"console back you must reinitialize the UART without passing anything for "
+"``tx`` or ``rx`` (or passing ``None`` to these arguments).  This means "
+"that calling ``uart.init(115200)`` is enough to restore the Python "
+"console."
+msgstr ""
+"外部端子で UART を初期化すると、同じハードウェアを使っている USB で Python の"
+"コンソールにアクセスできなくなります。コンソールを元に戻すには、``tx`` または "
+"``rx`` を渡すことなく（あるいはこれらの引数に ``None`` を渡して）UART を"
+"再初期化する必要があります。つまり、``uart.init（115200）`` を呼び出すだけで、"
+"Python のコンソールを復元できます。"
+
+#: ../../uart.rst:27
+msgid ""
+"The ``baudrate`` defines the speed of communication. Common baud rates "
+"include:"
+msgstr ""
+"``baudrate`` は通信速度を定義します。一般的なボーレートは次のとおりです:"
+
+#: ../../uart.rst:30
+msgid "9600"
+msgstr ""
+
+#: ../../uart.rst:31
+msgid "14400"
+msgstr ""
+
+#: ../../uart.rst:32
+msgid "19200"
+msgstr ""
+
+#: ../../uart.rst:33
+msgid "28800"
+msgstr ""
+
+#: ../../uart.rst:34
+msgid "38400"
+msgstr ""
+
+#: ../../uart.rst:35
+msgid "57600"
+msgstr ""
+
+#: ../../uart.rst:36
+msgid "115200"
+msgstr ""
+
+#: ../../uart.rst:38
+msgid ""
+"The ``bits`` defines the size of bytes being transmitted, and the board "
+"only supports 8. The ``parity`` parameter defines how parity is checked, "
+"and it can be ``None``, ``microbit.uart.ODD`` or ``microbit.uart.EVEN``. "
+"The ``stop`` parameter tells the number of stop bits, and has to be 1 for"
+" this board."
+msgstr ""
+"``bits`` は送信するバイト列のサイズを定義します。現在のところは ``bits=8`` "
+"だけをサポートしています。``parity`` パラメータはパリティのチェック方法を定義"
+"するもので、``None``, ``microbit.uart.ODD``, ``microbit.uart.EVEN`` を"
+"指定できます。``stop`` パラメータは、ストップビットの数を知らせるもので、この"
+"ボードでは 1 にする必要があります。"
+
+#: ../../uart.rst:44
+msgid ""
+"If ``tx`` and ``rx`` are not specified then the internal USB-UART TX/RX "
+"pins are used which connect to the USB serial converter on the micro:bit,"
+" thus connecting the UART to your PC.  You can specify any other pins you"
+" want by passing the desired pin objects to the ``tx`` and ``rx`` "
+"parameters."
+msgstr ""
+"``tx`` と ``rx`` を指定しない場合、内部の USB-UART TX/RX 端子を使用して "
+"micro:bit" の USB シリアルコンバータに接続し、UART を PC に接続します。"
+"望みの端子オブジェクトを ``tx`` と ``rx`` パラメータに渡すことにより、"
+"他の端子を使うように指定できます。"
+
+#: ../../uart.rst:51
+msgid ""
+"When connecting the device, make sure you \"cross\" the wires -- the TX "
+"pin on your board needs to be connected with the RX pin on the device, "
+"and the RX pin -- with the TX pin on the device. Also make sure the "
+"ground pins of both devices are connected."
+msgstr ""
+"デバイスを接続するときは、ワイヤを \"交差させる\" ことを確認してください。"
+"ボード上の TX 端子はデバイスの RX 端子と、RX 端子はデバイスの TX 端子と接続"
+"する必要があります。また、両方のデバイスのグランドピンが接続されていることを"
+"確認してください。"
+
+#: ../../uart.rst:59
+msgid "Return ``True`` if any data is waiting, else ``False``."
+msgstr "なにか待っているデータがあれば ``True`` を返し、さもなければ ``False`` を返します。"
+
+#: ../../uart.rst:63
+msgid ""
+"Read bytes.  If ``nbytes`` is specified then read at most that many "
+"bytes, otherwise read as many bytes as possible."
+msgstr ""
+"バイト列を読み込みます。``nbytes`` が指定されていれば、そのバイト数まで読み込みます。"
+"指定されていなければ、できるだけ多く読み込みます。"
+
+#: ../../uart.rst:66
+msgid "Return value: a bytes object or ``None`` on timeout."
+msgstr "戻り値: バイト列オブジェクト、タイムアウトが起きれば ``None`` 。"
+
+#: ../../uart.rst:68
+msgid ""
+"A bytes object contains a sequence of bytes. Because `ASCII "
+"<https://en.wikipedia.org/wiki/ASCII>`_ characters can fit in single "
+"bytes this type of object is often used to represent simple text and "
+"offers methods to manipulate it as such, e.g. you can display the "
+"text using the ``print()`` function."
+msgstr ""
+"bytes オブジェクトには一連のバイトが含まれます。`ASCII "
+"<https://en.wikipedia.org/wiki/ASCII>`_ 文字は１バイトに収めることができる"
+"ので、このタイプのオブジェクトはしばしば単純なテキストを表現するために使われ、"
+"それをそのまま操作する方法を提供します。たちえば `` print()`` 関数を使って"
+"テキストを表示できます。"
+
+#: ../../uart.rst:74
+msgid ""
+"You can also convert this object into a string object, and if there "
+"are non-ASCII characters present the encoding can be specified::"
+msgstr ""
+"このオブジェクトを文字列オブジェクトに変換することもできます。非 ASCII 文字が"
+"存在する場合は、エンコードを指定できます::"
+
+#: ../../uart.rst:77
+msgid ""
+"msg_bytes = uart.read()\n"
+"msg_str = str(msg, 'UTF-8')"
+msgstr ""
+
+#: ../../uart.rst:82
+msgid ""
+"The timeout for all UART reads depends on the baudrate and is otherwise "
+"not changeable via Python. The timeout, in milliseconds, is given by: "
+"``microbit_uart_timeout_char = 13000 / baudrate + 1``"
+msgstr ""
+"すべての UART 読込みのタイムアウトはボーレートに依存していて、Pythonからは変更できません。"
+"タイムアウト値は次の式でミリ秒単位で決まります: "
+"``microbit_uart_timeout_char = 13000 / baudrate + 1``"
+
+#: ../../uart.rst:88
+msgid ""
+"The internal UART RX buffer is 64 bytes, so make sure data is read "
+"before the buffer is full or some of the data might be lost."
+msgstr ""
+"内部 UART RX バッファは 64 バイトなので、バッファがいっぱいになる前にデータを"
+"読み込んでください。さもないとデータが失われることになります。"
+
+#: ../../uart.rst:93
+msgid ""
+"Receiving ``0x03`` will stop your program by raising a Keyboard "
+"Interrupt. You can enable or disable this using "
+":func:`micropython.kbd_intr()`."
+msgstr ""
+"``0x03`` を受信すると、キーボード割り込みを起こしてプログラムを停止します。"
+"これを有効化/無効化するためには :func:`micropython.kbd_intr()` を使います。"
+
+#: ../../uart.rst:99
+msgid "Removed since version 1.0."
+msgstr "バージョン 1.0 から削除されました。"
+
+#: ../../uart.rst:101
+msgid ""
+"Instead, use :func:`uart.read()` with no arguments, which will read as "
+"much data as possible."
+msgstr ""
+"代わりに :func:`uart.read()`  を引数なしで使えば、できるだけ多くのデータを"
+"読み込みます。"
+
+#: ../../uart.rst:106
+msgid ""
+"Read bytes into the ``buf``.  If ``nbytes`` is specified then read at "
+"most that many bytes.  Otherwise, read at most ``len(buf)`` bytes."
+msgstr ""
+"``buf`` にバイト列を読み込みます。``nbytes`` が指定されていれば、"
+"そのバイト数まで読み込みます。さもなければ ``len(buf)`` のバイト数"
+"まで読み込みます。"
+
+#: ../../uart.rst:109
+msgid ""
+"Return value: number of bytes read and stored into ``buf`` or ``None`` on"
+" timeout."
+msgstr ""
+"戻り値: 読み込んで ``buf`` に格納したバイト数。タイムアウト時は ``None`` 。"
+
+#: ../../uart.rst:114
+msgid "Read a line, ending in a newline character."
+msgstr "1行、すなわち改行文字まで読み込みます。"
+
+#: ../../uart.rst:116
+msgid ""
+"Return value: the line read or ``None`` on timeout. The newline character"
+" is included in the returned bytes."
+msgstr ""
+"戻り値: 読み込んだ行。タイムアウト時は ``None`` 。返すバイト列に改行文字は含まれます。"
+
+#: ../../uart.rst:121
+msgid "Write the buffer of bytes to the bus."
+msgstr "バイト列の ``buffer`` をバスに書き出します。"
+
+#: ../../uart.rst:127
+msgid "Return value: number of bytes written or ``None`` on timeout."
+msgstr "戻り値: 書き出したバイト数。タイムアウト時は ``None`` 。"
+
+

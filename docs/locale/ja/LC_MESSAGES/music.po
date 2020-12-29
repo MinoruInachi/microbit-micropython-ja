@@ -1,0 +1,512 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2020, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-04 20:28+0900\n"
+"PO-Revision-Date: 2020-12-28 18:32+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../music.rst:2
+msgid "Music"
+msgstr "ミュージック"
+
+#: ../../music.rst:6
+msgid ""
+"This is the ``music`` module and you can use it to create and play "
+"melodies. By default sound output will be via the edge connector on pin 0"
+" and the :doc:`built-in speaker <speaker>` **V2**. You can connect wired "
+"headphones or a speaker to pin 0 and GND on the edge connector to hear "
+"the sound:"
+msgstr ""
+"ミュージックのための ``music`` モジュールが用意されています。"
+"このモジュールを使ってメロディを作成したり演奏したりできます。"
+"デフォルトでサウンド出力先はエッジコネクタの端子 0 と :doc:`組込みのスピーカー <speaker>` "
+"**V2** になっています。有線のヘッドフォンやスピーカーをエッジコネクタの端子 0 と GND "
+"ボードに接続してサウンドを鳴らせます:"
+
+#: ../../music.rst:12
+msgid ".. image:: music-pins.png"
+msgstr ""
+
+#: ../../music.rst:13
+msgid ""
+"You can also disable/enable the built-in speaker or output sound on "
+"another pin."
+msgstr ""
+"組込みのスピーカーを無効/有効にしたり、サウンドの出力先を別の端子に変更することもできます。""
+
+#: ../../music.rst:16
+msgid "To access this module you need to::"
+msgstr "このモジュールにアクセスするには、以下が必要です::"
+
+#: ../../music.rst:18
+msgid "import music"
+msgstr ""
+
+#: ../../music.rst:20
+msgid "We assume you have done this for the examples below."
+msgstr "以降の例ではこれを行ったと仮定します。"
+
+#: ../../music.rst:23
+msgid "Musical Notation"
+msgstr "ミュージック表記"
+
+#: ../../music.rst:25
+msgid "An individual note is specified thus::"
+msgstr "個々の音は次の形式で指定します::"
+
+#: ../../music.rst:27
+msgid "NOTE[octave][:duration]"
+msgstr ""
+
+#: ../../music.rst:29
+msgid ""
+"For example, ``A1:4`` refers to the note \"A\" in octave 1 that lasts for"
+" four ticks (a tick is an arbitrary length of time defined by a tempo "
+"setting function - see below). If the note name ``R`` is used then it is "
+"treated as a rest (silence)."
+msgstr ""
+"たとえば ``A1:4`` は音名(NOTE) \"A\"、オクターブ(octave) 1、長さ(duration)が 4 "
+"ティックであることを意味します(ティックは後述するテンポ設定機能で定義された任意の長さです)。"
+"音の名前に ``R`` が指定されている場合は、休符(無音)として扱われます。"
+
+#: ../../music.rst:34
+msgid ""
+"Accidentals (flats and sharps) are denoted by the ``b`` (flat - a lower "
+"case b) and ``#`` (sharp - a hash symbol). For example, ``Ab`` is A-flat "
+"and ``C#`` is C-sharp."
+msgstr ""
+"臨時記号(フラットとシャープ)は ``b`` (フラット - 小文字の b)と ``#`` (シャープ - "
+"ハッシュ記号)で示されます。たとえば ``Ab`` は A フラットであり ``C#`` は "
+"C シャープです。"
+
+#: ../../music.rst:38
+msgid "**Note names are case-insensitive.**"
+msgstr "**音名は大文字と小文字を区別しません。**"
+
+#: ../../music.rst:40
+msgid ""
+"The ``octave`` and ``duration`` parameters are states that carry over to "
+"subsequent notes until re-specified. The default states are ``octave = "
+"4`` (containing middle C) and ``duration = 4`` (a crotchet, given the "
+"default tempo settings - see below)."
+msgstr ""
+"オクターブ ``octave`` と長さ ``duration`` パラメータは、再び指定されるまで、"
+"後続の音に引き継がれます。デフォルトの状態は ``octave = 4`` (ミドルの C　を含む)と "
+"``duration = 4`` (後述のテンポ設定でデフォルトで与えられている4分音符)です。"
+
+#: ../../music.rst:45
+msgid ""
+"For example, if 4 ticks is a crotchet, the following list is crotchet, "
+"quaver, quaver, crotchet based arpeggio::"
+msgstr ""
+"たとえば、4 ティックが4分音符の場合、以下のリストは、4分音符、8分音符、8分音符、"
+"4分音符ベースのアルペジオです。"
+
+#: ../../music.rst:48
+msgid "['c1:4', 'e:2', 'g', 'c2:4']"
+msgstr ""
+
+#: ../../music.rst:48
+msgid "The opening of Beethoven's 5th Symphony would be encoded thus::"
+msgstr "ベートーヴェンの第5交響曲のオープニングは次のようにコード化されるでしょう::"
+
+#: ../../music.rst:52
+msgid "['r4:2', 'g', 'g', 'g', 'eb:8', 'r:2', 'f', 'f', 'f', 'd:8']"
+msgstr ""
+
+#: ../../music.rst:54
+msgid ""
+"The definition and scope of an octave conforms to the table listed `on "
+"this page about scientific pitch notation`_.  For example, middle \"C\" "
+"is ``'c4'`` and concert \"A\" (440) is ``'a4'``. Octaves start on the "
+"note \"C\"."
+msgstr ""
+"1 オクターブの定義と範囲は、 `このページの科学的な音程表記についての表 "
+"<https://en.wikipedia.org/wiki/Scientific_pitch_notation#Table_of_note_frequencies>`_ "
+"にしたがいます。たとえば、ミドル \"C\" は ``'c4'`` で、コンサート \"A\" (440)は ``'a4'`` "
+"です。オクターブは音 \"C\" で始まります。"
+
+#: ../../music.rst:62
+msgid "Functions"
+msgstr "関数"
+
+#: ../../music.rst:66
+msgid "Sets the approximate tempo for playback."
+msgstr "再生するためのおおよそのテンポを設定します。"
+
+#: ../../music.rst:68
+msgid ""
+"A number of ticks (expressed as an integer) constitute a beat. Each beat "
+"is to be played at a certain frequency per minute (expressed as the more "
+"familiar BPM - beats per minute - also as an integer)."
+msgstr ""
+"(整数で表される)ティック数 ``ticks`` が１ビートを構成します。各ビートは、1分あたりの"
+"特定の周波数で再生されます(これはよく知られた BPM - beats per minute - を整数で"
+"指定します)。"
+
+#: ../../music.rst:70
+msgid "Suggested default values allow the following useful behaviour:"
+msgstr "推奨されるデフォルト値では、次のような便利な動作が可能です:"
+
+#: ../../music.rst:72
+msgid "``music.set_tempo()`` - reset the tempo to default of ticks = 4, bpm = 120"
+msgstr "``music.set_tempo()`` - テンポをデフォルト値の ticks = 4, bpm = 120 にリセットする"
+
+#: ../../music.rst:73
+msgid "``music.set_tempo(ticks=8)`` - change the \"definition\" of a beat"
+msgstr "``music.set_tempo(ticks=8)`` - ビートの「定義」を変更する"
+
+#: ../../music.rst:74
+msgid "``music.set_tempo(bpm=180)`` - just change the tempo"
+msgstr "``music.set_tempo(bpm=180)`` - テンポを変えるだけです"
+
+#: ../../music.rst:76
+msgid ""
+"To work out the length of a tick in milliseconds is very simple "
+"arithmetic: ``60000/bpm/ticks_per_beat`` . For the default values that's "
+"``60000/120/4 = 125 milliseconds`` or ``1 beat = 500 milliseconds``."
+msgstr ""
+"ミリ秒単位でティックの長さは非常に簡単な計算で求まります: "
+"``60000/bpm/ticks_per_beat`` 。デフォルト値は ``60000/120/4 = 125 ミリ秒`` "
+"または ``1 beat = 500 ミリ秒`` となります。"
+
+#: ../../music.rst:80
+msgid "Gets the current tempo as a tuple of integers: ``(ticks, bpm)``."
+msgstr "現在のテンポを整数のタプル ``(ticks, bpm)`` として取得します。"
+
+#: ../../music.rst:84
+msgid "Plays ``music`` containing the musical DSL defined above."
+msgstr "先に説明したミュージック表記を含んだ ``music`` を演奏します。"
+
+#: ../../music.rst:86
+msgid ""
+"If ``music`` is a string it is expected to be a single note such as, "
+"``'c1:4'``."
+msgstr ""
+"``music`` が文字列ならば ``'c1:4'`` のような単一の音であることが期待されます。"
+
+#: ../../music.rst:89
+msgid ""
+"If ``music`` is specified as a list of notes (as defined in the section "
+"on the musical DSL, above) then they are played one after the other to "
+"perform a melody."
+msgstr ""
+"``music`` が音のリストとして指定されている場合(上記のミュージック表記で説明されて"
+"いたように)、それらは順番に演奏されてメロディを演奏します。"
+
+#: ../../music.rst:93
+msgid ""
+"In both cases, the ``duration`` and ``octave`` values are reset to their "
+"defaults before the music (whatever it may be) is played."
+msgstr ""
+"どちらの場合も、``duration`` と ``octave`` の値は、音楽が再生される前に"
+"デフォルトにリセットされます。"
+
+#: ../../music.rst:96
+msgid ""
+"An optional argument to specify the output pin can be used to override "
+"the default of ``microbit.pin0``. If we do not want any sound to play we "
+"can use ``pin=None``."
+msgstr ""
+"出力端子を指定するためのオプションの引数を使用して、出力端子のデフォルト "
+"``microbit.pin0`` を変更できます。"
+"音を鳴らしたくない場合は ``pin=None`` を指定します。"
+
+#: ../../music.rst:100 ../../music.rst:117
+msgid "If ``wait`` is set to ``True``, this function is blocking."
+msgstr "``wait`` が ``True`` の場合、この関数はブロックします。"
+
+#: ../../music.rst:102
+msgid ""
+"If ``loop`` is set to ``True``, the tune repeats until ``stop`` is called"
+" (see below) or the blocking call is interrupted."
+msgstr ""
+"``loop`` が ``True`` の場合、曲は ``stop`` (後述)が呼ばれるか、ブロックが"
+"解除されるまで繰り返し演奏されます。"
+
+#: ../../music.rst:107
+msgid ""
+"Plays a pitch at the integer frequency given for the specified number of "
+"milliseconds. For example, if the frequency is set to 440 and the length "
+"to 1000 then we hear a standard concert A for one second."
+msgstr ""
+"指定されたミリ秒間の整数周波数でピッチを再生します。たとえば、周波数を 440 に設定し、"
+"長さを 1000 に設定すると、標準のコンサート A が1秒間聞こえます。"
+
+#: ../../music.rst:111
+msgid ""
+"Note that you can only play one pitch on one pin at any one time."
+msgstr ""
+"一度に一つの端子で一つのピッチしか再生できないことに注意してください。"
+
+#: ../../music.rst:113
+msgid ""
+"An optional argument to specify the output pin can be used to override "
+"the default of ``microbit.pin0``. If we do not want any sound to play out"
+" of the pins we can use ``pin=None``."
+msgstr ""
+"出力端子を指定するためのオプションの引数を使用して、出力端子のデフォルト "
+"``microbit.pin0`` を変更できます。"
+"音を鳴らしたくない場合は ``pin=None`` を指定します。"
+
+#: ../../music.rst:119
+msgid ""
+"If ``duration`` is negative the pitch is played continuously until either"
+" the blocking call is interrupted or, in the case of a background call, a"
+" new frequency is set or ``stop`` is called (see below)."
+msgstr ""
+"``duration`` が負の場合、ブロックが解除されるか、バックグラウンドで新しい周波数が設定"
+"されるか、 ``stop`` (後述)が呼び出されるまで、ピッチが連続して再生されます。"
+
+#: ../../music.rst:125
+msgid ""
+"Stops all music playback on the built-in speaker and any pin outputting "
+"sound. An optional argument can be provided to specify a pin, eg. "
+"``music.stop(pin1)``."
+msgstr ""
+"指定の組込みスピーカや端子に接続しているスピーカーから鳴らしているすべての音楽再生を"
+"停止します。オプションの引数にはスピーカの繋がれている端子を指定します。たとえば "
+"``music.stop(pin1)`` などと指定します。"
+
+#: ../../music.rst:131
+msgid "Resets the state of the following attributes in the following way:"
+msgstr "次のように属性の状態をリセットします:"
+
+#: ../../music.rst:133
+msgid "``ticks = 4``"
+msgstr ""
+
+#: ../../music.rst:134
+msgid "``bpm = 120``"
+msgstr ""
+
+#: ../../music.rst:135
+msgid "``duration = 4``"
+msgstr ""
+
+#: ../../music.rst:136
+msgid "``octave = 4``"
+msgstr ""
+
+#: ../../music.rst:139
+msgid "Built in Melodies"
+msgstr "内蔵メロディ"
+
+#: ../../music.rst:141
+msgid ""
+"For the purposes of education and entertainment, the module contains "
+"several example tunes that are expressed as Python lists. They can be "
+"used like this::"
+msgstr ""
+"教育と娯楽の目的のために、このモジュールには、Python のリストとして表現される"
+"いくつかの楽曲が含まれています。これらは次のように使用できます::"
+
+#: ../../music.rst:144
+msgid ""
+">>> import music\n"
+">>> music.play(music.NYAN)"
+msgstr ""
+
+#: ../../music.rst:147
+msgid ""
+"All the tunes are either out of copyright, composed by Nicholas "
+"H.Tollervey and released to the public domain or have an unknown composer"
+" and are covered by a fair (educational) use provision."
+msgstr ""
+"すべての曲は、著作権で保護されていないか、Nicholas H.Tollervey "
+"によって構成され、パブリックドメインに公開されているか、未知の作曲家による公平(教育的)"
+"使用規定の対象です。"
+
+#: ../../music.rst:151
+msgid "They are:"
+msgstr "内蔵されている曲は以下のとおりです:"
+
+#: ../../music.rst:153
+msgid "``DADADADUM`` - the opening to Beethoven's 5th Symphony in C minor."
+msgstr "``DADADADUM`` - ベートーヴェンの第5番交響曲第5番のオープニング曲。"
+
+#: ../../music.rst:154
+msgid ""
+"``ENTERTAINER`` - the opening fragment of Scott Joplin's Ragtime classic "
+"\"The Entertainer\"."
+msgstr ""
+"``ENTERTAINER`` - スコット・ジョプリンのラグタイム・クラシック ``\"The Entertainer\"`` "
+"のオープニング部分。"
+
+#: ../../music.rst:155
+msgid ""
+"``PRELUDE`` - the opening of the first Prelude in C Major of J.S.Bach's "
+"48 Preludes and Fugues."
+msgstr ""
+"``PRELUDE`` - J.S.バッハの 48 のプレリュードとフーガの C メジャーの第1回"
+"プレリュードのオープニング。"
+
+#: ../../music.rst:156
+msgid ""
+"``ODE`` - the \"Ode to Joy\" theme from Beethoven's 9th Symphony in D "
+"minor."
+msgstr ""
+"``ODE`` - ベートーヴェンの第9回シンフォニー・ミー・マイナーのテーマ ``\"Ode to Joy\"`` "
+
+#: ../../music.rst:157
+msgid ""
+"``NYAN`` - the Nyan Cat theme (http://www.nyan.cat/). The composer is "
+"unknown. This is fair use for educational porpoises (as they say in New "
+"York)."
+msgstr ""
+"``NYAN`` - Nyan Cat テーマ (http://www.nyan.cat/)。作曲家は不明です。これは educational "
+"porpoises にとって(彼らがニューヨークで言っているように)公正な利用です。"
+
+#: ../../music.rst:158
+msgid ""
+"``RINGTONE`` - something that sounds like a mobile phone ringtone. To be "
+"used to indicate an incoming message."
+msgstr ""
+"``RINGTONE`` - 携帯電話の着信音のようなもの。着信メッセージを示すために使います。"
+
+#: ../../music.rst:159
+msgid "``FUNK`` - a funky bass line for secret agents and criminal masterminds."
+msgstr "``FUNK`` - シークレット・エージェントと犯罪の黒幕のためのファンキーなベースライン。"
+
+#: ../../music.rst:160
+msgid "``BLUES`` - a boogie-woogie 12-bar blues walking bass."
+msgstr "``BLUES`` - ブギー・ウーギーの 12 小節のブルース・ウォーキング・ベース。"
+
+#: ../../music.rst:161
+msgid ""
+"``BIRTHDAY`` - \"Happy Birthday to You...\" for copyright status see: "
+"http://www.bbc.co.uk/news/world-us-canada-34332853"
+msgstr ""
+"``BIRTHDAY`` - \"Happy Birthday to You ..\\.\" の著作権表示については "
+"http://www.bbc.co.uk/news/world-us-canada-34332853 を参照してください。"
+
+#: ../../music.rst:162
+msgid "``WEDDING`` - the bridal chorus from Wagner's opera \"Lohengrin\"."
+msgstr "``WEDDING`` - ワグナーのオペラ「Lohengrin」のブライダルコーラス。"
+
+#: ../../music.rst:163
+msgid ""
+"``FUNERAL`` - the \"funeral march\" otherwise known as Frédéric Chopin's "
+"Piano Sonata No. 2 in B♭ minor, Op. 35."
+msgstr ""
+"``FUNERAL`` - フレデリック・ショパンのピアノソナタ第2番「B♭マイナー」の別名「葬儀の行進」35。"
+
+#: ../../music.rst:164
+msgid "``PUNCHLINE`` - a fun fragment that signifies a joke has been made."
+msgstr "``PUNCHLINE`` - ジョークが行われたことを意味する楽しい部分。"
+
+#: ../../music.rst:165
+msgid ""
+"``PYTHON`` - John Philip Sousa's march \"Liberty Bell\" aka, the theme "
+"for \"Monty Python's Flying Circus\" (after which the Python programming "
+"language is named)."
+msgstr ""
+"``PYTHON`` - John Philip Sousa さんの行進「Liberty Bell」、別名「Monty Python's "
+"Flying Circus」(その後、Python プログラミング言語の名前となる)。"
+
+#: ../../music.rst:166
+msgid "``BADDY`` - silent movie era entrance of a baddy."
+msgstr "``BADDY`` - 無声映画時代の悪役の登場。"
+
+#: ../../music.rst:167
+msgid "``CHASE`` - silent movie era chase scene."
+msgstr "``CHASE`` - 無声映画時代のチェイスシーン。"
+
+#: ../../music.rst:168
+msgid "``BA_DING`` - a short signal to indicate something has happened."
+msgstr "``BA_DING`` - 何かが起こったことを示す短い信号。"
+
+#: ../../music.rst:169
+msgid "``WAWAWAWAA`` - a very sad trombone."
+msgstr "``WAWAWAWAA`` - 非常に悲しいトロンボーン。"
+
+#: ../../music.rst:170
+msgid "``JUMP_UP`` - for use in a game, indicating upward movement."
+msgstr "``JUMP_UP`` - ゲームでの使用で、上方向の動きを示します。"
+
+#: ../../music.rst:171
+msgid "``JUMP_DOWN`` - for use in a game, indicating downward movement."
+msgstr "``JUMP_DOWN`` - ゲームでの使用で、下向きの動きを示します。"
+
+#: ../../music.rst:172
+msgid "``POWER_UP`` - a fanfare to indicate an achievement unlocked."
+msgstr "``POWER_UP`` - パワーが解放されたことを示すファンファーレ。"
+
+#: ../../music.rst:173
+msgid "``POWER_DOWN`` - a sad fanfare to indicate an achievement lost."
+msgstr "``POWER_DOWN`` - パワーが失われたことを示すための悲しい運命。"
+
+#: ../../music.rst:176
+msgid "Example"
+msgstr "サンプルコード"
+
+msgid ""
+"\"\"\"\n"
+"    music.py\n"
+"    ~~~~~~~~\n"
+"\n"
+"    Plays a simple tune using the Micropython music module.\n"
+"    This example requires a speaker/buzzer/headphones connected to P0 and"
+" GND,\n"
+"    or the latest micro:bit device with built-in speaker.\n"
+"\"\"\"\n"
+"from microbit import *\n"
+"import music\n"
+"\n"
+"# play Prelude in C.\n"
+"notes = [\n"
+"    'c4:1', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5',\n"
+"    'c4', 'd', 'a', 'd5', 'f5', 'a4', 'd5', 'f5', 'c4', 'd', 'a', 'd5', 'f5', 'a4', 'd5', 'f5',\n"
+"    'b3', 'd4', 'g', 'd5', 'f5', 'g4', 'd5', 'f5', 'b3', 'd4', 'g', 'd5', 'f5', 'g4', 'd5', 'f5',\n"
+"    'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5',\n"
+"    'c4', 'e', 'a', 'e5', 'a5', 'a4', 'e5', 'a5', 'c4', 'e', 'a', 'e5', 'a5', 'a4', 'e5', 'a5',\n"
+"    'c4', 'd', 'f#', 'a', 'd5', 'f#4', 'a', 'd5', 'c4', 'd', 'f#', 'a', 'd5', 'f#4', 'a', 'd5',\n"
+"    'b3', 'd4', 'g', 'd5', 'g5', 'g4', 'd5', 'g5', 'b3', 'd4', 'g', 'd5', 'g5', 'g4', 'd5', 'g5',\n"
+"    'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5', 'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5',\n"
+"    'a3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5', 'a3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5',\n"
+"    'd3', 'a', 'd4', 'f#', 'c5', 'd4', 'f#', 'c5', 'd3', 'a', 'd4', 'f#', 'c5', 'd4', 'f#', 'c5',\n"
+"    'g3', 'b', 'd4', 'g', 'b', 'd', 'g', 'b', 'g3', 'b3', 'd4', 'g', 'b', 'd', 'g', 'b'\n"
+"]\n"
+"\n"
+"music.play(notes)"
+msgstr ""
+"\"\"\"\n"
+"    music.py\n"
+"    ~~~~~~~~\n"
+"\n"
+"    microPython の music モジュールを使って簡単な曲を演奏します。\n"
+"    このサンプルは、組込みのスピーカーのある最新の micro:bit 以外では、
+"    P0 と GND の端子にスピーカー/ブザー/ヘッドホンを繋ことが必要となります。\n"
+"\"\"\"\n"
+"from microbit import *\n"
+"import music\n"
+"\n"
+"# C (4分の4拍子)でプレリュードを演奏。\n"
+"notes = [\n"
+"    'c4:1', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5',\n"
+"    'c4', 'd', 'a', 'd5', 'f5', 'a4', 'd5', 'f5', 'c4', 'd', 'a', 'd5', 'f5', 'a4', 'd5', 'f5',\n"
+"    'b3', 'd4', 'g', 'd5', 'f5', 'g4', 'd5', 'f5', 'b3', 'd4', 'g', 'd5', 'f5', 'g4', 'd5', 'f5',\n"
+"    'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5',\n"
+"    'c4', 'e', 'a', 'e5', 'a5', 'a4', 'e5', 'a5', 'c4', 'e', 'a', 'e5', 'a5', 'a4', 'e5', 'a5',\n"
+"    'c4', 'd', 'f#', 'a', 'd5', 'f#4', 'a', 'd5', 'c4', 'd', 'f#', 'a', 'd5', 'f#4', 'a', 'd5',\n"
+"    'b3', 'd4', 'g', 'd5', 'g5', 'g4', 'd5', 'g5', 'b3', 'd4', 'g', 'd5', 'g5', 'g4', 'd5', 'g5',\n"
+"    'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5', 'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5',\n"
+"    'a3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5', 'a3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5',\n"
+"    'd3', 'a', 'd4', 'f#', 'c5', 'd4', 'f#', 'c5', 'd3', 'a', 'd4', 'f#', 'c5', 'd4', 'f#', 'c5',\n"
+"    'g3', 'b', 'd4', 'g', 'b', 'd', 'g', 'b', 'g3', 'b3', 'd4', 'g', 'b', 'd', 'g', 'b'\n"
+"]\n"
+"\n"
+"music.play(notes)"
+

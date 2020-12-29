@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2020, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-26 01:31+0900\n"
+"PO-Revision-Date: 2020-12-29 12:31+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../speaker.rst:2
+msgid "Speaker **V2**"
+msgstr "スピーカー **V2**"
+
+#: ../../speaker.rst:6
+msgid ""
+"The micro:bit **V2** has a built-in speaker located on the rear of the "
+"board."
+msgstr ""
+"micro:bit **V2** には、ボードの背面にスピーカーが組み込まれています。"
+
+msgid ""
+".. image:: speaker.png\n"
+"   :alt: speaker on rear of micro:bit V2"
+msgstr ""
+
+#: ../../speaker.rst:14
+msgid ""
+"By default sound output will be via the edge connector on pin 0 and the "
+"built-in speaker **V2**. You can connect wired headphones or a speaker to"
+" pin 0 and GND on the edge connector to hear the sounds."
+msgstr ""
+"デフォルトで、サウンドは端子0のエッジコネクタと組込みスピーカー **V2** に出力します。"
+"有線ヘッドホンまたはスピーカーをエッジコネクタの端子0と GND に接続して、"
+"音を聞けます。"
+
+#: ../../speaker.rst:18
+msgid "The speaker can be turned off or on using the functions listed here."
+msgstr "ここに記載されている関数を使って、組込みスピーカーを無効化または有効化できます。"
+
+#: ../../speaker.rst:21
+msgid "Functions"
+msgstr "関数"
+
+#: ../../speaker.rst:25
+msgid ""
+"Use ``off()`` to turn off the speaker. This does not disable sound output"
+" to an edge connector pin."
+msgstr ""
+"組込みスピーカーを無効にするには ``off()`` を使います。"
+"これはエッジコネクタの端子へのサウンド出力を無効化しません。"
+
+#: ../../speaker.rst:30
+msgid "Use ``on()`` to turn on the speaker."
+msgstr "組込みスピーカーを有効にするには ``on()`` を使います。"
+
+#: ../../speaker.rst:34
+msgid "Example"
+msgstr "サンプルコード"
+
+#: ../../speaker.rst:36
+msgid "An example that runs through some of the functions of the speaker API. ::"
+msgstr "スピーカー API のいくつかの関数を実行するサンプルコードです::"
+
+#: ../../speaker.rst:38
+msgid ""
+"from microbit import *\n"
+"\n"
+"# Check that the speaker is on\n"
+"print(speaker.is_on())\n"
+"# Play a sound\n"
+"audio.play(Sound.HELLO)\n"
+"sleep(2000)\n"
+"# Disable the speaker\n"
+"speaker.off()\n"
+"# Check that the speaker is off\n"
+"print(speaker.is_on())\n"
+"# Play a sound. This will not be heard on the speaker, but will be heard\n"
+"# on Pin 0 if you have headphones or a speaker connected.\n"
+"audio.play(Sound.HELLO)"
+msgstr ""
+"from microbit import *\n"
+"\n"
+"# 組込みスピーカーが有効であるかを確認\n"
+"print(speaker.is_on())\n"
+"# 音を鳴らす\n"
+"audio.play(Sound.HELLO)\n"
+"sleep(2000)\n"
+"# 組込みスピーカーを無効化\n"
+"speaker.off()\n"
+"# スピーカーが無効であるかを確認\n"
+"print(speaker.is_on())\n"
+"# 音を鳴らす。組込みスピーカーからは鳴らず、端子0に繋いだヘッドフォンまたは\n"
+"# スピーカーから鳴ります。\n"
+"audio.play(Sound.HELLO)"
+

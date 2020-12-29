@@ -1,0 +1,4627 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2020, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-04 20:28+0900\n"
+"PO-Revision-Date: 2020-12-05 23:05+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../tutorials/buttons.rst:189
+msgid ""
+"The image of Matrioshka dolls is licensed CC BY-SA 3.0, "
+"https://commons.wikimedia.org/w/index.php?curid=69402"
+msgstr ""
+"マトリョーシカ人形の画像は CC BY-SA 3.0 ライセンスにより "
+"https://commons.wikimedia.org/w/index.php?curid=69402 のものを使用しています。"
+
+#: ../../tutorials/buttons.rst:2
+msgid "Buttons"
+msgstr "ボタン"
+
+#: ../../tutorials/buttons.rst:4
+msgid ""
+"So far we have created code that makes the device do something. This is "
+"called *output*. However, we also need the device to react to things. "
+"Such things are called *inputs*."
+msgstr ""
+"これまでは、デバイスに何かをさせるコードを作成しました。これは *出力* "
+"と呼ばれます。しかし、物事に反応するためのデバイスも必要です。このような事は "
+"*入力* と呼ばれます。"
+
+#: ../../tutorials/buttons.rst:8
+msgid ""
+"It's easy to remember: output is what the device puts out to the world "
+"whereas input is what goes into the device for it to process."
+msgstr ""
+"これを憶えるの簡単です: 出力はデバイスが世界に出すものであり、入力はデバイスが"
+"処理するものです。"
+
+#: ../../tutorials/buttons.rst:11
+msgid ""
+"The most obvious means of input on the micro:bit are its two buttons, "
+"labelled ``A`` and ``B``. Somehow, we need MicroPython to react to button"
+" presses."
+msgstr ""
+"micro:bit で入力を行う最も当たり前の手段は、 ``A`` と ``B`` "
+"のラベルのついた２個のボタンです。ボタンが押されたことに反応するには "
+"MicroPython が必要そうです。"
+
+#: ../../tutorials/buttons.rst:14
+msgid "This is remarkably simple::"
+msgstr "これはとても簡単です::"
+
+#: ../../tutorials/buttons.rst:16
+msgid ""
+"from microbit import *\n"
+"\n"
+"sleep(10000)\n"
+"display.scroll(str(button_a.get_presses()))"
+msgstr ""
+
+#: ../../tutorials/buttons.rst:21
+msgid ""
+"All this script does is sleep for ten thousand milliseconds (i.e. 10 "
+"seconds) and then scrolls the number of times you pressed button ``A``. "
+"That's it!"
+msgstr ""
+"このスクリプトの全貌は、１万ミリ秒(すなわち１０秒)スリープしている間にボタン ``A`` "
+"を押した回数をスクロール表示するというものです。それでおしまい！"
+
+#: ../../tutorials/buttons.rst:24
+msgid ""
+"While it's a pretty useless script, it introduces a couple of interesting"
+" new ideas:"
+msgstr ""
+"これはほとんど役に立たないスクリプトですが、面白い新アイデアをいくつか紹介します:"
+
+#: ../../tutorials/buttons.rst:27
+msgid ""
+"The ``sleep`` *function* will make the micro:bit sleep for a certain "
+"number of milliseconds. If you want a pause in your program, this is how "
+"to do it. A *function* is just like a *method*, but it isn't attached by "
+"a dot to an *object*."
+msgstr ""
+"``sleep`` *関数* は micro:bit を指定のミリ秒数だけスリープさせます。"
+"プログラムの実行を一時停止させたいなら、この関数を使うとよいです。*関数* は "
+"*メソッド* のようなものですが、 *オブジェクト* にドットで結びつけられていません。"
+
+#: ../../tutorials/buttons.rst:31
+msgid ""
+"There is an object called ``button_a`` and it allows you to get the "
+"number of times it has been pressed with the ``get_presses`` *method*."
+msgstr ""
+"``button_a`` というオブジェクトがあり、その ``get_presses`` *メソッド* "
+"で押した回数を得られます。"
+
+#: ../../tutorials/buttons.rst:34
+msgid ""
+"Since ``get_presses`` gives a numeric value and ``display.scroll`` only "
+"displays characters, we need to convert the numeric value into a string "
+"of characters. We do this with the ``str`` function (short for \"string\""
+" ~ it converts things into strings of characters)."
+msgstr ""
+"``get_presses`` は数値を返し、 ``display.scroll`` は文字だけを表示するので、"
+"数値を文字列に変換する必要があります。これを行うのが ``str`` 関数です(\"string\" "
+"の略 ~ 指定されたものを文字列に変換します)。"
+
+#: ../../tutorials/buttons.rst:39
+msgid ""
+"The third line is a bit like an onion. If the parenthesis are the onion "
+"skins then you'll notice that ``display.scroll`` contains ``str`` that "
+"itself contains ``button_a.get_presses``. Python attempts to work out the"
+" inner-most answer first before starting on the next layer out. This is "
+"called *nesting* - the coding equivalent of a Russian Matrioshka doll."
+msgstr ""
+"３行目はちょっと玉ねぎみたいになってます。括弧が玉ねぎ状になっているので、 "
+"``display.scroll`` が ``str`` を含み、それがまた ``button_a.get_presses`` "
+"を含んでいることがわかるでしょう。Python は、最初に最も内側の答えを出し、次の外側に"
+"向かって実行していこうとします。これは *入れ子* (*nesting*)といいます。このような"
+"コードは、ロシアのマトリョーシカ人形の作りと同じです。"
+
+#: ../../tutorials/buttons.rst:46
+msgid ".. image:: tutorials/matrioshka.jpg"
+msgstr ""
+
+#: ../../tutorials/buttons.rst:47
+msgid ""
+"Let's pretend you've pressed the button 10 times. Here's how Python works"
+" out what's happening on the third line:"
+msgstr ""
+"あなたがボタンを１０回押したとしましょう。Python が３行目で起こっていることをどう"
+"処理しているかは以下のとおりです:"
+
+#: ../../tutorials/buttons.rst:50
+msgid "Python sees the complete line and gets the value of ``get_presses``::"
+msgstr "Python は行全体を解釈して、 ``get_presses`` の値を求めます::"
+
+#: ../../tutorials/buttons.rst:52
+msgid "display.scroll(str(button_a.get_presses()))"
+msgstr ""
+
+#: ../../tutorials/buttons.rst:54
+msgid ""
+"Now that Python knows how many button presses there have been, it "
+"converts the numeric value into a string of characters::"
+msgstr ""
+"Python はボタンが何回押されたかを知ったので、この数値を文字列に変換します::"
+
+#: ../../tutorials/buttons.rst:57
+msgid "display.scroll(str(10))"
+msgstr ""
+
+#: ../../tutorials/buttons.rst:59
+msgid "Finally, Python knows what to scroll across the display::"
+msgstr "もう、Python は何をスクロール表示するのかが分かりました::"
+
+#: ../../tutorials/buttons.rst:61
+msgid "display.scroll(\"10\")"
+msgstr ""
+
+#: ../../tutorials/buttons.rst:63
+msgid ""
+"While this might seem like a lot of work, MicroPython makes this happen "
+"extraordinarily fast."
+msgstr ""
+"これは大変な作業のように見えるかもしれませんが、MicroPython はこれを非常に"
+"高速に行います。"
+
+#: ../../tutorials/buttons.rst:67
+msgid "Event Loops"
+msgstr "イベントループ"
+
+#: ../../tutorials/buttons.rst:69
+msgid ""
+"Often you need your program to hang around waiting for something to "
+"happen. To do this you make it loop around a piece of code that defines "
+"how to react to certain expected events such as a button press."
+msgstr ""
+"何かが起こるのを待つプログラムが必要になることがよくあります。これを行うには、"
+"ボタンを押すなどの特定のイベントにどう反応するかを定義するコードの周りにループを"
+"作ります。"
+
+#: ../../tutorials/buttons.rst:73
+msgid ""
+"To make loops in Python you use the ``while`` keyword. It checks if "
+"something is ``True``. If it is, it runs a *block of code* called the "
+"*body* of the loop. If it isn't, it breaks out of the loop (ignoring the "
+"body) and the rest of the program can continue."
+msgstr ""
+"Python でループを作るために、 ``while`` キーワードを使います。これは何かが ``True`` "
+"であるかをチェックします。``True`` であるなら、ループの *本文* と呼ばれる *コードブロック* "
+"を実行します。そうでない場合は、ループから抜け出し(本文を無視して)、後のプログラムを続行します。"
+
+#: ../../tutorials/buttons.rst:78
+msgid ""
+"Python makes it easy to define blocks of code. Say I have a to-do list "
+"written on a piece of paper. It probably looks something like this::"
+msgstr ""
+"Pythonでは、コードブロックを簡単に定義できます。紙の上に書かれた to-do リストが"
+"あるとします。これはたぶん次のようなものになります::"
+
+#: ../../tutorials/buttons.rst:81
+msgid ""
+"Shopping\n"
+"Fix broken gutter\n"
+"Mow the lawn"
+msgstr ""
+
+#: ../../tutorials/buttons.rst:85
+msgid ""
+"If I wanted to break down my to-do list a bit further, I might write "
+"something like this::"
+msgstr ""
+"to-do リストをもう少し具体的にしたいと思ったら、次のように書くかもしれません::"
+
+#: ../../tutorials/buttons.rst:88
+msgid ""
+"Shopping:\n"
+"    Eggs\n"
+"    Bacon\n"
+"    Tomatoes\n"
+"Fix broken gutter:\n"
+"    Borrow ladder from next door\n"
+"    Find hammer and nails\n"
+"    Return ladder\n"
+"Mow the lawn:\n"
+"    Check lawn around pond for frogs\n"
+"    Check mower fuel level"
+msgstr ""
+
+#: ../../tutorials/buttons.rst:100
+msgid ""
+"It's obvious that the main tasks are broken down into sub-tasks that are "
+"*indented* underneath the main task to which they are related. So "
+"``Eggs``, ``Bacon`` and ``Tomatoes`` are obviously related to "
+"``Shopping``. By indenting things we make it easy to see, at a glance, "
+"how the tasks relate to each other."
+msgstr ""
+"メインタスクがサブタスクに分解されていることが一目瞭然です。メインタスクの下に関連する"
+"ものがサブタスクとして *インデント* (字下げ)された構造になっています。つまり "
+"``Eggs``, ``Bacon``, ``Tomatoes`` が ``Shopping`` に関連づけられていることは"
+"明らかです。インデントすることで、タスクが互いにどのように関連しているかを一目で"
+"分かりやすくします。"
+
+#: ../../tutorials/buttons.rst:105
+msgid ""
+"This is called *nesting*. We use nesting to define blocks of code like "
+"this::"
+msgstr ""
+"これは *入れ子* (*nesting*)と呼ばれます。入れ子を使って次のようなコードブロックを"
+"定義します::"
+
+#: ../../tutorials/buttons.rst:107
+msgid ""
+"from microbit import *\n"
+"\n"
+"while running_time() < 10000:\n"
+"    display.show(Image.ASLEEP)\n"
+"\n"
+"display.show(Image.SURPRISED)"
+msgstr ""
+
+#: ../../tutorials/buttons.rst:114
+msgid ""
+"The ``running_time`` function returns the number of milliseconds since "
+"the device started."
+msgstr ""
+"``running_time`` 関数は、デバイスが始動してからのミリ秒数を返します。"
+
+#: ../../tutorials/buttons.rst:117
+msgid ""
+"The ``while running_time() < 10000:`` line checks if the running time is "
+"less than 10000 milliseconds (i.e. 10 seconds). If it is, *and this is "
+"where we can see scoping in action*, then it'll display ``Image.ASLEEP``."
+" Notice how this is indented underneath the ``while`` statement *just "
+"like in our to-do list*."
+msgstr ""
+"``while running_time() < 10000:`` の行は動作時間が１万ミリ秒(すなわち１０秒)未満"
+"であるかをチェックします。このチェックにとおり、 *その実行中に見ていたならば* 、イメージ "
+"``Image.ASLEEP`` を表示します。これが、先の to-do リストのように ``while`` "
+"文の下にインデントされていることに注目してください。"
+
+#: ../../tutorials/buttons.rst:122
+msgid ""
+"Obviously, if the running time is equal to or greater than 10000 "
+"milliseconds then the display will show ``Image.SURPRISED``. Why? Because"
+" the ``while`` condition will be False (``running_time`` is no longer ``<"
+" 10000``). In that case the loop is finished and the program will "
+"continue after the ``while`` loop's block of code. It'll look like your "
+"device is asleep for 10 seconds before waking up with a surprised look on"
+" its face."
+msgstr ""
+"もちろん、実行時間が 10000 ミリ秒以上になれば、その後の ``Image.SURPRISED`` を"
+"表示します。どうしてかって？　``while``  条件は ``False`` になるので(``running_time`` "
+"はもう ``< 10000`` ではありません)、ループが終了し、 ``while`` ループのコードブロックの後の"
+"プログラムを続けて実行します。あなたのデバイスは 10 秒間眠ってから、驚いた顔で目を覚まします。"
+
+#: ../../tutorials/buttons.rst:129
+msgid "Try it!"
+msgstr "試してみてください！"
+
+#: ../../tutorials/buttons.rst:132
+msgid "Handling an Event"
+msgstr "イベントの処理"
+
+#: ../../tutorials/buttons.rst:134
+msgid ""
+"If we want MicroPython to react to button press events we should put it "
+"into an infinite loop and check if the button ``is_pressed``."
+msgstr ""
+"MicroPython がボタンを押すイベントに反応するようにしたい場合、ボタンが押されたかを"
+"チェックする ``is_pressed`` を無限ループの中に入れます。"
+
+#: ../../tutorials/buttons.rst:137
+msgid "An infinite loop is easy::"
+msgstr "無限ループは簡単です::"
+
+#: ../../tutorials/buttons.rst:139
+msgid ""
+"while True:\n"
+"    # Do stuff"
+msgstr ""
+"while True:\n"
+"    # 処理の実行"
+
+#: ../../tutorials/buttons.rst:142
+msgid ""
+"(Remember, ``while`` checks if something is ``True`` to work out if it "
+"should run its block of code. Since ``True`` is obviously ``True`` for "
+"all time, you get an infinite loop!)"
+msgstr ""
+"(``while`` は何かが ``True`` であるかをチェックし、そうであればコードブロックを"
+"実行するということを思い返してください。つまり、条件に ``True`` を指定すると明らかに "
+"``True`` であるので、無限ループを実現できるわけです！)"
+
+#: ../../tutorials/buttons.rst:146
+msgid ""
+"Let's make a very simple cyber-pet. It's always sad unless you're "
+"pressing button ``A``. If you press button ``B`` it dies. (I realise this"
+" isn't a very pleasant game, so perhaps you can figure out how to improve"
+" it.)::"
+msgstr ""
+"簡単なサイバーペットを作りましょう。あなたが ``A`` ボタンを押している場合を除き、"
+"常に悲しい顔をします。あなたが ``B`` ボタンを押すと死にます。(これがとても楽しい"
+"ゲームではないことが分かりますので、きっとあなたが楽しいゲームにする方法をあみだして"
+"くれることでしょう)::"
+
+#: ../../tutorials/buttons.rst:150
+msgid ""
+"from microbit import *\n"
+"\n"
+"while True:\n"
+"    if button_a.is_pressed():\n"
+"        display.show(Image.HAPPY)\n"
+"    elif button_b.is_pressed():\n"
+"        break\n"
+"    else:\n"
+"        display.show(Image.SAD)\n"
+"\n"
+"display.clear()"
+msgstr ""
+
+#: ../../tutorials/buttons.rst:162
+msgid ""
+"Can you see how we check what buttons are pressed? We used ``if``, "
+"``elif`` (short for \"else if\") and ``else``. These are called "
+"*conditionals* and work like this::"
+msgstr ""
+"どのボタンが押されているかをチェックする方法がわかりますか？　``if``, "
+"``elif`` (\"else if\" の短縮形), ``else`` を使っています。これは "
+"*条件文* というもので、次のように処理します::"
+
+#: ../../tutorials/buttons.rst:166
+msgid ""
+"if something is True:\n"
+"    # do one thing\n"
+"elif some other thing is True:\n"
+"    # do another thing\n"
+"else:\n"
+"    # do yet another thing."
+msgstr ""
+"if 何か is True:\n"
+"    # 何かを行う\n"
+"elif 他の何か is True:\n"
+"    # 別の何かを行う\n"
+"else:\n"
+"    # さらに別の何かを行う"
+
+#: ../../tutorials/buttons.rst:173
+msgid "This is remarkably similar to English!"
+msgstr "これは英語に非常に似ています！"
+
+#: ../../tutorials/buttons.rst:175
+msgid ""
+"The ``is_pressed`` method only produces two results: ``True`` or "
+"``False``. If you're pressing the button it returns ``True``, otherwise "
+"it returns ``False``. The code above is saying, in English, \"for ever "
+"and ever, if button A is pressed then show a happy face, else if button B"
+" is pressed break out of the loop, otherwise display a sad face.\" We "
+"break out of the loop (stop the program running for ever and ever) with "
+"the ``break`` statement."
+msgstr ""
+"``is_pressed`` メソッドは２つの結果だけを返します: ``True`` か ``False`` です。"
+"ボタンを押している場合は ``True`` を返し、そうでない場合は ``False`` を返します。"
+"上記のコードを日本語で表すと「永遠に、ボタン A が押されたら幸せな顔を表示し、ボタン B "
+"が押されたらループから抜け、さもなければ悲しい顔を表示します」となります。ループの外に"
+"抜ける（永遠に動き続けるプログラムを止める)には ``break`` 文を使います。"
+
+#: ../../tutorials/buttons.rst:182
+msgid "At the very end, when the cyber-pet is dead, we ``clear`` the display."
+msgstr "最後に、サイバーペットが死んで、ディスプレイを ``clear`` します。"
+
+#: ../../tutorials/buttons.rst:184
+msgid ""
+"Can you think of ways to make this game less tragic? How would you check "
+"if *both* buttons are pressed? (Hint: Python has ``and``, ``or`` and "
+"``not`` logical operators to help check multiple truth statements (things"
+" that produce either ``True`` or ``False`` results)."
+msgstr ""
+"このゲームをあまり悲惨なものでなくする方法を考えてみませんか？　*両方* のボタンが"
+"押されたことをチェックするにはどうしますか？　(ヒント: Python には、複数の条件"
+"(``True`` または ``False`` のどちらかを結果とするもの)のチェックを助ける論理演算子 "
+"``and``, ``or``, ``not`` があります。"
+
+#: ../../tutorials/direction.rst:2
+msgid "Direction"
+msgstr "方角の検知"
+
+#: ../../tutorials/direction.rst:4
+msgid ""
+"There is a compass on the BBC micro:bit. If you ever make a weather "
+"station use the device to work out the wind direction."
+msgstr ""
+"BBC micro:bit にはコンパスがついています。気象観測を行ったことがあるなら、"
+"風向きを調べるのにこのデバイスを利用できます。"
+
+#: ../../tutorials/direction.rst:8
+msgid "Compass"
+msgstr "コンパス"
+
+#: ../../tutorials/direction.rst:10
+msgid "It can also tell you the direction of North like this::"
+msgstr "以下のプログラムは北の方角を教えてくれます::"
+
+#: ../../tutorials/direction.rst:12
+msgid ""
+"from microbit import *\n"
+"\n"
+"compass.calibrate()\n"
+"\n"
+"while True:\n"
+"    needle = ((15 - compass.heading()) // 30) % 12\n"
+"    display.show(Image.ALL_CLOCKS[needle])"
+msgstr ""
+
+#: ../../tutorials/direction.rst:22
+msgid ""
+"**You must calibrate the compass before taking readings.** Failure to do "
+"so will produce garbage results. The ``calibration`` method runs a fun "
+"little game to help the device work out where it is in relation to the "
+"Earth's magnetic field."
+msgstr ""
+"**測定値を得る前にコンパスの調整が必要です。** "
+"そうしないと不正な結果が出ます。 ``calibration`` メソッドは楽しいミニゲームを実行し、"
+"その中で地球の磁場と関連するようデバイスを補正します。"
+
+#: ../../tutorials/direction.rst:27
+msgid ""
+"To calibrate the compass, tilt the micro:bit around until a circle of "
+"pixels is drawn on the outside edges of the display."
+msgstr ""
+"コンパスを調整するには、ピクセルの円がディスプレイの外縁に描かれる"
+"まで micro:bit を傾けます。"
+
+#: ../../tutorials/direction.rst:30
+msgid ""
+"The program takes the ``compass.heading`` and, using some simple yet "
+"cunning maths, `floor division "
+"<https://en.wikipedia.org/wiki/Floor_and_ceiling_functions>`_ ``//`` and "
+"`modulo <https://en.wikipedia.org/wiki/Modulo_operation>`_ ``%``, works "
+"out the number of the clock hand to use to display on the screen so that "
+"it is pointing roughly North."
+msgstr ""
+"プログラムは ``compass.heading`` の値をとり、シンプルながらも巧妙に "
+"`床除算(floor division) <https://en.wikipedia.org/wiki/Floor_and_ceiling_functions>`_ "
+"``//`` と `剰余(modulo) <https://en.wikipedia.org/wiki/Modulo_operation>`_ ``%`` "
+"を使って画面に表示するクロックの数字を計算し、おおよその北を指すように表示します。"
+
+#: ../../tutorials/gestures.rst:2
+msgid "Gestures"
+msgstr "ジェスチャー"
+
+#: ../../tutorials/gestures.rst:4
+msgid ""
+"The really interesting side-effect of having an accelerometer is gesture "
+"detection. If you move your BBC micro:bit in a certain way (as a gesture)"
+" then MicroPython is able to detect this."
+msgstr ""
+"加速度センサーを持つことの実に興味深い副作用はジェスチャーの検出です。BBC micro:bit "
+"を特定の手段(ジェスチャー)で動かすと、MicroPython はこれを検出できます。"
+
+#: ../../tutorials/gestures.rst:8
+msgid ""
+"MicroPython is able to recognise the following gestures: ``up``, "
+"``down``, ``left``, ``right``, ``face up``, ``face down``, ``freefall``, "
+"``3g``, ``6g``, ``8g``, ``shake``. Gestures are always represented as "
+"strings. While most of the names should be obvious, the ``3g``, ``6g`` "
+"and ``8g`` gestures apply when the device encounters these levels of "
+"g-force (like when an astronaut is launched into space)."
+msgstr ""
+"MicroPythonは、次のジェスチャーを認識することが可能です: ``up``, ``down``, "
+"``left``, ``right``, ``face up``, ``face down``, ``freefall``, ``3g``, "
+"``6g``, ``8g``, ``shake`` 。ジェスチャーは常に文字列として表されます。名前で"
+"ほとんどのものは明らかですが、ジェスチャー ``3g``, ``6g``, ``8g`` は、"
+"デバイスが(宇宙飛行士が宇宙に打ち上げされたときのような) g 力のこれらの"
+"レベルを受けたことを検出します。"
+
+#: ../../tutorials/gestures.rst:15
+msgid ""
+"To get the current gesture use the ``accelerometer.current_gesture`` "
+"method. Its result is going to be one of the named gestures listed above."
+" For example, this program will only make your device happy if it is face"
+" up::"
+msgstr ""
+"現在のジェスチャーを取得するには、 ``accelerometer.current_gesture`` "
+"メソッドを使います。その結果は上に挙げた名前のジェスチャーの１つになるでしょう。"
+"たとえば、以下のプログラムを使用すると、デバイスが表向きの場合にのみデバイスが"
+"ハッピーになります。"
+
+#: ../../tutorials/gestures.rst:19
+msgid ""
+"from microbit import *\n"
+"\n"
+"while True:\n"
+"    gesture = accelerometer.current_gesture()\n"
+"    if gesture == \"face up\":\n"
+"        display.show(Image.HAPPY)\n"
+"    else:\n"
+"        display.show(Image.ANGRY)"
+msgstr ""
+
+#: ../../tutorials/gestures.rst:28
+msgid ""
+"Once again, because we want the device to react to changing circumstances"
+" we use a ``while`` loop. Within the *scope* of the loop the current "
+"gesture is read and put into ``gesture``. The ``if`` conditional checks "
+"if ``gesture`` is equal to ``\"face up\"`` (Python uses ``==`` to test "
+"for equality, a single equals sign ``=`` is used for assignment - just "
+"like how we assign the gesture reading to the ``gesture`` object). If the"
+" gesture is equal to ``\"face up\"`` then use the display to show a happy"
+" face. Otherwise, the device is made to look angry!"
+msgstr ""
+"前にもやったように、デバイスが変化する状況に対応させるために ``while`` ループを使います。"
+"ループの *スコープ* 内で、現在のジェスチャーが読み込まれて ``gesture`` に入ります。 "
+"``if`` 条件は ``gesture`` が ``\"face up\"`` であるかをチェックします(Python "
+"では等価性の検査に ``==`` を使い、単一の等価記号 ``=`` は代入に使います - "
+"ちょうどジェスチャーを読んで ``gesture`` に代入しているように)。ジェスチャーが "
+"``\"face up\"`` であれば、ディスプレイを使ってハッピーな顔を表示します。"
+"それ以外の場合、デバイスは怒って見えるようになります！"
+
+#: ../../tutorials/gestures.rst:38
+msgid "Magic-8"
+msgstr "マジック８"
+
+#: ../../tutorials/gestures.rst:40
+msgid ""
+"A Magic-8 ball is a toy first invented in the 1950s. The idea is to ask "
+"it a yes/no question, shake it and wait for it to reveal the truth. It's "
+"rather easy to turn into a program::"
+msgstr ""
+"マジック８ボールは 1950 年代に最初に発明されたおもちゃです。遊び方はイエス/ノーの"
+"質問をして、マジック８ボールを振り、真実を明らかにするのを待つことです。これを"
+"プログラムに変えるのは簡単です::"
+
+#: ../../tutorials/gestures.rst:44
+msgid ""
+"from microbit import *\n"
+"import random\n"
+"\n"
+"answers = [\n"
+"    \"It is certain\",\n"
+"    \"It is decidedly so\",\n"
+"    \"Without a doubt\",\n"
+"    \"Yes, definitely\",\n"
+"    \"You may rely on it\",\n"
+"    \"As I see it, yes\",\n"
+"    \"Most likely\",\n"
+"    \"Outlook good\",\n"
+"    \"Yes\",\n"
+"    \"Signs point to yes\",\n"
+"    \"Reply hazy try again\",\n"
+"    \"Ask again later\",\n"
+"    \"Better not tell you now\",\n"
+"    \"Cannot predict now\",\n"
+"    \"Concentrate and ask again\",\n"
+"    \"Don't count on it\",\n"
+"    \"My reply is no\",\n"
+"    \"My sources say no\",\n"
+"    \"Outlook not so good\",\n"
+"    \"Very doubtful\",\n"
+"]\n"
+"\n"
+"while True:\n"
+"    display.show(\"8\")\n"
+"    if accelerometer.was_gesture(\"shake\"):\n"
+"        display.clear()\n"
+"        sleep(1000)\n"
+"        display.scroll(random.choice(answers))"
+msgstr ""
+
+#: ../../tutorials/gestures.rst:77
+msgid ""
+"Most of the program is a list called ``answers``. The actual game is in "
+"the ``while`` loop at the end."
+msgstr ""
+"プログラムのほとんどは、 ``ansawers`` というリストです。実際のゲームは"
+"最後の ``while`` ループです。"
+
+#: ../../tutorials/gestures.rst:80
+msgid ""
+"The default state of the game is to show the character ``\"8\"``. "
+"However, the program needs to detect if it has been shaken. The "
+"``was_gesture`` method uses its argument (in this case, the string "
+"``\"shake\"`` because we want to detect a shake) to return a ``True`` / "
+"``False`` response. If the device was shaken the ``if`` conditional drops"
+" into its block of code where it clears the screen, waits for a second "
+"(so the device appears to be thinking about your question) and displays a"
+" randomly chosen answer."
+msgstr ""
+"ゲームのデフォルト状態は文字 ``\"8\"`` を表示することです。しかし、プログラムは"
+"それが揺れているかどうかを検出する必要があります。``was_gesture`` メソッドは"
+"その引数にしたがい(この場合は振っていることを検出したいので、文字列 ``\"shake\"`` を"
+"指定しています)、 ``True`` / ``False`` の応答を返します。デバイスを振った場合、 "
+"``if`` 条件のコードブロックに入り、画面をクリアし、1 秒間待って(デバイスが"
+"あなたの質問について考えているように見える)、無作為に選択された回答を表示します。"
+
+#: ../../tutorials/gestures.rst:88
+msgid ""
+"Why not ask it if this is the greatest program ever written? What could "
+"you do to \"cheat\" and make the answer always positive or negative? "
+"(Hint: use the buttons.)"
+msgstr ""
+"これが今までに書かれた最高のプログラムかを、このプログラム自身に聞いてみませんか？　"
+"「ズル」をして答えを常にポジティブまたはネガティブな回答にするにはどうすれば"
+"よいですか？　(ヒント: ボタンを利用)"
+
+#: ../../tutorials/hello.rst:2
+msgid "Hello, World!"
+msgstr ""
+
+#: ../../tutorials/hello.rst:4
+msgid ""
+"The traditional way to start programming in a new language is to get your"
+" computer to say, \"Hello, World!\"."
+msgstr ""
+"新しい言語を始める伝統的な方法は、コンピュータに \"Hello, World!\" と言わせることです。"
+
+#: ../../tutorials/hello.rst:8
+msgid ".. image:: tutorials/../scroll-hello.gif"
+msgstr ""
+
+#: ../../tutorials/hello.rst:9
+msgid "This is easy with MicroPython::"
+msgstr "これを MicroPython でするのは簡単です::"
+
+#: ../../tutorials/hello.rst:11
+msgid ""
+"from microbit import *\n"
+"display.scroll(\"Hello, World!\")"
+msgstr ""
+
+#: ../../tutorials/hello.rst:14
+msgid "Each line does something special. The first line::"
+msgstr "各行は何か特別なことを行っています。最初の行::"
+
+#: ../../tutorials/hello.rst:16
+msgid "from microbit import *"
+msgstr ""
+
+#: ../../tutorials/hello.rst:18
+msgid ""
+"...tells MicroPython to get all the stuff it needs to work with the BBC "
+"micro:bit. All this stuff is in a module called ``microbit`` (a module is"
+" a library of pre-existing code). When you ``import`` something you're "
+"telling MicroPython that you want to use it, and ``*`` is Python's way to"
+" say *everything*. So, ``from microbit import *`` means, in English, \"I "
+"want to be able to use everything from the microbit code library\"."
+msgstr ""
+"... は、BBC micro:bit で実行するのに必要となるすべてものものを入手するよう "
+"MicroPython に指示します。すべてのものは ``microbit`` と呼ばれるモジュールの中に"
+"あります(モジュールは既存のコードのライブラリです)。なにかを ``import`` するという"
+"ことは、MicroPython にそれを使いたいと伝えることで、``*`` は *すべてのもの* "
+"を示す Python の方法です。すなわち、 ``from microbit import *`` を日本語に"
+"すると「microbit コードライブラリからすべてのものを使用できるようにしてほしい」"
+"となります。"
+
+#: ../../tutorials/hello.rst:25
+msgid "The second line::"
+msgstr "２行目::"
+
+#: ../../tutorials/hello.rst:27
+msgid "display.scroll(\"Hello, World!\")"
+msgstr ""
+
+#: ../../tutorials/hello.rst:29
+msgid ""
+"...tells MicroPython to use the display to scroll the string of "
+"characters \"Hello, World!\". The ``display`` part of that line is an "
+"*object* from the ``microbit`` module that represents the device's "
+"physical display (we say \"object\" instead of \"thingy\", \"whatsit\" or"
+" \"doodah\"). We can tell the display to do things with a full-stop ``.``"
+" followed by what looks like a command (in fact it's something we call a "
+"*method*). In this case we're using the ``scroll`` method. Since "
+"``scroll`` needs to know what characters to scroll across the physical "
+"display we specify them between double quotes (``\"``) within parenthesis"
+" (``(`` and ``)``). These are called the *arguments*. So, "
+"``display.scroll(\"Hello, World!\")`` means, in English, \"I want you to "
+"use the display to scroll the text 'Hello, World!'\". If a method doesn't"
+" need any arguments we make this clear by using empty parenthesis like "
+"this: ``()``."
+msgstr ""
+"... は、文字列 \"Hello, World!\" をディスプレイにスクロール表示するよう "
+"MicroPython に伝えます。行中の ``display`` 部分は ``microbit`` モジュールにある "
+"*オブジェクト* で、デバイスの物理ディスプレイを表します(「オブジェクト」という言葉は"
+"「例のあれ」、「あの何か」、「その何か」の代わりに使っています)。ディスプレイに何を"
+"行うかを伝えるには句点 ``.`` の後にコマンドのようなもの(実際には *メソッド* という"
+"もの)を付けます。この場合では ``scroll`` メソッドを使っています。``scroll`` は"
+"物理ディスプレイでスクロールする文字列が何であるかを知る必要があるので、括弧内(``(`` "
+"と ``)``)に二重引用符で囲んだものにスクロールするものを指定しています。これは *引数* "
+"というものです。したがって、 ``display.scroll(\"Hello, World!\")`` を日本語に"
+"すると「テキスト 'Hello, World!' をディスプレイにスクロール表示してほしい」となります。"
+"メソッドが引数を一つも必要としない場合は、引数の無い括弧 ``()`` を使うことでこれを"
+"示します。"
+
+#: ../../tutorials/hello.rst:42
+msgid ""
+"Copy the \"Hello, World!\" code into your editor and flash it onto the "
+"device. Can you work out how to change the message? Can you make it say "
+"hello to you? For example, I might make it say \"Hello, Nicholas!\". "
+"Here's a clue, you need to change the scroll method's argument."
+msgstr ""
+"\"Hello, World!\" のコードをエディタにコピーして、デバイスに転送してください。"
+"表示するメッセージを変更するにはどうすればよいですか？　あなたに挨拶させるには"
+"どうすればよいですか？　たとえば私の場合だったら \"Hello, Nicholas!\" "
+"と表示させます。これがヒントです。scroll メソッドの引数を変更してみましょう。"
+
+#: ../../tutorials/hello.rst:49
+msgid "It may not work. :-)"
+msgstr "変更したらうまく動かなくなるかもしれません。 :-)"
+
+#: ../../tutorials/hello.rst:51
+msgid ""
+"This is where things get fun and MicroPython tries to be helpful. If it "
+"encounters an error it will scroll a helpful message on the micro:bit's "
+"display. If it can, it will tell you the line number for where the error "
+"can be found."
+msgstr ""
+"この原因を突き止めるのは楽しいことで、MicroPython はこれに役立とうとします。"
+"エラーが発生すると、micro:bit のディスプレイにヘルプメッセージがスクロールします。"
+"可能であれば、エラーが発生したところの行番号が表示されます。"
+
+#: ../../tutorials/hello.rst:56
+msgid ""
+"Python expects you to type **EXACTLY** the right thing. So, for instance,"
+" ``Microbit``, ``microbit`` and ``microBit`` are all different things to "
+"Python. If MicroPython complains about a ``NameError`` it's probably "
+"because you've typed something inaccurately. It's like the difference "
+"between referring to \"Nicholas\" and \"Nicolas\". They're two different "
+"people but their names look very similar."
+msgstr ""
+"Python は **正確に** コード入力されることを前提にしています。たとえば Python "
+"にとって ``Microbit``, ``microbit``, ``microBit`` はすべて異なるものです。"
+"MicroPython が ``NameError`` という場合は、おそらく何かを不正確に入力しています。"
+"これは \"Nicholas\" と \"Nicolas\" の違いに似ています。彼らは２人の違う人物ですが、"
+"名前は非常に似ています。"
+
+#: ../../tutorials/hello.rst:63
+msgid ""
+"If MicroPython complains about a ``SyntaxError`` you've simply typed code"
+" in a way that MicroPython can't understand. Check you're not missing any"
+" special characters like ``\"`` or ``:``. It's like putting. a full stop "
+"in the middle of a sentence. It's hard to understand exactly what you "
+"mean."
+msgstr ""
+"MicroPython が ``SyntaxError`` という場合は、単に MicroPython が解釈できない"
+"コードを入力しています。 ``\"`` や ``:`` といった特殊文字の間違いがないかチェック"
+"してみてください。これはゴルフのパットのようなものです。文中のどこかに止めているものが"
+"あります。本来の意図を解釈するのはなかなかに困難です。"
+
+#: ../../tutorials/hello.rst:68
+msgid ""
+"Your microbit may stop responding: you cannot flash new code to it or "
+"enter commands into the REPL. If this happens, try power cycling it. That"
+" is, unplug the USB cable (and battery cable if it's connected), then "
+"plug the cable back in again. You may also need to quit and re-start your"
+" code editor application."
+msgstr ""
+"microbit の反応が無くなることもあります: こうなると新しいコードをフラッシュする"
+"ことも、REPL でコマンドを入力することもできません。これが起きてしまったら、電源を"
+"入れ直してみてください。つまり、USB ケーブルを抜いて(バッテリーケーブルを繋げて"
+"いるなら、それも抜く)、ケーブルをまた差し込みます。また、コードエディタも一度終わらせ"
+"て再起動する必要があるかもしれません。"
+
+#: ../../tutorials/images.rst:2
+msgid "Images"
+msgstr "イメージ"
+
+#: ../../tutorials/images.rst:4
+msgid ""
+"MicroPython is about as good at art as you can be if the only thing you "
+"have is a 5x5 grid of red LEDs (light emitting diodes - the things that "
+"light up on the front of the device). MicroPython gives you quite a lot "
+"of control over the display so you can create all sorts of interesting "
+"effects."
+msgstr ""
+"MicroPython は、5×5 グリッドの赤色 LED (発光ダイオード - デバイスの前面で点灯"
+"するもの)を使ってできうる限りのアート機能を提供します。MicroPython はディスプレイ"
+"上の非常に多くの制御を提供しているので、あらゆる種類の面白いい効果を作り出すことが"
+"できます。"
+
+#: ../../tutorials/images.rst:9
+msgid ""
+"MicroPython comes with lots of built-in pictures to show on the display. "
+"For example, to make the device appear happy you type::"
+msgstr ""
+"MicroPython には、ディスプレイに表示できる多くの組込みピクチャがあります。"
+"たとえば、デバイスがハッピーに見えるようにするには、次のように入力します。"
+
+#: ../../tutorials/images.rst:12
+msgid ""
+"from microbit import *\n"
+"display.show(Image.HAPPY)"
+msgstr ""
+
+#: ../../tutorials/images.rst:15
+msgid ""
+"I suspect you can remember what the first line does. The second line uses"
+" the ``display`` object to ``show`` a built-in image. The happy image we "
+"want to display is a part of the ``Image`` object and called ``HAPPY``. "
+"We tell ``show`` to use it by putting it between the parenthesis (``(`` "
+"and ``)``)."
+msgstr ""
+"最初の行が何であるかは既に知っていると思います。２行目は、 ``display`` オブジェクトに"
+"組込みのイメージを ``show`` で表示させています。表示させたいハッピーのイメージは "
+"``Image`` に属する ``HAPPY`` というものです。これを括弧内(``(`` と ``)``)に"
+"指定することにより、このイメージの利用を ``show`` に伝えます。"
+
+#: ../../tutorials/images.rst:21
+msgid ".. image:: tutorials/happy.png"
+msgstr ""
+
+#: ../../tutorials/images.rst:22
+msgid "Here's a list of the built-in images:"
+msgstr "以下は組込みイメージの一覧です:"
+
+#: ../../tutorials/images.rst:24
+msgid "``Image.HEART``"
+msgstr ""
+
+#: ../../tutorials/images.rst:25
+msgid "``Image.HEART_SMALL``"
+msgstr ""
+
+#: ../../tutorials/images.rst:26
+msgid "``Image.HAPPY``"
+msgstr ""
+
+#: ../../tutorials/images.rst:27
+msgid "``Image.SMILE``"
+msgstr ""
+
+#: ../../tutorials/images.rst:28
+msgid "``Image.SAD``"
+msgstr ""
+
+#: ../../tutorials/images.rst:29
+msgid "``Image.CONFUSED``"
+msgstr ""
+
+#: ../../tutorials/images.rst:30
+msgid "``Image.ANGRY``"
+msgstr ""
+
+#: ../../tutorials/images.rst:31
+msgid "``Image.ASLEEP``"
+msgstr ""
+
+#: ../../tutorials/images.rst:32
+msgid "``Image.SURPRISED``"
+msgstr ""
+
+#: ../../tutorials/images.rst:33
+msgid "``Image.SILLY``"
+msgstr ""
+
+#: ../../tutorials/images.rst:34
+msgid "``Image.FABULOUS``"
+msgstr ""
+
+#: ../../tutorials/images.rst:35
+msgid "``Image.MEH``"
+msgstr ""
+
+#: ../../tutorials/images.rst:36
+msgid "``Image.YES``"
+msgstr ""
+
+#: ../../tutorials/images.rst:37
+msgid "``Image.NO``"
+msgstr ""
+
+#: ../../tutorials/images.rst:38
+msgid ""
+"``Image.CLOCK12``, ``Image.CLOCK11``, ``Image.CLOCK10``, "
+"``Image.CLOCK9``, ``Image.CLOCK8``, ``Image.CLOCK7``, ``Image.CLOCK6``, "
+"``Image.CLOCK5``, ``Image.CLOCK4``, ``Image.CLOCK3``, ``Image.CLOCK2``, "
+"``Image.CLOCK1``"
+msgstr ""
+
+#: ../../tutorials/images.rst:41
+msgid ""
+"``Image.ARROW_N``, ``Image.ARROW_NE``, ``Image.ARROW_E``, "
+"``Image.ARROW_SE``, ``Image.ARROW_S``, ``Image.ARROW_SW``, "
+"``Image.ARROW_W``, ``Image.ARROW_NW``"
+msgstr ""
+
+#: ../../tutorials/images.rst:44
+msgid "``Image.TRIANGLE``"
+msgstr ""
+
+#: ../../tutorials/images.rst:45
+msgid "``Image.TRIANGLE_LEFT``"
+msgstr ""
+
+#: ../../tutorials/images.rst:46
+msgid "``Image.CHESSBOARD``"
+msgstr ""
+
+#: ../../tutorials/images.rst:47
+msgid "``Image.DIAMOND``"
+msgstr ""
+
+#: ../../tutorials/images.rst:48
+msgid "``Image.DIAMOND_SMALL``"
+msgstr ""
+
+#: ../../tutorials/images.rst:49
+msgid "``Image.SQUARE``"
+msgstr ""
+
+#: ../../tutorials/images.rst:50
+msgid "``Image.SQUARE_SMALL``"
+msgstr ""
+
+#: ../../tutorials/images.rst:51
+msgid "``Image.RABBIT``"
+msgstr ""
+
+#: ../../tutorials/images.rst:52
+msgid "``Image.COW``"
+msgstr ""
+
+#: ../../tutorials/images.rst:53
+msgid "``Image.MUSIC_CROTCHET``"
+msgstr ""
+
+#: ../../tutorials/images.rst:54
+msgid "``Image.MUSIC_QUAVER``"
+msgstr ""
+
+#: ../../tutorials/images.rst:55
+msgid "``Image.MUSIC_QUAVERS``"
+msgstr ""
+
+#: ../../tutorials/images.rst:56
+msgid "``Image.PITCHFORK``"
+msgstr ""
+
+#: ../../tutorials/images.rst:57
+msgid "``Image.XMAS``"
+msgstr ""
+
+#: ../../tutorials/images.rst:58
+msgid "``Image.PACMAN``"
+msgstr ""
+
+#: ../../tutorials/images.rst:59
+msgid "``Image.TARGET``"
+msgstr ""
+
+#: ../../tutorials/images.rst:60
+msgid "``Image.TSHIRT``"
+msgstr ""
+
+#: ../../tutorials/images.rst:61
+msgid "``Image.ROLLERSKATE``"
+msgstr ""
+
+#: ../../tutorials/images.rst:62
+msgid "``Image.DUCK``"
+msgstr ""
+
+#: ../../tutorials/images.rst:63
+msgid "``Image.HOUSE``"
+msgstr ""
+
+#: ../../tutorials/images.rst:64
+msgid "``Image.TORTOISE``"
+msgstr ""
+
+#: ../../tutorials/images.rst:65
+msgid "``Image.BUTTERFLY``"
+msgstr ""
+
+#: ../../tutorials/images.rst:66
+msgid "``Image.STICKFIGURE``"
+msgstr ""
+
+#: ../../tutorials/images.rst:67
+msgid "``Image.GHOST``"
+msgstr ""
+
+#: ../../tutorials/images.rst:68
+msgid "``Image.SWORD``"
+msgstr ""
+
+#: ../../tutorials/images.rst:69
+msgid "``Image.GIRAFFE``"
+msgstr ""
+
+#: ../../tutorials/images.rst:70
+msgid "``Image.SKULL``"
+msgstr ""
+
+#: ../../tutorials/images.rst:71
+msgid "``Image.UMBRELLA``"
+msgstr ""
+
+#: ../../tutorials/images.rst:72
+msgid "``Image.SNAKE``"
+msgstr ""
+
+#: ../../tutorials/images.rst:74
+msgid ""
+"There's quite a lot! Why not modify the code that makes the micro:bit "
+"look happy to see what some of the other built-in images look like? (Just"
+" replace ``Image.HAPPY`` with one of the built-in images listed above.)"
+msgstr ""
+"かなりたくさんあります！　他の組込みイメージがどのように表示されるかを調べるために"
+"ハッピーの micro:bit コードを変更してみませんか？　(``Image.HAPPY`` のところを、"
+"上記の組込みのイメージのいずれかに置き換えるだけです。)"
+
+#: ../../tutorials/images.rst:79
+msgid "DIY Images"
+msgstr "自作イメージ"
+
+#: ../../tutorials/images.rst:81
+msgid ""
+"Of course, you want to make your own image to display on the micro:bit, "
+"right?"
+msgstr ""
+"もちろん、自分で作成したイメージを micro:bit に表示したいですよね？"
+
+#: ../../tutorials/images.rst:83
+msgid "That's easy."
+msgstr "それは簡単です。"
+
+#: ../../tutorials/images.rst:85
+msgid ""
+"Each LED pixel on the physical display can be set to one of ten values. "
+"If a pixel is set to ``0`` (zero) then it's off. It literally has zero "
+"brightness. However, if it is set to ``9`` then it is at its brightest "
+"level. The values ``1`` to ``8`` represent the brightness levels between "
+"off (``0``) and full on (``9``)."
+msgstr ""
+"物理ディスプレイ上の各 LED ピクセルは 10 個の値の１つに設定できます。ピクセルを 0 "
+"(ゼロ)に設定するとオフになります。文字通りゼロの明るさになります。ピクセルを 9 に"
+"設定すると最も明るいレベルになります。値 1 から 8 はオフ(``0``)と最大(``9``)の"
+"間の明るさのレベルを表します。"
+
+#: ../../tutorials/images.rst:91
+msgid ""
+"Armed with this information, it's possible to create a new image like "
+"this::"
+msgstr ""
+"以上の情報があれば、次のような新しいイメージを作成することができます::"
+
+#: ../../tutorials/images.rst:93
+msgid ""
+"from microbit import *\n"
+"\n"
+"boat = Image(\"05050:\"\n"
+"             \"05050:\"\n"
+"             \"05050:\"\n"
+"             \"99999:\"\n"
+"             \"09990\")\n"
+"\n"
+"display.show(boat)"
+msgstr ""
+
+#: ../../tutorials/images.rst:103
+msgid ""
+"(When run, the device should display an old-fashioned \"Blue Peter\" "
+"sailing ship with the masts dimmer than the boat's hull.)"
+msgstr ""
+"(実行すると、デバイスは昔ながらの \"Blue Peter\" 帆船を表示します。"
+"船体よりもマストが暗くなっています。)"
+
+#: ../../tutorials/images.rst:106
+msgid ""
+"Have you figured out how to draw a picture? Have you noticed that each "
+"line of the physical display is represented by a line of numbers ending "
+"in ``:`` and enclosed between ``\"`` double quotes? Each number specifies"
+" a brightness. There are five lines of five numbers so it's possible to "
+"specify the individual brightness for each of the five pixels on each of "
+"the five lines on the physical display. That's how to create a new image."
+msgstr ""
+"絵を描く方法を解明できましたか？　物理ディスプレイの各行が二重引用符で囲まれ、 "
+"``:`` で終わる一連の数字で表されていることに気づきましたか？　"
+"各数字は明るさを指定します。５個の数字が5行あるので、物理ディスプレイ上の５行の"
+"それぞれにある５個のピクセルのそれぞれに個別の明るさを指定することができます。"
+"これが新しいイメージを作成する方法です。"
+
+#: ../../tutorials/images.rst:113 ../../tutorials/io.rst:19
+#: ../../tutorials/storage.rst:117
+msgid "Simple!"
+msgstr "簡単！"
+
+#: ../../tutorials/images.rst:115
+msgid ""
+"In fact, you don't need to write this over several lines. If you think "
+"you can keep track of each line, you can rewrite it like this::"
+msgstr ""
+"実際のところ、複数の行に分けて書く必要はありません。各行を追えるのであれば、"
+"次のように書き直すことができます::"
+
+#: ../../tutorials/images.rst:118
+msgid "boat = Image(\"05050:05050:05050:99999:09990\")"
+msgstr ""
+
+#: ../../tutorials/images.rst:121
+msgid "Animation"
+msgstr "アニメーション"
+
+#: ../../tutorials/images.rst:123
+msgid ""
+"Static images are fun, but it's even more fun to make them move. This is "
+"also amazingly simple to do with MicroPython ~ just use a list of images!"
+msgstr ""
+"静止したイメージは楽しいですが、それを移動させるのはもっと楽しいです。これを行うもの "
+"MicroPython では驚くほど簡単です ~ イメージのリストを使うだけです！"
+
+#: ../../tutorials/images.rst:126
+msgid "Here is a shopping list::"
+msgstr "ここに買い物リストがあります::"
+
+#: ../../tutorials/images.rst:128
+msgid ""
+"Eggs\n"
+"Bacon\n"
+"Tomatoes"
+msgstr ""
+
+#: ../../tutorials/images.rst:132
+msgid "Here's how you'd represent this list in Python::"
+msgstr "このリストを Python で表現する方法は次のとおりです::"
+
+#: ../../tutorials/images.rst:134
+msgid "shopping = [\"Eggs\", \"Bacon\", \"Tomatoes\" ]"
+msgstr ""
+
+#: ../../tutorials/images.rst:136
+msgid ""
+"I've simply created a list called ``shopping`` and it contains three "
+"items. Python knows it's a list because it's enclosed in square brackets "
+"(``[`` and ``]``). Items in the list are separated by a comma (``,``) and"
+" in this instance the items are three strings of characters: "
+"``\"Eggs\"``, ``\"Bacon\"`` and ``\"Tomatoes\"``. We know they are "
+"strings of characters because they're enclosed in quotation marks ``\"``."
+msgstr ""
+"単に ``shopping`` というリストを作成し、３つの要素を入れました。Python はそれが"
+"角括弧 (``[`` と ``]``) で囲まれているので、リストだと分かります。リスト内の要素は"
+"カンマ (``,``) で区切られ、このインスタンス内の要素は３個の文字列 ``\"Eggs\"``, "
+"``\"Bacon\"``, ``\"Tomatoes\"`` となっています。各要素は引用符で囲まれているので、"
+"文字列であると分かります。"
+
+#: ../../tutorials/images.rst:143
+msgid "You can store anything in a list with Python. Here's a list of numbers::"
+msgstr "Python ではリストに任意のデータを格納できます。数値のリストは次のとおりです::"
+
+#: ../../tutorials/images.rst:145
+msgid "primes = [2, 3, 5, 7, 11, 13, 17, 19]"
+msgstr ""
+
+#: ../../tutorials/images.rst:150
+msgid ""
+"Numbers don't need to be quoted since they represent a value (rather than"
+" a string of characters). It's the difference between ``2`` (the numeric "
+"value 2) and ``\"2\"`` (the character/digit representing the number 2). "
+"Don't worry if this doesn't make sense right now. You'll soon get used to"
+" it."
+msgstr ""
+"数値は(文字列ではなく)単一の値を表すため、引用符で囲む必要はありません。 "
+"``2`` (数値の 2) と ``\"2\"`` (数字の 2 を表す文字)は違うものです。"
+"今のところはよく分からなくても心配要りません。すぐに違いに慣れるでしょう。"
+
+#: ../../tutorials/images.rst:155
+msgid "It's even possible to store different sorts of things in the same list::"
+msgstr "同じリストにさまざまな種類のデータを入れることもできます::"
+
+#: ../../tutorials/images.rst:157
+msgid "mixed_up_list = [\"hello!\", 1.234, Image.HAPPY]"
+msgstr ""
+
+#: ../../tutorials/images.rst:159
+msgid "Notice that last item? It was an image!"
+msgstr "最後の要素に注目してください。イメージです！"
+
+#: ../../tutorials/images.rst:161
+msgid ""
+"We can tell MicroPython to animate a list of images. Luckily we have a "
+"couple of lists of images already built in. They're called "
+"``Image.ALL_CLOCKS`` and ``Image.ALL_ARROWS``::"
+msgstr ""
+"イメージのリストをアニメーション化するよう MicroPython に指示できます。"
+"幸いにも既に組み込まれているイメージのリストがあります。 "
+"``Image.ALL_CLOCKS`` と ``Image.ALL_ARROWS`` です。"
+
+#: ../../tutorials/images.rst:165
+msgid ""
+"from microbit import *\n"
+"\n"
+"display.show(Image.ALL_CLOCKS, loop=True, delay=100)"
+msgstr ""
+
+#: ../../tutorials/images.rst:169
+msgid ""
+"As with a single image, we use ``display.show`` to show it on the "
+"device's display. However, we tell MicroPython to use "
+"``Image.ALL_CLOCKS`` and it understands that it needs to show each image "
+"in the list, one after the other. We also tell MicroPython to keep "
+"looping over the list of images (so the animation lasts forever) by "
+"saying ``loop=True``. Furthermore, we tell it that we want the delay "
+"between each image to be only 100 milliseconds (a tenth of a second) with"
+" the argument ``delay=100``."
+msgstr ""
+"単一の画像と同様に、デバイスのディスプレイに表示するには ``display.show`` を"
+"使います。しかし、MicroPython には ``Image.ALL_CLOCKS`` の利用を伝えているので、"
+"リスト中の各イメージを次々に表示する必要があることを理解します。また、イメージの"
+"リストをループするよう(アニメーションが永遠に続くよう) MicroPython に伝えるために "
+"``loop=True`` を指定しています。さらに、各イメージ間の表示間隔を 100 ミリ秒 (0.1 "
+"秒)とするために引数 ``delay=100`` を指定しています。"
+
+#: ../../tutorials/images.rst:177
+msgid ""
+"Can you work out how to animate over the ``Image.ALL_ARROWS`` list? How "
+"do you avoid looping forever (hint: the opposite of ``True`` is ``False``"
+" although the default value for ``loop`` is ``False``)? Can you change "
+"the speed of the animation?"
+msgstr ""
+"``Image.ALL_ARROWS`` リストをアニメーション化する方法を考え出せますか？　"
+"永遠にループしないようにするにはどうしますか？　(ヒント: ``True`` の反対は "
+"``False`` ですが、 ``loop`` 引数のデフォルト値は ``False`` です)　"
+"アニメーションのスピードを変えることができますか？"
+
+#: ../../tutorials/images.rst:182
+msgid ""
+"Finally, here's how to create your own animation. In my example I'm going"
+" to make my boat sink into the bottom of the display::"
+msgstr ""
+"最後に、自前のアニメーションを作成する方法について説明します。この例では、"
+"ボートをディスプレイの底に沈めます::"
+
+#: ../../tutorials/images.rst:185
+msgid ""
+"from microbit import *\n"
+"\n"
+"boat1 = Image(\"05050:\"\n"
+"              \"05050:\"\n"
+"              \"05050:\"\n"
+"              \"99999:\"\n"
+"              \"09990\")\n"
+"\n"
+"boat2 = Image(\"00000:\"\n"
+"              \"05050:\"\n"
+"              \"05050:\"\n"
+"              \"05050:\"\n"
+"              \"99999\")\n"
+"\n"
+"boat3 = Image(\"00000:\"\n"
+"              \"00000:\"\n"
+"              \"05050:\"\n"
+"              \"05050:\"\n"
+"              \"05050\")\n"
+"\n"
+"boat4 = Image(\"00000:\"\n"
+"              \"00000:\"\n"
+"              \"00000:\"\n"
+"              \"05050:\"\n"
+"              \"05050\")\n"
+"\n"
+"boat5 = Image(\"00000:\"\n"
+"              \"00000:\"\n"
+"              \"00000:\"\n"
+"              \"00000:\"\n"
+"              \"05050\")\n"
+"\n"
+"boat6 = Image(\"00000:\"\n"
+"              \"00000:\"\n"
+"              \"00000:\"\n"
+"              \"00000:\"\n"
+"              \"00000\")\n"
+"\n"
+"all_boats = [boat1, boat2, boat3, boat4, boat5, boat6]\n"
+"display.show(all_boats, delay=200)"
+msgstr ""
+
+#: ../../tutorials/images.rst:226
+msgid "Here's how the code works:"
+msgstr "コードの仕組みは次のとおりです::"
+
+#: ../../tutorials/images.rst:228
+msgid "I create six ``boat`` images in exactly the same way I described above."
+msgstr "先に説明したのとまったく同じ方法で６個のイメージを作成"
+
+#: ../../tutorials/images.rst:229
+msgid "Then, I put them all into a list that I call ``all_boats``."
+msgstr "作成したイメージすべてを ``all_boats`` というリストに格納"
+
+#: ../../tutorials/images.rst:230
+msgid ""
+"Finally, I ask ``display.show`` to animate the list with a delay of 200 "
+"milliseconds."
+msgstr ""
+"``display.show`` でリストのイメージを 200 ミリ秒間隔でアニメーション化"
+
+#: ../../tutorials/images.rst:231
+msgid ""
+"Since I've not set ``loop=True`` the boat will only sink once (thus "
+"making my animation scientifically accurate). :-)"
+msgstr ""
+"``loop=True`` は指定していないので、ボートは一度だけ沈没(すなわち"
+"アニメーションは科学的に正確)。:-)"
+
+#: ../../tutorials/images.rst:233
+msgid ""
+"What would you animate? Can you animate special effects? How would you "
+"make an image fade out and then fade in again?"
+msgstr ""
+"あなたは何をアニメーションにしますか？　特殊効果をアニメーション化できますか？　"
+"イメージをフェードアウトさせてから再びフェードインするにはどうしますか？"
+
+#: ../../tutorials/introduction.rst:2
+msgid "Introduction"
+msgstr "はじめに"
+
+#: ../../tutorials/introduction.rst:4
+msgid ""
+"We suggest you download and use the `mu editor <http://codewith.mu/>`_ "
+"when working through these tutorials. Instructions for downloading and "
+"installing Mu are on its website. You may need to install a driver, "
+"depending on your platform (instruction are on the website)."
+msgstr ""
+"このチュートリアルにしたがってプログラムするにあたっては　"
+"`mu エディタ <http://codewith.mu/>`_ の利用を勧めます。"
+"mu をダウンロードしてインストールする手順は mu の Web サイトにあります。"
+"プラットフォームによってはドライバのインスールが必要となります(手順は Web サイトにあります)。"
+
+#: ../../tutorials/introduction.rst:9
+msgid "Mu works with Windows, OSX and Linux."
+msgstr "mu は Windows, OSX, Linux で動作します。"
+
+#: ../../tutorials/introduction.rst:11
+msgid ""
+"Once Mu is installed connect your micro:bit to your computer via a USB "
+"lead."
+msgstr ""
+"mu をインストールしたら micro:bit をコンピュータを USB ケーブルで"
+"繋いでください。"
+
+#: ../../tutorials/introduction.rst:13
+msgid ""
+"Write your script in the editor window and click the \"Flash\" button to "
+"transfer it to the micro:bit. If it doesn't work, make sure your "
+"micro:bit appears as a USB storage device in your file system explorer."
+msgstr ""
+"エディタウィンドウでスクリプトを書いたら \"Flash\" ボタンをクリックして micro:bit "
+"に転送します。うまくいかない場合、micro:bit が USB ストレージデバイスとしてファイル"
+"システム上に現れているかを確認してください。"
+
+#: ../../tutorials/introduction.rst:17
+msgid "Tutorials"
+msgstr "チュートリアル"
+
+#: ../../tutorials/introduction.rst:36
+msgid ""
+"Python is one of the `world's most popular "
+"<http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html>`_ "
+"programming languages. Every day, without realising, you probably use "
+"software written using Python. All sorts of companies and organisations "
+"use Python for a diverse range of applications. Google, NASA, Bank of "
+"America, Disney, CERN, YouTube, Mozilla, The Guardian - the list goes on "
+"and covers all sectors of the economy, science and the arts."
+msgstr ""
+"Python は `世界的に最も人気のある "
+"<http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html>`_ "
+"プログラミング言語の一つです。知らず知らずに Python を使って書かれたソフトウェアを"
+"日々使っているかもしれません。あらゆる業種の企業や組織が多様なアプリケーションに Python "
+"を使用しています。Google, NASA, Bank of America, Disney, CERN, YouTube, Mozilla, "
+"The Guardian - このリストは、経済、科学、芸術のすべての分野を網羅しています。"
+
+#: ../../tutorials/introduction.rst:42
+msgid ""
+"For example, do you remember the announcement of the `discovery of "
+"gravitational waves <http://www.bbc.co.uk/news/science-"
+"environment-35552207>`_? The instruments used to make the measurements "
+"were controlled `with Python "
+"<https://www.reddit.com/r/IAmA/comments/45g8qu/we_are_the_ligo_scientific_collaboration_and_we/czxnlux>`_."
+msgstr ""
+"たとえば、 `重力波の検出 <http://www.bbc.co.uk/news/science-environment-35552207>`_ "
+"の発表を憶えていますか？　測定を行う機器は "
+"`Python で <https://www.reddit.com/r/IAmA/comments/45g8qu/we_are_the_ligo_scientific_collaboration_and_we/czxnlux>`_ "
+"制御されていました。"
+
+#: ../../tutorials/introduction.rst:44
+msgid ""
+"Put simply, if you teach or learn Python, you are developing a highly "
+"valuable skill that applies to all areas of human endeavour."
+msgstr ""
+"簡単に言えば、Python を教えたり学んだりすると、人間が活動するすべての分野に"
+"適用される高いスキルを開発することになります。"
+
+#: ../../tutorials/introduction.rst:47
+msgid ""
+"One such area is the BBC's amazing micro:bit device. It runs a version of"
+" Python called MicroPython that's designed to run on small computers like"
+" the BBC micro:bit. It's a full implementation of Python 3 so when you "
+"move onto other things (such as programming Python on a Raspberry Pi) "
+"you'll use exactly the same language."
+msgstr ""
+"そのような領域の一つが、BBC の驚くべき micro:bit デバイスです。このデバイスでは "
+"MicroPython という Python の一派生版が動きます。MicroPython は BBC micro:bit "
+"のような小さなコンピュータで動くようデザインされています。MicroPython は Python 3 "
+"のフル実装したものであるので、他のものに移る場合でも(たとえば Raspberry Pi で Python "
+"プログラミングするような場合でも)、まったく同じ言語を使えます。"
+
+#: ../../tutorials/introduction.rst:53
+msgid ""
+"MicroPython does not include all the standard code libraries that come "
+"with \"regular\" Python. However, we have created a special ``microbit`` "
+"module in MicroPython that lets you control the device."
+msgstr ""
+"MicroPython には \"通常の\" Python にある標準ライブラリがありませんしかし、MicroPython "
+"でデバイスを制御するよう特別に用意した ``microbit`` モジュールがあります。"
+
+#: ../../tutorials/introduction.rst:57
+msgid ""
+"Python and MicroPython are free software. Not only does this mean you "
+"don't pay anything to use Python, but you are also free to contribute "
+"back to the Python community. This may be in the form of code, "
+"documentation, bug reports, running a community group or writing "
+"tutorials (like this one). In fact, all the Python related resources for "
+"the BBC micro:bit have been created by an international team of "
+"volunteers working in their free time."
+msgstr ""
+"Python と MicroPython はフリーソフトウェアです。これは Python "
+"を使用するにあたって何も支払わないことを意味するだけでなく、自由に Python "
+"コミュニティに貢献できることも意味します。コード、ドキュメント、バグ報告、"
+"コミュニティグループの活動、(本書のような)チュートリアルの作成などの形で貢献"
+"できるのです。実際、BBC micro:bit のための Python 関連のリソースはすべて、"
+"自由な時間に活動するボランティアの国際チームによって作成されています。"
+
+#: ../../tutorials/introduction.rst:64
+msgid ""
+"These lessons introduce MicroPython and the BBC micro:bit in easy-to-"
+"follow steps. Feel free to adopt and adapt them for classroom based "
+"lessons, or perhaps just follow them on your own at home."
+msgstr ""
+"このレッスンでは MicroPython と BBC micro:bit を実践しやすい順で紹介していきます。"
+"教室でのレッスンのためにこれを採用して実践してもよいですし、家で自分で実践することも"
+"できます。"
+
+#: ../../tutorials/introduction.rst:68
+msgid ""
+"You'll have most success if you explore, experiment and play. You can't "
+"break a BBC micro:bit by writing incorrect code. Just dive in!"
+msgstr ""
+"探索し、実験し、遊んでみることで多くの成功を得ることができるでしょう。"
+"間違ったコードを書いても micro:bit は壊れません。とにかくやってみましょう！"
+
+#: ../../tutorials/introduction.rst:71
+msgid ""
+"A word of warning: *you will fail many times*, and that is fine. "
+"**Failure is how good software developers learn**. Those of us who work "
+"as software developers have a lot of fun tracking down bugs and avoiding "
+"the repetition of mistakes."
+msgstr ""
+"注意の言葉: *あなたは何度も失敗するでしょうが* 、それでよいのです。 "
+"**失敗はよいソフトウェア開発者が学んでいる方法なのです** 。ソフトウェア開発者として"
+"働いている私たちには、バグの追跡し、間違いの繰り返しを避けるようにすることが、"
+"とても楽しいものなのです。"
+
+#: ../../tutorials/introduction.rst:76
+msgid "If in doubt, remember the Zen of MicroPython::"
+msgstr "疑わしいときは Zen of MicroPython を思い起こしてください::"
+
+#: ../../tutorials/introduction.rst:78
+msgid ""
+"Code,\n"
+"Hack it,\n"
+"Less is more,\n"
+"Keep it simple,\n"
+"Small is beautiful,\n"
+"\n"
+"Be brave! Break things! Learn and have fun!\n"
+"Express yourself with MicroPython.\n"
+"\n"
+"Happy hacking! :-)"
+msgstr ""
+"Code, (コード)\n"
+"Hack it, (ハックしよう)\n"
+"Less is more, (小さいほど豊かである)\n"
+"Keep it simple, (単純にしよう)\n"
+"Small is beautiful, (小さいことは美しい)\n"
+"\n"
+"Be brave! Break things! Learn and have fun! (勇気を出そう！　前に進もう！　学び、楽しもう！)\n"
+"Express yourself with MicroPython. (MicroPython で自分を表現しよう)\n"
+"\n"
+"\"Happy hacking! :-)\n"
+
+#: ../../tutorials/introduction.rst:89
+msgid "Best of luck!"
+msgstr "幸運を祈ります！"
+
+#: ../../tutorials/io.rst:91
+msgid ""
+"The image of the pizeo buzzer is CC BY-NC-SA 3.0 from "
+"https://www.flickr.com/photos/tronixstuff/4821350094"
+msgstr ""
+"圧電ブザーの画像は CC BY-NC-SA 3.0 ライセンスにより "
+"https://www.flickr.com/photos/tronixstuff/4821350094 のものを使っています。"
+
+#: ../../tutorials/io.rst:2
+msgid "Input/Output"
+msgstr "入出力"
+
+#: ../../tutorials/io.rst:4
+msgid ""
+"There are strips of metal along the bottom edge of the BBC micro:bit that"
+" make it look as if the device has teeth. These are the input/output pins"
+" (or I/O pins for short)."
+msgstr ""
+"BBC micro:bit の下端に沿って金属の端子があります。歯が並んでいるかのように見えるアレです。"
+"これは入出力端子というものです(略称 I/O 端子)。"
+
+#: ../../tutorials/io.rst:9
+msgid ".. image:: tutorials/blue-microbit.png"
+msgstr ""
+
+#: ../../tutorials/io.rst:10
+msgid ""
+"Some of the pins are bigger than others so it's possible to attach "
+"crocodile clips to them. These are the ones labelled 0, 1, 2, 3V and GND "
+"(computers always start counting from zero). If you attach an edge "
+"connector board to the device it's possible to plug in wires connected to"
+" the other (smaller) pins."
+msgstr ""
+"端子のいくつかは他の端子よりも大きいので、ワニ口クリップを取り付けられます。"
+"大きい端子には 0, 1, 2, 3V, GND のラベルが付いています(コンピュータは常にゼロから"
+"数え始めます)。デバイスにエッジコネクタボードを取り付けると、他の(より小さい)端子に"
+"ワイヤを結線できるようになります。"
+
+#: ../../tutorials/io.rst:15
+msgid ""
+"Each pin on the BBC micro:bit is represented by an *object* called "
+"``pinN`` where ``N`` is the pin number. So, for example, to do things "
+"with the pin labelled with a 0 (zero), use the object called ``pin0``."
+msgstr ""
+"BBC micro:bit の各端子は ``pinN`` という *オブジェクト* で表します。"
+"ここで ``N`` は端子番号です。したがって、0 (ゼロ)のラベルの付いた端子で何かを行うには "
+"``pin0`` というオブジェクトを使います。"
+
+#: ../../tutorials/io.rst:21
+msgid ""
+"These objects have various *methods* associated with them depending upon "
+"what the specific pin is capable of."
+msgstr ""
+"これらのオブジェクトには様々な *メソッド* があり、端子に固有の機能に応じたものが"
+"用意されています。"
+
+#: ../../tutorials/io.rst:25
+msgid "Ticklish Python"
+msgstr "くすぐったがりな Python (Ticklish Python)"
+
+#: ../../tutorials/io.rst:27
+msgid ""
+"The simplest example of input via the pins is a check to see if they are "
+"touched. So, you can tickle your device to make it laugh like this::"
+msgstr ""
+"端子を介した入力の最も単純な例は、それに触れているかどうかをチェックすることです。"
+"デバイスをくすぐって笑わせてみましょう::"
+
+#: ../../tutorials/io.rst:30
+msgid ""
+"from microbit import *\n"
+"\n"
+"while True:\n"
+"    if pin0.is_touched():\n"
+"        display.show(Image.HAPPY)\n"
+"    else:\n"
+"        display.show(Image.SAD)"
+msgstr ""
+
+#: ../../tutorials/io.rst:38
+msgid ""
+"With one hand, hold your device by the GND pin. Then, with your other "
+"hand, touch (or tickle) the 0 (zero) pin. You should see the display "
+"change from grumpy to happy!"
+msgstr ""
+"片手でデバイスの GND 端子を持ちます。次に、もう一方の手で 0 "
+"(ゼロ)の端子を触れてください。ディスプレイが心配顔から笑い顔に変わるのを見てください！"
+
+#: ../../tutorials/io.rst:42
+msgid ""
+"This is a form of very basic input measurement. However, the fun really "
+"starts when you plug in circuits and other devices via the pins."
+msgstr ""
+"これは非常に基本的な入力測定の一つです。しかし、端子を使って回路や他のデバイスを接続"
+"すると、もっと楽しいことが始まります。"
+
+#: ../../tutorials/io.rst:46
+msgid "Bleeps and Bloops"
+msgstr "ブーピー音"
+
+#: ../../tutorials/io.rst:48
+msgid ""
+"The simplest thing we can attach to the device is a Piezo buzzer. We're "
+"going to use it for output."
+msgstr ""
+"デバイスに取り付けられる最も簡単なものは圧電ブザーです。これを出力用に使用してみます(訳注: "
+"同じような形状をしていても、圧電サウンダまたは圧電スピーカーと呼ばれているものでは音が鳴りません)。"
+
+#: ../../tutorials/io.rst:52
+msgid ".. image:: tutorials/piezo_buzzer.jpg"
+msgstr ""
+
+#: ../../tutorials/io.rst:53
+msgid ""
+"These small devices play a high-pitched bleep when connected to a "
+"circuit. To attach one to your BBC micro:bit you should attach crocodile "
+"clips to pin 0 and GND (as shown below)."
+msgstr ""
+"この小型デバイスを回路に接続すると高音域のブザー音を鳴らします。BBC micro:bit に"
+"取り付けるには、ワニ口クリップを使って端子 0 と GND に接続します(下図を参照)。"
+
+#: ../../tutorials/io.rst:58 ../../tutorials/movement.rst:61
+#: ../../tutorials/music.rst:11
+msgid ".. image:: tutorials/pin0-gnd.png"
+msgstr ""
+
+#: ../../tutorials/io.rst:59
+msgid ""
+"The wire from pin 0 should be attached to the positive connector on the "
+"buzzer and the wire from GND to the negative connector."
+msgstr ""
+"端子 0 からの線をブザーのプラス側に接続し、GND からの線をマイナス側に接続します。"
+
+#: ../../tutorials/io.rst:62
+msgid "The following program will cause the buzzer to make a sound::"
+msgstr "次のプログラムはブザー音を鳴らします::"
+
+#: ../../tutorials/io.rst:64
+msgid ""
+"from microbit import *\n"
+"\n"
+"pin0.write_digital(1)"
+msgstr ""
+
+#: ../../tutorials/io.rst:68
+msgid ""
+"This is fun for about 5 seconds and then you'll want to make the horrible"
+" squeaking stop. Let's improve our example and make the device bleep::"
+msgstr ""
+"5秒ほどは楽しいかもしれませんが、すぐにうるさくなって音を止めたくなるでしょう。"
+"先のプログラムを改善して、デバイスを鳴らしてみましょう::"
+
+#: ../../tutorials/io.rst:71
+msgid ""
+"from microbit import *\n"
+"\n"
+"while True:\n"
+"    pin0.write_digital(1)\n"
+"    sleep(20)\n"
+"    pin0.write_digital(0)\n"
+"    sleep(480)"
+msgstr ""
+
+#: ../../tutorials/io.rst:79
+msgid ""
+"Can you work out how this script works? Remember that ``1`` is \"on\" and"
+" ``0`` is \"off\" in the digital world."
+msgstr ""
+"このスクリプトの仕組みを理解できますか？　デジタルの世界では ``1`` が「オン」で ``0`` "
+"が「オフ」であることを思い出してください。"
+
+#: ../../tutorials/io.rst:82
+msgid ""
+"The device is put into an infinite loop and immediately switches pin 0 "
+"on. This causes the buzzer to emit a beep. While the buzzer is beeping, "
+"the device sleeps for twenty milliseconds and then switches pin 0 off. "
+"This gives the effect of a short bleep. Finally, the device sleeps for "
+"480 milliseconds before looping back and starting all over again. This "
+"means you'll get two bleeps per second (one every 500 milliseconds)."
+msgstr ""
+"デバイスは無限ループに入り、すぐに端子 0 をオンに切り替えます。これによりブザー音が"
+"鳴ります。ブザーが鳴っている間、デバイスは 20 ミリ秒間スリープし、端子 0 をオフに"
+"切り替えます。これにより短いブザー音を発生させます。最後に、デバイスは 480 ミリ秒間"
+"スリープしてから、ループバックして、もう一度やり直します。つまり、1 秒間に 2 回の"
+"鳴動(500 ミリ秒ごとに 1 回)が発生します。"
+
+#: ../../tutorials/io.rst:89
+msgid "We've made a very simple metronome!"
+msgstr "私たちは非常に簡単なメトロノームを作ったのです！"
+
+#: ../../tutorials/movement.rst:2
+msgid "Movement"
+msgstr "動きの検知"
+
+#: ../../tutorials/movement.rst:4
+msgid ""
+"Your BBC micro:bit comes with an accelerometer. It measures movement "
+"along three axes:"
+msgstr ""
+"BBC micro:bit には加速度センサーがついています。これは 3 軸に沿った動きを測定します:"
+
+#: ../../tutorials/movement.rst:7
+msgid "X - tilting from left to right."
+msgstr "X - 左右の傾き"
+
+#: ../../tutorials/movement.rst:8
+msgid "Y - tilting forwards and backwards."
+msgstr "Y - 前後の傾き"
+
+#: ../../tutorials/movement.rst:9
+msgid "Z - moving up and down."
+msgstr "Z - 上下の動き"
+
+#: ../../tutorials/movement.rst:11
+msgid ""
+"There is a method for each axis that returns a positive or negative "
+"number indicating a measurement in milli-g's. When the reading is 0 you "
+"are \"level\" along that particular axis."
+msgstr ""
+"各軸についてミリg単位の測定結果を正または負の数を返すメソッドがあります。"
+"読み取り値が 0 の場合は、その特定の軸に沿って「水平」になっているということです。"
+
+#: ../../tutorials/movement.rst:15
+msgid ""
+"For example, here's a very simple spirit-level that uses ``get_x`` to "
+"measure how level the device is along the X axis::"
+msgstr ""
+"たとえば、X 軸に沿ってどのくらいの動きかを測定するために ``get_x`` を使う、"
+"非常にシンプルな判定プログラムは以下のようになります::"
+
+#: ../../tutorials/movement.rst:18
+msgid ""
+"from microbit import *\n"
+"\n"
+"while True:\n"
+"    reading = accelerometer.get_x()\n"
+"    if reading > 20:\n"
+"        display.show(\"R\")\n"
+"    elif reading < -20:\n"
+"        display.show(\"L\")\n"
+"    else:\n"
+"        display.show(\"-\")"
+msgstr ""
+
+#: ../../tutorials/movement.rst:29
+msgid ""
+"If you hold the device flat it should display ``-``; however, rotate it "
+"left or right and it'll show ``L`` and ``R`` respectively."
+msgstr ""
+"デバイスを水平にしておくと ``-`` を表示します。しかし、左右に傾けるとそれぞれ "
+"``L`` と ``R`` を表示します。"
+
+#: ../../tutorials/movement.rst:32
+msgid ""
+"We want the device to constantly react to change, so we use an infinite "
+"``while`` loop. The first thing to happen *within the body of the loop* "
+"is a measurement along the X axis which is called ``reading``. Because "
+"the accelerometer is *so* sensitive I've made level +/-20 in range. It's "
+"why the ``if`` and ``elif`` conditionals check for ``> 20`` and ``< "
+"-20``. The ``else`` statement means that if the ``reading`` is between "
+"-20 and 20 then we consider it level. For each of these conditions we use"
+" the display to show the appropriate character."
+msgstr ""
+"デバイスが絶えず変化に反応するように、無限 ``while`` ループを使います。 "
+"*ループの本体内で* 行っている最初のことは X 軸に沿った測定で、結果を ``reading`` "
+"としています。加速度センサーはとても感度が高いので、+/-20 レベルを検知の幅としました。"
+"これが ``if`` と ``elif`` の条件式で ``> 20`` と ``< -20`` をチェックしている"
+"理由です。 ``else`` 文は ``reading`` が -20 と 20 の範囲内なら水平とみなすことを"
+"意味します。これらの条件のそれぞれについて、適切な文字を表示するためにディスプレイを"
+"使っています。"
+
+#: ../../tutorials/movement.rst:41
+msgid ""
+"There is also a ``get_y`` method for the Y axis and a ``get_z`` method "
+"for the Z axis."
+msgstr ""
+"Y軸のための ``get_y`` メソッドと Z 軸のための ``get_z`` メソッドもあります。"
+
+#: ../../tutorials/movement.rst:44
+msgid ""
+"If you've ever wondered how a mobile phone knows which up to show the "
+"images on its screen, it's because it uses an accelerometer in exactly "
+"the same way as the program above. Game controllers also contain "
+"accelerometers to help you steer and move around in games."
+msgstr ""
+"スマートフォンの縦横で表示が切り替わるのは、上のプログラムと同じように"
+"加速度センサーを使っているからです。また、ゲームコントローラーの中には、"
+"ゲームでの操作や移動を支援するために加速度センサーが含まれているものもあります。"
+
+#: ../../tutorials/movement.rst:50
+msgid "Musical Mayhem"
+msgstr "ミュージカル・メイヘム(Musical Mayhem)"
+
+#: ../../tutorials/movement.rst:52
+msgid ""
+"One of the most wonderful aspects of MicroPython on the BBC micro:bit is "
+"how it lets you easily link different capabilities of the device "
+"together. For example, let's turn it into a musical instrument (of "
+"sorts)."
+msgstr ""
+"BBC micro:bit の MicroPythonの の最も素晴らしい点の１つは、デバイスのさまざまな"
+"機能を簡単にリンクする方法です。たとえば、楽器(のようなもの)に変えてみましょう。"
+
+#: ../../tutorials/movement.rst:56
+msgid ""
+"Connect a speaker as you did in the music tutorial. Use crocodile clips "
+"to attach pin 0 and GND to the positive and negative inputs on the "
+"speaker - it doesn't matter which way round they are connected to the "
+"speaker."
+msgstr ""
+"ミュージックのチュートリアルのようにスピーカーを接続します。ワニ口クリップを使用して、"
+"端子 0 と GND をスピーカーの正と負の入力に接続します。スピーカーにどのように接続"
+"するかは関係ありません。"
+
+#: ../../tutorials/movement.rst:62
+msgid ""
+"What happens if we take the readings from the accelerometer and play them"
+" as pitches? Let's find out::"
+msgstr ""
+"加速度センサーからの値をピッチとして演奏するとどうなりますか？　確認してみましょう::"
+
+#: ../../tutorials/movement.rst:65
+msgid ""
+"from microbit import *\n"
+"import music\n"
+"\n"
+"while True:\n"
+"    music.pitch(accelerometer.get_y(), 10)"
+msgstr ""
+
+#: ../../tutorials/movement.rst:71
+msgid ""
+"The key line is at the end and remarkably simple. We *nest* the reading "
+"from the Y axis as the frequency to feed into the ``music.pitch`` method."
+" We only let it play for 10 milliseconds because we want the tone to "
+"change quickly as the device is tipped. Because the device is in an "
+"infinite ``while`` loop it is constantly reacting to changes in the Y "
+"axis measurement."
+msgstr ""
+"問題の行は最後にありますが、非常に簡単です。 ``music.pitch`` メソッドに渡す"
+"周波数として Y 軸の読込みを *入れ子* にしています。デバイスが傾けられたときに"
+"音色をすばやく変更したいので、10ミリ秒間だけ再生させます。デバイス操作は無限 ``while`` "
+"ループにあるので、Y 軸測定の変化にすぐに反応します。"
+
+#: ../../tutorials/movement.rst:77
+msgid "That's it!"
+msgstr "これでおしまい！"
+
+#: ../../tutorials/movement.rst:79
+msgid ""
+"Tip the device forwards and backwards. If the reading along the Y axis is"
+" positive it'll change the pitch of the tone played by the micro:bit."
+msgstr ""
+"デバイスを前後に傾けます。Y 軸に沿った読み取り値が正の場合、マイクロビットで演奏"
+"される音のピッチが変わります。"
+
+#: ../../tutorials/movement.rst:82
+msgid ""
+"Imagine a whole symphony orchestra of these devices. Can you play a tune?"
+" How would you improve the program to make the micro:bit sound more "
+"musical?"
+msgstr ""
+"これらのデバイスを使った楽団を想像してみてください。あなたは曲を演奏できますか？　 "
+"micro:bit のサウンドをより楽器らしくするためにプログラムをどう改善しますか？"
+
+#: ../../tutorials/music.rst:2
+msgid "Music"
+msgstr "ミュージック"
+
+#: ../../tutorials/music.rst:4
+msgid ""
+"MicroPython on the BBC micro:bit comes with a powerful music and sound "
+"module. It's very easy to generate bleeps and bloops from the device *if "
+"you attach a speaker*. Use crocodile clips to attach pin 0 and GND to the"
+" positive and negative inputs on the speaker - it doesn't matter which "
+"way round they are connected to the speaker."
+msgstr ""
+"BBC micro:bit の MicroPython には、強力な音楽とサウンドのモジュールがあります。 "
+"*スピーカーを接続すれば* 、デバイスから音を鳴らすのは非常に簡単です。ワニ口クリップを"
+"使用して、端子 0 と GND をスピーカーの正と負の入力に接続します。スピーカーにどのように"
+"接続するかは関係ありません。"
+
+#: ../../tutorials/music.rst:14
+msgid ""
+"Do not attempt this with a Piezo buzzer - such buzzers are only able to "
+"play a single tone."
+msgstr ""
+"圧電ブザーでこれを試してはいけません - 圧電ブザーでは単一の音しか出せません。"
+
+#: ../../tutorials/music.rst:17
+msgid "Let's play some music::"
+msgstr "音楽を演奏しましょう::"
+
+#: ../../tutorials/music.rst:19
+msgid ""
+"import music\n"
+"\n"
+"music.play(music.NYAN)"
+msgstr ""
+
+#: ../../tutorials/music.rst:23
+msgid ""
+"Notice that we import the ``music`` module. It contains methods used to "
+"make and control sound."
+msgstr ""
+"``music`` モジュールをインポートすることに注意してください。これにはサウンドの"
+"作成と制御に使うメソッドが含まれています。"
+
+#: ../../tutorials/music.rst:26
+msgid "MicroPython has quite a lot of built-in melodies. Here's a complete list:"
+msgstr "MicroPython には多くのメロディが内蔵されています。ここに完全なリストがあります:"
+
+#: ../../tutorials/music.rst:28
+msgid "``music.DADADADUM``"
+msgstr ""
+
+#: ../../tutorials/music.rst:29
+msgid "``music.ENTERTAINER``"
+msgstr ""
+
+#: ../../tutorials/music.rst:30
+msgid "``music.PRELUDE``"
+msgstr ""
+
+#: ../../tutorials/music.rst:31
+msgid "``music.ODE``"
+msgstr ""
+
+#: ../../tutorials/music.rst:32
+msgid "``music.NYAN``"
+msgstr ""
+
+#: ../../tutorials/music.rst:33
+msgid "``music.RINGTONE``"
+msgstr ""
+
+#: ../../tutorials/music.rst:34
+msgid "``music.FUNK``"
+msgstr ""
+
+#: ../../tutorials/music.rst:35
+msgid "``music.BLUES``"
+msgstr ""
+
+#: ../../tutorials/music.rst:36
+msgid "``music.BIRTHDAY``"
+msgstr ""
+
+#: ../../tutorials/music.rst:37
+msgid "``music.WEDDING``"
+msgstr ""
+
+#: ../../tutorials/music.rst:38
+msgid "``music.FUNERAL``"
+msgstr ""
+
+#: ../../tutorials/music.rst:39
+msgid "``music.PUNCHLINE``"
+msgstr ""
+
+#: ../../tutorials/music.rst:40
+msgid "``music.PYTHON``"
+msgstr ""
+
+#: ../../tutorials/music.rst:41
+msgid "``music.BADDY``"
+msgstr ""
+
+#: ../../tutorials/music.rst:42
+msgid "``music.CHASE``"
+msgstr ""
+
+#: ../../tutorials/music.rst:43
+msgid "``music.BA_DING``"
+msgstr ""
+
+#: ../../tutorials/music.rst:44
+msgid "``music.WAWAWAWAA``"
+msgstr ""
+
+#: ../../tutorials/music.rst:45
+msgid "``music.JUMP_UP``"
+msgstr ""
+
+#: ../../tutorials/music.rst:46
+msgid "``music.JUMP_DOWN``"
+msgstr ""
+
+#: ../../tutorials/music.rst:47
+msgid "``music.POWER_UP``"
+msgstr ""
+
+#: ../../tutorials/music.rst:48
+msgid "``music.POWER_DOWN``"
+msgstr ""
+
+#: ../../tutorials/music.rst:50
+msgid ""
+"Take the example code and change the melody. Which one is your favourite?"
+" How would you use such tunes as signals or cues?"
+msgstr ""
+"先のサンプルコードのメロディーを変更してください。どれがお気に入りですか？　"
+"このような曲をお知らせの合図としてどのように使いますか？"
+
+#: ../../tutorials/music.rst:54
+msgid "Wolfgang Amadeus Microbit"
+msgstr "ヴォルフガング・アマデウス・マイクロビット(Wolfgang Amadeus Microbit)"
+
+#: ../../tutorials/music.rst:56
+msgid "Creating your own tunes is easy!"
+msgstr "自分の曲を作成するのは簡単です！"
+
+#: ../../tutorials/music.rst:58
+msgid ""
+"Each note has a name (like ``C#`` or ``F``), an octave (telling "
+"MicroPython how high or low the note should be played) and a duration "
+"(how long it lasts through time). Octaves are indicated by a number ~ 0 "
+"is the lowest octave, 4 contains middle C and 8 is about as high as "
+"you'll ever need unless you're making music for dogs. Durations are also "
+"expressed as numbers. The higher the value of the duration the longer it "
+"will last. Such values are related to each other - for instance, a "
+"duration of ``4`` will last twice as long as a duration ``2`` (and so "
+"on). If you use the note name ``R`` then MicroPython will play a rest "
+"(i.e. silence) for the specified duration."
+msgstr ""
+"各音符には音階名(``C#`` や ``F`` など)、オクターブ(音の高さ)、持続時間(鳴らす時間)が"
+"あります。オクターブは数字で示します ~ 0 は最低のオクターブ、4は中位の C を含み、8 "
+"は犬のための音楽を作っていない限りは必要ないぐらいに高くなります。持続時間も数字で"
+"表されます。持続時間の値が高いほど音を鳴らす時間が長くなります。持続時間の値はお互いに
+"関連しています ~ たとえば、持続時間 ``4`` は　持続時間 ``2`` の 2 倍の長さです。"
+"音階名 R を使用すると、MicroPython は指定された持続時間だけ、休符(つまり無音)を再生します。"
+
+#: ../../tutorials/music.rst:68
+msgid "Each note is expressed as a string of characters like this::"
+msgstr "各音符は次のような文字列で表されます。"
+
+#: ../../tutorials/music.rst:70
+msgid "NOTE[octave][:duration]"
+msgstr ""
+
+#: ../../tutorials/music.rst:72
+msgid ""
+"For example, ``\"A1:4\"`` refers to the note named ``A`` in octave number"
+" ``1`` to be played for a duration of ``4``."
+msgstr ""
+"たとえば 、``\"A1:4\"`` は音階名が ``A`` 、オクターブが ``1`` 、持続時間が ``4`` "
+"である音符を指します。"
+
+#: ../../tutorials/music.rst:75
+msgid ""
+"Make a list of notes to create a melody (it's equivalent to creating an "
+"animation with a list of images). For example, here's how to make "
+"MicroPython play opening of \"Frere Jaques\"::"
+msgstr ""
+"音符のリストを作成してメロディーを作成しましょう(これは、画像のリストでアニメーションを"
+"作成するのと同じです)。たとえば、MicroPython が \"Frere Jaques\" (フランス民謡)の"
+"冒頭を演奏するようにする方法は次のとおりです::"
+
+#: ../../tutorials/music.rst:79
+msgid ""
+"import music\n"
+"\n"
+"tune = [\"C4:4\", \"D4:4\", \"E4:4\", \"C4:4\", \"C4:4\", \"D4:4\", "
+"\"E4:4\", \"C4:4\",\n"
+"        \"E4:4\", \"F4:4\", \"G4:8\", \"E4:4\", \"F4:4\", \"G4:8\"]\n"
+"music.play(tune)"
+msgstr ""
+
+#: ../../tutorials/music.rst:87
+msgid ""
+"MicroPython helps you to simplify such melodies. It'll remember the "
+"octave and duration values until you next change them. As a result, the "
+"example above can be re-written as::"
+msgstr ""
+"は上記のメロディを簡単にできます。オクターブと持続時間は次に変更するまで"
+"値をおぼえています。結果として、上記の例は次のように書き直すことができます::"
+
+#: ../../tutorials/music.rst:97
+msgid ""
+"Notice how the octave and duration values only change when they have to. "
+"It's a lot less typing and simpler to read."
+msgstr ""
+"オクターブと持続時間の値がどの変えているかに注目してください。このほうが入力がずっと"
+"簡単で、読むのが簡単です。"
+
+#: ../../tutorials/music.rst:101
+msgid "Sound Effects"
+msgstr "音響効果"
+
+#: ../../tutorials/music.rst:103
+msgid ""
+"MicroPython lets you make tones that are not musical notes. For example, "
+"here's how to create a Police siren effect::"
+msgstr ""
+"MicroPython では、音符ではないトーンを作成できます。たとえば、警察のサイレン効果を"
+"作成する方法は次のとおりです::"
+
+#: ../../tutorials/music.rst:106
+msgid ""
+"import music\n"
+"\n"
+"while True:\n"
+"    for freq in range(880, 1760, 16):\n"
+"        music.pitch(freq, 6)\n"
+"    for freq in range(1760, 880, -16):\n"
+"        music.pitch(freq, 6)"
+msgstr ""
+
+#: ../../tutorials/music.rst:115
+msgid ""
+"Notice how the ``music.pitch`` *method* is used in this instance. It "
+"expects a frequency. For example, the frequency of ``440`` is the same as"
+" a concert ``A`` used to tune a symphony orchestra."
+msgstr ""
+"この例で ``music.pitch`` メソッドがどのように使われているかに注目してください。"
+"このメソッドは周波数の指定を期待しています。たとえば、周波数 ``440`` は、"
+"交響楽団がチューニングするために使用する調律音 ``A`` と同じです。"
+
+#: ../../tutorials/music.rst:119
+msgid ""
+"In the example above the ``range`` function is used to generate ranges of"
+" numeric values. These numbers are used to define the pitch of the tone. "
+"The three arguments for the ``range`` function are the start value, end "
+"value and step size. Therefore, the first use of ``range`` is saying, in "
+"English, \"create a range of numbers between 880 and 1760 in steps of "
+"16\". The second use of ``range`` is saying, \"create a range of values "
+"between 1760 and 880 in steps of -16\". This is how we get a range of "
+"frequencies that go up and down in pitch like a siren."
+msgstr ""
+"上記の例では ``range`` 関数を使用して数値の範囲を生成しています。これらの数字は"
+"音色のピッチを定義するために使用されます。 ``range`` 関数の3つの引数は、開始値、"
+"終了値、間隔幅です。したがって、 ``range`` 関数を最初に使っているところを日本語で"
+"言うと「880 から 1760 までの範囲の数字を 16 間隔で作成する」となります。2 番目に"
+"使っている ``range`` では「1760 から 880 の範囲の値を -16 間隔で作成する」と"
+"なります。これは、サイレンのような音程で上下に変化する周波数の範囲を得る方法です。"
+
+#: ../../tutorials/music.rst:128
+msgid ""
+"Because the siren should last forever it's wrapped in an infinite "
+"``while`` loop."
+msgstr ""
+"サイレンを永遠に続けるために、無限の ``while`` ループで囲います。"
+
+#: ../../tutorials/music.rst:131
+msgid ""
+"Importantly, we have introduced a new sort of a loop inside the ``while``"
+" loop: the ``for`` loop. In English it's like saying, \"for each item in "
+"some collection, do some activity with it\". Specifically in the example "
+"above, it's saying, \"for each frequency in the specified range of "
+"frequencies, play the pitch of that frequency for 6 milliseconds\". "
+"Notice how the thing to do for each item in a for loop is indented (as "
+"discussed earlier) so Python knows exactly which code to run to handle "
+"the individual items."
+msgstr ""
+"重要なのは、 ``while`` ループ内に新しい一連のループ( ``for`` ループ)を入れたこと"
+"です。この ``for`` ループを日本語で言えば「あるコレクションの各アイテムそれぞれに"
+"ついて何らかのアクティビティを実行する」ということです。具体的には上記の例では"
+"「指定された周波数範囲の各周波数に対して、その周波数のピッチを6ミリ秒間再生する」"
+"ということです。``for`` ループの各項目に対して行う処理はインデント(先に説明済み)"
+"していますので、Python は個々の項目を処理するコードを正確に認識しています。"
+
+#: ../../tutorials/network.rst:302
+msgid ""
+"The image of Queen Elizabeth II is licensed as per the details here: "
+"https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_II_March_2015.jpg"
+msgstr ""
+"エリザベス２世女王の画像のライセンスは "
+"https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_II_March_2015.jpg"
+" に詳しく記載されています。"
+
+#: ../../tutorials/network.rst:2
+msgid "Network"
+msgstr "ネットワーク"
+
+#: ../../tutorials/network.rst:4
+msgid ""
+"It is possible to connect devices together to send and receive messages "
+"to and from each other. This is called a network. A network of "
+"interconnected networks is called an internet. The Internet is an "
+"internet of all the internets."
+msgstr ""
+"デバイスの間で互いにメッセージの送受信を行えます。これをネットワークといいます。"
+"相互接続されたネットワークのネットワークはインターネットと呼ばれます。"
+"ザ・インターネットはすべてのインターネットのインターネットです。"
+
+#: ../../tutorials/network.rst:9
+msgid ""
+"Networking is hard and this is reflected in the program described below. "
+"However, the beautiful thing about this project is it contains all the "
+"common aspects of network programming you need to know about. It's also "
+"remarkably simple and fun."
+msgstr ""
+"ネットワーク処理は大変であり、これは以降のプログラムにも表れています。しかし、"
+"このプロジェクトの美しいところは、あなたが知る必要があるネットワークプログラミングの"
+"共通点がすべて含まれていることです。それはまた非常にシンプルで楽しいものです。"
+
+#: ../../tutorials/network.rst:14
+msgid "But first, let's set the scene..."
+msgstr "しかし、まず、シーンを設定しましょう ..."
+
+#: ../../tutorials/network.rst:17
+msgid "Connection"
+msgstr "結線"
+
+#: ../../tutorials/network.rst:19
+msgid ""
+"Imagine a network as a series of layers. At the very bottom is the most "
+"fundamental aspect of communication: there needs to be some sort of way "
+"for a signal to get from one device to the other. Sometimes this is done "
+"via a radio connection, but in this example we're simply going to use two"
+" wires."
+msgstr ""
+"ネットワークを一連の階層と想像してみてください。一番下の部分は通信の最も基本的な"
+"部分です。あるデバイスから別のデバイスに信号を到達するための何らかの方法が必要です。"
+"これは無線接続で行われることもありますが、この例では単に２本のワイヤを使用します。"
+
+#: ../../tutorials/network.rst:25
+msgid ".. image:: tutorials/network.png"
+msgstr ""
+
+#: ../../tutorials/network.rst:26
+msgid ""
+"It is upon this foundation that we can build all the other layers in the "
+"*network stack*."
+msgstr ""
+"この基盤の上に、 *ネットワークスタック* 内の他のすべての階層を構築できます。"
+
+#: ../../tutorials/network.rst:29
+msgid ""
+"As the diagram shows, blue and red micro:bits are connected via crocodile"
+" leads. Both use pin 1 for output and pin 2 for input. The output from "
+"one device is connected to the input on the other. It's a bit like "
+"knowing which way round to hold a telephone handset - one end has a "
+"microphone (the input) and the other a speaker (the output). The "
+"recording of your voice via your microphone is played out of the other "
+"person's speaker. If you hold the phone the wrong way up, you'll get "
+"strange results!"
+msgstr ""
+"図に示すように、青と赤のマイクロビットはワニ口クリップのリード線で接続します。"
+"両方とも出力には端子１を使い、入力の場合は端子２を使います。一方のデバイスからの"
+"出力は、他方の入力に接続します。これは、電話の受話器をどう持つのかを知っている"
+"ようなものです。一方の端にはマイク(入力)があり、他方にはスピーカー(出力)があります。"
+"マイクによるあなたの声は、もう一方の人のスピーカーから聞こえます。あなたが受話器を"
+"間違って持てば、奇妙な結果を得るでしょう！"
+
+#: ../../tutorials/network.rst:37
+msgid ""
+"It's exactly the same in this instance: you must connect the wires "
+"properly!"
+msgstr ""
+"この場合もまったく同じです。ワイヤを正しく接続する必要があります。"
+
+#: ../../tutorials/network.rst:40
+msgid "Signal"
+msgstr "信号"
+
+#: ../../tutorials/network.rst:42
+msgid ""
+"The next layer in the *network stack* is the signal. Often this will "
+"depend upon the characteristics of the connection. In our example it's "
+"simply digital on and off signals sent down the wires via the IO pins."
+msgstr ""
+"*ネットワークスタック* の次の層が信号です。多くの場合、これは接続の特性に依存します。"
+"この例では、単に I/O 端子を介してワイヤーで送られるデジタルのオン/オフ信号です。"
+
+#: ../../tutorials/network.rst:46
+msgid "If you remember, it's possible to use the IO pins like this::"
+msgstr "覚えているでしょうが、I/O 端子は次のように使えます::"
+
+#: ../../tutorials/network.rst:48
+msgid ""
+"pin1.write_digital(1)  # switch the signal on\n"
+"pin1.write_digital(0)  # switch the signal off\n"
+"input = pin2.read_digital()  # read the value of the signal (either 1 or "
+"0)"
+msgstr ""
+"pin1.write_digital(1)  # 信号をオンにする\n"
+"pin1.write_digital(0)  # 信号をオフにする\n"
+"input = pin2.read_digital()  # 信号の値(1か0)を読む"
+
+#: ../../tutorials/network.rst:52
+msgid ""
+"The next step involves describing how to use and handle a signal. For "
+"that we need a..."
+msgstr ""
+"次のステップでは、信号の使用方法と処理方法を説明します。そのために必要なのは ..."
+
+#: ../../tutorials/network.rst:56
+msgid "Protocol"
+msgstr "プロトコル"
+
+#: ../../tutorials/network.rst:58
+msgid ""
+"If you ever meet the Queen there are expectations about how you ought to "
+"behave. For example, when she arrives you may bow or curtsey, if she "
+"offers her hand politely shake it, refer to her as \"your majesty\" and "
+"thereafter as \"ma'am\" and so on. This set of rules is called the royal "
+"protocol. A protocol explains how to behave given a specific situation "
+"(such as meeting the Queen). A protocol is pre-defined to ensure everyone"
+" understands what's going on before a given situation arises."
+msgstr ""
+"あなたがエリザベス女王に会ったことがあるなら、あなたがどう行動すべきかについて期待"
+"されることがあります。たとえば、女王が到着したときには身を低くしてお辞儀し、女王が"
+"手を丁寧に振ってくれたら、「陛下」と言い、その後「女王様」と言います。この一連の規則は"
+"ロイヤルプロトコルと呼ばれます。プロトコルは、特定の状況(女王との出会いなど)が与えられた"
+"ときの行動の仕方を説明します。ある状況が起こる前に何が起こっているのかを誰もが確実に"
+"理解できるように、プロトコルがあらかじめ定義されています。"
+
+#: ../../tutorials/network.rst:67
+msgid ".. image:: tutorials/queen.jpg"
+msgstr ""
+
+#: ../../tutorials/network.rst:68
+msgid ""
+"It is for this reason that we define and use protocols for communicating "
+"messages via a computer network. Computers need to agree before hand how "
+"to send and receive messages. Perhaps the best known protocol is the "
+"hypertext transfer protocol (HTTP) used by the world wide web."
+msgstr ""
+"この理由から、コンピュータネットワークを介してメッセージを伝達するためのプロトコルを"
+"定義して使用します。コンピュータでは、メッセージを送受信する方法を渡す前に同意する"
+"必要があります。おそらく、最もよく知られているプロトコルは、ワールドワイドウェブに"
+"よって使用されるハイパーテキスト転送プロトコル(HTTP)でしょう。"
+
+#: ../../tutorials/network.rst:73
+msgid ""
+"Another famous protocol for sending messages (that pre-dates computers) "
+"is Morse code. It defines how to send character-based messages via on/off"
+" signals of long or short durations. Often such signals are played as "
+"bleeps. Long durations are called dashes (``-``) whereas short durations "
+"are dots (``.``). By combining dashes and dots Morse defines a way to "
+"send characters. For example, here's how the standard Morse alphabet is "
+"defined::"
+msgstr ""
+"メッセージを送信するためのもう１つの有名なプロトコルは(コンピュータが現れる前のから"
+"ありますが)モールス符号です。これは、長時間または短時間のオン/オフ信号を介して"
+"文字ベースのメッセージを送信する方法を定義します。このような信号は、しばしばビープ音"
+"として再生されます。長い信号は長点(``-``)と呼ばれ、短い信号は短点(``.``)です。"
+"長点と短点を組み合わせることで、モールスは文字を送信する方法を定義しています。"
+"たとえば、標準のモールスアルファベットがどのように定義されているかを次に示します。"
+
+#: ../../tutorials/network.rst:80
+msgid ""
+".-    A     .---  J     ...   S     .----  1      ----.  9\n"
+"-...  B     -.-   K     -     T     ..---  2      -----  0\n"
+"-.-.  C     .-..  L     ..-   U     ...--  3\n"
+"-..   D     --    M     ...-  V     ....-  4\n"
+".     E     -.    N     .--   W     .....  5\n"
+"..-.  F     ---   O     -..-  X     -....  6\n"
+"--.   G     .--.  P     -.--  Y     --...  7\n"
+"....  H     --.-  Q     --..  Z     ---..  8\n"
+"..    I     .-.   R"
+msgstr ""
+
+#: ../../tutorials/network.rst:90
+msgid ""
+"Given the chart above, to send the character \"H\" the signal is switched"
+" on four times for a short duration, indicating four dots (``....``). For"
+" the letter \"L\" the signal is also switched on four times, but the "
+"second signal has a longer duration (``.-..``)."
+msgstr ""
+"上図を見ると、文字 \"H\" を送信するには、4つの短点(``....``)で示してあるとおり、"
+"短い信号を４回スイッチオンします。文字 "\"L\" についても、信号を4回スイッチオンしますが、"
+"第２信号はより長い持続時間になります(``.-..``)"
+
+#: ../../tutorials/network.rst:95
+msgid ""
+"Obviously, the timing of the signal is important: we need to tell a dot "
+"from a dash. That's another point of a protocol, to agree such things so "
+"everyone's implementation of the protocol will work with everyone elses. "
+"In this instance we'll just say that:"
+msgstr ""
+"明らかに、信号のタイミングは重要です。短点と長点の方法を取り決めておく必要があります。"
+"これはプロトコルのもう一つのポイントです。そうしたことに同意することで、すべての"
+"プロトコルの実装が他のすべての実装と連携できるようになります。この例では、次のように"
+"言います。"
+
+#: ../../tutorials/network.rst:100
+msgid "A signal with a duration less than 250 milliseconds is a dot."
+msgstr "持続時間が 250 ミリ秒未満の信号は短点とします。"
+
+#: ../../tutorials/network.rst:101
+msgid ""
+"A signal with a duration from 250 milliseconds to less than 500 "
+"milliseconds is a dash."
+msgstr ""
+"250 ミリ秒から 500 ミリ秒未満の持続時間を有する信号は長点とします。"
+
+#: ../../tutorials/network.rst:102
+msgid "Any other duration of signal is ignored."
+msgstr "他の持続時間の信号は無視するものとします。"
+
+#: ../../tutorials/network.rst:103
+msgid ""
+"A pause / gap in the signal of greater than 500 milliseconds indicates "
+"the end of a character."
+msgstr ""
+"信号のない時間が 500 ミリ秒を超えると、文字の終わりを示します。"
+
+#: ../../tutorials/network.rst:105
+msgid ""
+"In this way, the sending of a letter \"H\" is defined as four \"on\" "
+"signals that last no longer than 250 milliseconds each, followed by a "
+"pause of greater than 500 milliseconds (indicating the end of the "
+"character)."
+msgstr ""
+"このように、文字 \"H\" の送信は、それぞれが250ミリ秒を超えない4つの「オン」"
+"信号として定義され、続いて信号を出さない時間を 500 ミリ秒(文字の終りを示す)を"
+"超えるまで続けます。"
+
+#: ../../tutorials/network.rst:110
+msgid "Message"
+msgstr "メッセージ"
+
+#: ../../tutorials/network.rst:112
+msgid ""
+"We're finally at a stage where we can build a message - a message that "
+"actually means something to us humans. This is the top-most layer of our "
+"*network stack*."
+msgstr ""
+"私たちは最終的にメッセージを作り上げる段階に入りました。メッセージは実際に私たち"
+"人間にとって何かを意味します。これはネットワークスタックの一番上の層となります"
+
+#: ../../tutorials/network.rst:116
+msgid ""
+"Using the protocol defined above I can send the following sequence of "
+"signals down the physical wire to the other micro:bit::"
+msgstr ""
+"上で定義したプロトコルを使用して、以下の信号シーケンスを物理的なワイヤーを介して"
+"他の micro:bit に送ることができます::"
+
+#: ../../tutorials/network.rst:119
+msgid "...././.-../.-../---/.--/---/.-./.-../-.."
+msgstr ""
+
+#: ../../tutorials/network.rst:121
+msgid "Can you work out what it says?"
+msgstr "あなたはそれが何を言っているのか解明できますか？"
+
+#: ../../tutorials/network.rst:124
+msgid "Application"
+msgstr "アプリケーション"
+
+#: ../../tutorials/network.rst:126
+msgid ""
+"It's all very well having a network stack, but you also need a way to "
+"interact with it - some form of application to send and receive messages."
+" While HTTP is interesting *most* people don't know about it and let "
+"their web-browser handle it - the underlying *network stack* of the world"
+" wide web is hidden (as it should be)."
+msgstr ""
+"ネットワークスタックを作ることは非常にうまくいっていますが、メッセージを送受信する"
+"ためのアプリケーションの形式も必要です。HTTP は興味深いですが、 *ほとんど* の人は"
+"それを知らず、Web ブラウザで処理します。ワールドワイドウェブの基盤となる "
+"*ネットワークスタック* は隠されています(そうあるべきなのです)。"
+
+#: ../../tutorials/network.rst:132
+msgid ""
+"So, what sort of application should we write for the BBC micro:bit? How "
+"should it work, from the user's point of view?"
+msgstr ""
+"では、BBC micro:bit のためにどのようなアプリケーションを書くべきでしょうか？　"
+"ユーザーの視点からは、どのように機能すべきでしょうか？"
+
+#: ../../tutorials/network.rst:135
+msgid ""
+"Obviously, to send a message you should be able to input dots and dashes "
+"(we can use button A for that). If we want to see the message we sent or "
+"just received we should be able to trigger it to scroll across the "
+"display (we can use button B for that). Finally, this being Morse code, "
+"if a speaker is attached, we should be able to play the beeps as a form "
+"of aural feedback while the user is entering their message."
+msgstr ""
+"明らかに、メッセージを送信するには、短点と長点を入力できる必要があります(これには"
+"ボタン A を使用できます)。送受信したメッセージを見たい場合は、ディスプレイ上に"
+"メッセージをスクロールするよう指示できる必要があります(そのためにボタン B を使用"
+"できます)。最後に、これはモールス符号であり、スピーカーが接続されている場合は、"
+"ユーザーがメッセージを入力している間にビープ音を聴覚フィードバックの一形態として"
+"再生する必要があります。"
+
+#: ../../tutorials/network.rst:143
+msgid "The End Result"
+msgstr "最終結果"
+
+#: ../../tutorials/network.rst:145
+msgid ""
+"Here's the program, in all its glory and annotated with plenty of "
+"comments so you can see what's going on::"
+msgstr ""
+"以下がプログラムです。上記に検討したことはすべて盛り込んであります。"
+"何を行っているかが分かりやすいようにたくさんのコメントをつけています::"
+
+#: ../../tutorials/network.rst:148
+msgid ""
+"from microbit import *\n"
+"import music\n"
+"\n"
+"\n"
+"# A lookup table of morse codes and associated characters.\n"
+"MORSE_CODE_LOOKUP = {\n"
+"    \".-\": \"A\",\n"
+"    \"-...\": \"B\",\n"
+"    \"-.-.\": \"C\",\n"
+"    \"-..\": \"D\",\n"
+"    \".\": \"E\",\n"
+"    \"..-.\": \"F\",\n"
+"    \"--.\": \"G\",\n"
+"    \"....\": \"H\",\n"
+"    \"..\": \"I\",\n"
+"    \".---\": \"J\",\n"
+"    \"-.-\": \"K\",\n"
+"    \".-..\": \"L\",\n"
+"    \"--\": \"M\",\n"
+"    \"-.\": \"N\",\n"
+"    \"---\": \"O\",\n"
+"    \".--.\": \"P\",\n"
+"    \"--.-\": \"Q\",\n"
+"    \".-.\": \"R\",\n"
+"    \"...\": \"S\",\n"
+"    \"-\": \"T\",\n"
+"    \"..-\": \"U\",\n"
+"    \"...-\": \"V\",\n"
+"    \".--\": \"W\",\n"
+"    \"-..-\": \"X\",\n"
+"    \"-.--\": \"Y\",\n"
+"    \"--..\": \"Z\",\n"
+"    \".----\": \"1\",\n"
+"    \"..---\": \"2\",\n"
+"    \"...--\": \"3\",\n"
+"    \"....-\": \"4\",\n"
+"    \".....\": \"5\",\n"
+"    \"-....\": \"6\",\n"
+"    \"--...\": \"7\",\n"
+"    \"---..\": \"8\",\n"
+"    \"----.\": \"9\",\n"
+"    \"-----\": \"0\"\n"
+"}\n"
+"\n"
+"\n"
+"def decode(buffer):\n"
+"    # Attempts to get the buffer of Morse code data from the lookup "
+"table. If\n"
+"    # it's not there, just return a full stop.\n"
+"    return MORSE_CODE_LOOKUP.get(buffer, '.')\n"
+"\n"
+"\n"
+"# How to display a single dot.\n"
+"DOT = Image(\"00000:\"\n"
+"            \"00000:\"\n"
+"            \"00900:\"\n"
+"            \"00000:\"\n"
+"            \"00000:\")\n"
+"\n"
+"\n"
+"# How to display a single dash.\n"
+"DASH = Image(\"00000:\"\n"
+"             \"00000:\"\n"
+"             \"09990:\"\n"
+"             \"00000:\"\n"
+"             \"00000:\")\n"
+"\n"
+"\n"
+"# To create a DOT you need to hold the button for less than 250ms.\n"
+"DOT_THRESHOLD = 250\n"
+"# To create a DASH you need to hold the button for less than 500ms.\n"
+"DASH_THRESHOLD = 500\n"
+"\n"
+"\n"
+"# Holds the incoming Morse signals.\n"
+"buffer = ''\n"
+"# Holds the translated Morse as characters.\n"
+"message = ''\n"
+"# The time from which the device has been waiting for the next keypress.\n"
+"started_to_wait = running_time()\n"
+"\n"
+"\n"
+"# Put the device in a loop to wait for and react to key presses.\n"
+"while True:\n"
+"    # Work out how long the device has been waiting for a keypress.\n"
+"    waiting = running_time() - started_to_wait\n"
+"    # Reset the timestamp for the key_down_time.\n"
+"    key_down_time = None\n"
+"    # If button_a is held down, then...\n"
+"    while button_a.is_pressed():\n"
+"        # Play a beep - this is Morse code y'know ;-)\n"
+"        music.pitch(880, 10)\n"
+"        # Set pin1 (output) to \"on\"\n"
+"        pin1.write_digital(1)\n"
+"        # ...and if there's not a key_down_time then set it to now!\n"
+"        if not key_down_time:\n"
+"            key_down_time = running_time()\n"
+"    # Alternatively, if pin2 (input) is getting a signal, pretend it's a\n"
+"    # button_a key press...\n"
+"    while pin2.read_digital():\n"
+"        if not key_down_time:\n"
+"            key_down_time = running_time()\n"
+"    # Get the current time and call it key_up_time.\n"
+"    key_up_time = running_time()\n"
+"    # Set pin1 (output) to \"off\"\n"
+"    pin1.write_digital(0)\n"
+"    # If there's a key_down_time (created when button_a was first pressed"
+"\n"
+"    # down).\n"
+"    if key_down_time:\n"
+"        # ... then work out for how long it was pressed.\n"
+"        duration = key_up_time - key_down_time\n"
+"        # If the duration is less than the max length for a \"dot\" "
+"press...\n"
+"        if duration < DOT_THRESHOLD:\n"
+"            # ... then add a dot to the buffer containing incoming Morse "
+"codes\n"
+"            # and display a dot on the display.\n"
+"            buffer += '.'\n"
+"            display.show(DOT)\n"
+"        # Else, if the duration is less than the max length for a "
+"\"dash\"\n"
+"        # press... (but longer than that for a DOT ~ handled above)\n"
+"        elif duration < DASH_THRESHOLD:\n"
+"            # ... then add a dash to the buffer and display a dash.\n"
+"            buffer += '-'\n"
+"            display.show(DASH)\n"
+"        # Otherwise, any other sort of keypress duration is ignored (this"
+" isn't\n"
+"        # needed, but added for \"understandability\").\n"
+"        else:\n"
+"            pass\n"
+"        # The button press has been handled, so reset the time from which"
+" the\n"
+"        # device is starting to wait for a  button press.\n"
+"        started_to_wait = running_time()\n"
+"    # Otherwise, there hasn't been a button_a press during this cycle of "
+"the\n"
+"    # loop, so check there's not been a pause to indicate an end of the\n"
+"    # incoming Morse code character. The pause must be longer than a DASH"
+"\n"
+"    # code's duration.\n"
+"    elif len(buffer) > 0 and waiting > DASH_THRESHOLD:\n"
+"        # There is a buffer and it's reached the end of a code so...\n"
+"        # Decode the incoming buffer.\n"
+"        character = decode(buffer)\n"
+"        # Reset the buffer to empty.\n"
+"        buffer = ''\n"
+"        # Show the decoded character.\n"
+"        display.show(character)\n"
+"        # Add the character to the message.\n"
+"        message += character\n"
+"    # Finally, if button_b was pressed while all the above was going "
+"on...\n"
+"    if button_b.was_pressed():\n"
+"        # ... display the message,\n"
+"        display.scroll(message)\n"
+"        # then reset it to empty (ready for a new message).\n"
+"        message = ''"
+msgstr ""
+"from microbit import *\n"
+"import music\n"
+"\n"
+"\n"
+"# モールス信号とそれが表す文字のルックアップテーブル。\n"
+"MORSE_CODE_LOOKUP = {\n"
+"    \".-\": \"A\",\n"
+"    \"-...\": \"B\",\n"
+"    \"-.-.\": \"C\",\n"
+"    \"-..\": \"D\",\n"
+"    \".\": \"E\",\n"
+"    \"..-.\": \"F\",\n"
+"    \"--.\": \"G\",\n"
+"    \"....\": \"H\",\n"
+"    \"..\": \"I\",\n"
+"    \".---\": \"J\",\n"
+"    \"-.-\": \"K\",\n"
+"    \".-..\": \"L\",\n"
+"    \"--\": \"M\",\n"
+"    \"-.\": \"N\",\n"
+"    \"---\": \"O\",\n"
+"    \".--.\": \"P\",\n"
+"    \"--.-\": \"Q\",\n"
+"    \".-.\": \"R\",\n"
+"    \"...\": \"S\",\n"
+"    \"-\": \"T\",\n"
+"    \"..-\": \"U\",\n"
+"    \"...-\": \"V\",\n"
+"    \".--\": \"W\",\n"
+"    \"-..-\": \"X\",\n"
+"    \"-.--\": \"Y\",\n"
+"    \"--..\": \"Z\",\n"
+"    \".----\": \"1\",\n"
+"    \"..---\": \"2\",\n"
+"    \"...--\": \"3\",\n"
+"    \"....-\": \"4\",\n"
+"    \".....\": \"5\",\n"
+"    \"-....\": \"6\",\n"
+"    \"--...\": \"7\",\n"
+"    \"---..\": \"8\",\n"
+"    \"----.\": \"9\",\n"
+"    \"-----\": \"0\"\n"
+"}\n"
+"\n"
+"\n"
+"def decode(buffer):\n"
+"    # ルックアップテーブルからモールス信号を探します\n"
+"    # 該当するものがなければ、終止符を返します。\n"
+"    return MORSE_CODE_LOOKUP.get(buffer, '.')\n"
+"\n"
+"\n"
+"# 単一の短点を表示する方法。\n"
+"DOT = Image(\"00000:\"\n"
+"            \"00000:\"\n"
+"            \"00900:\"\n"
+"            \"00000:\"\n"
+"            \"00000:\")\n"
+"\n"
+"\n"
+"# 単一の長点を表示する方法。\n"
+"DASH = Image(\"00000:\"\n"
+"             \"00000:\"\n"
+"             \"09990:\"\n"
+"             \"00000:\"\n"
+"             \"00000:\")\n"
+"\n"
+"\n"
+"# 短点を作るには 250 ミリ秒未満でボタンを押す必要あり。\n"
+"DOT_THRESHOLD = 250\n"
+"# 長点を作るには 250 ミリ秒未満でボタンを押す必要ある。\n"
+"DASH_THRESHOLD = 500\n"
+"\n"
+"\n"
+"# 入ってくるモールス信号を保持。\n"
+"buffer = ''\n"
+"# モールス信号から文字に変換したものを保持。\n"
+"message = ''\n"
+"# 次にボタンが押されるのをデバイスが待ち始めた時間。\n"
+"started_to_wait = running_time()\n"
+"\n"
+"\n"
+"# デバイスがボタンの押下を待って反応するためのループ。\n"
+"while True:\n"
+"    # デバイスがボタンの押下を待っている時間を計算。\n"
+"    waiting = running_time() - started_to_wait\n"
+"    # key_down_time のタイムスタンプをリセット。\n"
+"    key_down_time = None\n"
+"    # ボタンAが押されたら ...\n"
+"    while button_a.is_pressed():\n"
+"        # ビープ音を鳴らす - つまりモールス信号を鳴らします ;-)\n"
+"        music.pitch(880, 10)\n"
+"        # 端子1 (出力) を \"オン\" にします。\n"
+"        pin1.write_digital(1)\n"
+"        # ... そして key_down_time が設定されていない場合はすぐに設定 !\n"
+"        if not key_down_time:\n"
+"            key_down_time = running_time()\n"
+"    # 端子2が信号を受け取っている場合は、ボタンAが押されたかのような\n"
+"    # ふりをして ...\n"
+"    while pin2.read_digital():\n"
+"        if not key_down_time:\n"
+"            key_down_time = running_time()\n"
+"    # 現在の時刻を取得して key_up_time に入れます。\n"
+"    key_up_time = running_time()\n"
+"    # 端子1 (出力)を \"オフ\" にします。\n"
+"    pin1.write_digital(0)\n"
+"    # key_down_time に値が入っていた場合(ボタンAが押されたときに\n"
+"    # 設定されます)\n"
+"    if key_down_time:\n"
+"        # ... ボタンが押されていた時間を調べます。\n"
+"        duration = key_up_time - key_down_time\n"
+"        # 押されていた時間が \"短点\" の最大長未満であれば ...\n"
+"        if duration < DOT_THRESHOLD:\n"
+"            # ... 着信したモールス信号を格納するバッファに短点を追加して、\n"
+"            # ディスプレイに短点を表示。\n"
+"            buffer += '.'\n"
+"            display.show(DOT)\n"
+"        # そうでなく、押されていた時間が \"長点\" の最大長未満であれば ...\n"
+"        # (しかし、上で判定した短点よりは長い)\n"
+"        elif duration < DASH_THRESHOLD:\n"
+"            # ... バッファに長点を追加し、長点を表示\n"
+"            buffer += '-'\n"
+"            display.show(DASH)\n"
+"        # さもなければ、その他の押下時間は無視します。(これは必要ではなく、\n"
+"        # \"わかりやすさ\" のために追記しています)\n"
+"        else:\n"
+"            pass\n"
+"        # ボタン押下を処理したので、ボタン押下をデバイスが\n"
+"        # 待ち始める時間をリセット。\n"
+"        started_to_wait = running_time()\n"
+"    # さもなければ、このループのサイクルではボタンAの押下が無かったで、\n"
+"    # モールス信号文字の終端を示す一時停止が無いかをチェックします。\n"
+"    # 一時停止は長点信号の時間よりも長い必要があります。\n"
+"    elif len(buffer) > 0 and waiting > DASH_THRESHOLD:\n"
+"        # バッファになにかあり、信号の終端に達したので ...\n"
+"        # バッファにあるものをデコードします。\n"
+"        character = decode(buffer)\n"
+"        # バッファを空にリセットします。\n"
+"        buffer = ''\n"
+"        # デコード結果の文字を表示します。\n"
+"        display.show(character)\n"
+"        # メッセージに文字を追加します。\n"
+"        message += character\n"
+"    # 最後に、上記すべてが行われている間にボタンBが押されていたら ...\n"
+"    if button_b.was_pressed():\n"
+"        # ... メッセージを表示して、\n"
+"        display.scroll(message)\n"
+"        # メッセージを空にリセットします(新しいメッセージの準備)。\n"
+"        message = ''"
+
+#: ../../tutorials/network.rst:298
+msgid ""
+"How would you improve it? Can you change the definition of a dot and a "
+"dash so speedy Morse code users can use it? What happens if both devices "
+"are sending at the same time? What might you do to handle this situation?"
+msgstr ""
+"どのように改善しますか？　短点と長点の定義を変更して、高速のモールスコードをユーザが"
+"使えるようにできますか？　両方のデバイスが同時に送信している場合はどうなりますか？　"
+"この状況を処理するためには何をすればよいでしょうか？"
+
+#: ../../tutorials/next.rst:2
+msgid "Next Steps"
+msgstr "次のステップ"
+
+#: ../../tutorials/next.rst:4
+msgid ""
+"These tutorials are only the first steps in using MicroPython with the "
+"BBC micro:bit. A musical analogy: you've got a basic understanding of a "
+"very simple instrument and confidently play \"Three Blind Mice\"."
+msgstr ""
+"ここまでのチュートリアルは、MicroPython を BBC micro:bit で使う最初のステップに"
+"すぎません。音楽でいえば、あなたは非常に簡単な楽器の基本的な理解を得て、自信を持って "
+"\"Three Blind Mice\" (訳注: イギリスの古いマザーグース)を演奏しているところです。"
+
+#: ../../tutorials/next.rst:8
+msgid "This is an achievement to build upon."
+msgstr "これは築き上げた成果です。"
+
+#: ../../tutorials/next.rst:10
+msgid "Ahead of you is an exciting journey to becoming a virtuoso coder."
+msgstr "あなたが巨匠コーダーになるエキサイティングな旅の始まりです。"
+
+#: ../../tutorials/next.rst:12
+msgid ""
+"You will encounter frustration, failure and foolishness. When you do "
+"please remember that you're not alone. Python has a secret weapon: the "
+"most amazing community of programmers on the planet. Connect with this "
+"community and you will make friends, find mentors, support each other and"
+" share resources."
+msgstr ""
+"あなたは欲求不満、失敗、愚かさに直面します。そうなるのは、あなただけではないことを"
+"覚えておいてください。Python には秘密兵器があります。それは地球上で最も素晴らしい"
+"プログラマーのコミュニティです。このコミュニティとつながり、友達を作り、メンターを"
+"見つけ、お互いをサポートし、リソースを共有します。"
+
+#: ../../tutorials/next.rst:17
+msgid ""
+"The examples in the tutorials are simple to explain but may not be the "
+"simplest or most efficient implementations. We've left out lots of "
+"*really fun stuff* so we could concentrate on arming you with the basics."
+" If you *really* want to know how to make MicroPython fly on the BBC "
+"micro:bit then read the API reference documentation. It contains "
+"information about *all* the capabilities available to you."
+msgstr ""
+"チュートリアルの例は説明が簡単ですが、最も単純で効率的な実装ではありません。"
+"私たちは *本当は楽しいもの* をたくさん残してきましたので、あなたに基本に集中する"
+"ことができました。あなたが BBC micro:bit で *本当に* MicroPython を極めたい"
+"のであれば API リファレンスを参照してください。利用可能な機能に関する *すべての* "
+"情報があります。"
+
+#: ../../tutorials/next.rst:24
+msgid ""
+"Explore, experiment and be fearless trying things out ~ for these are the"
+" attributes of a virtuoso coder. To encourage you we have hidden a number"
+" of `Easter eggs <https://en.wikipedia.org/wiki/Easter_egg_(media)>`_ in "
+"MicroPython and the Python code editors. They're fun rewards for looking "
+"\"under the hood\" and \"poking with a stick\"."
+msgstr ""
+"探検、実験、そして恐れずに試してみてください〜これは巨匠コーダーの特性です。あなたを"
+"はげますために、MicroPython とコードエディタにいくつかの "
+"`イースターエッグ <https://ja.wikipedia.org/wiki/%E3%82%A4%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%BB%E3%82%A8%E3%83%83%E3%82%B0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)>`_ "
+"を隠しました。これらは \"looking under the hood\" や \"poking with a stick\""
+" (訳注: 念入りに調べること)への楽しい報酬です。"
+
+#: ../../tutorials/next.rst:30
+msgid ""
+"Such skill in Python is valuable: it's one of the world's most popular "
+"professional programming languages."
+msgstr ""
+"Python のスキルは貴重です。これは世界で最も人気のある専門プログラミング言語の1つです。"
+
+#: ../../tutorials/next.rst:33
+msgid ""
+"Amaze us with your code! Make things that delight us! Most of all, have "
+"fun!"
+msgstr ""
+"あなたのコードで私たちを驚かせてください！　私たちを喜ばせるものを作る！　何よりも、"
+"楽しんでください！"
+
+#: ../../tutorials/next.rst:35
+msgid "Happy hacking!"
+msgstr "ハッピーハッキング！"
+
+#: ../../tutorials/radio.rst:163
+msgid ""
+"The image of binary counting is released under the licensing details "
+"listed here: https://en.wikipedia.org/wiki/File:Binary_counter.gif"
+msgstr ""
+"２進数カウントのイメージのライセンスは https://en.wikipedia.org/wiki/File:Binary_counter.gif "
+"に詳しく記載されています。"
+
+#: ../../tutorials/radio.rst:2
+msgid "Radio"
+msgstr "無線通信"
+
+#: ../../tutorials/radio.rst:4
+msgid "Interaction at a distance feels like magic."
+msgstr "離れた場所での対話は魔法のようです。"
+
+#: ../../tutorials/radio.rst:6
+msgid ""
+"Magic might be useful if you're an elf, wizard or unicorn, but such "
+"things only exist in stories."
+msgstr ""
+"あなたがエルフ、魔法使い、ユニコーンであれば、魔法が使えるでしょうが、"
+"そのようなことは物語にしかありません。"
+
+#: ../../tutorials/radio.rst:9
+msgid "However, there's something much better than magic: physics!"
+msgstr "しかし、魔法よりもはるかに優れたものがあります: 物理学です！"
+
+#: ../../tutorials/radio.rst:11
+msgid ""
+"Wireless interaction is all about physics: radio waves (a type of "
+"electromagnetic radiation, similar to visible light) have some sort of "
+"property (such as their amplitude, phase or pulse width) modulated by a "
+"transmitter in such a way that information can be encoded and, thus, "
+"broadcast. When radio waves encounter an electrical conductor (i.e. an "
+"aerial), they cause an alternating current from which the information in "
+"the waves can be extracted and transformed back into its original form."
+msgstr ""
+"無線のやりとりはすべて物理学に基づくものです: 電波(可視光に似た電磁波の一種)は、"
+"送信機によって変調される特性(振幅、位相、パルス幅など)を持っていて、これを利用して"
+"情報をコード化して送信します。電波が電気導体(すなわち、アンテナ)に遭遇すると、"
+"波の情報が抽出され、元の形に変換された交流電流が発生します。"
+
+#: ../../tutorials/radio.rst:20
+msgid "Layers upon Layers"
+msgstr "レイヤー上のレイヤー"
+
+#: ../../tutorials/radio.rst:22
+msgid "If you remember, networks are built in layers."
+msgstr "覚えているでしょうか？　ネットワークは複数の層で構成しています。"
+
+#: ../../tutorials/radio.rst:24
+msgid ""
+"The most fundamental requirement for a network is some sort of connection"
+" that allows a signal to get from one device to the other. In our "
+"networking tutorial we used wires connected to the I/O pins. Thanks to "
+"the radio module we can do away with wires and use the physics summarised"
+" above as the invisible connection between devices."
+msgstr ""
+"ネットワークにとって最も基本的な要件は、信号があるデバイスから別のデバイスに到達できる"
+"ようにする何らかの接続です。ネットワークのチュートリアルでは、I/O 端子に接続された"
+"ワイヤを使用しました。無線モジュールのおかげで、ワイヤーをなくし、上記で要約した"
+"物理学をデバイス間の見えない接続として使用することができます。"
+
+#: ../../tutorials/radio.rst:30
+msgid ""
+"The next layer up in the network stack is also different from the example"
+" in the networking tutorial. With the wired example we used digital on "
+"and off to send and read a signal from the pins. With the built-in radio "
+"on the micro:bit the smallest useful part of the signal is a byte."
+msgstr ""
+"ネットワークスタック内の次のレイヤーも、ネットワークのチュートリアルの例とは"
+"異なります。有線の例では、デジタルのオンとオフを使用して端子から信号を送信して"
+"読み取りました。micro:bit に組み込まれた無線機能を使用すると、信号の最小単位が "
+"1 バイトになります。"
+
+#: ../../tutorials/radio.rst:36
+msgid "Bytes"
+msgstr "バイト"
+
+#: ../../tutorials/radio.rst:38
+msgid ""
+"A byte is a unit of information that (usually) consists of eight bits. A "
+"bit is the smallest possible unit of information since it can only be in "
+"two states: on or off."
+msgstr ""
+"バイトは、(通常) 8 ビットで構成される情報の単位です。ビットは、オンまたはオフの"
+"２つの状態しかないので、最小限の情報単位です。"
+
+#: ../../tutorials/radio.rst:42
+msgid ""
+"Bytes work like a sort of abacus: each position in the byte is like a "
+"column in an abacus - they represent an associated number. In an abacus "
+"these are usually thousands, hundreds, tens and units (in UK parlance). "
+"In a byte they are 128, 64, 32, 16, 8, 4, 2 and 1. As bits (on/off "
+"signals) are sent over the air, they are re-combined into bytes by the "
+"recipient."
+msgstr ""
+"バイトは、一種のそろばんのように機能します。バイトの各位置は、そろばんの列のような"
+"もので、関連する数字を表します。そろばんは通常、千、百、十、一のように並びます。"
+"バイトでは 128, 64, 32, 16, 8, 4, 2, 1 となります。ビット(オン/オフ信号)が"
+"無線で送信されると、それらは受信側でバイト列に再結合されます。"
+
+#: ../../tutorials/radio.rst:49
+msgid "Have you spotted the pattern? (Hint: base 2.)"
+msgstr "あなたはそのパターンを見つけましたか？　(ヒント: 基数が２)"
+
+#: ../../tutorials/radio.rst:51
+msgid ""
+"By adding the numbers associated with the positions in a byte that are "
+"set to \"on\" we can represent numbers between 0 and 255. The image below"
+" shows how this works with five bits and counting from zero to 32:"
+msgstr ""
+"「オン」に設定されたバイト内の位置に数を割り当てることにより、0 〜 255 の数値を"
+"表すことができます。下の図は、これが 5 ビットでどのようになるのかを示しています。"
+
+#: ../../tutorials/radio.rst:56
+msgid ".. image:: tutorials/binary_count.gif"
+msgstr ""
+
+#: ../../tutorials/radio.rst:57
+msgid ""
+"If we can agree what each one of the 255 numbers (encoded by a byte) "
+"represents ~ such as a character ~ then we can start to send text one "
+"character per byte at a time."
+msgstr ""
+"私たちが(バイトでエンコードされた) 255 個の数値のそれぞれが〜１文字〜を表すのに"
+"同意すれば、一度に 1 バイトあたり 1 文字のテキストを送ることができます。"
+
+#: ../../tutorials/radio.rst:60
+msgid ""
+"Funnily enough, people have already `thought of this "
+"<https://en.wikipedia.org/wiki/ASCII>`_ ~ using bytes to encode and "
+"decode information is commonplace. This approximately corresponds to the "
+"Morse-code \"protocol\" layer in the wired networking example."
+msgstr ""
+"面白いことに、人々はすでに `このことを考えていて <https://en.wikipedia.org/wiki/ASCII>`_ "
+"いました。情報のエンコードとデコードにバイト列を使用するのが普通です。"
+"これは、有線ネットワーキングの例でのモールス符号の「プロトコル」層にほぼ対応します。"
+
+#: ../../tutorials/radio.rst:65
+msgid ""
+"A really great series of child (and teacher) friendly explanations of "
+"\"all things bytes\" can be found at the `CS unplugged "
+"<http://csunplugged.org/binary-numbers/>`_ website."
+msgstr ""
+"「バイト列のすべて」についての実に素晴らしい子ども(と教師)向けのの説明が、`CS unplugged "
+"<http://csunplugged.org/binary-numbers/>`_ ウェブサイトにあります。"
+
+#: ../../tutorials/radio.rst:70
+msgid "Addressing"
+msgstr "アドレッシング"
+
+#: ../../tutorials/radio.rst:72
+msgid ""
+"The problem with radio is that you can't transmit directly to one person."
+" Anyone with an appropriate aerial can receive the messages you transmit."
+" As a result it's important to be able to differentiate who should be "
+"receiving broadcasts."
+msgstr ""
+"無線通信の問題は、一人に直に送信できないということです。適切なアンテナを持っていれば、"
+"あなたの送信したメッセージを受け取れてしまいます。つまり、誰が放送を受信すべきかを"
+"区別できるようにすることが重要となります。"
+
+#: ../../tutorials/radio.rst:77
+msgid ""
+"The way the radio built into the micro:bit solves this problem is quite "
+"simple:"
+msgstr ""
+"micro:bit に組み込まれている無線通信では、この問題を解決するのが非常に簡単です。"
+
+#: ../../tutorials/radio.rst:79
+msgid ""
+"It's possible to tune the radio to different channels (numbered 0-83). "
+"This works in exactly the same way as kids' walkie-talkie radios: "
+"everyone tunes into the same channel and everyone hears what everyone "
+"else broadcasts via that channel. As with walkie-talkies, if you use "
+"adjacent channels there is a slight possibility of interference."
+msgstr ""
+"無線通信を異なるチャンネル(0〜83 の番号)にチューニングすることは可能です。"
+"これは、子ども向けのトランシーバーのおもちゃとまったく同じように機能します。"
+"誰もが同じチャンネルに同調し、誰もがそのチャンネルを介してブロードキャストする"
+"ものを聞きます。トランシーバーと同様に、隣接するチャンネルを使っても干渉の可能性は"
+"わずかです。"
+
+#: ../../tutorials/radio.rst:81
+msgid ""
+"The radio module allows you to specify two pieces of information: an "
+"address and a group. The address is like a postal address whereas a group"
+" is like a specific recipient at the address. The important thing is the "
+"radio will filter out messages that it receives that do not match *your* "
+"address and group. As a result, it's important to pre-arrange the address"
+" and group your application is going to use."
+msgstr ""
+"無線モジュールでは、アドレスとグループという2つの情報を指定できます。アドレスは郵便"
+"アドレスのようなものですが、グループはアドレスの特定の受信者に似ています。重要なのは、"
+"無線通信があなたのアドレスとグループと一致しない受信したメッセージを除外することです。"
+"つまり、アプリケーションが使用する予定のアドレスとグループを事前に配置することが重要です。"
+
+#: ../../tutorials/radio.rst:83
+msgid ""
+"Of course, the micro:bit is still receiving broadcast messages for other "
+"address/group combinations. The important thing is you don't need to "
+"worry about filtering those out. Nevertheless, if someone were clever "
+"enough, they could just read *all the wireless network traffic* no matter"
+" what the target address/group was supposed to be. In this case, it's "
+"*essential* to use encrypted means of communication so only the desired "
+"recipient can actually read the message that was broadcast. Cryptography "
+"is a fascinating subject but, unfortunately, beyond the scope of this "
+"tutorial."
+msgstr ""
+"もちろん、 micro:bit は、他のアドレス/グループの組み合わせのブロードキャストメッセージも"
+"受信しています。重要なことは、それらをフィルタリングすることについて心配する必要はない"
+"ということです。それにもかかわらず、誰かが賢明だったなら、ターゲットアドレス/グループが"
+"何を想定していたとしても、すべての無線ネットワークのトラフィックを読み取ることができます。"
+"この場合、暗号化された通信手段を使用することが *不可欠* であり、そのようにすれば必要な"
+"受信者だけが実際にブロードキャストされたメッセージを読むことができます。暗号は魅力的な"
+"テーマですが、残念ながらこのチュートリアルの範囲を超えています。"
+
+#: ../../tutorials/radio.rst:93
+msgid "Fireflies"
+msgstr "ホタル"
+
+#: ../../tutorials/radio.rst:95
+msgid "This is a firefly:"
+msgstr "これはホタルです:"
+
+#: ../../tutorials/radio.rst:98
+msgid ".. image:: tutorials/firefly.gif"
+msgstr ""
+
+#: ../../tutorials/radio.rst:99
+msgid ""
+"It's a sort of bug that uses bioluminescence to signal (without wires) to"
+" its friends. Here's what they look like when they signal to each other:"
+msgstr ""
+"ホタルは生物発光を使って(ワイヤなしで)仲間に信号を送る虫の一種です。お互いに信号を"
+"送るときの様子は次のとおりです:"
+
+#: ../../tutorials/radio.rst:103
+msgid ".. image:: tutorials/fireflies.gif"
+msgstr ""
+
+#: ../../tutorials/radio.rst:104
+msgid ""
+"The BBC have `rather a beautiful video "
+"<http://www.bbc.com/earth/story/20160224-worlds-largest-gathering-of-"
+"synchronised-fireflies>`_ of fireflies available online."
+msgstr ""
+"BBC はオンラインで入手できるホタル`美しい映像 \"<http://www.bbc.com/earth/story/20160224"
+"-worlds-largest-gathering-of-synchronised-fireflies>`_ を持っています。"
+
+#: ../../tutorials/radio.rst:106
+msgid ""
+"We're going to use the radio module to create something akin to a swarm "
+"of fireflies signalling to each other."
+msgstr ""
+"無線モジュール radio を使って、ホタルの群れがお互いに交信するようなものを作ってみましょう。"
+
+#: ../../tutorials/radio.rst:109
+msgid ""
+"First ``import radio`` to make the functions available to your Python "
+"program. Then call the ``radio.on()`` function to turn the radio on. "
+"Since the radio draws power and takes up memory we've made it so *you* "
+"decide when it is enabled (there is, of course a ``radio.off()`` "
+"function)."
+msgstr ""
+"まず Python プログラムで関数を利用できるように ``import radio`` します。"
+"次に、無線をオンにする ``radio.on()`` 関数を呼び出します。これを行うと radio は"
+"パワーを得てメモリを確保するので、 *あなた* が無線通信の有効化を決定したことに"
+"なります(もちろん、無効にする ``radio.off`` 関数もあります)。"
+
+#: ../../tutorials/radio.rst:114
+msgid ""
+"At this point the radio module is configured to sensible defaults that "
+"make it compatible with other platforms that may target the BBC "
+"micro:bit. It is possible to control many of the features discussed above"
+" (such as channel and addressing) as well as the amount of power used to "
+"broadcast messages and the amount of RAM the incoming message queue will "
+"take up. The API documentation contains all the information you need to "
+"configure the radio to your needs."
+msgstr ""
+"この時点で、radio モジュールは、BBC micro:bit をターゲットとする可能性のある他の"
+"プラットフォームと互換性を持つように、適切なデフォルトに設定されています。上述した"
+"多くの機能(チャネルやアドレス指定など)や、メッセージをブロードキャストするための"
+"電力量や着信メッセージキューが占有する RAM の量を制御することが可能です。"
+"APIドキュメントには、必要に応じて radio を設定するために必要なすべての情報があります。"
+
+#: ../../tutorials/radio.rst:121
+msgid ""
+"Assuming we're happy with the defaults, the simplest way to send a "
+"message is like this::"
+msgstr ""
+"デフォルトで十分であれば、メッセージを送信する最も簡単な方法は次のようなものです:"
+
+#: ../../tutorials/radio.rst:124
+msgid "radio.send(\"a message\")"
+msgstr ""
+
+#: ../../tutorials/radio.rst:126
+msgid ""
+"The example uses the ``send`` function to simply broadcast the string \"a"
+" message\". To receive a message is even easier::"
+msgstr ""
+"この例では、\"a message\" をブロードキャストするために ``send`` 関数を使って"
+"います。メッセージを受け取るのはさらに簡単です:"
+
+#: ../../tutorials/radio.rst:129
+msgid "new_message = radio.receive()"
+msgstr ""
+
+#: ../../tutorials/radio.rst:131
+msgid ""
+"As messages are received they are put on a message queue. The ``receive``"
+" function returns the oldest message from the queue as a string, making "
+"space for a new incoming message. If the message queue fills up, then new"
+" incoming messages are ignored."
+msgstr ""
+"メッセージが受信されると、それらはメッセージキューに置かれます。``receive`` "
+"関数は、新しい着信メッセージのためのスペースを作り、文字列としてキューから最も古い"
+"メッセージを返します。メッセージキューがいっぱいになると、新しい受信メッセージは"
+"無視されます。"
+
+#: ../../tutorials/radio.rst:136
+msgid ""
+"That's really all there is to it! (Although the radio module is also "
+"powerful enough that you can send any arbitrary type of data, not just "
+"strings. See the API documentation for how this works.)"
+msgstr ""
+"本当にこれだけです(が、radio モジュールは文字列だけでなく任意のタイプのデータを"
+"送信することもできます。これについてはAPIドキュメントを参照してください)。"
+
+#: ../../tutorials/radio.rst:140
+msgid ""
+"Armed with this knowledge, it's simple to make micro:bit fireflies like "
+"this:"
+msgstr ""
+"この知識を武器とすれば、 micro:bit のホタルを作るのは以下のように簡単です:"
+
+msgid ""
+"# A micro:bit Firefly.\n"
+"# By Nicholas H.Tollervey. Released to the public domain.\n"
+"import radio\n"
+"import random\n"
+"from microbit import display, Image, button_a, sleep\n"
+"\n"
+"# Create the \"flash\" animation frames. Can you work out how it's done?\n"
+"flash = [Image().invert()*(i/9) for i in range(9, -1, -1)]\n"
+"\n"
+"# The radio won't work unless it's switched on.\n"
+"radio.on()\n"
+"\n"
+"# Event loop.\n"
+"while True:\n"
+"    # Button A sends a \"flash\" message.\n"
+"    if button_a.was_pressed():\n"
+"        radio.send('flash')  # a-ha\n"
+"    # Read any incoming messages.\n"
+"    incoming = radio.receive()\n"
+"    if incoming == 'flash':\n"
+"        # If there's an incoming \"flash\" message display\n"
+"        # the firefly flash animation after a random short\n"
+"        # pause.\n"
+"        sleep(random.randint(50, 350))\n"
+"        display.show(flash, delay=100, wait=False)\n"
+"        # Randomly re-broadcast the flash message after a\n"
+"        # slight delay.\n"
+"        if random.randint(0, 9) == 0:\n"
+"            sleep(500)\n"
+"            radio.send('flash')  # a-ha"
+msgstr ""
+"# micro:bit ホタル。\n"
+"# 作成者 Nicholas H.Tollervey。パブリックドメインで公開。\n"
+"import radio\n"
+"import random\n"
+"from microbit import display, Image, button_a, sleep\n"
+"\n"
+"# \"発光\" (flash)アニメーションフレームを作成。何をしているかわかりますか？\n"
+"flash = [Image().invert()*(i/9) for i in range(9, -1, -1)]\n"
+"\n"
+"# 無線を使うためのスィッチをオンにします。\n"
+"radio.on()\n"
+"\n"
+"# イベントループ。\n"
+"while True:\n"
+"    # ボタンAは \"flash\" メッセージを送ります。\n"
+"    if button_a.was_pressed():\n"
+"        radio.send('flash')  # a-ha\n"
+"    # 受信メッセージを読み込みます。\n"
+"    incoming = radio.receive()\n"
+"    if incoming == 'flash':\n"
+"        # \"flash\" メッセージを受信したら、ランダムな短い\n"
+"        # 一時停止の後にホタルの発光アニメーションを表示\n"
+"        # します。\n"
+"        sleep(random.randint(50, 350))\n"
+"        display.show(flash, delay=100, wait=False)\n"
+"        # 少し休んだ後に、flash メッセージをランダムに\n"
+"        # 再送信します。\n"
+"        if random.randint(0, 9) == 0:\n"
+"            sleep(500)\n"
+"            radio.send('flash')  # それっ"
+
+#: ../../tutorials/radio.rst:145
+msgid ""
+"The important stuff happens in the event loop. First, it checks if button A "
+"was pressed and, if it was, uses the radio to send the message \"flash\"."
+" Then it reads any messages from the message queue with "
+"``radio.receive()``. If there is a message it sleeps a short, random "
+"period of time (to make the display more interesting) and uses "
+"``display.show()`` to animate a firefly flash. Finally, to make things a "
+"bit exciting, it chooses a random number so that it has a 1 in 10 chance "
+"of re-broadcasting the \"flash\" message to anyone else (this is how it's"
+" possible to sustain the firefly display among several devices). If it "
+"decides to re-broadcast then it waits for half a second (so the display "
+"from the initial flash message has chance to die down) before sending the"
+" \"flash\" signal again. Because this code is enclosed within a ``while "
+"True`` block, it loops back to the beginning of the event loop and "
+"repeats this process forever."
+msgstr ""
+"重要なことはイベントループ内で起きています。最初に、ボタン A が押されたか"
+"どうかをチェックし、そうであれば、radio を使用してメッセージ \"flash\" を送信します。"
+"次に、 ``radio.receive()`` でメッセージキューからメッセージを読み込みます。"
+"メッセージがある場合は、(ディスプレイをより面白くするために)短くランダムな時間の休止と "
+"``display.show()`` を使って、ホタルの光の点滅を表現します。最後に、物事を少し"
+"エキサイティングにするために、誰かに "\"flash\" メッセージを再ブロードキャストする"
+"チャンスが 1/10 になるように乱数を選択します(これはいくつかのデバイス間でホタルの"
+"表示を維持する手段です)。ブロードキャストを決定すると、 \"flash\" 信号を再び送信する"
+"前に(最初のフラッシュメッセージからの表示が確実に終われるように)、0.5秒間待機します。"
+"このコードは ``while True`` ブロック内にあるため、無限に処理を継続します。"
+
+#: ../../tutorials/radio.rst:159
+msgid ""
+"The end result (using a group of micro:bits) should look something like "
+"this:"
+msgstr ""
+"このプログラムを使った様子は次のようになります(micro:bit のグループを使用)。"
+
+#: ../../tutorials/radio.rst:162
+msgid ".. image:: tutorials/mb-firefly.gif"
+msgstr ""
+
+#: ../../tutorials/random.rst:2
+msgid "Random"
+msgstr "ランダム"
+
+#: ../../tutorials/random.rst:4
+msgid ""
+"Sometimes you want to leave things to chance, or mix it up a little: you "
+"want the device to act randomly."
+msgstr ""
+"場合によっては、偶然な要素を入れたい、または少し混ぜたいことがあります: "
+"デバイスをランダムに動作させたいことがあるでしょう。"
+
+#: ../../tutorials/random.rst:7
+msgid ""
+"MicroPython comes with a ``random`` module to make it easy to introduce "
+"chance and a little chaos into your code. For example, here's how to "
+"scroll a random name across the display::"
+msgstr ""
+"MicroPython には ``random`` モジュールがあり、コードに偶然と少し混乱を導入"
+"できます。たとえば、ディスプレイ上でランダムな名前をスクロールする方法は次の"
+"とおりです::"
+
+#: ../../tutorials/random.rst:11
+msgid ""
+"from microbit import *\n"
+"import random\n"
+"\n"
+"names = [\"Mary\", \"Yolanda\", \"Damien\", \"Alia\", \"Kushal\", \"Mei "
+"Xiu\", \"Zoltan\" ]\n"
+"\n"
+"display.scroll(random.choice(names))"
+msgstr ""
+
+#: ../../tutorials/random.rst:18
+msgid ""
+"The list (``names``) contains seven names defined as strings of "
+"characters. The final line is *nested* (the \"onion\" effect introduced "
+"earlier): the ``random.choice`` method takes the ``names`` list as an "
+"argument and returns an item chosen at random. This item (the randomly "
+"chosen name) is the argument for ``display.scroll``."
+msgstr ""
+"リスト (``names``)には、文字列として定義された7つの名前が含まれています。"
+"最後の行は *入れ子*　になっています(先に紹介した「玉ねぎ」状のことです)。"
+"この ``random.choice`` メソッドは ``names`` リストを引数として取り、"
+"ランダムに選択された項目を返します。この項目(無作為に選ばれた名前)が "
+"``display.scroll`` の引数になります。"
+
+#: ../../tutorials/random.rst:24
+msgid "Can you modify the list to include your own set of names?"
+msgstr "自分の名前を含むようにリストを変更できますか？"
+
+#: ../../tutorials/random.rst:27
+msgid "Random Numbers"
+msgstr "乱数"
+
+#: ../../tutorials/random.rst:29
+msgid ""
+"Random numbers are very useful. They're common in games. Why else do we "
+"have dice?"
+msgstr ""
+"乱数は非常に便利です。ゲームでは一般的に使われています。サイコロを使ったり"
+"するのも乱数を得るためですよ。"
+
+#: ../../tutorials/random.rst:32
+msgid ""
+"MicroPython comes with several useful random number methods. Here's how "
+"to make a simple dice::"
+msgstr ""
+"MicroPython には、いくつかの便利な乱数メソッドがあります。シンプルなサイコロを作る"
+"方法は次のとおりです::"
+
+#: ../../tutorials/random.rst:35
+msgid ""
+"from microbit import *\n"
+"import random\n"
+"\n"
+"display.show(str(random.randint(1, 6)))"
+msgstr ""
+
+#: ../../tutorials/random.rst:40
+msgid ""
+"Every time the device is reset it displays a number between 1 and 6. "
+"You're starting to get familiar with *nesting*, so it's important to note"
+" that ``random.randint`` returns a whole number between the two "
+"arguments, inclusive (a whole number is also called an integer - hence "
+"the name of the method). Notice that because ``display.show`` expects a "
+"character then we use the ``str`` function to turn the numeric value into"
+" a character (we turn, for example, ``6`` into ``\"6\"``)."
+msgstr ""
+"デバイスがリセットされるたびに、1 から 6 までの数字が表示されます。*入れ子* "
+"にも慣れてきたでしょうが、 ``random.randint`` は2つの引数の間の整数を返します。 "
+"``display.show`` は文字の引数を期待しているので、  ``str`` 関数を使用して"
+"数値を文字に変換します(たとえば ``6`` を ``\"6\"`` に変換します)。"
+
+#: ../../tutorials/random.rst:48
+msgid ""
+"If you know you'll always want a number between ``0`` and ``N`` then use "
+"the ``random.randrange`` method. If you give it a single argument it'll "
+"return random integers up to, but not including, the value of the "
+"argument ``N`` (this is different to the behaviour of "
+"``random.randint``)."
+msgstr ""
+"``0`` から ``N`` までの数字が欲しいこともあると思いますが、そのようなときには "
+"``random.randrange`` メソッドを使います。このメソッドに単一の引数 ``N`` を"
+"与えると、0 から ``N`` 未満の乱数を整数で返します(これは "``random.randint`` "
+"の振舞いと違っています)。"
+
+#: ../../tutorials/random.rst:53
+msgid ""
+"Sometimes you need numbers with a decimal point in them. These are called"
+" *floating point* numbers and it's possible to generate such a number "
+"with the ``random.random`` method. This only returns values between "
+"``0.0`` and ``1.0`` inclusive. If you need larger random floating point "
+"numbers add the results of ``random.randrange`` and ``random.random`` "
+"like this::"
+msgstr ""
+"場合によっては小数点以下の数字が必要になることがあります。これは *浮動小数点数* と"
+"呼ばれ、そのような数値を ``random.random`` メソッドで生成できます。これは 0.0 "
+"から 1.0 の間の値を返すだけです。より大きなランダムな浮動小数点数が必要な場合は、"
+"以下のように ``random.randrange`` と ``random.random`` の結果を加算すると"
+"よいです::"
+
+#: ../../tutorials/random.rst:59
+msgid ""
+"from microbit import *\n"
+"import random\n"
+"\n"
+"answer = random.randrange(100) + random.random()\n"
+"display.scroll(str(answer))"
+msgstr ""
+
+#: ../../tutorials/random.rst:66
+msgid "Seeds of Chaos"
+msgstr "混沌の種(Seeds of Chaos)"
+
+#: ../../tutorials/random.rst:68
+msgid ""
+"The random number generators used by computers are not truly random. They"
+" just give random like results given a starting *seed* value. The seed is"
+" often generated from random-ish values such as the current time and/or "
+"readings from sensors such as the thermometers built into chips."
+msgstr ""
+"コンピュータで使われている乱数生成器は本当にランダムではありません。開始シード値を"
+"与えられた結果のようにランダム値を生成します。シード値の生成には、現在時刻やチップ内に"
+"組み込まれた温度計などのセンサー値のようなランダム性のあるものを使うこと多いです。"
+
+#: ../../tutorials/random.rst:73
+msgid ""
+"Sometimes you want to have repeatable random-ish behaviour: a source of "
+"randomness that is reproducible. It's like saying that you need the same "
+"five random values each time you throw a dice."
+msgstr ""
+"反復可能なランダム性、すなわち再現性のある乱数発生が欲しいこともあります。"
+"サイコロを投げるたびに同じ5つのランダムな値が必要であるようなことです。"
+
+#: ../../tutorials/random.rst:77
+msgid ""
+"This is easy to achieve by setting the *seed* value. Given a known seed "
+"the random number generator will create the same set of random numbers. "
+"The seed is set with ``random.seed`` and any whole number (integer). This"
+" version of the dice program always produces the same results::"
+msgstr ""
+"これはシード値を設定することで簡単に実現できます。既知のシードが与えられると、"
+"乱数ジェネレータは同じ乱数セットを作成します。シードは ``random.seed`` に"
+"任意の整数を指定します。以下バージョンのサイコロプログラムは常に同じ結果を生成します::"
+
+#: ../../tutorials/random.rst:82
+msgid ""
+"from microbit import *\n"
+"import random\n"
+"\n"
+"random.seed(1337)\n"
+"while True:\n"
+"    if button_a.was_pressed():\n"
+"        display.show(str(random.randint(1, 6)))"
+msgstr ""
+
+#: ../../tutorials/random.rst:90
+msgid ""
+"Can you work out why this program needs us to press button A instead of "
+"reset the device as in the first dice example..?"
+msgstr ""
+"このプログラムが最初のサイコロの例のようにデバイスをリセットする代わりに、"
+"ボタン A を押すようにしているのはなぜでしょう？"
+
+#: ../../tutorials/speech.rst:184
+msgid ""
+"The image of the DALEK is licensed as per the details here: "
+"https://commons.wikimedia.org/wiki/File:Dalek_(Dr_Who).jpg The image of "
+"DAVROS is licensed as per the details here: "
+"https://en.wikipedia.org/wiki/File:Davros_and_Daleks.jpg"
+msgstr ""
+"DALEK の画像のライセンスは "
+"https://commons.wikimedia.org/wiki/File:Dalek_(Dr_Who).jpg "
+"に詳しく記載されています。ダブロス博士の画像のライセンスは "
+"https://en.wikipedia.org/wiki/File:Davros_and_Daleks.jpg に詳しく記載されています。"
+
+#: ../../tutorials/speech.rst:2
+msgid "Speech"
+msgstr "音声"
+
+#: ../../tutorials/speech.rst:6
+msgid "WARNING! THIS IS ALPHA CODE."
+msgstr "警告！ これはα版のコードです。"
+
+#: ../../tutorials/speech.rst:8
+msgid "We reserve the right to change this API as development continues."
+msgstr "開発を続ける過程で、この API を変更する可能性があります。"
+
+#: ../../tutorials/speech.rst:10
+msgid ""
+"The quality of the speech is not great, merely \"good enough\". Given the"
+" constraints of the device you may encounter memory errors and / or "
+"unexpected extra sounds during playback. It's early days and we're "
+"improving the code for the speech synthesiser all the time. Bug reports "
+"and pull requests are most welcome."
+msgstr ""
+"音声の品質は大したものではなく、単に「十分に良い」レベルです。デバイスの制約により、"
+"再生中にメモリエラーや予期しない余分なサウンドが発生することがあります。"
+"まだ初期段階であり、音声シンセサイザーのコードを常に改善しています。"
+"バグレポートやプルリクエストは大歓迎です。"
+
+#: ../../tutorials/speech.rst:16
+msgid "Computers and robots that talk feel more \"human\"."
+msgstr "コンピュータやロボットが話せれば、より「人間」らしくなるでしょう。"
+
+#: ../../tutorials/speech.rst:18
+msgid ""
+"So often we learn about what a computer is up to through a graphical user"
+" interface (GUI). In the case of a BBC micro:bit the GUI is a 5x5 LED "
+"matrix, which leaves a lot to be desired."
+msgstr ""
+"グラフィカルユーザーインターフェイス(GUI)を通してコンピュータで何をするかを学ぶことが"
+"多いと思います。BBC micro:bit の場合、GUI は 5×5 の LED マトリックスであり、"
+"望まれる多くのことを捨てています。"
+
+#: ../../tutorials/speech.rst:22
+msgid ""
+"Getting the micro:bit talk to you is one way to express information in a "
+"fun, efficient and useful way. To this end, we have integrated a simple "
+"speech synthesiser based upon a reverse-engineered version of a "
+"synthesiser from the early 1980s. It sounds very cute, in an \"all humans"
+" must die\" sort of a way."
+msgstr ""
+"micro:bit を話せるようにすることは、楽しく、効率的で、有用な方法で情報を表現する"
+"方法の１つです。この目的のために、私たちは、1980 年代初めのシンセサイザーの"
+"リバースエンジニアリングバージョンに基づく簡単な音声合成装置を統合しましたサウンドは "
+"\"all humans must die\" みたいな感じでとてもキュートです(訳注: この章は、"
+"イギリスのTVシリーズ「Doctor Who」を知らないと分からないネタばかりです)。"
+
+#: ../../tutorials/speech.rst:27
+msgid "With this in mind, we're going to use the speech synthesiser to create..."
+msgstr "以上を念頭に置いて、音声シンセサイザを使っていくことにしましょう ..."
+
+#: ../../tutorials/speech.rst:30
+msgid "DALEK Poetry"
+msgstr "DALEK の詩"
+
+#: ../../tutorials/speech.rst:33
+msgid ".. image:: tutorials/dalek.jpg"
+msgstr ""
+
+#: ../../tutorials/speech.rst:34
+msgid ""
+"It's a little known fact that DALEKs enjoy poetry ~ especially limericks."
+" They go wild for anapestic meter with a strict AABBA form. Who'd have "
+"thought?"
+msgstr ""
+"DALEK が詩、特にリメリック(滑稽五行詩)を楽しむことはちょっと知られています。DALEK は"
+"厳格な AABBA 形式の弱強格韻脚でワイルドになります。誰が考えたのでしょうか？"
+
+#: ../../tutorials/speech.rst:37
+msgid ""
+"(Actually, as we'll learn below, it's The Doctor's fault DALEKs like "
+"limericks, much to the annoyance of Davros.)"
+msgstr ""
+"(実際には、以降で学ぶように、DALEK がリメリックを好きなのはドクターの仕業であり、"
+"ダブロス博士の悩みの種です)"
+
+#: ../../tutorials/speech.rst:40
+msgid "In any case, we're going to create a DALEK poetry recital on demand."
+msgstr "いずれにしても、必要に応じて DALEK の詩のリサイタルを作成する予定です。"
+
+#: ../../tutorials/speech.rst:43
+msgid "Say Something"
+msgstr "何か言わせてみる"
+
+#: ../../tutorials/speech.rst:45
+msgid "Before the device can talk you need to plug in a speaker like this:"
+msgstr "デバイスが話せるようにする前に、以下のようにスピーカーを接続する必要があります:"
+
+#: ../../tutorials/speech.rst:48
+msgid ".. image:: tutorials/../speech.png"
+msgstr ""
+
+#: ../../tutorials/speech.rst:49
+msgid ""
+"The simplest way to get the device to speak is to import the ``speech`` "
+"module and use the ``say`` function like this::"
+msgstr ""
+"デバイスに話させる最も簡単な方法は、次のように ``speech`` モジュールをインポートして、 "
+"``say`` 関数を使うことです::"
+
+#: ../../tutorials/speech.rst:52
+msgid ""
+"import speech\n"
+"\n"
+"speech.say(\"Hello, World\")"
+msgstr ""
+
+#: ../../tutorials/speech.rst:56
+msgid ""
+"While this is cute it's certainly not DALEK enough for our taste, so we "
+"need to change some of the parameters that the speech synthesiser uses to"
+" produce the voice. Our speech synthesiser is quite powerful in this "
+"respect because we can change four parameters:"
+msgstr ""
+"これでもキュートですが、DALEK のレベルとしては十分でないので、音声合成装置が音声を"
+"生成するために使ういくつかのパラメータを変更する必要があります。音声シンセサイザは、"
+"この点で非常に強力です。なぜなら、4つのパラメータを変更できるからです:"
+
+#: ../../tutorials/speech.rst:61
+msgid "``pitch`` - how high or low the voice sounds (0 = high, 255 = Barry White)"
+msgstr "``pitch`` - 音声の高低s (0 = 高, 255 = Barry White)"
+
+#: ../../tutorials/speech.rst:62
+msgid ""
+"``speed`` - how quickly the device talks (0 = impossible, 255 = bedtime "
+"story)"
+msgstr "``speed`` - デバイスが話す速度 (0 = impossible, 255 = bedtime story)"
+
+#: ../../tutorials/speech.rst:63
+msgid ""
+"``mouth`` - how tight-lipped or overtly enunciating the voice sounds (0 ="
+" ventriloquist's dummy, 255 = Foghorn Leghorn)"
+msgstr ""
+"``mouth`` - 音声の発音の不明瞭または明瞭の程度 (0 = 腹話術師の人形, 255 = Foghorn Leghorn)"
+
+#: ../../tutorials/speech.rst:64
+msgid ""
+"``throat`` - how relaxed or tense is the tone of voice (0 = falling "
+"apart, 255 = totally chilled)"
+msgstr ""
+"``throat`` - 声の調子のリラックスまたは緊張の程度 (0 = falling apart, 255 = totally chilled)"
+
+#: ../../tutorials/speech.rst:66
+msgid ""
+"Collectively, these parameters control the quality of sound - a.k.a. the "
+"timbre. To be honest, the best way to get the tone of voice you want is "
+"to experiment, use your judgement and adjust."
+msgstr ""
+"まとめると、これらのパラメータは音の質を制御します。正直言って、望む声の音を得る"
+"最良の方法は、実験を繰り返して調整することです。"
+
+#: ../../tutorials/speech.rst:70
+msgid ""
+"To adjust the settings you pass them in as arguments to the ``say`` "
+"function. More details can be found in the ``speech`` module's API "
+"documentation."
+msgstr ""
+"設定を調整するには、それらを ``say`` 関数の引数として渡します。詳細は "
+"``speech`` モジュールの API ドキュメンテーションを参照してください。"
+
+#: ../../tutorials/speech.rst:73
+msgid ""
+"After some experimentation we've worked out this sounds quite DALEK-"
+"esque::"
+msgstr ""
+"何回かの実験の後、以下でかなり DALEK 風の音声になりました。"
+
+#: ../../tutorials/speech.rst:75
+msgid ""
+"speech.say(\"I am a DALEK - EXTERMINATE\", speed=120, pitch=100, "
+"throat=100, mouth=200)"
+msgstr ""
+
+#: ../../tutorials/speech.rst:78
+msgid "Poetry on Demand"
+msgstr "詩オンデマンド(Poetry on Demand)"
+
+#: ../../tutorials/speech.rst:80
+msgid ""
+"Being Cyborgs DALEKs use their robot capabilities to compose poetry and "
+"it turns out that the algorithm they use is written in Python like this::"
+msgstr ""
+"サイボーグである DALEK はロボットの能力を使って詩を作っています。彼らが使う"
+"アルゴリズムは Python で次のように書かれています::"
+
+#: ../../tutorials/speech.rst:83
+msgid ""
+"# DALEK poetry generator, by The Doctor\n"
+"import speech\n"
+"import random\n"
+"from microbit import sleep\n"
+"\n"
+"# Randomly select fragments to interpolate into the template.\n"
+"location = random.choice([\"brent\", \"trent\", \"kent\", \"tashkent\"])\n"
+"action = random.choice([\"wrapped up\", \"covered\", \"sang to\", "
+"\"played games with\"])\n"
+"obj = random.choice([\"head\", \"hand\", \"dog\", \"foot\"])\n"
+"prop = random.choice([\"in a tent\", \"with cement\", \"with some "
+"scent\",\n"
+"                     \"that was bent\"])\n"
+"result = random.choice([\"it ran off\", \"it glowed\", \"it blew up\",\n"
+"                       \"it turned blue\"])\n"
+"attitude = random.choice([\"in the park\", \"like a shark\", \"for a "
+"lark\",\n"
+"                         \"with a bark\"])\n"
+"conclusion = random.choice([\"where it went\", \"its intent\", \"why it "
+"went\",\n"
+"                           \"what it meant\"])\n"
+"\n"
+"# A template of the poem. The {} are replaced by the named fragments.\n"
+"poem = [\n"
+"    \"there was a young man from {}\".format(location),\n"
+"    \"who {} his {} {}\".format(action, obj, prop),\n"
+"    \"one night after dark\",\n"
+"    \"{} {}\".format(result, attitude),\n"
+"    \"and he never worked out {}\".format(conclusion),\n"
+"    \"EXTERMINATE\",\n"
+"]\n"
+"\n"
+"# Loop over each line in the poem and use the speech module to recite it."
+"\n"
+"for line in poem:\n"
+"    speech.say(line, speed=120, pitch=100, throat=100, mouth=200)\n"
+"    sleep(500)"
+msgstr ""
+"# DALEK の詩の自動作成プログラム(著者：ドクター)\n"
+"import speech\n"
+"import random\n"
+"from microbit import sleep\n"
+"\n"
+"# テンプレートに挿入する断片をランダムに選びます\n"
+"location = random.choice([\"brent\", \"trent\", \"kent\", \"tashkent\"])\n"
+"action = random.choice([\"wrapped up\", \"covered\", \"sang to\", "
+"\"played games with\"])\n"
+"obj = random.choice([\"head\", \"hand\", \"dog\", \"foot\"])\n"
+"prop = random.choice([\"in a tent\", \"with cement\", \"with some "
+"scent\",\n"
+"                     \"that was bent\"])\n"
+"result = random.choice([\"it ran off\", \"it glowed\", \"it blew up\",\n"
+"                       \"it turned blue\"])\n"
+"attitude = random.choice([\"in the park\", \"like a shark\", \"for a "
+"lark\",\n"
+"                         \"with a bark\"])\n"
+"conclusion = random.choice([\"where it went\", \"its intent\", \"why it "
+"went\",\n"
+"                           \"what it meant\"])\n"
+"\n"
+"# 詩のテンプレート。名前をつけた断片で {} を置き換えます\n"
+"poem = [\n"
+"    \"there was a young man from {}\".format(location),\n"
+"    \"who {} his {} {}\".format(action, obj, prop),\n"
+"    \"one night after dark\",\n"
+"    \"{} {}\".format(result, attitude),\n"
+"    \"and he never worked out {}\".format(conclusion),\n"
+"    \"EXTERMINATE\",\n"
+"]\n"
+"\n"
+"# ループで詩の各行を先頭から見て行き、speech モジュールを使って暗唱します\n"
+"for line in poem:\n"
+"    speech.say(line, speed=120, pitch=100, throat=100, mouth=200)\n"
+"    sleep(500)"
+
+#: ../../tutorials/speech.rst:116
+msgid "As the comments demonstrate, it's a very simple in design:"
+msgstr "コメントが示すように、デザインは非常にシンプルです:"
+
+#: ../../tutorials/speech.rst:118
+msgid ""
+"Named fragments (``location``, ``prop``, ``attitude`` etc) are randomly "
+"generated from pre-defined lists of possible values. Note the use of "
+"``random.choice`` to select a single item from a list."
+msgstr ""
+"予め定義された言葉のリストから、ランダムに名前つき断片(location、prop、"
+"attitudeなど)が生成されます。 ``random.choice`` を使って、リストから単一の"
+"項目を選んでいることに注目してください。"
+
+#: ../../tutorials/speech.rst:119
+msgid ""
+"A template of a poem is defined as a list of stanzas with \"holes\" in "
+"them (denoted by ``{}``) into which the named fragments will be put using"
+" the ``format`` method."
+msgstr ""
+"詩のテンプレートは、その中に「穴」(``{}`` で表現)のある節のリストとして"
+"定義されています。この穴に ``format`` メソッドを使って名前つき断片を埋めます。"
+
+#: ../../tutorials/speech.rst:120
+msgid ""
+"Finally, Python loops over each item in the list of filled-in poetry "
+"stanzas and uses ``speech.say`` with the settings for the DALEK voice to "
+"recite the poem. A pause of 500 milliseconds is inserted between each "
+"line because even DALEKs need to take a breath."
+msgstr ""
+"最後に、Python は、埋め込まれた詩の節のリストの各項目をループして "
+"``speech.say`` を使って DALEK の声で詩を暗唱します。DALEK でも息をする必要が"
+"あるので、500 ミリ秒の休止を各行の間に挿入しています。"
+
+#: ../../tutorials/speech.rst:122
+msgid ""
+"Interestingly the original poetry related routines were written by Davros"
+" in `FORTRAN <https://en.wikipedia.org/wiki/Fortran>`_ (an appropriate "
+"language for DALEKS since you type it ALL IN CAPITAL LETTERS). However, "
+"The Doctor went back in time to precisely the point between Davros's "
+"`unit tests <https://en.wikipedia.org/wiki/Unit_testing>`_ passing and "
+"the `deployment pipeline "
+"<https://en.wikipedia.org/wiki/Continuous_delivery>`_ kicking in. At this"
+" instant he was able to insert a MicroPython interpreter into the DALEK "
+"operating system and the code you see above into the DALEK memory banks "
+"as a sort of long hidden Time-Lord `Easter Egg "
+"<https://en.wikipedia.org/wiki/Easter_egg_(media)>`_ or `Rickroll "
+"<https://www.youtube.com/watch?v=dQw4w9WgXcQ>`_."
+msgstr ""
+"興味深いことに、当初の詩の関連ルーチンはダブロス博士によって `FORTRAN "
+"<https://en.wikipedia.org/wiki/Fortran>`_ (すべて英大文字でタイプする DALEK "
+"の標準言語)で書かれました。しかし、ダブロス博士の `単体テスト "
+"<https://en.wikipedia.org/wiki/Unit_testing>`_ パスと `デプロイパイプライン "
+"<https://en.wikipedia.org/wiki/Continuous_delivery>`_ "
+"の間のポイントにドクターが正確に時を戻して、その瞬間、MicroPython インタプリタを DALEK "
+"のオペレーティングシステムに入れ、上記のコードを長い隠される `イスターエッグ "
+"<https://en.wikipedia.org/wiki/Easter_egg_(media)>`_ または `リックロール "
+"<https://www.youtube.com/watch?v=dQw4w9WgXcQ>`_ のようなものとして、DALEK "
+"のメモリバンクに入れることができました。"
+
+#: ../../tutorials/speech.rst:136
+msgid "Phonemes"
+msgstr "音素"
+
+#: ../../tutorials/speech.rst:138
+msgid ""
+"You'll notice that sometimes, the ``say`` function doesn't accurately "
+"translate from English words into the correct sound. To have fine grained"
+" control of the output, use phonemes: the building-block sounds of "
+"language."
+msgstr ""
+"場合によっては ``say`` 関数が英語の単語から正しい音に正確に変換されないことが"
+"あります。出力をきめ細かく制御するには、言語の音の最小単位である音素を使用します。"
+
+#: ../../tutorials/speech.rst:142
+msgid ""
+"The advantage of using phonemes is that you don't have to know how to "
+"spell! Rather, you only have to know how to say the word in order to "
+"spell it phonetically."
+msgstr ""
+"音素を使用する利点は、綴り方を知る必要がないことです。むしろ、それを音声学的に"
+"綴るためには、言葉の使い方を知る必要があります。"
+
+#: ../../tutorials/speech.rst:146
+msgid ""
+"A full list of the phonemes the speech synthesiser understands can be "
+"found in the API documentation for speech. Alternatively, save yourself a"
+" lot of time by passing in English words to the ``translate`` function. "
+"It'll return a first approximation of the phonemes it would use to "
+"generate the audio. This result can be hand-edited to improve the "
+"accuracy, inflection and emphasis (so it sounds more natural)."
+msgstr ""
+"音声シンセサイザーが理解している音素の全リストは、speech の API ドキュメンテーション"
+"にあります。あるいは、英語の単語を ``translate`` 関数に渡すことで、時間を節約できます。"
+"この関数は、オーディオを生成するために使う音素の近似を最初に生成して返します。この結果は、"
+"(もっと自然に聞こえるように)精度、屈曲、強調を手で編集して改善できます。"
+
+#: ../../tutorials/speech.rst:153
+msgid "The ``pronounce`` function is used for phoneme output like this::"
+msgstr "音素出力には次のように ``pronounce`` 関数を使います。"
+
+#: ../../tutorials/speech.rst:155
+msgid "speech.pronounce(\"/HEH5EH4EH3EH2EH2EH3EH4EH5EHLP.”)"
+msgstr ""
+
+#: ../../tutorials/speech.rst:157
+msgid "How could you improve on The Doctor's code to make it use phonemes?"
+msgstr "ドクターのコードを音素を使って改善してみてください。"
+
+#: ../../tutorials/speech.rst:160
+msgid "Sing A Song of Micro:bit"
+msgstr "micro:bit の歌を歌う"
+
+#: ../../tutorials/speech.rst:162
+msgid ""
+"By changing the ``pitch`` setting and calling the ``sing`` function it's "
+"possible to make the device sing (although it's not going to win "
+"Eurovision any time soon)."
+msgstr ""
+"``pitch`` 設定の変更と ``sing`` 関数の呼出しによって、デバイスを歌えるように"
+"できます(ただし、Eurovision (訳注: 欧州放送連合の音楽コンテスト)で勝てるとは"
+"限りません)。"
+
+#: ../../tutorials/speech.rst:166
+msgid "The mapping from pitch numbers to musical notes is shown below:"
+msgstr "pitch 番号から音符へのマッピングを以下に示します。"
+
+#: ../../tutorials/speech.rst:169
+msgid ".. image:: tutorials/../speech-pitch.png"
+msgstr ""
+
+#: ../../tutorials/speech.rst:170
+msgid "The ``sing`` function must take phonemes and pitch as input like this::"
+msgstr "次のように、 ``sing`` 関数には音素と pitch を入力する必要があります。"
+
+#: ../../tutorials/speech.rst:172
+msgid "speech.sing(\"#115DOWWWW\")"
+msgstr ""
+
+#: ../../tutorials/speech.rst:174
+msgid ""
+"Notice how the pitch to be sung is prepended to the phoneme with a hash "
+"(``#``). The pitch will remain the same for subsequent phonemes until a "
+"new pitch is annotated."
+msgstr ""
+"歌う pitch の設定として、音素の前にハッシュ(``#``)で前置した値があることに注目"
+"してください。新しい pitch 設定があるまで、pitch は後続の音素に対して同じままと"
+"なります。"
+
+#: ../../tutorials/speech.rst:178
+msgid ""
+"The following example demonstrates how all three generative functions "
+"(``say``, ``pronounce`` and ``sing``) can be used to produce speech like "
+"output:"
+msgstr ""
+"次の例は、3つの関数(``say``, ``pronounce``, ``sing``)を使った音声の生成方法を"
+"示しています。"
+
+msgid ""
+"import speech\n"
+"from microbit import sleep\n"
+"\n"
+"# The say method attempts to convert English into phonemes.\n"
+"speech.say(\"I can sing!\")\n"
+"sleep(1000)\n"
+"speech.say(\"Listen to me!\")\n"
+"sleep(1000)\n"
+"\n"
+"# Clearing the throat requires the use of phonemes. Changing\n"
+"# the pitch and speed also helps create the right effect.\n"
+"speech.pronounce(\"AEAE/HAEMM\", pitch=200, speed=100)  # Ahem\n"
+"sleep(1000)\n"
+"\n"
+"# Singing requires a phoneme with an annotated pitch for each syllable.\n"
+"solfa = [\n"
+"    \"#115DOWWWWWW\",   # Doh\n"
+"    \"#103REYYYYYY\",   # Re\n"
+"    \"#94MIYYYYYY\",    # Mi\n"
+"    \"#88FAOAOAOAOR\",  # Fa\n"
+"    \"#78SOHWWWWW\",    # Soh\n"
+"    \"#70LAOAOAOAOR\",  # La\n"
+"    \"#62TIYYYYYY\",    # Ti\n"
+"    \"#58DOWWWWWW\",    # Doh\n"
+"]\n"
+"\n"
+"# Sing the scale ascending in pitch.\n"
+"song = ''.join(solfa)\n"
+"speech.sing(song, speed=100)\n"
+"# Reverse the list of syllables.\n"
+"solfa.reverse()\n"
+"song = ''.join(solfa)\n"
+"# Sing the scale descending in pitch.\n"
+"speech.sing(song, speed=100)"
+msgstr ""
+"import speech\n"
+"from microbit import sleep\n"
+"\n"
+"# say メソッドは英語から音素への変換を試みます。\n"
+"speech.say(\"I can sing!\")\n"
+"sleep(1000)\n"
+"speech.say(\"Listen to me!\")\n"
+"sleep(1000)\n"
+"\n"
+"# throat をクリーンにするには音素を使う必要があります。\n"
+"# pitch と speed を変更することでも適切な効果が得られます。\n"
+"speech.pronounce(\"AEAE/HAEMM\", pitch=200, speed=100)  # えへん\n"
+"sleep(1000)\n"
+"\n"
+"# 歌わせるには各音節ごとに音階の音素が必要です。\n"
+"solfa = [\n"
+"    \"#115DOWWWWWW\",   # ド\n"
+"    \"#103REYYYYYY\",   # レ\n"
+"    \"#94MIYYYYYY\",    # ミ\n"
+"    \"#88FAOAOAOAOR\",  # ファ\n"
+"    \"#78SOHWWWWW\",    # ソ\n"
+"    \"#70LAOAOAOAOR\",  # ラ\n"
+"    \"#62TIYYYYYY\",    # シ\n"
+"    \"#58DOWWWWWW\",    # ド\n"
+"]\n"
+"\n"
+"# 音階が順に高くなっていくよう歌わせます。\n"
+"song = ''.join(solfa)\n"
+"speech.sing(song, speed=100)\n"
+"# 音節のリストの順番を逆にします。\n"
+"solfa.reverse()\n"
+"song = ''.join(solfa)\n"
+"# 音階が順に低くなっていくよう歌わせます。\n"
+"speech.sing(song, speed=100)"
+
+#: ../../tutorials/storage.rst:256
+msgid ""
+"The image of paper files is used under a Creative Commons License and is "
+"available here: https://www.flickr.com/photos/jenkim/2270085025"
+msgstr ""
+"紙ファイルの画像はクリエイティブ・コモンズ・ライセンスにより "
+"https://www.flickr.com/photos/jenkim/2270085025 のものを使用しています。"
+
+#: ../../tutorials/storage.rst:2
+msgid "Storage"
+msgstr "ストレージ"
+
+#: ../../tutorials/storage.rst:4
+msgid ""
+"Sometimes you need to store useful information. Such information is "
+"stored as data: representation of information (in a digital form when "
+"stored on computers). If you store data on a computer it should persist, "
+"even if you switch the device off and on again."
+msgstr ""
+"有用な情報を保存しなければならないこともあります。そのような情報はそれを表現する"
+"データとして保存します(コンピュータに保存されるときのデジタル形式)。コンピュータに"
+"データを保存すると、デバイスの電源を入れ直してもデータは保持されます。"
+
+#: ../../tutorials/storage.rst:9
+msgid ""
+"Happily MicroPython on the micro:bit allows you to do this with a very "
+"simple file system. Because of memory constraints **there is "
+"approximately 30k of storage available** on the file system."
+msgstr ""
+"幸い micro:bit の MicroPython では非常に単純なファイルシステムでこれを行う"
+"ことができます。メモリの制約のため、ファイルシステムで *利用可能な容量は約 30KB* "
+"となっています。"
+
+#: ../../tutorials/storage.rst:15
+msgid ""
+"The micropython file system should not be confused with the micro:bit "
+"mass storage mode which presents the device as a USB drive. Mass storage "
+"mode is only intended for copying across a HEX file, so you won't see "
+"files you create using the file system appearing on the MICROBIT drive."
+msgstr ""
+"micro:bit を PC に繋いだときに USB ドライブとして現れるマスストレージモードと "
+"micropython ファイルシステムを混同しないでください。マスストレージモードは HEX "
+"ファイル全体をコピーするためのものなので、MICROBIT ドライブのファイルシステム上では"
+"ファイルを作れません。"
+
+#: ../../tutorials/storage.rst:20
+msgid "What is a file system?"
+msgstr "ファイルシステムとは何か？"
+
+#: ../../tutorials/storage.rst:22
+msgid ""
+"It's a means of storing and organising data in a persistent manner - any "
+"data stored in a file system should survive restarts of the device. As "
+"the name suggests, data stored on a file system is organised into files."
+msgstr ""
+"ファイルシステムとは、データを永続的に格納・編成する手段です。ファイルシステムに格納"
+"されたデータは、デバイスの再起動後も残っている必要があります。名前が示すように、"
+"ファイルシステムに格納されたデータはファイルに編成されます。"
+
+#: ../../tutorials/storage.rst:27
+msgid ".. image:: tutorials/files.jpg"
+msgstr ""
+
+#: ../../tutorials/storage.rst:28
+msgid ""
+"A computer file is a named digital resource that's stored on a file "
+"system. Such resources contain useful information as data. This is "
+"exactly how a paper file works. It's a sort of named container that "
+"contains useful information. Usually, both paper and digital files are "
+"named to indicate what they contain. On computers it is common to end a "
+"file with a ``.something`` suffix. Usually, the \"something\" indicates "
+"what type of data is used to represent the information. For example, "
+"``.txt`` indicates a text file, ``.jpg`` a JPEG image and ``.mp3`` sound "
+"data encoded as MP3."
+msgstr ""
+"コンピュータのファイルは、ファイルシステムに格納された名前付きのデジタルリソース"
+"です。そのようなリソースには、有用な情報がデータとして含まれています。これは、"
+"紙のファイルの仕組みとまったく同じです。それは有益な情報を含む一種の名前付き"
+"コンテナです。通常、紙でもデジタルでもファイルには名前が付けられています。"
+"コンピュータでは ``.something`` のような接尾辞をファイル名の終わりにつけるのが"
+"一般的です。通常、\"something\" は情報を表すために使用されるデータのタイプを示します。"
+"たとえば ``.txt`` はテキストファイル、 ``.jpg`` は JPEG 画像、 ``.mp3`` は "
+"MP3 としてエンコードされたサウンドデータを示します。"
+
+#: ../../tutorials/storage.rst:37
+msgid ""
+"Some file systems (such as the one found on your laptop or PC) allow you "
+"to organise your files into directories: named containers that group "
+"related files and sub-directories together. However, *the file system "
+"provided by MicroPython is a flat file system*. A flat file system does "
+"not have directories - all your files are just stored in the same place."
+msgstr ""
+"(ラップトップや PC のように)ファイルシステムによっては、ファイルをディレクトリに"
+"まとめることができます。これは名前付きびコンテナであり、関連するファイルと"
+"サブディレクトリをまとめてグループ化します。ただし、 *MicroPython が提供する"
+"ファイルシステムはフラットファイルシステムです* 。フラットファイルシステムには"
+"ディレクトリがありません。すべてのファイルは同じ場所に保存されます(訳注: MicroPython "
+"がフラットファイルシステムであるという制限はあくまで BBC micro:bit での話です)。"
+
+#: ../../tutorials/storage.rst:43
+msgid ""
+"The Python programming language contains easy to use and powerful ways in"
+" which to work with a computer's file system. MicroPython on the "
+"micro:bit implements a useful subset of these features to make it easy to"
+" read and write files on the device, while also providing consistency "
+"with other versions of Python."
+msgstr ""
+"Python プログラミング言語は、コンピュータのファイルシステムを操作するための"
+"使いやすく強力な方法を提供しています。micro:bit の MicroPython は、これらの機能の"
+"便利なサブセットを実装して、デバイス上のファイルを簡単に読み書きできるようにしています。"
+"また、他のバージョンの Python との一貫性も提供します。"
+
+#: ../../tutorials/storage.rst:50
+msgid ""
+"Flashing your micro:bit will DESTROY ALL YOUR DATA since it re-writes all"
+" the flash memory used by the device and the file system is stored in the"
+" flash memory."
+msgstr ""
+"micro:bit にプログラムを転送すると、デバイスによって使用されるすべてのフラッシュメモリが"
+"書き換えられます。ファイルシステムがフラッシュメモリに再設定されるため、すべてのデータが"
+"破棄されてしまいます。"
+
+#: ../../tutorials/storage.rst:54
+msgid ""
+"However, if you switch off your device the data will remain intact until "
+"you either delete it or re-flash the device."
+msgstr ""
+"ただし、デバイスの電源を切っただけではデータはそのまま残り続けます。データが消えるのは、"
+"ファイルを削除するか、デバイスを再フラッシュした場合です。"
+
+#: ../../tutorials/storage.rst:58
+msgid "Open Sesame"
+msgstr "開けゴマ(Open Sesame)"
+
+#: ../../tutorials/storage.rst:60
+msgid ""
+"Reading and writing a file on the file system is achieved by the ``open``"
+" function. Once a file is opened you can do stuff with it until you close"
+" it (analogous with the way we use paper files). It is essential you "
+"close a file so MicroPython knows you've finished with it."
+msgstr ""
+"ファイルシステム上でのファイルの読み書きは、 ``open`` 関数によって実現されます。"
+"ファイルを開いたら、それを閉じるまでファイルの中身をいじれます(紙ファイルの使用方法に"
+"似ています)。ファイル作業の完了を MicroPython に知るには、ファイルを閉じることが不可欠です。"
+
+#: ../../tutorials/storage.rst:65
+msgid ""
+"The best way to make sure of this is to use the ``with`` statement like "
+"this::"
+msgstr ""
+"これを行う最も良い方法は、次のように ``with`` 文を使うことです::"
+
+#: ../../tutorials/storage.rst:67
+msgid ""
+"with open('story.txt') as my_file:\n"
+"    content = my_file.read()\n"
+"print(content)"
+msgstr ""
+
+#: ../../tutorials/storage.rst:71
+msgid ""
+"The ``with`` statement uses the ``open`` function to open a file and "
+"assign it to an object. In the example above, the ``open`` function opens"
+" the file called ``story.txt`` (obviously a text file containing a story "
+"of some sort). The object that's used to represent the file in the Python"
+" code is called ``my_file``. Subsequently, in the code block indented "
+"underneath the ``with`` statement, the ``my_file`` object is used to "
+"``read()`` the content of the file and assign it to the ``content`` "
+"object."
+msgstr ""
+"``with`` 文は、``open`` 関数でファイルを開き、開いたファイルをオブジェクトに"
+"割り当てます。上記の例では、 ``open`` 関数が ``story.txt`` (明らかに何らかの"
+"ストーリーを含むテキストファイル)というファイルを開きます。Python　コードで"
+"ファイルを表現するために使われるオブジェクトには ``my_file`` という名前を"
+"つけています。その後、 ``with``文の下にインデントされたコードブロックで、 "
+"``my_file`` オブジェクトは ``read()`` で内容を読み出され、読み出された内容は "
+"``content`` に代入されます。"
+
+#: ../../tutorials/storage.rst:79
+msgid ""
+"Here's the important point, *the next line containing the* ``print`` "
+"*statement is not indented*. The code block associated with the ``with`` "
+"statement is only the single line that reads the file. Once the code "
+"block associated with the ``with`` statement is closed then Python (and "
+"MicroPython) will automatically close the file for you. This is called "
+"context handling and the ``open`` function creates objects that are "
+"context handlers for files."
+msgstr ""
+"重要な点は次の行の ``print`` がインデントされていないことです。``with`` "
+"文に関連付けられたコードブロックは、ファイルを読み取る単一の行だけです。 "
+"``with`` 文に関連付けられたコードブロックを抜けると、Python (および "
+"MicroPython)によって自動的にファイルが閉じられます。これはコンテキスト"
+"処理と呼ばれ、 ``open`` 関数はファイルのためのコンテキストハンドラを"
+"作成します。"
+
+#: ../../tutorials/storage.rst:86
+msgid ""
+"Put simply, the scope of your interaction with a file is defined by the "
+"code block associated with the ``with`` statement that opens the file."
+msgstr ""
+"簡単に言えば、ファイルとのやりとりの範囲は、ファイルを開いた ``with`` 文に"
+"関連付けられたコードブロックによって定義されます。"
+
+#: ../../tutorials/storage.rst:89
+msgid "Confused?"
+msgstr "混乱してますか？"
+
+#: ../../tutorials/storage.rst:91
+msgid "Don't be. I'm simply saying your code should look like this::"
+msgstr "心配しないでください。コードは次のようになパターンになるというだけです::"
+
+#: ../../tutorials/storage.rst:93
+msgid ""
+"with open('some_file') as some_object:\n"
+"    # Do stuff with some_object in this block of code\n"
+"    # associated with the with statement.\n"
+"\n"
+"# When the block is finished then MicroPython\n"
+"# automatically closes the file for you."
+msgstr ""
+"with open('ファイル名') as some_object:\n"
+"    # with 文のこのコードブロック内で\n"
+"    # some_object をいじれます\n"
+"\n"
+"# ブロックを抜けると MicroPython が\n"
+"# 自動でファイルをクローズしてくれます"
+
+#: ../../tutorials/storage.rst:100
+msgid ""
+"Just like a paper file, a digital file is opened for two reasons: to read"
+" its content (as demonstrated above) or to write something to the file. "
+"The default mode is to read the file. If you want to write to a file you "
+"need to tell the ``open`` function in the following way::"
+msgstr ""
+"紙ファイルと同様にに、デジタルファイルは２つの理由で開きます。１つは(上に例示した"
+"ように)ファイルの内容を読むこと、もう１つはファイルに何かを書き込むことです。"
+"デフォルトのモードはファイルを読むことです。ファイルに書き込む場合 ``open`` 関数"
+"には、次のように関数に指示する必要があります。"
+
+#: ../../tutorials/storage.rst:105
+msgid ""
+"with open('hello.txt', 'w') as my_file:\n"
+"    my_file.write(\"Hello, World!\")"
+msgstr ""
+
+#: ../../tutorials/storage.rst:108
+msgid ""
+"Notice the ``'w'`` argument is used to set the ``my_file`` object into "
+"write mode. You could also pass an ``'r'`` argument to set the file "
+"object to read mode, but since this is the default, it's often left off."
+msgstr ""
+"この ``'w'`` 引数は、 ``my_file`` オブジェクトを書込みモードに設定するために"
+"使います。 ``'r'`` 引数でファイルオブジェクトを読み取りモードに設定することも"
+"できますが、これはデフォルトなので、省略することが多いです。"
+
+#: ../../tutorials/storage.rst:112
+msgid ""
+"Writing data to the file is done with the (you guessed it) ``write`` "
+"method that takes the string you want to write to the file as an "
+"argument. In the example above, I write the text \"Hello, World!\" to a "
+"file called \"hello.txt\"."
+msgstr ""
+"ファイルへのデータの書き込みには(推測どおりかもしれませんが) ``write`` "
+"メソッドを使います。ファイルに書き込む文字列を引数に指定します。上の例では、 "
+"\"hello.txt\" というファイルに \"Hello、World！\" というテキストを"
+"書き込んでいます。"
+
+#: ../../tutorials/storage.rst:121
+msgid ""
+"When you open a file and write (perhaps several times while the file is "
+"in an open state) you will be writing OVER the content of the file if it "
+"already exists."
+msgstr ""
+"ファイルを開いて書き込むとき、ファイルがすでに存在する場合はファイルの内容を"
+"上書きします。"
+
+#: ../../tutorials/storage.rst:125
+msgid ""
+"If you want to append data to a file you should first read it, store the "
+"content somewhere, close it, append your data to the content and then "
+"open it to write again with the revised content."
+msgstr ""
+"ファイルにデータを追加するには、最初にそれを読み出し、読み出した内容をどこかに保持し、"
+"ファイルを閉じ、読み込んだ内容にデータを追加して、再度ファイルを開いて、改訂した"
+"内容を書き直す必要があります。"
+
+#: ../../tutorials/storage.rst:129
+msgid ""
+"While this is the case in MicroPython, \"normal\" Python can open files "
+"to write in \"append\" mode. That we can't do this on the micro:bit is a "
+"result of the simple implementation of the file system."
+msgstr ""
+"これは MicroPython の場合ですが、 \"通常の\" Python では \"append\" "
+"モードで書き込むファイルを開くことができます。micro:bit でこれを行うことが"
+"できないのは、ファイルシステムの実装を簡略化したためです。"
+
+#: ../../tutorials/storage.rst:134
+msgid "OS SOS"
+msgstr ""
+
+#: ../../tutorials/storage.rst:136
+msgid ""
+"As well as reading and writing files, Python can manipulate them. You "
+"certainly need to know what files are on the file system and sometimes "
+"you need to delete them too."
+msgstr ""
+"Python には、ファイルの読み書き以外にもできるファイル操作があります。"
+"ファイルシステム上に何のファイルがあるかを知る必要があるでしょうし、"
+"またそれらを削除が必要になることもあるでしょう。"
+
+#: ../../tutorials/storage.rst:140
+msgid ""
+"On a regular computer, it is the role of the operating system (like "
+"Windows, OSX or Linux) to manage this on Python's behalf. Such "
+"functionality is made available in Python via a module called ``os``. "
+"Since MicroPython **is** the operating system we've decided to keep the "
+"appropriate functions in the ``os`` module for consistency so you'll know"
+" where to find them when you use \"regular\" Python on a device like a "
+"laptop or Raspberry Pi."
+msgstr ""
+"通常のコンピュータにおいて、オペレーティングシステム(Windows, OSX, Linuxなど)の"
+"役割は Python などのためにこのような管理をすることです。このような機能は Python "
+"では ``os`` というモジュールを介して利用できます。MicroPython は"
+"オペレーティングシステム **でもある** ため、 ``os`` モジュールの適切な機能を"
+"一貫性のあるものに保つことにしました。そのため、ラップトップや Raspberry Pi "
+"のようなデバイスで「通常の」Python を使う場合と同様の操作があります。"
+
+#: ../../tutorials/storage.rst:147
+msgid ""
+"Essentially, you can do three operations related to the file system: list"
+" the files, remove a file and ask for the size of a file."
+msgstr ""
+"基本的に、ファイルシステムに関連する３つの操作、つまりファイルの一覧表示、"
+"ファイルの削除、ファイルのサイズの確認を行うことができます。"
+
+#: ../../tutorials/storage.rst:150
+msgid ""
+"To list the files on your file system use the ``listdir`` function. It "
+"returns a list of strings indicating the file names of the files on the "
+"file system::"
+msgstr ""
+"ファイルシステム上のファイルを一覧表示するには、 ``listdir`` "
+"関数を使用します。これはファイルシステム上のファイルのファイル名を示す"
+"文字列のリストを返します::"
+
+#: ../../tutorials/storage.rst:154
+msgid ""
+"import os\n"
+"my_files = os.listdir()"
+msgstr ""
+
+#: ../../tutorials/storage.rst:157
+msgid ""
+"To delete a file use the ``remove`` function. It takes a string "
+"representing the file name of the file you want to delete as an argument,"
+" like this::"
+msgstr ""
+"ファイルを削除するには、 ``remove`` 関数を使用します。これは削除するファイルの"
+"ファイル名を表す文字列を引数として指定します::"
+
+#: ../../tutorials/storage.rst:160
+msgid ""
+"import os\n"
+"os.remove('filename.txt')"
+msgstr ""
+
+#: ../../tutorials/storage.rst:163
+msgid ""
+"Finally, sometimes it's useful to know how big a file is before reading "
+"from it. To achieve this use the ``size`` function. Like the ``remove`` "
+"function, it takes a string representing the file name of the file whose "
+"size you want to know. It returns an integer (whole number) telling you "
+"the number of bytes the file takes up::"
+msgstr ""
+"最後に、ファイルを読む前にファイルの大きさを知ることが有用な場合もあります。"
+"これを行うには、 ``size`` 関数を使用します。 ``remove`` 関数と同様に、"
+"サイズを知りたいファイルのファイル名を表す文字列を指定します。この関数は"
+"ファイルが占めるバイト数を示す整数を返します::"
+
+#: ../../tutorials/storage.rst:169
+msgid ""
+"import os\n"
+"file_size = os.size('a_big_file.txt')"
+msgstr ""
+
+#: ../../tutorials/storage.rst:172
+msgid ""
+"It's all very well having a file system, but what if we want to put or "
+"get files on or off the device?"
+msgstr ""
+"ファイルシステムを操作するのはよいのですが、デバイスにファイルを出し入れする"
+"場合はどうしたらよいでしょうか？"
+
+#: ../../tutorials/storage.rst:175
+msgid "Just use the ``microfs`` utility!"
+msgstr "``microfs`` ユーティリティを使うだけです！"
+
+#: ../../tutorials/storage.rst:178
+msgid "File Transfer"
+msgstr "ファイル転送"
+
+#: ../../tutorials/storage.rst:180
+msgid ""
+"If you have Python installed on the computer you use to program your BBC "
+"micro:bit then you can use a special utility called ``microfs`` "
+"(shortened to ``ufs`` when using it in the command line). Full "
+"instructions for installing and using all the features of microfs can be "
+"found `in its documentation <https://microfs.readthedocs.io>`_."
+msgstr ""
+"BBC micro:bit のプログラミングに使うコンピュータに Python がインストールされて"
+"いるなら、``microfs`` という特別なユーティリティを使えます(コマンドラインで使う"
+"ときには ``ufs`` と短縮した名前を使います)。microfs のインストールと利用について"
+"詳しい手順は `microfs のドキュメンテーション <https://microfs.readthedocs.io>`_ "
+"を参照してください。"
+
+#: ../../tutorials/storage.rst:186
+msgid ""
+"Nevertheless it's possible to do most of the things you need with just "
+"four simple commands::"
+msgstr ""
+"ここでは、ほとんどこれだけで用が足りるという４つの基本コマンドだけを説明します::"
+
+#: ../../tutorials/storage.rst:189
+msgid ""
+"$ ufs ls\n"
+"story.txt"
+msgstr ""
+
+#: ../../tutorials/storage.rst:192
+msgid ""
+"The ``ls`` sub-command lists the files on the file system (it's named "
+"after the common Unix command, ``ls``, that serves the same function)."
+msgstr ""
+"``ls`` サブコマンドは、ファイルシステム上のファイルの一覧表示します(同じ機能を"
+"提供する一般的な Unix コマンド ``ls`` にちなんで名付けられています)。"
+
+#: ../../tutorials/storage.rst:197
+msgid "$ ufs get story.txt"
+msgstr ""
+
+#: ../../tutorials/storage.rst:199
+msgid ""
+"The ``get`` sub-command gets a file from the connected micro:bit and "
+"saves it into your current location on your computer (it's named after "
+"the ``get`` command that's part of the common file transfer protocol "
+"[FTP] that serves the same function)."
+msgstr ""
+"``get`` サブコマンドは、接続した micro:bit からファイルを取得し、コンピュータの"
+"現在の場所に保存します(同じ機能を提供する一般的なファイル転送プロトコル [FTP] の"
+"コマンド ``get`` にちなんで名付けられています)。"
+
+#: ../../tutorials/storage.rst:206
+msgid "$ ufs rm story.txt"
+msgstr ""
+
+#: ../../tutorials/storage.rst:208
+msgid ""
+"The ``rm`` sub-command removes the named file from the file system on the"
+" connected micro:bit (it's named after the common Unix command, ``rm``, "
+"that serves the same function)."
+msgstr ""
+"``rm`` サブコマンドは、接続した micro:bit から指定の名前のファイルを削除します"
+"(同じ機能を提供する一般的な Unix コマンド ``rm`` にちなんで名付けられています)。"
+
+#: ../../tutorials/storage.rst:214
+msgid "$ ufs put story2.txt"
+msgstr ""
+
+#: ../../tutorials/storage.rst:216
+msgid ""
+"Finally, the ``put`` sub-command puts a file from your computer onto the "
+"connected device (it's named after the ``put`` command that's part of FTP"
+" that serves the same function)."
+msgstr ""
+"``put`` サブコマンドは、コンピュータから接続されたデバイスにファイルを"
+"置きます(同じ機能を提供する一般的なファイル転送プロトコル [FTP] のコマンド "
+"``put`` にちなんで名付けられています)。"
+
+#: ../../tutorials/storage.rst:221
+msgid "Mainly main.py"
+msgstr "主役 main.py"
+
+#: ../../tutorials/storage.rst:223
+msgid ""
+"The file system also has an interesting property: if you just flashed the"
+" MicroPython runtime onto the device then when it starts it's simply "
+"waiting for something to do. However, if you copy a special file called "
+"``main.py`` onto the file system, upon restarting the device, MicroPython"
+" will run the contents of the ``main.py`` file."
+msgstr ""
+"ファイルシステムには興味深いプロパティがあります: MicroPython ランタイムだけを"
+"デバイスに転送した後で起動すると、何かを行うことを待っているだけです。ただし、 "
+"``main.py`` という特別なファイルをファイルシステムにコピーして、デバイスを"
+"再起動すると、MicroPython はその ``main.py`` ファイルの内容を実行します。"
+
+#: ../../tutorials/storage.rst:229
+msgid ""
+"Furthermore, if you copy other Python files onto the file system then you"
+" can ``import`` them as you would any other Python module. For example, "
+"if you had a ``hello.py`` file that contained the following simple code::"
+msgstr ""
+"さらに、他の Python ファイルをファイルシステムにコピーすると、他の Python "
+"モジュールと同様にそれを ``import`` できます。たとえば次の単純なコードを含む"
+"ファイル ``hello.py`` があったとします。"
+
+#: ../../tutorials/storage.rst:233
+msgid ""
+"def say_hello(name=\"World\"):\n"
+"    return \"Hello, {}!\".format(name)"
+msgstr ""
+
+#: ../../tutorials/storage.rst:229
+msgid "...you could import and use the ``say_hello`` function like this::"
+msgstr "これを次のようにインポートして ``say_hello`` 関数を使えます::"
+
+#: ../../tutorials/storage.rst:238
+msgid ""
+"from microbit import display\n"
+"from hello import say_hello\n"
+"\n"
+"display.scroll(say_hello())"
+msgstr ""
+
+#: ../../tutorials/storage.rst:243
+msgid ""
+"Of course, it results in the text \"Hello, World!\" scrolling across the "
+"display. The important point is that such an example is split between two"
+" Python modules and the ``import`` statement is used to share code."
+msgstr ""
+"もちろん、 \"Hello、World!\" というテキストが表示されます。重要な点は、この例では"
+"２つの Python モジュールに分割され、 ``import`` 文がコードを共有するために"
+"使われていることです。"
+
+#: ../../tutorials/storage.rst:248
+msgid ""
+"If you have flashed a script onto the device in addition to the "
+"MicroPython runtime, then MicroPython will ignore ``main.py`` and run "
+"your embedded script instead."
+msgstr ""
+"MicroPython ランタイムに加えてデバイスにスクリプトを転送した場合、MicroPython "
+"は ``main.py`` 無視して、代わりに埋め込みスクリプトを実行します。"
+
+#: ../../tutorials/storage.rst:252
+msgid ""
+"To flash just the MicroPython runtime, simply make sure the script you "
+"may have written in your editor has zero characters in it. Once flashed "
+"you'll be able to copy over a ``main.py`` file."
+msgstr ""
+"ランタイムだけを転送するには、エディタで作成したスクリプトに何も文字が含まれて"
+"いないことを確認するだけです。転送されると、main.py" ファイルをコピー"
+"することができます。"
+
