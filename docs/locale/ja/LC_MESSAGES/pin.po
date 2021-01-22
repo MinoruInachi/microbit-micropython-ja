@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2020-12-28 18:35+0900\n"
+"PO-Revision-Date: 2021-01-23 01:57+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -68,199 +68,194 @@ msgstr ""
 
 #: ../../pin.rst:29
 msgid ""
-"Those pins are available as attributes on the ``microbit`` "
-"module:``microbit.pin0`` - ``microbit.pin20``."
+"This table summarises the pins available, their types and what they are "
+"internally connected to. The pins are available as attributes on the "
+"``microbit`` module: ``microbit.pin0`` - ``microbit.pin20``."
 msgstr ""
-"これらの端子は ``microbit`` モジュールの属性として利用できます: "
+"次の表は、使用可能な端子とそのタイプ、内部で接続されている先をまとめたものです。"
+"端子は ``microbit`` モジュールの属性として利用できます: "
 "``microbit.pin0`` - ``microbit.pin20`` 。"
 
-#: ../../pin.rst:33
+#: ../../pin.rst:34
 msgid "Pin"
 msgstr "端子"
 
-#: ../../pin.rst:33
+#: ../../pin.rst:34
 msgid "Type"
 msgstr "タイプ"
 
-#: ../../pin.rst:33
+#: ../../pin.rst:34
 msgid "Function"
 msgstr "機能"
 
-#: ../../pin.rst:33
+#: ../../pin.rst:34
 msgid "Function **V2**"
 msgstr "機能 **V2**"
 
-#: ../../pin.rst:35
+#: ../../pin.rst:36
 msgid "0"
 msgstr ""
 
-#: ../../pin.rst:35 ../../pin.rst:37 ../../pin.rst:39
+#: ../../pin.rst:36 ../../pin.rst:38 ../../pin.rst:40
 msgid "Touch"
 msgstr "タッチ"
 
-#: ../../pin.rst:35
+#: ../../pin.rst:36
 msgid "Pad 0"
 msgstr "パッド 0"
 
-#: ../../pin.rst:37
+#: ../../pin.rst:38
 msgid "1"
 msgstr ""
 
-#: ../../pin.rst:37
+#: ../../pin.rst:38
 msgid "Pad 1"
 msgstr "パッド 1"
 
-#: ../../pin.rst:39
+#: ../../pin.rst:40
 msgid "2"
 msgstr ""
 
-#: ../../pin.rst:39
+#: ../../pin.rst:40
 msgid "Pad 2"
 msgstr "パッド 2"
 
-#: ../../pin.rst:41
+#: ../../pin.rst:42
 msgid "3"
 msgstr ""
 
-#: ../../pin.rst:41 ../../pin.rst:43 ../../pin.rst:55
+#: ../../pin.rst:42 ../../pin.rst:44 ../../pin.rst:56
 msgid "Analog"
 msgstr "アナログ"
 
-#: ../../pin.rst:41 ../../pin.rst:43
+#: ../../pin.rst:42 ../../pin.rst:44
 msgid "Column 1"
 msgstr "列 1"
 
-#: ../../pin.rst:41 ../../pin.rst:55
+#: ../../pin.rst:44 ../../pin.rst:56
 msgid "Column 3"
 msgstr "列 3"
 
-#: ../../pin.rst:43
+#: ../../pin.rst:44
 msgid "4"
 msgstr ""
 
-#: ../../pin.rst:43 ../../pin.rst:49
+#: ../../pin.rst:44 ../../pin.rst:50
 msgid "Column 2"
 msgstr "列 2"
 
-#: ../../pin.rst:45
+#: ../../pin.rst:46
 msgid "5"
 msgstr ""
 
-#: ../../pin.rst:45 ../../pin.rst:47 ../../pin.rst:49 ../../pin.rst:51
-#: ../../pin.rst:53 ../../pin.rst:57 ../../pin.rst:59 ../../pin.rst:61
-#: ../../pin.rst:63 ../../pin.rst:65 ../../pin.rst:67 ../../pin.rst:70
-#: ../../pin.rst:72
+#: ../../pin.rst:46 ../../pin.rst:48 ../../pin.rst:50 ../../pin.rst:52
+#: ../../pin.rst:54 ../../pin.rst:58 ../../pin.rst:60 ../../pin.rst:62
+#: ../../pin.rst:64 ../../pin.rst:66 ../../pin.rst:68 ../../pin.rst:71
+#: ../../pin.rst:73
 msgid "Digital"
 msgstr "デジタル"
 
-#: ../../pin.rst:45
+#: ../../pin.rst:46
 msgid "Button A"
 msgstr "ボタン A"
 
-#: ../../pin.rst:47
+#: ../../pin.rst:48
 msgid "6"
 msgstr ""
 
-#: ../../pin.rst:47
+#: ../../pin.rst:48
 msgid "Column 9"
 msgstr "列 9"
 
-#: ../../pin.rst:47
+#: ../../pin.rst:48
 msgid "Column 4"
 msgstr "列 4"
 
-#: ../../pin.rst:49
+#: ../../pin.rst:50
 msgid "7"
 msgstr ""
 
-#: ../../pin.rst:49
+#: ../../pin.rst:50
 msgid "Column 8"
 msgstr "列 8"
 
-#: ../../pin.rst:51
+#: ../../pin.rst:52
 msgid "8"
 msgstr ""
 
-#: ../../pin.rst:53
+#: ../../pin.rst:54
 msgid "9"
 msgstr ""
 
-#: ../../pin.rst:53
+#: ../../pin.rst:54
 msgid "Column 7"
 msgstr "列 7"
 
-#: ../../pin.rst:55
+#: ../../pin.rst:56
 msgid "10"
 msgstr ""
 
-#: ../../pin.rst:55
+#: ../../pin.rst:56
 msgid "Column 5"
 msgstr "列 5"
 
-#: ../../pin.rst:57
+#: ../../pin.rst:58
 msgid "11"
 msgstr ""
 
-#: ../../pin.rst:57
+#: ../../pin.rst:58
 msgid "Button B"
 msgstr "ボタン B"
 
-#: ../../pin.rst:59
+#: ../../pin.rst:60
 msgid "12"
 msgstr ""
 
-#: ../../pin.rst:61
+#: ../../pin.rst:62
 msgid "13"
 msgstr ""
 
-#: ../../pin.rst:61
+#: ../../pin.rst:62
 msgid "SPI SCK"
 msgstr ""
 
-#: ../../pin.rst:63
+#: ../../pin.rst:64
 msgid "14"
 msgstr ""
 
-#: ../../pin.rst:63
+#: ../../pin.rst:64
 msgid "SPI MISO"
 msgstr ""
 
-#: ../../pin.rst:65
+#: ../../pin.rst:64
 msgid "15"
 msgstr ""
 
-#: ../../pin.rst:65
+#: ../../pin.rst:66
 msgid "SPI MOSI"
 msgstr ""
 
-#: ../../pin.rst:67
+#: ../../pin.rst:68
 msgid "16"
 msgstr ""
 
-#: ../../pin.rst:70
+#: ../../pin.rst:71
 msgid "19"
 msgstr ""
 
-#: ../../pin.rst:70
+#: ../../pin.rst:71
 msgid "I2C SCL"
 msgstr ""
 
-#: ../../pin.rst:72
+#: ../../pin.rst:73
 msgid "20"
 msgstr ""
 
-#: ../../pin.rst:72
+#: ../../pin.rst:73
 msgid "I2C SDA"
 msgstr ""
 
-#: ../../pin.rst:75
-msgid ""
-"The above table summarizes the pins available, their types (see below) "
-"and what they are internally connected to."
-msgstr ""
-"上の表は、使用可能な端子、タイプ(後述)、内部で接続されているものをまとめたものです。"
-
-#: ../../pin.rst:78
+#: ../../pin.rst:76
 msgid ""
 "The latest micro:bit device **V2** has two additional pins that you can "
 "access in MicroPython, but that are not available via the edge connector:"
@@ -268,7 +263,7 @@ msgstr ""
 "最新の micro:bit デバイス **V2** では、エッジコネクタには無いけれども、MicroPython "
 "で使える２つの端子が追加になっています。"
 
-#: ../../pin.rst:81
+#: ../../pin.rst:79
 msgid ""
 "``pin_logo`` - A touch sensitive logo pin on the front of the micro:bit, "
 "which by default is set to capacitive touch mode."
@@ -276,15 +271,15 @@ msgstr ""
 "``pin_logo`` - micro:bit の前面にあるタッチセンサー機能のあるロゴの端子です。"
 "デフォルトでは静電容量方式タッチモードになっています。"
 
-#: ../../pin.rst:84
+#: ../../pin.rst:82
 msgid "``pin_speaker`` - A pin to address the micro:bit speaker."
 msgstr "``pin_speaker`` - micro:bit 組込みスピーカーに繋げられている端子です。"
 
-#: ../../pin.rst:88
+#: ../../pin.rst:86
 msgid "Pulse-Width Modulation"
 msgstr "PWM (Pulse-Width Modulation)"
 
-#: ../../pin.rst:90
+#: ../../pin.rst:88
 msgid ""
 "The pins of your board cannot output analog signal the way an audio "
 "amplifier can do it -- by modulating the voltage on the pin. Those pins "
@@ -301,11 +296,11 @@ msgstr ""
 "非常に高速にオン/オフし、オン時間とオフ時間を制御することによっても可能です。この"
 "技術はパルス幅変調(PWM)と呼ばれ、 ``write_analog`` メソッドで行います。"
 
-#: ../../pin.rst:99
+#: ../../pin.rst:97
 msgid ".. image:: pwm.png"
 msgstr ""
 
-#: ../../pin.rst:100
+#: ../../pin.rst:98
 msgid ""
 "Above you can see the diagrams of three different PWM signals. All of "
 "them have the same period (and thus frequency), but they have different "
@@ -314,7 +309,7 @@ msgstr ""
 "上には 3 つの異なる PWM 信号の図があります。それらはすべて同じ周期(つまり周波数)を"
 "持ちますが、時間幅周期が異なります。"
 
-#: ../../pin.rst:103
+#: ../../pin.rst:101
 #, python-format
 msgid ""
 "The first one would be generated by ``write_analog(511)``, as it has "
@@ -326,7 +321,7 @@ msgstr ""
 "の時間幅を持ちます。パワーは時間の半分がオン、時間の半分がオフです。その結果、"
 "この信号の全エネルギーは、3.3V の代わりに 1.65V の場合と同じです。"
 
-#: ../../pin.rst:108
+#: ../../pin.rst:105
 #, python-format
 msgid ""
 "The second signal has 25% duty cycle, and could be generated with "
@@ -336,7 +331,7 @@ msgstr ""
 "第2の信号は 25% の時間幅周期を有し、 ``write_analog(255)`` を用いて生成"
 "できます。この端子に 0.825V が出力されている場合と同様の効果があります。"
 
-#: ../../pin.rst:112
+#: ../../pin.rst:110
 #, python-format
 msgid ""
 "The third signal has 75% duty cycle, and can be generated with "
@@ -347,7 +342,7 @@ msgstr ""
 "生成できます。第 2 の信号の 3 倍のエネルギーを有し、第 1 端子に 2.475V "
 "を出力することと同等です。"
 
-#: ../../pin.rst:116
+#: ../../pin.rst:114
 msgid ""
 "Note that this works well with devices such as motors, which have huge "
 "inertia by themselves, or LEDs, which blink too fast for the human eye to"
@@ -361,11 +356,11 @@ msgstr ""
 "結果になりません。このボードは矩形波の音だけを生成可能で、非常に古いコンピュータ"
 "ゲームによく似たものです -- そのようなゲームのほとんどもそうやっているからです。"
 
-#: ../../pin.rst:125
+#: ../../pin.rst:123
 msgid "Classes"
 msgstr "クラス"
 
-#: ../../pin.rst:127
+#: ../../pin.rst:125
 msgid ""
 "There are three kinds of pins, differing in what is available for them. "
 "They are represented by the classes listed below. Note that they form a "
@@ -376,7 +371,7 @@ msgstr ""
 "表されます。これらクラスは階層を形成しています。各クラスは前のクラスのすべての機能を"
 "持ち、独自のものを追加しています。"
 
-#: ../../pin.rst:133
+#: ../../pin.rst:131
 msgid ""
 "Those classes are not actually available for the user, you can't create "
 "new instances of them. You can only use the instances already provided, "
@@ -386,15 +381,15 @@ msgstr ""
 "できません。ボード上の物理的な端子を表す、すでに提供されているインスタンスのみを"
 "使用できます。"
 
-#: ../../pin.rst:141
+#: ../../pin.rst:139
 msgid "Return 1 if the pin is high, and 0 if it's low."
 msgstr "端子がハイの場合は 1 を返し、ローの場合は 0 を返します。"
 
-#: ../../pin.rst:145
+#: ../../pin.rst:143
 msgid "Set the pin to high if ``value`` is 1, or to low, if it is 0."
 msgstr "``value`` が 1 の場合はハイに設定し、0 の場合はローに設定します。"
 
-#: ../../pin.rst:175 ../../pin.rst:200
+#: ../../pin.rst:173 ../../pin.rst:198
 msgid ""
 "Read the voltage applied to the pin, and return it as an integer between "
 "0 (meaning 0V) and 1023 (meaning 3.3V)."
@@ -402,51 +397,8 @@ msgstr ""
 "端子の電圧を読み取り、0 (0V の意味）から 1023 (3.3V の意味)までの間の整数として"
 "返します。"
 
-#: ../../pin.rst:149
-msgid ""
-"Set the pull state to one of three possible values: ``pin.PULL_UP``, "
-"``pin.PULL_DOWN`` or ``pin.NO_PULL`` (where ``pin`` is an instance of "
-"a pin). See below for discussion of default pull states."
-msgstr ""
-"プル状態を次の３つの値どれかに設定します:  ``pin.PULL_UP``, "
-"``pin.PULL_DOWN``, ``pin.NO_PULL`` (ここで ``pin`` は端子のインスタンス"
-"のことです)。既定のプル状態については後述します。"
-
-#: ../../pin.rst:156
-msgid ""
-"Returns the pull configuration on a pin, which can be one of three "
-"possible values: ``NO_PULL``, ``PULL_DOWN``, or ``PULL_UP``. These "
-"are set using the ``set_pull()`` method or automatically configured "
-"when a pin mode requires it."
-msgstr ""
-"現在の端子のプル設定を返します。次の３つのいずれかの値が返ります: ``NO_PULL``, "
-"``PULL_DOWN``, ``PULL_UP`` 。これらの値は ``set_pull()`` メソッドで設定"
-"されるか、端子モードで必要なときに自動的に設定されます。"
-
-#: ../../pin.rst:163
-msgid ""
-"Returns the pin mode. When a pin is used for a specific function, like "
-"writing a digital value, or reading an analog value, the pin mode "
-"changes. Pins can have one of the following modes: ``MODE_UNUSED``, "
-"``MODE_WRITE_ANALOG``, ``MODE_READ_DIGITAL``, ``MODE_WRITE_DIGITAL``, "
-"``MODE_DISPLAY``, ``MODE_BUTTON``, ``MODE_MUSIC``, ``MODE_AUDIO_PLAY``, "
-"``MODE_TOUCH``, ``MODE_I2C``, ``MODE_SPI``."
-msgstr ""
-"端子モードを返します。デジタル値の書き込みやアナログ値の読み出しなど、端子を特定の"
-"機能で使うと端子モードが変化します。端子は次のいずれかのモードを持つことができます: "
-"``MODE_WRITE_ANALOG``, ``MODE_READ_DIGITAL``, ``MODE_WRITE_DIGITAL``, "
-"``MODE_DISPLAY``, ``MODE_BUTTON``, ``MODE_MUSIC``, ``MODE_AUDIO_PLAY``, "
-"``MODE_TOUCH``, ``MODE_I2C``, ``MODE_SPI`` 。"
-
-#: ../../pin.rst:175
-msgid ""
-"Read the voltage applied to the pin, and return it as an integer "
-"between 0 (meaning 0V) and 1023 (meaning 3.3V)."
-msgstr ""
-"端子の電圧を読み取り、0 (0V の意味）から 1023 (3.3V の意味)までの間の整数として"
-"返します。"
-
-#: ../../pin.rst:181
+#: ../../pin.rst:179
+#, python-format
 msgid ""
 "Output a PWM signal on the pin, with the duty cycle proportional to the "
 "provided ``value``. The ``value`` may be either an integer or a floating "
@@ -456,28 +408,28 @@ msgstr ""
 "``value`` には 0 (時間幅周期 0%)から 1023 (時間幅周期 100%)までの整数または"
 "浮動小数点数を指定できます。"
 
-#: ../../pin.rst:187
+#: ../../pin.rst:185
 msgid ""
 "Set the period of the PWM signal being output to ``period`` in "
 "milliseconds. The minimum valid value is 1ms."
 msgstr ""
 "出力される PWM 信号の周期を ``period`` にミリ秒単位で設定します。有効な最小値は 1ms です。"
 
-#: ../../pin.rst:192
+#: ../../pin.rst:190
 msgid ""
 "Set the period of the PWM signal being output to ``period`` in "
 "microseconds. The minimum valid value is 256µs."
 msgstr ""
 "出力される PWM 信号の周期を ``period`` にマイクロ秒単位で設定します。有効な最小値は 256μs です。"
 
-#: ../../pin.rst:208
+#: ../../pin.rst:206
 msgid ""
 "Return ``True`` if the pin is being touched with a finger, otherwise "
 "return ``False``."
 msgstr ""
 "端子を指で触れている場合は ``True`` 、そうでない場合は ``False`` を返します。"
 
-#: ../../pin.rst:212
+#: ../../pin.rst:210 ../../pin.rst:228
 msgid ""
 "The default touch mode for the pins on the edge connector is `resistive`."
 " The default for the logo pin **V2** is `capacitive`."
@@ -485,20 +437,20 @@ msgstr ""
 "エッジコネクタ端子のデフォルトのタッチモードは抵抗膜方式(`resistive`)です。"
 "ロゴ端子のデフォルトのタッチモードは静電容量方式(`capacitive`)です。"
 
-#: ../../pin.rst:215
+#: ../../pin.rst:213
 msgid ""
-"**Resitive touch** This test is done by measuring how much resistance "
+"**Resistive touch** This test is done by measuring how much resistance "
 "there is between the pin and ground.  A low resistance gives a reading of"
 " ``True``.  To get a reliable reading using a finger you may need to "
 "touch the ground pin with another part of your body, for example your "
 "other hand."
 msgstr ""
-"**抵抗膜方式タッチ** このテストは、端子と接地(GND)の間にどれだけの抵抗があるかを"
+"**抵抗膜方式タッチ** このタッチは、端子と接地(GND)の間にどれだけの抵抗があるかを"
 "測定することによって行われます。抵抗が少ないと ``True`` の判定を返します。指での"
 "検出を確実にするには、体の別の部分、たとえばもう片方の手で GND 端子に触れる必要が"
-"あるかもしれません。"
+"あります。"
 
-#: ../../pin.rst:221
+#: ../../pin.rst:219
 msgid ""
 "**Capacitive touch** This test is done by interacting with the electric "
 "field of a capacitor using a finger as a conductor. `Capacitive touch "
@@ -506,12 +458,21 @@ msgid ""
 "capacitive-touch-sensing>`_ does not require you to make a ground "
 "connection as part of a circuit."
 msgstr ""
-"**静電容量方式タッチ** このテストは、指を電導体としてキャパシターの電界の変化を捉える"
+"**静電容量方式タッチ** このタッチは、指を電導体としてキャパシターの電界の変化を捉える"
 "ことによって行われます。 `静電容量方式タッチ "
 "<https://www.allaboutcircuits.com/technical-articles/introduction-to-capacitive-touch-sensing>`_ "
 "は、回路の一部として接地(GND)に接続する必要がありません。"
 
-#: ../../pin.rst:227
+#: ../../pin.rst:231
+msgid ""
+"Set the touch mode for the given pin. Value can be either ``CAPACITIVE`` "
+"or ``RESISTIVE``. For example, ``pin0.set_touch_mode(pin0.CAPACITIVE)``."
+msgstr ""
+"指定の端子のタッチモードを設定します。引数の value には ``CAPACITIVE`` "
+"または ``RESISTIVE`` を指定できます。たとえば "
+"``pin0.set_touch_mode(pin0.CAPACITIVE)`` のように呼び出します。"
+
+#: ../../pin.rst:234
 msgid ""
 "The pull mode for a pin is automatically configured when the pin changes "
 "to an input mode. Input modes are when you call ``read_analog`` / "
@@ -526,7 +487,7 @@ msgstr ""
 "``NO_PULL``, ``PULL_DOWN``, ``PULL_UP`` です。 ``set_pull`` を呼び出すと、"
 "``read_digital`` モードにある端子を指定のプルモードに設定します。"
 
-#: ../../pin.rst:235
+#: ../../pin.rst:242
 msgid ""
 "The micro:bit has external weak (10M) pull-ups fitted on pins 0, 1 and 2 "
 "only, in order for the touch sensing to work."
@@ -534,7 +495,7 @@ msgstr ""
 "タッチセンスが機能するために、micro:bit は端子 0, 1, 2 にのみ外付けの弱い"
 "(10M)プルアップを装備しています。"
 
-#: ../../pin.rst:238
+#: ../../pin.rst:245
 msgid ""
 "There are also external (10k) pull-ups fitted on pins 5 and 11, in order "
 "for buttons A and B to work."
@@ -542,7 +503,7 @@ msgstr ""
 "ボタンAとボタンBが機能するように、端子 5 と 11 にも外付け(10k)プルアップを"
 "装備しています。"
 
-#: ../../pin.rst:241
+#: ../../pin.rst:248
 msgid ""
 "GPIO pins are also used for the display, as described in the table above."
 " If you want to use these pins for another purpose, you may need to turn "
@@ -554,7 +515,7 @@ msgstr ""
 "<https://microbit-micropython.readthedocs.io/ja/latest/display.html#microbit.display.off>`_ "
 "にする必要があります。"
 
-#: ../../pin.rst:246
+#: ../../pin.rst:253
 msgid ""
 "See the `edge connector data sheet "
 "<http://tech.microbit.org/hardware/edgeconnector>`_."

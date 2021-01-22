@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2020-12-29 10:27+0900\n"
+"PO-Revision-Date: 2021-01-23 01:05+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -282,47 +282,47 @@ msgstr ""
 "各端子は ``microbit`` モジュールで直接オブジェクトとして提供されます。これにより API "
 "が比較的フラットに保たれ、利用が非常に簡単になります。"
 
-#: ../../microbit_micropython_api.rst:117
+#: ../../microbit_micropython_api.rst:118
 msgid "pin0"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:118
+#: ../../microbit_micropython_api.rst:119
 msgid "pin1"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:119
+#: ../../microbit_micropython_api.rst:120
 msgid "..."
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:120
+#: ../../microbit_micropython_api.rst:121
 msgid "pin15"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:121
+#: ../../microbit_micropython_api.rst:122
 msgid "pin16"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:122
+#: ../../microbit_micropython_api.rst:123
 msgid "*Warning: P17-P18 (inclusive) are unavailable.*"
 msgstr "*注意: P17-P18 は利用できません。*"
 
-#: ../../microbit_micropython_api.rst:123
+#: ../../microbit_micropython_api.rst:124
 msgid "pin19"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:124
+#: ../../microbit_micropython_api.rst:125
 msgid "pin20"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:125
+#: ../../microbit_micropython_api.rst:126
 msgid "pin_logo **V2**"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:126
+#: ../../microbit_micropython_api.rst:127
 msgid "pin_speaker **V2**"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:128
+#: ../../microbit_micropython_api.rst:129
 msgid ""
 "Each of these pins are instances of the ``MicroBitPin`` class, which "
 "offers the following API::"
@@ -330,7 +330,7 @@ msgstr ""
 "これらの端子はそれぞれ ``MicroBitPin`` クラスのインスタンスであり、次のAPIを"
 "提供します。"
 
-#: ../../microbit_micropython_api.rst:130
+#: ../../microbit_micropython_api.rst:131
 msgid ""
 "# value can be 0, 1, False, True\n"
 "pin.write_digital(value)\n"
@@ -348,7 +348,11 @@ msgid ""
 "pin.set_analog_period_microseconds(int)\n"
 "# Only available for touch pins 0, 1, and 2. Returns boolean if the pin\n"
 "# is touched\n"
-"pin.is_touched()"
+"pin.is_touched()\n"
+"# Only available for touch pins 0, 1, 2 and on micro:bit V2 also the "
+"logo.\n"
+"# Sets the touch mode. Value can be either RESISTIVE or CAPACITIVE\n"
+"pin.set_touch_mode(value)"
 msgstr ""
 "# 値 value を 0, 1, False, True のいずれかにできます。\n"
 "pin.write_digital(value)\n"
@@ -365,40 +369,47 @@ msgstr ""
 "# (https://ja.wikipedia.org/wiki/パルス幅変調 を参照)\n"
 "pin.set_analog_period_microseconds(int)\n"
 "# タッチ端子 0, 1, 2 のみ使えます。端子に触れているかをブール値で返します。\n"
-"pin.is_touched()"
+"pin.is_touched()\n"
+"# micro:bit V2 ではロゴも使えます。\n"
+"# タッチモードの設定。value には RESISTIVE または CAPACITIVE を指定できます。\n"
+"pin.set_touch_mode(value)"
 
-#: ../../microbit_micropython_api.rst:148
+#: ../../microbit_micropython_api.rst:152
 msgid ""
 "Except in the case of the pins marked **V2**, which offers the following "
 "API::"
 msgstr ""
 "**V2** とマークしてあるピンは特殊で、以下の API を提供しています::"
 
-#: ../../microbit_micropython_api.rst:150
+#: ../../microbit_micropython_api.rst:154
 msgid "pin_logo::"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:152
+#: ../../microbit_micropython_api.rst:156
 msgid ""
 "# returns boolean for logo touch pin\n"
-"pin_logo.is_touched()"
+"pin_logo.is_touched()\n"
+"# Sets the touch mode. Value can be either RESISTIVE or CAPACITIVE\n"
+"pin.set_touch_mode(value)"
 msgstr ""
 "# ロゴにタッチしたかを示す真偽値をかえします\n"
-"pin_logo.is_touched()"
+"pin_logo.is_touched()\n"
+"# タッチモードの設定。value には RESISTIVE または CAPACITIVE を指定できます。\n"
+"pin.set_touch_mode(value)"
 
-#: ../../microbit_micropython_api.rst:155
+#: ../../microbit_micropython_api.rst:161
 msgid "pin_speaker:"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:157
+#: ../../microbit_micropython_api.rst:163
 msgid "As above ``MicroBitPin`` class, but does not include ``pin.is_touched()``."
 msgstr "先述した ``MicroBitPin`` ですが、 ``pin.is_touched()`` はありません。"
 
-#: ../../microbit_micropython_api.rst:160
+#: ../../microbit_micropython_api.rst:166
 msgid "Images"
 msgstr "イメージ"
 
-#: ../../microbit_micropython_api.rst:164
+#: ../../microbit_micropython_api.rst:170
 msgid ""
 "You don't always need to create one of these yourself - you can access "
 "the image shown on the display directly with `display.image`. "
@@ -410,11 +421,11 @@ msgstr ""
 "``display.image`` は Image の単なるインスタンスなので、同じメソッドをすべて"
 "使用できます。"
 
-#: ../../microbit_micropython_api.rst:168
+#: ../../microbit_micropython_api.rst:174
 msgid "Images API::"
 msgstr "イメージ API"
 
-#: ../../microbit_micropython_api.rst:170
+#: ../../microbit_micropython_api.rst:176
 msgid ""
 "# creates an empty 5x5 image\n"
 "image = Image()\n"
@@ -500,11 +511,11 @@ msgstr ""
 "# 各ピクセルの照度に n を掛けた新しいイメージを返します。\n"
 "image * n"
 
-#: ../../microbit_micropython_api.rst:211
+#: ../../microbit_micropython_api.rst:217
 msgid "**Built-in images**"
 msgstr "組込みのイメージ"
 
-#: ../../microbit_micropython_api.rst:213
+#: ../../microbit_micropython_api.rst:219
 msgid ""
 "``Image.HEART`` ``Image.HEART_SMALL`` ``Image.HAPPY`` ``Image.SMILE`` "
 "``Image.SAD`` ``Image.CONFUSED`` ``Image.ANGRY`` ``Image.ASLEEP`` "
@@ -520,29 +531,29 @@ msgid ""
 "``Image.UMBRELLA`` ``Image.SNAKE``"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:257
+#: ../../microbit_micropython_api.rst:263
 msgid "Clock:"
 msgstr "時計のイメージ"
 
-#: ../../microbit_micropython_api.rst:259
+#: ../../microbit_micropython_api.rst:265
 msgid ""
 "``Image.CLOCK1`` ``Image.CLOCK2`` ``Image.CLOCK3`` ``Image.CLOCK4`` "
 "``Image.CLOCK5`` ``Image.CLOCK6`` ``Image.CLOCK7`` ``Image.CLOCK8`` "
 "``Image.CLOCK9`` ``Image.CLOCK10`` ``Image.CLOCK11`` ``Image.CLOCK12``"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:263
+#: ../../microbit_micropython_api.rst:269
 msgid "Arrows:"
 msgstr "矢印のイメージ"
 
-#: ../../microbit_micropython_api.rst:265
+#: ../../microbit_micropython_api.rst:271
 msgid ""
 "``Image.ARROW_N`` ``Image.ARROW_NE`` ``Image.ARROW_E`` ``Image.ARROW_SE``"
 " ``Image.ARROW_S`` ``Image.ARROW_SW`` ``Image.ARROW_W`` "
 "``Image.ARROW_NW``"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:268
+#: ../../microbit_micropython_api.rst:274
 msgid ""
 "The following are Python lists of images, useful for automatically "
 "displaying an animation or manually iterating through them."
@@ -550,19 +561,19 @@ msgstr ""
 "次のものは、アニメーションを自動的に表示したり、手動で反復処理したりするのに便利な"
 "イメージの Python リストです。"
 
-#: ../../microbit_micropython_api.rst:271
+#: ../../microbit_micropython_api.rst:277
 msgid "``Image.ALL_CLOCKS`` ``Image.ALL_ARROWS``"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:275
+#: ../../microbit_micropython_api.rst:281
 msgid "Accelerometer"
 msgstr "加速度センサー"
 
-#: ../../microbit_micropython_api.rst:277
+#: ../../microbit_micropython_api.rst:283
 msgid "The accelerometer is accessed via the ``accelerometer`` object::"
 msgstr "加速度センサーは ``accelerometer`` オブジェクトを介して利用します::"
 
-#: ../../microbit_micropython_api.rst:279
+#: ../../microbit_micropython_api.rst:285
 msgid ""
 "# read the X axis of the device. Measured in milli-g.\n"
 "accelerometer.get_x()\n"
@@ -602,7 +613,7 @@ msgstr ""
 "# ジェスチャの履歴のタプルを返します。直近のものが最後に並びます。\n"
 "accelerometer.get_gestures()"
 
-#: ../../microbit_micropython_api.rst:297
+#: ../../microbit_micropython_api.rst:303
 msgid ""
 "The recognised gestures are: ``up``, ``down``, ``left``, ``right``, "
 "``face up``, ``face down``, ``freefall``, ``3g``, ``6g``, ``8g``, "
@@ -611,15 +622,15 @@ msgstr ""
 "認識ジェスチャーは以下のとおりです: ``up``, ``down``, ``left``, ``right``, ``face up``, "
 "``face down``, ``freefall``, ``3g``, ``6g``, ``8g``, ``shake`` 。"
 
-#: ../../microbit_micropython_api.rst:301
+#: ../../microbit_micropython_api.rst:307
 msgid "Compass"
 msgstr "コンパス"
 
-#: ../../microbit_micropython_api.rst:303
+#: ../../microbit_micropython_api.rst:309
 msgid "The compass is accessed via the `compass` object::"
 msgstr "コンパスは `compass` コンパスオブジェクトを介して利用します::"
 
-#: ../../microbit_micropython_api.rst:305
+#: ../../microbit_micropython_api.rst:311
 msgid ""
 "# calibrate the compass (this is needed to get accurate readings).\n"
 "compass.calibrate()\n"
@@ -644,11 +655,11 @@ msgstr ""
 "# コンパスの調整されていた状態をリセットします。\n"
 "compass.clear_calibration()"
 
-#: ../../microbit_micropython_api.rst:318
+#: ../../microbit_micropython_api.rst:324
 msgid "I2C bus"
 msgstr "I2C バス"
 
-#: ../../microbit_micropython_api.rst:320
+#: ../../microbit_micropython_api.rst:326
 msgid ""
 "There is an I2C bus on the micro:bit that is exposed via the `i2c` "
 "object.  It has the following methods::"
@@ -656,7 +667,7 @@ msgstr ""
 "micro:bit には I2C バスがあり、 `i2c` オブジェクトを介して利用します。"
 "このオブジェクトには以下のメソッドがあります::"
 
-#: ../../microbit_micropython_api.rst:322
+#: ../../microbit_micropython_api.rst:328
 msgid ""
 "# read n bytes from device with addr; repeat=True means a stop bit won't\n"
 "# be sent.\n"
@@ -672,11 +683,11 @@ msgstr ""
 "# 送信されないことを意味します。\n"
 "i2c.write(addr, buf, repeat=False)"
 
-#: ../../microbit_micropython_api.rst:329
+#: ../../microbit_micropython_api.rst:335
 msgid "Sound **V2**"
 msgstr "サウンド **V2**"
 
-#: ../../microbit_micropython_api.rst:331
+#: ../../microbit_micropython_api.rst:337
 msgid ""
 "A set of expressive sounds are available to the micro:bit **V2**. They "
 "can be accessed via the ``microbit`` module and played with the "
@@ -686,22 +697,22 @@ msgstr ""
 "microbitモジュールを介してアクセスし、 :doc:`audio <audio>` モジュール"
 "で再生できます。"
 
-#: ../../microbit_micropython_api.rst:334
+#: ../../microbit_micropython_api.rst:340
 msgid "**Built-in sounds**"
 msgstr "組込みのサウンド"
 
-#: ../../microbit_micropython_api.rst:336
+#: ../../microbit_micropython_api.rst:342
 msgid ""
 "``Sound.GIGGLE`` ``Sound.HAPPY`` ``Sound.HELLO`` ``Sound.MYSTERIOUS`` "
 "``Sound.SAD`` ``Sound.SLIDE`` ``Sound.SOARING`` ``Sound.SPRING`` "
 "``Sound.TWINKLE`` ``Sound.YAWN``"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:348
+#: ../../microbit_micropython_api.rst:354
 msgid "Speaker **V2**"
 msgstr "スピーカー **V2**"
 
-#: ../../microbit_micropython_api.rst:350
+#: ../../microbit_micropython_api.rst:356
 msgid ""
 "The speaker is enabled by default and can be accessed using the "
 "``speaker`` object. It can be turned off or on::"
@@ -709,7 +720,7 @@ msgstr ""
 "スピーカーはデフォルトで有効になっていて、 ``speaker`` オブジェクトを使って"
 "アクセスできます。無効化や有効化することもできます::"
 
-#: ../../microbit_micropython_api.rst:353
+#: ../../microbit_micropython_api.rst:359
 msgid ""
 "# disable the built-in speaker\n"
 "speaker.off()\n"
@@ -725,11 +736,11 @@ msgstr ""
 "# スピーカーは有効であるか無効であるかによって True または False を返すます\n"
 "speaker.is_on()"
 
-#: ../../microbit_micropython_api.rst:362
+#: ../../microbit_micropython_api.rst:368
 msgid "UART"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:364
+#: ../../microbit_micropython_api.rst:370
 msgid ""
 "Use ``uart`` to communicate with a serial device connected to the "
 "device's I/O pins::"
@@ -737,7 +748,7 @@ msgstr ""
 "I/O 端子に接続されたシリアルデバイスとの通信には ``uart`` "
 "を使います::"
 
-#: ../../microbit_micropython_api.rst:366
+#: ../../microbit_micropython_api.rst:372
 msgid ""
 "# set up communication (use pins 0 [TX] and 1 [RX]) with a baud rate of "
 "9600.\n"

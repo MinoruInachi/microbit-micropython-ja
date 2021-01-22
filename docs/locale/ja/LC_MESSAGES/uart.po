@@ -141,12 +141,12 @@ msgid ""
 "Read bytes.  If ``nbytes`` is specified then read at most that many "
 "bytes, otherwise read as many bytes as possible."
 msgstr ""
-"バイト列を読み込みます。``nbytes`` が指定されていれば、そのバイト数まで読み込みます。"
+"bytes を読み込みます。``nbytes`` が指定されていれば、そのバイト数まで読み込みます。"
 "指定されていなければ、できるだけ多く読み込みます。"
 
 #: ../../uart.rst:66
 msgid "Return value: a bytes object or ``None`` on timeout."
-msgstr "戻り値: バイト列オブジェクト、タイムアウトが起きれば ``None`` 。"
+msgstr "戻り値: bytes オブジェクト、タイムアウトが起きれば ``None`` 。"
 
 #: ../../uart.rst:68
 msgid ""
@@ -159,7 +159,7 @@ msgstr ""
 "bytes オブジェクトには一連のバイトが含まれます。`ASCII "
 "<https://en.wikipedia.org/wiki/ASCII>`_ 文字は１バイトに収めることができる"
 "ので、このタイプのオブジェクトはしばしば単純なテキストを表現するために使われ、"
-"それをそのまま操作する方法を提供します。たちえば `` print()`` 関数を使って"
+"それをそのまま操作する方法を提供します。たとえば `` print()`` 関数を使って"
 "テキストを表示できます。"
 
 #: ../../uart.rst:74
@@ -220,7 +220,7 @@ msgid ""
 "Read bytes into the ``buf``.  If ``nbytes`` is specified then read at "
 "most that many bytes.  Otherwise, read at most ``len(buf)`` bytes."
 msgstr ""
-"``buf`` にバイト列を読み込みます。``nbytes`` が指定されていれば、"
+"``buf`` に bytes を読み込みます。``nbytes`` が指定されていれば、"
 "そのバイト数まで読み込みます。さもなければ ``len(buf)`` のバイト数"
 "まで読み込みます。"
 
@@ -229,7 +229,7 @@ msgid ""
 "Return value: number of bytes read and stored into ``buf`` or ``None`` on"
 " timeout."
 msgstr ""
-"戻り値: 読み込んで ``buf`` に格納したバイト数。タイムアウト時は ``None`` 。"
+"戻り値: ``buf`` に読み込んで格納したバイト数。タイムアウト時は ``None`` 。"
 
 #: ../../uart.rst:114
 msgid "Read a line, ending in a newline character."
@@ -243,8 +243,15 @@ msgstr ""
 "戻り値: 読み込んだ行。タイムアウト時は ``None`` 。返すバイト列に改行文字は含まれます。"
 
 #: ../../uart.rst:121
-msgid "Write the buffer of bytes to the bus."
-msgstr "バイト列の ``buffer`` をバスに書き出します。"
+msgid "Write the buffer to the bus, it can be a bytes object or a string::"
+msgstr "バッファをバスに書き出します。バッファは bytes か文字列です::"
+
+#: ../../uart.rst:123
+msgid ""
+"uart.write('hello world')\n"
+"uart.write(b'hello world')\n"
+"uart.write(bytes([1, 2, 3]))"
+msgstr ""
 
 #: ../../uart.rst:127
 msgid "Return value: number of bytes written or ``None`` on timeout."
