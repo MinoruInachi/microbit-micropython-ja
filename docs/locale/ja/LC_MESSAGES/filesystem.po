@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2020-12-05 23:05+0900\n"
+"PO-Revision-Date: 2021-02-13 09:25+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../filesystem.rst:2
+#: ../../filesystem.rst:4
 msgid "Local Persistent File System"
 msgstr "ローカル永続ファイルシステム"
 
-#: ../../filesystem.rst:4
+#: ../../filesystem.rst:6
 msgid ""
 "It is useful to store data in a persistent manner so that it remains "
 "intact between restarts of the device. On traditional computers this is "
@@ -36,7 +36,7 @@ msgstr ""
 "Python は、そのようなファイルシステムで作業するために必要なさまざまな操作を"
 "サポートしています。"
 
-#: ../../filesystem.rst:10
+#: ../../filesystem.rst:12
 msgid ""
 "However, since the micro:bit is a limited device in terms of both "
 "hardware and storage capacity MicroPython provides a small subset of the "
@@ -49,7 +49,7 @@ msgstr ""
 "サブセットを提供します。メモリの制約のため、ファイルシステムの *記憶域は約 30 KB* "
 "となっています"
 
-#: ../../filesystem.rst:17
+#: ../../filesystem.rst:19
 msgid "Re-flashing the device will DESTROY YOUR DATA."
 msgstr "デバイスを再フラッシュするとデータが破棄されます。"
 
@@ -63,7 +63,7 @@ msgstr ""
 "フラッシュするとフラッシュメモリがすべて書き換えられるため、すべてのデータが"
 "失われます。"
 
-#: ../../filesystem.rst:23
+#: ../../filesystem.rst:25
 msgid ""
 "However, if you switch your device off the data will remain intact until "
 "you either delete it (see below) or re-flash the device."
@@ -71,7 +71,7 @@ msgstr ""
 "ただし、デバイスの電源を切っただけではデータはそのまま残り続けます。"
 "データが消えるのは、ファイルを削除するか(後述)、デバイスを再フラッシュした場合です。"
 
-#: ../../filesystem.rst:26
+#: ../../filesystem.rst:28
 msgid ""
 "MicroPython on the micro:bit provides a flat file system; i.e. there is "
 "no notion of a directory hierarchy, the file system is just a list of "
@@ -88,7 +88,7 @@ msgstr ""
 "実現されます。ファイルシステム上のファイルを操作する操作(ファイルの一覧表示や削除など)は "
 ":py:mod:`os` モジュール内にあります。"
 
-#: ../../filesystem.rst:34
+#: ../../filesystem.rst:36
 msgid ""
 "If a file ends in the ``.py`` file extension then it can be imported. For"
 " example, a file named ``hello.py`` can be imported like this: ``import "
@@ -97,11 +97,11 @@ msgstr ""
 "ファイル拡張子 ``.py`` のついたファイルがある場合は、それをインポートできます。"
 "たとえば、ファイル名 ``hello.py`` は ``import hello`` でインポートできます。"
 
-#: ../../filesystem.rst:37
+#: ../../filesystem.rst:39
 msgid "An example session in the MicroPython REPL may look something like this::"
 msgstr "MicroPython の REPL から操作してみた例は、次のようになります。"
 
-#: ../../filesystem.rst:39
+#: ../../filesystem.rst:41
 msgid ""
 ">>> with open('hello.py', 'w') as hello:\n"
 "...    hello.write(\"print('Hello')\")\n"
@@ -120,7 +120,7 @@ msgid ""
 "[]"
 msgstr ""
 
-#: ../../filesystem.rst:57
+#: ../../filesystem.rst:59
 msgid ""
 "Returns a file object representing the file named in the argument "
 "``filename``. The mode defaults to ``'r'`` which means open for reading "
@@ -144,7 +144,7 @@ msgstr ""
 "バイナリモードでは、ファイルオブジェクトは ``BytesIO`` のインスタンスになります。"
 "たとえば、 ``'rb'`` はバイナリデータをファイルから読み込むために使用します。"
 
-#: ../../filesystem.rst:74
+#: ../../filesystem.rst:76
 msgid ""
 "Instances of these classes represent files in the micro:bit's flat file "
 "system. The TextIO class is used to represent text files. The BytesIO "
@@ -156,7 +156,7 @@ msgstr ""
 "バイナリファイルを表すために使われます。TextIO は文字列を扱い、BytesIO はバイト列を"
 "扱う点を除いて、まったく同じように動作します。"
 
-#: ../../filesystem.rst:79
+#: ../../filesystem.rst:81
 msgid ""
 "You do not directly instantiate these classes. Rather, an appropriately "
 "configured instance of the class is returned by the ``open`` function "
@@ -165,7 +165,7 @@ msgstr ""
 "これらのクラスを直接インスタンス化するわけではありません。むしろ、適切に構成された"
 "クラスのインスタンスは、上記の ``open`` 関数によって返されます。"
 
-#: ../../filesystem.rst:85
+#: ../../filesystem.rst:87
 msgid ""
 "Flush and close the file. This method has no effect if the file is "
 "already closed. Once the file is closed, any operation on the file (e.g. "
@@ -175,7 +175,7 @@ msgstr ""
 "場合は効果がありません。ファイルがクローズしていると、そのファイルに対する操作"
 "(たとえば、読み込みまたは書き込み)によって例外が発生します。"
 
-#: ../../filesystem.rst:91
+#: ../../filesystem.rst:93
 msgid ""
 "Returns the name of the file the object represents. This will be the same"
 " as the ``filename`` argument passed into the call to the ``open`` "
@@ -184,7 +184,7 @@ msgstr ""
 "オブジェクトが表すファイルの名前を返します。これは 、オブジェクトをインスタンス化する "
 "``open`` 関数を呼び出す際に渡す ``filename`` 引数と同じになります。"
 
-#: ../../filesystem.rst:97
+#: ../../filesystem.rst:99
 msgid ""
 "Read and return at most ``size`` characters as a single string or "
 "``size`` bytes from the file. As a convenience, if ``size`` is "
@@ -197,7 +197,7 @@ msgstr ""
 "データが返されます。ファイルから読み込む残りが ``size`` 未満である場合、 "
 "``size`` より小さな文字列またはバイト列が返されます。"
 
-#: ../../filesystem.rst:104
+#: ../../filesystem.rst:106
 msgid ""
 "If 0 characters or bytes are returned, and ``size`` was not 0, this "
 "indicates end of file."
@@ -205,14 +205,14 @@ msgstr ""
 "長さが 0 の文字列またはバイト列が返され場合、 ``size`` 指定が 0 でなければ"
 "ファイルの終わりを示します。"
 
-#: ../../filesystem.rst:107
+#: ../../filesystem.rst:109
 msgid ""
 "A ``MemoryError`` exception will occur if ``size`` is larger than the "
 "available RAM."
 msgstr ""
 "``size`` が使用可能な RAM より大きい場合には MemoryError 例外が発生します。"
 
-#: ../../filesystem.rst:112
+#: ../../filesystem.rst:114
 msgid ""
 "Read characters or bytes into the buffer ``buf``. If ``n`` is supplied, "
 "read ``n`` number of bytes or characters into the buffer ``buf``."
@@ -220,7 +220,7 @@ msgstr ""
 "バッファ ``buf`` に文字列またはバイト列を読み込みます。``n`` が指定された場合は、"
 "バッファ ``buf`` に指定のバイト数または文字数を読み込みます。"
 
-#: ../../filesystem.rst:117
+#: ../../filesystem.rst:119
 msgid ""
 "Read and return one line from the file. If ``size`` is specified, at most"
 " ``size`` characters will be read."
@@ -228,14 +228,14 @@ msgstr ""
 "ファイルから１行を読み込んで返します。``size`` を指定すると、最大 ``size`` 文字が"
 "読み込まれます。"
 
-#: ../../filesystem.rst:120
+#: ../../filesystem.rst:122
 msgid ""
 "The line terminator is always ``'\\n'`` for strings or ``b'\\n'`` for "
 "bytes."
 msgstr ""
 "行終端は常に文字列では ``'\\n'`` 、バイト列では ``b'\\n'`` です。"
 
-#: ../../filesystem.rst:125
+#: ../../filesystem.rst:127
 msgid ""
 "Return ``True`` if the file supports writing. If ``False``, ``write()`` "
 "will raise ``OSError``."
@@ -243,7 +243,7 @@ msgstr ""
 "書き込みをサポートしていれば ``True`` を返しますこれが ``False`` の場合に "
 "``write()`` を行うと ``OSError`` が発生します。"
 
-#: ../../filesystem.rst:130
+#: ../../filesystem.rst:132
 msgid ""
 "Write the string or bytes ``buf`` to the file and return the number of "
 "characters or bytes written."

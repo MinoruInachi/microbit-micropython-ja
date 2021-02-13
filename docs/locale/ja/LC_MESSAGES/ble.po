@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2020-12-05 23:56+0900\n"
+"PO-Revision-Date: 2021-02-13 09:20+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -21,19 +21,23 @@ msgstr ""
 msgid "Bluetooth"
 msgstr ""
 
-#: ../../ble.rst:4
+#: ../../ble.rst:5
+msgid "micro:bit V1"
+msgstr ""
+
+#: ../../ble.rst:7
 msgid ""
 "While the BBC micro:bit has hardware capable of allowing the device to "
 "work as a Bluetooth Low Energy (BLE) device, it only has 16k of RAM. The "
 "BLE stack alone takes up 12k RAM which means there's not enough memory "
-"for MicroPython to support Bluetooth."
+"for MicroPython to support Bluetooth on a micro:bit V1."
 msgstr ""
 "BBC micro:bit は Bluetooth Low Energy (BLE)デバイスとして動作できる"
 "ハードウェアを備えていますが、RAM は 16 KBしかありません。"
-"BLE スタックだけで 12k のRAMが必要になります。つまり、MicroPython "
-"が Bluetooth をサポートするのに十分なメモリがありません。"
+"BLE スタックだけで 12k のRAMが必要になります。つまり、MicroPython が "
+"Bluetooth をサポートするには micro:bit V1 に十分なメモリがありません。"
 
-#: ../../ble.rst:10
+#: ../../ble.rst:13
 msgid ""
 "MicroPython uses the radio hardware with the :mod:`radio` module. This "
 "allows users to create simple yet effective wireless networks of "
@@ -43,11 +47,42 @@ msgstr ""
 "このモジュールを使えば、micro:bit デバイスで単純で効果的な無線ネットワークを"
 "作れます。"
 
-#: ../../ble.rst:14
+#: ../../ble.rst:17
 msgid ""
 "Furthermore, the protocol used in the :mod:`radio` module is a lot simpler "
 "than BLE, making it far easier to use in an educational context."
 msgstr ""
 "さらに、この :mod:`radio` モジュールで使用されているプロトコルは、"
 "BLE よりもはるかに単純であり、教育で使うのも容易です。"
+
+#: ../../ble.rst:21
+msgid "micro:bit V2"
+msgstr ""
+
+#: ../../ble.rst:23
+msgid ""
+"The nRF52833 used by the micro:bit V2 has 128k of RAM, allowing "
+"Micropython to make use of the BLE stack. Currently the only implemented "
+"feature is BLE flashing, allowing a user to update the firmware on the "
+"micro:bit over Bluetooth."
+msgstr ""
+"micro:bit V2 で使われている nRF52833 は 128k の RAM を持ち、Micropython で "
+"BLE スタックを利用できます。現在のところ実現されている機能は BLE 転送のみで、"
+"ユーザーは Bluetooth 経由で micro:bit のファームウェアをアップデートできます。"
+
+#: ../../ble.rst:27
+msgid ""
+"At the time that this was written the `Nordic DFU service "
+"<https://infocenter.nordicsemi.com/topic/sdk_nrf5_v16.0.0/lib_bootloader_dfu_process.html>`_"
+" is implemented, and partial flashing is currently working but in beta. "
+"The Nordic DFU service updates everything in flash and will take a "
+"(relatively) long time to complete, whereas the partial flashing service "
+"only updates the filesystem containing the user scripts."
+msgstr ""
+"これを書いている時点では `Nordic DFU サービス "
+"<https://infocenter.nordicsemi.com/topic/sdk_nrf5_v16.0.0/lib_bootloader_dfu_process.html>`_ "
+"が実装されており、部分転送もベータ版ながら機能しています。"
+"Nordic DFU サービスは転送時にすべてを更新し、完了するまでに(比較的)長い時間を"
+"要するのに対し、部分転送サービスはユーザースクリプトを含むファイルシステムを"
+"更新するだけです。"
 
