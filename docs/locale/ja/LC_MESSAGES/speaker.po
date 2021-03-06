@@ -40,7 +40,7 @@ msgid ""
 "built-in speaker **V2**. You can connect wired headphones or a speaker to"
 " pin 0 and GND on the edge connector to hear the sounds."
 msgstr ""
-"デフォルトで、サウンドは端子0のエッジコネクタと組込みスピーカー **V2** に出力します。"
+"デフォルトで、サウンドは端子0のエッジコネクタと **V2** に組込みスピーカーに出力します。"
 "有線ヘッドホンまたはスピーカーをエッジコネクタの端子0と GND に接続して、"
 "音を聞けます。"
 

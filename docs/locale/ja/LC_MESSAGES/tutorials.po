@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2020-12-05 23:05+0900\n"
+"PO-Revision-Date: 2021-03-06 12:37+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -1551,8 +1551,8 @@ msgstr ""
 "https://www.flickr.com/photos/tronixstuff/4821350094 のものを使っています。"
 
 #: ../../tutorials/io.rst:2
-msgid "Input/Output"
-msgstr "入出力"
+msgid "Input/Output Pins"
+msgstr "入出力端子"
 
 #: ../../tutorials/io.rst:4
 msgid ""
@@ -1580,37 +1580,51 @@ msgstr ""
 "数え始めます)。デバイスにエッジコネクタボードを取り付けると、他の(より小さい)端子に"
 "ワイヤを結線できるようになります。"
 
-#: ../../tutorials/io.rst:15
+#: ../../tutorials/io.rst:18
 msgid ""
-"Each pin on the BBC micro:bit is represented by an *object* called "
-"``pinN`` where ``N`` is the pin number. So, for example, to do things "
-"with the pin labelled with a 0 (zero), use the object called ``pin0``."
+"On the latest micro:bit **V2** the micro:bit logo can also be used as a "
+"touch input."
 msgstr ""
-"BBC micro:bit の各端子は ``pinN`` という *オブジェクト* で表します。"
-"ここで ``N`` は端子番号です。したがって、0 (ゼロ)のラベルの付いた端子で何かを行うには "
-"``pin0`` というオブジェクトを使います。"
+"最新の micro:bit **V2** では、micro:bit ロゴもタッチ入力に使えます。"
 
 #: ../../tutorials/io.rst:21
 msgid ""
-"These objects have various *methods* associated with them depending upon "
-"what the specific pin is capable of."
+"In MicroPython, each pin on the BBC micro:bit is represented by an "
+"*object* called ``pinN``, where ``N`` is the number pf the pin."
 msgstr ""
-"これらのオブジェクトには様々な *メソッド* があり、端子に固有の機能に応じたものが"
-"用意されています。"
+"MicroPython では、BBC micro:bit の各端子を ``pinN`` という *オブジェクト* "
+"で表します。ここで ``N`` は端子番号です。"
 
-#: ../../tutorials/io.rst:25
-msgid "Ticklish Python"
-msgstr "くすぐったがりな Python (Ticklish Python)"
+#: ../../tutorials/io.rst:24
+msgid ""
+"For example, to use the pin labelled 0 (zero), you can use the object "
+"called ``pin0`` in your script. The logo pin **V2** uses ``pin_logo``."
+msgstr ""
+"たとえば、0 (ゼロ)のラベルの付いた端子で何かを行うには、スクリプトで ``pin0`` "
+"というオブジェクトを使います。 **V2** のロゴ端子を扱うには ``pin_logo`` "
+"オブジェクトを使います。"
 
 #: ../../tutorials/io.rst:27
 msgid ""
+"These objects have various *methods* associated with them depending upon "
+"what the specific pin is capable of eg. read, write or touch."
+msgstr ""
+"これらのオブジェクトには様々な *メソッド* があり、端子に固有の機能に応じたものが"
+"用意されています。たとえば read, write, touch などです。"
+
+#: ../../tutorials/io.rst:31
+msgid "Ticklish Python"
+msgstr "くすぐったがりな Python (Ticklish Python)"
+
+#: ../../tutorials/io.rst:33
+msgid ""
 "The simplest example of input via the pins is a check to see if they are "
-"touched. So, you can tickle your device to make it laugh like this::"
+"touched. So, you can tickle your micro:bit to make it laugh like this::"
 msgstr ""
 "端子を介した入力の最も単純な例は、それに触れているかどうかをチェックすることです。"
-"デバイスをくすぐって笑わせてみましょう::"
+"micro:bit をくすぐって笑わせてみましょう::"
 
-#: ../../tutorials/io.rst:30
+#: ../../tutorials/io.rst:36
 msgid ""
 "from microbit import *\n"
 "\n"
@@ -1621,16 +1635,43 @@ msgid ""
 "        display.show(Image.SAD)"
 msgstr ""
 
-#: ../../tutorials/io.rst:38
+#: ../../tutorials/io.rst:44
 msgid ""
-"With one hand, hold your device by the GND pin. Then, with your other "
+"With one hand, hold your micro:bit by the GND pin. Then, with your other "
 "hand, touch (or tickle) the 0 (zero) pin. You should see the display "
 "change from grumpy to happy!"
 msgstr ""
-"片手でデバイスの GND 端子を持ちます。次に、もう一方の手で 0 "
+"片手で micro:bit の GND 端子を持ちます。次に、もう一方の手で 0 "
 "(ゼロ)の端子を触れてください。ディスプレイが心配顔から笑い顔に変わるのを見てください！"
 
-#: ../../tutorials/io.rst:42
+#: ../../tutorials/io.rst:48
+msgid ""
+"When you use the latest micro:bit **V2** you can also change the default "
+"behaviour of the pin, so that you don't have to touch GND at all.::"
+msgstr ""
+"最新の micro:bit **V2** では、端子のデフォルトの振る舞いを変更して、"
+"GND に触れなくてもよいようにできます。
+
+#: ../../tutorials/io.rst:51
+msgid ""
+"from microbit import *\n"
+"pin0.set_touch_mode(pin0.CAPACITIVE)\n"
+"while True:\n"
+"    if pin0.is_touched():\n"
+"        display.show(Image.HAPPY)\n"
+"    else:\n"
+"        display.show(Image.SAD)"
+msgstr ""
+
+#: ../../tutorials/io.rst:59
+msgid ""
+"The default for the edge connector pins is `resistive` and the logo pin "
+"**V2** is `capacitive`."
+msgstr ""
+"エッジコネクタ端子のデフォルトは抵抗膜方式(`resistive`)、"
+"**V2** のロゴ端子のデフォルトは静電容量方式(`capacitive`)です。"
+
+#: ../../tutorials/io.rst:62
 msgid ""
 "This is a form of very basic input measurement. However, the fun really "
 "starts when you plug in circuits and other devices via the pins."
@@ -1638,55 +1679,57 @@ msgstr ""
 "これは非常に基本的な入力測定の一つです。しかし、端子を使って回路や他のデバイスを接続"
 "すると、もっと楽しいことが始まります。"
 
-#: ../../tutorials/io.rst:46
+#: ../../tutorials/io.rst:66
 msgid "Bleeps and Bloops"
 msgstr "ブーピー音"
 
-#: ../../tutorials/io.rst:48
+#: ../../tutorials/io.rst:68
 msgid ""
-"The simplest thing we can attach to the device is a Piezo buzzer. We're "
-"going to use it for output."
+"The simplest thing we can attach to the micro:bit is a Piezo buzzer. "
+"We're going to use it for output."
 msgstr ""
-"デバイスに取り付けられる最も簡単なものは圧電ブザーです。これを出力用に使用してみます(訳注: "
-"同じような形状をしていても、圧電サウンダまたは圧電スピーカーと呼ばれているものでは音が鳴りません)。"
+"micro:bit に取り付けられる最も簡単なものは圧電ブザーです。これを出力用に"
+"使用してみます(訳注: 同じような形状をしていても、圧電サウンダまたは圧電スピーカーと"
+"呼ばれているものでは音が鳴りません)。"
 
-#: ../../tutorials/io.rst:52
-msgid ".. image:: tutorials/piezo_buzzer.jpg"
+msgid ""
+".. image:: tutorials/piezo_buzzer.jpg\n"
+"   :alt: piezo buzzer"
 msgstr ""
 
-#: ../../tutorials/io.rst:53
+#: ../../tutorials/io.rst:76
 msgid ""
 "These small devices play a high-pitched bleep when connected to a "
 "circuit. To attach one to your BBC micro:bit you should attach crocodile "
-"clips to pin 0 and GND (as shown below)."
+"clips to pin 0 and GND."
 msgstr ""
 "この小型デバイスを回路に接続すると高音域のブザー音を鳴らします。BBC micro:bit に"
-"取り付けるには、ワニ口クリップを使って端子 0 と GND に接続します(下図を参照)。"
+"取り付けるには、ワニ口クリップを使って端子 0 と GND に接続します。"
 
-#: ../../tutorials/io.rst:58 ../../tutorials/movement.rst:61
-#: ../../tutorials/music.rst:11
 msgid ".. image:: tutorials/pin0-gnd.png"
+".. image:: tutorials/pin0-gnd.png\n"
+"   :alt: piezo connected to pin0 and GND"
 msgstr ""
 
-#: ../../tutorials/io.rst:59
+#: ../../tutorials/io.rst:85
 msgid ""
 "The wire from pin 0 should be attached to the positive connector on the "
 "buzzer and the wire from GND to the negative connector."
 msgstr ""
 "端子 0 からの線をブザーのプラス側に接続し、GND からの線をマイナス側に接続します。"
 
-#: ../../tutorials/io.rst:62
+#: ../../tutorials/io.rst:88
 msgid "The following program will cause the buzzer to make a sound::"
 msgstr "次のプログラムはブザー音を鳴らします::"
 
-#: ../../tutorials/io.rst:64
+#: ../../tutorials/io.rst:90
 msgid ""
 "from microbit import *\n"
 "\n"
 "pin0.write_digital(1)"
 msgstr ""
 
-#: ../../tutorials/io.rst:68
+#: ../../tutorials/io.rst:94
 msgid ""
 "This is fun for about 5 seconds and then you'll want to make the horrible"
 " squeaking stop. Let's improve our example and make the device bleep::"
@@ -1694,7 +1737,7 @@ msgstr ""
 "5秒ほどは楽しいかもしれませんが、すぐにうるさくなって音を止めたくなるでしょう。"
 "先のプログラムを改善して、デバイスを鳴らしてみましょう::"
 
-#: ../../tutorials/io.rst:71
+#: ../../tutorials/io.rst:97
 msgid ""
 "from microbit import *\n"
 "\n"
@@ -1705,7 +1748,7 @@ msgid ""
 "    sleep(480)"
 msgstr ""
 
-#: ../../tutorials/io.rst:79
+#: ../../tutorials/io.rst:105
 msgid ""
 "Can you work out how this script works? Remember that ``1`` is \"on\" and"
 " ``0`` is \"off\" in the digital world."
@@ -1713,7 +1756,7 @@ msgstr ""
 "このスクリプトの仕組みを理解できますか？　デジタルの世界では ``1`` が「オン」で ``0`` "
 "が「オフ」であることを思い出してください。"
 
-#: ../../tutorials/io.rst:82
+#: ../../tutorials/io.rst:108
 msgid ""
 "The device is put into an infinite loop and immediately switches pin 0 "
 "on. This causes the buzzer to emit a beep. While the buzzer is beeping, "
@@ -1728,7 +1771,7 @@ msgstr ""
 "スリープしてから、ループバックして、もう一度やり直します。つまり、1 秒間に 2 回の"
 "鳴動(500 ミリ秒ごとに 1 回)が発生します。"
 
-#: ../../tutorials/io.rst:89
+#: ../../tutorials/io.rst:115
 msgid "We've made a very simple metronome!"
 msgstr "私たちは非常に簡単なメトロノームを作ったのです！"
 
@@ -1914,35 +1957,41 @@ msgstr "ミュージック"
 #: ../../tutorials/music.rst:4
 msgid ""
 "MicroPython on the BBC micro:bit comes with a powerful music and sound "
-"module. It's very easy to generate bleeps and bloops from the device *if "
-"you attach a speaker*. Use crocodile clips to attach pin 0 and GND to the"
-" positive and negative inputs on the speaker - it doesn't matter which "
-"way round they are connected to the speaker."
+"module. It's very easy to generate bleeps and bloops from the device by "
+"attaching a speaker or set of wired headphones, or by using the built-in "
+"speaker **V2**."
 msgstr ""
 "BBC micro:bit の MicroPython には、強力な音楽とサウンドのモジュールがあります。 "
-"*スピーカーを接続すれば* 、デバイスから音を鳴らすのは非常に簡単です。ワニ口クリップを"
-"使用して、端子 0 と GND をスピーカーの正と負の入力に接続します。スピーカーにどのように"
-"接続するかは関係ありません。"
+"スピーカーや有線のヘッドフォンを接続するか、 **V2** に組込みのスピーカーを使えば 、"
+"デバイスから音を鳴らすのは非常に簡単です。"
 
-#: ../../tutorials/music.rst:14
+#: ../../tutorials/music.rst:8
 msgid ""
-"Do not attempt this with a Piezo buzzer - such buzzers are only able to "
-"play a single tone."
+"If you are attaching a speaker/headphones, you can use crocodile clips to"
+" attach pin 0 and GND to the positive and negative inputs on the speaker."
+msgstr ""
+"スピーカーやヘッドフォンを繋ぐには、ワニ口クリップを使って、端子 0 と GND を"
+"スピーカー/ヘッドフォンの正と負の入力に接続します。"
+
+#: ../../tutorials/music.rst:18
+msgid ""
+"Do not attempt this with an active Piezo buzzer - such buzzers are only "
+"able to play a single tone."
 msgstr ""
 "圧電ブザーでこれを試してはいけません - 圧電ブザーでは単一の音しか出せません。"
 
-#: ../../tutorials/music.rst:17
+#: ../../tutorials/music.rst:21
 msgid "Let's play some music::"
 msgstr "音楽を演奏しましょう::"
 
-#: ../../tutorials/music.rst:19
+#: ../../tutorials/music.rst:23
 msgid ""
 "import music\n"
 "\n"
 "music.play(music.NYAN)"
 msgstr ""
 
-#: ../../tutorials/music.rst:23
+#: ../../tutorials/music.rst:27
 msgid ""
 "Notice that we import the ``music`` module. It contains methods used to "
 "make and control sound."
@@ -1950,95 +1999,95 @@ msgstr ""
 "``music`` モジュールをインポートすることに注意してください。これにはサウンドの"
 "作成と制御に使うメソッドが含まれています。"
 
-#: ../../tutorials/music.rst:26
+#: ../../tutorials/music.rst:30
 msgid "MicroPython has quite a lot of built-in melodies. Here's a complete list:"
 msgstr "MicroPython には多くのメロディが内蔵されています。ここに完全なリストがあります:"
 
-#: ../../tutorials/music.rst:28
+#: ../../tutorials/music.rst:32
 msgid "``music.DADADADUM``"
 msgstr ""
 
-#: ../../tutorials/music.rst:29
+#: ../../tutorials/music.rst:33
 msgid "``music.ENTERTAINER``"
 msgstr ""
 
-#: ../../tutorials/music.rst:30
+#: ../../tutorials/music.rst:34
 msgid "``music.PRELUDE``"
 msgstr ""
 
-#: ../../tutorials/music.rst:31
+#: ../../tutorials/music.rst:35
 msgid "``music.ODE``"
 msgstr ""
 
-#: ../../tutorials/music.rst:32
+#: ../../tutorials/music.rst:36
 msgid "``music.NYAN``"
 msgstr ""
 
-#: ../../tutorials/music.rst:33
+#: ../../tutorials/music.rst:37
 msgid "``music.RINGTONE``"
 msgstr ""
 
-#: ../../tutorials/music.rst:34
+#: ../../tutorials/music.rst:38
 msgid "``music.FUNK``"
 msgstr ""
 
-#: ../../tutorials/music.rst:35
+#: ../../tutorials/music.rst:39
 msgid "``music.BLUES``"
 msgstr ""
 
-#: ../../tutorials/music.rst:36
+#: ../../tutorials/music.rst:40
 msgid "``music.BIRTHDAY``"
 msgstr ""
 
-#: ../../tutorials/music.rst:37
+#: ../../tutorials/music.rst:41
 msgid "``music.WEDDING``"
 msgstr ""
 
-#: ../../tutorials/music.rst:38
+#: ../../tutorials/music.rst:42
 msgid "``music.FUNERAL``"
 msgstr ""
 
-#: ../../tutorials/music.rst:39
+#: ../../tutorials/music.rst:43
 msgid "``music.PUNCHLINE``"
 msgstr ""
 
-#: ../../tutorials/music.rst:40
+#: ../../tutorials/music.rst:44
 msgid "``music.PYTHON``"
 msgstr ""
 
-#: ../../tutorials/music.rst:41
+#: ../../tutorials/music.rst:45
 msgid "``music.BADDY``"
 msgstr ""
 
-#: ../../tutorials/music.rst:42
+#: ../../tutorials/music.rst:46
 msgid "``music.CHASE``"
 msgstr ""
 
-#: ../../tutorials/music.rst:43
+#: ../../tutorials/music.rst:47
 msgid "``music.BA_DING``"
 msgstr ""
 
-#: ../../tutorials/music.rst:44
+#: ../../tutorials/music.rst:48
 msgid "``music.WAWAWAWAA``"
 msgstr ""
 
-#: ../../tutorials/music.rst:45
+#: ../../tutorials/music.rst:49
 msgid "``music.JUMP_UP``"
 msgstr ""
 
-#: ../../tutorials/music.rst:46
+#: ../../tutorials/music.rst:50
 msgid "``music.JUMP_DOWN``"
 msgstr ""
 
-#: ../../tutorials/music.rst:47
+#: ../../tutorials/music.rst:51
 msgid "``music.POWER_UP``"
 msgstr ""
 
-#: ../../tutorials/music.rst:48
+#: ../../tutorials/music.rst:52
 msgid "``music.POWER_DOWN``"
 msgstr ""
 
-#: ../../tutorials/music.rst:50
+#: ../../tutorials/music.rst:54
 msgid ""
 "Take the example code and change the melody. Which one is your favourite?"
 " How would you use such tunes as signals or cues?"
@@ -2046,15 +2095,15 @@ msgstr ""
 "先のサンプルコードのメロディーを変更してください。どれがお気に入りですか？　"
 "このような曲をお知らせの合図としてどのように使いますか？"
 
-#: ../../tutorials/music.rst:54
+#: ../../tutorials/music.rst:58
 msgid "Wolfgang Amadeus Microbit"
 msgstr "ヴォルフガング・アマデウス・マイクロビット(Wolfgang Amadeus Microbit)"
 
-#: ../../tutorials/music.rst:56
+#: ../../tutorials/music.rst:60
 msgid "Creating your own tunes is easy!"
 msgstr "自分の曲を作成するのは簡単です！"
 
-#: ../../tutorials/music.rst:58
+#: ../../tutorials/music.rst:62
 msgid ""
 "Each note has a name (like ``C#`` or ``F``), an octave (telling "
 "MicroPython how high or low the note should be played) and a duration "
@@ -2074,15 +2123,15 @@ msgstr ""
 "関連しています ~ たとえば、持続時間 ``4`` は　持続時間 ``2`` の 2 倍の長さです。"
 "音階名 R を使用すると、MicroPython は指定された持続時間だけ、休符(つまり無音)を再生します。"
 
-#: ../../tutorials/music.rst:68
+#: ../../tutorials/music.rst:72
 msgid "Each note is expressed as a string of characters like this::"
 msgstr "各音符は次のような文字列で表されます。"
 
-#: ../../tutorials/music.rst:70
+#: ../../tutorials/music.rst:74
 msgid "NOTE[octave][:duration]"
 msgstr ""
 
-#: ../../tutorials/music.rst:72
+#: ../../tutorials/music.rst:76
 msgid ""
 "For example, ``\"A1:4\"`` refers to the note named ``A`` in octave number"
 " ``1`` to be played for a duration of ``4``."
@@ -2090,7 +2139,7 @@ msgstr ""
 "たとえば 、``\"A1:4\"`` は音階名が ``A`` 、オクターブが ``1`` 、持続時間が ``4`` "
 "である音符を指します。"
 
-#: ../../tutorials/music.rst:75
+#: ../../tutorials/music.rst:79
 msgid ""
 "Make a list of notes to create a melody (it's equivalent to creating an "
 "animation with a list of images). For example, here's how to make "
@@ -2100,7 +2149,7 @@ msgstr ""
 "作成するのと同じです)。たとえば、MicroPython が \"Frere Jaques\" (フランス民謡)の"
 "冒頭を演奏するようにする方法は次のとおりです::"
 
-#: ../../tutorials/music.rst:79
+#: ../../tutorials/music.rst:83
 msgid ""
 "import music\n"
 "\n"
@@ -2110,7 +2159,7 @@ msgid ""
 "music.play(tune)"
 msgstr ""
 
-#: ../../tutorials/music.rst:87
+#: ../../tutorials/music.rst:91
 msgid ""
 "MicroPython helps you to simplify such melodies. It'll remember the "
 "octave and duration values until you next change them. As a result, the "
@@ -2119,7 +2168,7 @@ msgstr ""
 "は上記のメロディを簡単にできます。オクターブと持続時間は次に変更するまで"
 "値をおぼえています。結果として、上記の例は次のように書き直すことができます::"
 
-#: ../../tutorials/music.rst:97
+#: ../../tutorials/music.rst:101
 msgid ""
 "Notice how the octave and duration values only change when they have to. "
 "It's a lot less typing and simpler to read."
@@ -2127,11 +2176,11 @@ msgstr ""
 "オクターブと持続時間の値がどの変えているかに注目してください。このほうが入力がずっと"
 "簡単で、読むのが簡単です。"
 
-#: ../../tutorials/music.rst:101
+#: ../../tutorials/music.rst:105
 msgid "Sound Effects"
 msgstr "音響効果"
 
-#: ../../tutorials/music.rst:103
+#: ../../tutorials/music.rst:107
 msgid ""
 "MicroPython lets you make tones that are not musical notes. For example, "
 "here's how to create a Police siren effect::"
@@ -2139,7 +2188,7 @@ msgstr ""
 "MicroPython では、音符ではないトーンを作成できます。たとえば、警察のサイレン効果を"
 "作成する方法は次のとおりです::"
 
-#: ../../tutorials/music.rst:106
+#: ../../tutorials/music.rst:110
 msgid ""
 "import music\n"
 "\n"
@@ -2150,7 +2199,7 @@ msgid ""
 "        music.pitch(freq, 6)"
 msgstr ""
 
-#: ../../tutorials/music.rst:115
+#: ../../tutorials/music.rst:119
 msgid ""
 "Notice how the ``music.pitch`` *method* is used in this instance. It "
 "expects a frequency. For example, the frequency of ``440`` is the same as"
@@ -2160,7 +2209,7 @@ msgstr ""
 "このメソッドは周波数の指定を期待しています。たとえば、周波数 ``440`` は、"
 "交響楽団がチューニングするために使用する調律音 ``A`` と同じです。"
 
-#: ../../tutorials/music.rst:119
+#: ../../tutorials/music.rst:123
 msgid ""
 "In the example above the ``range`` function is used to generate ranges of"
 " numeric values. These numbers are used to define the pitch of the tone. "
@@ -2178,14 +2227,14 @@ msgstr ""
 "使っている ``range`` では「1760 から 880 の範囲の値を -16 間隔で作成する」と"
 "なります。これは、サイレンのような音程で上下に変化する周波数の範囲を得る方法です。"
 
-#: ../../tutorials/music.rst:128
+#: ../../tutorials/music.rst:132
 msgid ""
 "Because the siren should last forever it's wrapped in an infinite "
 "``while`` loop."
 msgstr ""
 "サイレンを永遠に続けるために、無限の ``while`` ループで囲います。"
 
-#: ../../tutorials/music.rst:131
+#: ../../tutorials/music.rst:135
 msgid ""
 "Importantly, we have introduced a new sort of a loop inside the ``while``"
 " loop: the ``for`` loop. In English it's like saying, \"for each item in "
@@ -3580,32 +3629,11 @@ msgstr ""
 msgid "Speech"
 msgstr "音声"
 
-#: ../../tutorials/speech.rst:6
-msgid "WARNING! THIS IS ALPHA CODE."
-msgstr "警告！ これはα版のコードです。"
-
-#: ../../tutorials/speech.rst:8
-msgid "We reserve the right to change this API as development continues."
-msgstr "開発を続ける過程で、この API を変更する可能性があります。"
-
-#: ../../tutorials/speech.rst:10
-msgid ""
-"The quality of the speech is not great, merely \"good enough\". Given the"
-" constraints of the device you may encounter memory errors and / or "
-"unexpected extra sounds during playback. It's early days and we're "
-"improving the code for the speech synthesiser all the time. Bug reports "
-"and pull requests are most welcome."
-msgstr ""
-"音声の品質は大したものではなく、単に「十分に良い」レベルです。デバイスの制約により、"
-"再生中にメモリエラーや予期しない余分なサウンドが発生することがあります。"
-"まだ初期段階であり、音声シンセサイザーのコードを常に改善しています。"
-"バグレポートやプルリクエストは大歓迎です。"
-
-#: ../../tutorials/speech.rst:16
+#: ../../tutorials/speech.rst:4
 msgid "Computers and robots that talk feel more \"human\"."
 msgstr "コンピュータやロボットが話せれば、より「人間」らしくなるでしょう。"
 
-#: ../../tutorials/speech.rst:18
+#: ../../tutorials/speech.rst:6
 msgid ""
 "So often we learn about what a computer is up to through a graphical user"
 " interface (GUI). In the case of a BBC micro:bit the GUI is a 5x5 LED "
@@ -3615,7 +3643,7 @@ msgstr ""
 "多いと思います。BBC micro:bit の場合、GUI は 5×5 の LED マトリックスであり、"
 "望まれる多くのことを捨てています。"
 
-#: ../../tutorials/speech.rst:22
+#: ../../tutorials/speech.rst:10
 msgid ""
 "Getting the micro:bit talk to you is one way to express information in a "
 "fun, efficient and useful way. To this end, we have integrated a simple "
@@ -3629,19 +3657,19 @@ msgstr ""
 "\"all humans must die\" みたいな感じでとてもキュートです(訳注: この章は、"
 "イギリスのTVシリーズ「Doctor Who」を知らないと分からないネタばかりです)。"
 
-#: ../../tutorials/speech.rst:27
+#: ../../tutorials/speech.rst:15
 msgid "With this in mind, we're going to use the speech synthesiser to create..."
 msgstr "以上を念頭に置いて、音声シンセサイザを使っていくことにしましょう ..."
 
-#: ../../tutorials/speech.rst:30
+#: ../../tutorials/speech.rst:18
 msgid "DALEK Poetry"
 msgstr "DALEK の詩"
 
-#: ../../tutorials/speech.rst:33
+#: ../../tutorials/speech.rst:21
 msgid ".. image:: tutorials/dalek.jpg"
 msgstr ""
 
-#: ../../tutorials/speech.rst:34
+#: ../../tutorials/speech.rst:22
 msgid ""
 "It's a little known fact that DALEKs enjoy poetry ~ especially limericks."
 " They go wild for anapestic meter with a strict AABBA form. Who'd have "
@@ -3650,7 +3678,7 @@ msgstr ""
 "DALEK が詩、特にリメリック(滑稽五行詩)を楽しむことはちょっと知られています。DALEK は"
 "厳格な AABBA 形式の弱強格韻脚でワイルドになります。誰が考えたのでしょうか？"
 
-#: ../../tutorials/speech.rst:37
+#: ../../tutorials/speech.rst:25
 msgid ""
 "(Actually, as we'll learn below, it's The Doctor's fault DALEKs like "
 "limericks, much to the annoyance of Davros.)"
@@ -3658,23 +3686,24 @@ msgstr ""
 "(実際には、以降で学ぶように、DALEK がリメリックを好きなのはドクターの仕業であり、"
 "ダブロス博士の悩みの種です)"
 
-#: ../../tutorials/speech.rst:40
+#: ../../tutorials/speech.rst:28
 msgid "In any case, we're going to create a DALEK poetry recital on demand."
 msgstr "いずれにしても、必要に応じて DALEK の詩のリサイタルを作成する予定です。"
 
-#: ../../tutorials/speech.rst:43
+#: ../../tutorials/speech.rst:31
 msgid "Say Something"
 msgstr "何か言わせてみる"
 
-#: ../../tutorials/speech.rst:45
-msgid "Before the device can talk you need to plug in a speaker like this:"
-msgstr "デバイスが話せるようにする前に、以下のようにスピーカーを接続する必要があります:"
-
-#: ../../tutorials/speech.rst:48
-msgid ".. image:: tutorials/../speech.png"
+#: ../../tutorials/speech.rst:33
+msgid ""
+"If you have the latest micro:bit **V2** device, you can use the built-in "
+"speaker as well as or instead of connecting a speaker or set of "
+"headphones like this:"
 msgstr ""
+"最新の micro:bit **V2** デバイスでは組込みのスピーカーが使えますが、以前のデバイスや"
+"外付けのスピーカーやヘッドフォンを使いたい場合は次のように接続してください:"
 
-#: ../../tutorials/speech.rst:49
+#: ../../tutorials/speech.rst:42
 msgid ""
 "The simplest way to get the device to speak is to import the ``speech`` "
 "module and use the ``say`` function like this::"
@@ -3682,14 +3711,14 @@ msgstr ""
 "デバイスに話させる最も簡単な方法は、次のように ``speech`` モジュールをインポートして、 "
 "``say`` 関数を使うことです::"
 
-#: ../../tutorials/speech.rst:52
+#: ../../tutorials/speech.rst:45
 msgid ""
 "import speech\n"
 "\n"
 "speech.say(\"Hello, World\")"
 msgstr ""
 
-#: ../../tutorials/speech.rst:56
+#: ../../tutorials/speech.rst:49
 msgid ""
 "While this is cute it's certainly not DALEK enough for our taste, so we "
 "need to change some of the parameters that the speech synthesiser uses to"
@@ -3700,31 +3729,29 @@ msgstr ""
 "生成するために使ういくつかのパラメータを変更する必要があります。音声シンセサイザは、"
 "この点で非常に強力です。なぜなら、4つのパラメータを変更できるからです:"
 
-#: ../../tutorials/speech.rst:61
-msgid "``pitch`` - how high or low the voice sounds (0 = high, 255 = Barry White)"
-msgstr "``pitch`` - 音声の高低s (0 = 高, 255 = Barry White)"
+#: ../../tutorials/speech.rst:54
+msgid "``pitch`` - how high or low the voice sounds (0 = high, 255 = low)"
+msgstr "``pitch`` - 音声の高低s (0 = 高, 255 = 低)"
 
-#: ../../tutorials/speech.rst:62
-msgid ""
-"``speed`` - how quickly the device talks (0 = impossible, 255 = bedtime "
-"story)"
-msgstr "``speed`` - デバイスが話す速度 (0 = impossible, 255 = bedtime story)"
+#: ../../tutorials/speech.rst:55
+msgid "``speed`` - how quickly the device talks (0 = fast, 255 = slow)"
+msgstr "``speed`` - デバイスが話す速度 (0 = 早い, 255 = 遅い)"
 
-#: ../../tutorials/speech.rst:63
+#: ../../tutorials/speech.rst:56
 msgid ""
 "``mouth`` - how tight-lipped or overtly enunciating the voice sounds (0 ="
-" ventriloquist's dummy, 255 = Foghorn Leghorn)"
+" closed mouth, 255 = open mouth)"
 msgstr ""
-"``mouth`` - 音声の発音の不明瞭または明瞭の程度 (0 = 腹話術師の人形, 255 = Foghorn Leghorn)"
+"``mouth`` - 音声の発音の不明瞭または明瞭の程度 (0 = 閉じた口, 255 = 開いた口)"
 
-#: ../../tutorials/speech.rst:64
+#: ../../tutorials/speech.rst:57
 msgid ""
-"``throat`` - how relaxed or tense is the tone of voice (0 = falling "
-"apart, 255 = totally chilled)"
+"``throat`` - how relaxed or tense is the tone of voice (0 = tense, 255 = "
+"relaxed)"
 msgstr ""
-"``throat`` - 声の調子のリラックスまたは緊張の程度 (0 = falling apart, 255 = totally chilled)"
+"``throat`` - 声の調子のリラックスまたは緊張の程度 (0 = 緊張, 255 = リラックス)"
 
-#: ../../tutorials/speech.rst:66
+#: ../../tutorials/speech.rst:59
 msgid ""
 "Collectively, these parameters control the quality of sound - a.k.a. the "
 "timbre. To be honest, the best way to get the tone of voice you want is "
@@ -3733,7 +3760,7 @@ msgstr ""
 "まとめると、これらのパラメータは音の質を制御します。正直言って、望む声の音を得る"
 "最良の方法は、実験を繰り返して調整することです。"
 
-#: ../../tutorials/speech.rst:70
+#: ../../tutorials/speech.rst:63
 msgid ""
 "To adjust the settings you pass them in as arguments to the ``say`` "
 "function. More details can be found in the ``speech`` module's API "
@@ -3742,24 +3769,24 @@ msgstr ""
 "設定を調整するには、それらを ``say`` 関数の引数として渡します。詳細は "
 "``speech`` モジュールの API ドキュメンテーションを参照してください。"
 
-#: ../../tutorials/speech.rst:73
+#: ../../tutorials/speech.rst:66
 msgid ""
 "After some experimentation we've worked out this sounds quite DALEK-"
 "esque::"
 msgstr ""
 "何回かの実験の後、以下でかなり DALEK 風の音声になりました。"
 
-#: ../../tutorials/speech.rst:75
+#: ../../tutorials/speech.rst:68
 msgid ""
 "speech.say(\"I am a DALEK - EXTERMINATE\", speed=120, pitch=100, "
 "throat=100, mouth=200)"
 msgstr ""
 
-#: ../../tutorials/speech.rst:78
+#: ../../tutorials/speech.rst:71
 msgid "Poetry on Demand"
 msgstr "詩オンデマンド(Poetry on Demand)"
 
-#: ../../tutorials/speech.rst:80
+#: ../../tutorials/speech.rst:73
 msgid ""
 "Being Cyborgs DALEKs use their robot capabilities to compose poetry and "
 "it turns out that the algorithm they use is written in Python like this::"
@@ -3767,7 +3794,7 @@ msgstr ""
 "サイボーグである DALEK はロボットの能力を使って詩を作っています。彼らが使う"
 "アルゴリズムは Python で次のように書かれています::"
 
-#: ../../tutorials/speech.rst:83
+#: ../../tutorials/speech.rst:76
 msgid ""
 "# DALEK poetry generator, by The Doctor\n"
 "import speech\n"
@@ -3844,11 +3871,11 @@ msgstr ""
 "    speech.say(line, speed=120, pitch=100, throat=100, mouth=200)\n"
 "    sleep(500)"
 
-#: ../../tutorials/speech.rst:116
+#: ../../tutorials/speech.rst:109
 msgid "As the comments demonstrate, it's a very simple in design:"
 msgstr "コメントが示すように、デザインは非常にシンプルです:"
 
-#: ../../tutorials/speech.rst:118
+#: ../../tutorials/speech.rst:111
 msgid ""
 "Named fragments (``location``, ``prop``, ``attitude`` etc) are randomly "
 "generated from pre-defined lists of possible values. Note the use of "
@@ -3858,7 +3885,7 @@ msgstr ""
 "attitudeなど)が生成されます。 ``random.choice`` を使って、リストから単一の"
 "項目を選んでいることに注目してください。"
 
-#: ../../tutorials/speech.rst:119
+#: ../../tutorials/speech.rst:112
 msgid ""
 "A template of a poem is defined as a list of stanzas with \"holes\" in "
 "them (denoted by ``{}``) into which the named fragments will be put using"
@@ -3867,7 +3894,7 @@ msgstr ""
 "詩のテンプレートは、その中に「穴」(``{}`` で表現)のある節のリストとして"
 "定義されています。この穴に ``format`` メソッドを使って名前つき断片を埋めます。"
 
-#: ../../tutorials/speech.rst:120
+#: ../../tutorials/speech.rst:113
 msgid ""
 "Finally, Python loops over each item in the list of filled-in poetry "
 "stanzas and uses ``speech.say`` with the settings for the DALEK voice to "
@@ -3878,7 +3905,7 @@ msgstr ""
 "``speech.say`` を使って DALEK の声で詩を暗唱します。DALEK でも息をする必要が"
 "あるので、500 ミリ秒の休止を各行の間に挿入しています。"
 
-#: ../../tutorials/speech.rst:122
+#: ../../tutorials/speech.rst:115
 msgid ""
 "Interestingly the original poetry related routines were written by Davros"
 " in `FORTRAN <https://en.wikipedia.org/wiki/Fortran>`_ (an appropriate "
@@ -3904,11 +3931,11 @@ msgstr ""
 "<https://www.youtube.com/watch?v=dQw4w9WgXcQ>`_ のようなものとして、DALEK "
 "のメモリバンクに入れることができました。"
 
-#: ../../tutorials/speech.rst:136
+#: ../../tutorials/speech.rst:129
 msgid "Phonemes"
 msgstr "音素"
 
-#: ../../tutorials/speech.rst:138
+#: ../../tutorials/speech.rst:131
 msgid ""
 "You'll notice that sometimes, the ``say`` function doesn't accurately "
 "translate from English words into the correct sound. To have fine grained"
@@ -3918,7 +3945,7 @@ msgstr ""
 "場合によっては ``say`` 関数が英語の単語から正しい音に正確に変換されないことが"
 "あります。出力をきめ細かく制御するには、言語の音の最小単位である音素を使用します。"
 
-#: ../../tutorials/speech.rst:142
+#: ../../tutorials/speech.rst:135
 msgid ""
 "The advantage of using phonemes is that you don't have to know how to "
 "spell! Rather, you only have to know how to say the word in order to "
@@ -3927,7 +3954,7 @@ msgstr ""
 "音素を使用する利点は、綴り方を知る必要がないことです。むしろ、それを音声学的に"
 "綴るためには、言葉の使い方を知る必要があります。"
 
-#: ../../tutorials/speech.rst:146
+#: ../../tutorials/speech.rst:139
 msgid ""
 "A full list of the phonemes the speech synthesiser understands can be "
 "found in the API documentation for speech. Alternatively, save yourself a"
@@ -3941,23 +3968,23 @@ msgstr ""
 "この関数は、オーディオを生成するために使う音素の近似を最初に生成して返します。この結果は、"
 "(もっと自然に聞こえるように)精度、屈曲、強調を手で編集して改善できます。"
 
-#: ../../tutorials/speech.rst:153
+#: ../../tutorials/speech.rst:146
 msgid "The ``pronounce`` function is used for phoneme output like this::"
 msgstr "音素出力には次のように ``pronounce`` 関数を使います。"
 
-#: ../../tutorials/speech.rst:155
+#: ../../tutorials/speech.rst:148
 msgid "speech.pronounce(\"/HEH5EH4EH3EH2EH2EH3EH4EH5EHLP.”)"
 msgstr ""
 
-#: ../../tutorials/speech.rst:157
+#: ../../tutorials/speech.rst:150
 msgid "How could you improve on The Doctor's code to make it use phonemes?"
 msgstr "ドクターのコードを音素を使って改善してみてください。"
 
-#: ../../tutorials/speech.rst:160
+#: ../../tutorials/speech.rst:153
 msgid "Sing A Song of Micro:bit"
 msgstr "micro:bit の歌を歌う"
 
-#: ../../tutorials/speech.rst:162
+#: ../../tutorials/speech.rst:155
 msgid ""
 "By changing the ``pitch`` setting and calling the ``sing`` function it's "
 "possible to make the device sing (although it's not going to win "
@@ -3967,23 +3994,23 @@ msgstr ""
 "できます(ただし、Eurovision (訳注: 欧州放送連合の音楽コンテスト)で勝てるとは"
 "限りません)。"
 
-#: ../../tutorials/speech.rst:166
+#: ../../tutorials/speech.rst:159
 msgid "The mapping from pitch numbers to musical notes is shown below:"
 msgstr "pitch 番号から音符へのマッピングを以下に示します。"
 
-#: ../../tutorials/speech.rst:169
+#: ../../tutorials/speech.rst:162
 msgid ".. image:: tutorials/../speech-pitch.png"
 msgstr ""
 
-#: ../../tutorials/speech.rst:170
+#: ../../tutorials/speech.rst:163
 msgid "The ``sing`` function must take phonemes and pitch as input like this::"
 msgstr "次のように、 ``sing`` 関数には音素と pitch を入力する必要があります。"
 
-#: ../../tutorials/speech.rst:172
+#: ../../tutorials/speech.rst:165
 msgid "speech.sing(\"#115DOWWWW\")"
 msgstr ""
 
-#: ../../tutorials/speech.rst:174
+#: ../../tutorials/speech.rst:167
 msgid ""
 "Notice how the pitch to be sung is prepended to the phoneme with a hash "
 "(``#``). The pitch will remain the same for subsequent phonemes until a "
@@ -3993,7 +4020,7 @@ msgstr ""
 "してください。新しい pitch 設定があるまで、pitch は後続の音素に対して同じままと"
 "なります。"
 
-#: ../../tutorials/speech.rst:178
+#: ../../tutorials/speech.rst:171
 msgid ""
 "The following example demonstrates how all three generative functions "
 "(``say``, ``pronounce`` and ``sing``) can be used to produce speech like "
@@ -4003,6 +4030,15 @@ msgstr ""
 "示しています。"
 
 msgid ""
+"\"\"\"\n"
+"    speech.py\n"
+"    ~~~~~~~~\n"
+"\n"
+"    Simple speech example to make the micro:bit say, pronounce and sing\n"
+"    something. This example requires a speaker/buzzer/headphones "
+"connected\n"
+"    to P0 and GND,or the latest micro:bit device with built-in speaker.\n"
+"\"\"\"\n"
 "import speech\n"
 "from microbit import sleep\n"
 "\n"
@@ -4038,6 +4074,14 @@ msgid ""
 "# Sing the scale descending in pitch.\n"
 "speech.sing(song, speed=100)"
 msgstr ""
+"\"\"\"\n"
+"    speech.py\n"
+"    ~~~~~~~~\n"
+"\n"
+"    micro:bit に何かを言わせたり、発声させたり、歌わせたりする簡単な音声サンプルです\n"
+"    このサンプルでは、スピーカー/ヘッドフォンを P0 と GND に繋ぐか、最新の micro:bit V2\n"
+"    デバイスに組込みのスピーカーが必要になります。\n"
+"\"\"\"\n"
 "import speech\n"
 "from microbit import sleep\n"
 "\n"

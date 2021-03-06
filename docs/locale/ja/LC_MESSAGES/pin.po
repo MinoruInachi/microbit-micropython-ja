@@ -31,8 +31,7 @@ msgid ""
 msgstr ""
 "端子はボードに接続された外部デバイスと通信するための手段です。使用できる端子は 19 "
 "あります。番号 0-16 と 19-20 を利用できます。端子 17 と 18 は利用できません。"
-"最新の micro:bit デバイスでは ``pin_logo`` **V2** と ``pin_speaker``  **V2** "
-"も使えます。"
+"最新の micro:bit **V2** では ``pin_logo`` と ``pin_speaker`` も使えます。"
 
 #: ../../pin.rst:11
 msgid ""
@@ -90,7 +89,7 @@ msgstr "機能"
 
 #: ../../pin.rst:34
 msgid "Function **V2**"
-msgstr "機能 **V2**"
+msgstr "**V2** の機能"
 
 #: ../../pin.rst:36
 msgid "0"
@@ -260,7 +259,7 @@ msgid ""
 "The latest micro:bit device **V2** has two additional pins that you can "
 "access in MicroPython, but that are not available via the edge connector:"
 msgstr ""
-"最新の micro:bit デバイス **V2** では、エッジコネクタには無いけれども、MicroPython "
+"最新の micro:bit **V2** デバイスでは、エッジコネクタには無いけれども、MicroPython "
 "で使える２つの端子が追加になっています。"
 
 #: ../../pin.rst:79
@@ -434,8 +433,8 @@ msgid ""
 "The default touch mode for the pins on the edge connector is `resistive`."
 " The default for the logo pin **V2** is `capacitive`."
 msgstr ""
-"エッジコネクタ端子のデフォルトのタッチモードは抵抗膜方式(`resistive`)です。"
-"ロゴ端子のデフォルトのタッチモードは静電容量方式(`capacitive`)です。"
+"エッジコネクタ端子のデフォルトのタッチモードは抵抗膜方式(`resistive`)です。 "
+"**V2** のロゴ端子のデフォルトのタッチモードは静電容量方式(`capacitive`)です。"
 
 #: ../../pin.rst:213
 msgid ""
