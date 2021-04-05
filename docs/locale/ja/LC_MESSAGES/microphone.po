@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../microphone.rst:32
 msgid "Functions"
-msgstr ""関数
+msgstr "関数"
 
 #: ../../microphone.rst:36
 msgid ""
