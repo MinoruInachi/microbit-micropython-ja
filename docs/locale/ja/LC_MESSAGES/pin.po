@@ -2,15 +2,15 @@
 # Copyright (C) 2015-2020, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2021-04-18 20:20+0900\n"
+"POT-Creation-Date: 2021-11-28 10:29+0900\n"
+"PO-Revision-Date: 2021-11-28 11:04+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -394,7 +394,44 @@ msgstr "端子がハイの場合は 1 を返し、ローの場合は 0 を返し
 msgid "Set the pin to high if ``value`` is 1, or to low, if it is 0."
 msgstr "``value`` が 1 の場合はハイに設定し、0 の場合はローに設定します。"
 
-#: ../../pin.rst:175 ../../pin.rst:200
+#: ../../pin.rst:149
+msgid ""
+"Set the pull state to one of three possible values: ``pin.PULL_UP``, "
+"``pin.PULL_DOWN`` or ``pin.NO_PULL`` (where ``pin`` is an instance of a "
+"pin). See below for discussion of default pull states."
+msgstr ""
+"プル状態を次の３つのいずれかの値に設定します: ``pin.PULL_UP``, "
+"``pin.PULL_DOWN``, ``pin.NO_PULL`` (``pin`` は端子のインスタンス)。"
+"デフォルトのプル状態については以降を参照してください。"
+
+#: ../../pin.rst:155
+msgid ""
+"Returns the pull configuration on a pin, which can be one of three "
+"possible values: ``NO_PULL``, ``PULL_DOWN``, or ``PULL_UP``. These are "
+"set using the ``set_pull()`` method or automatically configured when a "
+"pin mode requires it."
+msgstr ""
+"端子のプル構成を返します。次の３つの値のいずれかが返ります: ``NO_PULL``, "
+"``PULL_DOWN``, ``PULL_UP`` 。これらの値は ``set_pull()`` メソッドで"
+"設定するか、端子のモードが要求するときに自動的に設定されます。"
+
+#: ../../pin.rst:162
+msgid ""
+"Returns the pin mode. When a pin is used for a specific function, like "
+"writing a digital value, or reading an analog value, the pin mode "
+"changes. Pins can have one of the following modes: ``\"unused\"``, "
+"``\"analog\"``, ``\"read_digital\"``, ``\"write_digital\"``, "
+"``\"display\"``, ``\"button\"``, ``\"music\"``, ``\"audio\"``, "
+"``\"touch\"``, ``\"i2c\"``, ``\"spi\"``."
+msgstr ""
+"端子のモードを返します。デジタル値の書込みやアナログ値の読出しなど、端子を特定の機能で"
+"使うとピンのモードが変わります。ピンは次のいずれかのモードを持つことができます: "
+"``\"unused\"``, "
+"``\"analog\"``, ``\"read_digital\"``, ``\"write_digital\"``, "
+"``\"display\"``, ``\"button\"``, ``\"music\"``, ``\"audio\"``, "
+"``\"touch\"``, ``\"i2c\"``, ``\"spi\"``"
+
+#: ../../pin.rst:174
 msgid ""
 "Read the voltage applied to the pin, and return it as an integer between "
 "0 (meaning 0V) and 1023 (meaning 3.3V)."
@@ -402,7 +439,7 @@ msgstr ""
 "端子の電圧を読み取り、0 (0V の意味）から 1023 (3.3V の意味)までの間の整数として"
 "返します。"
 
-#: ../../pin.rst:181
+#: ../../pin.rst:179
 #, python-format
 msgid ""
 "Output a PWM signal on the pin, with the duty cycle proportional to the "
@@ -413,28 +450,28 @@ msgstr ""
 "``value`` には 0 (時間幅周期 0%)から 1023 (時間幅周期 100%)までの整数または"
 "浮動小数点数を指定できます。"
 
-#: ../../pin.rst:187
+#: ../../pin.rst:185
 msgid ""
 "Set the period of the PWM signal being output to ``period`` in "
 "milliseconds. The minimum valid value is 1ms."
 msgstr ""
 "出力される PWM 信号の周期を ``period`` にミリ秒単位で設定します。有効な最小値は 1ms です。"
 
-#: ../../pin.rst:192
+#: ../../pin.rst:190
 msgid ""
 "Set the period of the PWM signal being output to ``period`` in "
 "microseconds. The minimum valid value is 256µs."
 msgstr ""
 "出力される PWM 信号の周期を ``period`` にマイクロ秒単位で設定します。有効な最小値は 256μs です。"
 
-#: ../../pin.rst:208
+#: ../../pin.rst:198
 msgid ""
 "Return ``True`` if the pin is being touched with a finger, otherwise "
 "return ``False``."
 msgstr ""
 "端子を指で触れている場合は ``True`` 、そうでない場合は ``False`` を返します。"
 
-#: ../../pin.rst:212 ../../pin.rst:230
+#: ../../pin.rst:202 ../../pin.rst:220
 msgid ""
 "The default touch mode for the pins on the edge connector is `resistive`."
 " The default for the logo pin **V2** is `capacitive`."
@@ -442,7 +479,7 @@ msgstr ""
 "エッジコネクタ端子のデフォルトのタッチモードは抵抗膜方式(`resistive`)です。 "
 "**V2** のロゴ端子のデフォルトのタッチモードは静電容量方式(`capacitive`)です。"
 
-#: ../../pin.rst:215
+#: ../../pin.rst:205
 msgid ""
 "**Resistive touch** This test is done by measuring how much resistance "
 "there is between the pin and ground.  A low resistance gives a reading of"
@@ -455,7 +492,7 @@ msgstr ""
 "検出を確実にするには、体の別の部分、たとえばもう片方の手で GND 端子に触れる必要が"
 "あります。"
 
-#: ../../pin.rst:221
+#: ../../pin.rst:211
 msgid ""
 "**Capacitive touch** This test is done by interacting with the electric "
 "field of a capacitor using a finger as a conductor. `Capacitive touch "
@@ -468,7 +505,7 @@ msgstr ""
 "<https://www.allaboutcircuits.com/technical-articles/introduction-to-capacitive-touch-sensing>`_ "
 "は、回路の一部として接地(GND)に接続する必要がありません。"
 
-#: ../../pin.rst:233
+#: ../../pin.rst:223
 msgid ""
 "Set the touch mode for the given pin. Value can be either ``CAPACITIVE`` "
 "or ``RESISTIVE``. For example, ``pin0.set_touch_mode(pin0.CAPACITIVE)``."
@@ -477,7 +514,7 @@ msgstr ""
 "または ``RESISTIVE`` を指定できます。たとえば "
 "``pin0.set_touch_mode(pin0.CAPACITIVE)`` のように呼び出します。"
 
-#: ../../pin.rst:236
+#: ../../pin.rst:226
 msgid ""
 "The pull mode for a pin is automatically configured when the pin changes "
 "to an input mode. Input modes are when you call ``read_analog`` / "
@@ -492,7 +529,7 @@ msgstr ""
 "``NO_PULL``, ``PULL_DOWN``, ``PULL_UP`` です。 ``set_pull`` を呼び出すと、"
 "``read_digital`` モードにある端子を指定のプルモードに設定します。"
 
-#: ../../pin.rst:244
+#: ../../pin.rst:234
 msgid ""
 "The micro:bit has external weak (10M) pull-ups fitted on pins 0, 1 and 2 "
 "only, in order for the touch sensing to work."
@@ -500,7 +537,7 @@ msgstr ""
 "タッチセンスが機能するために、micro:bit は端子 0, 1, 2 にのみ外付けの弱い"
 "(10M)プルアップを装備しています。"
 
-#: ../../pin.rst:247
+#: ../../pin.rst:237
 msgid ""
 "There are also external (10k) pull-ups fitted on pins 5 and 11, in order "
 "for buttons A and B to work."
@@ -508,7 +545,7 @@ msgstr ""
 "ボタンAとボタンBが機能するように、端子 5 と 11 にも外付け(10k)プルアップを"
 "装備しています。"
 
-#: ../../pin.rst:250
+#: ../../pin.rst:240
 msgid ""
 "GPIO pins are also used for the display, as described in the table above."
 " If you want to use these pins for another purpose, you may need to turn "
@@ -520,7 +557,7 @@ msgstr ""
 "<https://microbit-micropython.readthedocs.io/ja/latest/display.html#microbit.display.off>`_ "
 "にする必要があります。"
 
-#: ../../pin.rst:255
+#: ../../pin.rst:245
 msgid ""
 "See the `edge connector data sheet "
 "<http://tech.microbit.org/hardware/edgeconnector>`_."
