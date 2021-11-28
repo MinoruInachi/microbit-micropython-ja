@@ -81,7 +81,7 @@ msgid ""
 "Built-in ``__debug__`` variable: at level 0 this variable expands to "
 "True; at levels 1 and higher it expands to False."
 msgstr ""
-"ビルトイン ``__debug__`` 変数: レベル 0 でこの変数が True に展開されます。"
+"組込み ``__debug__`` 変数: レベル 0 でこの変数が True に展開されます。"
 "レベル 1 以上では False で展開されます。"
 
 #: ../../micropython.rst:69

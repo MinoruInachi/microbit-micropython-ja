@@ -69,13 +69,14 @@ msgstr ""
 "sleep(ms)\n"
 "# micro:bit の電源が入ってから経過したミリ秒数を返します。\n"
 "running_time()\n"
-"# micro:bit をパニックモードにします(これは通常、デバイス抽象レイヤーがメモリ不足になったときに\n"
-"# 起き、ディスプレイに悲しい顔が出ます)。エラーコードには任意の整数値を指定できます。\n"
+"# micro:bit をパニックモードにします(これは通常、デバイス抽象レイヤー\n"
+"# がメモリ不足になったときに起き、ディスプレイに悲しい顔が出ます)。\n"
+"# エラーコードには任意の整数値を指定できます。\n"
 "panic(error_code)\n"
 "# micro:bit をリセットします。\n"
 "reset()\n
-"# micro:bit の組込みスピーカーやエッジコネクタ端子に繋いだ外部スピーカー/ヘッドフォンの\n"
-"# 出力ボリュームを設定します(0-255)。\n"
+"# micro:bit **V2** の内蔵スピーカーやエッジコネクタ端子に繋いだ外部\n"
+"# スピーカー/ヘッドフォンの出力ボリュームを設定します(0-255)。\n"
 "set_volume(128)    # V2"
 
 #: ../../microbit_micropython_api.rst:29
@@ -270,7 +271,7 @@ msgid ""
 "connected internally to the I/O that drives the LED matrix and the "
 "buttons."
 msgstr ""
-"コネクタの端子、 **V2** ロゴ、 **V2** スピーカーにデジタルおよびアナログの"
+"コネクタの端子、 **V2** のロゴ、 **V2** の内蔵スピーカーにデジタルおよびアナログの"
 "入出力機能を提供します。一部の端子は LED マトリクスとボタンを駆動する I/O "
 "に内部接続されています。"
 
@@ -513,7 +514,7 @@ msgstr ""
 
 #: ../../microbit_micropython_api.rst:217
 msgid "**Built-in images**"
-msgstr "組込みのイメージ"
+msgstr "内蔵のイメージ"
 
 #: ../../microbit_micropython_api.rst:219
 msgid ""
@@ -699,7 +700,7 @@ msgstr ""
 
 #: ../../microbit_micropython_api.rst:340
 msgid "**Built-in sounds**"
-msgstr "組込みのサウンド"
+msgstr "内蔵のサウンド"
 
 #: ../../microbit_micropython_api.rst:342
 msgid ""
@@ -729,9 +730,9 @@ msgid ""
 "# returns True or False to indicate if the speaker is on or off\n"
 "speaker.is_on()"
 msgstr ""
-"# 組込みのスピーカーを無効化します\n"
+"# 内蔵スピーカーを無効化します\n"
 "speaker.off()\n"
-"# 組込みのスピーカーを有効化します\n"
+"# 内蔵スピーカーを有効化します\n"
 "speaker.on()\n"
 "# スピーカーは有効であるか無効であるかによって True または False を返すます\n"
 "speaker.is_on()"

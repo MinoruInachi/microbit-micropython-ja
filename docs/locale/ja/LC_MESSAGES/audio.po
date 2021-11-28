@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2020-12-26 22:41+0900\n"
+"PO-Revision-Date: 2021-11-28 17:15+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -36,9 +36,9 @@ msgid ""
 "headphones or a speaker to pin 0 and GND on the edge connector to hear "
 "the sounds."
 msgstr ""
-"デフォルトでサウンドはエッジコネクタの端子 0 と ":doc:`組込みのスピーカー <speaker>` "
-"**V2** に出力します。端子 0 と GND に有線ヘッドフォンやスピーカーを繋いで"
-"サウンドを鳴らせます。"
+"デフォルトでサウンドはエッジコネクタの端子 0 と **V2** の "
+":doc:`内蔵スピーカー <speaker>` に出力します。端子 0 と GND に"
+"有線ヘッドフォンやスピーカーを繋いでサウンドを鳴らせます。"
 
 #: ../../audio.rst:14
 msgid "Functions"
@@ -54,7 +54,7 @@ msgid ""
 "in sounds that your can pass to ``audio.play()``."
 msgstr ""
 "**source**: ``Sound`` - ``microbit`` モジュールには ``audio.play()`` に"
-"渡すことのできる組込みのサウンドがあります。"
+"渡すことのできる内蔵のサウンドがあります。"
 
 #: ../../audio.rst:23
 msgid ""
@@ -74,7 +74,7 @@ msgstr ""
 #: ../../audio.rst:29
 msgid "**pin**: An optional argument to specify the output pin can be used to"
 msgstr ""
-"**pin**: 出力ピンをデフォルトの ``pin0`` を上書きするためのオプション引数です。"
+"**pin**: 出力ピンをデフォルトの ``pin0`` から変えるためのオプション引数です。"
 
 #: ../../audio.rst:30
 msgid ""
@@ -90,7 +90,7 @@ msgid ""
 "revision."
 msgstr ""
 "**return_pin**: スピーカの２本ある線の一方を接続する先である GND を別の端子に"
-"したい場合に使います。"
+"したい場合に使います。これは **V2** では無視されます。"
 
 #: ../../audio.rst:39
 msgid "Return ``True`` if audio is playing, otherwise return ``False``."
@@ -128,17 +128,17 @@ msgid ""
 "``examples/waveforms.py``."
 msgstr ""
 "``play`` 関数への入力として音源が必要になります。"
-"**V2** には ``microbit`` モジュールに組込みのサウンドである ``microbit.Sound`` "
+"**V2** には ``microbit`` モジュールに内蔵のサウンドである ``microbit.Sound`` "
 "があります。音源を自作することもでき、 ``examples/waveforms.py`` に"
 "自作の例があります。"
 
 #: ../../audio.rst:64
 msgid "Built-in sounds **V2**"
-msgstr "**V2** の組込みサウンド"
+msgstr "**V2** に内蔵のサウンド"
 
 #: ../../audio.rst:66
 msgid "The built-in sounds can be called using ``audio.play(Sound.NAME)``."
-msgstr "以下の組込みのサウンドは ``audio.play(Sound.NAME)`` のようにして再生できます。"
+msgstr "以下の内蔵のサウンドは ``audio.play(Sound.NAME)`` のようにして再生できます。"
 
 #: ../../audio.rst:68
 msgid "``Sound.GIGGLE``"
