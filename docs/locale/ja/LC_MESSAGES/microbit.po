@@ -27,7 +27,7 @@ msgid ""
 "The ``microbit`` module gives you access to all the hardware that is "
 "built-in into your board."
 msgstr ""
-"``microbit`` モジュールは、ボードに組み込まれているハードウェアすべてにアクセス"
+"``microbit`` モジュールは、ボードに組み込まれて内蔵のハードウェアすべてにアクセス"
 "するためのものです。"
 
 #: ../../microbit.rst:12

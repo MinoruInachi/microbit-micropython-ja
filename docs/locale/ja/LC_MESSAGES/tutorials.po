@@ -833,7 +833,7 @@ msgid ""
 "MicroPython comes with lots of built-in pictures to show on the display. "
 "For example, to make the device appear happy you type::"
 msgstr ""
-"MicroPython には、ディスプレイに表示できる多くの組込みピクチャがあります。"
+"MicroPython には、ディスプレイに表示できる多くの内蔵ピクチャがあります。"
 "たとえば、デバイスがハッピーに見えるようにするには、次のように入力します。"
 
 #: ../../tutorials/images.rst:12
@@ -851,7 +851,7 @@ msgid ""
 "and ``)``)."
 msgstr ""
 "最初の行が何であるかは既に知っていると思います。２行目は、 ``display`` オブジェクトに"
-"組込みのイメージを ``show`` で表示させています。表示させたいハッピーのイメージは "
+"内蔵イメージを ``show`` で表示させています。表示させたいハッピーのイメージは "
 "``Image`` に属する ``HAPPY`` というものです。これを括弧内(``(`` と ``)``)に"
 "指定することにより、このイメージの利用を ``show`` に伝えます。"
 
@@ -861,7 +861,7 @@ msgstr ""
 
 #: ../../tutorials/images.rst:22
 msgid "Here's a list of the built-in images:"
-msgstr "以下は組込みイメージの一覧です:"
+msgstr "以下は内蔵イメージの一覧です:"
 
 #: ../../tutorials/images.rst:24
 msgid "``Image.HEART``"
@@ -1060,9 +1060,9 @@ msgid ""
 "look happy to see what some of the other built-in images look like? (Just"
 " replace ``Image.HAPPY`` with one of the built-in images listed above.)"
 msgstr ""
-"かなりたくさんあります！　他の組込みイメージがどのように表示されるかを調べるために"
+"かなりたくさんあります！　他の内蔵イメージがどのように表示されるかを調べるために"
 "ハッピーの micro:bit コードを変更してみませんか？　(``Image.HAPPY`` のところを、"
-"上記の組込みのイメージのいずれかに置き換えるだけです。)"
+"上記の内蔵イメージのいずれかに置き換えるだけです。)"
 
 #: ../../tutorials/images.rst:80
 msgid "DIY Images"
@@ -1237,7 +1237,7 @@ msgid ""
 "``Image.ALL_CLOCKS`` and ``Image.ALL_ARROWS``::"
 msgstr ""
 "イメージのリストをアニメーション化するよう MicroPython に指示できます。"
-"幸いにも既に組み込まれているイメージのリストがあります。 "
+"幸いにも既に内蔵イメージのリストがあります。 "
 "``Image.ALL_CLOCKS`` と ``Image.ALL_ARROWS`` です。"
 
 #: ../../tutorials/images.rst:166
@@ -1980,7 +1980,7 @@ msgstr ""
 
 #: ../../tutorials/music.rst:27
 msgid "MicroPython has quite a lot of built-in melodies. Here's a complete list:"
-msgstr "MicroPython には多くのメロディが内蔵されています。ここに完全なリストがあります:"
+msgstr "MicroPython には多くの内蔵メロディがあります。ここに完全なリストがあります:"
 
 #: ../../tutorials/music.rst:29
 msgid "``music.DADADADUM``"
@@ -3039,7 +3039,7 @@ msgid ""
 msgstr ""
 "ネットワークスタック内の次のレイヤーも、ネットワークのチュートリアルの例とは"
 "異なります。有線の例では、デジタルのオンとオフを使用して端子から信号を送信して"
-"読み取りました。micro:bit に組み込まれた無線機能を使用すると、信号の最小単位が "
+"読み取りました。micro:bit に内蔵の無線機能を使用すると、信号の最小単位が "
 "1 バイトになります。"
 
 #: ../../tutorials/radio.rst:36
@@ -3135,7 +3135,7 @@ msgid ""
 "The way the radio built into the micro:bit solves this problem is quite "
 "simple:"
 msgstr ""
-"micro:bit に組み込まれている無線通信では、この問題を解決するのが非常に簡単です。"
+"micro:bit に内蔵の無線通信では、この問題を解決するのが非常に簡単です。"
 
 #: ../../tutorials/radio.rst:79
 msgid ""
@@ -3551,7 +3551,7 @@ msgid ""
 msgstr ""
 "コンピュータで使われている乱数生成器は本当にランダムではありません。開始シード値を"
 "与えられた結果のようにランダム値を生成します。シード値の生成には、現在時刻やチップ内に"
-"組み込まれた温度計などのセンサー値のようなランダム性のあるものを使うこと多いです。"
+"内蔵されている温度計などのセンサー値のようなランダム性のあるものを使うこと多いです。"
 
 #: ../../tutorials/random.rst:73
 msgid ""
