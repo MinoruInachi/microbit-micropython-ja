@@ -2,15 +2,15 @@
 # Copyright (C) 2015-2016, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: 2018-10-30 19:32+0900\n"
+"POT-Creation-Date: 2021-11-28 11:29+0900\n"
+"PO-Revision-Date: 2021-11-28 11:32+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -95,10 +95,19 @@ msgstr ""
 "設定されているため、X, Y, Z は +/- 2000mg の範囲内になります。"
 
 #: ../../accelerometer.rst:49
+msgid ""
+"Get the acceleration measurement of all axes combined, as a positive "
+"integer.  This is the Pythagorean sum of the X, Y and Z axes, with the "
+"measurement given in milli-g."
+msgstr ""
+"すべての軸を組み合わせた加速度の測定値を正の整数で取得します。"
+"これは、X、Y、Z軸のピタゴラス和で、測定値はミリg単位で与えられます。"
+
+#: ../../accelerometer.rst:55
 msgid "Return the name of the current gesture."
 msgstr "現在のジェスチャーの名前を返します。"
 
-#: ../../accelerometer.rst:53
+#: ../../accelerometer.rst:59
 msgid ""
 "MicroPython understands the following gesture names: ``\"up\"``, "
 "``\"down\"``, ``\"left\"``, ``\"right\"``, ``\"face up\"``, ``\"face "
@@ -109,11 +118,11 @@ msgstr ""
 "``\"right\"``, ``\"face up\"``, ``\"face down\"``, ``\"freefall\"``, "
 "``\"3g\"``, ``\"6g\"``, ``\"8g\"``, ``\"shake\"`` 。ジェスチャーは常に文字列で表されます。"
 
-#: ../../accelerometer.rst:60
+#: ../../accelerometer.rst:66
 msgid "Return True or False to indicate if the named gesture is currently active."
 msgstr "指定した名前のジェスチャーが認識されているかにより True または False を返します。"
 
-#: ../../accelerometer.rst:64
+#: ../../accelerometer.rst:70
 msgid ""
 "Return True or False to indicate if the named gesture was active since "
 "the last call."
@@ -121,7 +130,7 @@ msgstr ""
 "前回の呼出し以降に指定した名前のジェスチャーが認識されたかにより True "
 "または False を返します。"
 
-#: ../../accelerometer.rst:69
+#: ../../accelerometer.rst:75
 msgid ""
 "Return a tuple of the gesture history. The most recent is listed last. "
 "Also clears the gesture history before returning."
@@ -129,7 +138,7 @@ msgstr ""
 "ジェスチャーの履歴をタプルで返します。タプルは古い順に並び、最新のものが最後の要素に"
 "なります。この呼出しを行うとジェスチャーの履歴はクリアされます。"
 
-#: ../../accelerometer.rst:64
+#: ../../accelerometer.rst:80
 msgid ""
 "Gestures are not updated in the background so there needs to be constant "
 "calls to some accelerometer method to do the gesture detection. Usually "
@@ -139,11 +148,20 @@ msgstr ""
 "何らかの加速度センサーのメソッドを常に呼び出す必要があります。通常、ジェスチャーは "
 ":func:`microbit.sleep` による小さな遅延のあるループを使って検出できます。"
 
-#: ../../accelerometer.rst:79
+#: ../../accelerometer.rst:86
+msgid ""
+"Set the accelerometer sensitivity range, in g (standard gravity), to the "
+"closest values supported by the hardware, so it rounds to either ``1``, "
+"``2``, ``4``, or ``8`` g."
+msgstr ""
+"加速度センサーの感度の範囲を g (標準重力)で設定し、ハードウェアがサポートする最も近い値、"
+"つまり ``1``, ``2``, ``4``, or ``8`` g のいずれかに丸めます。"
+
+#: ../../accelerometer.rst:91
 msgid "Examples"
 msgstr "サンプルコード"
 
-#: ../../accelerometer.rst:81
+#: ../../accelerometer.rst:93
 msgid ""
 "A fortune telling magic 8-ball. Ask a question then shake the device for "
 "an answer."
@@ -230,7 +248,7 @@ msgstr ""
 "        display.scroll(random.choice(answers))\n"
 "    sleep(10)"
 
-#: ../../accelerometer.rst:71
+#: ../../accelerometer.rst:99
 msgid "Simple Slalom. Move the device to avoid the obstacles."
 msgstr "単純なスラロームです。デバイスを動かして障害物を避けてください。"
 

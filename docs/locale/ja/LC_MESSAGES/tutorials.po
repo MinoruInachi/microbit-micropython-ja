@@ -2,21 +2,20 @@
 # Copyright (C) 2015-2016, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2021-11-28 11:29+0900\n"
+"PO-Revision-Date: 2021-11-28 13:49+0900\n"
+"Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../tutorials/buttons.rst:189
 msgid ""
@@ -1051,7 +1050,11 @@ msgstr ""
 msgid "``Image.SNAKE``"
 msgstr ""
 
-#: ../../tutorials/images.rst:74
+#: ../../tutorials/images.rst:73
+msgid "``Image.SCISSORS``"
+msgstr ""
+
+#: ../../tutorials/images.rst:75
 msgid ""
 "There's quite a lot! Why not modify the code that makes the micro:bit "
 "look happy to see what some of the other built-in images look like? (Just"
@@ -1061,22 +1064,22 @@ msgstr ""
 "ハッピーの micro:bit コードを変更してみませんか？　(``Image.HAPPY`` のところを、"
 "上記の組込みのイメージのいずれかに置き換えるだけです。)"
 
-#: ../../tutorials/images.rst:79
+#: ../../tutorials/images.rst:80
 msgid "DIY Images"
 msgstr "自作イメージ"
 
-#: ../../tutorials/images.rst:81
+#: ../../tutorials/images.rst:82
 msgid ""
 "Of course, you want to make your own image to display on the micro:bit, "
 "right?"
 msgstr ""
 "もちろん、自分で作成したイメージを micro:bit に表示したいですよね？"
 
-#: ../../tutorials/images.rst:83
+#: ../../tutorials/images.rst:84
 msgid "That's easy."
 msgstr "それは簡単です。"
 
-#: ../../tutorials/images.rst:85
+#: ../../tutorials/images.rst:86
 msgid ""
 "Each LED pixel on the physical display can be set to one of ten values. "
 "If a pixel is set to ``0`` (zero) then it's off. It literally has zero "
@@ -1089,14 +1092,14 @@ msgstr ""
 "設定すると最も明るいレベルになります。値 1 から 8 はオフ(``0``)と最大(``9``)の"
 "間の明るさのレベルを表します。"
 
-#: ../../tutorials/images.rst:91
+#: ../../tutorials/images.rst:92
 msgid ""
 "Armed with this information, it's possible to create a new image like "
 "this::"
 msgstr ""
 "以上の情報があれば、次のような新しいイメージを作成することができます::"
 
-#: ../../tutorials/images.rst:93
+#: ../../tutorials/images.rst:94
 msgid ""
 "from microbit import *\n"
 "\n"
@@ -1109,7 +1112,7 @@ msgid ""
 "display.show(boat)"
 msgstr ""
 
-#: ../../tutorials/images.rst:103
+#: ../../tutorials/images.rst:104
 msgid ""
 "(When run, the device should display an old-fashioned \"Blue Peter\" "
 "sailing ship with the masts dimmer than the boat's hull.)"
@@ -1117,7 +1120,7 @@ msgstr ""
 "(実行すると、デバイスは昔ながらの \"Blue Peter\" 帆船を表示します。"
 "船体よりもマストが暗くなっています。)"
 
-#: ../../tutorials/images.rst:106
+#: ../../tutorials/images.rst:107
 msgid ""
 "Have you figured out how to draw a picture? Have you noticed that each "
 "line of the physical display is represented by a line of numbers ending "
@@ -1132,12 +1135,12 @@ msgstr ""
 "それぞれにある５個のピクセルのそれぞれに個別の明るさを指定することができます。"
 "これが新しいイメージを作成する方法です。"
 
-#: ../../tutorials/images.rst:113 ../../tutorials/io.rst:19
+#: ../../tutorials/images.rst:114 ../../tutorials/io.rst:19
 #: ../../tutorials/storage.rst:117
 msgid "Simple!"
 msgstr "簡単！"
 
-#: ../../tutorials/images.rst:115
+#: ../../tutorials/images.rst:116
 msgid ""
 "In fact, you don't need to write this over several lines. If you think "
 "you can keep track of each line, you can rewrite it like this::"
@@ -1145,15 +1148,15 @@ msgstr ""
 "実際のところ、複数の行に分けて書く必要はありません。各行を追えるのであれば、"
 "次のように書き直すことができます::"
 
-#: ../../tutorials/images.rst:118
+#: ../../tutorials/images.rst:119
 msgid "boat = Image(\"05050:05050:05050:99999:09990\")"
 msgstr ""
 
-#: ../../tutorials/images.rst:121
+#: ../../tutorials/images.rst:122
 msgid "Animation"
 msgstr "アニメーション"
 
-#: ../../tutorials/images.rst:123
+#: ../../tutorials/images.rst:124
 msgid ""
 "Static images are fun, but it's even more fun to make them move. This is "
 "also amazingly simple to do with MicroPython ~ just use a list of images!"
@@ -1161,26 +1164,26 @@ msgstr ""
 "静止したイメージは楽しいですが、それを移動させるのはもっと楽しいです。これを行うもの "
 "MicroPython では驚くほど簡単です ~ イメージのリストを使うだけです！"
 
-#: ../../tutorials/images.rst:126
+#: ../../tutorials/images.rst:127
 msgid "Here is a shopping list::"
 msgstr "ここに買い物リストがあります::"
 
-#: ../../tutorials/images.rst:128
+#: ../../tutorials/images.rst:129
 msgid ""
 "Eggs\n"
 "Bacon\n"
 "Tomatoes"
 msgstr ""
 
-#: ../../tutorials/images.rst:132
+#: ../../tutorials/images.rst:133
 msgid "Here's how you'd represent this list in Python::"
 msgstr "このリストを Python で表現する方法は次のとおりです::"
 
-#: ../../tutorials/images.rst:134
+#: ../../tutorials/images.rst:135
 msgid "shopping = [\"Eggs\", \"Bacon\", \"Tomatoes\" ]"
 msgstr ""
 
-#: ../../tutorials/images.rst:136
+#: ../../tutorials/images.rst:137
 msgid ""
 "I've simply created a list called ``shopping`` and it contains three "
 "items. Python knows it's a list because it's enclosed in square brackets "
@@ -1195,15 +1198,15 @@ msgstr ""
 "``\"Bacon\"``, ``\"Tomatoes\"`` となっています。各要素は引用符で囲まれているので、"
 "文字列であると分かります。"
 
-#: ../../tutorials/images.rst:143
+#: ../../tutorials/images.rst:144
 msgid "You can store anything in a list with Python. Here's a list of numbers::"
 msgstr "Python ではリストに任意のデータを格納できます。数値のリストは次のとおりです::"
 
-#: ../../tutorials/images.rst:145
+#: ../../tutorials/images.rst:146
 msgid "primes = [2, 3, 5, 7, 11, 13, 17, 19]"
 msgstr ""
 
-#: ../../tutorials/images.rst:150
+#: ../../tutorials/images.rst:151
 msgid ""
 "Numbers don't need to be quoted since they represent a value (rather than"
 " a string of characters). It's the difference between ``2`` (the numeric "
@@ -1215,19 +1218,19 @@ msgstr ""
 "``2`` (数値の 2) と ``\"2\"`` (数字の 2 を表す文字)は違うものです。"
 "今のところはよく分からなくても心配要りません。すぐに違いに慣れるでしょう。"
 
-#: ../../tutorials/images.rst:155
+#: ../../tutorials/images.rst:156
 msgid "It's even possible to store different sorts of things in the same list::"
 msgstr "同じリストにさまざまな種類のデータを入れることもできます::"
 
-#: ../../tutorials/images.rst:157
+#: ../../tutorials/images.rst:158
 msgid "mixed_up_list = [\"hello!\", 1.234, Image.HAPPY]"
 msgstr ""
 
-#: ../../tutorials/images.rst:159
+#: ../../tutorials/images.rst:160
 msgid "Notice that last item? It was an image!"
 msgstr "最後の要素に注目してください。イメージです！"
 
-#: ../../tutorials/images.rst:161
+#: ../../tutorials/images.rst:162
 msgid ""
 "We can tell MicroPython to animate a list of images. Luckily we have a "
 "couple of lists of images already built in. They're called "
@@ -1237,14 +1240,14 @@ msgstr ""
 "幸いにも既に組み込まれているイメージのリストがあります。 "
 "``Image.ALL_CLOCKS`` と ``Image.ALL_ARROWS`` です。"
 
-#: ../../tutorials/images.rst:165
+#: ../../tutorials/images.rst:166
 msgid ""
 "from microbit import *\n"
 "\n"
 "display.show(Image.ALL_CLOCKS, loop=True, delay=100)"
 msgstr ""
 
-#: ../../tutorials/images.rst:169
+#: ../../tutorials/images.rst:170
 msgid ""
 "As with a single image, we use ``display.show`` to show it on the "
 "device's display. However, we tell MicroPython to use "
@@ -1262,7 +1265,7 @@ msgstr ""
 "``loop=True`` を指定しています。さらに、各イメージ間の表示間隔を 100 ミリ秒 (0.1 "
 "秒)とするために引数 ``delay=100`` を指定しています。"
 
-#: ../../tutorials/images.rst:177
+#: ../../tutorials/images.rst:178
 msgid ""
 "Can you work out how to animate over the ``Image.ALL_ARROWS`` list? How "
 "do you avoid looping forever (hint: the opposite of ``True`` is ``False``"
@@ -1274,7 +1277,7 @@ msgstr ""
 "``False`` ですが、 ``loop`` 引数のデフォルト値は ``False`` です)　"
 "アニメーションのスピードを変えることができますか？"
 
-#: ../../tutorials/images.rst:182
+#: ../../tutorials/images.rst:183
 msgid ""
 "Finally, here's how to create your own animation. In my example I'm going"
 " to make my boat sink into the bottom of the display::"
@@ -1282,7 +1285,7 @@ msgstr ""
 "最後に、自前のアニメーションを作成する方法について説明します。この例では、"
 "ボートをディスプレイの底に沈めます::"
 
-#: ../../tutorials/images.rst:185
+#: ../../tutorials/images.rst:186
 msgid ""
 "from microbit import *\n"
 "\n"
@@ -1326,26 +1329,26 @@ msgid ""
 "display.show(all_boats, delay=200)"
 msgstr ""
 
-#: ../../tutorials/images.rst:226
+#: ../../tutorials/images.rst:227
 msgid "Here's how the code works:"
 msgstr "コードの仕組みは次のとおりです::"
 
-#: ../../tutorials/images.rst:228
+#: ../../tutorials/images.rst:229
 msgid "I create six ``boat`` images in exactly the same way I described above."
 msgstr "先に説明したのとまったく同じ方法で６個のイメージを作成"
 
-#: ../../tutorials/images.rst:229
+#: ../../tutorials/images.rst:230
 msgid "Then, I put them all into a list that I call ``all_boats``."
 msgstr "作成したイメージすべてを ``all_boats`` というリストに格納"
 
-#: ../../tutorials/images.rst:230
+#: ../../tutorials/images.rst:231
 msgid ""
 "Finally, I ask ``display.show`` to animate the list with a delay of 200 "
 "milliseconds."
 msgstr ""
 "``display.show`` でリストのイメージを 200 ミリ秒間隔でアニメーション化"
 
-#: ../../tutorials/images.rst:231
+#: ../../tutorials/images.rst:232
 msgid ""
 "Since I've not set ``loop=True`` the boat will only sink once (thus "
 "making my animation scientifically accurate). :-)"
@@ -1353,7 +1356,7 @@ msgstr ""
 "``loop=True`` は指定していないので、ボートは一度だけ沈没(すなわち"
 "アニメーションは科学的に正確)。:-)"
 
-#: ../../tutorials/images.rst:233
+#: ../../tutorials/images.rst:234
 msgid ""
 "What would you animate? Can you animate special effects? How would you "
 "make an image fade out and then fade in again?"
@@ -1645,17 +1648,37 @@ msgstr "ブーピー音"
 
 #: ../../tutorials/io.rst:48
 msgid ""
-"The simplest thing we can attach to the device is a Piezo buzzer. We're "
-"going to use it for output."
+"The simplest thing we can attach to the device is a Piezo buzzer. There "
+"are two types of piezo buzzers. The simplest type to use are called "
+"active buzzers. Active buzzers contain an oscillator that produces a tone"
+" at a predetermined pitch when a current is passed through them.  Passive"
+" buzzers require an oscillating current to be passed through them to "
+"produce a tone at the frequency of the oscillation.  In short, active "
+"buzzers are simple to use but produce only one tone, while passive "
+"buzzers are slightly more complicated to use but can produce a variety of"
+" tones."
 msgstr ""
-"デバイスに取り付けられる最も簡単なものは圧電ブザーです。これを出力用に使用してみます(訳注: "
-"同じような形状をしていても、圧電サウンダまたは圧電スピーカーと呼ばれているものでは音が鳴りません)。"
+"デバイスに取り付けられる最も簡単なものは圧電ブザーです。"
+"圧電ブザーには２種類あります。最もシンプルなのはアクティブブザーと呼ばれるものです。"
+"アクティブブザーは電流を流すと決められた音程の音を出す発振器を内蔵しています。"
+"パッシブブザーは、発振電流を流すことで、その周波数の音を出せます。"
+"つまり、アクティブブザーは使い方が簡単ですが１つの音しか出ないのに対し、"
+"パッシブブザーは使い方がやや複雑ですが様々な音を出せます。"
 
-#: ../../tutorials/io.rst:52
+#: ../../tutorials/io.rst:58
 msgid ".. image:: tutorials/piezo_buzzer.jpg"
 msgstr ""
 
-#: ../../tutorials/io.rst:53
+#: ../../tutorials/io.rst:59
+msgid ""
+"We're going to use an active piezo buzzer for output. To attach one to "
+"your BBC micro:bit you should attach crocodile clips to pin 0 and GND (as"
+" shown below)."
+msgstr ""
+"ここでは、出力にアクティブピエゾブザーを使います。BBC micro:bit に取り付けるには、"
+"下図のようにワニ口クリップを使って端子 0 と GND に接続します。"
+
+#: ../../tutorials/io.rst:59
 msgid ""
 "These small devices play a high-pitched bleep when connected to a "
 "circuit. To attach one to your BBC micro:bit you should attach crocodile "
@@ -1664,30 +1687,30 @@ msgstr ""
 "この小型デバイスを回路に接続すると高音域のブザー音を鳴らします。BBC micro:bit に"
 "取り付けるには、ワニ口クリップを使って端子 0 と GND に接続します(下図を参照)。"
 
-#: ../../tutorials/io.rst:58 ../../tutorials/movement.rst:61
-#: ../../tutorials/music.rst:11
+#: ../../tutorials/io.rst:63 ../../tutorials/movement.rst:61
+#: ../../tutorials/music.rst:12
 msgid ".. image:: tutorials/pin0-gnd.png"
 msgstr ""
 
-#: ../../tutorials/io.rst:59
+#: ../../tutorials/io.rst:64
 msgid ""
 "The wire from pin 0 should be attached to the positive connector on the "
 "buzzer and the wire from GND to the negative connector."
 msgstr ""
 "端子 0 からの線をブザーのプラス側に接続し、GND からの線をマイナス側に接続します。"
 
-#: ../../tutorials/io.rst:62
+#: ../../tutorials/io.rst:67
 msgid "The following program will cause the buzzer to make a sound::"
 msgstr "次のプログラムはブザー音を鳴らします::"
 
-#: ../../tutorials/io.rst:64
+#: ../../tutorials/io.rst:69
 msgid ""
 "from microbit import *\n"
 "\n"
 "pin0.write_digital(1)"
 msgstr ""
 
-#: ../../tutorials/io.rst:68
+#: ../../tutorials/io.rst:73
 msgid ""
 "This is fun for about 5 seconds and then you'll want to make the horrible"
 " squeaking stop. Let's improve our example and make the device bleep::"
@@ -1695,7 +1718,7 @@ msgstr ""
 "5秒ほどは楽しいかもしれませんが、すぐにうるさくなって音を止めたくなるでしょう。"
 "先のプログラムを改善して、デバイスを鳴らしてみましょう::"
 
-#: ../../tutorials/io.rst:71
+#: ../../tutorials/io.rst:76
 msgid ""
 "from microbit import *\n"
 "\n"
@@ -1706,7 +1729,7 @@ msgid ""
 "    sleep(480)"
 msgstr ""
 
-#: ../../tutorials/io.rst:79
+#: ../../tutorials/io.rst:84
 msgid ""
 "Can you work out how this script works? Remember that ``1`` is \"on\" and"
 " ``0`` is \"off\" in the digital world."
@@ -1714,7 +1737,7 @@ msgstr ""
 "このスクリプトの仕組みを理解できますか？　デジタルの世界では ``1`` が「オン」で ``0`` "
 "が「オフ」であることを思い出してください。"
 
-#: ../../tutorials/io.rst:82
+#: ../../tutorials/io.rst:87
 msgid ""
 "The device is put into an infinite loop and immediately switches pin 0 "
 "on. This causes the buzzer to emit a beep. While the buzzer is beeping, "
@@ -1729,7 +1752,7 @@ msgstr ""
 "スリープしてから、ループバックして、もう一度やり直します。つまり、1 秒間に 2 回の"
 "鳴動(500 ミリ秒ごとに 1 回)が発生します。"
 
-#: ../../tutorials/io.rst:89
+#: ../../tutorials/io.rst:94
 msgid "We've made a very simple metronome!"
 msgstr "私たちは非常に簡単なメトロノームを作ったのです！"
 
@@ -1916,34 +1939,38 @@ msgstr "ミュージック"
 msgid ""
 "MicroPython on the BBC micro:bit comes with a powerful music and sound "
 "module. It's very easy to generate bleeps and bloops from the device *if "
-"you attach a speaker*. Use crocodile clips to attach pin 0 and GND to the"
-" positive and negative inputs on the speaker - it doesn't matter which "
-"way round they are connected to the speaker."
+"you attach a speaker or passive piezo buzzer*. Use crocodile clips to "
+"attach pin 0 and GND to the positive and negative inputs on the "
+"speaker/buzzer - it doesn't matter which way round they are connected to "
+"a speaker, but a piezo buzzer may be polarized (check for a \"+\" marking"
+" the positive terminal)."
 msgstr ""
 "BBC micro:bit の MicroPython には、強力な音楽とサウンドのモジュールがあります。 "
-"*スピーカーを接続すれば* 、デバイスから音を鳴らすのは非常に簡単です。ワニ口クリップを"
-"使用して、端子 0 と GND をスピーカーの正と負の入力に接続します。スピーカーにどのように"
-"接続するかは関係ありません。"
+"*スピーカーやパッシブピエゾブザーを取り付ければ* 、デバイスからピッピッと音を出すのは"
+"とても簡単です。ワニ口クリップを使って、端子 0 と GND をスピーカー/ブザーのプラスと"
+"マイナスの入力に接続します。スピーカーにはどちらに接続しても構いませんが、圧電ブザーには"
+"極性があるかもしれません(プラス端子に「＋」が付いているか確認してください)。"
 
-#: ../../tutorials/music.rst:14
+#: ../../tutorials/music.rst:15
 msgid ""
-"Do not attempt this with a Piezo buzzer - such buzzers are only able to "
-"play a single tone."
+"Do not attempt this with an active Piezo buzzer - such buzzers are only "
+"able to play a single tone."
 msgstr ""
-"圧電ブザーでこれを試してはいけません - 圧電ブザーでは単一の音しか出せません。"
+"アクティブ圧電ブザーでこれを試してはいけません - アクティブ圧電ブザーでは単一の音しか"
+"出せません。"
 
-#: ../../tutorials/music.rst:17
+#: ../../tutorials/music.rst:18
 msgid "Let's play some music::"
 msgstr "音楽を演奏しましょう::"
 
-#: ../../tutorials/music.rst:19
+#: ../../tutorials/music.rst:20
 msgid ""
 "import music\n"
 "\n"
 "music.play(music.NYAN)"
 msgstr ""
 
-#: ../../tutorials/music.rst:23
+#: ../../tutorials/music.rst:24
 msgid ""
 "Notice that we import the ``music`` module. It contains methods used to "
 "make and control sound."
@@ -1951,95 +1978,95 @@ msgstr ""
 "``music`` モジュールをインポートすることに注意してください。これにはサウンドの"
 "作成と制御に使うメソッドが含まれています。"
 
-#: ../../tutorials/music.rst:26
+#: ../../tutorials/music.rst:27
 msgid "MicroPython has quite a lot of built-in melodies. Here's a complete list:"
 msgstr "MicroPython には多くのメロディが内蔵されています。ここに完全なリストがあります:"
 
-#: ../../tutorials/music.rst:28
+#: ../../tutorials/music.rst:29
 msgid "``music.DADADADUM``"
 msgstr ""
 
-#: ../../tutorials/music.rst:29
+#: ../../tutorials/music.rst:30
 msgid "``music.ENTERTAINER``"
 msgstr ""
 
-#: ../../tutorials/music.rst:30
+#: ../../tutorials/music.rst:31
 msgid "``music.PRELUDE``"
 msgstr ""
 
-#: ../../tutorials/music.rst:31
+#: ../../tutorials/music.rst:32
 msgid "``music.ODE``"
 msgstr ""
 
-#: ../../tutorials/music.rst:32
+#: ../../tutorials/music.rst:33
 msgid "``music.NYAN``"
 msgstr ""
 
-#: ../../tutorials/music.rst:33
+#: ../../tutorials/music.rst:34
 msgid "``music.RINGTONE``"
 msgstr ""
 
-#: ../../tutorials/music.rst:34
+#: ../../tutorials/music.rst:35
 msgid "``music.FUNK``"
 msgstr ""
 
-#: ../../tutorials/music.rst:35
+#: ../../tutorials/music.rst:36
 msgid "``music.BLUES``"
 msgstr ""
 
-#: ../../tutorials/music.rst:36
+#: ../../tutorials/music.rst:37
 msgid "``music.BIRTHDAY``"
 msgstr ""
 
-#: ../../tutorials/music.rst:37
+#: ../../tutorials/music.rst:38
 msgid "``music.WEDDING``"
 msgstr ""
 
-#: ../../tutorials/music.rst:38
+#: ../../tutorials/music.rst:39
 msgid "``music.FUNERAL``"
 msgstr ""
 
-#: ../../tutorials/music.rst:39
+#: ../../tutorials/music.rst:40
 msgid "``music.PUNCHLINE``"
 msgstr ""
 
-#: ../../tutorials/music.rst:40
+#: ../../tutorials/music.rst:41
 msgid "``music.PYTHON``"
 msgstr ""
 
-#: ../../tutorials/music.rst:41
+#: ../../tutorials/music.rst:42
 msgid "``music.BADDY``"
 msgstr ""
 
-#: ../../tutorials/music.rst:42
+#: ../../tutorials/music.rst:43
 msgid "``music.CHASE``"
 msgstr ""
 
-#: ../../tutorials/music.rst:43
+#: ../../tutorials/music.rst:44
 msgid "``music.BA_DING``"
 msgstr ""
 
-#: ../../tutorials/music.rst:44
+#: ../../tutorials/music.rst:45
 msgid "``music.WAWAWAWAA``"
 msgstr ""
 
-#: ../../tutorials/music.rst:45
+#: ../../tutorials/music.rst:46
 msgid "``music.JUMP_UP``"
 msgstr ""
 
-#: ../../tutorials/music.rst:46
+#: ../../tutorials/music.rst:47
 msgid "``music.JUMP_DOWN``"
 msgstr ""
 
-#: ../../tutorials/music.rst:47
+#: ../../tutorials/music.rst:48
 msgid "``music.POWER_UP``"
 msgstr ""
 
-#: ../../tutorials/music.rst:48
+#: ../../tutorials/music.rst:49
 msgid "``music.POWER_DOWN``"
 msgstr ""
 
-#: ../../tutorials/music.rst:50
+#: ../../tutorials/music.rst:51
 msgid ""
 "Take the example code and change the melody. Which one is your favourite?"
 " How would you use such tunes as signals or cues?"
@@ -2047,15 +2074,15 @@ msgstr ""
 "先のサンプルコードのメロディーを変更してください。どれがお気に入りですか？　"
 "このような曲をお知らせの合図としてどのように使いますか？"
 
-#: ../../tutorials/music.rst:54
+#: ../../tutorials/music.rst:55
 msgid "Wolfgang Amadeus Microbit"
 msgstr "ヴォルフガング・アマデウス・マイクロビット(Wolfgang Amadeus Microbit)"
 
-#: ../../tutorials/music.rst:56
+#: ../../tutorials/music.rst:57
 msgid "Creating your own tunes is easy!"
 msgstr "自分の曲を作成するのは簡単です！"
 
-#: ../../tutorials/music.rst:58
+#: ../../tutorials/music.rst:59
 msgid ""
 "Each note has a name (like ``C#`` or ``F``), an octave (telling "
 "MicroPython how high or low the note should be played) and a duration "
@@ -2075,15 +2102,15 @@ msgstr ""
 "関連しています ~ たとえば、持続時間 ``4`` は　持続時間 ``2`` の 2 倍の長さです。"
 "音階名 R を使用すると、MicroPython は指定された持続時間だけ、休符(つまり無音)を再生します。"
 
-#: ../../tutorials/music.rst:68
+#: ../../tutorials/music.rst:69
 msgid "Each note is expressed as a string of characters like this::"
 msgstr "各音符は次のような文字列で表されます。"
 
-#: ../../tutorials/music.rst:70
+#: ../../tutorials/music.rst:71
 msgid "NOTE[octave][:duration]"
 msgstr ""
 
-#: ../../tutorials/music.rst:72
+#: ../../tutorials/music.rst:73
 msgid ""
 "For example, ``\"A1:4\"`` refers to the note named ``A`` in octave number"
 " ``1`` to be played for a duration of ``4``."
@@ -2091,7 +2118,7 @@ msgstr ""
 "たとえば 、``\"A1:4\"`` は音階名が ``A`` 、オクターブが ``1`` 、持続時間が ``4`` "
 "である音符を指します。"
 
-#: ../../tutorials/music.rst:75
+#: ../../tutorials/music.rst:76
 msgid ""
 "Make a list of notes to create a melody (it's equivalent to creating an "
 "animation with a list of images). For example, here's how to make "
@@ -2101,7 +2128,7 @@ msgstr ""
 "作成するのと同じです)。たとえば、MicroPython が \"Frere Jaques\" (フランス民謡)の"
 "冒頭を演奏するようにする方法は次のとおりです::"
 
-#: ../../tutorials/music.rst:79
+#: ../../tutorials/music.rst:80
 msgid ""
 "import music\n"
 "\n"
@@ -2111,7 +2138,7 @@ msgid ""
 "music.play(tune)"
 msgstr ""
 
-#: ../../tutorials/music.rst:87
+#: ../../tutorials/music.rst:88
 msgid ""
 "MicroPython helps you to simplify such melodies. It'll remember the "
 "octave and duration values until you next change them. As a result, the "
@@ -2120,7 +2147,7 @@ msgstr ""
 "は上記のメロディを簡単にできます。オクターブと持続時間は次に変更するまで"
 "値をおぼえています。結果として、上記の例は次のように書き直すことができます::"
 
-#: ../../tutorials/music.rst:97
+#: ../../tutorials/music.rst:98
 msgid ""
 "Notice how the octave and duration values only change when they have to. "
 "It's a lot less typing and simpler to read."
@@ -2128,11 +2155,11 @@ msgstr ""
 "オクターブと持続時間の値がどの変えているかに注目してください。このほうが入力がずっと"
 "簡単で、読むのが簡単です。"
 
-#: ../../tutorials/music.rst:101
+#: ../../tutorials/music.rst:102
 msgid "Sound Effects"
 msgstr "音響効果"
 
-#: ../../tutorials/music.rst:103
+#: ../../tutorials/music.rst:104
 msgid ""
 "MicroPython lets you make tones that are not musical notes. For example, "
 "here's how to create a Police siren effect::"
@@ -2140,7 +2167,7 @@ msgstr ""
 "MicroPython では、音符ではないトーンを作成できます。たとえば、警察のサイレン効果を"
 "作成する方法は次のとおりです::"
 
-#: ../../tutorials/music.rst:106
+#: ../../tutorials/music.rst:107
 msgid ""
 "import music\n"
 "\n"
@@ -2151,7 +2178,7 @@ msgid ""
 "        music.pitch(freq, 6)"
 msgstr ""
 
-#: ../../tutorials/music.rst:115
+#: ../../tutorials/music.rst:116
 msgid ""
 "Notice how the ``music.pitch`` *method* is used in this instance. It "
 "expects a frequency. For example, the frequency of ``440`` is the same as"
@@ -2161,7 +2188,7 @@ msgstr ""
 "このメソッドは周波数の指定を期待しています。たとえば、周波数 ``440`` は、"
 "交響楽団がチューニングするために使用する調律音 ``A`` と同じです。"
 
-#: ../../tutorials/music.rst:119
+#: ../../tutorials/music.rst:120
 msgid ""
 "In the example above the ``range`` function is used to generate ranges of"
 " numeric values. These numbers are used to define the pitch of the tone. "
@@ -2179,14 +2206,14 @@ msgstr ""
 "使っている ``range`` では「1760 から 880 の範囲の値を -16 間隔で作成する」と"
 "なります。これは、サイレンのような音程で上下に変化する周波数の範囲を得る方法です。"
 
-#: ../../tutorials/music.rst:128
+#: ../../tutorials/music.rst:129
 msgid ""
 "Because the siren should last forever it's wrapped in an infinite "
 "``while`` loop."
 msgstr ""
 "サイレンを永遠に続けるために、無限の ``while`` ループで囲います。"
 
-#: ../../tutorials/music.rst:131
+#: ../../tutorials/music.rst:132
 msgid ""
 "Importantly, we have introduced a new sort of a loop inside the ``while``"
 " loop: the ``for`` loop. In English it's like saying, \"for each item in "
@@ -4553,10 +4580,14 @@ msgstr ""
 "``put`` にちなんで名付けられています)。"
 
 #: ../../tutorials/storage.rst:221
+msgid "The ufs get and put commands only operate on one file at a time."
+msgstr "ufs の get と put コマンドは、一度に1つのファイルに対してのみ動作します。"
+
+#: ../../tutorials/storage.rst:224
 msgid "Mainly main.py"
 msgstr "主役 main.py"
 
-#: ../../tutorials/storage.rst:223
+#: ../../tutorials/storage.rst:226
 msgid ""
 "The file system also has an interesting property: if you just flashed the"
 " MicroPython runtime onto the device then when it starts it's simply "
@@ -4569,7 +4600,7 @@ msgstr ""
 "``main.py`` という特別なファイルをファイルシステムにコピーして、デバイスを"
 "再起動すると、MicroPython はその ``main.py`` ファイルの内容を実行します。"
 
-#: ../../tutorials/storage.rst:229
+#: ../../tutorials/storage.rst:232
 msgid ""
 "Furthermore, if you copy other Python files onto the file system then you"
 " can ``import`` them as you would any other Python module. For example, "
@@ -4579,17 +4610,17 @@ msgstr ""
 "モジュールと同様にそれを ``import`` できます。たとえば次の単純なコードを含む"
 "ファイル ``hello.py`` があったとします。"
 
-#: ../../tutorials/storage.rst:233
+#: ../../tutorials/storage.rst:236
 msgid ""
 "def say_hello(name=\"World\"):\n"
 "    return \"Hello, {}!\".format(name)"
 msgstr ""
 
-#: ../../tutorials/storage.rst:229
+#: ../../tutorials/storage.rst:232
 msgid "...you could import and use the ``say_hello`` function like this::"
 msgstr "これを次のようにインポートして ``say_hello`` 関数を使えます::"
 
-#: ../../tutorials/storage.rst:238
+#: ../../tutorials/storage.rst:240
 msgid ""
 "from microbit import display\n"
 "from hello import say_hello\n"
@@ -4597,7 +4628,7 @@ msgid ""
 "display.scroll(say_hello())"
 msgstr ""
 
-#: ../../tutorials/storage.rst:243
+#: ../../tutorials/storage.rst:246
 msgid ""
 "Of course, it results in the text \"Hello, World!\" scrolling across the "
 "display. The important point is that such an example is split between two"
@@ -4607,7 +4638,7 @@ msgstr ""
 "２つの Python モジュールに分割され、 ``import`` 文がコードを共有するために"
 "使われていることです。"
 
-#: ../../tutorials/storage.rst:248
+#: ../../tutorials/storage.rst:251
 msgid ""
 "If you have flashed a script onto the device in addition to the "
 "MicroPython runtime, then MicroPython will ignore ``main.py`` and run "
@@ -4616,7 +4647,7 @@ msgstr ""
 "MicroPython ランタイムに加えてデバイスにスクリプトを転送した場合、MicroPython "
 "は ``main.py`` 無視して、代わりに埋め込みスクリプトを実行します。"
 
-#: ../../tutorials/storage.rst:252
+#: ../../tutorials/storage.rst:255
 msgid ""
 "To flash just the MicroPython runtime, simply make sure the script you "
 "may have written in your editor has zero characters in it. Once flashed "

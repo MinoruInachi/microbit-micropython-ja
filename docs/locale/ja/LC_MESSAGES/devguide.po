@@ -2,20 +2,20 @@
 # Copyright (C) 2015-2016, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: 2018-10-20 22:30+0900\n"
+"POT-Creation-Date: 2021-11-28 11:29+0900\n"
+"PO-Revision-Date: 2021-11-28 11:30+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../devguide/contributing.rst:2
 msgid "Contributing"
@@ -154,7 +154,7 @@ msgid "Use target bbc-microbit-classic-gcc-nosd::"
 msgstr "ターゲットは bbc-microbit-classic-gcc-nosd になります::"
 
 #: ../../devguide/flashfirmware.rst:13
-msgid "yt target bbc-microbit-classic-gcc-nosd"
+msgid "yotta target bbc-microbit-classic-gcc-nosd"
 msgstr ""
 
 #: ../../devguide/flashfirmware.rst:15
@@ -162,7 +162,7 @@ msgid "Run yotta update to fetch remote assets::"
 msgstr "yotta update を実行してリモートアセットを取得してください。"
 
 #: ../../devguide/flashfirmware.rst:17
-msgid "yt up"
+msgid "yotta up"
 msgstr ""
 
 #: ../../devguide/flashfirmware.rst:19
@@ -170,7 +170,7 @@ msgid "Start the build with either yotta::"
 msgstr "以下のどちらかでビルドを開始してください。yotta を使う場合::"
 
 #: ../../devguide/flashfirmware.rst:21
-msgid "yt build"
+msgid "yotta build"
 msgstr ""
 
 #: ../../devguide/flashfirmware.rst:23
@@ -207,18 +207,47 @@ msgid "Preparing firmware and a Python program"
 msgstr "ファームウェア と Python プログラムの準備"
 
 #: ../../devguide/flashfirmware.rst:39
-msgid "tools/makecombined"
+msgid ""
+"A script in the following location, called using the following syntax, "
+"should help::"
+msgstr ""
+"次の場所にあるスクリプトを、次の構文で呼び出します。"
+
+#: ../../devguide/flashfirmware.rst:42
+msgid "tools/makecombinedhex.py <firmware.hex> <script.py> [-o <combined.hex>]"
 msgstr ""
 
-#: ../../devguide/flashfirmware.rst:41
-msgid "hexlify"
+#: ../../devguide/flashfirmware.rst:44
+msgid ""
+"The script will output to ``stdout`` if no output option (``-o``) is "
+"provided."
 msgstr ""
+"出力オプション(``-o``)が指定されていない場合、スクリプトは標準出力に出力します。"
 
 #: ../../devguide/flashfirmware.rst:46
 msgid "Flashing to the micro:bit"
 msgstr "micro:bit への転送"
 
-#: ../../devguide/flashfirmware.rst:51
+#: ../../devguide/flashfirmware.rst:49
+msgid ""
+"The Microbit mounts itself as a mass storage device over USB.  When it "
+"detects that a .hex file has been uploaded to the internal mass storage "
+"device, it will flash itself with the bytecode representation, and start "
+"running the program."
+msgstr ""
+"micro:bit は、USB経由でマスストレージ装置として自分自身をマウントします。"
+"内部のマスストレージ装置に .hex ファイルがアップロードされたことを検出すると、"
+"バイトコード表現で自身をフラッシュし、プログラムの実行を開始します。"
+
+#: ../../devguide/flashfirmware.rst:53
+msgid ""
+"This means that uploading a .hex file should result in the Microbit "
+"running your code."
+msgstr ""
+"つまり .hex ファイルをアップロードすれば、micro:bit はあなたのコードを実行する"
+"ことになります。"
+
+#: ../../devguide/flashfirmware.rst:58
 msgid "**Installation Scenarios**"
 msgstr "**インストールシナリオ**"
 
@@ -549,11 +578,22 @@ msgstr "mbed シリアルドライバ"
 msgid "OS X"
 msgstr ""
 
-#: ../../devguide/installation.rst:66
+#: ../../devguide/installation.rst:62
+msgid ""
+"After cloning the repository, install yotta using the app and launch the "
+"app. You can find the latest release of yotta for OS X at "
+"`<https://github.com/ARMmbed/yotta_osx_installer/releases/>`_ ."
+msgstr ""
+"リポジトリをクローンした後、app を使って yotta をインストールして起動します。"
+"OS X 用の yotta の最新リリースは、 "
+"`<https://github.com/ARMmbed/yotta_osx_installer/releases/>`_ "
+"にあります。"
+
+#: ../../devguide/installation.rst:70
 msgid "Linux"
 msgstr ""
 
-#: ../../devguide/installation.rst:68
+#: ../../devguide/installation.rst:72
 msgid ""
 "These steps will cover the basic flavors of Linux and working with the "
 "micro:bit and MicroPython. See also the specific sections for Raspberry "
@@ -563,33 +603,58 @@ msgstr ""
 "Raspberry Pi、Debian / Ubuntu、Red Hat Fedora / Centos の各セクションも参照して"
 "ください。"
 
-#: ../../devguide/installation.rst:76
+#: ../../devguide/installation.rst:80
 msgid "Debian and Ubuntu"
 msgstr "Debian と Ubuntu"
 
-#: ../../devguide/installation.rst:80
+#: ../../devguide/installation.rst:82
+msgid ""
+"The following commands should install the toolchain on a modern "
+"Debian/Ubuntu variant::"
+msgstr ""
+"次のコマンドは、最新の Debian/Ubuntu 系の Linux にツールチェーンを"
+"インストールします::"
+
+#: ../../devguide/installation.rst:85
 msgid ""
 "sudo add-apt-repository -y ppa:team-gcc-arm-embedded\n"
-"sudo add-apt-repository -y ppa:pmiller-opensource/ppa\n"
 "sudo apt-get update\n"
-"sudo apt-get install cmake ninja-build gcc-arm-none-eabi srecord libssl-"
-"dev\n"
-"pip3 install yotta"
+"sudo apt-get install gcc-arm-embedded\n"
+"sudo apt-get install cmake ninja-build srecord libssl-dev\n"
+"sudo -H pip3 install yotta"
 msgstr ""
 
-#: ../../devguide/installation.rst:90
+#: ../../devguide/installation.rst:91
+msgid ""
+"In order to make development life a bit easier, you can (on Ubuntu) add "
+"yourself to the ``dialout`` group, which grants write access to the "
+"serial device ``/dev/ttyACM0``::"
+msgstr ""
+"開発をより簡単にするために(Ubuntu では)、自アカウントを ``dialout`` グループに"
+"追加することにより、シリアルデバイス ``/dev/ttyACM0`` への書き込み権限を付与できます::"
+
+#: ../../devguide/installation.rst:95
+msgid "sudo usermod -a -G dialout ${USER}"
+msgstr ""
+
+#: ../../devguide/installation.rst:97
+msgid "You may need to relogin in order for the changes to groups to take effect."
+msgstr ""
+"グループへの変更を有効にするには再ログインが必要になるかもしれません。"
+
+#: ../../devguide/installation.rst:102
 msgid "Red Hat Fedora/CentOS"
 msgstr ""
 
-#: ../../devguide/installation.rst:96
+#: ../../devguide/installation.rst:108
 msgid "Raspberry Pi"
 msgstr ""
 
-#: ../../devguide/installation.rst:103
+#: ../../devguide/installation.rst:115
 msgid "Next steps"
 msgstr "次のステップ"
 
-#: ../../devguide/installation.rst:105
+#: ../../devguide/installation.rst:117
 msgid ""
 "Congratulations. You have installed your development environment and are "
 "ready to begin :ref:`flashing firmware <flashfirmware>`  to the "

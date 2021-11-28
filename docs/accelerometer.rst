@@ -44,6 +44,12 @@ Functions
     By default the accelerometer is configured with a range of +/- 2g, and so
     X, Y, and Z will be within the range of +/-2000mg.
 
+.. py:function:: get_strength()
+
+    Get the acceleration measurement of all axes combined, as a positive
+    integer.  This is the Pythagorean sum of the X, Y and Z axes, with the
+    measurement given in milli-g.
+
 .. py:function:: current_gesture()
 
     Return the name of the current gesture.
@@ -74,6 +80,12 @@ Functions
     Gestures are not updated in the background so there needs to be constant 
     calls to some accelerometer method to do the gesture detection. Usually 
     gestures can be detected using a loop with a small :func:`microbit.sleep` delay.
+
+.. py:function:: set_range(value)
+
+    Set the accelerometer sensitivity range, in g (standard gravity), to the
+    closest values supported by the hardware, so it rounds to either ``1``,
+    ``2``, ``4``, or ``8`` g.
 
 Examples
 --------

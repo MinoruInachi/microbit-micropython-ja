@@ -322,8 +322,8 @@ STATIC void image_blit(microbit_image_obj_t *src, greyscale_t *dest, mp_int_t x,
 }
 
 greyscale_t *image_shift(microbit_image_obj_t *self, mp_int_t x, mp_int_t y) {
-    greyscale_t *result = greyscale_new(self->width(), self->width());
-    image_blit(self, result, x, y, self->width(), self->width(), 0, 0);
+    greyscale_t *result = greyscale_new(self->width(), self->height());
+    image_blit(self, result, x, y, self->width(), self->height(), 0, 0);
     return result;
 }
 
@@ -568,6 +568,7 @@ STATIC const mp_map_elem_t microbit_image_locals_dict_table[] = {
     { MP_OBJ_NEW_QSTR(MP_QSTR_SKULL), (mp_obj_t)&microbit_const_image_skull_obj },
     { MP_OBJ_NEW_QSTR(MP_QSTR_UMBRELLA), (mp_obj_t)&microbit_const_image_umbrella_obj },
     { MP_OBJ_NEW_QSTR(MP_QSTR_SNAKE), (mp_obj_t)&microbit_const_image_snake_obj },
+    { MP_OBJ_NEW_QSTR(MP_QSTR_SCISSORS), (mp_obj_t)&microbit_const_image_scissors_obj },
 };
 
 STATIC MP_DEFINE_CONST_DICT(microbit_image_locals_dict, microbit_image_locals_dict_table);

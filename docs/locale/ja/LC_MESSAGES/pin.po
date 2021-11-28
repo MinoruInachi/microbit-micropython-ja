@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: 2019-05-01 10:15+0900\n"
+"POT-Creation-Date: 2021-11-28 11:29+0900\n"
+"PO-Revision-Date: 2021-11-28 11:29+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -364,15 +364,15 @@ msgstr ""
 #: ../../pin.rst:147
 msgid ""
 "Returns the pull configuration on a pin, which can be one of three "
-"possible values: ``NO_PULL``, ``PULL_DOWN``, or ``PULL_UP``. These "
-"are set using the ``set_pull()`` method or automatically configured "
-"when a pin mode requires it."
+"possible values: ``NO_PULL``, ``PULL_DOWN``, or ``PULL_UP``. These are "
+"set using the ``set_pull()`` method or automatically configured when a "
+"pin mode requires it."
 msgstr ""
 "現在の端子のプル設定を返します。次の３つのいずれかの値が返ります: ``NO_PULL``, "
 "``PULL_DOWN``, ``PULL_UP`` 。これらの値は ``set_pull()`` メソッドで設定"
 "されるか、端子モードで必要なときに自動的に設定されます。"
 
-#: ../../pin.rst:154
+#: ../../pin.rst:153
 msgid ""
 "Returns the pin mode. When a pin is used for a specific function, like "
 "writing a digital value, or reading an analog value, the pin mode "
@@ -387,15 +387,7 @@ msgstr ""
 "``MODE_DISPLAY``, ``MODE_BUTTON``, ``MODE_MUSIC``, ``MODE_AUDIO_PLAY``, "
 "``MODE_TOUCH``, ``MODE_I2C``, ``MODE_SPI`` 。"
 
-#: ../../pin.rst:166
-msgid ""
-"Read the voltage applied to the pin, and return it as an integer "
-"between 0 (meaning 0V) and 1023 (meaning 3.3V)."
-msgstr ""
-"端子の電圧を読み取り、0 (0V の意味）から 1023 (3.3V の意味)までの間の整数として"
-"返します。"
-
-#: ../../pin.rst:171
+#: ../../pin.rst:162
 msgid ""
 "Output a PWM signal on the pin, with the duty cycle proportional to the "
 "provided ``value``. The ``value`` may be either an integer or a floating "
@@ -405,28 +397,42 @@ msgstr ""
 "``value`` には 0 (時間幅周期 0%)から 1023 (時間幅周期 100%)までの整数または"
 "浮動小数点数を指定できます。"
 
-#: ../../pin.rst:177
+#: ../../pin.rst:168
 msgid ""
 "Set the period of the PWM signal being output to ``period`` in "
 "milliseconds. The minimum valid value is 1ms."
 msgstr ""
-"出力される PWM 信号の周期を ``period`` にミリ秒単位で設定します。有効な最小値は 1ms です。"
+"出力される PWM 信号の周期を ``period`` にミリ秒単位で設定します。"
+"有効な最小値は 1ms です。"
 
-#: ../../pin.rst:182
+#: ../../pin.rst:173
 msgid ""
 "Set the period of the PWM signal being output to ``period`` in "
 "microseconds. The minimum valid value is 256µs."
 msgstr ""
-"出力される PWM 信号の周期を ``period`` にマイクロ秒単位で設定します。有効な最小値は 256μs です。"
+"出力される PWM 信号の周期を ``period`` にマイクロ秒単位で設定します。"
+"有効な最小値は 256μs です。"
 
-#: ../../pin.rst:190
+#: ../../pin.rst:178
+msgid "Returns the configured period of the PWM signal in microseconds."
+msgstr "PWM 信号の設定周期をマイクロ秒単位で返します。"
+
+#: ../../pin.rst:185
+msgid ""
+"Read the voltage applied to the pin, and return it as an integer between "
+"0 (meaning 0V) and 1023 (meaning 3.3V)."
+msgstr ""
+"端子の電圧を読み取り、0 (0V の意味）から 1023 (3.3V の意味)までの間の整数として"
+"返します。"
+
+#: ../../pin.rst:193
 msgid ""
 "Return ``True`` if the pin is being touched with a finger, otherwise "
 "return ``False``."
 msgstr ""
 "端子を指で触れている場合は ``True`` 、そうでない場合は ``False`` を返します。"
 
-#: ../../pin.rst:193
+#: ../../pin.rst:196
 msgid ""
 "This test is done by measuring how much resistance there is between the "
 "pin and ground.  A low resistance gives a reading of ``True``.  To get "
@@ -437,7 +443,7 @@ msgstr ""
 "行われます。抵抗が少ないと ``True`` の判定を返します。指での検出を確実にするには、"
 "体の別の部分、たとえばもう片方の手で GND 端子に触れる必要があるかもしれません。"
 
-#: ../../pin.rst:198
+#: ../../pin.rst:201
 msgid ""
 "The pull mode for a pin is automatically configured when the pin changes "
 "to an input mode. Input modes are when you call ``read_analog`` / "
@@ -452,7 +458,7 @@ msgstr ""
 "``NO_PULL``, ``PULL_DOWN``, ``PULL_UP`` です。 ``set_pull`` を呼び出すと、"
 "``read_digital`` モードにある端子を指定のプルモードに設定します。"
 
-#: ../../pin.rst:206
+#: ../../pin.rst:209
 msgid ""
 "The micro:bit has external weak (10M) pull-ups fitted on pins 0, 1 and 2 "
 "only, in order for the touch sensing to work."
@@ -460,7 +466,7 @@ msgstr ""
 "タッチセンスが機能するために、micro:bit は端子 0, 1, 2 にのみ外付けの弱い"
 "(10M)プルアップを装備しています。"
 
-#: ../../pin.rst:209
+#: ../../pin.rst:212
 msgid ""
 "There are also external (10k) pull-ups fitted on pins 5 and 11, in order "
 "for buttons A and B to work."
@@ -468,7 +474,16 @@ msgstr ""
 "ボタンAとボタンBが機能するように、端子 5 と 11 にも外付け(10k)プルアップを"
 "装備しています。"
 
-#: ../../pin.rst:212
+#: ../../pin.rst:215 ../../pin.rst:224
+msgid ""
+"For more info see the `edge connector data sheet "
+"<http://tech.microbit.org/hardware/edgeconnector_ds>`_."
+msgstr ""
+"詳しくは `エッジコネクタのデータシート "
+"<http://tech.microbit.org/hardware/edgeconnector_ds>`_ "
+"を参照してください。"
+
+#: ../../pin.rst:219
 msgid ""
 "GPIO pins are also used for the display. 6 of these are routed to the "
 "edge connector at 3, 4, 6, 7, 9. and 10. If you want to use these pins "
@@ -481,11 +496,3 @@ msgstr ""
 " `ディスプレイを無効 <https://microbit-micropython.readthedocs.io/ja/latest/display.html#microbit.display.off>`_ "
 "にする必要があります。"
 
-#: ../../pin.rst:217
-msgid ""
-"See the `edge connector data sheet "
-"<http://tech.microbit.org/hardware/edgeconnector_ds>`_."
-msgstr ""
-"`エッジコネクタのデータシート "
-"<http://tech.microbit.org/hardware/edgeconnector_ds>`_ "
-"を参照してください。"

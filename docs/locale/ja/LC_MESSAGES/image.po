@@ -2,16 +2,16 @@
 # Copyright (C) 2015-2016, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: 2018-10-29 22:45+0900\n"
-"Last-Translator: Minoru Inachi
+"POT-Creation-Date: 2021-11-28 11:29+0900\n"
+"PO-Revision-Date: 2021-11-28 11:50+0900\n"
+"Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -434,52 +434,56 @@ msgstr ""
 msgid "``Image.SNAKE``"
 msgstr ""
 
-#: ../../image.rst:207
+#: ../../image.rst:206
+msgid "``Image.SCISSORS``"
+msgstr ""
+
+#: ../../image.rst:208
 msgid "Finally, related collections of images have been grouped together::"
 msgstr "関連するイメージのコレクションもあります。"
 
-#: ../../image.rst:209
+#: ../../image.rst:210
 msgid ""
 "* ``Image.ALL_CLOCKS``\n"
 "* ``Image.ALL_ARROWS``"
 msgstr ""
 
-#: ../../image.rst:214
+#: ../../image.rst:215
 msgid "Operations"
 msgstr "演算子"
 
-#: ../../image.rst:219
+#: ../../image.rst:220
 msgid "repr(image)"
 msgstr ""
 
-#: ../../image.rst:220
+#: ../../image.rst:221
 msgid "Get a compact string representation of the image."
 msgstr "イメージのコンパクトな文字列表現を得ます。"
 
-#: ../../image.rst:225
+#: ../../image.rst:226
 msgid "str(image)"
 msgstr ""
 
-#: ../../image.rst:226
+#: ../../image.rst:227
 msgid "Get a readable string representation of the image."
 msgstr "イメージの可読可能な文字列表現を得ます。"
 
-#: ../../image.rst:231
+#: ../../image.rst:232
 msgid "image1 + image2"
 msgstr ""
 
-#: ../../image.rst:232
+#: ../../image.rst:233
 msgid ""
 "Create a new image by adding the brightness values from the two images "
 "for each pixel."
 msgstr ""
 "２つのイメージの各ピクセルの明るさを足した新しいイメージを作成します。"
 
-#: ../../image.rst:238
+#: ../../image.rst:239
 msgid "image * n"
 msgstr ""
 
-#: ../../image.rst:239
+#: ../../image.rst:240
 msgid "Create a new image by multiplying the brightness of each pixel by ``n``."
 msgstr "各ピクセルの明るさを ``n`` 倍した新しい画像を作成します。"
 
