@@ -2,15 +2,15 @@
 # Copyright (C) 2015-2016, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-28 11:29+0900\n"
-"PO-Revision-Date: 2021-11-28 13:49+0900\n"
+"POT-Creation-Date: 2022-04-23 17:22+0900\n"
+"PO-Revision-Date: 2022-04-23 18:54+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -1368,39 +1368,37 @@ msgstr ""
 msgid "Introduction"
 msgstr "はじめに"
 
-#: ../../tutorials/introduction.rst:4
+#: ../../tutorials/introduction.rst:5
 msgid ""
-"We suggest you download and use the `mu editor <http://codewith.mu/>`_ "
-"when working through these tutorials. Instructions for downloading and "
-"installing Mu are on its website. You may need to install a driver, "
-"depending on your platform (instruction are on the website)."
+"We suggest you use the `micro:bit Python Editor "
+"<https://python.microbit.org>`_ or `Mu <https://codewith.mu/>`_ when "
+"working through these tutorials."
 msgstr ""
-"このチュートリアルにしたがってプログラムするにあたっては　"
+"このチュートリアルにしたがってプログラムするにあたっては "
+"`micro:bit Python エディタ <https://python.microbit.org>`_ または "
 "`mu エディタ <http://codewith.mu/>`_ の利用を勧めます。"
-"mu をダウンロードしてインストールする手順は mu の Web サイトにあります。"
-"プラットフォームによってはドライバのインスールが必要となります(手順は Web サイトにあります)。"
 
-#: ../../tutorials/introduction.rst:9
-msgid "Mu works with Windows, OSX and Linux."
-msgstr "mu は Windows, OSX, Linux で動作します。"
+#: ../../tutorials/introduction.rst:8
+msgid "Connect your micro:bit to your computer via a USB lead."
+msgstr "micro:bit をコンピュータに USB ケーブルで繋いでください。"
 
-#: ../../tutorials/introduction.rst:11
+#: ../../tutorials/introduction.rst:10
 msgid ""
-"Once Mu is installed connect your micro:bit to your computer via a USB "
-"lead."
+"Write your script in the editor window and click the \"Download\" or "
+"\"Flash\" button to transfer it to the micro:bit."
 msgstr ""
-"mu をインストールしたら micro:bit をコンピュータを USB ケーブルで"
-"繋いでください。"
+"エディタウィンドウでスクリプトを書いたら \"ダウンロード\" ボタンまたは "
+"\"転送\" ボタンをクリックして micro:bit にスクリプトを転送します。"
 
 #: ../../tutorials/introduction.rst:13
 msgid ""
-"Write your script in the editor window and click the \"Flash\" button to "
-"transfer it to the micro:bit. If it doesn't work, make sure your "
-"micro:bit appears as a USB storage device in your file system explorer."
+"If you have any problems with MicroPython or the editor, you can get "
+"support from the Micro:bit Educational Foundation team via "
+"`support.microbit.org <https://support.microbit.org>`_."
 msgstr ""
-"エディタウィンドウでスクリプトを書いたら \"Flash\" ボタンをクリックして micro:bit "
-"に転送します。うまくいかない場合、micro:bit が USB ストレージデバイスとしてファイル"
-"システム上に現れているかを確認してください。"
+"MicroPython またはエディタで何かうまくいかない場合、 "
+"`support.microbit.org <https://support.microbit.org>`_ で "
+"Micro:bit Educational Foundation チームのサポートを受けられます。"
 
 #: ../../tutorials/introduction.rst:17
 msgid "Tutorials"

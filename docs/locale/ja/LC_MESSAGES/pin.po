@@ -2,20 +2,20 @@
 # Copyright (C) 2015-2016, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-28 11:29+0900\n"
-"PO-Revision-Date: 2021-11-28 11:29+0900\n"
+"POT-Creation-Date: 2022-04-23 17:22+0900\n"
+"PO-Revision-Date: 2022-04-23 18:41+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../pin.rst:2
 msgid "Input/Output Pins"
@@ -376,16 +376,17 @@ msgstr ""
 msgid ""
 "Returns the pin mode. When a pin is used for a specific function, like "
 "writing a digital value, or reading an analog value, the pin mode "
-"changes. Pins can have one of the following modes: ``MODE_UNUSED``, "
-"``MODE_WRITE_ANALOG``, ``MODE_READ_DIGITAL``, ``MODE_WRITE_DIGITAL``, "
-"``MODE_DISPLAY``, ``MODE_BUTTON``, ``MODE_MUSIC``, ``MODE_AUDIO_PLAY``, "
-"``MODE_TOUCH``, ``MODE_I2C``, ``MODE_SPI``."
+"changes. Pins can have one of the following modes: ``\"unused\"``, "
+"``\"analog\"``, ``\"read_digital\"``, ``\"write_digital\"``, "
+"``\"display\"``, ``\"button\"``, ``\"music\"``, ``\"audio\"``, "
+"``\"touch\"``, ``\"i2c\"``, ``\"spi\"``."
 msgstr ""
 "端子モードを返します。デジタル値の書き込みやアナログ値の読み出しなど、端子を特定の"
 "機能で使うと端子モードが変化します。端子は次のいずれかのモードを持つことができます: "
-"``MODE_WRITE_ANALOG``, ``MODE_READ_DIGITAL``, ``MODE_WRITE_DIGITAL``, "
-"``MODE_DISPLAY``, ``MODE_BUTTON``, ``MODE_MUSIC``, ``MODE_AUDIO_PLAY``, "
-"``MODE_TOUCH``, ``MODE_I2C``, ``MODE_SPI`` 。"
+"``\"unused\"``, "
+"``\"analog\"``, ``\"read_digital\"``, ``\"write_digital\"``, "
+"``\"display\"``, ``\"button\"``, ``\"music\"``, ``\"audio\"``, "
+"``\"touch\"``, ``\"i2c\"``, ``\"spi\"``"
 
 #: ../../pin.rst:162
 msgid ""

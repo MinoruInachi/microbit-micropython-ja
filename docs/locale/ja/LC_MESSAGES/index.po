@@ -2,20 +2,20 @@
 # Copyright (C) 2015-2016, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-16 17:42+0900\n"
-"PO-Revision-Date: 2020-08-08 10:32+0900\n"
+"POT-Creation-Date: 2022-04-23 17:22+0900\n"
+"PO-Revision-Date: 2022-04-23 18:11+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../index.rst:7
 msgid "BBC micro:bit MicroPython documentation"
@@ -48,67 +48,76 @@ msgstr ""
 #: ../../index.rst:19
 msgid ""
 "If you're a new programmer, teacher or unsure where to start, begin with "
-"the tutorials."
+"the :ref:`Tutorials <Tutorials>` and use the `micro:bit Python Editor "
+"<https://python.microbit.org>`_ to program the micro:bit."
 msgstr ""
-"プログラミング初心者、学校の先生、どこから始めてよいのかわからない人は、"
-"チュートリアルから始めてください。"
-
-#: ../../index.rst:21
-msgid ".. image:: comic.png"
-msgstr ".. image:: comic-ja.png"
+"プログラミング初心者、学校の先生、どこから始めてよいのかわからない人は、 "
+":ref:`チュートリアル <Tutorials>` から始めてください。"
+"micro:bit のプログラミングには `micro:bit Python エディタ "
+"<https://python.microbit.org>`_ を使ってみてください。"
 
 #: ../../index.rst:25
 msgid ""
-"This project is under active development. Please help other developers by"
-" adding tips, how-tos, and Q&A to this document. Thanks!"
+"The MicroPython API will not work in the MakeCode editor, as this uses a "
+"`different version of Python. "
+"<https://support.microbit.org/support/solutions/articles/19000111744"
+"-makecode-python-and-micropython>`_"
 msgstr ""
-"このプロジェクトは活発な開発を続けています。このドキュメントにヒント、ハウツー、Q&A "
-"を追記して他の開発者を支援してください。よろしくお願いします！"
+"MicroPython API は MakeCode エディタでは動作しません。"
+"MicroPython と MakeCode にある Python は `別のもので互換がない "
+"<https://support.microbit.org/support/solutions/articles/19000111744"
+"-makecode-python-and-micropython>`_ ためです。"
 
 #: ../../index.rst:29
+msgid ".. image:: comic.png"
+msgstr ".. image:: comic-ja.png"
+
+#: ../../index.rst:30
 msgid "Projects related to MicroPython on the BBC micro:bit include:"
 msgstr "BBC micro:bit の MicroPython に関連するプロジェクトには以下があります:"
 
-#: ../../index.rst:31
-msgid ""
-"`Mu <https://github.com/ntoll/mu>`_ - a simple code editor for kids, "
-"teachers and beginner programmers. Probably the easiest way for people to"
-" program MicroPython on the BBC micro:bit."
-msgstr ""
-"`Mu <https://github.com/ntoll/mu>`_ - "
-"子ども、学校の先生、プログラム初心者向けのシンプルなコードエディタ。"
-"おそらく、BBC micro:bit の MicroPython プログラミングには、"
-"このエディタを使うのが最も簡単です。"
-
 #: ../../index.rst:32
 msgid ""
-"`uFlash <https://uflash.readthedocs.io/en/latest/>`_ - a command line "
+"`micro:bit Python Editor <https://python.microbit.org>`_ - A simple "
+"browser-based code editor, developed by the Micro:bit Educational "
+"Foundation  and designed to help teachers and learners get the most out "
+"of text-based programming on the micro:bit."
+msgstr ""
+"`micro:bit Python エディタ <https://python.microbit.org>`_ - "
+"Micro:bit Educational Foundation が開発しているシンプルな"
+"Web ブラウザベースのコードエディタです。このエディタは学校の先生や学習者が "
+"micro:bit を使ったテキストベースのプログラミングを最大限に活用できるように"
+"設計されています。"
+
+#: ../../index.rst:37
+msgid ""
+"`Mu <https://codewith.mu>`_ - A simple offline code editor for kids, "
+"teachers and beginner programmers."
+msgstr ""
+"`Mu <https://codewith.mu>`_ - 子ども、学校の先生、プログラム初心者向けのシンプルな"
+"オフラインコードエディタです。"
+
+#: ../../index.rst:40
+msgid ""
+"`uFlash <https://uflash.readthedocs.io/en/latest/>`_ - A command line "
 "tool for flashing raw Python scripts onto a BBC micro:bit."
 msgstr ""
-"`uFlash <https://uflash.readthedocs.io/en/latest/>`_ - 素の Python スクリプトを "
-"BBC micro:bit に書き込むためのコマンドラインツール。"
+"`uFlash <https://uflash.readthedocs.io/en/latest/>`_ - 素の Python "
+"スクリプトを BBC micro:bit に書き込むためのコマンドラインツールです。"
 
 #: ../../index.rst:34
 msgid "Tutorials"
 msgstr "チュートリアル"
 
-#: ../../index.rst:54
-msgid "API Reference"
-msgstr "API リファレンス"
-
-#: ../../index.rst:82
-msgid "Developer Guide"
-msgstr "開発者ガイド"
-
-#: ../../index.rst:97
+#: ../../index.rst:106
 msgid ":ref:`genindex`"
 msgstr ""
 
-#: ../../index.rst:98
+#: ../../index.rst:107
 msgid ":ref:`modindex`"
 msgstr ""
 
-#: ../../index.rst:99
+#: ../../index.rst:108
 msgid ":ref:`search`"
 msgstr ""
 
