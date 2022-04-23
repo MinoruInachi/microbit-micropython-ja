@@ -132,6 +132,14 @@ msgstr "指定した名前のジェスチャーが認識されているかを示
 msgid "Boolean indicating if the named gesture was active since the last call."
 msgstr "直前の呼出し以降に指定した名前のジェスチャーが認識されたかを示す真偽値。"
 
+#: ../../accelerometer.rst:72
+msgid "Get a historical list of the registered gestures."
+msgstr "記録されたジェスチャーの履歴リストを得ます。"
+
+#: ../../accelerometer.rst:74
+msgid "Calling this function clears the gesture history before returning."
+msgstr "この呼出しを行うと、結果を戻す前にジェスチャーの履歴をクリアします。"
+
 #: ../../accelerometer.rst:76
 msgid "A tuple of the gesture history, most recent is listed last."
 msgstr ""
