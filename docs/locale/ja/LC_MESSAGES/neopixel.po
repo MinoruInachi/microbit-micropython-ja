@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-28 10:29+0900\n"
-"PO-Revision-Date: 2021-11-28 10:35+0900\n"
+"POT-Creation-Date: 2022-04-22 23:33+0900\n"
+"PO-Revision-Date: 2022-04-23 10:44+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -24,11 +24,11 @@ msgstr ""
 #: ../../neopixel.rst:6
 msgid ""
 "The ``neopixel`` module lets you use NeoPixel (WS2812) individually "
-"addressable RGB and RGBW **V2** LED strips with the micro:bit. Note to "
-"use the ``neopixel`` module, you need to import it separately with::"
+"addressable RGB and RGBW LED strips with the micro:bit. Note to use the "
+"``neopixel`` module, you need to import it separately with::"
 msgstr ""
 "``neopixel`` モジュールを使用すると、個別にアドレス可能な RGB LED または "
-"RGBW LED **V2** である NeoPixel (WS2812) を micro:bit で使えます。"
+"RGBW LED である NeoPixel (WS2812) を micro:bit で使えます。"
 "この ``neopixel`` モジュールを使うには以下のモジュールのインポートが必要です::"
 
 #: ../../neopixel.rst:10
@@ -123,35 +123,33 @@ msgstr "クラス"
 #: ../../neopixel.rst:58
 msgid ""
 "Initialise a new strip of ``n`` number of neopixel LEDs controlled via "
-"pin ``pin``. The **V2** micro:bit can also support RGBW neopixels, so a "
-"third argument can be passed to ``NeoPixel`` to indicate the number of "
-"bytes per pixel (bpp). For RGBW, this is is ``4`` rather than the default"
-" of ``3`` for RGB and GRB."
+"pin ``pin``. To support RGBW neopixels, a third argument can be passed to"
+" ``NeoPixel`` to indicate the number of bytes per pixel (``bpp``). For "
+"RGBW, this is is ``4`` rather than the default of ``3`` for RGB and GRB."
 msgstr ""
 "端子 ``pin`` を介して制御する ``n`` 個の neopixel LED を持つストリップを初期化します。"
-"micro:bit **V2** は RGBW neopixel もサポートしているので、 ``NeoPixel`` に"
-"第３引数を渡すとピクセルあたりのバイト数(bpp)を指定することになります。"
-"RGBW の場合は bpp に ``4``　を指定します。デフォルトの bpp は RGB と GRB を示す "
-"``3`` です。"
+"RGBW neopixel もサポートするため、ピクセルあたりのバイト数(``bpp``)を示す第３引数を
+``NeoPixel`` に渡せるようになっています。"RGBW の場合は bpp に ``4`` を指定します。"
+"デフォルトの bpp は RGB と GRB を示す ``3`` です。"
 
-#: ../../neopixel.rst:64
+#: ../../neopixel.rst:63
 msgid ""
 "Each pixel is addressed by a position (starting from 0). Neopixels are "
-"given RGB (red, green, blue) / RGBW (red, green, blue, white) **V2** "
-"values between 0-255 as a tuple. For example, in RGB, ``(255,255,255)`` "
-"is white. In RGBW, ``(255,255,255,0)`` or ``(0,0,0,255)`` is white."
+"given RGB (red, green, blue) / RGBW (red, green, blue, white) values "
+"between 0-255 as a tuple. For example, in RGB, ``(255,255,255)`` is "
+"white. In RGBW, ``(255,255,255,0)`` or ``(0,0,0,255)`` is white."
 msgstr ""
 各ピクセルは(0から始まる)位置によってアドレス指定されます。"
 "NeoPixel にはタプルとして0-255 の RGB (赤, 緑, 青) / "
-"RGBW (赤, 緑, 青, 白) **V2** 値が与えられます。たとえば "
+"RGBW (赤, 緑, 青, 白) が与えられます。たとえば "
 "``(255,255,255)`` は白になります。白を RGBW で指定する場合は "
 ``(255,255,255,0)`` または ``(0,0,0,255)`` となります。"
 
-#: ../../neopixel.rst:71
+#: ../../neopixel.rst:70
 msgid "Clear all the pixels."
 msgstr "すべてのピクセルをクリアします。"
 
-#: ../../neopixel.rst:77
+#: ../../neopixel.rst:76
 msgid ""
 "Show the pixels. Must be called for any updates to become visible. For "
 "micro:bit **V2**, an additional ``write()`` method is available and is "
@@ -161,7 +159,7 @@ msgstr ""
 "micro:bit **V2** には ``write()`` メソッドが追加されていて、このメソッドの機能は "
 "``show()`` と同等です。"
 
-#: ../../neopixel.rst:83
+#: ../../neopixel.rst:82
 msgid ""
 "**V2** Colour all pixels a given RGB/RGBW value. The `colour` argument "
 "should be a tuple of the same length as the number of bytes per pixel "
@@ -173,15 +171,15 @@ msgstr ""
 "たとえば ``fill((0,0,255))`` のようにします。"
 "Neopixel の表示を更新するために ``show()`` を併せて使ってください。"
 
-#: ../../neopixel.rst:89
+#: ../../neopixel.rst:88
 msgid "Operations"
 msgstr "演算子"
 
-#: ../../neopixel.rst:91
+#: ../../neopixel.rst:90
 msgid "Writing the colour doesn't update the display (use ``show()`` for that)."
 msgstr "色を書き込んでも表示は更新されません(表示するには ``show()`` を呼び出します)。"
 
-#: ../../neopixel.rst:93
+#: ../../neopixel.rst:92
 msgid ""
 "np[0] = (255, 0, 128)  # first element\n"
 "np[-1] = (0, 255, 0)  # last element\n"
@@ -191,19 +189,19 @@ msgstr ""
 "np[-1] = (0, 255, 0)  # 最後の素子\n"
 "np.show()  # 更新された値が表示されます"
 
-#: ../../neopixel.rst:99
+#: ../../neopixel.rst:98
 msgid "To read the colour of a specific pixel just reference it."
 msgstr "特定のピクセルの色を読み取るには、それを参照するだけです。"
 
-#: ../../neopixel.rst:101 ../../neopixel.rst:130
+#: ../../neopixel.rst:100 ../../neopixel.rst:129
 msgid "print(np[0])"
 msgstr ""
 
-#: ../../neopixel.rst:106
+#: ../../neopixel.rst:105
 msgid "Using Neopixels"
 msgstr "NeoPixel の使い方"
 
-#: ../../neopixel.rst:108
+#: ../../neopixel.rst:107
 msgid ""
 "Interact with Neopixels as if they were a list of tuples. Each tuple "
 "represents the RGB (red, green and blue) / RGBW (red, green,blue and "
@@ -214,7 +212,7 @@ msgstr ""
 "各タプルは、特定のピクセルの色の RGB (赤, 緑, 青) / RGB (赤, 緑, 青, 白) "
 "の組み合わせを表します。RGBW 値の範囲は 0 から 255 までです。"
 
-#: ../../neopixel.rst:112
+#: ../../neopixel.rst:111
 msgid ""
 "For example, initialise a strip of 8 RGB neopixels on a strip connected "
 "to pin0 like this::"
@@ -222,13 +220,13 @@ msgstr ""
 "たとえば、次のように pin0 に接続された 8 個の RGB ピクセルを持つ NeoPixel ストリップ"
 "を初期化します::"
 
-#: ../../neopixel.rst:115
+#: ../../neopixel.rst:114
 msgid ""
 "import neopixel\n"
 "np = neopixel.NeoPixel(pin0, 8)"
 msgstr ""
 
-#: ../../neopixel.rst:118
+#: ../../neopixel.rst:117
 msgid ""
 "Set pixels by indexing them (like with a Python list). For instance, to "
 "set the first pixel to full brightness red, you would use::"
@@ -236,7 +234,7 @@ msgstr ""
 "それらピクセルを（Python のリストのように）インデックス付けして設定します。"
 "たとえば、最初のピクセルを最大照度の赤に設定するには次のようにします::"
 
-#: ../../neopixel.rst:121
+#: ../../neopixel.rst:120
 msgid "np[0] = (255, 0, 0)"
 msgstr ""
 
@@ -244,11 +242,11 @@ msgstr ""
 msgid "Or the final pixel to purple::"
 msgstr "最後のピクセルを紫色にするには次のようにします::"
 
-#: ../../neopixel.rst:125
+#: ../../neopixel.rst:124
 msgid "np[-1] = (255, 0, 255)"
 msgstr ""
 
-#: ../../neopixel.rst:127
+#: ../../neopixel.rst:126
 msgid ""
 "Get the current colour value of a pixel by indexing it. For example, to "
 "print the first pixel's RGB value use::"
@@ -256,25 +254,25 @@ msgstr ""
 "ピクセルの現在のカラー値を得るには、インデックス付けして参照します。たとえば、"
 "最初のピクセルの RGB 値を表示するには次のようにします。"
 
-#: ../../neopixel.rst:132
+#: ../../neopixel.rst:131
 msgid ""
 "Finally, to push the new colour data to your Neopixel strip, use the "
 ".show() function::"
 msgstr ""
 "最後に、新しい色データを NeoPixel ボードの表示に反映するには、.show（）関数を使います::"
 
-#: ../../neopixel.rst:135
+#: ../../neopixel.rst:134
 msgid "np.show()"
 msgstr ""
 
-#: ../../neopixel.rst:137
+#: ../../neopixel.rst:136
 msgid ""
 "If nothing is happening, it's probably because you've forgotten this "
 "final step..!"
 msgstr ""
 "何も起こらない場合、おそらくあなたはこの最終ステップを忘れてしまっているのです..！"
 
-#: ../../neopixel.rst:142
+#: ../../neopixel.rst:141
 msgid ""
 "If you're not seeing anything change on your Neopixel strip, make sure "
 "you have ``show()`` at least somewhere otherwise your updates won't be "
@@ -283,11 +281,11 @@ msgstr ""
 "NeoPixel ボードで何か変化が見られない場合、少なくともアップデートしたものが表示"
 "されていなければ、 ``show()`` を確認してください。"
 
-#: ../../neopixel.rst:147
+#: ../../neopixel.rst:146
 msgid "Example"
 msgstr "サンプルコード"
 
-#: ../../neopixel.rst:149
+#: ../../neopixel.rst:148
 msgid ""
 "\"\"\"\n"
 "    neopixel_random.py\n"

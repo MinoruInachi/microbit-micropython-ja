@@ -33,11 +33,11 @@ Clone the repository and change directory to it::
 
 Configure yotta to use the micro:bit target::
 
-  yt target bbc-microbit-classic-gcc-nosd@https://github.com/lancaster-university/yotta-target-bbc-microbit-classic-gcc-nosd
+  yotta target bbc-microbit-classic-gcc-nosd@https://github.com/lancaster-university/yotta-target-bbc-microbit-classic-gcc-nosd
 
 Run yotta update to fetch remote assets::
 
-  yt up
+  yotta up
 
 Start the build using the makefile::
 
@@ -47,14 +47,15 @@ The resulting ``firmware.hex`` can be found in the ``build/``
 directory which can then be copied to the micro:bit.
 
 Preparing firmware and a Python program
-=======================================
+---------------------------------------
 
 Using ``tools/makecombinedhex.py`` you can combine the MicroPython firmware
 with a Python script and produce a hex file ready for uploading to the
 micro:bit.::
 
   ./makecombinedhex.py <firmware.hex> <script.py> [-o <combined.hex>]
-  # Output goes to stdout if no filename is given.
+
+The script will output to ``stdout`` if no output option (``-o``) is provided.
 
 Using ``tools/hexlify.py`` you can turn a Python script into Intel HEX format
 to be concatenated at the end of the MicroPython firmware.hex.  A simple header
@@ -105,3 +106,11 @@ After setting up, go to the src/ directory and build::
 
 The resulting firmware will be ``MICROBIT.hex`` in the ``src/`` 
 directory which can be copied to the micro:bit.
+
+
+Flashing to the micro:bit
+=========================
+
+The micro:bit mounts itself as a USB mass storage device named ``MICROBIT``.
+When it detects that a .hex file has been copied to the USB drive, it will
+flash itself, and start running the program.

@@ -190,6 +190,7 @@ extern const struct _monochrome_5by5_t microbit_const_image_giraffe_obj;
 extern const struct _monochrome_5by5_t microbit_const_image_skull_obj;
 extern const struct _monochrome_5by5_t microbit_const_image_umbrella_obj;
 extern const struct _monochrome_5by5_t microbit_const_image_snake_obj;
+extern const struct _monochrome_5by5_t microbit_const_image_scissors_obj;
 
 /****************************************************************/
 // microbit.display object
@@ -256,6 +257,7 @@ MP_DECLARE_CONST_FUN_OBJ_VAR_BETWEEN(microbit_panic_obj);
 MP_DECLARE_CONST_FUN_OBJ_1(microbit_accelerometer_get_x_obj);
 MP_DECLARE_CONST_FUN_OBJ_1(microbit_accelerometer_get_y_obj);
 MP_DECLARE_CONST_FUN_OBJ_1(microbit_accelerometer_get_z_obj);
+MP_DECLARE_CONST_FUN_OBJ_2(microbit_accelerometer_set_range_obj);
 MP_DECLARE_CONST_FUN_OBJ_1(microbit_button_is_pressed_obj);
 MP_DECLARE_CONST_FUN_OBJ_1(microbit_button_was_pressed_obj);
 MP_DECLARE_CONST_FUN_OBJ_1(microbit_button_get_presses_obj);

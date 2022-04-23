@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2020-12-05 10:32+0900\n"
+"POT-Creation-Date: 2022-04-22 23:33+0900\n"
+"PO-Revision-Date: 2022-04-23 10:00+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -77,22 +77,29 @@ msgstr ""
 #: ../../index.rst:27
 msgid ""
 "If you're a new programmer, teacher or unsure where to start, begin with "
-"the tutorials."
+"the :ref:`Tutorials <Tutorials>` and use the `micro:bit Python Editor "
+"<https://python.microbit.org>`_ to program the micro:bit."
 msgstr ""
-"プログラミング初心者、学校の先生、どこから始めてよいのかわからない人は、"
-"チュートリアルから始めてください。"
+"プログラミング初心者、学校の先生、どこから始めてよいのかわからない人は、 "
+":ref:`チュートリアル <Tutorials>` から始めてください。"
+"micro:bit のプログラミングには `micro:bit Python エディタ "
+"<https://python.microbit.org>`_ を使ってみてください。"
 
 #: ../../index.rst:31
 msgid ".. image:: comic.png"
 msgstr ".. image:: comic-ja.png"
 
-#: ../../index.rst:34
+#: ../../index.rst:38
 msgid ""
-"This project is under active development. Please help other developers by"
-" adding tips, how-tos, and Q&A to this document. Thanks!"
+"The MicroPython API will not work in the MakeCode editor, as this uses a "
+"`different version of Python. "
+"<https://support.microbit.org/support/solutions/articles/19000111744"
+"-makecode-python-and-micropython>`_"
 msgstr ""
-"このプロジェクトは活発な開発を続けています。このドキュメントにヒント、ハウツー、Q&A "
-"を追記して他の開発者を支援してください。よろしくお願いします！"
+"MicroPython API は、MakeCode エディタでは動作しません。"
+"MicroPython と MakeCode にある Python は `別のもので互換がない "
+"<https://support.microbit.org/support/solutions/articles/19000111744"
+"-makecode-python-and-micropython>`_ ためです。"
 
 #: ../../index.rst:38
 msgid "Projects related to MicroPython on the BBC micro:bit include:"
@@ -100,40 +107,42 @@ msgstr "BBC micro:bit の MicroPython に関連するプロジェクトには以
 
 #: ../../index.rst:40
 msgid ""
-"`micro:bit Python Editor <https://python.microbit.org>`_ A simple "
-"browser-based code editor, designed to help teachers and learners get the"
-" most out of text-based programming on the micro:bit."
+"`micro:bit Python Editor <https://python.microbit.org>`_ - A simple "
+"browser-based code editor, developed by the Micro:bit Educational "
+"Foundation  and designed to help teachers and learners get the most out "
+"of text-based programming on the micro:bit."
 msgstr ""
-"`micro:bit Python Editor <https://python.microbit.org>`_ シンプルな"
+"`micro:bit Python エディタ <https://python.microbit.org>`_ - "
+"Micro:bit Educational Foundation が開発しているシンプルな"
 "Web ブラウザベースのコードエディタです。このエディタは学校の先生や学習者が "
 "micro:bit を使ったテキストベースのプログラミングを最大限に活用できるように"
 "設計されています。"
 
-#: ../../index.rst:44
+#: ../../index.rst:45
 msgid ""
-"`Mu <https://codewith.mu>`_ A simple offline code editor for kids, "
+"`Mu <https://codewith.mu>`_ - A simple offline code editor for kids, "
 "teachers and beginner programmers."
 msgstr ""
-"`Mu <https://codewith.mu>`_ 子ども、学校の先生、プログラム初心者向けのシンプルな"
+"`Mu <https://codewith.mu>`_ - 子ども、学校の先生、プログラム初心者向けのシンプルな"
 "オフラインコードエディタです。"
 
-#: ../../index.rst:47
+#: ../../index.rst:48
 msgid ""
-"`uFlash <https://uflash.readthedocs.io/en/latest/>`_ A command line tool "
-"for flashing raw Python scripts onto a BBC micro:bit."
+"`uFlash <https://uflash.readthedocs.io/en/latest/>`_ - A command line "
+"tool for flashing raw Python scripts onto a BBC micro:bit."
 msgstr ""
-"`uFlash <https://uflash.readthedocs.io/en/latest/>`_ 素の Python スクリプトを "
+"`uFlash <https://uflash.readthedocs.io/en/latest/>`_ - 素の Python スクリプトを "
 "BBC micro:bit に書き込むためのコマンドラインツールです。"
 
-#: ../../index.rst:114
+#: ../../index.rst:116
 msgid ":ref:`genindex`"
 msgstr ""
 
-#: ../../index.rst:115
+#: ../../index.rst:117
 msgid ":ref:`modindex`"
 msgstr ""
 
-#: ../../index.rst:116
+#: ../../index.rst:118
 msgid ":ref:`search`"
 msgstr ""
 

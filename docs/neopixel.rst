@@ -4,8 +4,8 @@ NeoPixel
 .. py:module:: neopixel
 
 The ``neopixel`` module lets you use NeoPixel (WS2812) individually addressable
-RGB and RGBW **V2** LED strips with the micro:bit. Note to use the ``neopixel`` module, you
-need to import it separately with::
+RGB and RGBW LED strips with the micro:bit. Note to use the ``neopixel``
+module, you need to import it separately with::
 
     import neopixel
 
@@ -52,17 +52,16 @@ Classes
 =======
 
 .. py:class::
-    NeoPixel(pin, n)
-    NeoPixel(pin, n, bpp)
+    NeoPixel(pin, n, bpp=3)
 
     Initialise a new strip of ``n`` number of neopixel LEDs controlled via pin
-    ``pin``. The **V2** micro:bit can also support RGBW neopixels, so a third
-    argument can be passed to ``NeoPixel`` to indicate the number of bytes per
-    pixel (bpp). For RGBW, this is is ``4`` rather than the default of ``3`` for
+    ``pin``. To support RGBW neopixels, a third argument can be passed to
+    ``NeoPixel`` to indicate the number of bytes per pixel (``bpp``).
+    For RGBW, this is is ``4`` rather than the default of ``3`` for
     RGB and GRB.
-    
+
     Each pixel is addressed by a position (starting from 0). Neopixels
-    are given RGB (red, green, blue) / RGBW (red, green, blue, white) **V2**
+    are given RGB (red, green, blue) / RGBW (red, green, blue, white)
     values between 0-255 as a tuple. For example, in RGB, ``(255,255,255)`` is
     white. In RGBW, ``(255,255,255,0)`` or ``(0,0,0,255)`` is white.
 

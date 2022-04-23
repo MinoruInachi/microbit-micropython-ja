@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2020-12-05 23:05+0900\n"
+"POT-Creation-Date: 2022-04-22 23:33+0900\n"
+"PO-Revision-Date: 2022-04-23 10:27+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -35,56 +35,66 @@ msgstr "関数"
 
 #: ../../microbit.rst:16
 msgid ""
-"Enter a panic mode. Requires restart. Pass in an arbitrary integer <= 255"
-" to indicate a status::"
+"Enter a panic mode that stops all execution, scrolls an error code in the"
+" micro:bit display and requires restart::"
 msgstr ""
-"パニックモードに入ります。再起動が必要となります。引数 n にはステータスを示す 255 "
-"以下の整数を渡します::"
+"すべての実行を停止するパニックモードに入ります。"
+"このモードに入ると micro:bit ディスプレイにエラーコードをスクロール表示し、
+"再起動が必要となります。"
 
 #: ../../microbit.rst:19
 msgid "microbit.panic(255)"
 msgstr ""
 
-#: ../../microbit.rst:24
+#: ../../microbit.rst
+#, fuzzy
+msgid "param"
+msgstr "パラメータ"
+
+#: ../../microbit.rst:21
+msgid "An arbitrary integer between 0 and 255 to indicate an error code."
+msgstr "エラーコードを示す 0 から 255 までの任意の整数。"
+
+#: ../../microbit.rst:26
 msgid "Restart the board."
 msgstr "ボードを再起動します。"
 
-#: ../../microbit.rst:29
-msgid "Wait for ``n`` milliseconds. One second is 1000 milliseconds, so::"
-msgstr "``n`` ミリ秒だけ待機します。1 秒は 1000 ミリ秒なので、以下は 1 秒間実行を一時停止します::"
+#: ../../microbit.rst
+msgid "returns"
+msgstr "戻り値"
 
 #: ../../microbit.rst:31
-msgid "microbit.sleep(1000)"
-msgstr ""
+msgid "The number of milliseconds since the board was switched on or restarted."
+msgstr "ボードの電源が入ったか再起動してからの経過時間(ミリ秒)。"
 
-#: ../../microbit.rst:33
+#: ../../microbit.rst:37
 msgid ""
-"will pause the execution for one second.  ``n`` can be an integer or a "
-"floating point number."
+"Wait for ``n`` milliseconds. One second is 1000 milliseconds, so "
+"``microbit.sleep(1000)`` will pause the execution for one second."
 msgstr ""
-"引数 ``n`` には、整数でも浮動小数点数でも値を指定できます。"
+"``n`` ミリ秒だけ待機します。1 秒は 1000 ミリ秒なので、 "
+"``microbit.sleep(1000)`` は 1 秒間実行を一時停止します。"
 
-#: ../../microbit.rst:39
+#: ../../microbit.rst:40
 msgid ""
-"Return the number of milliseconds since the board was switched on or "
-"restarted."
+"An integer or floating point number indicating the number of milliseconds"
+" to wait."
 msgstr ""
-"ボードの電源が入ったか再起動してからの経過時間をミリ秒単位で返します。"
+"待機するミリ秒を示す整数または浮動小数点数。"
 
-#: ../../microbit.rst:45
-msgid "Return the temperature of the micro:bit in degrees Celcius."
-msgstr ""
-"micro:bit の温度を摂氏で返します。"
+#: ../../microbit.rst:46
+msgid "An integer with the temperature of the micro:bit in degrees Celcius."
+msgstr "micro:bit の温度(摂氏)を示す整数。"
 
-#: ../../microbit.rst:49
+#: ../../microbit.rst:51
 msgid "Attributes"
 msgstr "属性"
 
-#: ../../microbit.rst:59
+#: ../../microbit.rst:61
 msgid "Classes"
 msgstr "クラス"
 
-#: ../../microbit.rst:68
+#: ../../microbit.rst:71
 msgid "Modules"
 msgstr "モジュール"
 

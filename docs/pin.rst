@@ -152,9 +152,9 @@ its own to that.
 
     .. py:method:: get_pull()
 
-        Returns the pull configuration on a pin, which can be one of three 
-        possible values: ``NO_PULL``, ``PULL_DOWN``, or ``PULL_UP``. These 
-        are set using the ``set_pull()`` method or automatically configured 
+        Returns the pull configuration on a pin, which can be one of three
+        possible values: ``NO_PULL``, ``PULL_DOWN``, or ``PULL_UP``. These
+        are set using the ``set_pull()`` method or automatically configured
         when a pin mode requires it.
 
     .. py:method:: get_mode()
@@ -165,14 +165,6 @@ its own to that.
         ``"analog"``, ``"read_digital"``, ``"write_digital"``,
         ``"display"``, ``"button"``, ``"music"``, ``"audio"``,
         ``"touch"``, ``"i2c"``, ``"spi"``.
-
-
-.. py:class:: MicroBitAnalogDigitalPin
-
-    .. py:method:: read_analog()
-
-        Read the voltage applied to the pin, and return it as an integer
-        between 0 (meaning 0V) and 1023 (meaning 3.3V).
 
     .. py:method:: write_analog(value)
 
@@ -189,6 +181,18 @@ its own to that.
 
         Set the period of the PWM signal being output to ``period`` in
         microseconds. The minimum valid value is 256µs.
+
+    .. py:method:: get_analog_period_microseconds()
+
+        Returns the configured period of the PWM signal in microseconds.
+
+
+.. py:class:: MicroBitAnalogDigitalPin
+
+    .. py:method:: read_analog()
+
+        Read the voltage applied to the pin, and return it as an integer
+        between 0 (meaning 0V) and 1023 (meaning 3.3V).
 
 
 .. py:class:: MicroBitTouchPin
@@ -237,10 +241,14 @@ in ``read_digital`` mode with the given pull mode.
     There are also external (10k) pull-ups fitted on pins 5 and 11, in order
     for buttons A and B to work.
 
+    For more info see the `edge connector data sheet
+    <http://tech.microbit.org/hardware/edgeconnector>`_.
+
+.. note::
     GPIO pins are also used for the display, as described in the table above.
     If you want to use these pins for another purpose, you may need to turn
     the `display off
     <https://microbit-micropython.readthedocs.io/en/latest/display.html#microbit.display.off>`_.
 
-    See the `edge connector data sheet
+    For more info see the `edge connector data sheet
     <http://tech.microbit.org/hardware/edgeconnector>`_.

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-04 17:21+0900\n"
-"PO-Revision-Date: 2021-04-05 00:08+0900\n"
+"POT-Creation-Date: 2022-04-22 23:33+0900\n"
+"PO-Revision-Date: 2022-04-23 11:18+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -199,7 +199,7 @@ msgstr "micro:bit のターゲットを使うように yotta に設定します:
 
 #: ../../devguide/flashfirmware.rst:36
 msgid ""
-"yt target bbc-microbit-classic-gcc-nosd@https://github.com/lancaster-"
+"yotta target bbc-microbit-classic-gcc-nosd@https://github.com/lancaster-"
 "university/yotta-target-bbc-microbit-classic-gcc-nosd"
 msgstr ""
 
@@ -208,7 +208,7 @@ msgid "Run yotta update to fetch remote assets::"
 msgstr "yotta update を実行してリモートアセットを取得します::""
 
 #: ../../devguide/flashfirmware.rst:40
-msgid "yt up"
+msgid "yotta up"
 msgstr ""
 
 #: ../../devguide/flashfirmware.rst:42
@@ -241,14 +241,17 @@ msgstr ""
 "Python スクリプトを結合し、micro:bit にアップロードする hex ファイルを生成できます。"
 
 #: ../../devguide/flashfirmware.rst:56
-msgid ""
-"./makecombinedhex.py <firmware.hex> <script.py> [-o <combined.hex>]\n"
-"# Output goes to stdout if no filename is given."
+msgid "./makecombinedhex.py <firmware.hex> <script.py> [-o <combined.hex>]"
 msgstr ""
-"./makecombinedhex.py <firmware.hex> <script.py> [-o <combined.hex>]\n"
-"# 出力先を指定しない場合は stdout に出力する。"
 
-#: ../../devguide/flashfirmware.rst:59
+#: ../../devguide/flashfirmware.rst:58
+msgid ""
+"The script will output to ``stdout`` if no output option (``-o``) is "
+"provided."
+msgstr ""
+"出力先オプション(``-o``)を指定しない場合、スクリプトは ``stdout`` に出力します。"
+
+#: ../../devguide/flashfirmware.rst:60
 msgid ""
 "Using ``tools/hexlify.py`` you can turn a Python script into Intel HEX "
 "format to be concatenated at the end of the MicroPython firmware.hex.  A "
@@ -258,19 +261,19 @@ msgstr ""
 "結果は MicroPython の firmware.hex の最後に連結できます。"
 "簡単なヘッダーがスクリプトに追加されます::"
 
-#: ../../devguide/flashfirmware.rst:63
+#: ../../devguide/flashfirmware.rst:64
 msgid "./hexlifyscript.py <script.py>"
 msgstr ""
 
-#: ../../devguide/flashfirmware.rst:65
+#: ../../devguide/flashfirmware.rst:66
 msgid "It also accepts data on standard input."
 msgstr "標準入力からもデータを受けつけます。"
 
-#: ../../devguide/flashfirmware.rst:69 ../../devguide/hexformat.rst:115
+#: ../../devguide/flashfirmware.rst:70 ../../devguide/hexformat.rst:115
 msgid "micro:bit V2"
 msgstr ""
 
-#: ../../devguide/flashfirmware.rst:71 ../../devguide/hexformat.rst:117
+#: ../../devguide/flashfirmware.rst:72 ../../devguide/hexformat.rst:117
 msgid ""
 "This applies to MicroPython for the micro:bit V2, the source of which can"
 " be found here: `microbit-foundation/micropython-microbit-v2 "
@@ -280,7 +283,7 @@ msgstr ""
 "ソースは次のところにあります: `microbit-foundation/micropython-microbit-v2 "
 "<https://github.com/microbit-foundation/micropython-microbit-v2>`_"
 
-#: ../../devguide/flashfirmware.rst:74
+#: ../../devguide/flashfirmware.rst:75
 msgid ""
 "The repository also contains a history of `MicroPython firmware builds "
 "<https://github.com/microbit-foundation/micropython-"
@@ -290,51 +293,65 @@ msgstr ""
 "<https://github.com/microbit-foundation/micropython-"
 "microbit-v2/actions>`_ の履歴も含まれています。"
 
-#: ../../devguide/flashfirmware.rst:81
+#: ../../devguide/flashfirmware.rst:82
 msgid "`gcc <http://gcc.gnu.org/install/>`_"
 msgstr ""
 
-#: ../../devguide/flashfirmware.rst:89
+#: ../../devguide/flashfirmware.rst:90
 msgid ""
 "$ git clone https://github.com/microbit-foundation/micropython-"
 "microbit-v2\n"
 "$ cd micropython-microbit-v2"
 msgstr ""
 
-#: ../../devguide/flashfirmware.rst:92
+#: ../../devguide/flashfirmware.rst:93
 msgid "Update the submodules::"
 msgstr "サブモジュールを更新します::"
 
-#: ../../devguide/flashfirmware.rst:94
+#: ../../devguide/flashfirmware.rst:95
 msgid "$ git submodule update --init"
 msgstr ""
 
-#: ../../devguide/flashfirmware.rst:96
+#: ../../devguide/flashfirmware.rst:97
 msgid "Then build the MicroPython cross-compiler::"
 msgstr "次に MicroPython クロスコンパイラをビルドします::"
 
-#: ../../devguide/flashfirmware.rst:98
+#: ../../devguide/flashfirmware.rst:99
 msgid "$ make -C lib/micropython/mpy-cross"
 msgstr ""
 
-#: ../../devguide/flashfirmware.rst:100
+#: ../../devguide/flashfirmware.rst:101
 msgid "After setting up, go to the src/ directory and build::"
 msgstr "準備が整ったら、src/ ディレクトリに移動してビルドします::"
 
-#: ../../devguide/flashfirmware.rst:102
+#: ../../devguide/flashfirmware.rst:103
 msgid ""
 "$ cd src\n"
 "\n"
 "$ make"
 msgstr ""
 
-#: ../../devguide/flashfirmware.rst:106
+#: ../../devguide/flashfirmware.rst:107
 msgid ""
 "The resulting firmware will be ``MICROBIT.hex`` in the ``src/`` directory"
 " which can be copied to the micro:bit."
 msgstr ""
 "ビルドの結果、ファームウェア ``MICROBIT.hex`` が ``src/`` ディレクトリに作成されます。"
 "このファイルが micro:bit にコピーするものです。"
+
+#: ../../devguide/flashfirmware.rst:112
+msgid "Flashing to the micro:bit"
+msgstr "micro:bit への転送"
+
+#: ../../devguide/flashfirmware.rst:114
+msgid ""
+"The micro:bit mounts itself as a USB mass storage device named "
+"``MICROBIT``. When it detects that a .hex file has been copied to the USB"
+" drive, it will flash itself, and start running the program."
+msgstr ""
+"micro:bit を USB で接続すると ``MICROBIT`` という名前の USB マスストレージデバイス"
+"としてマウントされます。この USB ドライブに .hex ファイルをコピーすると、
+"micro:bit に自動的に転送され、プログラムの実行を開始します。"
 
 #: ../../devguide/hexformat.rst:5
 msgid "MicroPython Hex File"

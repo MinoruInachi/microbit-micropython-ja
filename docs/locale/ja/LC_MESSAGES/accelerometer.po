@@ -2,15 +2,15 @@
 # Copyright (C) 2015-2020, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2021-11-27 17:22+0900\n"
+"POT-Creation-Date: 2022-04-22 23:33+0900\n"
+"PO-Revision-Date: 2022-04-23 01:16+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -22,135 +22,143 @@ msgid "Accelerometer"
 msgstr "加速度センサー"
 
 #: ../../accelerometer.rst:6
-msgid ""
-"This object gives you access to the on-board accelerometer. The "
-"accelerometer also provides convenience functions for detecting gestures."
-" The recognised gestures are: ``up``, ``down``, ``left``, ``right``, "
-"``face up``, ``face down``, ``freefall``, ``3g``, ``6g``, ``8g``, "
-"``shake``."
-msgstr ""
-"このオブジェクトでボード上の加速度センサーにアクセスできます。加速度センサーは"
-"ジェスチャーを検出するのにも使えます。認識できるジェスチャーとしては "
-"``up``, ``down``, ``left``, ``right``, ``face up``, ``face down``, "
-"``freefall``, ``3g``, ``6g``, ``8g``, ``shake`` があります。"
+msgid "This object gives you access to the on-board accelerometer."
+msgstr "このオブジェクトはボード上の加速度センサーにアクセスするためのものです。"
 
-#: ../../accelerometer.rst:11
+#: ../../accelerometer.rst:8
 msgid ""
-"By default MicroPython sets the accelerometer range to +/- 2g, changing "
-"the accelerometer range is currently not possible in MicroPython. The "
-"accelerometer returns a value in the range 0..1024 for each axis, which "
-"is then scaled accordingly."
+"By default MicroPython sets the accelerometer range to +/- 2000 mg (``g``"
+" being a unit of acceleration based on the standard gravity), which "
+"configures the maximum and minimum values returned by the acceleromter "
+"functions. The range can be changed via "
+":func:`microbit.accelerometer.set_range`."
 msgstr ""
-"デフォルトで MicroPython は加速度センサーの測定範囲を +/- 2g に設定しますが、"
-"現在のところ MicroPython で加速度センサーの測定範囲は変更できません。"
-"加速度センサーは、各軸について加速度に応じてスケーリングされた 0..1024 の範囲の"
-"値を返しします。"
+"MicroPython はデフォルトで加速度センサーの測定範囲を +/- 2000 mg に設定します"
+"(``g`` は標準重力に基づく加速度の単位)。"
+"この測定範囲から加速度センサーの関数が返す最大値と最小値も決まります。"
+":func:`microbit.accelerometer.set_range` を使うと測定範囲を変更できます。"
+
+#: ../../accelerometer.rst:13
+msgid ""
+"The accelerometer also provides convenience functions for detecting "
+"gestures. The recognised gestures are represented as strings: ``up``, "
+"``down``, ``left``, ``right``, ``face up``, ``face down``, ``freefall``, "
+"``3g``, ``6g``, ``8g``, ``shake``."
+msgstr ""
+"加速度センサーはジェスチャーをの検出にも使えます。"
+"認識できるジェスチャーは文字列で表され、次のものがあります: "
+"``up``, ``down``, ``left``, ``right``, ``face up``, ``face down``, "
+"``freefall``, ``3g``, ``6g``, ``8g``, ``shake``"
+
+#: ../../accelerometer.rst:20
+msgid ""
+"Gestures are not updated in the background so there needs to be constant "
+"calls to some accelerometer method to do the gesture detection. Usually "
+"gestures can be detected using a loop with a small :func:`microbit.sleep`"
+" delay."
+msgstr ""
+"ジェスチャーはバックグラウンドで更新されないので、ジェスチャーの検出を行うには"
+"何らかの加速度センサーのメソッドを常に呼び出す必要があります。たいてい、ジェスチャーは "
+":func:`microbit.sleep` による短い遅延のあるループを使って検出できます。"
 
 #: ../../accelerometer.rst:17
 msgid "Functions"
 msgstr "関数"
 
-#: ../../accelerometer.rst:21
-msgid ""
-"Get the acceleration measurement in the ``x`` axis, as a positive or "
-"negative integer, depending on the direction. The measurement is given in"
-" milli-g. By default the accelerometer is configured with a range of +/- "
-"2g, and so this method will return within the range of +/- 2000mg."
-msgstr ""
-"``x`` 軸の加速度を得ます。方向に応じて正または負の整数値になります。"
-"測定はミリg単位で行われます。"デフォルトで加速度センサーの測定範囲は +/- 2g に"
-"設定されているため、このメソッドは +/- 2000mg の範囲内で返します。"
+#: ../../accelerometer.rst
+#, fuzzy
+msgid "returns"
+msgstr "戻り値"
 
-#: ../../accelerometer.rst:28
+#: ../../accelerometer.rst:30
 msgid ""
-"Get the acceleration measurement in the ``y`` axis, as a positive or "
-"negative integer, depending on the direction. The measurement is given in"
-" milli-g. By default the accelerometer is configured with a range of +/- "
-"2g, and so this method will return within the range of +/- 2000mg."
+"The acceleration measurement in the ``x`` axis in milli-g, as a positive "
+"or negative integer."
 msgstr ""
-"``y`` 軸の加速度を得ます。方向に応じて正または負の整数値になります。"
-"測定はミリg単位で行われます。"デフォルトで加速度センサーの測定範囲は +/- 2g に"
-"設定されているため、このメソッドは +/- 2000mg の範囲内で返します。"
+"``x`` 軸のミリg単位の加速度。値は正または負の整数値です。"
 
 #: ../../accelerometer.rst:35
 msgid ""
-"Get the acceleration measurement in the ``z`` axis, as a positive or "
-"negative integer, depending on the direction. The measurement is given in"
-" milli-g. By default the accelerometer is configured with a range of +/- "
-"2g, and so this method will return within the range of +/- 2000mg."
+"The acceleration measurement in the ``y`` axis in milli-g, as a positive "
+"or negative integer."
 msgstr ""
-"``z`` 軸の加速度を得ます。方向に応じて正または負の整数値になります。"
-"測定はミリg単位で行われます。"デフォルトで加速度センサーの測定範囲は +/- 2g に"
-"設定されているため、このメソッドは +/- 2000mg の範囲内で返します。"
+"``y`` 軸の加速度(ミリg単位)。値は正または負の整数値です。"
 
-#: ../../accelerometer.rst:42
+#: ../../accelerometer.rst:40
 msgid ""
-"Get the acceleration measurements in all axes at once, as a three-element"
-" tuple of integers ordered as X, Y, Z. By default the accelerometer is "
-"configured with a range of +/- 2g, and so X, Y, and Z will be within the "
-"range of +/-2000mg."
+"The acceleration measurement in the ``z`` axis in milli-g, as a positive "
+"or negative integer."
 msgstr ""
-"すべての軸の加速度を得ます。X, Y, Z の順番の３要素の整数値のタプルが返ります。"
-"測定はミリg単位で行われます。"デフォルトで加速度センサーの測定範囲は +/- 2g に"
-"設定されているため、X, Y, Z は +/- 2000mg の範囲内になります。"
+"``z`` 軸の加速度(ミリg単位)。値は正または負の整数値です。"
 
-#: ../../accelerometer.rst:49
-msgid "Return the name of the current gesture."
-msgstr "現在のジェスチャーの名前を返します。"
+#: ../../accelerometer.rst:45
+msgid ""
+"The acceleration measurements in all axes at once, as a three-element "
+"tuple of integers ordered as X, Y, Z."
+msgstr ""
+"すべての軸の加速度。X, Y, Z の並びで整数値のタプルが返ります。"
+
+#: ../../accelerometer.rst:50
+msgid ""
+"Get the acceleration measurement of all axes combined, as a positive "
+"integer.  This is the Pythagorean sum of the X, Y and Z axes."
+msgstr ""
+"すべての軸を合成した加速度測定値を正の整数値で得ます。"
+"これは X軸、Y軸、Z軸のピタゴラス和になります。"
 
 #: ../../accelerometer.rst:53
-msgid ""
-"MicroPython understands the following gesture names: ``\"up\"``, "
-"``\"down\"``, ``\"left\"``, ``\"right\"``, ``\"face up\"``, ``\"face "
-"down\"``, ``\"freefall\"``, ``\"3g\"``, ``\"6g\"``, ``\"8g\"``, "
-"``\"shake\"``. Gestures are always represented as strings."
+msgid "The combined acceleration strength of all the axes, in milli-g."
 msgstr ""
-"MicroPython は次の名前のジェスチャーを認識します: ``\"up\"``, ``\"down\"``, ``\"left\"``, "
-"``\"right\"``, ``\"face up\"``, ``\"face down\"``, ``\"freefall\"``, "
-"``\"3g\"``, ``\"6g\"``, ``\"8g\"``, ``\"shake\"`` 。ジェスチャーは常に文字列で表されます。"
+"すべての軸の合成加速度(ミリg単位)。"
 
-#: ../../accelerometer.rst:60
-msgid "Return True or False to indicate if the named gesture is currently active."
-msgstr "指定した名前のジェスチャーが認識されているかにより True または False を返します。"
+#: ../../accelerometer.rst:57
+msgid "String with the name of the current gesture."
+msgstr "現在のジェスチャーの名前を表す文字列。"
 
-#: ../../accelerometer.rst:64
-msgid ""
-"Return True or False to indicate if the named gesture was active since "
-"the last call."
+#: ../../accelerometer.rst
+#, fuzzy
+msgid "param"
+msgstr "パラメータ"
+
+#: ../../accelerometer.rst:61 ../../accelerometer.rst:66
+msgid "String with the name of the gesture to check."
+msgstr "チェックするジェスチャーの名前を表す文字列。"
+
+#: ../../accelerometer.rst:62
+msgid "Boolean indicating if the named gesture is currently active."
+msgstr "指定した名前のジェスチャーが認識されているかを示す真偽値。"
+
+#: ../../accelerometer.rst:67
+msgid "Boolean indicating if the named gesture was active since the last call."
+msgstr "直前の呼出し以降に指定した名前のジェスチャーが認識されたかを示す真偽値。"
+
+#: ../../accelerometer.rst:76
+msgid "A tuple of the gesture history, most recent is listed last."
 msgstr ""
-"前回の呼出し以降に指定した名前のジェスチャーが認識されたかにより True "
-"または False を返します。"
+"ジェスチャー履歴のタプル。タプルは古い順に並び、最新のものが最後の要素になります。"
 
-#: ../../accelerometer.rst:69
+#: ../../accelerometer.rst:80
 msgid ""
-"Return a tuple of the gesture history. The most recent is listed last. "
-"Also clears the gesture history before returning."
+"Set the accelerometer sensitivity range, in g (standard gravity), to the "
+"closest values supported by the hardware, so it rounds to either ``1``, "
+"``2``, ``4``, or ``8`` g."
 msgstr ""
-"ジェスチャーの履歴をタプルで返します。タプルは古い順に並び、最新のものが最後の要素に"
-"なります。この呼出しを行うとジェスチャーの履歴はクリアされます。"
+"加速度センサーの感度範囲を g (標準重力)で設定します。"
+"設定値は、ハードウェアがサポートする最も近い値、すなわち "
+"``1``, ``2``, ``4``, ``8`` g のいずれかに丸められます。"
 
-#: ../../accelerometer.rst:64
-msgid ""
-"Gestures are not updated in the background so there needs to be constant "
-"calls to some accelerometer method to do the gesture detection. Usually "
-"gestures can be detected using a loop with a small :func:`microbit.sleep` delay."
-msgstr ""
-"ジェスチャーはバックグラウンドでは更新されないため、ジェスチャー検出を行うには、"
-"何らかの加速度センサーのメソッドを常に呼び出す必要があります。通常、ジェスチャーは "
-":func:`microbit.sleep` による小さな遅延のあるループを使って検出できます。"
-
-#: ../../accelerometer.rst:79
+#: ../../accelerometer.rst:87
 msgid "Examples"
 msgstr "サンプルコード"
 
-#: ../../accelerometer.rst:81
+#: ../../accelerometer.rst:89
 msgid ""
 "A fortune telling magic 8-ball. Ask a question then shake the device for "
 "an answer."
 msgstr ""
 "マジック８ボール占いです。質問の後にデバイスをゆさぶってください。"
 
-#: ../../accelerometer.rst:84
+#: ../../accelerometer.rst:93
 msgid ""
 "# Magic 8 ball by Nicholas Tollervey. February 2016.\n"
 "#\n"
@@ -230,10 +238,11 @@ msgstr ""
 "        display.scroll(random.choice(answers))\n"
 "    sleep(10)"
 
-#: ../../accelerometer.rst:71
+#: ../../accelerometer.rst:95
 msgid "Simple Slalom. Move the device to avoid the obstacles."
 msgstr "単純なスラロームです。デバイスを動かして障害物を避けてください。"
 
+#: ../../accelerometer.rst:98
 msgid ""
 "# Simple Slalom by Larry Hastings, September 2015\n"
 "#\n"

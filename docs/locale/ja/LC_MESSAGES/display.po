@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2020-12-05 23:05+0900\n"
+"POT-Creation-Date: 2022-04-22 23:33+0900\n"
+"PO-Revision-Date: 2022-04-23 01:34+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -29,11 +29,11 @@ msgstr ""
 "このモジュールは、ボードの前面にある 5×5 LED ディスプレイを制御します。イメージ、"
 "アニメーション、テキストの表示に利用できます。"
 
-#: ../../display.rst:9
+#: ../../display.rst:10
 msgid ".. image:: scroll-hello.gif"
 msgstr ""
 
-#: ../../display.rst:11
+#: ../../display.rst:12
 msgid "Functions"
 msgstr "関数"
 
@@ -63,16 +63,16 @@ msgstr "イメージ ``image`` を表示します。"
 
 #: ../../display.rst:37
 msgid ""
-"If ``value`` is a string, float or integer, display letters/digits in "
-"sequence. Otherwise, if ``value`` is an iterable sequence of images, "
+"If ``image`` is a string, float or integer, display letters/digits in "
+"sequence. Otherwise, if ``image`` is an iterable sequence of images, "
 "display these images in sequence. Each letter, digit or image is shown "
 "with ``delay`` milliseconds between them."
 msgstr ""
-"``value`` が文字列、浮動小数点数、整数であれば、文字/数字を順番に表示します。"
-"``value`` がイメージの並びであれば、そのイメージの並びを順番に表示します。"
+"``image`` が文字列、浮動小数点数、整数であれば、文字/数字を順番に表示します。 "
+"``image`` がイメージの並びであれば、そのイメージの並びを順番に表示します。"
 "それぞれの文字、数字、イメージは ``delay`` ミリ秒間隔で表示されます。"
 
-#: ../../display.rst:41 ../../display.rst:61
+#: ../../display.rst:41 ../../display.rst:63
 msgid ""
 "If ``wait`` is ``True``, this function will block until the animation is "
 "finished, otherwise the animation will happen in the background."
@@ -80,7 +80,7 @@ msgstr ""
 "``wait`` が ``True`` である場合、アニメーションが終了するまで関数がブロックし、 "
 "``False`` の場合にはバックグラウンドで実行されます。"
 
-#: ../../display.rst:44 ../../display.rst:64
+#: ../../display.rst:44 ../../display.rst:66
 msgid "If ``loop`` is ``True``, the animation will repeat forever."
 msgstr "``loop`` が ``True`` である場合、アニメーションが永遠に繰り返します。"
 
@@ -110,11 +110,11 @@ msgstr ""
 
 #: ../../display.rst:59
 msgid ""
-"Scrolls ``value`` horizontally on the display. If ``value`` is an integer "
-"or float it is first converted to a string using ``str()``. The ``delay`` "
-"parameter controls how fast the text is scrolling."
+"Scrolls ``text`` horizontally on the display. If ``text`` is an integer "
+"or float it is first converted to a string using ``str()``. The ``delay``"
+" parameter controls how fast the text is scrolling."
 msgstr ""
-"ディスプレィ上に ``value`` を水平方向にスクロールさせます。``value`` が整数か"
+"ディスプレィ上に ``text`` を水平方向にスクロールさせます。``text`` が整数か"
 "浮動小数点数であれば、表示の前に ``str()`` を使って文字列に変換します。"
 "``delay`` パラメータはテキストのスクロール速度を制御します。"
 
@@ -160,7 +160,7 @@ msgstr ""
 "ディスプレイの LED を逆バイアスモードで利用して、ディスプレイのまわりの光量を検出します。"
 "戻り値は明度を表す 0 から 255 までの整数値で、値が大きいほど強い明度を意味します。"
 
-#: ../../display.rst:94
+#: ../../display.rst:95
 msgid "Example"
 msgstr "サンプルコード"
 
