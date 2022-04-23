@@ -85,10 +85,6 @@ msgstr ""
 "micro:bit のプログラミングには `micro:bit Python エディタ "
 "<https://python.microbit.org>`_ を使ってみてください。"
 
-#: ../../index.rst:31
-msgid ".. image:: comic.png"
-msgstr ".. image:: comic-ja.png"
-
 #: ../../index.rst:38
 msgid ""
 "The MicroPython API will not work in the MakeCode editor, as this uses a "
@@ -100,6 +96,10 @@ msgstr ""
 "MicroPython と MakeCode にある Python は `別のもので互換がない "
 "<https://support.microbit.org/support/solutions/articles/19000111744"
 "-makecode-python-and-micropython>`_ ためです。"
+
+#: ../../index.rst:37
+msgid ".. image:: comic.png"
+msgstr ".. image:: comic-ja.png"
 
 #: ../../index.rst:38
 msgid "Projects related to MicroPython on the BBC micro:bit include:"

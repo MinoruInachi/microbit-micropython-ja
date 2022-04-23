@@ -114,7 +114,7 @@ msgid ""
 "or float it is first converted to a string using ``str()``. The ``delay``"
 " parameter controls how fast the text is scrolling."
 msgstr ""
-"ディスプレィ上に ``text`` を水平方向にスクロールさせます。``text`` が整数か"
+"ディスプレィ上に ``text`` を水平方向にスクロールさせます。 ``text`` が整数か"
 "浮動小数点数であれば、表示の前に ``str()`` を使って文字列に変換します。"
 "``delay`` パラメータはテキストのスクロール速度を制御します。"
 

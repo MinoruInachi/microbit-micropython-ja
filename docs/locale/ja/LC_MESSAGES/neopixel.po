@@ -128,8 +128,8 @@ msgid ""
 "RGBW, this is is ``4`` rather than the default of ``3`` for RGB and GRB."
 msgstr ""
 "端子 ``pin`` を介して制御する ``n`` 個の neopixel LED を持つストリップを初期化します。"
-"RGBW neopixel もサポートするため、ピクセルあたりのバイト数(``bpp``)を示す第３引数を
-``NeoPixel`` に渡せるようになっています。"RGBW の場合は bpp に ``4`` を指定します。"
+"RGBW neopixel もサポートするため、ピクセルあたりのバイト数(``bpp``)を示す第３引数を "
+"``NeoPixel`` に渡せるようになっています。"RGBW の場合は bpp に ``4`` を指定します。"
 "デフォルトの bpp は RGB と GRB を示す ``3`` です。"
 
 #: ../../neopixel.rst:63
@@ -139,11 +139,11 @@ msgid ""
 "between 0-255 as a tuple. For example, in RGB, ``(255,255,255)`` is "
 "white. In RGBW, ``(255,255,255,0)`` or ``(0,0,0,255)`` is white."
 msgstr ""
-各ピクセルは(0から始まる)位置によってアドレス指定されます。"
+"各ピクセルは(0から始まる)位置によってアドレス指定されます。"
 "NeoPixel にはタプルとして0-255 の RGB (赤, 緑, 青) / "
 "RGBW (赤, 緑, 青, 白) が与えられます。たとえば "
 "``(255,255,255)`` は白になります。白を RGBW で指定する場合は "
-``(255,255,255,0)`` または ``(0,0,0,255)`` となります。"
+"``(255,255,255,0)`` または ``(0,0,0,255)`` となります。"
 
 #: ../../neopixel.rst:70
 msgid "Clear all the pixels."

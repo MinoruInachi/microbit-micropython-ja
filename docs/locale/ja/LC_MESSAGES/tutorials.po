@@ -1397,7 +1397,7 @@ msgid ""
 msgstr ""
 "MicroPython またはエディタで何かうまくいかない場合、 "
 "`support.microbit.org <https://support.microbit.org>`_ で "
-"Micro:bit Educational Foundation チームのサポートを受けれます。"
+"Micro:bit Educational Foundation チームのサポートを受けられます。"
 
 #: ../../tutorials/introduction.rst:16
 msgid "Tutorials"

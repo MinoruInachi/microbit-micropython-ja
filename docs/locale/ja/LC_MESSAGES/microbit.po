@@ -60,6 +60,7 @@ msgid "Restart the board."
 msgstr "ボードを再起動します。"
 
 #: ../../microbit.rst
+#, fuzzy
 msgid "returns"
 msgstr "戻り値"
 
