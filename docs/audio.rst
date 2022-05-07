@@ -3,12 +3,14 @@ Audio
 
 .. py:module:: audio
 
-This module allows you to play your own sounds. If you are using a micro:bit
-**V2**, ``audio`` is also part of the ``microbit`` module.
+This module allows you play sounds with the micro:bit.
 
 By default sound output will be via the edge connector on pin 0 and the
 :doc:`built-in speaker <speaker>` **V2**. You can connect wired headphones or
 a speaker to pin 0 and GND on the edge connector to hear the sounds.
+
+The ``audio`` module can be imported as ``import audio`` or accessed via
+the ``microbit`` module as ``microbit.audio``.
 
 Functions
 =========
@@ -17,29 +19,26 @@ Functions
 
     Play the source to completion.
 
-    * **source**: ``Sound`` - The ``microbit`` module contains a list of
+    :param source: ``Sound``: The ``microbit`` module contains a list of
       built-in sounds that your can pass to ``audio.play()``.
 
-    * **source**: ``AudioFrame`` - The source agrument can also be an iterable
+      ``AudioFrame``: The source agrument can also be an iterable
       of ``AudioFrame`` elements as described below.
-
-    * **wait**: If ``wait`` is ``True``, this function will block until the
-      source is exhausted.
-
-    * **pin**: An optional argument to specify the output pin can be used to
-    override the default of ``pin0``. If we do not want any sound to play
-    we can use ``pin=None``.
-
-    * **return_pin**: specifies a differential edge connector pin to connect
+    :param wait: If ``wait`` is ``True``, this function will block until the
+        source is exhausted.
+    :param pin: An optional argument to specify the output pin can be used to
+      override the default of ``pin0``. If we do not want any sound to play
+      we can use ``pin=None``.
+    :param return_pin: specifies a differential edge connector pin to connect
       to an external speaker instead of ground. This is ignored for the **V2**
       revision.
 
 .. py:function:: is_playing()
 
-    Return ``True`` if audio is playing, otherwise return ``False``.
+    :returns: ``True`` if audio is playing, otherwise returns ``False``.
 
 .. py:function:: stop()
-    
+
     Stops all audio playback.
 
 Classes
@@ -52,6 +51,14 @@ Classes
     (whole number between 0 and 255).
 
     It takes just over 4 ms to play a single frame.
+
+    .. py:function:: copyfrom(other)
+
+        Overwrite the data in this ``AudioFrame`` with the data from another
+        ``AudioFrame`` instance.
+
+        :param other: ``AudioFrame`` instance from which to copy the data.
+
 
 Using audio
 ===========
@@ -83,7 +90,8 @@ Technical Details
     You don't need to understand this section to use the ``audio`` module.
     It is just here in case you wanted to know how it works.
 
-The ``audio`` module consumes ``AudioFrame`` samples at 7812.5 Hz, and uses
+The ``audio`` module can consumes an iterable (sequence, like list or tuple, or
+generator) of ``AudioFrame`` instances, each 32 samples at 7812.5 Hz, and uses
 linear interpolation to output a PWM signal at 32.5 kHz, which gives tolerable
 sound quality.
 

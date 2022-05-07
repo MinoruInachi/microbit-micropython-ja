@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2020, Multiple authors
+# Copyright (C) 2015-2022, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-22 23:33+0900\n"
-"PO-Revision-Date: 2022-04-23 01:23+0900\n"
+"POT-Creation-Date: 2022-05-07 12:31+0900\n"
+"PO-Revision-Date: 2022-05-07 21:16+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -22,14 +22,10 @@ msgid "Audio"
 msgstr "オーディオ"
 
 #: ../../audio.rst:6
-msgid ""
-"This module allows you to play your own sounds. If you are using a "
-"micro:bit **V2**, ``audio`` is also part of the ``microbit`` module."
-msgstr ""
-"このモジュールはサウンドを再生できるようにします。 micro:bit **V2** であれば、 "
-"``audio`` は ``microbit`` モジュールの一部にもなっています。"
+msgid "This module allows you play sounds with the micro:bit."
+msgstr "このモジュールは micro:bit でサウンドを再生できるようにします。 "
 
-#: ../../audio.rst:9
+#: ../../audio.rst:8
 msgid ""
 "By default sound output will be via the edge connector on pin 0 and the "
 ":doc:`built-in speaker <speaker>` **V2**. You can connect wired "
@@ -40,60 +36,74 @@ msgstr ""
 ":doc:`内蔵スピーカー <speaker>` に出力します。端子 0 と GND に"
 "有線ヘッドフォンやスピーカーを繋いでサウンドを鳴らせます。"
 
-#: ../../audio.rst:14
+#: ../../audio.rst:12
+msgid ""
+"The ``audio`` module can be imported as ``import audio`` or accessed via "
+"the ``microbit`` module as ``microbit.audio``."
+msgstr ""
+"``audio`` モジュールは ``import audio`` でインポートするか、 ``microbit`` モジュールの "
+"``microbit.audio`` にアクセスすることで利用できるようになります。"
+
+#: ../../audio.rst:16
 msgid "Functions"
 msgstr "関数"
 
-#: ../../audio.rst:18
+#: ../../audio.rst:20
 msgid "Play the source to completion."
 msgstr "音源を最後まで再生します。"
 
-#: ../../audio.rst:20
+#: ../../audio.rst
+#, fuzzy
+msgid "param"
+msgstr "パラメータ"
+
+#: ../../audio.rst:22
 msgid ""
-"**source**: ``Sound`` - The ``microbit`` module contains a list of built-"
-"in sounds that your can pass to ``audio.play()``."
+"``Sound``: The ``microbit`` module contains a list of built-in sounds "
+"that your can pass to ``audio.play()``."
 msgstr ""
-"**source**: ``Sound`` - ``microbit`` モジュールには ``audio.play()`` に"
+"**source**: ``Sound``: ``microbit`` モジュールには ``audio.play()`` に"
 "渡すことのできる内蔵のサウンドがあります。"
 
-#: ../../audio.rst:23
+#: ../../audio.rst:25
 msgid ""
-"**source**: ``AudioFrame`` - The source agrument can also be an iterable "
-"of ``AudioFrame`` elements as described below."
+"``AudioFrame``: The source agrument can also be an iterable of "
+"``AudioFrame`` elements as described below."
 msgstr ""
-"**source**: ``AudioFrame`` - 引数 source には、後述する ``AudioFrame`` を"
+"``AudioFrame``: 引数 source には、後述する ``AudioFrame`` を"
 "要素とするイテラブル(iterable)オブジェクトを渡すこともできます。"
 
-#: ../../audio.rst:26
+#: ../../audio.rst:27
 msgid ""
-"**wait**: If ``wait`` is ``True``, this function will block until the "
-"source is exhausted."
+"If ``wait`` is ``True``, this function will block until the source is "
+"exhausted."
 msgstr ""
-"**wait**: ``wait`` が ``True`` の場合、音源の再生が終わるまでこの関数から戻りません。"
+"``wait`` が ``True`` の場合、音源の再生が終わるまでこの関数から戻りません。"
 
 #: ../../audio.rst:29
-msgid "**pin**: An optional argument to specify the output pin can be used to"
+msgid ""
+"An optional argument to specify the output pin can be used to override "
+"the default of ``pin0``. If we do not want any sound to play we can use "
+"``pin=None``."
 msgstr ""
 "**pin**: 出力ピンをデフォルトの ``pin0`` から変えるためのオプション引数です。"
-
-#: ../../audio.rst:30
-msgid ""
-"override the default of ``pin0``. If we do not want any sound to play we "
-"can use ``pin=None``."
-msgstr ""
 "音を鳴らしたくない場合は ``pin=None`` を指定します。"
 
-#: ../../audio.rst:33
+#: ../../audio.rst:32
 msgid ""
-"**return_pin**: specifies a differential edge connector pin to connect to"
-" an external speaker instead of ground. This is ignored for the **V2** "
-"revision."
+"specifies a differential edge connector pin to connect to an external "
+"speaker instead of ground. This is ignored for the **V2** revision."
 msgstr ""
-"**return_pin**: スピーカの２本ある線の一方を接続する先である GND を別の端子に"
-"したい場合に使います。これは **V2** では無視されます。"
+"スピーカの２本ある線の一方を接続する先である GND を別の端子に"
+"したい場合に使います。 **V2** ではこの指定を無視します。"
 
-#: ../../audio.rst:39
-msgid "Return ``True`` if audio is playing, otherwise return ``False``."
+#: ../../audio.rst
+#, fuzzy
+msgid "returns"
+msgstr "戻り値"
+
+#: ../../audio.rst:38
+msgid "``True`` if audio is playing, otherwise returns ``False``."
 msgstr "オーディオを再生中であれば ``True``、再生していなければ ``False`` を返します。"
 
 #: ../../audio.rst:43
@@ -117,10 +127,21 @@ msgid "It takes just over 4 ms to play a single frame."
 msgstr "１フレームを再生するのには４ミリ秒以上かかります。"
 
 #: ../../audio.rst:57
+msgid ""
+"Overwrite the data in this ``AudioFrame`` with the data from another "
+"``AudioFrame`` instance."
+msgstr ""
+"この ``AudioFrame`` のデータを、別の ``AudioFrame`` インスタンスのデータで上書きします。"
+
+#: ../../audio.rst:60
+msgid "``AudioFrame`` instance from which to copy the data."
+msgstr "コピーするデータを持つ ``AudioFrame`` インスタンス。"
+
+#: ../../audio.rst:64
 msgid "Using audio"
 msgstr "オーディオの使い方"
 
-#: ../../audio.rst:59
+#: ../../audio.rst:66
 msgid ""
 "You will need a sound source, as input to the ``play`` function. You can "
 "use the built-in sounds **V2** from the ``microbit`` module, "
@@ -132,59 +153,59 @@ msgstr ""
 "があります。音源を自作することもでき、 ``examples/waveforms.py`` に"
 "自作の例があります。"
 
-#: ../../audio.rst:64
+#: ../../audio.rst:71
 msgid "Built-in sounds **V2**"
 msgstr "**V2** に内蔵のサウンド"
 
-#: ../../audio.rst:66
+#: ../../audio.rst:73
 msgid "The built-in sounds can be called using ``audio.play(Sound.NAME)``."
 msgstr "以下の内蔵のサウンドは ``audio.play(Sound.NAME)`` のようにして再生できます。"
 
-#: ../../audio.rst:68
+#: ../../audio.rst:75
 msgid "``Sound.GIGGLE``"
 msgstr ""
 
-#: ../../audio.rst:69
+#: ../../audio.rst:76
 msgid "``Sound.HAPPY``"
 msgstr ""
 
-#: ../../audio.rst:70
+#: ../../audio.rst:77
 msgid "``Sound.HELLO``"
 msgstr ""
 
-#: ../../audio.rst:71
+#: ../../audio.rst:78
 msgid "``Sound.MYSTERIOUS``"
 msgstr ""
 
-#: ../../audio.rst:72
+#: ../../audio.rst:79
 msgid "``Sound.SAD``"
 msgstr ""
 
-#: ../../audio.rst:73
+#: ../../audio.rst:80
 msgid "``Sound.SLIDE``"
 msgstr ""
 
-#: ../../audio.rst:74
+#: ../../audio.rst:81
 msgid "``Sound.SOARING``"
 msgstr ""
 
-#: ../../audio.rst:75
+#: ../../audio.rst:82
 msgid "``Sound.SPRING``"
 msgstr ""
 
-#: ../../audio.rst:76
+#: ../../audio.rst:83
 msgid "``Sound.TWINKLE``"
 msgstr ""
 
-#: ../../audio.rst:77
+#: ../../audio.rst:84
 msgid "``Sound.YAWN``"
 msgstr ""
 
-#: ../../audio.rst:80
+#: ../../audio.rst:87
 msgid "Technical Details"
 msgstr "技術的な詳細"
 
-#: ../../audio.rst:83
+#: ../../audio.rst:90
 msgid ""
 "You don't need to understand this section to use the ``audio`` module. It"
 " is just here in case you wanted to know how it works."
@@ -192,7 +213,7 @@ msgstr ""
 "``audio`` モジュールを使うのにこのセクションを理解する必要はありません。"
 "このモジュールがどのように機能するのか知りたい方のためにあります。"
 
-#: ../../audio.rst:86
+#: ../../audio.rst:93
 msgid ""
 "The ``audio`` module consumes ``AudioFrame`` samples at 7812.5 Hz, and "
 "uses linear interpolation to output a PWM signal at 32.5 kHz, which gives"
@@ -202,7 +223,7 @@ msgstr ""
 "線形補間を使って 32.5 kHz の PWM 信号を出力します。これにより、"
 "許容できる音質が得られます。"
 
-#: ../../audio.rst:90
+#: ../../audio.rst:98
 msgid ""
 "The function ``play`` fully copies all data from each ``AudioFrame`` "
 "before it calls ``next()`` for the next frame, so a sound source can use "
@@ -212,7 +233,7 @@ msgstr ""
 "``AudioFrame`` からすべてのデータを完全にコピーするので、音源は同じ "
 "``AudioFrame`` を繰り返し使用できます。"
 
-#: ../../audio.rst:94
+#: ../../audio.rst:102
 msgid ""
 "The ``audio`` module has an internal 64 sample buffer from which it reads"
 " samples. When reading reaches the start or the mid-point of the buffer, "
@@ -227,7 +248,7 @@ msgstr ""
 "するのに 4ms 以下かかり、信頼できる操作のために 2ms 以下を要する必要があることを"
 "意味します(32000 サイクルなので十分です)。
 
-#: ../../audio.rst:103
+#: ../../audio.rst:111
 msgid "Example"
 msgstr "サンプルコード"
 

@@ -121,7 +121,7 @@ Functions
     new frequency is set or ``stop`` is called (see below).
 
 .. py:function:: stop(pin=pin0)
-    
+
     Stops all music playback on the built-in speaker and any pin outputting
     sound. An optional argument can be provided to specify a pin, eg.
     ``music.stop(pin1)``.

@@ -1,16 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2020, Multiple authors
+# Copyright (C) 2015-2022, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-22 23:33+0900\n"
-"PO-Revision-Date: 2022-04-23 10:27+0900\n"
+"POT-Creation-Date: 2022-05-07 12:31+0900\n"
+"PO-Revision-Date: 2022-05-07 21:28+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -70,32 +70,47 @@ msgstr "ボードの電源が入ったか再起動してからの経過時間(�
 
 #: ../../microbit.rst:37
 msgid ""
+"(**V2 only**) Configure the output volume of the micro:bit speaker and "
+"pins::"
+msgstr ""
+"(**V2 のみ**) micro:bit スピーカーとピンの出力ボリュームを設定します。"
+
+#: ../../microbit.rst:40
+msgid "microbit.set_volume(127)"
+msgstr ""
+
+#: ../../microbit.rst:42
+msgid "An integer between 0 and 255 to set the volume."
+msgstr "設定するボリュームを 0 から 255 までの間の整数で指定します。"
+
+#: ../../microbit.rst:47
+msgid ""
 "Wait for ``n`` milliseconds. One second is 1000 milliseconds, so "
 "``microbit.sleep(1000)`` will pause the execution for one second."
 msgstr ""
 "``n`` ミリ秒だけ待機します。1 秒は 1000 ミリ秒なので、 "
 "``microbit.sleep(1000)`` は 1 秒間実行を一時停止します。"
 
-#: ../../microbit.rst:40
+#: ../../microbit.rst:50
 msgid ""
 "An integer or floating point number indicating the number of milliseconds"
 " to wait."
 msgstr ""
 "待機するミリ秒を示す整数または浮動小数点数。"
 
-#: ../../microbit.rst:46
+#: ../../microbit.rst:56
 msgid "An integer with the temperature of the micro:bit in degrees Celcius."
 msgstr "micro:bit の温度(摂氏)を示す整数。"
 
-#: ../../microbit.rst:51
+#: ../../microbit.rst:61
 msgid "Attributes"
 msgstr "属性"
 
-#: ../../microbit.rst:61
+#: ../../microbit.rst:71
 msgid "Classes"
 msgstr "クラス"
 
-#: ../../microbit.rst:71
+#: ../../microbit.rst:81
 msgid "Modules"
 msgstr "モジュール"
 

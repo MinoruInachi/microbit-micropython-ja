@@ -149,8 +149,8 @@ Each of these pins are instances of the ``MicroBitPin`` class, which offers the 
     # Sets the touch mode. Value can be either RESISTIVE or CAPACITIVE
     pin.set_touch_mode(value)
 
-Except in the case of the pins marked **V2**, which offers the following API::
-    
+Except in the case of the pins marked **V2**, which offers the following API:
+
 pin_logo::
 
     # returns boolean for logo touch pin
@@ -158,9 +158,8 @@ pin_logo::
     # Sets the touch mode. Value can be either RESISTIVE or CAPACITIVE
     pin.set_touch_mode(value)
 
-pin_speaker:
-    
-As above ``MicroBitPin`` class, but does not include ``pin.is_touched()``.
+pin_speaker, as the above ``MicroBitPin`` class, but does not include
+``pin.is_touched()``.
 
 Images
 ------
@@ -259,6 +258,7 @@ Images API::
 ``Image.SKULL``
 ``Image.UMBRELLA``
 ``Image.SNAKE``
+``Image.SCISSORS``
 
 Clock:
 

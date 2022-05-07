@@ -19,7 +19,7 @@ On the latest micro:bit **V2** the micro:bit logo can also be used as a touch
 input.
 
 In MicroPython, each pin on the BBC micro:bit is represented by an *object*
-called ``pinN``, where ``N`` is the number pf the pin. 
+called ``pinN``, where ``N`` is the number pf the pin.
 
 For example, to use the pin labelled 0 (zero), you can use the object called
 ``pin0`` in your script. The logo pin **V2** uses ``pin_logo``.
@@ -66,7 +66,7 @@ Bleeps and Bloops
 +++++++++++++++++
 
 The simplest thing we can attach to the micro:bit is a Piezo buzzer. There are
-two types of piezo buzzers. The simplest type to use are called active buzzers. 
+two types of piezo buzzers. The simplest type to use are called active buzzers.
 Active buzzers contain an oscillator that produces a tone at a predetermined
 pitch when a current is passed through them.  Passive buzzers require an 
 oscillating current to be passed through them to produce a tone at the frequency
