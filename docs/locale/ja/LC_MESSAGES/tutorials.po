@@ -4023,8 +4023,8 @@ msgid ""
 "Eurovision any time soon)."
 msgstr ""
 "``pitch`` 設定の変更と ``sing`` 関数の呼出しによって、デバイスを歌えるように"
-"できます(ただし、Eurovision (訳注: 欧州放送連合の音楽コンテスト)で勝てるとは"
-"限りません)。"
+"できます(ただし、Eurovision で勝てるとは限りません)。"
+"(訳注: Eurovision は欧州放送連合の音楽コンテストです)"
 
 #: ../../tutorials/speech.rst:159
 msgid "The mapping from pitch numbers to musical notes is shown below:"
