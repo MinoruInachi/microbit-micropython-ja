@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-23 17:22+0900\n"
-"PO-Revision-Date: 2022-04-23 18:57+0900\n"
+"POT-Creation-Date: 2022-05-15 09:57+0900\n"
+"PO-Revision-Date: 2022-05-15 10:36+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,13 +25,25 @@ msgstr "オーディオ"
 #: ../../audio.rst:6
 msgid ""
 "This module allows you play sounds from a speaker attached to the "
-"Microbit. In order to use the audio module you will need to provide a "
-"sound source."
+"micro:bit."
 msgstr ""
 "このモジュールは Microbit に接続されているスピーカーからサウンドを再生できる"
-"ようにします。オーディオモジュールを使用するには、音源を用意する必要があります。"
+"ようにします。"
 
-#: ../../audio.rst:9
+#: ../../audio.rst:8
+msgid ""
+"The ``audio`` module can be imported as ``import audio`` or accessed via "
+"the ``microbit`` module as ``microbit.audio``."
+msgstr ""
+"``audio`` モジュールは ``import audio`` でインポートするか、 ``microbit`` "
+"モジュールの ``microbit.audio`` にアクセスすることで利用できるようになります。"
+
+#: ../../audio.rst:11
+msgid "In order to use the audio module you will need to provide a sound source."
+msgstr ""
+"オーディオモジュールを使用するには、音源を用意する必要があります。"
+
+#: ../../audio.rst:13
 msgid ""
 "A sound source is an iterable (sequence, like list or tuple, or a "
 "generator) of frames, each of 32 samples. The ``audio`` modules plays "
@@ -42,45 +54,39 @@ msgstr ""
 "個々のフレームは３２個のサンプルを持ちます。この ``audio`` モジュールは、毎秒 7812.5 "
 "サンプルのレートでサンプルを再生します。つまり、最大 3.9 kHzの周波数を再生できます。"
 
-#: ../../audio.rst:15
+#: ../../audio.rst:19
 msgid "Functions"
 msgstr "関数"
 
-#: ../../audio.rst:19
+#: ../../audio.rst:23
 msgid "Play the source to completion."
 msgstr "音源を最後まで再生します。"
 
-#: ../../audio.rst:21
-msgid ""
-"``source`` is an iterable, each element of which must be an "
-"``AudioFrame``."
+#: ../../audio.rst:25
+msgid "An iterable sound source, each element of which must be an ``AudioFrame``."
 msgstr ""
-"``source`` はイテレーティブで、その各項目は ``AudioFrame`` である"
-"必要があります。"
+"イテレーティブな音源。各項目は ``AudioFrame`` である必要があります。"
 
-#: ../../audio.rst:23
+#: ../../audio.rst:27
 msgid ""
 "If ``wait`` is ``True``, this function will block until the source is "
 "exhausted."
 msgstr ""
 "``wait`` が ``True`` の場合、音源の再生が終わるまでこの関数から戻りません。"
 
-#: ../../audio.rst:25
-msgid "``pin`` specifies which pin the speaker is connected to."
-msgstr "``pin`` にはスピーカを接続した端子を指定します。"
+#: ../../audio.rst:29
+msgid "Specifies which pin the speaker is connected to."
+msgstr "スピーカを接続した端子を指定します。"
 
-#: ../../audio.rst:27
-msgid ""
-"``return_pin`` specifies a differential pin to connect to the speaker "
-"instead of ground."
-msgstr "``return_pin`` には、スピーカのもう一方をつなぐ先として GND の代わりに"
-"接続する端子を指定します。"
+#: ../../audio.rst:30
+msgid "Specifies a differential pin to connect to the speaker instead of ground."
+msgstr "スピーカのもう一方をつなぐ先として GND の代わりに接続する端子を指定します。"
 
-#: ../../audio.rst:31
+#: ../../audio.rst:34
 msgid "Classes"
 msgstr "クラス"
 
-#: ../../audio.rst:36
+#: ../../audio.rst:39
 msgid ""
 "An ``AudioFrame`` object is a list of 32 samples each of which is an "
 "unsigned byte (whole number between 0 and 255)."
@@ -88,15 +94,26 @@ msgstr ""
 "``AudioFrame`` オブジェクトは、３２個の項目のリストです。"
 "各項目の値は符号なしバイト(0と255の間の整数)です。"
 
-#: ../../audio.rst:39
+#: ../../audio.rst:42
 msgid "It takes just over 4 ms to play a single frame."
 msgstr "１フレームを再生するのには４ミリ秒以上かかります。"
 
-#: ../../audio.rst:42
+#: ../../audio.rst:46
+msgid ""
+"Overwrite the data in this ``AudioFrame`` with the data from another "
+"``AudioFrame`` instance."
+msgstr ""
+"この ``AudioFrame`` のデータを、別の ``AudioFrame`` インスタンスのデータで上書きします。"
+
+#: ../../audio.rst:49
+msgid "``AudioFrame`` instance from which to copy the data."
+msgstr "コピーするデータを持つ ``AudioFrame`` インスタンス。"
+
+#: ../../audio.rst:53
 msgid "Using audio"
 msgstr "オーディオの使い方"
 
-#: ../../audio.rst:44
+#: ../../audio.rst:55
 msgid ""
 "You will need a sound source, as input to the ``play`` function. You can "
 "generate your own, like in ``examples/waveforms.py``."
@@ -104,11 +121,11 @@ msgstr ""
 "``play`` 関数への入力として音源が必要になります。音源を自作する例は "
 "``examples/waveforms.py`` にあります。"
 
-#: ../../audio.rst:49
+#: ../../audio.rst:60
 msgid "Technical Details"
 msgstr "技術的な詳細"
 
-#: ../../audio.rst:52
+#: ../../audio.rst:63
 msgid ""
 "You don't need to understand this section to use the ``audio`` module. It"
 " is just here in case you wanted to know how it works."
@@ -116,16 +133,19 @@ msgstr ""
 "``audio`` モジュールを使うのにこのセクションを理解する必要はありません。"
 "このモジュールがどのように機能するのか知りたい方のためにあります。"
 
-#: ../../audio.rst:55
+#: ../../audio.rst:66
 msgid ""
-"The ``audio`` module consumes samples at 7812.5 Hz, and uses linear "
-"interpolation to output a PWM signal at 32.5 kHz, which gives tolerable "
-"sound quality."
+"The ``audio`` module can consumes an iterable (sequence, like list or "
+"tuple, or generator) of ``AudioFrame`` instances, each 32 samples at "
+"7812.5 Hz, and uses linear interpolation to output a PWM signal at 32.5 "
+"kHz, which gives tolerable sound quality."
 msgstr ""
-"``audio`` モジュールは 7812.5 Hz のサンプルを消費し、線形補間を使用して 32.5 kHz "
-"の PWM 信号を出力します。これにより、許容できる音質が得られます。"
+"``audio`` モジュールは ``AudioFrame`` インスタンスのイテレーティブ"
+"(リストまたはタプルなどのシーケンス、あるいはジェネレータ)を消費します。"
+"7812.5 Hz で各 32 サンプルを消費し、線形補間を使って 32.5 kHz の "
+"PWM 信号を出力します。これにより、許容できる音質が得られます。"
 
-#: ../../audio.rst:58
+#: ../../audio.rst:71
 msgid ""
 "The function ``play`` fully copies all data from each ``AudioFrame`` "
 "before it calls ``next()`` for the next frame, so a sound source can use "
@@ -135,7 +155,7 @@ msgstr ""
 "``AudioFrame`` からすべてのデータを完全にコピーするので、音源は同じ "
 "``AudioFrame`` を繰り返し使用できます。"
 
-#: ../../audio.rst:62
+#: ../../audio.rst:75
 msgid ""
 "The ``audio`` module has an internal 64 sample buffer from which it reads"
 " samples. When reading reaches the start or the mid-point of the buffer, "

@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2016, Multiple authors
+# Copyright (C) 2015-2022, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: 2018-12-16 18:19+0900\n"
+"POT-Creation-Date: 2022-05-15 09:57+0900\n"
+"PO-Revision-Date: 2022-05-15 10:51+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../microbit_micropython_api.rst:2
 msgid "micro:bit Micropython API"
@@ -139,8 +139,8 @@ msgstr ""
 "button.get_presses()"
 
 #: ../../microbit_micropython_api.rst:53
-msgid "The LED display"
-msgstr "LED ディスプレイ"
+msgid "Display"
+msgstr "ディスプレイ"
 
 #: ../../microbit_micropython_api.rst:55
 msgid "The LED display is exposed via the `display` object::"
@@ -285,23 +285,11 @@ msgstr ""
 msgid "Images"
 msgstr "イメージ"
 
-#: ../../microbit_micropython_api.rst:113
-msgid ""
-"You don't always need to create one of these yourself - you can access "
-"the image shown on the display directly with `display.image`. "
-"`display.image` is just an instance of `Image`, so you can use all of the"
-" same methods."
-msgstr ""
-"いつも自分でイメージを作成する必要はありません。 ``display.image`` "
-"を使用してディスプレイに表示されるイメージに直接アクセスできます。 "
-"``display.image`` は Image の単なるインスタンスなので、同じメソッドをすべて"
-"使用できます。"
-
-#: ../../microbit_micropython_api.rst:117
+#: ../../microbit_micropython_api.rst:111
 msgid "Images API::"
 msgstr "イメージ API"
 
-#: ../../microbit_micropython_api.rst:119
+#: ../../microbit_micropython_api.rst:113
 msgid ""
 "# creates an empty 5x5 image\n"
 "image = Image()\n"
@@ -345,64 +333,7 @@ msgid ""
 "image + image\n"
 "# returns a new image created by multiplying the brightness of each pixel"
 " by n\n"
-"image * n\n"
-"\n"
-"# built-in images.\n"
-"Image.HEART\n"
-"Image.HEART_SMALL\n"
-"Image.HAPPY\n"
-"Image.SMILE\n"
-"Image.SAD\n"
-"Image.CONFUSED\n"
-"Image.ANGRY\n"
-"Image.ASLEEP\n"
-"Image.SURPRISED\n"
-"Image.SILLY\n"
-"Image.FABULOUS\n"
-"Image.MEH\n"
-"Image.YES\n"
-"Image.NO\n"
-"Image.CLOCK12 # clock at 12 o' clock\n"
-"Image.CLOCK11\n"
-"... # many clocks (Image.CLOCKn)\n"
-"Image.CLOCK1 # clock at 1 o'clock\n"
-"Image.ARROW_N\n"
-"... # arrows pointing N, NE, E, SE, S, SW, W, NW "
-"(microbit.Image.ARROW_direction)\n"
-"Image.ARROW_NW\n"
-"Image.TRIANGLE\n"
-"Image.TRIANGLE_LEFT\n"
-"Image.CHESSBOARD\n"
-"Image.DIAMOND\n"
-"Image.DIAMOND_SMALL\n"
-"Image.SQUARE\n"
-"Image.SQUARE_SMALL\n"
-"Image.RABBIT\n"
-"Image.COW\n"
-"Image.MUSIC_CROTCHET\n"
-"Image.MUSIC_QUAVER\n"
-"Image.MUSIC_QUAVERS\n"
-"Image.PITCHFORK\n"
-"Image.XMAS\n"
-"Image.PACMAN\n"
-"Image.TARGET\n"
-"Image.TSHIRT\n"
-"Image.ROLLERSKATE\n"
-"Image.DUCK\n"
-"Image.HOUSE\n"
-"Image.TORTOISE\n"
-"Image.BUTTERFLY\n"
-"Image.STICKFIGURE\n"
-"Image.GHOST\n"
-"Image.SWORD\n"
-"Image.GIRAFFE\n"
-"Image.SKULL\n"
-"Image.UMBRELLA\n"
-"Image.SNAKE\n"
-"# built-in lists - useful for animations, e.g. "
-"display.show(Image.ALL_CLOCKS)\n"
-"Image.ALL_CLOCKS\n"
-"Image.ALL_ARROWS"
+"image * n"
 msgstr ""
 "# 空の 5x5 イメージを作成。\n"
 "image = Image()\n"
@@ -442,74 +373,71 @@ msgstr ""
 "# ２つのイメージを重ね合わせた新しいイメージを返します。\n"
 "image + image\n"
 "# 各ピクセルの照度に n を掛けた新しいイメージを返します。\n"
-"image * n\n"
-"\n"
-"# 内蔵イメージ。\n"
-"Image.HEART\n"
-"Image.HEART_SMALL\n"
-"Image.HAPPY\n"
-"Image.SMILE\n"
-"Image.SAD\n"
-"Image.CONFUSED\n"
-"Image.ANGRY\n"
-"Image.ASLEEP\n"
-"Image.SURPRISED\n"
-"Image.SILLY\n"
-"Image.FABULOUS\n"
-"Image.MEH\n"
-"Image.YES\n"
-"Image.NO\n"
-"Image.CLOCK12 # 12 時を示す時計\n"
-"Image.CLOCK11\n"
-"... # 多くの時計イメージ (Image.CLOCKn)\n"
-"Image.CLOCK1 # clock at 1 o'clock\n"
-"Image.ARROW_N\n"
-"... # 方角を示す矢印 N, NE, E, SE, "
-"S, SW, W, NW (microbit.Image.ARROW_direction)"
-"\n"
-"Image.ARROW_NW\n"
-"Image.TRIANGLE\n"
-"Image.TRIANGLE_LEFT\n"
-"Image.CHESSBOARD\n"
-"Image.DIAMOND\n"
-"Image.DIAMOND_SMALL\n"
-"Image.SQUARE\n"
-"Image.SQUARE_SMALL\n"
-"Image.RABBIT\n"
-"Image.COW\n"
-"Image.MUSIC_CROTCHET\n"
-"Image.MUSIC_QUAVER\n"
-"Image.MUSIC_QUAVERS\n"
-"Image.PITCHFORK\n"
-"Image.XMAS\n"
-"Image.PACMAN\n"
-"Image.TARGET\n"
-"Image.TSHIRT\n"
-"Image.ROLLERSKATE\n"
-"Image.DUCK\n"
-"Image.HOUSE\n"
-"Image.TORTOISE\n"
-"Image.BUTTERFLY\n"
-"Image.STICKFIGURE\n"
-"Image.GHOST\n"
-"Image.SWORD\n"
-"Image.GIRAFFE\n"
-"Image.SKULL\n"
-"Image.UMBRELLA\n"
-"Image.SNAKE\n"
-"# 内蔵のリスト - アニメーションに便利。例： display.show(Image.ALL_CLOCKS)\n"
-"Image.ALL_CLOCKS\n"
-"Image.ALL_ARROWS"
+"image * n"
 
-#: ../../microbit_micropython_api.rst:216
-msgid "The accelerometer"
+#: ../../microbit_micropython_api.rst:154
+msgid "**Built-in images**"
+msgstr "**内蔵イメージ**"
+
+#: ../../microbit_micropython_api.rst:156
+msgid ""
+"``Image.HEART`` ``Image.HEART_SMALL`` ``Image.HAPPY`` ``Image.SMILE`` "
+"``Image.SAD`` ``Image.CONFUSED`` ``Image.ANGRY`` ``Image.ASLEEP`` "
+"``Image.SURPRISED`` ``Image.SILLY`` ``Image.FABULOUS`` ``Image.MEH`` "
+"``Image.YES`` ``Image.NO`` ``Image.TRIANGLE`` ``Image.TRIANGLE_LEFT`` "
+"``Image.CHESSBOARD`` ``Image.DIAMOND`` ``Image.DIAMOND_SMALL`` "
+"``Image.SQUARE`` ``Image.SQUARE_SMALL`` ``Image.RABBIT`` ``Image.COW`` "
+"``Image.MUSIC_CROTCHET`` ``Image.MUSIC_QUAVER`` ``Image.MUSIC_QUAVERS`` "
+"``Image.PITCHFORK`` ``Image.XMAS`` ``Image.PACMAN`` ``Image.TARGET`` "
+"``Image.TSHIRT`` ``Image.ROLLERSKATE`` ``Image.DUCK`` ``Image.HOUSE`` "
+"``Image.TORTOISE`` ``Image.BUTTERFLY`` ``Image.STICKFIGURE`` "
+"``Image.GHOST`` ``Image.SWORD`` ``Image.GIRAFFE`` ``Image.SKULL`` "
+"``Image.UMBRELLA`` ``Image.SNAKE`` ``Image.SCISSORS``"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:201
+msgid "Clock:"
+msgstr "時計:"
+
+#: ../../microbit_micropython_api.rst:203
+msgid ""
+"``Image.CLOCK1`` ``Image.CLOCK2`` ``Image.CLOCK3`` ``Image.CLOCK4`` "
+"``Image.CLOCK5`` ``Image.CLOCK6`` ``Image.CLOCK7`` ``Image.CLOCK8`` "
+"``Image.CLOCK9`` ``Image.CLOCK10`` ``Image.CLOCK11`` ``Image.CLOCK12``"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:207
+msgid "Arrows:"
+msgstr "矢印:"
+
+#: ../../microbit_micropython_api.rst:209
+msgid ""
+"``Image.ARROW_N`` ``Image.ARROW_NE`` ``Image.ARROW_E`` ``Image.ARROW_SE``"
+" ``Image.ARROW_S`` ``Image.ARROW_SW`` ``Image.ARROW_W`` "
+"``Image.ARROW_NW``"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:212
+msgid ""
+"The following are Python lists of images, useful for automatically "
+"displaying an animation or manually iterating through them."
+msgstr ""
+"次のものはイメージの Python リストで、自動的にアニメーションを表示したり、"
+"手動で反復して表示するのに便利です。"
+
+#: ../../microbit_micropython_api.rst:215
+msgid "``Image.ALL_CLOCKS`` ``Image.ALL_ARROWS``"
+msgstr ""
+
+#: ../../microbit_micropython_api.rst:219
+msgid "Accelerometer"
 msgstr "加速度センサー"
 
-#: ../../microbit_micropython_api.rst:218
+#: ../../microbit_micropython_api.rst:221
 msgid "The accelerometer is accessed via the ``accelerometer`` object::"
 msgstr "加速度センサーは ``accelerometer`` オブジェクトを介して利用します::"
 
-#: ../../microbit_micropython_api.rst:220
+#: ../../microbit_micropython_api.rst:223
 msgid ""
 "# read the X axis of the device. Measured in milli-g.\n"
 "accelerometer.get_x()\n"
@@ -549,7 +477,7 @@ msgstr ""
 "# ジェスチャの履歴のタプルを返します。直近のものが最後に並びます。\n"
 "accelerometer.get_gestures()"
 
-#: ../../microbit_micropython_api.rst:238
+#: ../../microbit_micropython_api.rst:241
 msgid ""
 "The recognised gestures are: ``up``, ``down``, ``left``, ``right``, "
 "``face up``, ``face down``, ``freefall``, ``3g``, ``6g``, ``8g``, "
@@ -558,15 +486,15 @@ msgstr ""
 "認識ジェスチャーは以下のとおりです: ``up``, ``down``, ``left``, ``right``, ``face up``, "
 "``face down``, ``freefall``, ``3g``, ``6g``, ``8g``, ``shake`` 。"
 
-#: ../../microbit_micropython_api.rst:242
-msgid "The compass"
+#: ../../microbit_micropython_api.rst:245
+msgid "Compass"
 msgstr "コンパス"
 
-#: ../../microbit_micropython_api.rst:244
+#: ../../microbit_micropython_api.rst:247
 msgid "The compass is accessed via the `compass` object::"
 msgstr "コンパスは `compass` コンパスオブジェクトを介して利用します::"
 
-#: ../../microbit_micropython_api.rst:246
+#: ../../microbit_micropython_api.rst:249
 msgid ""
 "# calibrate the compass (this is needed to get accurate readings).\n"
 "compass.calibrate()\n"
@@ -591,11 +519,11 @@ msgstr ""
 "# コンパスの調整されていた状態をリセットします。\n"
 "compass.clear_calibration()"
 
-#: ../../microbit_micropython_api.rst:259
+#: ../../microbit_micropython_api.rst:261
 msgid "I2C bus"
 msgstr "I2C バス"
 
-#: ../../microbit_micropython_api.rst:261
+#: ../../microbit_micropython_api.rst:264
 msgid ""
 "There is an I2C bus on the micro:bit that is exposed via the `i2c` "
 "object.  It has the following methods::"
@@ -603,7 +531,7 @@ msgstr ""
 "micro:bit には I2C バスがあり、 `i2c` オブジェクトを介して利用します。"
 "このオブジェクトには以下のメソッドがあります::"
 
-#: ../../microbit_micropython_api.rst:263
+#: ../../microbit_micropython_api.rst:266
 msgid ""
 "# read n bytes from device with addr; repeat=True means a stop bit won't\n"
 "# be sent.\n"
@@ -619,11 +547,11 @@ msgstr ""
 "# 送信されないことを意味します。\n"
 "i2c.write(addr, buf, repeat=False)"
 
-#: ../../microbit_micropython_api.rst:270
+#: ../../microbit_micropython_api.rst:273
 msgid "UART"
 msgstr ""
 
-#: ../../microbit_micropython_api.rst:272
+#: ../../microbit_micropython_api.rst:275
 msgid ""
 "Use ``uart`` to communicate with a serial device connected to the "
 "device's I/O pins::"
@@ -631,7 +559,7 @@ msgstr ""
 "I/O 端子に接続されたシリアルデバイスとの通信には ``uart`` "
 "を使います::"
 
-#: ../../microbit_micropython_api.rst:274
+#: ../../microbit_micropython_api.rst:277
 msgid ""
 "# set up communication (use pins 0 [TX] and 1 [RX]) with a baud rate of "
 "9600.\n"
