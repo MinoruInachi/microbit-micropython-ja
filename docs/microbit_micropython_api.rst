@@ -164,12 +164,6 @@ pin_speaker, as the above ``MicroBitPin`` class, but does not include
 Images
 ------
 
-.. note::
-
-    You don't always need to create one of these yourself - you can access the
-    image shown on the display directly with `display.image`. `display.image`
-    is just an instance of `Image`, so you can use all of the same methods.
-
 Images API::
 
     # creates an empty 5x5 image
