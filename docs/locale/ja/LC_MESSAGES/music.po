@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2016, Multiple authors
+# Copyright (C) 2015-2022, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2022-07-03 10:06+0900\n"
+"PO-Revision-Date: 2022-07-03 10:06+0900\n"
+"Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: ../../music.rst:2
 msgid "Music"
@@ -245,9 +244,9 @@ msgstr ""
 
 #: ../../music.rst:112
 msgid ""
-"If ``duration`` is negative the pitch is played continuously until either the "
-"blocking call is interrupted or, in the case of a background call, a new "
-"frequency is set or ``stop`` is called (see below)."
+"If ``duration`` is negative the pitch is played continuously until either"
+" the blocking call is interrupted or, in the case of a background call, a"
+" new frequency is set or ``stop`` is called (see below)."
 msgstr ""
 "``duration`` が負の場合、ブロックが解除されるか、バックグラウンドで新しい周波数が設定"
 "されるか、 ``stop`` (後述)が呼び出されるまで、ピッチが連続して再生されます。"
