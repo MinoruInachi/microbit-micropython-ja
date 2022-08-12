@@ -59,12 +59,12 @@ msgid ""
 "Use ``off()`` to turn off the speaker. This does not disable sound output"
 " to an edge connector pin."
 msgstr ""
-"組込みスピーカーを無効にするには ``off()`` を使います。"
+"内蔵スピーカーを無効にするには ``off()`` を使います。"
 "これはエッジコネクタの端子へのサウンド出力を無効化しません。"
 
 #: ../../speaker.rst:30
 msgid "Use ``on()`` to turn on the speaker."
-msgstr "組込みスピーカーを有効にするには ``on()`` を使います。"
+msgstr "内蔵スピーカーを有効にするには ``on()`` を使います。"
 
 #: ../../speaker.rst:34
 msgid "Example"

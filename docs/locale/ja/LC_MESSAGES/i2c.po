@@ -106,7 +106,7 @@ msgid ""
 "Write bytes from ``buf`` to the device with 7-bit address ``addr``. If "
 "``repeat`` is ``True``, no stop bit will be sent."
 msgstr ""
-"7 ビットアドレス ``addr`` のデバイスに ``buf`` のバイト列を書き込みます、 "
+"7 ビットアドレス ``addr`` のデバイスに ``buf`` のバイト列を書き込みます。 "
 "``repeat`` が ``True`` にすると、ストップビットが送られません。"
 
 #: ../../i2c.rst:59

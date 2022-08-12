@@ -68,7 +68,7 @@ msgid ""
 "The ``bits`` defines the size of bytes being transmitted. Currently only "
 "``bits=8`` is supported. However, this may change in the future."
 msgstr ""
-"``bits`` は送信するバイト列のサイズを定義します。現在のところは ``bits=8`` "
+"``bits`` は送信するビット幅を定義します。現在のところは ``bits=8`` "
 "だけをサポートしています。しかし、これは将来的に変更するかもしれません。"
 
 #: ../../spi.rst:30

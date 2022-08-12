@@ -50,7 +50,7 @@ msgid ""
 "Set the brightness of the LED at column ``x`` and row ``y`` to ``value``,"
 " which has to be an integer between 0 and 9."
 msgstr ""
-"``x`` 列 ``y`` 行の LEDの明るさを設定します。 ``value`` にはv 0 (オフ)から 9 "
+"``x`` 列 ``y`` 行の LEDの明るさを設定します。 ``value`` には 0 (オフ)から 9 "
 "(明るい)までの整数値を指定します。"
 
 #: ../../display.rst:28
@@ -82,14 +82,14 @@ msgstr ""
 
 #: ../../display.rst:44 ../../display.rst:66
 msgid "If ``loop`` is ``True``, the animation will repeat forever."
-msgstr "``loop`` が ``True`` である場合、アニメーションが永遠に繰り返します。"
+msgstr "``loop`` が ``True`` である場合、アニメーションを永遠に繰り返します。"
 
 #: ../../display.rst:46
 msgid ""
 "If ``clear`` is ``True``, the display will be cleared after the iterable "
 "has finished."
 msgstr ""
-"``clear`` が ``True`` である場合、表示が終了後にディスプレイをクリアします。"
+"``clear`` が ``True`` である場合、表示を終了後にディスプレイをクリアします。"
 
 #: ../../display.rst:48
 msgid ""

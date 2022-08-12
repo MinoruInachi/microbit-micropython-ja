@@ -66,7 +66,7 @@ msgid ""
 "point, that wraps around after some value."
 msgstr ""
 "呼出し時点での稼働時間をミリ秒単位で返します。稼働時間は最大値に達するとラップ"
-"アラウンドします(一周して最低値に戻ります)。"
+"アラウンドします(一周して最小値に戻ります)。"
 
 #: ../../utime.rst:70
 msgid "Just like :func:`utime.ticks_ms()` above, but in microseconds."

@@ -129,7 +129,7 @@ msgid ""
 msgstr ""
 "端子 ``pin`` を介して制御する ``n`` 個の neopixel LED を持つストリップを初期化します。"
 "RGBW neopixel もサポートするため、ピクセルあたりのバイト数(``bpp``)を示す第３引数を "
-"``NeoPixel`` に渡せるようになっています。"RGBW の場合は bpp に ``4`` を指定します。"
+"``NeoPixel`` に渡せるようになっています。RGBW の場合は bpp に ``4`` を指定します。"
 "デフォルトの bpp は RGB と GRB を示す ``3`` です。"
 
 #: ../../neopixel.rst:63

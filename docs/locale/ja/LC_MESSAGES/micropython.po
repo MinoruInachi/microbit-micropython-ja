@@ -112,7 +112,7 @@ msgid ""
 "Print information about currently interned strings. If the verbose "
 "argument is given then extra information is printed."
 msgstr ""
-"現在のところのインターンド文字列(内部に蓄えられている文字列)に関する情報を表示します。 "
+"現在のところの隔離化文字列(内部に蓄えられている文字列)に関する情報を表示します。 "
 "*verbose* を指定すると冗長モードとなり、詳しい情報を表示します。"
 
 #: ../../micropython.rst:88

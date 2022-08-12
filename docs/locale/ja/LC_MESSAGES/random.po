@@ -99,7 +99,7 @@ msgstr ""
 
 #: ../../random.rst:62
 msgid "Return the next random floating point number in the range [0.0, 1.0)"
-msgstr "range(0.0, 1.0) から無作為に選択された浮動小数点数を返します。"
+msgstr "0.0 以上、1.0 未満の区間から無作為に選択された浮動小数点数を返します。"
 
 #: ../../random.rst:67
 msgid ""

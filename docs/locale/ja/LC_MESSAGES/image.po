@@ -466,7 +466,7 @@ msgstr ""
 
 #: ../../image.rst:227
 msgid "Get a readable string representation of the image."
-msgstr "イメージの可読可能な文字列表現を得ます。"
+msgstr "イメージの判読可能な文字列表現を得ます。"
 
 #: ../../image.rst:232
 msgid "image1 + image2"

@@ -86,7 +86,7 @@ msgid ""
 "the default of ``pin0``. If we do not want any sound to play we can use "
 "``pin=None``."
 msgstr ""
-"**pin**: 出力ピンをデフォルトの ``pin0`` から変えるためのオプション引数です。"
+"**pin**: 出力端子をデフォルトの ``pin0`` から変えるためのオプション引数です。"
 "音を鳴らしたくない場合は ``pin=None`` を指定します。"
 
 #: ../../audio.rst:32
@@ -94,7 +94,7 @@ msgid ""
 "specifies a differential edge connector pin to connect to an external "
 "speaker instead of ground. This is ignored for the **V2** revision."
 msgstr ""
-"スピーカの２本ある線の一方を接続する先である GND を別の端子に"
+"スピーカーの２本ある線の一方を接続する先である GND を別の端子に"
 "したい場合に使います。 **V2** ではこの指定を無視します。"
 
 #: ../../audio.rst
@@ -119,7 +119,7 @@ msgid ""
 "An ``AudioFrame`` object is a list of 32 samples each of which is an "
 "unsigned byte (whole number between 0 and 255)."
 msgstr ""
-"``AudioFrame`` オブジェクトは、３２個の項目のリストです。"
+"``AudioFrame`` オブジェクトは32項目のリストです。"
 "各項目の値は符号なしバイト(0と255の間の整数)です。"
 
 #: ../../audio.rst:54
@@ -215,13 +215,15 @@ msgstr ""
 
 #: ../../audio.rst:93
 msgid ""
-"The ``audio`` module consumes ``AudioFrame`` samples at 7812.5 Hz, and "
-"uses linear interpolation to output a PWM signal at 32.5 kHz, which gives"
-" tolerable sound quality."
+"The ``audio`` module can consumes an iterable (sequence, like list or "
+"tuple, or generator) of ``AudioFrame`` instances, each 32 samples at "
+"7812.5 Hz, and uses linear interpolation to output a PWM signal at "
+"32.5 kHz, which gives tolerable sound quality."
 msgstr ""
-"``audio`` モジュールは 7812.5 Hz で ``AudioFrame`` サンプルを消費し、"
-"線形補間を使って 32.5 kHz の PWM 信号を出力します。これにより、"
-"許容できる音質が得られます。"
+"``audio`` モジュールは ``AudioFrame`` インスタンスのイテラブル"
+"(リストやタプルなどのシーケンス、またはジェネレータ)を巡回し、"
+"各回 7812.5 Hz で 32 項目を採取し、線形補間を使用して 32.5 kHz の "
+"PWM 信号を出力します。これにより、許容できる音質が得られます。"
 
 #: ../../audio.rst:98
 msgid ""

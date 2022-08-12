@@ -359,7 +359,7 @@ msgid ""
 "``ODE`` - the \"Ode to Joy\" theme from Beethoven's 9th Symphony in D "
 "minor."
 msgstr ""
-"``ODE`` - ベートーヴェンの第9回シンフォニー・ミー・マイナーのテーマ ``\"Ode to Joy\"`` "
+"``ODE`` - ベートーヴェンの交響曲第9番から「歓喜の歌」のテーマ。"
 
 #: ../../music.rst:157
 msgid ""
@@ -390,12 +390,12 @@ msgid ""
 "``BIRTHDAY`` - \"Happy Birthday to You...\" for copyright status see: "
 "http://www.bbc.co.uk/news/world-us-canada-34332853"
 msgstr ""
-"``BIRTHDAY`` - \"Happy Birthday to You ..\\.\" の著作権表示については "
+"``BIRTHDAY`` - 「ハッピーバースディトゥユー ...」 の著作権表示については "
 "http://www.bbc.co.uk/news/world-us-canada-34332853 を参照してください。"
 
 #: ../../music.rst:162
 msgid "``WEDDING`` - the bridal chorus from Wagner's opera \"Lohengrin\"."
-msgstr "``WEDDING`` - ワグナーのオペラ「Lohengrin」のブライダルコーラス。"
+msgstr "``WEDDING`` - ワグナーのオペラ「ローエングリン」のブライダルコーラス。"
 
 #: ../../music.rst:163
 msgid ""
@@ -414,8 +414,8 @@ msgid ""
 "for \"Monty Python's Flying Circus\" (after which the Python programming "
 "language is named)."
 msgstr ""
-"``PYTHON`` - John Philip Sousa さんの行進「Liberty Bell」、別名「Monty Python's "
-"Flying Circus」(その後、Python プログラミング言語の名前となる)。"
+"``PYTHON`` - John Philip Sousa さんの行進「Liberty Bell」、"
+"別名「空飛ぶモンティ・パイソン」(その後、Python プログラミング言語の名前となる)。"
 
 #: ../../music.rst:166
 msgid "``BADDY`` - silent movie era entrance of a baddy."
