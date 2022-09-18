@@ -1,0 +1,381 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2022, Multiple authors
+# This file is distributed under the same license as the BBC micro:bit
+# MicroPython package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BBC micro:bit MicroPython 1.1.0-beta.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-16 09:08+0900\n"
+"PO-Revision-Date: 2022-09-18 09:48+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../power.rst:2
+msgid "Power Management **V2**"
+msgstr "電源管理 **V2**"
+
+#: ../../power.rst:6
+msgid "This module lets you manage the power modes of the micro:bit V2."
+msgstr ""
+"このモジュールを使うと、micro:bit V2 の電源モードを管理できます。"
+
+#: ../../power.rst:8
+msgid ""
+"There are two micro:bit board low power modes that can be requested from "
+"MicroPython:"
+msgstr ""
+"MicroPython から要求できる micro:bit ボードの低電力モードには２つあります:"
+
+#: ../../power.rst:11
+msgid ""
+"**Deep Sleep**: Low power mode where the board can be woken up via "
+"multiple sources (pins, button presses, or a timer) and resume operation."
+msgstr ""
+"**ディープスリープ**: 複数のソース(端子、ボタン、タイマー)でボードを起動し、動作を再開"
+"できる低電力モードです。"
+
+#: ../../power.rst:14
+msgid ""
+"**Off**: The power mode with the lowest power consumption, the only way "
+"to wake up the board is via the reset button, or by plugging the USB "
+"cable while on battery power. When the board wakes up it will restart and"
+" execute your programme from the beginning."
+msgstr ""
+"**オフ**: 最も消費電力が少ない電源モードで、ボードを起動させる唯一の方法は、"
+"リセットボタンを使うか、バッテリー駆動中にUSBケーブルを接続することです。"
+"ボードが起床すると、再起動してプログラムを最初から実行します。"
+
+#: ../../power.rst:20
+msgid ""
+"More information on how these low power modes work can be found in the "
+"`Detailed Information section <#detailed-information>`_."
+msgstr ""
+"これらの低電力モードがどのように機能するかについて詳しくは "
+"`詳細情報の章 <#detailed-information>`_ を参照してください。"
+
+#: ../../power.rst:24
+msgid "Functions"
+msgstr "関数"
+
+#: ../../power.rst:28
+msgid "Power down the board to the lowest possible power mode."
+msgstr "ボードを可能な限り低い電力モードに電源ダウンさせます。"
+
+#: ../../power.rst:30
+msgid ""
+"This is the equivalent to pressing the reset button for a few second, to "
+"set the board in \"Off mode\"."
+msgstr ""
+"これは、リセットボタンを数秒間押してボードを「オフモード」にするのと同じです。"
+
+#: ../../power.rst:33
+msgid ""
+"The micro:bit will only wake up if the reset button is pressed or, if on "
+"battery power, when a USB cable is connected."
+msgstr ""
+"micro:bit はリセットボタンが押された場合、または電池駆動の場合は USB ケーブルが"
+"接続された場合にのみ起動します。"
+
+#: ../../power.rst:36
+msgid ""
+"When the board wakes up it will start for a reset state, so your "
+"programme will start running from the beginning."
+msgstr ""
+"ボードは起動するとリセット状態を開始するので、プログラムは最初から実行されます。"
+
+#: ../../power.rst:42
+msgid ""
+"Set the micro:bit into a low power mode where it can wake up and continue"
+" operation."
+msgstr ""
+"micro:bit 起床時に動作を継続できる低電力モードに設定します。"
+
+#: ../../power.rst:45
+msgid ""
+"The programme state is preserved and when it wakes up it will resume "
+"operation where it left off."
+msgstr ""
+"プログラムの状態は保持され、起床すると中断したところから動作を再開します。"
+
+#: ../../power.rst:48
+msgid "Deep Sleep mode will consume more battery power than Off mode."
+msgstr "ディープスリープモードはオフモードよりも多くのバッテリー電力を消費します。"
+
+#: ../../power.rst:50
+msgid "The wake up sources are configured via arguments."
+msgstr "起床させるソースは引数で設定します。"
+
+#: ../../power.rst:52
+msgid ""
+"If no wake up sources have been configured it will sleep until the reset "
+"button is pressed (which resets the board) or, in battery power, when the"
+" USB cable is inserted."
+msgstr ""
+"起床のソースが設定されていない場合は、リセット・ボタンが押されるまで(ボードをリセット"
+"するまで)、または、バッテリー駆動の場合は、USB ケーブルが挿入されるまでスリープ状態に"
+"なります。"
+
+#, fuzzy
+#: ../../power.rst
+msgid "param"
+msgstr "パラメータ"
+
+#: ../../power.rst:56
+msgid "A time in milliseconds to wait before it wakes up."
+msgstr "起床するまでの時間(ミリ秒単位)。"
+
+#: ../../power.rst:57
+msgid ""
+"A single instance or a tuple of pins and/or buttons to wake up the board,"
+" e.g. ``deep_sleep(wake_on=button_a)`` or ``deep_sleep(wake_on=(pin0, "
+"pin2, button_b))``."
+msgstr ""
+"ボードを起床するためのピン/ボタンの単一インスタンスまたはタプル。"
+"例: ``deep_sleep(wake_on=button_a)`` または ``deep_sleep(wake_on=(pin0, "
+"pin2, button_b))`` 。"
+
+#: ../../power.rst:60
+msgid "Set to ``True`` to wake up with each ``microbit.run_every`` scheduled run."
+msgstr ""
+"``True`` に設定すると、microbit.run_every のスケジュール実行のたびに起床します。"
+
+#: ../../power.rst:64
+msgid "Examples"
+msgstr "サンプルコード"
+
+#: ../../power.rst:66
+msgid "Example programme showing the power management API:"
+msgstr "電源管理 API の使い方を示すプログラム例:"
+
+msgid ""
+"\"\"\"\n"
+"Shows a silly face on the display every 10 seconds.\n"
+"When button A is pressed it goes into Deep Sleep mode, and wakes 30 "
+"minutes later,\n"
+"or by pressing button A again.\n"
+"When button B is pressed it goes into to Off mode.\n"
+"\"\"\"\n"
+"from microbit import *\n"
+"import power\n"
+"\n"
+"@run_every(s=10)\n"
+"def silly_face():\n"
+"    display.show(Image.SILLY)\n"
+"    sleep(400)\n"
+"\n"
+"while True:\n"
+"    if button_b.is_pressed():\n"
+"        display.scroll(\"Off\")\n"
+"        # In this mode the micro:bit can only wake up via the reset "
+"button\n"
+"        power.off()\n"
+"        # This line of code will never be executed, as waking up from "
+"this\n"
+"        # mode starts the programme from the beginning\n"
+"        display.show(Image.SURPRISED)\n"
+"    elif button_a.is_pressed():\n"
+"        display.show(Image.ASLEEP)\n"
+"        sleep(300)\n"
+"        # Go into Deep Sleep with multiple wake up sources\n"
+"        power.deep_sleep(\n"
+"            wake_on=(pin0, pin1, button_a),\n"
+"            ms=30*1000,        # In 30 seconds it wakes up anyway\n"
+"            run_every=False,   # Stops run_every from waking up the board"
+"\n"
+"        )\n"
+"        # When the micro:bit wakes up will it continue running from here\n"
+"        # Blink a few times to show you are waking up\n"
+"        display.show([Image(\"99099:09090:99099:09990\"), Image.ASLEEP] *"
+" 3, 250)\n"
+"    display.show(Image.HAPPY)\n"
+"    sleep(200)"
+msgstr ""
+"\"\"\"\n"
+"10秒ごとにディスプレイに「へん顔」を表示する。\n"
+"Aボタンを押すとディープスリープになり、30分経過するか、もう一度ボタンAを押すと、\n"
+"スリープを解除します。\n"
+"Bボタンを押すとオフモードになります。\n"
+"\"\"\"\n"
+"from microbit import *\n"
+"import power\n"
+"\n"
+"@run_every(s=10)\n"
+"def silly_face():\n"
+"    display.show(Image.SILLY)\n"
+"    sleep(400)\n"
+"\n"
+"while True:\n"
+"    if button_b.is_pressed():\n"
+"        display.scroll(\"Off\")\n"
+"        # このモードでは、リセットボタンを押すことでしかmicro:bitは目覚めません。\n"
+"        power.off()\n"
+"        # このモードからのウェイクアップはプログラムを最初から開始するため、\n"
+"        # このコード行は決して実行されません。\n"
+"        display.show(Image.SURPRISED)\n"
+"    elif button_a.is_pressed():\n"
+"        display.show(Image.ASLEEP)\n"
+"        sleep(300)\n"
+"        # 複数の起床ソースを指定してディープスリープに入ります\n"
+"        power.deep_sleep(\n"
+"            wake_on=(pin0, pin1, button_a),\n"
+"            ms=30*1000,        # 30秒後に起床します\n"
+"            run_every=False,   # run_everyによるボードの起床を停止します\n"
+"        )\n"
+"        # micro:bit が起床したら、ここから実行を継続します\n"
+"        # 数回点滅して起床を知らせます\n"
+"        display.show([Image(\"99099:09090:99099:09990\"), Image.ASLEEP] *"
+" 3, 250)\n"
+"    display.show(Image.HAPPY)\n"
+"    sleep(200)"
+
+#: ../../power.rst:72
+msgid "Example using data logging:"
+msgstr "データログを使用した例:"
+
+msgid ""
+"from microbit import *\n"
+"import power\n"
+"import log\n"
+"\n"
+"# 5分ごとに温度を記録する\n"
+"@run_every(s=5)\n"
+"def log_temperature():\n"
+"    log.add(temp=temperature())\n"
+"\n"
+"while True:\n"
+"    if button_a.is_pressed():\n"
+"        # Aボタンを押したときの温度を表示します\n"
+"        display.scroll(temperature())\n"
+"    # ディープスリープに入り、run_everyまたはAボタンで起床\n"
+"    power.deep_sleep(wake_on=button_a, run_every=True)"
+msgstr ""
+
+#: ../../power.rst:79
+msgid "Detailed Information"
+msgstr "詳細情報"
+
+#: ../../power.rst:81
+msgid ""
+"The micro:bit board has two microcontrollers (MCUs), which can be "
+"independently asleep or awake:"
+msgstr ""
+"micro:bit ボードには２つのマイクロコントローラ(MCU)があり、それぞれ独立して"
+"スリープ/起床できます。"
+
+#: ../../power.rst:84
+msgid "**Target MCU** - Where MicroPython and your code run."
+msgstr "**ターゲット MCU** - MicroPython とそのコードを実行します。"
+
+#: ../../power.rst:85
+msgid ""
+"**Interface MCU** - A secondary microcontroller that provides the USB "
+"functionality, like the ``MICROBIT`` USB drive, and the USB serial "
+"interface."
+msgstr ""
+"**インタフェース MCU** - ``MICROBIT`` USB ドライブなど、USB 機能および "
+"USB のシリアルインタフェースを提供する二次マイクロコントローラ。"
+
+#: ../../power.rst:89
+msgid ".. image:: power-mcus.png"
+msgstr ""
+
+#: ../../power.rst:90
+msgid "Each MCU can be in one of these \"MCU power modes\":"
+msgstr "各 MCU は、次の「MCU 電源モード」のいずれかにできます:"
+
+#: ../../power.rst:92
+msgid "**Awake**: Running normally."
+msgstr "**覚醒** (Awake): 通常の動作モードです。"
+
+#: ../../power.rst:93
+msgid ""
+"**Sleep**: A low power mode where the MCU can be woken up from different "
+"sources and continue operation."
+msgstr ""
+"**スリープ** (Sleep): MCU が異なるソースから起床され、動作を継続することができる"
+"低電力モードです。"
+
+#: ../../power.rst:95
+msgid ""
+"**Power Down**: The lowest power mode for an individual MCU, when it "
+"wakes up it will start from reset."
+msgstr ""
+"**電源ダウン** (Power Down): 個々の MCU にとって最も低い電力モードであり、"
+"起動するとリセットから開始されます。"
+
+#: ../../power.rst:98
+msgid ""
+"The Python code can request a \"board power mode\", in this case **Deep "
+"Sleep** or **Off**, which will set the Target into a specific \"MCU power"
+" mode\", but the Interface MCU mode will depend on the micro:bit power "
+"source, i.e. if it's powered via USB (connector to a computer) or "
+"battery."
+msgstr ""
+"Python コードは「ボード電源モード」(この場合は **ディープスリープ** または **オフ**)"
+"を要求でき、ターゲットを指定の「MCU 電源モード」に設定しますが、インタフェース MCU "
+"モードは micro:bit の電源、つまり USB (コンピュータへのコネクタ)またはバッテリー経由で"
+"電源供給されているかどうかに依存します。"
+
+#: ../../power.rst:103
+msgid ""
+"In essence, on battery power the Interface MCU can go into a low power "
+"mode, but when it is connected to a computer via USB, it will stay awake "
+"to maintain the USB connection."
+msgstr ""
+"要するに、バッテリー電源の場合、インタフェース MCUは 低電力モードに移行できますが、"
+"USB でコンピュータに接続されている場合、USB 接続を維持するために起きていることになります。"
+
+#: ../../power.rst:108
+msgid "USB Powered (Interface always awake)"
+msgstr "USB 電源(インタフェースが常時覚醒)"
+
+#: ../../power.rst:119
+msgid "Battery Powered"
+msgstr "バッテリー電源"
+
+#: ../../power.rst:110 ../../power.rst:121
+msgid "Board Power Mode"
+msgstr "ボード電源モード"
+
+#: ../../power.rst:110 ../../power.rst:121
+msgid "Target MCU Mode"
+msgstr "ターゲット MCU モード"
+
+#: ../../power.rst:110 ../../power.rst:121
+msgid "Interface MCU mode"
+msgstr "インタフェース MCU モード"
+
+#: ../../power.rst:112 ../../power.rst:123
+msgid "**Deep Sleep**"
+msgstr "**ディープスリープ**"
+
+#: ../../power.rst:112
+msgid "💤  Sleep"
+msgstr "💤  スリープ"
+
+#: ../../power.rst:112
+msgid "⏰ Awake"
+msgstr "⏰ 覚醒"
+
+#: ../../power.rst:114 ../../power.rst:125
+msgid "**Off**"
+msgstr "**オフ**"
+
+#: ../../power.rst:114 ../../power.rst:125
+msgid "📴 Power Down"
+msgstr "📴 電源ダウン"
+
+#: ../../power.rst:114
+msgid "⏰ Awake (red LED blinking)"
+msgstr "⏰ 覚醒 (赤 LED 点滅)"
+
+#: ../../power.rst:123
+msgid "💤 Sleep"
+msgstr "💤 スリープ"

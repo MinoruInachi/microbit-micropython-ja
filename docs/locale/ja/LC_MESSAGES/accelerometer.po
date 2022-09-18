@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2020, Multiple authors
+# Copyright (C) 2015-2022, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
@@ -7,10 +7,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.1.0-beta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-22 23:33+0900\n"
-"PO-Revision-Date: 2022-04-23 01:16+0900\n"
+"POT-Creation-Date: 2022-09-16 09:08+0900\n"
+"PO-Revision-Date: 2022-09-16 09:22+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -29,7 +29,7 @@ msgstr "このオブジェクトはボード上の加速度センサーにアク
 msgid ""
 "By default MicroPython sets the accelerometer range to +/- 2000 mg (``g``"
 " being a unit of acceleration based on the standard gravity), which "
-"configures the maximum and minimum values returned by the acceleromter "
+"configures the maximum and minimum values returned by the accelerometer "
 "functions. The range can be changed via "
 ":func:`microbit.accelerometer.set_range`."
 msgstr ""
@@ -148,12 +148,12 @@ msgstr ""
 #: ../../accelerometer.rst:80
 msgid ""
 "Set the accelerometer sensitivity range, in g (standard gravity), to the "
-"closest values supported by the hardware, so it rounds to either ``1``, "
-"``2``, ``4``, or ``8`` g."
+"closest values supported by the hardware, so it rounds to either ``2``, "
+"``4``, or ``8`` g."
 msgstr ""
 "加速度センサーの感度範囲を g (標準重力)で設定します。"
 "設定値は、ハードウェアがサポートする最も近い値、すなわち "
-"``1``, ``2``, ``4``, ``8`` g のいずれかに丸められます。"
+"``2``, ``4``, ``8`` g のいずれかに丸められます。"
 
 #: ../../accelerometer.rst:87
 msgid "Examples"

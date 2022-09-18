@@ -7,10 +7,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.1.0-beta.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-07 12:31+0900\n"
-"PO-Revision-Date: 2022-05-08 00:34+0900\n"
+"POT-Creation-Date: 2022-09-16 09:08+0900\n"
+"PO-Revision-Date: 2022-09-18 10:18+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -3281,44 +3281,33 @@ msgstr ""
 #: ../../tutorials/radio.rst:109
 msgid ""
 "First ``import radio`` to make the functions available to your Python "
-"program. Then call the ``radio.on()`` function to turn the radio on. "
-"Since the radio draws power and takes up memory we've made it so *you* "
-"decide when it is enabled (there is, of course a ``radio.off()`` "
-"function)."
+"program. At this point the radio module is configured to sensible "
+"defaults that make it compatible with other platforms that may target the"
+" BBC micro:bit. It is possible to control many of the features discussed "
+"above (such as channel and addressing) as well as the amount of power "
+"used to broadcast messages and the amount of RAM the incoming message "
+"queue will take up. The API documentation contains all the information "
+"you need to configure the radio to your needs."
 msgstr ""
 "まず Python プログラムで関数を利用できるように ``import radio`` します。"
-"次に、無線をオンにする ``radio.on()`` 関数を呼び出します。これを行うと radio は"
-"パワーを得てメモリを確保するので、 *あなた* が無線通信の有効化を決定したことに"
-"なります(もちろん、無効にする ``radio.off`` 関数もあります)。"
-
-#: ../../tutorials/radio.rst:114
-msgid ""
-"At this point the radio module is configured to sensible defaults that "
-"make it compatible with other platforms that may target the BBC "
-"micro:bit. It is possible to control many of the features discussed above"
-" (such as channel and addressing) as well as the amount of power used to "
-"broadcast messages and the amount of RAM the incoming message queue will "
-"take up. The API documentation contains all the information you need to "
-"configure the radio to your needs."
-msgstr ""
 "この時点で、radio モジュールは、BBC micro:bit をターゲットとする可能性のある他の"
 "プラットフォームと互換性を持つように、適切なデフォルトに設定されています。上述した"
 "多くの機能(チャネルやアドレス指定など)や、メッセージをブロードキャストするための"
 "電力量や着信メッセージキューが占有する RAM の量を制御することが可能です。"
 "APIドキュメントには、必要に応じて radio を設定するために必要なすべての情報があります。"
 
-#: ../../tutorials/radio.rst:121
+#: ../../tutorials/radio.rst:117
 msgid ""
 "Assuming we're happy with the defaults, the simplest way to send a "
 "message is like this::"
 msgstr ""
 "デフォルトで十分であれば、メッセージを送信する最も簡単な方法は次のようなものです:"
 
-#: ../../tutorials/radio.rst:124
+#: ../../tutorials/radio.rst:120
 msgid "radio.send(\"a message\")"
 msgstr ""
 
-#: ../../tutorials/radio.rst:126
+#: ../../tutorials/radio.rst:122
 msgid ""
 "The example uses the ``send`` function to simply broadcast the string \"a"
 " message\". To receive a message is even easier::"
@@ -3326,11 +3315,11 @@ msgstr ""
 "この例では、\"a message\" をブロードキャストするために ``send`` 関数を使って"
 "います。メッセージを受け取るのはさらに簡単です:"
 
-#: ../../tutorials/radio.rst:129
+#: ../../tutorials/radio.rst:125
 msgid "new_message = radio.receive()"
 msgstr ""
 
-#: ../../tutorials/radio.rst:131
+#: ../../tutorials/radio.rst:127
 msgid ""
 "As messages are received they are put on a message queue. The ``receive``"
 " function returns the oldest message from the queue as a string, making "
@@ -3342,7 +3331,7 @@ msgstr ""
 "メッセージを返します。メッセージキューがいっぱいになると、新しい受信メッセージは"
 "無視されます。"
 
-#: ../../tutorials/radio.rst:136
+#: ../../tutorials/radio.rst:132
 msgid ""
 "That's really all there is to it! (Although the radio module is also "
 "powerful enough that you can send any arbitrary type of data, not just "
@@ -3351,7 +3340,7 @@ msgstr ""
 "本当にこれだけです(が、radio モジュールは文字列だけでなく任意のタイプのデータを"
 "送信することもできます。これについてはAPIドキュメントを参照してください)。"
 
-#: ../../tutorials/radio.rst:140
+#: ../../tutorials/radio.rst:136
 msgid ""
 "Armed with this knowledge, it's simple to make micro:bit fireflies like "
 "this:"
