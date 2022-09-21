@@ -315,7 +315,7 @@ msgid ""
 "(randomly generated noise). Default: ``WAVE_SQUARE``"
 msgstr ""
 "(訳注: 最新のファームウェアでは引数名が waveform に変更になっています)　"
-"波形の種類。次の値のいずれかを指定します:  ``WAVEFORM_SINE``, "
+"波形の種類。次の値のいずれかを指定します: ``WAVEFORM_SINE``, "
 "``WAVEFORM_SAWTOOTH``, ``WAVEFORM_TRIANGLE``, ``WAVEFORM_SQUARE``, "
 "``WAVEFORM_NOISE`` (ランダムに生成したノイズ)。デフォルトは ``WAVEFORM_SQUARE`` です。"
 
@@ -384,7 +384,7 @@ msgid ""
 "Effect to add on the sound, one of the following values: ``FX_TREMOLO``, "
 "``FX_VIBRATO``, ``FX_WARBLE``, or ``None``."
 msgstr ""
-"サウンドに追加する効果。次の値のいずれかを: ``FX_TREMOLO``, "
+"サウンドに追加する効果。次の値のいずれか: ``FX_TREMOLO``, "
 "``FX_VIBRATO``, ``FX_WARBLE``, ``FX_NONE`` 。"
 
 #: ../../audio.rst:181
