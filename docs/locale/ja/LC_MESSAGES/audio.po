@@ -314,9 +314,10 @@ msgid ""
 "``WAVE_SAWTOOTH``, ``WAVE_TRIANGLE``, ``WAVE_SQUARE``, ``WAVE_NOISE`` "
 "(randomly generated noise). Default: ``WAVE_SQUARE``"
 msgstr ""
-"波形の種類。次の値のいずれかを指定します:  ``WAVE_SINE``, "
-"``WAVE_SAWTOOTH``, ``WAVE_TRIANGLE``, ``WAVE_SQUARE``, ``WAVE_NOISE`` "
-"(ランダムに生成したノイズ)。デフォルトは ``WAVE_SQUARE`` です。"
+"(訳注: 最新のファームウェアでは引数名が waveform に変更になっています)　"
+"波形の種類。次の値のいずれかを指定します:  ``WAVEFORM_SINE``, "
+"``WAVEFORM_SAWTOOTH``, ``WAVEFORM_TRIANGLE``, ``WAVEFORM_SQUARE``, "
+"``WAVEFORM_NOISE`` (ランダムに生成したノイズ)。デフォルトは ``WAVEFORM_SQUARE`` です。"
 
 #: ../../audio.rst:135
 msgid ""
