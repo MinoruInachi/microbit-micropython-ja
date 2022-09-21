@@ -106,10 +106,10 @@ msgid "param"
 msgstr "パラメータ"
 
 ##: ../../audio.rst:43
-#msgid ""
-#"There are three types of data that can be used as a source:
-#msgstr ""
-#"指定できる音源には3種類あります:"
+msgid ""
+"There are three types of data that can be used as a source:
+msgstr ""
+"指定できる音源には3種類あります:"
 
 #: ../../audio.rst:45
 msgid ""
@@ -274,7 +274,7 @@ msgid ""
 "of parameters configured via the constructor or attributes."
 msgstr ""
 "``SoundEffect`` インスタンスはサウンド効果を表します。サウンド効果は、"
-"コンストラクタや属性で設定したパラメータのセットで構成されるます。"
+"コンストラクタや属性で設定したパラメータのセットで構成されます。"
 
 #: ../../audio.rst:122
 msgid ""

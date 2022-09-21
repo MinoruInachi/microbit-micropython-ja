@@ -155,6 +155,10 @@ msgstr ""
 "設定値は、ハードウェアがサポートする最も近い値、すなわち "
 "``2``, ``4``, ``8`` g のいずれかに丸められます。"
 
+#: ../../accelerometer.rst:84
+msgid "New range for the accelerometer, an integer in ``g``."
+msgstr "加速度センサーの新しい感度範囲。 ``g`` 単位の整数値で指定します。"
+
 #: ../../accelerometer.rst:87
 msgid "Examples"
 msgstr "サンプルコード"

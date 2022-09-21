@@ -183,7 +183,7 @@ msgstr ""
 #: ../../log.rst:79
 msgid "Via keyword arguments, each argument name representing a label."
 msgstr ""
-"キーワード引数を使う方法: 各引数名はラベルを表します。"
+"キーワード引数を使う方法: 各引数名は見出しを表します。"
 
 #: ../../log.rst:81
 msgid "e.g. ``log.add(X=compass.get_x(), Y=compass.get_y())``"
@@ -191,7 +191,7 @@ msgstr "例: ``log.add(X=compass.get_x(), Y=compass.get_y())``"
 
 #: ../../log.rst:83
 msgid "Via a dictionary, each dictionary key representing a label."
-msgstr "辞書を使う方法: 辞書の各キーがラベルを表します。"
+msgstr "辞書を使う方法: 辞書の各キーが見出しを表します。"
 
 #: ../../log.rst:85
 msgid "e.g. ``log.add({ \"X\": compass.get_x(), \"Y\": compass.get_y() })``"
