@@ -310,16 +310,16 @@ msgstr "終了音量を 0-255 の範囲で指定します。デフォルトは `
 
 #: ../../audio.rst:132
 msgid ""
-"Type of wave shape, one of these values: ``WAVE_SINE``, "
-"``WAVE_SAWTOOTH``, ``WAVE_TRIANGLE``, ``WAVE_SQUARE``, ``WAVE_NOISE`` "
-"(randomly generated noise). Default: ``WAVE_SQUARE``"
+"Type of waveform shape, one of these values: ``WAVEFORM_SINE``, "
+"``WAVEFORM_SAWTOOTH``, ``WAVEFORM_TRIANGLE``, ``WAVEFORM_SQUARE``, "
+"``WAVEFORM_NOISE`` (randomly generated noise). Default: "
+"``WAVEFORM_SQUARE``"
 msgstr ""
-"(訳注: 最新のファームウェアでは引数名が waveform に変更になっています)　"
 "波形の種類。次の値のいずれかを指定します: ``WAVEFORM_SINE``, "
 "``WAVEFORM_SAWTOOTH``, ``WAVEFORM_TRIANGLE``, ``WAVEFORM_SQUARE``, "
 "``WAVEFORM_NOISE`` (ランダムに生成したノイズ)。デフォルトは ``WAVEFORM_SQUARE`` です。"
 
-#: ../../audio.rst:135
+#: ../../audio.rst:136
 msgid ""
 "Effect to add on the sound, one of the following values: ``FX_TREMOLO``, "
 "``FX_VIBRATO``, ``FX_WARBLE``, or ``FX_NONE``. Default: ``FX_NONE``"
@@ -327,7 +327,7 @@ msgstr ""
 "サウンドに追加する効果。次の値のいずれかを指定します: ``FX_TREMOLO``, "
 "``FX_VIBRATO``, ``FX_WARBLE``, ``FX_NONE`` 。デフォルトは ``FX_NONE`` です。"
 
-#: ../../audio.rst:138
+#: ../../audio.rst:139
 msgid ""
 "The type of the interpolation curve between the start and end "
 "frequencies, different wave shapes have different rates of change in "
@@ -338,48 +338,47 @@ msgstr ""
 "次の値のうちのいずれかを指定します: ``SHAPE_LINEAR``, "
 "``SHAPE_CURVE``, ``SHAPE_LOG`` 。デフォルトは ``SHAPE_LOG`` です。"
 
-#: ../../audio.rst:145
+#: ../../audio.rst:146
 msgid "A copy of the SoundEffect."
 msgstr "SoundEffect のコピー。"
 
-#: ../../audio.rst:149
+#: ../../audio.rst:150
 msgid "Start frequency in Hertz (Hz), a number between ``0`` and ``9999``."
 msgstr ""
 "開始周波数。単位はヘルツ(Hz)で、 ``0`` から ``9999`` の範囲の数値です。"
 
-#: ../../audio.rst:153
+#: ../../audio.rst:154
 msgid "End frequency in Hertz (Hz), a number between ``0`` and ``9999```."
 msgstr "終了周波数。単位はヘルツ(Hz)で、 ``0`` から ``9999`` の範囲の数値です。"
 
-#: ../../audio.rst:157
+#: ../../audio.rst:158
 msgid ""
 "Duration of the sound in milliseconds, a number between ``0`` and "
 "``9999``."
 msgstr ""
 "サウンドの長さ。 ``0`` から ``9999`` の範囲の数値です。"
 
-#: ../../audio.rst:162
+#: ../../audio.rst:163
 msgid "Start volume value, a number between ``0`` and ``255``."
 msgstr ""
 "開始音量。 ``0`` から ``255`` の範囲の数値です。"
 
-#: ../../audio.rst:166
+#: ../../audio.rst:167
 msgid "End volume value, a number between ``0`` and ``255``."
 msgstr ""
 "終了音量。 ``0`` から ``255`` の範囲の数値です。"
 
-#: ../../audio.rst:170
+#: ../../audio.rst:171
 msgid ""
-"Type of wave shape, one of these values: ``WAVE_SINE``, "
-"``WAVE_SAWTOOTH``, ``WAVE_TRIANGLE``, ``WAVE_SQUARE``, ``WAVE_NOISE`` "
-"(randomly generated noise)."
+"Type of waveform shape, one of these values: ``WAVEFORM_SINE``, "
+"``WAVEFORM_SAWTOOTH``, ``WAVEFORM_TRIANGLE``, ``WAVEFORM_SQUARE``, "
+"``WAVEFORM_NOISE`` (randomly generated noise)."
 msgstr ""
-"(訳注: 最新のファームウェアでは属性名が waveform に変更になっています)　"
 "波形の種類。次の値のいずれか:  ``WAVEFORM_SINE``, "
 "``WAVEFORM_SAWTOOTH``, ``WAVEFORM_TRIANGLE``, ``WAVEFORM_SQUARE``, "
 "``WAVEFORM_NOISE`` (ランダムに生成したノイズ)。"
 
-#: ../../audio.rst:176
+#: ../../audio.rst:177
 msgid ""
 "Effect to add on the sound, one of the following values: ``FX_TREMOLO``, "
 "``FX_VIBRATO``, ``FX_WARBLE``, or ``None``."
@@ -387,7 +386,7 @@ msgstr ""
 "サウンドに追加する効果。次の値のいずれか: ``FX_TREMOLO``, "
 "``FX_VIBRATO``, ``FX_WARBLE``, ``FX_NONE`` 。"
 
-#: ../../audio.rst:181
+#: ../../audio.rst:182
 msgid ""
 "The type of interpolation curve between the start and end frequencies, "
 "different wave shapes have different rates of change in frequency. One of"
@@ -397,7 +396,7 @@ msgstr ""
 "次の値のうちのいずれか: ``SHAPE_LINEAR``, "
 "``SHAPE_CURVE``, ``SHAPE_LOG`` 。"
 
-#: ../../audio.rst:186
+#: ../../audio.rst:187
 msgid ""
 "The arguments used to create any Sound Effect, can be inspected by "
 "looking at each of the SoundEffect instance attributes, or by converting "
@@ -409,7 +408,7 @@ msgstr ""
 "インスタンスを文字列に変換することで調べることができます(文字列への変換は "
 "``str()`` 関数、または ``print()`` のように自動的に変換する関数を使ってできます)。
 
-#: ../../audio.rst:192
+#: ../../audio.rst:193
 msgid ""
 "For example, with the :doc:`REPL </devguide/repl>` you can inspect the "
 "default SoundEffects::"
@@ -417,17 +416,14 @@ msgstr ""
 "たとえば :doc:`REPL </devguide/repl>` を使うと、デフォルトの SoundEffects を"
 "調べられます::"
 
-#: ../../audio.rst:195
+#: ../../audio.rst:196
 msgid ""
 ">>> print(audio.SoundEffect())\n"
 "SoundEffect(freq_start=500, freq_end=2500, duration=500, vol_start=255, "
-"vol_end=0, wave=WAVE_SQUARE, fx=FX_NONE, shape=SHAPE_LOG)"
+"vol_end=0, waveform=WAVE_SQUARE, fx=FX_NONE, shape=SHAPE_LOG)"
 msgstr ""
-">>> print(audio.SoundEffect())\n"
-"SoundEffect(freq_start=500, freq_end=2500, duration=500, vol_start=255, "
-"vol_end=0, waveform=WAVEFORM_SQUARE, fx=FX_NONE, shape=SHAPE_LOG)"
 
-#: ../../audio.rst:198
+#: ../../audio.rst:199
 msgid ""
 "This format is \"human readable\", which means it is easy for us to read,"
 " and it looks very similar to the code needed to create that SoundEffect,"
@@ -442,7 +438,7 @@ msgstr ""
 "(micro:bit の無線機能でサウンドを送信できます！）。この文字列は ``eval()`` 関数で"
 "実行できます：:"
 
-#: ../../audio.rst:205
+#: ../../audio.rst:206
 msgid ""
 ">>> from audio import SoundEffect\n"
 ">>> sound_code = repr(SoundEffect())\n"
@@ -451,7 +447,7 @@ msgid ""
 ">>> eval(\"audio.play({})\".format(sound_code))"
 msgstr ""
 
-#: ../../audio.rst:212
+#: ../../audio.rst:213
 msgid "Sound Effects Example"
 msgstr "サウンド効果のサンプルコード"
 
@@ -571,11 +567,11 @@ msgstr ""
 "\n"
 "    sleep(150)"
 
-#: ../../audio.rst:218
+#: ../../audio.rst:219
 msgid "AudioFrame"
 msgstr ""
 
-#: ../../audio.rst:223
+#: ../../audio.rst:224
 msgid ""
 "An ``AudioFrame`` object is a list of 32 samples each of which is an "
 "unsigned byte (whole number between 0 and 255)."
@@ -583,26 +579,26 @@ msgstr ""
 "``AudioFrame`` オブジェクトは32項目のリストです。"
 "各項目の値は符号なしバイト(0と255の間の整数)です。"
 
-#: ../../audio.rst:226
+#: ../../audio.rst:227
 msgid "It takes just over 4 ms to play a single frame."
 msgstr "１フレームを再生するのには４ミリ秒以上かかります。"
 
-#: ../../audio.rst:230
+#: ../../audio.rst:231
 msgid ""
 "Overwrite the data in this ``AudioFrame`` with the data from another "
 "``AudioFrame`` instance."
 msgstr ""
 "この ``AudioFrame`` のデータを、別の ``AudioFrame`` インスタンスのデータで上書きします。"
 
-#: ../../audio.rst:233
+#: ../../audio.rst:234
 msgid "``AudioFrame`` instance from which to copy the data."
 msgstr "コピーするデータを持つ ``AudioFrame`` インスタンス。"
 
-#: ../../audio.rst:236
+#: ../../audio.rst:237
 msgid "Technical Details"
 msgstr "技術的な詳細"
 
-#: ../../audio.rst:239
+#: ../../audio.rst:240
 msgid ""
 "You don't need to understand this section to use the ``audio`` module. It"
 " is just here in case you wanted to know how it works."
@@ -610,7 +606,7 @@ msgstr ""
 "``audio`` モジュールを使うのにこのセクションを理解する必要はありません。"
 "このモジュールがどのように機能するのか知りたい方のためにあります。"
 
-#: ../../audio.rst:242
+#: ../../audio.rst:243
 msgid ""
 "The ``audio`` module can consumes an iterable (sequence, like list or "
 "tuple, or generator) of ``AudioFrame`` instances, each 32 samples at "
@@ -622,7 +618,7 @@ msgstr ""
 "各回 7812.5 Hz で 32 項目を採取し、線形補間を使用して 32.5 kHz の "
 "PWM 信号を出力します。これにより、許容できる音質が得られます。"
 
-#: ../../audio.rst:247
+#: ../../audio.rst:248
 msgid ""
 "The function ``play`` fully copies all data from each ``AudioFrame`` "
 "before it calls ``next()`` for the next frame, so a sound source can use "
@@ -632,7 +628,7 @@ msgstr ""
 "``AudioFrame`` からすべてのデータを完全にコピーするので、音源は同じ "
 "``AudioFrame`` を繰り返し使用できます。"
 
-#: ../../audio.rst:251
+#: ../../audio.rst:252
 msgid ""
 "The ``audio`` module has an internal 64 sample buffer from which it reads"
 " samples. When reading reaches the start or the mid-point of the buffer, "
@@ -648,7 +644,7 @@ msgstr ""
 "するのは 4ms 以下であり、信頼できる操作のために 2ms 以下である必要があります"
 "(micro:bit V1 では 32000 サイクル、V2 では 128000 サイクルなので十分です)。"
 
-#: ../../audio.rst:260
+#: ../../audio.rst:261
 msgid "AudioFrame Example"
 msgstr "AudioFrame のサンプルコード"
 
