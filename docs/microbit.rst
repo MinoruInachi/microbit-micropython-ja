@@ -37,10 +37,17 @@ Functions
 
     For example, to convert 30 degrees from Celsius to Fahrenheit::
 
-        temp_fahrenheit = scale(30, from_=(0, 100), to=(32, 212))
+        temp_fahrenheit = scale(30, from_=(0.0, 100.0), to=(32.0, 212.0))
 
     This can be useful to convert values between inputs and outputs,
     for example an accelerometer x value to a speaker volume.
+
+    If one of the numbers in the ``to`` parameter is a floating point
+    (i.e a decimal number like ``10.0``), this function will return a
+    floating point number.
+    If they are both integers (i.e ``10``), it will return an integer::
+
+        returns_int = scale(accelerometer.get_x(), from_=(-2000, 2000), to=(0, 255))
 
     Negative scaling is also supported, for example
     ``scale(25, from_=(0, 100), to=(0, -200))`` will return ``-50``.
@@ -50,16 +57,6 @@ Functions
     :param to: A tuple to define the range to convert to.
 
     :returns: The ``value`` converted to the ``to`` range.
-
-.. py:function:: set_volume(volume)
-
-    (**V2 only**) Configure the output volume of the micro:bit speaker and
-    pins::
-
-        microbit.set_volume(127)
-
-    :param volume: An integer between 0 and 255 to set the volume.
-
 
 .. py:function:: set_volume(volume)
 
