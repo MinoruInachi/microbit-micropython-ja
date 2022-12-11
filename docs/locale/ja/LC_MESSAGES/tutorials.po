@@ -7,10 +7,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 1.1.0-beta.1\n"
+"Project-Id-Version: BBC micro:bit MicroPython 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-16 09:08+0900\n"
-"PO-Revision-Date: 2022-09-18 10:18+0900\n"
+"POT-Creation-Date: 2022-12-11 17:36+0900\n"
+"PO-Revision-Date: 2022-12-11 18:20+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -3561,17 +3561,17 @@ msgid ""
 "Sometimes you need numbers with a decimal point in them. These are called"
 " *floating point* numbers and it's possible to generate such a number "
 "with the ``random.random`` method. This only returns values between "
-"``0.0`` and ``1.0`` inclusive. If you need larger random floating point "
-"numbers add the results of ``random.randrange`` and ``random.random`` "
-"like this::"
+"``0.0`` and ``1.0`` (it includes ``0.0`` but excludes ``1.0``). If you "
+"need larger random floating point numbers add the results of "
+"``random.randrange`` and ``random.random`` like this::"
 msgstr ""
 "場合によっては小数点以下の数字が必要になることがあります。これは *浮動小数点数* と"
 "呼ばれ、そのような数値を ``random.random`` メソッドで生成できます。これは 0.0 "
-"から 1.0 の間の値を返すだけです。より大きなランダムな浮動小数点数が必要な場合は、"
-"以下のように ``random.randrange`` と ``random.random`` の結果を加算すると"
-"よいです::"
+"から 1.0 の間の値を返すだけです(``0.0`` は含みますが ``1.0`` は含みません)。"
+"より大きなランダムな浮動小数点数が必要な場合は、次のように ``random.randrange`` "
+"と ``random.random`` の結果を加算するとよいです::"
 
-#: ../../tutorials/random.rst:59
+#: ../../tutorials/random.rst:60
 msgid ""
 "from microbit import *\n"
 "import random\n"
@@ -3580,11 +3580,11 @@ msgid ""
 "display.scroll(str(answer))"
 msgstr ""
 
-#: ../../tutorials/random.rst:66
+#: ../../tutorials/random.rst:67
 msgid "Seeds of Chaos"
 msgstr "混沌の種(Seeds of Chaos)"
 
-#: ../../tutorials/random.rst:68
+#: ../../tutorials/random.rst:69
 msgid ""
 "The random number generators used by computers are not truly random. They"
 " just give random like results given a starting *seed* value. The seed is"
@@ -3595,7 +3595,7 @@ msgstr ""
 "与えられた結果のようにランダム値を生成します。シード値の生成には、現在時刻やチップ内に"
 "組み込まれた温度計などのセンサー値のようなランダム性のあるものを使うこと多いです。"
 
-#: ../../tutorials/random.rst:73
+#: ../../tutorials/random.rst:74
 msgid ""
 "Sometimes you want to have repeatable random-ish behaviour: a source of "
 "randomness that is reproducible. It's like saying that you need the same "
@@ -3604,7 +3604,7 @@ msgstr ""
 "反復可能なランダム性、すなわち再現性のある乱数発生が欲しいこともあります。"
 "サイコロを投げるたびに同じ5つのランダムな値が必要であるようなことです。"
 
-#: ../../tutorials/random.rst:77
+#: ../../tutorials/random.rst:78
 msgid ""
 "This is easy to achieve by setting the *seed* value. Given a known seed "
 "the random number generator will create the same set of random numbers. "
@@ -3615,7 +3615,7 @@ msgstr ""
 "乱数ジェネレータは同じ乱数セットを作成します。シードは ``random.seed`` に"
 "任意の整数を指定します。以下バージョンのサイコロプログラムは常に同じ結果を生成します::"
 
-#: ../../tutorials/random.rst:82
+#: ../../tutorials/random.rst:83
 msgid ""
 "from microbit import *\n"
 "import random\n"
@@ -3626,7 +3626,7 @@ msgid ""
 "        display.show(str(random.randint(1, 6)))"
 msgstr ""
 
-#: ../../tutorials/random.rst:90
+#: ../../tutorials/random.rst:91
 msgid ""
 "Can you work out why this program needs us to press button A instead of "
 "reset the device as in the first dice example..?"

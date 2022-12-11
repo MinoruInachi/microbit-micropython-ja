@@ -7,10 +7,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 1.1.0-beta.1\n"
+"Project-Id-Version: BBC micro:bit MicroPython 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-16 09:08+0900\n"
-"PO-Revision-Date: 2022-09-17 23:23+0900\n"
+"POT-Creation-Date: 2022-12-11 17:36+0900\n"
+"PO-Revision-Date: 2022-12-11 17:56+0900\n"
 "Last-Translator: Minoru Inachi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -85,7 +85,7 @@ msgid "For example, to convert 30 degrees from Celsius to Fahrenheit::"
 msgstr "たとえば、摂氏30度を華氏に変換する場合は次のようにします::"
 
 #: ../../microbit.rst:40
-msgid "temp_fahrenheit = scale(30, from_=(0, 100), to=(32, 212))"
+msgid "temp_fahrenheit = scale(30, from_=(0.0, 100.0), to=(32.0, 212.0))"
 msgstr ""
 
 #: ../../microbit.rst:42
@@ -98,44 +98,61 @@ msgstr ""
 
 #: ../../microbit.rst:45
 msgid ""
+"If one of the numbers in the ``to`` parameter is a floating point (i.e a "
+"decimal number like ``10.0``), this function will return a floating point"
+" number. If they are both integers (i.e ``10``), it will return an "
+"integer::"
+msgstr ""
+"パラメータ ``to`` に指定した数値のいずれかが浮動小数点数(``10.0`` などの数)である"
+"場合、この関数は浮動小数点数の数値を返します。もし両方とも整数(``10`` などの数)であれば、"
+"整数を返します::"
+
+#: ../../microbit.rst:50
+msgid ""
+"returns_int = scale(accelerometer.get_x(), from_=(-2000, 2000), to=(0, "
+"255))"
+msgstr ""
+
+#: ../../microbit.rst:52
+msgid ""
 "Negative scaling is also supported, for example ``scale(25, from_=(0, "
 "100), to=(0, -200))`` will return ``-50``."
 msgstr ""
 "負のスケーリングもサポートしており、たとえば ``scale(25, from_=(0, 100), "
 "to=(0, -200))`` は -50 を返します。"
 
-#: ../../microbit.rst:48
+#: ../../microbit.rst:55
 msgid "A number to convert."
 msgstr "変換する数値。"
 
-#: ../../microbit.rst:49
+#: ../../microbit.rst:56
 msgid "A tuple to define the range to convert from."
 msgstr "変換元の区間を定義するためのタプル。"
 
-#: ../../microbit.rst:50
+#: ../../microbit.rst:57
 msgid "A tuple to define the range to convert to."
 msgstr "変換先の区間を定義するためのタプル。"
 
-#: ../../microbit.rst:52
+#: ../../microbit.rst:59
 msgid "The ``value`` converted to the ``to`` range."
 msgstr "``to`` に指定した区間に変換された値。"
 
-#: ../../microbit.rst:56 ../../microbit.rst:66
+#: ../../microbit.rst:63
 msgid ""
 "(**V2 only**) Configure the output volume of the micro:bit speaker and "
 "pins::"
 msgstr ""
 "(**V2 のみ**) micro:bit スピーカーとピンの出力ボリュームを設定します。"
 
-#: ../../microbit.rst:59 ../../microbit.rst:69
+#: ../../microbit.rst:66
 msgid "microbit.set_volume(127)"
 msgstr ""
 
-#: ../../microbit.rst:61 ../../microbit.rst:71
+#: ../../microbit.rst:68
 msgid "An integer between 0 and 255 to set the volume."
 msgstr "設定するボリュームを 0 から 255 までの間の整数で指定します。"
 
-#: ../../microbit.rst:76
+#: ../../microbit.rst:73
 msgid ""
 "Wait for ``n`` milliseconds. One second is 1000 milliseconds, so "
 "``microbit.sleep(1000)`` will pause the execution for one second."
@@ -143,25 +160,25 @@ msgstr ""
 "``n`` ミリ秒だけ待機します。1 秒は 1000 ミリ秒なので、 "
 "``microbit.sleep(1000)`` は 1 秒間実行を一時停止します。"
 
-#: ../../microbit.rst:79
+#: ../../microbit.rst:76
 msgid ""
 "An integer or floating point number indicating the number of milliseconds"
 " to wait."
 msgstr ""
 "待機するミリ秒を示す整数または浮動小数点数。"
 
-#: ../../microbit.rst:84
+#: ../../microbit.rst:81
 msgid ""
 "Schedule to run a function at the interval specified by the time "
 "arguments."
 msgstr ""
 "time 引数で指定した間隔で関数を実行するようスケジュールします。"
 
-#: ../../microbit.rst:86
+#: ../../microbit.rst:83
 msgid "``run_every`` can be used in two ways:"
 msgstr "``run_every`` は２つの方法で使えます:"
 
-#: ../../microbit.rst:88
+#: ../../microbit.rst:85
 msgid ""
 "As a **Decorator** - placed on top of the function to schedule. For "
 "example::"
@@ -169,7 +186,7 @@ msgstr ""
 "**デコレータ** として使用 - スケジュールする関数の上に置きます。たとえば次のように"
 "使います::"
 
-#: ../../microbit.rst:91
+#: ../../microbit.rst:88
 msgid ""
 "@run_every(days=1, h=1, min=20, s=30, ms=50)\n"
 "def my_function():\n"
@@ -179,7 +196,7 @@ msgstr ""
 "def my_function():\n"
 "    # ここで何かを実行"
 
-#: ../../microbit.rst:95
+#: ../../microbit.rst:92
 msgid ""
 "As a **Function** - passing the callback as a positional argument. For "
 "example::"
@@ -187,7 +204,7 @@ msgstr ""
 "**関数** として使用 - コールバックを位置引数として渡します。たとえば次のように"
 "使います::"
 
-#: ../../microbit.rst:98
+#: ../../microbit.rst:95
 msgid ""
 "def my_function():\n"
 "    # Do something here\n"
@@ -197,7 +214,7 @@ msgstr ""
 "    # ここで何かを実行\n"
 "run_every(my_function, s=30)"
 
-#: ../../microbit.rst:102
+#: ../../microbit.rst:99
 msgid ""
 "Each argument corresponds to a different time unit and they are additive."
 " So ``run_every(min=1, s=30)`` schedules the callback every minute and a "
@@ -206,7 +223,7 @@ msgstr ""
 "各引数は異なる時間単位に対応し、それらは加算されます。つまり、 "
 "``run_every(min=1, s=30)`` は1分半ごとにコールバックをスケジュールします。"
 
-#: ../../microbit.rst:106
+#: ../../microbit.rst:103
 msgid ""
 "When an exception is thrown inside the callback function it deschedules "
 "the function. To avoid this you can catch exceptions with ``try/except``."
@@ -214,43 +231,43 @@ msgstr ""
 "コールバック関数内で例外が発生した場合、その関数のスケジューリングが解除されます。"
 "これを避けるには ``try/except`` で例外をキャッチします。"
 
-#: ../../microbit.rst:109
+#: ../../microbit.rst:106
 msgid "Function to call at the provided interval."
 msgstr "指定した間隔で呼び出される関数。"
 
-#: ../../microbit.rst:110
+#: ../../microbit.rst:107
 msgid "Sets the days mark for the scheduling."
 msgstr "スケジューリングのための日数を設定します。"
 
-#: ../../microbit.rst:111
+#: ../../microbit.rst:108
 msgid "Sets the hour mark for the scheduling."
 msgstr "スケジューリングのための時間を設定します。"
 
-#: ../../microbit.rst:112
+#: ../../microbit.rst:109
 msgid "Sets the minute mark for the scheduling."
 msgstr "スケジューリングのための分を設定します。"
 
-#: ../../microbit.rst:113
+#: ../../microbit.rst:110
 msgid "Sets the second mark for the scheduling."
 msgstr "スケジューリングのための秒を設定します。"
 
-#: ../../microbit.rst:114
+#: ../../microbit.rst:111
 msgid "Sets the millisecond mark for the scheduling."
 msgstr "スケジューリングのためのミリ秒を設定します。"
 
-#: ../../microbit.rst:118
+#: ../../microbit.rst:115
 msgid "An integer with the temperature of the micro:bit in degrees Celcius."
 msgstr "micro:bit の温度(摂氏)を示す整数。"
 
-#: ../../microbit.rst:123
+#: ../../microbit.rst:120
 msgid "Attributes"
 msgstr "属性"
 
-#: ../../microbit.rst:133
+#: ../../microbit.rst:130
 msgid "Classes"
 msgstr "クラス"
 
-#: ../../microbit.rst:143
+#: ../../microbit.rst:140
 msgid "Modules"
 msgstr "モジュール"
 
