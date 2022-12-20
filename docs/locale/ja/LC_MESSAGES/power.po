@@ -407,7 +407,7 @@ msgstr "💤 スリープ"
 
 #: ../../power.rst:134
 msgid "Deep Sleep & run_every"
-msgstr ""
+msgstr "ディープスリープと run_every"
 
 #: ../../power.rst:136
 msgid ""
