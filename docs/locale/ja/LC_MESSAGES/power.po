@@ -294,7 +294,7 @@ msgstr ""
 msgid "Detailed Information"
 msgstr "詳細情報"
 
-#: ../../power.rst:81
+#: ../../power.rst:86
 msgid ""
 "The micro:bit board has two microcontrollers (MCUs), which can be "
 "independently asleep or awake:"
@@ -302,11 +302,11 @@ msgstr ""
 "micro:bit ボードには２つのマイクロコントローラ(MCU)があり、それぞれ独立して"
 "スリープ/起床できます。"
 
-#: ../../power.rst:84
+#: ../../power.rst:89
 msgid "**Target MCU** - Where MicroPython and your code run."
 msgstr "**ターゲット MCU** - MicroPython とそのコードを実行します。"
 
-#: ../../power.rst:85
+#: ../../power.rst:90
 msgid ""
 "**Interface MCU** - A secondary microcontroller that provides the USB "
 "functionality, like the ``MICROBIT`` USB drive, and the USB serial "
@@ -315,19 +315,19 @@ msgstr ""
 "**インタフェース MCU** - ``MICROBIT`` USB ドライブなど、USB 機能および "
 "USB のシリアルインタフェースを提供する二次マイクロコントローラ。"
 
-#: ../../power.rst:89
+#: ../../power.rst:94
 msgid ".. image:: power-mcus.png"
 msgstr ""
 
-#: ../../power.rst:90
+#: ../../power.rst:95
 msgid "Each MCU can be in one of these \"MCU power modes\":"
 msgstr "各 MCU は、次の「MCU 電源モード」のいずれかにできます:"
 
-#: ../../power.rst:92
+#: ../../power.rst:97
 msgid "**Awake**: Running normally."
 msgstr "**覚醒** (Awake): 通常の動作モードです。"
 
-#: ../../power.rst:93
+#: ../../power.rst:98
 msgid ""
 "**Sleep**: A low power mode where the MCU can be woken up from different "
 "sources and continue operation."
@@ -335,7 +335,7 @@ msgstr ""
 "**スリープ** (Sleep): MCU が異なるソースから起床され、動作を継続することができる"
 "低電力モードです。"
 
-#: ../../power.rst:95
+#: ../../power.rst:100
 msgid ""
 "**Power Down**: The lowest power mode for an individual MCU, when it "
 "wakes up it will start from reset."
@@ -343,7 +343,7 @@ msgstr ""
 "**電源ダウン** (Power Down): 個々の MCU にとって最も低い電力モードであり、"
 "起動するとリセットから開始されます。"
 
-#: ../../power.rst:98
+#: ../../power.rst:103
 msgid ""
 "The Python code can request a \"board power mode\", in this case **Deep "
 "Sleep** or **Off**, which will set the Target into a specific \"MCU power"
@@ -356,7 +356,7 @@ msgstr ""
 "モードは micro:bit の電源、つまり USB (コンピュータへのコネクタ)またはバッテリー経由で"
 "電源供給されているかどうかに依存します。"
 
-#: ../../power.rst:103
+#: ../../power.rst:108
 msgid ""
 "In essence, on battery power the Interface MCU can go into a low power "
 "mode, but when it is connected to a computer via USB, it will stay awake "
@@ -365,50 +365,61 @@ msgstr ""
 "要するに、バッテリー電源の場合、インタフェース MCUは 低電力モードに移行できますが、"
 "USB でコンピュータに接続されている場合、USB 接続を維持するために起きていることになります。"
 
-#: ../../power.rst:108
-msgid "USB Powered (Interface always awake)"
-msgstr "USB 電源(インタフェースが常時覚醒)"
-
-#: ../../power.rst:119
-msgid "Battery Powered"
-msgstr "バッテリー電源"
-
-#: ../../power.rst:110 ../../power.rst:121
+#: ../../power.rst:115 ../../power.rst:126
 msgid "Board Power Mode"
 msgstr "ボード電源モード"
 
-#: ../../power.rst:110 ../../power.rst:121
+#: ../../power.rst:115 ../../power.rst:126
 msgid "Target MCU Mode"
 msgstr "ターゲット MCU モード"
 
-#: ../../power.rst:110 ../../power.rst:121
+#: ../../power.rst:115 ../../power.rst:126
 msgid "Interface MCU mode"
 msgstr "インタフェース MCU モード"
 
-#: ../../power.rst:112 ../../power.rst:123
+#: ../../power.rst:117 ../../power.rst:128
 msgid "**Deep Sleep**"
 msgstr "**ディープスリープ**"
 
-#: ../../power.rst:112
+#: ../../power.rst:117
 msgid "💤  Sleep"
 msgstr "💤  スリープ"
 
-#: ../../power.rst:112
+#: ../../power.rst:117
 msgid "⏰ Awake"
 msgstr "⏰ 覚醒"
 
-#: ../../power.rst:114 ../../power.rst:125
+#: ../../power.rst:119 ../../power.rst:130
 msgid "**Off**"
 msgstr "**オフ**"
 
-#: ../../power.rst:114 ../../power.rst:125
+#: ../../power.rst:119 ../../power.rst:130
 msgid "📴 Power Down"
 msgstr "📴 電源ダウン"
 
-#: ../../power.rst:114
+#: ../../power.rst:119
 msgid "⏰ Awake (red LED blinking)"
 msgstr "⏰ 覚醒 (赤 LED 点滅)"
 
-#: ../../power.rst:123
+#: ../../power.rst:128
 msgid "💤 Sleep"
 msgstr "💤 スリープ"
+
+#: ../../power.rst:134
+msgid "Deep Sleep & run_every"
+msgstr ""
+
+#: ../../power.rst:136
+msgid ""
+"To make sure the :py:meth:`microbit.run_every<microbit.run_every>` "
+"functions continue to run during \"Deep Sleep\", the micro:bit will wake "
+"up at the correct time to run the next scheduled ``run_every``, and then "
+"go back to \"Deep Sleep\" mode as soon as that ``run_every`` completes. "
+"It will continue to do this until the deep sleep finishes due to the "
+"``ms`` timeout being reached, or a ``wake_on`` event occurs."
+msgstr ""
+"「ディープスリープ」中も :py:meth:`microbit.run_every<microbit.run_every>` "
+"関数が実行されるように、micro:bit は正しい時刻に起床して次にスケジュールされている "
+"``run_every`` を実行し、その ``run_every`` が完了すると同時に「ディープスリープ」"
+"モードに戻ります。 ``ms`` のタイムアウトに達するか ``wake_on`` イベントが発生して、"
+"ディープスリープが終了するまで、この動作が続きます。"
