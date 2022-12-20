@@ -79,6 +79,8 @@ msgid ""
 "Image attribution: `adafruit flexible Neopixel matrix "
 "<https://www.adafruit.com/product/2547>`_"
 msgstr ""
+"画像提供元: `adafruit flexible Neopixel matrix "
+"<https://www.adafruit.com/product/2547>`_"
 
 #: ../../neopixel.rst:33
 msgid ""

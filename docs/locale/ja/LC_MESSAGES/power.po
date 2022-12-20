@@ -36,10 +36,11 @@ msgstr ""
 #: ../../power.rst:11
 msgid ""
 "**Deep Sleep**: Low power mode where the board can be woken up via "
-"multiple sources (pins, button presses, or a timer) and resume operation."
+"multiple sources (pins, button presses, uart data, or a timer) and resume"
+" operation."
 msgstr ""
-"**ディープスリープ**: 複数のソース(端子、ボタン、タイマー)でボードを起動し、動作を再開"
-"できる低電力モードです。"
+"**ディープスリープ**: 複数のソース(端子、ボタン押下、UART データ、タイマー)で
+ボードを起動し、動作を再開できる低電力モードです。"
 
 #: ../../power.rst:14
 msgid ""
@@ -112,26 +113,38 @@ msgstr "ディープスリープモードはオフモードよりも多くのバ
 msgid "The wake up sources are configured via arguments."
 msgstr "起床させるソースは引数で設定します。"
 
+
 #: ../../power.rst:52
 msgid ""
-"If no wake up sources have been configured it will sleep until the reset "
+"The board will always wake up when receiving UART data, when the reset "
 "button is pressed (which resets the board) or, in battery power, when the"
 " USB cable is inserted."
 msgstr ""
-"起床のソースが設定されていない場合は、リセット・ボタンが押されるまで(ボードをリセット"
-"するまで)、または、バッテリー駆動の場合は、USB ケーブルが挿入されるまでスリープ状態に"
-"なります。"
+"ボードは、UARTデータを受信したとき、(ボードをリセットするときに使う)リセットボタンを"
+"押したとき、バッテリー駆動している場合においては USB ケーブルを挿入したときに、常に"
+"起床します。"
+
+#: ../../power.rst:56
+msgid ""
+"When the ``run_every`` parameter is set to ``True`` (the default), any "
+"function scheduled with :py:meth:`microbit.run_every<microbit.run_every>`"
+" will momentarily wake up the board to run and when it finishes it will "
+"go back to sleep."
+msgstr ""
+"``run_every`` パラメータを ``True`` に設定すると(デフォルト)、 "
+":py:meth:`microbit.run_every<microbit.run_every>` でスケジュールした関数は、"
+"ボードを一瞬だけ起こして実行し、終了するとスリープに戻ります。"
 
 #, fuzzy
 #: ../../power.rst
 msgid "param"
 msgstr "パラメータ"
 
-#: ../../power.rst:56
+#: ../../power.rst:61
 msgid "A time in milliseconds to wait before it wakes up."
 msgstr "起床するまでの時間(ミリ秒単位)。"
 
-#: ../../power.rst:57
+#: ../../power.rst:62
 msgid ""
 "A single instance or a tuple of pins and/or buttons to wake up the board,"
 " e.g. ``deep_sleep(wake_on=button_a)`` or ``deep_sleep(wake_on=(pin0, "
@@ -141,16 +154,19 @@ msgstr ""
 "例: ``deep_sleep(wake_on=button_a)`` または ``deep_sleep(wake_on=(pin0, "
 "pin2, button_b))`` 。"
 
-#: ../../power.rst:60
-msgid "Set to ``True`` to wake up with each ``microbit.run_every`` scheduled run."
+#: ../../power.rst:65
+msgid ""
+"A boolean to configure if the functions scheduled with "
+"``microbit.run_every`` will continue to run while it sleeps."
 msgstr ""
-"``True`` に設定すると、microbit.run_every のスケジュール実行のたびに起床します。"
+"``microbit.run_every`` による関数実行のスケジュールを、
+"ディープスリープ中でも有効にするかを設定するブール値です。"
 
-#: ../../power.rst:64
+#: ../../power.rst:69
 msgid "Examples"
 msgstr "サンプルコード"
 
-#: ../../power.rst:66
+#: ../../power.rst:71
 msgid "Example programme showing the power management API:"
 msgstr "電源管理 API の使い方を示すプログラム例:"
 
@@ -235,7 +251,7 @@ msgstr ""
 "    display.show(Image.HAPPY)\n"
 "    sleep(200)"
 
-#: ../../power.rst:72
+#: ../../power.rst:77
 msgid "Example using data logging:"
 msgstr "データログを使用した例:"
 
@@ -245,15 +261,16 @@ msgid ""
 "import log\n"
 "\n"
 "# Log the temperature every 5 minutes\n"
-"@run_every(s=5)\n"
+"@run_every(min=5)\n"
 "def log_temperature():\n"
 "    log.add(temp=temperature())\n"
 "\n"
 "while True:\n"
+"    # Display the temperature when button A is pressed\n"
 "    if button_a.is_pressed():\n"
-"        # Display the temperature when button A is pressed\n"
 "        display.scroll(temperature())\n"
-"    # To go sleep and wake up with run_every or button A\n"
+"    # To go sleep, wake up when button A is pressed, and ensure the\n"
+"    # function scheduled with run_every still executes in the background\n"
 "    power.deep_sleep(wake_on=button_a, run_every=True)"
 msgstr ""
 "from microbit import *\n"
@@ -261,18 +278,19 @@ msgstr ""
 "import log\n"
 "\n"
 "# 5分ごとに温度を記録する\n"
-"@run_every(s=5)\n"
+"@run_every(min=5)\n"
 "def log_temperature():\n"
 "    log.add(temp=temperature())\n"
 "\n"
 "while True:\n"
+"    # Aボタンを押したときの温度を表示します\n"
 "    if button_a.is_pressed():\n"
-"        # Aボタンを押したときの温度を表示します\n"
 "        display.scroll(temperature())\n"
-"    # ディープスリープに入り、run_everyまたはAボタンで起床\n"
+"    # ディープスリープに入り、Aボタンを押すと起床するようにし、run_every で\n"
+"    # スケジューリングした関数がバックグラウンドで実行されるようにする\n"
 "    power.deep_sleep(wake_on=button_a, run_every=True)"
 
-#: ../../power.rst:79
+#: ../../power.rst:84
 msgid "Detailed Information"
 msgstr "詳細情報"
 
