@@ -1,21 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2022, Multiple authors
+# Copyright (C) 2015-2024, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-15 09:57+0900\n"
-"PO-Revision-Date: 2022-05-15 11:39+0900\n"
+"POT-Creation-Date: 2024-06-02 11:38+0900\n"
+"PO-Revision-Date: 2024-06-02 14:01+0900\n"
 "Last-Translator: Minoru Inachi <minoru.inachi@gmail.com>\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.13.1\n"
 
 #: ../../radio.rst:2
 msgid "Radio"
@@ -138,12 +140,21 @@ msgid "Functions"
 msgstr "関数"
 
 #: ../../radio.rst:51
+msgid "Turns the radio on."
+msgstr "無線通信をオンにします。"
+
+#: ../../radio.rst:53
 msgid ""
-"Turns the radio on. This needs to be explicitly called since the radio "
-"draws power and takes up memory that you may otherwise need."
+"Since MicroPython-on-micro:bit v1.1 the radio is turned on by default "
+"when the radio module is imported. In earlier releases, to reduce power "
+"consumption until needed, this function had to be explicitly called. For "
+"those cases ``radio.off()`` can be called after import."
 msgstr ""
-"無線通信をオンにします。無線通信は電力を消費し、他で必要となるかもしれない"
-"メモリも占有するため、明示的に呼び出す必要があります。"
+"micro:bit 用 MicroPython v1.1 より、radio モジュールをインポートすると、"
+"デフォルトで無線機能がオンになります。より前のリリースでは、必要となるまで"
+"消費電力を削減するために、この関数を明示的に呼び出す必要がありました。"
+"v1.1 以降で無線通信の使わないときの消費電力を抑えるには、インポート後に "
+"``radio.off()`` を呼び出します。"
 
 #: ../../radio.rst:56
 msgid "Turns off the radio, thus saving power and memory."

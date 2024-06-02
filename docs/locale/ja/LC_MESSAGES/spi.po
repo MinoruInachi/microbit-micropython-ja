@@ -1,22 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2016, Multiple authors
+# Copyright (C) 2015-2024, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 0.5.0\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-09 10:10+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2024-06-02 11:38+0900\n"
+"PO-Revision-Date: 2024-06-02 14:05+0900\n"
+"Last-Translator: Minoru Inachi\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.4.0\n"
+"Generated-By: Babel 2.13.1\n"
 
 #: ../../spi.rst:2
 msgid "SPI"
@@ -134,14 +135,18 @@ msgstr ""
 "します。"
 
 #: ../../spi.rst:58
-msgid "Read at most ``nbytes``. Returns what was read."
-msgstr "最大 ``nbytes`` を読み込みます。読み込んだものを返します。"
+msgid ""
+"Read at most ``nbytes`` while continuously writing the single byte given "
+"by ``out``. Returns what was read."
+msgstr ""
+"``out`` に指定した単一バイト値を継続して書き込みながら、"
+"最大 ``nbytes`` を読み込みます。読み込んだものを返します。"
 
-#: ../../spi.rst:62
+#: ../../spi.rst:63
 msgid "Write the ``buffer`` of bytes to the bus."
 msgstr "バイト列の ``buffer`` をバスに書き出します。"
 
-#: ../../spi.rst:66
+#: ../../spi.rst:67
 msgid ""
 "Write the ``out`` buffer to the bus and read any response into the ``in``"
 " buffer. The length of the buffers should be the same. The buffers can be"

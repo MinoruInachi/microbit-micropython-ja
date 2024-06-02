@@ -1,21 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2016, Multiple authors
+# Copyright (C) 2015-2024, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-23 17:22+0900\n"
-"PO-Revision-Date: 2022-04-23 18:11+0900\n"
+"POT-Creation-Date: 2024-06-02 11:38+0900\n"
+"PO-Revision-Date: 2024-06-02 18:16+0900\n"
 "Last-Translator: Minoru Inachi\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.13.1\n"
 
 #: ../../index.rst:7
 msgid "BBC micro:bit MicroPython documentation"
@@ -27,13 +29,15 @@ msgstr "ようこそ！"
 
 #: ../../index.rst:11
 msgid ""
-"The BBC micro:bit is a small computing device for children. One of the "
-"languages it understands is the popular Python programming language. The "
-"version of Python that runs on the BBC micro:bit is called MicroPython."
+"The `BBC micro:bit <https://microbit.org>`_ is a small computing device "
+"for children. One of the languages it understands is the popular Python "
+"programming language. The version of Python that runs on the BBC "
+"micro:bit is called MicroPython."
 msgstr ""
-"BBC micro:bit は子どものための小さなコンピュータデバイスです。"
-"このデバイスで使える言語の１つは、よく知られた Python プログラミング言語です。"
-"BBC micro:bit で動作する Python は MicroPython というものです。"
+"`BBC micro:bit <https://microbit.org>`_ は子どものための小さなコンピュータ"
+"デバイスです。このデバイスで使える言語の１つは、よく知られた Python "
+"プログラミング言語です。BBC micro:bit で動作する Python は MicroPython "
+"というものです。"
 
 #: ../../index.rst:15
 msgid ""

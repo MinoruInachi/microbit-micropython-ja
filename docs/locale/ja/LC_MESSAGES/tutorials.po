@@ -1,21 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2022, Multiple authors
+# Copyright (C) 2015-2024, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-15 09:57+0900\n"
-"PO-Revision-Date: 2022-05-15 13:41+0900\n"
+"POT-Creation-Date: 2024-06-02 11:38+0900\n"
+"PO-Revision-Date: 2024-06-02 14:25+0900\n"
 "Last-Translator: Minoru Inachi\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.13.1\n"
 
 #: ../../tutorials/buttons.rst:189
 msgid ""
@@ -3242,44 +3244,33 @@ msgstr ""
 #: ../../tutorials/radio.rst:109
 msgid ""
 "First ``import radio`` to make the functions available to your Python "
-"program. Then call the ``radio.on()`` function to turn the radio on. "
-"Since the radio draws power and takes up memory we've made it so *you* "
-"decide when it is enabled (there is, of course a ``radio.off()`` "
-"function)."
+"program. At this point the radio module is configured to sensible "
+"defaults that make it compatible with other platforms that may target the"
+" BBC micro:bit. It is possible to control many of the features discussed "
+"above (such as channel and addressing) as well as the amount of power "
+"used to broadcast messages and the amount of RAM the incoming message "
+"queue will take up. The API documentation contains all the information "
+"you need to configure the radio to your needs."
 msgstr ""
 "まず Python プログラムで関数を利用できるように ``import radio`` します。"
-"次に、無線をオンにする ``radio.on()`` 関数を呼び出します。これを行うと radio は"
-"パワーを得てメモリを確保するので、 *あなた* が無線通信の有効化を決定したことに"
-"なります(もちろん、無効にする ``radio.off`` 関数もあります)。"
-
-#: ../../tutorials/radio.rst:114
-msgid ""
-"At this point the radio module is configured to sensible defaults that "
-"make it compatible with other platforms that may target the BBC "
-"micro:bit. It is possible to control many of the features discussed above"
-" (such as channel and addressing) as well as the amount of power used to "
-"broadcast messages and the amount of RAM the incoming message queue will "
-"take up. The API documentation contains all the information you need to "
-"configure the radio to your needs."
-msgstr ""
 "この時点で、radio モジュールは、BBC micro:bit をターゲットとする可能性のある他の"
 "プラットフォームと互換性を持つように、適切なデフォルトに設定されています。上述した"
 "多くの機能(チャネルやアドレス指定など)や、メッセージをブロードキャストするための"
 "電力量や着信メッセージキューが占有する RAM の量を制御することが可能です。"
 "APIドキュメントには、必要に応じて radio を設定するために必要なすべての情報があります。"
 
-#: ../../tutorials/radio.rst:121
+#: ../../tutorials/radio.rst:117
 msgid ""
 "Assuming we're happy with the defaults, the simplest way to send a "
 "message is like this::"
 msgstr ""
 "デフォルトで十分であれば、メッセージを送信する最も簡単な方法は次のようなものです:"
 
-#: ../../tutorials/radio.rst:124
+#: ../../tutorials/radio.rst:120
 msgid "radio.send(\"a message\")"
 msgstr ""
 
-#: ../../tutorials/radio.rst:126
+#: ../../tutorials/radio.rst:122
 msgid ""
 "The example uses the ``send`` function to simply broadcast the string \"a"
 " message\". To receive a message is even easier::"
@@ -3287,11 +3278,11 @@ msgstr ""
 "この例では、\"a message\" をブロードキャストするために ``send`` 関数を使って"
 "います。メッセージを受け取るのはさらに簡単です:"
 
-#: ../../tutorials/radio.rst:129
+#: ../../tutorials/radio.rst:125
 msgid "new_message = radio.receive()"
 msgstr ""
 
-#: ../../tutorials/radio.rst:131
+#: ../../tutorials/radio.rst:127
 msgid ""
 "As messages are received they are put on a message queue. The ``receive``"
 " function returns the oldest message from the queue as a string, making "
@@ -3303,7 +3294,7 @@ msgstr ""
 "メッセージを返します。メッセージキューがいっぱいになると、新しい受信メッセージは"
 "無視されます。"
 
-#: ../../tutorials/radio.rst:136
+#: ../../tutorials/radio.rst:132
 msgid ""
 "That's really all there is to it! (Although the radio module is also "
 "powerful enough that you can send any arbitrary type of data, not just "
@@ -3312,7 +3303,7 @@ msgstr ""
 "本当にこれだけです(が、radio モジュールは文字列だけでなく任意のタイプのデータを"
 "送信することもできます。これについてはAPIドキュメントを参照してください)。"
 
-#: ../../tutorials/radio.rst:140
+#: ../../tutorials/radio.rst:136
 msgid ""
 "Armed with this knowledge, it's simple to make micro:bit fireflies like "
 "this:"
@@ -3533,17 +3524,17 @@ msgid ""
 "Sometimes you need numbers with a decimal point in them. These are called"
 " *floating point* numbers and it's possible to generate such a number "
 "with the ``random.random`` method. This only returns values between "
-"``0.0`` and ``1.0`` inclusive. If you need larger random floating point "
-"numbers add the results of ``random.randrange`` and ``random.random`` "
-"like this::"
+"``0.0`` and ``1.0`` (it includes ``0.0`` but excludes ``1.0``). If you "
+"need larger random floating point numbers add the results of "
+"``random.randrange`` and ``random.random`` like this::"
 msgstr ""
 "場合によっては小数点以下の数字が必要になることがあります。これは *浮動小数点数* と"
 "呼ばれ、そのような数値を ``random.random`` メソッドで生成できます。これは 0.0 "
-"から 1.0 の間の値を返すだけです。より大きなランダムな浮動小数点数が必要な場合は、"
-"以下のように ``random.randrange`` と ``random.random`` の結果を加算すると"
-"よいです::"
+"から 1.0 の間の値を返すだけです(``0.0`` は含みますが ``1.0`` は含みません)。"
+"より大きなランダムな浮動小数点数が必要な場合は、次のように ``random.randrange`` "
+"と ``random.random`` の結果を加算するとよいです::"
 
-#: ../../tutorials/random.rst:59
+#: ../../tutorials/random.rst:60
 msgid ""
 "from microbit import *\n"
 "import random\n"
@@ -3552,11 +3543,11 @@ msgid ""
 "display.scroll(str(answer))"
 msgstr ""
 
-#: ../../tutorials/random.rst:66
+#: ../../tutorials/random.rst:67
 msgid "Seeds of Chaos"
 msgstr "混沌の種(Seeds of Chaos)"
 
-#: ../../tutorials/random.rst:68
+#: ../../tutorials/random.rst:69
 msgid ""
 "The random number generators used by computers are not truly random. They"
 " just give random like results given a starting *seed* value. The seed is"
@@ -3567,7 +3558,7 @@ msgstr ""
 "与えられた結果のようにランダム値を生成します。シード値の生成には、現在時刻やチップ内に"
 "内蔵されている温度計などのセンサー値のようなランダム性のあるものを使うこと多いです。"
 
-#: ../../tutorials/random.rst:73
+#: ../../tutorials/random.rst:74
 msgid ""
 "Sometimes you want to have repeatable random-ish behaviour: a source of "
 "randomness that is reproducible. It's like saying that you need the same "
@@ -3576,7 +3567,7 @@ msgstr ""
 "反復可能なランダム性、すなわち再現性のある乱数発生が欲しいこともあります。"
 "サイコロを投げるたびに同じ5つのランダムな値が必要であるようなことです。"
 
-#: ../../tutorials/random.rst:77
+#: ../../tutorials/random.rst:78
 msgid ""
 "This is easy to achieve by setting the *seed* value. Given a known seed "
 "the random number generator will create the same set of random numbers. "
@@ -3587,7 +3578,7 @@ msgstr ""
 "乱数ジェネレータは同じ乱数セットを作成します。シードは ``random.seed`` に"
 "任意の整数を指定します。以下バージョンのサイコロプログラムは常に同じ結果を生成します::"
 
-#: ../../tutorials/random.rst:82
+#: ../../tutorials/random.rst:83
 msgid ""
 "from microbit import *\n"
 "import random\n"
@@ -3598,7 +3589,7 @@ msgid ""
 "        display.show(str(random.randint(1, 6)))"
 msgstr ""
 
-#: ../../tutorials/random.rst:90
+#: ../../tutorials/random.rst:91
 msgid ""
 "Can you work out why this program needs us to press button A instead of "
 "reset the device as in the first dice example..?"

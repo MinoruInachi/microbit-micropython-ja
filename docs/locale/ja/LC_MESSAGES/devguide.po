@@ -1,21 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2016, Multiple authors
+# Copyright (C) 2015-2024, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Project-Id-Version: BBC micro:bit MicroPython 1.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-15 09:57+0900\n"
-"PO-Revision-Date: 2022-05-15 11:01+0900\n"
+"POT-Creation-Date: 2024-06-02 11:38+0900\n"
+"PO-Revision-Date: 2024-06-02 14:15+0900\n"
 "Last-Translator: Minoru Inachi\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.13.1\n"
 
 #: ../../devguide/contributing.rst:2
 msgid "Contributing"
@@ -637,6 +639,16 @@ msgstr ""
 
 #: ../../devguide/repl.rst:37
 msgid ""
+"`microREPL <https://github.com/ntoll/microrepl>`_ is an easy to use "
+"python serial terminal that detects and connects to the micro:bit "
+"automatically. To exit microREPL press ``CTRL`` + ``]`` on your keyboard."
+msgstr ""
+"`microREPL <https://github.com/ntoll/microrepl>`_ は使いやすい python "
+"シリアルターミナルで、micro:bit を自動的に検出して接続します。microREPL を終了"
+"するにはキーボードの ``CTRL`` + ``]`` を押してください。"
+
+#: ../../devguide/repl.rst:41
+msgid ""
 "Some other common options are `picocom` and `screen`. You will need to "
 "install a program and read the appropriate documentation to understand "
 "the basics of connecting to a device."
@@ -646,23 +658,23 @@ msgstr ""
 "インストールし、適切なドキュメントを読んでデバイスに接続するための基本を"
 "理解する必要があります。"
 
-#: ../../devguide/repl.rst:43
+#: ../../devguide/repl.rst:47
 msgid "Determining the port"
 msgstr "ポートの判別"
 
-#: ../../devguide/repl.rst:45
+#: ../../devguide/repl.rst:49
 msgid "Accessing the REPL on the micro:bit will require you to:"
 msgstr "micro:bit の REPL にアクセスするには次が必要です:"
 
-#: ../../devguide/repl.rst:47
+#: ../../devguide/repl.rst:51
 msgid "Determine the communication port identifier for the micro:bit"
 msgstr "micro:bit の通信ポート識別子の判別"
 
-#: ../../devguide/repl.rst:48
+#: ../../devguide/repl.rst:52
 msgid "Use a program to establish communication with the device"
 msgstr "デバイスと通信するプログラムの用意"
 
-#: ../../devguide/repl.rst:50
+#: ../../devguide/repl.rst:54
 msgid ""
 "The micro:bit will have a port identifier (tty, usb) that can be used by "
 "the computer for communicating. Before connecting to the micro:bit we "
@@ -671,11 +683,11 @@ msgstr ""
 "micro:bit にはコンピュータとの通信に使うポート識別子（tty, usb）を持ちます。"
 "micro:bit に接続する前に、ポート識別子を判別する必要があります。"
 
-#: ../../devguide/repl.rst:55 ../../devguide/repl.rst:81
+#: ../../devguide/repl.rst:59 ../../devguide/repl.rst:85
 msgid "Windows"
 msgstr ""
 
-#: ../../devguide/repl.rst:57
+#: ../../devguide/repl.rst:61
 msgid ""
 "When you have installed the aforementioned drivers the micro:bit will "
 "appear in device-manager as a COM port."
@@ -683,11 +695,11 @@ msgstr ""
 "前述したドライバをインストールすると micro:bit がデバイスマネージャに COM "
 "ポートとして現れます。"
 
-#: ../../devguide/repl.rst:61 ../../devguide/repl.rst:100
+#: ../../devguide/repl.rst:65 ../../devguide/repl.rst:104
 msgid "macOS"
 msgstr ""
 
-#: ../../devguide/repl.rst:63
+#: ../../devguide/repl.rst:67
 msgid ""
 "Open Terminal and type ``ls /dev/cu.*`` to see a list of connected serial"
 " devices; one of them will look like ``/dev/cu.usbmodem1422`` (the exact "
@@ -697,11 +709,11 @@ msgstr ""
 "デバイスのリストを確認します。リストの中に ``/dev/cu.usbmodem1422`` "
 "のようなものが見つかります(実際の番号はコンピュータに依存)。"
 
-#: ../../devguide/repl.rst:68 ../../devguide/repl.rst:113
+#: ../../devguide/repl.rst:72 ../../devguide/repl.rst:117
 msgid "**Linux**"
 msgstr ""
 
-#: ../../devguide/repl.rst:70
+#: ../../devguide/repl.rst:74
 msgid ""
 "In terminal, type ``dmesg | tail`` which will show which ``/dev`` "
 "node the micro:bit was assigned (e.g. ``/dev/ttyUSB0``)."
@@ -709,11 +721,11 @@ msgstr ""
 "ターミナルで ``dmesg | tail`` と入力し、micro:bit に割り当てられた "
 "``/dev`` ノードを確認します。"
 
-#: ../../devguide/repl.rst:75
+#: ../../devguide/repl.rst:79
 msgid "Communicating with the micro:bit"
 msgstr "micro:bit との通信"
 
-#: ../../devguide/repl.rst:77
+#: ../../devguide/repl.rst:81
 msgid ""
 "Once you have found the port identifier you can use a serial "
 "terminal program to communicate with the micro:bit."
@@ -721,60 +733,60 @@ msgstr ""
 "ポート識別子を確認したら、シリアルターミナルプログラムを使って "
 "micro:bit と通信できます。"
 
-#: ../../devguide/repl.rst:83
+#: ../../devguide/repl.rst:87
 msgid "You may wish to use Tera Term, PuTTY, or another program."
 msgstr "Tera Term, PuTTY など使いたいものをどうぞ。"
 
-#: ../../devguide/repl.rst:89
+#: ../../devguide/repl.rst:93
 msgid "In Tera Term:"
 msgstr "Tera Term の場合:"
 
-#: ../../devguide/repl.rst:86
+#: ../../devguide/repl.rst:90
 msgid "Plug in the micro:bit and open Tera Term"
 msgstr "micro:bit を繋ぎ、Tera Term を開きます"
 
-#: ../../devguide/repl.rst:87
+#: ../../devguide/repl.rst:91
 msgid "Select Serial as the port
 msgstr "ポートでシリアルを選択します"
 
-#: ../../devguide/repl.rst:88
+#: ../../devguide/repl.rst:92
 msgid ""
 "Go to Setup -> Serial port. Ensure the Port is the correct COM port."
 msgstr ""
 "設定メニューからシリアルポートを選び、ポートを適切な COM ポートにします。"
 
-#: ../../devguide/repl.rst:89
+#: ../../devguide/repl.rst:93
 msgid ""
 "Choose a baud rate of ``115200``, data 8 bits, parity none, stop 1 bit."
 msgstr ""
 "ボーレートを ``1115200``、データを 8 ビット、パリティを none、ストップを "
 "1 bit にします。"
 
-#: ../../devguide/repl.rst:97
+#: ../../devguide/repl.rst:101
 msgid "In PuTTY:"
 msgstr "PuTTY の場合:"
 
-#: ../../devguide/repl.rst:92
+#: ../../devguide/repl.rst:96
 msgid "Plug in the micro:bit and open PuTTY"
 msgstr "micro:bit を繋ぎ、PuTTY を開きます"
 
-#: ../../devguide/repl.rst:93
+#: ../../devguide/repl.rst:97
 msgid "Switch the Connection Type to Serial"
 msgstr "接続タイプをシリアルに切り替えます"
 
-#: ../../devguide/repl.rst:94
+#: ../../devguide/repl.rst:98
 msgid "Ensure the Port is the correct COM port"
 msgstr "ポートを適切な COM ポートにします"
 
-#: ../../devguide/repl.rst:95
+#: ../../devguide/repl.rst:99
 msgid "Change the baud rate to ``115200``"
 msgstr "ボーレートを ``115200`` にします"
 
-#: ../../devguide/repl.rst:96
+#: ../../devguide/repl.rst:100
 msgid "Select 'Serial' on the menu on the left, then click 'Open'"
 msgstr "左のメニューの「シリアル」を選び、'Open' をクリックします"
 
-#: ../../devguide/repl.rst:102
+#: ../../devguide/repl.rst:106
 msgid ""
 "Open Terminal and type ``screen /dev/cu.usbmodem1422 115200``, replacing "
 "``/dev/cu.usbmodem1422`` with the port you found earlier. This will open the "
@@ -785,7 +797,7 @@ msgstr ""
 "これは micro:bit のシリアル出力をオープンし、デバイスから受信したメッセージすべてを"
 "表示します。"
 
-#: ../../devguide/repl.rst:106
+#: ../../devguide/repl.rst:110
 msgid ""
 "To exit, press Ctrl-A then Ctrl-\\\\ and answer Yes to the question. There "
 "are many ways back to a command prompt including Ctrl-A then Ctrl-D, which "
@@ -799,7 +811,7 @@ msgstr ""
 "他のアプリケーションがアクセスできなくなります。そのようなときは ``screen -r`` と入力"
 "することで screen を再起動できます。"
 
-#: ../../devguide/repl.rst:115
+#: ../../devguide/repl.rst:119
 msgid ""
 "To connect to Debian based distributions, like Ubuntu, you might need to "
 "add yourself to the ``dialout`` group, which grants write access to the "
@@ -809,16 +821,16 @@ msgstr ""
 "``dialout`` グループに追加する必要があります。これにより、"
 "シリアルデバイス ``/dev/ttyACM0`` への書込みアクセスが許可されます::"
 
-#: ../../devguide/repl.rst:119
+#: ../../devguide/repl.rst:123
 msgid "sudo usermod -a -G dialout ${USER}"
 msgstr ""
 
-#: ../../devguide/repl.rst:121
+#: ../../devguide/repl.rst:125
 msgid "You may need to relogin in order for the changes to groups to take effect."
 msgstr ""
 "グループの変更を有効にするには再ログインが必要です。"
 
-#: ../../devguide/repl.rst:123
+#: ../../devguide/repl.rst:127
 msgid ""
 "Using the ``screen`` program, type ``screen /dev/ttyUSB0 115200``, replacing "
 "``/dev/ttyUSB0`` with the port you found earlier."
@@ -826,7 +838,7 @@ msgstr ""
 "``screen`` プログラムを使う場合、``screen /dev/ttyUSB0 115200`` を入力します。"
 "``/dev/ttyUSB0`` のところは先に調べたポートに置き換えてください。"
 
-#: ../../devguide/repl.rst:126
+#: ../../devguide/repl.rst:130
 msgid ""
 "To exit, press ``Ctrl-A`` then ``\\`` and answer ``Yes`` to the question."
 " There are many ways back to a command prompt including Ctrl-A then "
@@ -841,7 +853,7 @@ msgstr ""
 "他のアプリケーションがアクセスできなくなります。そのようなときは ``screen -r`` と入力"
 "することで screen を再起動できます。"
 
-#: ../../devguide/repl.rst:133
+#: ../../devguide/repl.rst:137
 msgid ""
 "Using ``picocom``, type ``picocom /dev/ttyACM0 -b 115200``, again replacing "
 "``/dev/ttyACM0`` with the port you found earlier."
@@ -849,6 +861,6 @@ msgstr ""
 "``picocom`` プログラムを使う場合、``picocom /dev/ttyACM0 -b 115200`` を入力します。"
 "``/dev/ttyACM0`` のところは先に調べたポートに置き換えてください。"
 
-#: ../../devguide/repl.rst:136
+#: ../../devguide/repl.rst:140
 msgid "To exit, press Ctrl-A then Ctrl-Q."
 msgstr "終了するには Ctrl-A の後に Ctrl-Q を入力します。"
