@@ -7,7 +7,7 @@ This object gives you access to the on-board accelerometer.
 
 By default MicroPython sets the accelerometer range to +/- 2000 mg (``g`` being
 a unit of acceleration based on the standard gravity), which configures the
-maximum and minimum values returned by the acceleromter functions.
+maximum and minimum values returned by the accelerometer functions.
 The range can be changed via :func:`microbit.accelerometer.set_range`.
 
 The accelerometer also provides convenience functions for detecting gestures.
@@ -78,13 +78,13 @@ Functions
 .. py:function:: set_range(value)
 
     Set the accelerometer sensitivity range, in g (standard gravity), to the
-    closest values supported by the hardware, so it rounds to either ``1``,
+    closest values supported by the hardware, so it rounds to either
     ``2``, ``4``, or ``8`` g.
 
     :param value: New range for the accelerometer, an integer in ``g``.
 
 Examples
---------
+========
 
 A fortune telling magic 8-ball. Ask a question then shake the device for an
 answer.
