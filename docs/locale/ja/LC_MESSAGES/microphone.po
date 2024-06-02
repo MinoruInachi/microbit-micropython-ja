@@ -1,21 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2020, Multiple authors
+# Copyright (C) 2015-2024, Multiple authors
 # This file is distributed under the same license as the BBC micro:bit
 # MicroPython package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: BBC micro:bit MicroPython 1.0.1\n"
+"Project-Id-Version: BBC micro:bit MicroPython 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-04 20:28+0900\n"
-"PO-Revision-Date: 2020-12-29 11:39+0900\n"
+"POT-Creation-Date: 2024-06-02 07:47+0900\n"
+"PO-Revision-Date: 2024-06-02 10:52+0900\n"
 "Last-Translator: Minoru Inachi\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.13.1\n"
 
 #: ../../microphone.rst:2
 msgid "Microphone **V2**"
@@ -79,45 +81,115 @@ msgid "Functions"
 msgstr "関数"
 
 #: ../../microphone.rst:36
-msgid ""
-"**return**: the name of the last recorded sound event, "
-"``SoundEvent('loud')`` or ``SoundEvent('quiet')``."
-msgstr ""
-"**戻り値**: 記録されている最新のサウンドイベントの名前、"
-"``SoundEvent('loud')`` もしくは ``SoundEvent('quiet')`` を返します。"
+msgid "Get the last recorded sound event."
+msgstr "記録されている最新のサウンドイベントを取得します。"
 
-#: ../../microphone.rst:41 ../../microphone.rst:49
+#: ../../microphone.rst:38
+msgid "Returns"
+msgstr "戻り値"
+
+#: ../../microphone.rst:38
+msgid "The event, ``SoundEvent('loud')`` or ``SoundEvent('quiet')``."
+msgstr ""
+"サウンドイベント。 "
+"``SoundEvent('loud')`` または ``SoundEvent('quiet')`` が返ります。"
+
+#: ../../microphone.rst:42
+msgid "Check if a sound was heard at least once since the last call."
+msgstr "直前の呼出しから少なくとも一度は指定のサウンドイベントが発生したかをチェックします。"
+
+#: ../../microphone.rst:44 ../../microphone.rst:65
+msgid "This call clears the sound history before returning."
+msgstr "これは戻る前にサウンドイベントの履歴をクリアします。""
+
+#: ../../microphone.rst:46
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: ../../microphone.rst:46
 msgid ""
-"**event**: a sound event,  such as ``SoundEvent.LOUD`` or "
+"The event to check for,  such as ``SoundEvent.LOUD`` or "
 "``SoundEvent.QUIET``."
 msgstr ""
-"**event**: サウンドイベント。 `SoundEvent.LOUD` または `SoundEvent.QUIET` 。"
+"チェックするサウンドイベント。 "
+"``SoundEvent.LOUD`` または ``SoundEvent.QUIET`` を指定します。"
 
-#: ../../microphone.rst:43
+#: ../../microphone.rst:48
 msgid ""
-"**return**: ``true`` if sound was heard at least once since the last "
-"call, otherwise ``false``. ``was_event()`` also clears the sound event "
-"history before returning."
+"``True`` if sound was heard at least once since the last call, otherwise "
+"``False``."
 msgstr ""
-"**戻り値**: 直前の呼出しから少なくとも一度は指定のサウンドイベントが発生した場合は "
-"`true` 、さもなければ `false` を返します。 "
-"``was_event()`` は戻る前にサウンドイベントの履歴をクリアします。"
+"直前の呼出しから少なくとも一度は指定のサウンドイベントが発生した場合は "
+"``True`` 、さもなければ ``False`` を返します。"
 
-#: ../../microphone.rst:51
-msgid ""
-"**return**: ``true`` if sound event is the most recent since the last "
-"call, otherwise ``false``. It does not clear the sound event history."
-msgstr ""
-"**戻り値**: 直前の呼出しから発生した最新のサウンドイベントが指定のものであれば "
-"``true`` 、さもなければ ``false`` を返します。サウンドイベントの履歴はクリアしません。"
+#: ../../microphone.rst:53
+msgid "Check the most recent sound event detected."
+msgstr "直近にサウンドイベントが発生したかをチェックします。"
 
-#: ../../microphone.rst:56
+#: ../../microphone.rst:55
+msgid "This call does not clear the sound event history."
+msgstr "これはサウンドイベントの履歴をクリアしません。"
+
+#: ../../microphone.rst:57
 msgid ""
-"**return**: a tuple of the event history. The most recent is listed last."
-" ``get_events()`` also clears the sound event history before returning."
+"The event to check for,  such as ``SoundEvent.LOUD`` or "
+"``SoundEvent.QUIET``"
 msgstr ""
-"**戻り値**: サウンドイベント履歴のタプル。最新のものが最後にリストされます。 "
-"``get_events()`` は戻る前にサウンドイベント履歴をクリアします。"
+"チェックするサウンドイベント。 "
+"``SoundEvent.LOUD`` または ``SoundEvent.QUIET`` を指定します。"
+
+#: ../../microphone.rst:59
+msgid "``True`` if sound was the most recent heard, ``False`` otherwise."
+msgstr ""
+"指定のサウンドイベントが直近に発生した場合は "
+"``True`` 、さもなければ ``False`` を返します。"
+
+#: ../../microphone.rst:63
+msgid "Get the sound event history as a tuple."
+msgstr "サウンドイベントの履歴をタプルで取得します。"
+
+#: ../../microphone.rst:67
+msgid "A tuple of the event history with the most recent event last."
+msgstr "イベント履歴のタプル。直近のイベントが最後尾になっています。"
+
+#: ../../microphone.rst:71
+msgid "Set the threshold for a sound event."
+msgstr "サウンドイベントの閾値を設定します。"
+
+#: ../../microphone.rst:73
+msgid ""
+"The ``SoundEvent.LOUD`` event will be triggered when the sound level "
+"crosses this threshold upwards (from \"quiet\" to \"loud\"), and "
+"``SoundEvent.QUIET`` event is triggered when crossing the threshold "
+"downwards (from \"loud\" to \"quiet\")."
+msgstr ""
+"音量が(「静か: quiet」から「大きい: loud」へ)指定の閾値を上回ると、"
+"イベント ``SoundEvent.LOUD`` が発生し、(「大きい: loud」から「静か: quiet」へ)"
+"閾値を下回ると、イベント ``SoundEvent.QUIET`` が発生します。"
+
+#: ../../microphone.rst:78
+msgid ""
+"If the ``SoundEvent.LOUD`` value set is lower than ``SoundEvent.QUIET``, "
+"then \"quiet\" threshold will be decreased to one unit below the \"loud\""
+" threshold. If the ``SoundEvent.QUIET`` value is set higher than "
+"``SoundEvent.LOUD``, then the \"loud\" threshold will be set one unit "
+"above."
+msgstr ""
+"``SoundEvent.LOUD`` 値が ``SoundEvent.QUIET``よりも低く設定されている場合、"
+"「静か」の閾値は「大きい」の閾値より1ユニット低く設定されます。 "
+"``SoundEvent.QUIET`` の値が ``SoundEvent.LOUD`` よりも高く設定されている場合、"
+"「大きい」のしきい値は「静か」のしきい値より1ユニット高く設定されます。"
+
+#: ../../microphone.rst:83
+msgid "A sound event, such as ``SoundEvent.LOUD`` or ``SoundEvent.QUIET``."
+msgstr "``SoundEvent.LOUD`` または ``SoundEvent.QUIET`` などのサウンドイベント。"
+
+#: ../../microphone.rst:85
+msgid ""
+"The threshold level in the range 0-255. Values outside this range will be"
+" clamped."
+msgstr ""
+"0 から 255 の範囲の閾値レベル。範囲外の値を指定しても範囲内に制限されます。"
 
 #: ../../microphone.rst:61
 msgid ""
@@ -126,32 +198,23 @@ msgid ""
 msgstr ""
 "**event**: サウンドイベント。 `SoundEvent.LOUD` または `SoundEvent.QUIET` 。"
 
-#: ../../microphone.rst:64
-msgid ""
-"**value**: The threshold level in the range 0-255. For example, "
-"``set_threshold(SoundEvent.LOUD, 250)`` will only trigger if the sound is"
-" very loud (>= 250)."
-msgstr ""
-"**value**: 0-255 の範囲の閾値レベル。"
-"たとえば `set_threshold(SoundEvent.LOUD, 250)` は音が非常に大きい場合に"
-"のみトリガされます(>= 250)。"
+#: ../../microphone.rst:90
+msgid "Get the sound pressure level."
+msgstr "音圧レベルを取得します。""
 
-#: ../../microphone.rst:70
-msgid ""
-"**return**: a representation of the sound pressure level in the range 0 "
-"to 255."
-msgstr ""
-"**戻り値**: 0-255の範囲で表される音圧レベルを返します。"
+#: ../../microphone.rst:92
+msgid "A representation of the sound pressure level in the range 0 to 255."
+msgstr "音圧レベルを 0 から 255 までの範囲で返します。""
 
-#: ../../microphone.rst:75
+#: ../../microphone.rst:96
 msgid "Example"
 msgstr "サンプルコード"
 
-#: ../../microphone.rst:77
+#: ../../microphone.rst:98
 msgid "An example that runs through some of the functions of the microphone API::"
 msgstr "マイクAPIのいくつかの機能を実行するサンプルコード:"
 
-#: ../../microphone.rst:79
+#: ../../microphone.rst:100
 msgid ""
 "# Basic test for microphone.  This test should update the display when\n"
 "# Button A is pressed and a loud or quiet sound *is* heard, printing the\n"
